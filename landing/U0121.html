@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code U0121 — Lost Communication With Anti-Lock Brake System (ABS) Control Module A — MechanicDB OBD-II Diagnostic Guide</title>
+<meta name="description" content="Detailed diagnostic explanation and probability-ranked repair procedures for OBD-II Code U0121 (Lost Communication With Anti-Lock Brake System (ABS) Control Module A). DIY difficulty tiers, parts cost ranges ($220.0–$650.0 USD), and labor estimates.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb-public.pages.dev/landing/U0121">
+<link rel="alternate" hreflang="en" href="https://mechanicdb-public.pages.dev/landing/U0121">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb-public.pages.dev/landing/U0121">
+<meta property="og:title" content="Code U0121 — Lost Communication With Anti-Lock Brake System (ABS) Control Module A — MechanicDB">
+<meta property="og:description" content="U0121 indicates loss of contact with a chassis-dynamics module -- ABS/stability control, steering angle sensor, ride-height/suspension control, power steering, or a differential/br...">
+<meta property="og:url" content="https://mechanicdb-public.pages.dev/landing/U0121">
+<meta property="og:type" content="article">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "OBD-II Code U0121: Lost Communication With Anti-Lock Brake System (ABS) Control Module A", "description": "U0121 indicates loss of contact with a chassis-dynamics module -- ABS/stability control, steering angle sensor, ride-height/suspension control, power steering, or a differential/brake-blending actuator -- all mounted low near the subframe, wheel wells, or under-floor tunnel where connectors take the worst exposure to road salt, water spray, and vibration of any module class. Unlike cabin electronics, these connectors are often sealed but still fail at the seal itself after years of thermal cycling, so a corroded or water-intruded low-mount connector is the dominant cause ahead of any harness break.", "url": "https://mechanicdb-public.pages.dev/landing/U0121", "author": {"@type": "Organization", "name": "MechanicDB"}, "publisher": {"@type": "Organization", "name": "MechanicDB", "url": "https://mechanicdb-public.pages.dev"}, "about": {"@type": "Thing", "name": "Automotive Diagnostic Trouble Code U0121", "description": "OBD-II Network Fault: Lost Communication With Anti-Lock Brake System (ABS) Control Module A"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb-public.pages.dev"}, {"@type": "ListItem", "position": 2, "name": "Network System (U-Codes)", "item": "https://mechanicdb-public.pages.dev/landing/network"}, {"@type": "ListItem", "position": 3, "name": "Code U0121", "item": "https://mechanicdb-public.pages.dev/landing/U0121"}]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --steel: #1b1e22; --steel-2: #24282e; --steel-3: #2e333a;
+    --paper: #f1efe8; --ink: #22252a; --trace: #9aa3ad;
+    --amber: #ffb000; --amber-deep: #cc8a00;
+    --easy: #4caf6d; --mod: #e8a13d; --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --disp: 'Saira Condensed', sans-serif;
+    --body: 'Archivo', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--steel); color: var(--trace); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  header.bar { border-bottom: 1px solid var(--steel-3); padding: 18px 0; }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark { font-family: var(--disp); font-weight: 700; font-size: 1.35rem; text-transform: uppercase; color: #fff; display: flex; align-items: center; gap: 10px; }
+  .mil { width: 22px; height: 16px; background: var(--amber); display: inline-block; }
+  
+  .breadcrumb { font-family: var(--mono); font-size: 0.78rem; margin: 24px 0 16px; }
+  .breadcrumb a { color: var(--trace); }
+  .breadcrumb span { color: var(--amber); }
+
+  .monograph-head { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px; padding: 32px; margin-bottom: 36px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .badge { font-family: var(--mono); font-size: 0.74rem; padding: 4px 10px; border-radius: 3px; background: var(--steel); border: 1px solid var(--steel-3); color: var(--amber); text-transform: uppercase; letter-spacing: 0.08em; }
+  h1 { font-family: var(--disp); font-size: clamp(2.2rem, 5vw, 3.4rem); color: #fff; line-height: 1.1; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .explain-box { background: var(--steel); border-left: 4px solid var(--amber); padding: 20px; border-radius: 4px; font-size: 1.05rem; color: #fff; line-height: 1.6; margin-top: 20px; }
+  .explain-title { font-family: var(--mono); font-size: 0.78rem; color: var(--amber); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+
+  h2.sec-title { font-family: var(--disp); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin: 40px 0 20px; border-bottom: 1px solid var(--steel-3); padding-bottom: 10px; }
+  
+  .fix-card { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 24px; margin-bottom: 24px; }
+  .fix-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+  .rank-badge { font-family: var(--mono); font-size: 0.76rem; background: var(--amber); color: #1b1500; padding: 3px 10px; border-radius: 3px; font-weight: 700; }
+  .fix-title { font-family: var(--disp); font-size: 1.35rem; color: #fff; flex: 1; min-width: 240px; text-transform: uppercase; }
+  .chip { font-family: var(--mono); font-size: 0.74rem; font-weight: 600; padding: 4px 10px; border-radius: 3px; }
+  .fix-meta { display: flex; gap: 24px; font-family: var(--mono); font-size: 0.82rem; color: #d7dce2; background: var(--steel); padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .fix-meta b { color: var(--amber); }
+  
+  .step-list { margin-left: 20px; color: #d7dce2; line-height: 1.7; font-size: 0.96rem; }
+  .step-list li { margin-bottom: 8px; }
+  .parts-req { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--steel-3); font-size: 0.92rem; }
+  .part-link { display: inline-block; background: var(--steel); border: 1px solid var(--steel-3); padding: 4px 10px; border-radius: 4px; margin: 4px 4px 0 0; color: #fff; }
+  .part-link:hover { border-color: var(--amber); color: var(--amber); }
+
+  .cta-footer { background: var(--paper); color: var(--ink); border-radius: 8px; padding: 36px; text-align: center; margin: 60px 0 40px; }
+  .cta-footer h3 { font-family: var(--disp); font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+  .btn-amber { display: inline-block; background: var(--amber); color: #1b1500; font-family: var(--mono); font-weight: 600; padding: 12px 28px; border-radius: 4px; margin-top: 16px; text-transform: uppercase; }
+  .btn-amber:hover { background: #ffbe2e; text-decoration: none; }
+
+  footer { border-top: 1px solid var(--steel-3); padding: 30px 0; font-family: var(--mono); font-size: 0.76rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
+    <nav style="font-family: var(--mono); font-size: 0.82rem; display: flex; gap: 20px;">
+      <a href="/#interactive">Decoder</a>
+      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/#interactive">Diagnostic Decoder</a> / <a href="network">Network System</a> / <span>Code U0121</span>
+  </div>
+
+  <div class="monograph-head">
+    <div class="badges">
+      <span class="badge">System: Network (U-Code)</span>
+      <span class="badge">Coverage: SAE Standard (Generic)</span>
+      <span class="badge">Fault Family: lost_comm_chassis_abs_module</span>
+    </div>
+    <h1>Code U0121: Lost Communication With Anti-Lock Brake System (ABS) Control Module A</h1>
+    <div class="explain-box">
+      <div class="explain-title">Diagnostic &amp; Technical Explanation</div>
+      U0121 indicates loss of contact with a chassis-dynamics module -- ABS/stability control, steering angle sensor, ride-height/suspension control, power steering, or a differential/brake-blending actuator -- all mounted low near the subframe, wheel wells, or under-floor tunnel where connectors take the worst exposure to road salt, water spray, and vibration of any module class. Unlike cabin electronics, these connectors are often sealed but still fail at the seal itself after years of thermal cycling, so a corroded or water-intruded low-mount connector is the dominant cause ahead of any harness break.
+    </div>
+  </div>
+
+  <h2 class="sec-title">Probability-Ranked Repair Procedures (4 Ranked Fixes)</h2>
+  
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #1</span>
+            <h3 class="fix-title">Inspect the low-mount connector for water intrusion and corrosion</h3>
+            <span class="chip chip-easy" style="background: #4caf6d25; color: #4caf6d; border: 1px solid #4caf6d;">Easy DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$10.0–$30.0 USD</b></span>
+            <span>Labor Estimate: <b>0.5 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Locate the connector for the named chassis module near the wheel well, subframe, or under-floor tunnel</li><li>2. Inspect the connector seal and pins for corrosion or water staining</li><li>3. Clean, dry, and reseat the connector, then clear codes</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Electrical+contact+cleaner+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Electrical contact cleaner</a> · <a href='https://www.amazon.com/s?k=Dielectric+grease+pack+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Dielectric grease pack</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #2</span>
+            <h3 class="fix-title">Voltage-drop test the chassis module&#x27;s power and ground circuits</h3>
+            <span class="chip chip-mod" style="background: #e8a13d25; color: #e8a13d; border: 1px solid #e8a13d;">Moderate DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$15.0–$50.0 USD</b></span>
+            <span>Labor Estimate: <b>0.8 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Backprobe the power and ground pins at the module connector</li><li>2. Perform a voltage-drop test under load with the ignition on</li><li>3. Compare readings to the 0.1V maximum drop specification</li><li>4. Repair any high-resistance ground point found near the subframe</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Digital+multimeter+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Digital multimeter</a> · <a href='https://www.amazon.com/s?k=Anti-corrosion+terminal+compound+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Anti-corrosion terminal compound</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #3</span>
+            <h3 class="fix-title">Repair under-vehicle harness damage from road debris</h3>
+            <span class="chip chip-mod" style="background: #e8a13d25; color: #e8a13d; border: 1px solid #e8a13d;">Moderate DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$20.0–$100.0 USD</b></span>
+            <span>Labor Estimate: <b>1.5 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Inspect the harness run beneath the vehicle for abrasion from road debris or a dragging heat shield</li><li>2. Locate the specific cut, pinched, or corroded wire section</li><li>3. Splice in new wire rated for under-body exposure and seal with adhesive-lined heat-shrink</li><li>4. Re-secure the harness with new clips away from moving suspension components</li><li>5. Verify the module communicates normally through a full steering and suspension travel cycle</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Automotive+wire+%28under-body+rated%29+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Automotive wire (under-body rated)</a> · <a href='https://www.amazon.com/s?k=Adhesive-lined+heat-shrink+splice+kit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Adhesive-lined heat-shrink splice kit</a> · <a href='https://www.amazon.com/s?k=Harness+routing+clips+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Harness routing clips</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #4</span>
+            <h3 class="fix-title">Replace and calibrate the chassis control module</h3>
+            <span class="chip chip-pro" style="background: #d6545425; color: #d65454; border: 1px solid #d65454;">Professional Required</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$220.0–$650.0 USD</b></span>
+            <span>Labor Estimate: <b>2.0 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Confirm the module&#x27;s internal circuitry has failed rather than the harness</li><li>2. Remove and replace the module</li><li>3. Program the replacement and perform any required steering-angle or ride-height relearn</li><li>4. Road test to confirm stable communication and correct sensor data</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Replacement+control+module+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Replacement control module</a> · <a href='https://www.amazon.com/s?k=Programming%2Fsubscription+session+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Programming/subscription session</a></div>
+          </div>
+        </div>
+        
+
+  <div class="cta-footer">
+    <h3>Need All 15,886 OBD-II Codes &amp; 56,561 Fixes?</h3>
+    <p>Download the complete commercial MechanicDB dataset instantly. Includes CSV, Apache Parquet tables, and a relational SQLite database with commercial application rights.</p>
+    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403" class="btn-amber">License Full Dataset · Instant Download ($49)</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>MechanicDB · The OBD-II Diagnostic &amp; Repair Database · ODbL v1.0 / Commercial License</span>
+  </div>
+</footer>
+
+</body>
+</html>

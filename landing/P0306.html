@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code P0306 — Cylinder 6 Misfire Detected — MechanicDB OBD-II Diagnostic Guide</title>
+<meta name="description" content="Detailed diagnostic explanation and probability-ranked repair procedures for OBD-II Code P0306 (Cylinder 6 Misfire Detected). DIY difficulty tiers, parts cost ranges ($150.0–$900.0 USD), and labor estimates.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb-public.pages.dev/landing/P0306">
+<link rel="alternate" hreflang="en" href="https://mechanicdb-public.pages.dev/landing/P0306">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb-public.pages.dev/landing/P0306">
+<meta property="og:title" content="Code P0306 — Cylinder 6 Misfire Detected — MechanicDB">
+<meta property="og:description" content="Code P0306 (Cylinder 6 Misfire Detected) sets when the ECM&#x27;s misfire monitor isolates repeated combustion events lost on one specific cylinder (or, for the unspecified variant...">
+<meta property="og:url" content="https://mechanicdb-public.pages.dev/landing/P0306">
+<meta property="og:type" content="article">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "OBD-II Code P0306: Cylinder 6 Misfire Detected", "description": "Code P0306 (Cylinder 6 Misfire Detected) sets when the ECM's misfire monitor isolates repeated combustion events lost on one specific cylinder (or, for the unspecified variant, a single cylinder it cannot pin down). The diagnosis path is identical regardless of which cylinder number is reported: the fault lives in that cylinder's ignition, fuel delivery, or mechanical sealing, most commonly a fouled spark plug or failing coil, a clogged or leaking injector, or low compression from a burnt valve or worn rings.", "url": "https://mechanicdb-public.pages.dev/landing/P0306", "author": {"@type": "Organization", "name": "MechanicDB"}, "publisher": {"@type": "Organization", "name": "MechanicDB", "url": "https://mechanicdb-public.pages.dev"}, "about": {"@type": "Thing", "name": "Automotive Diagnostic Trouble Code P0306", "description": "OBD-II Powertrain Fault: Cylinder 6 Misfire Detected"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb-public.pages.dev"}, {"@type": "ListItem", "position": 2, "name": "Powertrain System (P-Codes)", "item": "https://mechanicdb-public.pages.dev/landing/powertrain"}, {"@type": "ListItem", "position": 3, "name": "Code P0306", "item": "https://mechanicdb-public.pages.dev/landing/P0306"}]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --steel: #1b1e22; --steel-2: #24282e; --steel-3: #2e333a;
+    --paper: #f1efe8; --ink: #22252a; --trace: #9aa3ad;
+    --amber: #ffb000; --amber-deep: #cc8a00;
+    --easy: #4caf6d; --mod: #e8a13d; --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --disp: 'Saira Condensed', sans-serif;
+    --body: 'Archivo', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--steel); color: var(--trace); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  header.bar { border-bottom: 1px solid var(--steel-3); padding: 18px 0; }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark { font-family: var(--disp); font-weight: 700; font-size: 1.35rem; text-transform: uppercase; color: #fff; display: flex; align-items: center; gap: 10px; }
+  .mil { width: 22px; height: 16px; background: var(--amber); display: inline-block; }
+  
+  .breadcrumb { font-family: var(--mono); font-size: 0.78rem; margin: 24px 0 16px; }
+  .breadcrumb a { color: var(--trace); }
+  .breadcrumb span { color: var(--amber); }
+
+  .monograph-head { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px; padding: 32px; margin-bottom: 36px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .badge { font-family: var(--mono); font-size: 0.74rem; padding: 4px 10px; border-radius: 3px; background: var(--steel); border: 1px solid var(--steel-3); color: var(--amber); text-transform: uppercase; letter-spacing: 0.08em; }
+  h1 { font-family: var(--disp); font-size: clamp(2.2rem, 5vw, 3.4rem); color: #fff; line-height: 1.1; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .explain-box { background: var(--steel); border-left: 4px solid var(--amber); padding: 20px; border-radius: 4px; font-size: 1.05rem; color: #fff; line-height: 1.6; margin-top: 20px; }
+  .explain-title { font-family: var(--mono); font-size: 0.78rem; color: var(--amber); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+
+  h2.sec-title { font-family: var(--disp); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin: 40px 0 20px; border-bottom: 1px solid var(--steel-3); padding-bottom: 10px; }
+  
+  .fix-card { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 24px; margin-bottom: 24px; }
+  .fix-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+  .rank-badge { font-family: var(--mono); font-size: 0.76rem; background: var(--amber); color: #1b1500; padding: 3px 10px; border-radius: 3px; font-weight: 700; }
+  .fix-title { font-family: var(--disp); font-size: 1.35rem; color: #fff; flex: 1; min-width: 240px; text-transform: uppercase; }
+  .chip { font-family: var(--mono); font-size: 0.74rem; font-weight: 600; padding: 4px 10px; border-radius: 3px; }
+  .fix-meta { display: flex; gap: 24px; font-family: var(--mono); font-size: 0.82rem; color: #d7dce2; background: var(--steel); padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .fix-meta b { color: var(--amber); }
+  
+  .step-list { margin-left: 20px; color: #d7dce2; line-height: 1.7; font-size: 0.96rem; }
+  .step-list li { margin-bottom: 8px; }
+  .parts-req { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--steel-3); font-size: 0.92rem; }
+  .part-link { display: inline-block; background: var(--steel); border: 1px solid var(--steel-3); padding: 4px 10px; border-radius: 4px; margin: 4px 4px 0 0; color: #fff; }
+  .part-link:hover { border-color: var(--amber); color: var(--amber); }
+
+  .cta-footer { background: var(--paper); color: var(--ink); border-radius: 8px; padding: 36px; text-align: center; margin: 60px 0 40px; }
+  .cta-footer h3 { font-family: var(--disp); font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+  .btn-amber { display: inline-block; background: var(--amber); color: #1b1500; font-family: var(--mono); font-weight: 600; padding: 12px 28px; border-radius: 4px; margin-top: 16px; text-transform: uppercase; }
+  .btn-amber:hover { background: #ffbe2e; text-decoration: none; }
+
+  footer { border-top: 1px solid var(--steel-3); padding: 30px 0; font-family: var(--mono); font-size: 0.76rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
+    <nav style="font-family: var(--mono); font-size: 0.82rem; display: flex; gap: 20px;">
+      <a href="/#interactive">Decoder</a>
+      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/#interactive">Diagnostic Decoder</a> / <a href="powertrain">Powertrain System</a> / <span>Code P0306</span>
+  </div>
+
+  <div class="monograph-head">
+    <div class="badges">
+      <span class="badge">System: Powertrain (P-Code)</span>
+      <span class="badge">Coverage: SAE Standard (Generic)</span>
+      <span class="badge">Fault Family: misfire_single_cylinder</span>
+    </div>
+    <h1>Code P0306: Cylinder 6 Misfire Detected</h1>
+    <div class="explain-box">
+      <div class="explain-title">Diagnostic &amp; Technical Explanation</div>
+      Code P0306 (Cylinder 6 Misfire Detected) sets when the ECM&#x27;s misfire monitor isolates repeated combustion events lost on one specific cylinder (or, for the unspecified variant, a single cylinder it cannot pin down). The diagnosis path is identical regardless of which cylinder number is reported: the fault lives in that cylinder&#x27;s ignition, fuel delivery, or mechanical sealing, most commonly a fouled spark plug or failing coil, a clogged or leaking injector, or low compression from a burnt valve or worn rings.
+    </div>
+  </div>
+
+  <h2 class="sec-title">Probability-Ranked Repair Procedures (4 Ranked Fixes)</h2>
+  
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #1</span>
+            <h3 class="fix-title">Swap spark plug and ignition coil to confirm the cylinder</h3>
+            <span class="chip chip-easy" style="background: #4caf6d25; color: #4caf6d; border: 1px solid #4caf6d;">Easy DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$15.0–$45.0 USD</b></span>
+            <span>Labor Estimate: <b>0.6 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Remove the coil and plug from the misfiring cylinder</li><li>2. Inspect the plug for fouling, wear, or an incorrect gap</li><li>3. Swap the coil with a known-good adjacent cylinder&#x27;s coil</li><li>4. Clear the code and see if the misfire follows the coil or stays with the cylinder</li><li>5. Replace the plug and/or coil based on the result</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Spark+plug+%28single%29+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Spark plug (single)</a> · <a href='https://www.amazon.com/s?k=Ignition+coil-on-plug+unit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Ignition coil-on-plug unit</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #2</span>
+            <h3 class="fix-title">Test and clean or replace the cylinder&#x27;s fuel injector</h3>
+            <span class="chip chip-mod" style="background: #e8a13d25; color: #e8a13d; border: 1px solid #e8a13d;">Moderate DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$40.0–$180.0 USD</b></span>
+            <span>Labor Estimate: <b>1.0 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Perform an injector balance or ohms test on the affected cylinder</li><li>2. Swap the injector with a neighboring cylinder to see if the misfire follows</li><li>3. Clean the injector on an ultrasonic bench or replace it</li><li>4. Reinstall with new O-rings and clear codes</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Fuel+injector+%28single+cylinder%29+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Fuel injector (single cylinder)</a> · <a href='https://www.amazon.com/s?k=Injector+O-ring+service+kit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Injector O-ring service kit</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #3</span>
+            <h3 class="fix-title">Run a cylinder compression or leak-down test</h3>
+            <span class="chip chip-mod" style="background: #e8a13d25; color: #e8a13d; border: 1px solid #e8a13d;">Moderate DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$20.0–$80.0 USD</b></span>
+            <span>Labor Estimate: <b>1.5 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Disable fuel and ignition for a dry compression test on all cylinders</li><li>2. Compare the flagged cylinder&#x27;s reading against its neighbors</li><li>3. Add oil and retest (wet test) to isolate rings vs. valves</li><li>4. Follow up with a leak-down test to confirm the exact leak path</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Compression+tester+kit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Compression tester kit</a> · <a href='https://www.amazon.com/s?k=Cylinder+leak-down+tester+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Cylinder leak-down tester</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #4</span>
+            <h3 class="fix-title">Inspect and replace a leaking or damaged cylinder head gasket/valve</h3>
+            <span class="chip chip-pro" style="background: #d6545425; color: #d65454; border: 1px solid #d65454;">Professional Required</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$150.0–$900.0 USD</b></span>
+            <span>Labor Estimate: <b>4.5 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Confirm the leak-down result points to a head gasket or valve seat</li><li>2. Remove the valve cover/head as required for access</li><li>3. Replace the head gasket or recondition the valve seat</li><li>4. Reassemble to torque spec and verify compression returns to spec</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Cylinder+head+gasket+set+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Cylinder head gasket set</a> · <a href='https://www.amazon.com/s?k=Valve+seat%2Fguide+service+kit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Valve seat/guide service kit</a></div>
+          </div>
+        </div>
+        
+
+  <div class="cta-footer">
+    <h3>Need All 15,886 OBD-II Codes &amp; 56,561 Fixes?</h3>
+    <p>Download the complete commercial MechanicDB dataset instantly. Includes CSV, Apache Parquet tables, and a relational SQLite database with commercial application rights.</p>
+    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403" class="btn-amber">License Full Dataset · Instant Download ($49)</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>MechanicDB · The OBD-II Diagnostic &amp; Repair Database · ODbL v1.0 / Commercial License</span>
+  </div>
+</footer>
+
+</body>
+</html>

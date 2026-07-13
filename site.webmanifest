@@ -1,0 +1,24 @@
+{
+  "name": "MechanicDB — Automotive OBD-II Diagnostic & Repair Database",
+  "short_name": "MechanicDB",
+  "description": "15,886 verified OBD-II trouble codes mapped to 56,561 ranked repair procedures with DIY difficulty tiers, parts costs, and step-by-step instructions.",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#1b1e22",
+  "theme_color": "#1b1e22",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["utilities", "productivity", "automotive", "education"]
+}

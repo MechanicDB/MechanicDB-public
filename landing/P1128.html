@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code P1128 — Long Term Fuel Trim Bank 1 System Too Lean — MechanicDB OBD-II Diagnostic Guide</title>
+<meta name="description" content="Detailed diagnostic explanation and probability-ranked repair procedures for OBD-II Code P1128 (Long Term Fuel Trim Bank 1 System Too Lean). DIY difficulty tiers, parts cost ranges ($40.0–$250.0 USD), and labor estimates.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb-public.pages.dev/landing/P1128">
+<link rel="alternate" hreflang="en" href="https://mechanicdb-public.pages.dev/landing/P1128">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb-public.pages.dev/landing/P1128">
+<meta property="og:title" content="Code P1128 — Long Term Fuel Trim Bank 1 System Too Lean — MechanicDB">
+<meta property="og:description" content="Code P1128 (Long Term Fuel Trim Bank 1 System Too Lean) sets when overall short- or long-term fuel trim for a bank moves outside its normal operating window without a specific lean...">
+<meta property="og:url" content="https://mechanicdb-public.pages.dev/landing/P1128">
+<meta property="og:type" content="article">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "OBD-II Code P1128: Long Term Fuel Trim Bank 1 System Too Lean", "description": "Code P1128 (Long Term Fuel Trim Bank 1 System Too Lean) sets when overall short- or long-term fuel trim for a bank moves outside its normal operating window without a specific lean or rich bias being isolated. Causes span vacuum leaks, a fuel delivery imbalance, or a fuel/air metering sensor reading incorrectly for that bank.", "url": "https://mechanicdb-public.pages.dev/landing/P1128", "author": {"@type": "Organization", "name": "MechanicDB"}, "publisher": {"@type": "Organization", "name": "MechanicDB", "url": "https://mechanicdb-public.pages.dev"}, "about": {"@type": "Thing", "name": "Automotive Diagnostic Trouble Code P1128", "description": "OBD-II Powertrain Fault: Long Term Fuel Trim Bank 1 System Too Lean"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb-public.pages.dev"}, {"@type": "ListItem", "position": 2, "name": "Powertrain System (P-Codes)", "item": "https://mechanicdb-public.pages.dev/landing/powertrain"}, {"@type": "ListItem", "position": 3, "name": "Code P1128", "item": "https://mechanicdb-public.pages.dev/landing/P1128"}]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --steel: #1b1e22; --steel-2: #24282e; --steel-3: #2e333a;
+    --paper: #f1efe8; --ink: #22252a; --trace: #9aa3ad;
+    --amber: #ffb000; --amber-deep: #cc8a00;
+    --easy: #4caf6d; --mod: #e8a13d; --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --disp: 'Saira Condensed', sans-serif;
+    --body: 'Archivo', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--steel); color: var(--trace); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  header.bar { border-bottom: 1px solid var(--steel-3); padding: 18px 0; }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark { font-family: var(--disp); font-weight: 700; font-size: 1.35rem; text-transform: uppercase; color: #fff; display: flex; align-items: center; gap: 10px; }
+  .mil { width: 22px; height: 16px; background: var(--amber); display: inline-block; }
+  
+  .breadcrumb { font-family: var(--mono); font-size: 0.78rem; margin: 24px 0 16px; }
+  .breadcrumb a { color: var(--trace); }
+  .breadcrumb span { color: var(--amber); }
+
+  .monograph-head { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px; padding: 32px; margin-bottom: 36px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .badge { font-family: var(--mono); font-size: 0.74rem; padding: 4px 10px; border-radius: 3px; background: var(--steel); border: 1px solid var(--steel-3); color: var(--amber); text-transform: uppercase; letter-spacing: 0.08em; }
+  h1 { font-family: var(--disp); font-size: clamp(2.2rem, 5vw, 3.4rem); color: #fff; line-height: 1.1; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .explain-box { background: var(--steel); border-left: 4px solid var(--amber); padding: 20px; border-radius: 4px; font-size: 1.05rem; color: #fff; line-height: 1.6; margin-top: 20px; }
+  .explain-title { font-family: var(--mono); font-size: 0.78rem; color: var(--amber); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+
+  h2.sec-title { font-family: var(--disp); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin: 40px 0 20px; border-bottom: 1px solid var(--steel-3); padding-bottom: 10px; }
+  
+  .fix-card { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 24px; margin-bottom: 24px; }
+  .fix-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+  .rank-badge { font-family: var(--mono); font-size: 0.76rem; background: var(--amber); color: #1b1500; padding: 3px 10px; border-radius: 3px; font-weight: 700; }
+  .fix-title { font-family: var(--disp); font-size: 1.35rem; color: #fff; flex: 1; min-width: 240px; text-transform: uppercase; }
+  .chip { font-family: var(--mono); font-size: 0.74rem; font-weight: 600; padding: 4px 10px; border-radius: 3px; }
+  .fix-meta { display: flex; gap: 24px; font-family: var(--mono); font-size: 0.82rem; color: #d7dce2; background: var(--steel); padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .fix-meta b { color: var(--amber); }
+  
+  .step-list { margin-left: 20px; color: #d7dce2; line-height: 1.7; font-size: 0.96rem; }
+  .step-list li { margin-bottom: 8px; }
+  .parts-req { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--steel-3); font-size: 0.92rem; }
+  .part-link { display: inline-block; background: var(--steel); border: 1px solid var(--steel-3); padding: 4px 10px; border-radius: 4px; margin: 4px 4px 0 0; color: #fff; }
+  .part-link:hover { border-color: var(--amber); color: var(--amber); }
+
+  .cta-footer { background: var(--paper); color: var(--ink); border-radius: 8px; padding: 36px; text-align: center; margin: 60px 0 40px; }
+  .cta-footer h3 { font-family: var(--disp); font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+  .btn-amber { display: inline-block; background: var(--amber); color: #1b1500; font-family: var(--mono); font-weight: 600; padding: 12px 28px; border-radius: 4px; margin-top: 16px; text-transform: uppercase; }
+  .btn-amber:hover { background: #ffbe2e; text-decoration: none; }
+
+  footer { border-top: 1px solid var(--steel-3); padding: 30px 0; font-family: var(--mono); font-size: 0.76rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
+    <nav style="font-family: var(--mono); font-size: 0.82rem; display: flex; gap: 20px;">
+      <a href="/#interactive">Decoder</a>
+      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/#interactive">Diagnostic Decoder</a> / <a href="powertrain">Powertrain System</a> / <span>Code P1128</span>
+  </div>
+
+  <div class="monograph-head">
+    <div class="badges">
+      <span class="badge">System: Powertrain (P-Code)</span>
+      <span class="badge">Coverage: OEM Specific (Volkswagen)</span>
+      <span class="badge">Fault Family: fuel_trim_general</span>
+    </div>
+    <h1>Code P1128: Long Term Fuel Trim Bank 1 System Too Lean</h1>
+    <div class="explain-box">
+      <div class="explain-title">Diagnostic &amp; Technical Explanation</div>
+      Code P1128 (Long Term Fuel Trim Bank 1 System Too Lean) sets when overall short- or long-term fuel trim for a bank moves outside its normal operating window without a specific lean or rich bias being isolated. Causes span vacuum leaks, a fuel delivery imbalance, or a fuel/air metering sensor reading incorrectly for that bank.
+    </div>
+  </div>
+
+  <h2 class="sec-title">Probability-Ranked Repair Procedures (3 Ranked Fixes)</h2>
+  
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #1</span>
+            <h3 class="fix-title">Inspect for vacuum leaks and check fuel trim data with a scan tool</h3>
+            <span class="chip chip-easy" style="background: #4caf6d25; color: #4caf6d; border: 1px solid #4caf6d;">Easy DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$10.0–$40.0 USD</b></span>
+            <span>Labor Estimate: <b>0.8 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Review short- and long-term fuel trim values by bank on a scan tool</li><li>2. Smoke-test the intake for leaks matching the trending bank</li><li>3. Repair any leak found</li><li>4. Clear codes and recheck trims after a drive cycle</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Intake+gasket+set+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Intake gasket set</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #2</span>
+            <h3 class="fix-title">Clean throttle body and check MAF/MAP sensor readings</h3>
+            <span class="chip chip-easy" style="background: #4caf6d25; color: #4caf6d; border: 1px solid #4caf6d;">Easy DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$15.0–$50.0 USD</b></span>
+            <span>Labor Estimate: <b>0.7 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Clean the throttle body bore and blade of carbon buildup</li><li>2. Compare MAF/MAP readings against expected values at idle and 2,500 RPM</li><li>3. Address any sensor reading found out of spec</li><li>4. Clear codes and monitor trim recovery</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Throttle+body+cleaner+spray+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Throttle body cleaner spray</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #3</span>
+            <h3 class="fix-title">Diagnose fuel delivery imbalance affecting one bank</h3>
+            <span class="chip chip-pro" style="background: #d6545425; color: #d65454; border: 1px solid #d65454;">Professional Required</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$40.0–$250.0 USD</b></span>
+            <span>Labor Estimate: <b>1.8 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Compare fuel pressure and injector pulse width between banks</li><li>2. Identify a restricted injector, filter sock, or fuel rail issue isolated to one bank</li><li>3. Repair or replace the faulted component</li><li>4. Clear codes and confirm trims converge between banks</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Fuel+injector+%28as+needed+by+bank%29+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Fuel injector (as needed by bank)</a></div>
+          </div>
+        </div>
+        
+
+  <div class="cta-footer">
+    <h3>Need All 15,886 OBD-II Codes &amp; 56,561 Fixes?</h3>
+    <p>Download the complete commercial MechanicDB dataset instantly. Includes CSV, Apache Parquet tables, and a relational SQLite database with commercial application rights.</p>
+    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403" class="btn-amber">License Full Dataset · Instant Download ($49)</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>MechanicDB · The OBD-II Diagnostic &amp; Repair Database · ODbL v1.0 / Commercial License</span>
+  </div>
+</footer>
+
+</body>
+</html>

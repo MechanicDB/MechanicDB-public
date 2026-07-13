@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code P0325 — Knock/Combustion Vibration Sensor A Circuit — MechanicDB OBD-II Diagnostic Guide</title>
+<meta name="description" content="Detailed diagnostic explanation and probability-ranked repair procedures for OBD-II Code P0325 (Knock/Combustion Vibration Sensor A Circuit). DIY difficulty tiers, parts cost ranges ($15.0–$250.0 USD), and labor estimates.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb-public.pages.dev/landing/P0325">
+<link rel="alternate" hreflang="en" href="https://mechanicdb-public.pages.dev/landing/P0325">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb-public.pages.dev/landing/P0325">
+<meta property="og:title" content="Code P0325 — Knock/Combustion Vibration Sensor A Circuit — MechanicDB">
+<meta property="og:description" content="Code P0325 (Knock/Combustion Vibration Sensor A Circuit) sets when the ECM detects an open circuit, out-of-range voltage, or a total loss of signal from a knock (combustion vibrati...">
+<meta property="og:url" content="https://mechanicdb-public.pages.dev/landing/P0325">
+<meta property="og:type" content="article">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "OBD-II Code P0325: Knock/Combustion Vibration Sensor A Circuit", "description": "Code P0325 (Knock/Combustion Vibration Sensor A Circuit) sets when the ECM detects an open circuit, out-of-range voltage, or a total loss of signal from a knock (combustion vibration) sensor used to retard timing and protect the engine from detonation, or when the overall knock control system itself reports an internal error. Physical causes are a failed piezoelectric sensor element, an improperly torqued sensor (knock sensors are torque-sensitive and read incorrectly if over- or under-tightened), or chafed/corroded wiring between the sensor and the ECM.", "url": "https://mechanicdb-public.pages.dev/landing/P0325", "author": {"@type": "Organization", "name": "MechanicDB"}, "publisher": {"@type": "Organization", "name": "MechanicDB", "url": "https://mechanicdb-public.pages.dev"}, "about": {"@type": "Thing", "name": "Automotive Diagnostic Trouble Code P0325", "description": "OBD-II Powertrain Fault: Knock/Combustion Vibration Sensor A Circuit"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb-public.pages.dev"}, {"@type": "ListItem", "position": 2, "name": "Powertrain System (P-Codes)", "item": "https://mechanicdb-public.pages.dev/landing/powertrain"}, {"@type": "ListItem", "position": 3, "name": "Code P0325", "item": "https://mechanicdb-public.pages.dev/landing/P0325"}]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --steel: #1b1e22; --steel-2: #24282e; --steel-3: #2e333a;
+    --paper: #f1efe8; --ink: #22252a; --trace: #9aa3ad;
+    --amber: #ffb000; --amber-deep: #cc8a00;
+    --easy: #4caf6d; --mod: #e8a13d; --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --disp: 'Saira Condensed', sans-serif;
+    --body: 'Archivo', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--steel); color: var(--trace); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  header.bar { border-bottom: 1px solid var(--steel-3); padding: 18px 0; }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark { font-family: var(--disp); font-weight: 700; font-size: 1.35rem; text-transform: uppercase; color: #fff; display: flex; align-items: center; gap: 10px; }
+  .mil { width: 22px; height: 16px; background: var(--amber); display: inline-block; }
+  
+  .breadcrumb { font-family: var(--mono); font-size: 0.78rem; margin: 24px 0 16px; }
+  .breadcrumb a { color: var(--trace); }
+  .breadcrumb span { color: var(--amber); }
+
+  .monograph-head { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px; padding: 32px; margin-bottom: 36px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .badge { font-family: var(--mono); font-size: 0.74rem; padding: 4px 10px; border-radius: 3px; background: var(--steel); border: 1px solid var(--steel-3); color: var(--amber); text-transform: uppercase; letter-spacing: 0.08em; }
+  h1 { font-family: var(--disp); font-size: clamp(2.2rem, 5vw, 3.4rem); color: #fff; line-height: 1.1; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .explain-box { background: var(--steel); border-left: 4px solid var(--amber); padding: 20px; border-radius: 4px; font-size: 1.05rem; color: #fff; line-height: 1.6; margin-top: 20px; }
+  .explain-title { font-family: var(--mono); font-size: 0.78rem; color: var(--amber); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+
+  h2.sec-title { font-family: var(--disp); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin: 40px 0 20px; border-bottom: 1px solid var(--steel-3); padding-bottom: 10px; }
+  
+  .fix-card { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 24px; margin-bottom: 24px; }
+  .fix-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+  .rank-badge { font-family: var(--mono); font-size: 0.76rem; background: var(--amber); color: #1b1500; padding: 3px 10px; border-radius: 3px; font-weight: 700; }
+  .fix-title { font-family: var(--disp); font-size: 1.35rem; color: #fff; flex: 1; min-width: 240px; text-transform: uppercase; }
+  .chip { font-family: var(--mono); font-size: 0.74rem; font-weight: 600; padding: 4px 10px; border-radius: 3px; }
+  .fix-meta { display: flex; gap: 24px; font-family: var(--mono); font-size: 0.82rem; color: #d7dce2; background: var(--steel); padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .fix-meta b { color: var(--amber); }
+  
+  .step-list { margin-left: 20px; color: #d7dce2; line-height: 1.7; font-size: 0.96rem; }
+  .step-list li { margin-bottom: 8px; }
+  .parts-req { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--steel-3); font-size: 0.92rem; }
+  .part-link { display: inline-block; background: var(--steel); border: 1px solid var(--steel-3); padding: 4px 10px; border-radius: 4px; margin: 4px 4px 0 0; color: #fff; }
+  .part-link:hover { border-color: var(--amber); color: var(--amber); }
+
+  .cta-footer { background: var(--paper); color: var(--ink); border-radius: 8px; padding: 36px; text-align: center; margin: 60px 0 40px; }
+  .cta-footer h3 { font-family: var(--disp); font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+  .btn-amber { display: inline-block; background: var(--amber); color: #1b1500; font-family: var(--mono); font-weight: 600; padding: 12px 28px; border-radius: 4px; margin-top: 16px; text-transform: uppercase; }
+  .btn-amber:hover { background: #ffbe2e; text-decoration: none; }
+
+  footer { border-top: 1px solid var(--steel-3); padding: 30px 0; font-family: var(--mono); font-size: 0.76rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
+    <nav style="font-family: var(--mono); font-size: 0.82rem; display: flex; gap: 20px;">
+      <a href="/#interactive">Decoder</a>
+      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/#interactive">Diagnostic Decoder</a> / <a href="powertrain">Powertrain System</a> / <span>Code P0325</span>
+  </div>
+
+  <div class="monograph-head">
+    <div class="badges">
+      <span class="badge">System: Powertrain (P-Code)</span>
+      <span class="badge">Coverage: SAE Standard (Generic)</span>
+      <span class="badge">Fault Family: knock_sensor_circuit</span>
+    </div>
+    <h1>Code P0325: Knock/Combustion Vibration Sensor A Circuit</h1>
+    <div class="explain-box">
+      <div class="explain-title">Diagnostic &amp; Technical Explanation</div>
+      Code P0325 (Knock/Combustion Vibration Sensor A Circuit) sets when the ECM detects an open circuit, out-of-range voltage, or a total loss of signal from a knock (combustion vibration) sensor used to retard timing and protect the engine from detonation, or when the overall knock control system itself reports an internal error. Physical causes are a failed piezoelectric sensor element, an improperly torqued sensor (knock sensors are torque-sensitive and read incorrectly if over- or under-tightened), or chafed/corroded wiring between the sensor and the ECM.
+    </div>
+  </div>
+
+  <h2 class="sec-title">Probability-Ranked Repair Procedures (4 Ranked Fixes)</h2>
+  
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #1</span>
+            <h3 class="fix-title">Inspect and reseat the knock sensor connector</h3>
+            <span class="chip chip-easy" style="background: #4caf6d25; color: #4caf6d; border: 1px solid #4caf6d;">Easy DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$5.0–$15.0 USD</b></span>
+            <span>Labor Estimate: <b>0.4 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Locate the knock sensor(s), usually threaded into the block under the intake manifold</li><li>2. Unplug and inspect for oil contamination or corroded pins</li><li>3. Clean contacts and reseat the connector</li><li>4. Clear the code and monitor knock counts on a scan tool</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Electrical+contact+cleaner+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Electrical contact cleaner</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #2</span>
+            <h3 class="fix-title">Replace the knock sensor at correct torque spec</h3>
+            <span class="chip chip-mod" style="background: #e8a13d25; color: #e8a13d; border: 1px solid #e8a13d;">Moderate DIY</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$30.0–$100.0 USD</b></span>
+            <span>Labor Estimate: <b>1.2 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Remove the intake manifold or components blocking sensor access</li><li>2. Unbolt the failed knock sensor</li><li>3. Install the replacement and torque to the exact factory spec (over- or under-torquing causes false readings)</li><li>4. Reconnect, clear codes, and verify signal activity while revving the engine</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Knock+%28combustion+vibration%29+sensor+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Knock (combustion vibration) sensor</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #3</span>
+            <h3 class="fix-title">Repair knock sensor circuit wiring</h3>
+            <span class="chip chip-pro" style="background: #d6545425; color: #d65454; border: 1px solid #d65454;">Professional Required</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$10.0–$60.0 USD</b></span>
+            <span>Labor Estimate: <b>1.3 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Back-probe the signal and shield/ground legs at the sensor connector</li><li>2. Voltage-drop test the harness back to the ECM</li><li>3. Repair chafed or corroded conductors with soldered, heat-shrunk, shielded splices</li><li>4. Confirm a clean knock signal waveform on a scope</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Shielded+automotive+wiring+repair+kit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Shielded automotive wiring repair kit</a></div>
+          </div>
+        </div>
+        
+        <div class="fix-card">
+          <div class="fix-header">
+            <span class="rank-badge">Rank #4</span>
+            <h3 class="fix-title">Diagnose knock control module/ECM internal fault</h3>
+            <span class="chip chip-pro" style="background: #d6545425; color: #d65454; border: 1px solid #d65454;">Professional Required</span>
+          </div>
+          <div class="fix-meta">
+            <span>Parts Estimate: <b>$15.0–$250.0 USD</b></span>
+            <span>Labor Estimate: <b>1.5 Shop Hours</b></span>
+          </div>
+          <div class="fix-body">
+            <ol class='step-list'><li>1. Confirm all sensors and wiring test good in isolation</li><li>2. Check for a shared power/ground fault affecting the knock control circuit</li><li>3. Update or reflash ECM software if a known knock-strategy bulletin applies</li><li>4. Replace the ECM only after all external causes are ruled out</li></ol>
+            <div class='parts-req'><b>Required Replacement Parts:</b> <a href='https://www.amazon.com/s?k=Engine+control+module+%28ECM%29%2C+replacement+unit+automotive' target='_blank' rel='noopener noreferrer' class='part-link'>🔧 Engine control module (ECM), replacement unit</a></div>
+          </div>
+        </div>
+        
+
+  <div class="cta-footer">
+    <h3>Need All 15,886 OBD-II Codes &amp; 56,561 Fixes?</h3>
+    <p>Download the complete commercial MechanicDB dataset instantly. Includes CSV, Apache Parquet tables, and a relational SQLite database with commercial application rights.</p>
+    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403" class="btn-amber">License Full Dataset · Instant Download ($49)</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>MechanicDB · The OBD-II Diagnostic &amp; Repair Database · ODbL v1.0 / Commercial License</span>
+  </div>
+</footer>
+
+</body>
+</html>
