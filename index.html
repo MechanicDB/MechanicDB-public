@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechanicDB — The OBD-II Diagnostic &amp; Repair Database</title>
+<meta name="description" content="15,886 verified OBD-II trouble codes (9,249 SAE-standard + 6,637 manufacturer-specific across 32 makes) mapped to 56,561 ranked repair procedures with DIY difficulty and cost estimates. CSV, Parquet, SQLite.">
+<meta name="keywords" content="OBD-II database, diagnostic trouble codes, check engine light fixes, P0420 fix, C0031 repair, automotive repair dataset, DTC codes CSV">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="2VE0Ll5xPaIkGjSTkvTenDhcKRLJGPFgVqekvGOIw-4" />
+<link rel="canonical" href="https://mechanicdb-public.pages.dev/">
+<link rel="alternate" hreflang="en" href="https://mechanicdb-public.pages.dev/">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb-public.pages.dev/">
+
+<meta property="og:title" content="MechanicDB — The OBD-II Diagnostic &amp; Repair Database">
+<meta property="og:description" content="15,886 verified OBD-II trouble codes mapped to 56,561 ranked repair procedures with DIY difficulty tiers, parts costs, and step-by-step instructions.">
+<meta property="og:url" content="https://mechanicdb-public.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mechanicdb-public.pages.dev/assets/kaggle-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mechanicdb-public.pages.dev/assets/kaggle-cover.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "MechanicDB Automotive OBD-II Diagnostic & Repair Database",
+  "description": "Comprehensive automotive diagnostic dataset mapping 15,886 verified OBD-II trouble codes across 32 vehicle makes to 56,561 ranked repair procedures with DIY difficulty ratings and labor/parts cost estimations.",
+  "url": "https://mechanicdb-public.pages.dev/",
+  "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "OBD-II database",
+    "diagnostic trouble codes",
+    "automotive repair instructions",
+    "SAE J2012",
+    "check engine light diagnosis"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "MechanicDB",
+    "url": "https://mechanicdb-public.pages.dev/"
+  },
+  "variableMeasured": [
+    "dtc_code",
+    "system_category",
+    "is_oem_specific",
+    "oem_make",
+    "fault_family",
+    "probability_rank",
+    "difficulty_level",
+    "est_parts_cost_min_usd",
+    "est_parts_cost_max_usd",
+    "est_labor_hours"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://mechanicdb-public.pages.dev/dtc_codes.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://mechanicdb-public.pages.dev/diagnostic_fixes.csv"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is each OBD-II diagnostic trouble code structured inside MechanicDB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 specifies SAE standard ('0') vs manufacturer-defined ('1'), character 3 designates the subsystem, and characters 4-5 represent the specific fault index."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What safety criteria determine whether a repair procedure is rated Easy DIY vs Professional Required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Procedures involving high-voltage hybrid/EV traction networks (>60V), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I integrate MechanicDB into commercial scan tools or shop management software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! While the 90-code sample is available under ODbL v1.0, the complete 15,886-code and 56,561-fix dataset is available under an unrestricted commercial license delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does MechanicDB cover manufacturer-specific OEM codes beyond the SAE P0 generic range?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our OEM Complete tier maps 6,637 manufacturer-controlled trouble codes across 32 major vehicle makes including Ford, GM, Toyota, BMW, Honda, Mercedes-Benz, and Volkswagen."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Top OBD-II Diagnostic Code Categories & Monographs",
+  "description": "Key automotive OBD-II systems and diagnostic reference monographs.",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Powertrain System (P-Codes)", "url": "https://mechanicdb-public.pages.dev/landing/powertrain.html"},
+    {"@type": "ListItem", "position": 2, "name": "Chassis & ABS System (C-Codes)", "url": "https://mechanicdb-public.pages.dev/landing/chassis.html"},
+    {"@type": "ListItem", "position": 3, "name": "Code P0420 (Catalyst Efficiency Below Threshold)", "url": "https://mechanicdb-public.pages.dev/landing/P0420.html"},
+    {"@type": "ListItem", "position": 4, "name": "Code C0035 (Right Front Wheel Speed Sensor)", "url": "https://mechanicdb-public.pages.dev/landing/C0035.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb-public.pages.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Diagnostic Decoder", "item": "https://mechanicdb-public.pages.dev/#interactive"},
+    {"@type": "ListItem", "position": 3, "name": "Commercial Licensing", "item": "https://mechanicdb-public.pages.dev/#licensing"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --steel: #1b1e22;        /* tool-chest graphite */
+    --steel-2: #24282e;      /* raised panel */
+    --steel-3: #2e333a;      /* panel edge */
+    --paper: #f1efe8;        /* laminated spec sheet */
+    --paper-dim: #e6e3d9;
+    --ink: #22252a;          /* text on paper */
+    --ink-soft: #5a5f66;
+    --trace: #9aa3ad;        /* muted text on steel */
+    --amber: #ffb000;        /* MIL lamp */
+    --amber-deep: #cc8a00;
+    --easy: #4caf6d;         /* data-encoded difficulty */
+    --mod: #e8a13d;
+    --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    --disp: 'Saira Condensed', 'Arial Narrow', sans-serif;
+    --body: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--steel);
+    color: var(--trace);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── top bar ─────────────────────────────── */
+  header.bar {
+    border-bottom: 1px solid var(--steel-3);
+    padding: 18px 0;
+  }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark {
+    font-family: var(--disp); font-weight: 700; font-size: 1.35rem;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #fff;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mil {
+    width: 22px; height: 16px; display: inline-block; flex: none;
+    background: var(--amber);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path d="M8 2h8l3 4h3v8h-3l-2 2H7l-2-2H2V6h3l3-4zm4 3a4 4 0 100 8 4 4 0 000-8z"/></svg>') center/contain no-repeat;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path d="M8 2h8l3 4h3v8h-3l-2 2H7l-2-2H2V6h3l3-4zm4 3a4 4 0 100 8 4 4 0 000-8z"/></svg>') center/contain no-repeat;
+  }
+  nav.bar-nav { display: flex; gap: 22px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; }
+  nav.bar-nav a { color: var(--trace); }
+  nav.bar-nav a:hover { color: var(--amber); text-decoration: none; }
+
+  /* ── section stamps ──────────────────────── */
+  .stamp {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber);
+    border: 1px solid var(--steel-3); padding: 6px 12px; border-radius: 3px;
+    background: var(--steel-2);
+  }
+  .stamp::before { content: ''; width: 7px; height: 7px; background: var(--amber); border-radius: 50%; }
+
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--steel-3); }
+  h2.sec-title {
+    font-family: var(--disp); font-weight: 600; font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    text-transform: uppercase; letter-spacing: 0.04em; color: #fff; margin: 18px 0 10px;
+  }
+  .sec-lede { max-width: 62ch; color: var(--trace); margin-bottom: 36px; }
+
+  /* ── hero ────────────────────────────────── */
+  .hero { padding: 72px 0 64px; }
+  .hero h1 {
+    font-family: var(--disp); font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.02; text-transform: uppercase; letter-spacing: 0.02em;
+    color: #fff; max-width: 21ch; margin: 22px 0 18px;
+  }
+  .hero h1 em { font-style: normal; color: var(--amber); }
+  .hero p.lede { max-width: 58ch; font-size: 1.06rem; margin-bottom: 28px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+  .btn {
+    font-family: var(--mono); font-size: 0.85rem; font-weight: 600;
+    padding: 12px 22px; border-radius: 4px; border: 1px solid transparent;
+    cursor: pointer; display: inline-block;
+  }
+  .btn-amber { background: var(--amber); color: #1b1500; }
+  .btn-amber:hover { background: #ffc23d; text-decoration: none; }
+  .btn-ghost { border-color: var(--steel-3); color: var(--trace); background: transparent; }
+  .btn-ghost:hover { border-color: var(--amber); color: var(--amber); text-decoration: none; }
+
+  /* ── decoder (signature) ─────────────────── */
+  .decoder {
+    background: var(--steel-2);
+    border: 1px solid var(--steel-3);
+    border-radius: 8px;
+    padding: 26px 26px 30px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  }
+  .decoder-head {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .decoder-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--trace); }
+  .code-picker { display: flex; gap: 6px; flex-wrap: wrap; }
+  .code-picker button {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+    background: transparent; border: 1px solid var(--steel-3); color: var(--trace);
+    padding: 5px 10px; border-radius: 3px; cursor: pointer;
+  }
+  .code-picker button:hover { border-color: var(--amber); color: var(--amber); }
+  .code-picker button[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: #1b1500; font-weight: 600; }
+
+  .digits { display: flex; gap: 8px; margin-bottom: 6px; }
+  .digit {
+    flex: 1; min-width: 0; text-align: center;
+    background: var(--steel);
+    border: 1px solid var(--steel-3); border-bottom: 3px solid var(--amber-deep);
+    border-radius: 5px;
+    font-family: var(--mono); font-weight: 600;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    color: var(--amber); padding: 14px 0 10px;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .digit.flip { opacity: 0; transform: translateY(6px); }
+  .digit-notes { display: flex; gap: 8px; margin-bottom: 24px; }
+  .digit-note {
+    flex: 1; min-width: 0; text-align: center;
+    font-family: var(--mono); font-size: 0.62rem; line-height: 1.35;
+    letter-spacing: 0.03em; text-transform: uppercase; color: var(--trace);
+    padding-top: 8px; border-top: 1px dashed var(--steel-3);
+  }
+  .digit-note b { display: block; color: #d7dce2; font-weight: 600; }
+  .note-span-2 { flex: 2; }
+
+  .readout {
+    background: var(--paper); color: var(--ink);
+    border-radius: 6px; padding: 20px 22px;
+  }
+  .readout-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .readout h3 { font-family: var(--disp); font-weight: 600; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .fam-tag { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); background: var(--paper-dim); padding: 3px 8px; border-radius: 3px; }
+  .readout p.explain { font-size: 0.88rem; color: var(--ink-soft); margin: 10px 0 16px; }
+  .fix-row {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 10px 14px; align-items: center;
+    padding: 9px 0; border-top: 1px solid var(--paper-dim);
+    font-size: 0.88rem;
+  }
+  .rank { font-family: var(--mono); font-size: 0.7rem; font-weight: 600; color: var(--ink-soft); }
+  .fix-title { color: var(--ink); font-weight: 500; }
+  .fix-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); white-space: nowrap; }
+  .chip {
+    display: inline-block; font-family: var(--mono); font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase; color: #fff;
+    padding: 2px 7px; border-radius: 3px; margin-right: 8px; vertical-align: 1px;
+  }
+  .chip-easy { background: var(--easy); }
+  .chip-mod { background: var(--mod); color: #2a1d00; }
+  .chip-pro { background: var(--pro); }
+  .readout-foot { margin-top: 14px; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); }
+
+  /* ── schema (what's inside) ──────────────── */
+  .schema-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .table-card {
+    background: var(--paper); color: var(--ink); border-radius: 6px; padding: 20px;
+    position: relative;
+  }
+  .table-card h3 { font-family: var(--mono); font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
+  .table-card .rows { font-family: var(--mono); font-size: 0.7rem; color: var(--amber-deep); font-weight: 600; margin-bottom: 10px; }
+  .table-card p { font-size: 0.82rem; color: var(--ink-soft); }
+  .table-card ul { list-style: none; margin-top: 12px; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-soft); }
+  .table-card li { padding: 3px 0; border-top: 1px dashed var(--paper-dim); }
+  .join-note { margin-top: 18px; font-family: var(--mono); font-size: 0.74rem; color: var(--trace); }
+  .join-note code { color: var(--amber); }
+
+  /* ── specifications ──────────────────────── */
+  .spec-sheet {
+    background: var(--paper); color: var(--ink); border-radius: 6px;
+    overflow: hidden;
+  }
+  .spec-sheet table { width: 100%; border-collapse: collapse; }
+  .spec-sheet th, .spec-sheet td { text-align: left; padding: 13px 20px; border-bottom: 1px solid var(--paper-dim); vertical-align: top; }
+  .spec-sheet th {
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-soft); width: 34%;
+  }
+  .spec-sheet td { font-size: 0.92rem; }
+  .spec-sheet td b { font-family: var(--mono); color: var(--amber-deep); }
+  .spec-sheet tr:last-child th, .spec-sheet tr:last-child td { border-bottom: none; }
+
+  /* ── pricing ─────────────────────────────── */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tier {
+    background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px;
+    padding: 28px 26px; display: flex; flex-direction: column;
+  }
+  .tier.featured { background: var(--paper); color: var(--ink); border-color: var(--amber); border-width: 2px; }
+  .tier h3 { font-family: var(--disp); font-weight: 600; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.03em; color: #fff; }
+  .tier.featured h3 { color: var(--ink); }
+  .tier .price { font-family: var(--mono); font-size: 2rem; font-weight: 600; color: var(--amber); margin: 8px 0 2px; }
+  .tier.featured .price { color: var(--amber-deep); }
+  .tier .per { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--trace); margin-bottom: 18px; }
+  .tier.featured .per { color: var(--ink-soft); }
+  .tier ul { list-style: none; font-size: 0.88rem; flex: 1; margin-bottom: 22px; }
+  .tier li { padding: 6px 0 6px 22px; position: relative; }
+  .tier li::before { content: '›'; position: absolute; left: 4px; color: var(--amber); font-weight: 700; }
+  .tier.featured li { color: var(--ink-soft); }
+  .tier .btn { text-align: center; }
+
+  /* ── provenance / support ────────────────── */
+  .prov-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; }
+  .prov-grid h3 { font-family: var(--disp); font-size: 1.15rem; font-weight: 600; text-transform: uppercase; color: #fff; margin-bottom: 12px; }
+  .prov-grid p, .prov-grid li { font-size: 0.92rem; }
+  .prov-grid ul { list-style: none; }
+  .prov-grid li { padding: 7px 0; border-top: 1px solid var(--steel-3); font-family: var(--mono); font-size: 0.82rem; }
+  .safety {
+    margin-top: 30px; border: 1px solid var(--amber-deep); border-radius: 6px;
+    padding: 16px 20px; font-size: 0.85rem; color: var(--trace);
+    background: rgba(255, 176, 0, 0.05);
+  }
+  .safety b { color: var(--amber); }
+
+  footer {
+    border-top: 1px solid var(--steel-3); padding: 30px 0 44px;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--trace);
+    display: block;
+  }
+  .foot-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* ── responsive ──────────────────────────── */
+  @media (max-width: 880px) {
+    .schema-strip { grid-template-columns: repeat(2, 1fr); }
+    .tiers { grid-template-columns: 1fr; }
+    .prov-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    section { padding: 52px 0; }
+    .schema-strip { grid-template-columns: 1fr; }
+    .fix-row { grid-template-columns: auto 1fr; }
+    .fix-meta { grid-column: 2; }
+    .digit-note { font-size: 0.55rem; }
+  }
+
+  /* ── faq section & directory links ───────── */
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 28px; }
+  .faq-item { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 22px 24px; }
+  .faq-item h3 { font-family: var(--disp); font-size: 1.15rem; color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .faq-item p { font-size: 0.92rem; color: var(--trace); line-height: 1.55; }
+  .dir-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+  .dir-badge { background: var(--steel-3); color: #fff; padding: 6px 14px; border-radius: 4px; font-family: var(--mono); font-size: 0.8rem; border: 1px solid rgba(255,176,0,0.3); }
+  .dir-badge:hover { background: var(--amber); color: #1b1500; text-decoration: none; font-weight: 600; }
+
+  /* ── interactive support modal ───────────── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(4px); }
+  .modal-overlay.active { display: flex; }
+  .modal-box { background: var(--steel-2); border: 1px solid var(--amber); border-radius: 8px; width: 100%; max-width: 540px; padding: 30px; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.6); max-height: 90vh; overflow-y: auto; }
+  .modal-close { position: absolute; top: 16px; right: 20px; background: transparent; border: none; color: var(--trace); font-size: 1.5rem; cursor: pointer; }
+  .modal-close:hover { color: var(--amber); }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; color: #fff; margin-bottom: 6px; letter-spacing: 0.05em; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--steel); border: 1px solid var(--steel-3); border-radius: 4px; padding: 10px 14px; color: #fff; font-family: var(--body); font-size: 0.95rem; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--amber); outline: none; }
+  .form-status { margin-top: 14px; padding: 12px; border-radius: 4px; font-family: var(--mono); font-size: 0.82rem; display: none; }
+  .form-status.success { background: rgba(76,175,109,0.15); border: 1px solid var(--easy); color: #86e8a7; display: block; }
+  .form-status.error { background: rgba(214,84,84,0.15); border: 1px solid var(--pro); color: #ff9e9e; display: block; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <span class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</span>
+    <nav class="bar-nav" aria-label="Page sections">
+      <a href="#inside">Schema</a>
+      <a href="#specs">Specifications</a>
+      <a href="#licensing">Licensing</a>
+      <a href="#provenance">Provenance</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="stamp">Sec 00 · Diagnostic Reference</span>
+    <h1>Every check-engine light, <em>decoded and costed.</em></h1>
+    <p class="lede">MechanicDB maps 15,886 verified OBD-II trouble codes — 9,249 SAE-standard plus 6,637 manufacturer-specific across 32 makes — to 56,561 ranked repair procedures — each with a DIY difficulty rating, parts-cost range, and labor estimate. Built for OBD apps, scan-tool firmware, AI mechanic co-pilots, and shop software.</p>
+    <div class="cta-row">
+      <a class="btn btn-amber" href="#licensing">License the full dataset</a>
+      <a class="btn btn-ghost" href="https://github.com/MechanicDB/MechanicDB-public">Get the free 90-code sample</a>
+    </div>
+
+    <div class="decoder" id="decoder">
+      <div class="decoder-head">
+        <span class="decoder-title">Code anatomy — live from the sample</span>
+        <div class="code-picker" role="group" aria-label="Choose a trouble code" id="picker"></div>
+      </div>
+      <div class="digits" id="digits" aria-hidden="true"></div>
+      <div class="digit-notes" id="digitNotes"></div>
+      <div class="readout" aria-live="polite">
+        <div class="readout-top">
+          <h3 id="roTitle"></h3>
+          <span class="fam-tag" id="roFam"></span>
+        </div>
+        <p class="explain" id="roExplain"></p>
+        <div id="roFixes"></div>
+        <div class="readout-foot">probability-ranked · parts cost in USD · labor in shop hours — 3 of the code's ranked fixes shown</div>
+      </div>
+    </div>
+    <div class="dir-links" aria-label="Diagnostic Categories">
+      <a class="dir-badge" href="landing/powertrain.html">⚡ Powertrain (P-Codes)</a>
+      <a class="dir-badge" href="landing/chassis.html">🛑 Chassis &amp; ABS (C-Codes)</a>
+      <a class="dir-badge" href="landing/body.html">🚗 Body &amp; SRS (B-Codes)</a>
+      <a class="dir-badge" href="landing/network.html">📡 CAN Network (U-Codes)</a>
+    </div>
+  </div>
+</section>
+
+<section id="inside">
+  <div class="wrap">
+    <span class="stamp">Sec 01 · What's inside</span>
+    <h2 class="sec-title">Four relational tables, one join key chain</h2>
+    <p class="sec-lede">Normalized for databases, pre-joined for notebooks. Every code carries 3–5 fixes ranked by real-world likelihood; every fix maps to purchasable aftermarket parts.</p>
+    <div class="schema-strip">
+      <div class="table-card">
+        <h3>dtc_codes</h3>
+        <div class="rows">15,886 rows</div>
+        <p>The code registry: definition, system category, OEM flag/make, fault family, and a code-specific technical explanation.</p>
+        <ul><li>dtc_code · PK chain start</li><li>is_oem_specific / oem_make</li><li>fault_family</li><li>detailed_technical_explanation</li></ul>
+      </div>
+      <div class="table-card">
+        <h3>diagnostic_fixes</h3>
+        <div class="rows">56,561 rows</div>
+        <p>Ranked repair procedures with difficulty tier, parts-cost range, labor hours, and step-by-step instructions.</p>
+        <ul><li>probability_rank 1–5</li><li>difficulty_level</li><li>est_parts_cost min/max USD</li></ul>
+      </div>
+      <div class="table-card">
+        <h3>replacement_parts</h3>
+        <div class="rows">75,055 rows</div>
+        <p>Aftermarket part names per fix, with catalog search URLs derived from the part name.</p>
+        <ul><li>part_name</li><li>amazon_search_query</li></ul>
+      </div>
+      <div class="table-card">
+        <h3>dtc_fixes_joined</h3>
+        <div class="rows">56,561 rows</div>
+        <p>The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.</p>
+        <ul><li>all 16 columns</li><li>one read_csv / read_parquet</li></ul>
+      </div>
+    </div>
+    <p class="join-note">join chain: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
+  </div>
+</section>
+
+<section id="specs">
+  <div class="wrap">
+    <span class="stamp">Sec 02 · Specifications</span>
+    <h2 class="sec-title">Data sheet</h2>
+    <div class="spec-sheet">
+      <table>
+        <tr><th scope="row">Coverage</th><td><b>9,249</b> SAE-standard codes — P0, P2, P34–P39, C0, B0, U0, U3 generic ranges. Powertrain, chassis, body, and network, including hybrid/EV (P0Axx–P0Exx) and diesel aftertreatment.</td></tr>
+        <tr><th scope="row">OEM coverage</th><td><b>6,637</b> manufacturer-specific codes across <b>32</b> makes — P1, P30–P33, C1/C2, B1/B2, U1/U2 manufacturer-controlled ranges (Ford, Toyota, BMW, GM, and 28 more). <b>15,886</b> codes total.</td></tr>
+        <tr><th scope="row">Repair intelligence</th><td><b>647</b> authored fault families → <b>56,561</b> ranked fixes → <b>75,055</b> parts mappings. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required.</td></tr>
+        <tr><th scope="row">Delivery formats</th><td>Pipe-delimited CSV (UTF-8 BOM, Excel-safe) · Apache Parquet, Snappy — a measured <b>92.0%</b> smaller · SQLite database, all four tables.</td></tr>
+        <tr><th scope="row">Quality gates</th><td>Deterministic, test-gated build: referential integrity, anti-template uniqueness checks, and a no-fabricated-codes gate — every published code traces to the committed source.</td></tr>
+        <tr><th scope="row">Safety framing</th><td>High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Hazardous steps are never rated DIY.</td></tr>
+        <tr><th scope="row">Provenance</th><td>Code definitions compiled from public SAE J2012-derived sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="licensing">
+  <div class="wrap">
+    <span class="stamp">Sec 03 · Licensing</span>
+    <h2 class="sec-title">Three ways in</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Developer sample</h3>
+        <div class="price">$0</div>
+        <div class="per">ODbL v1.0 · open data</div>
+        <ul>
+          <li>90 curated codes (75 SAE + 15 OEM) — the most-searched DTCs</li>
+          <li>Identical schema to the full dataset</li>
+          <li>CSV + Parquet, on GitHub and Kaggle</li>
+          <li>Research, education, benchmarking</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://github.com/MechanicDB/MechanicDB-public">Download the sample</a>
+      </div>
+      <div class="tier featured">
+        <h3>Standard license</h3>
+        <div class="price">$49</div>
+        <div class="per">one-time · commercial use</div>
+        <ul>
+          <li>SAE-only dataset: 9,249 codes, 32,767 fixes, 44,588 parts</li>
+          <li>CSV + Parquet + SQLite delivery</li>
+          <li>Commercial application rights — apps, dongles, co-pilots, shop software</li>
+          <li>Versioned releases from the deterministic pipeline</li>
+        </ul>
+        <a class="btn btn-amber" href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403">Buy now · Instant download</a>
+      </div>
+      <div class="tier">
+        <h3>OEM complete</h3>
+        <div class="price">$149</div>
+        <div class="per">one-time · commercial use</div>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>6,637 OEM codes across 32 makes — Ford, Toyota, BMW, GM, and 28 more</li>
+          <li>Full merged dataset: 15,886 codes, 56,561 fixes, 75,055 parts</li>
+          <li>CSV + Parquet + SQLite delivery</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://buy.stripe.com/28EfZicVy0ECdM796w38404">Buy now · Instant download</a>
+      </div>
+    </div>
+    <p class="join-note">Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · dataset delivered instantly after payment.<br>Need a company invoice, shop software integration, or custom API access? <a href="#supportModal" id="openSupportModalBtn">Open Diagnostic &amp; Licensing Support Modal</a> · or email <a href="mailto:mechanicdb.urologist336@simplelogin.com">mechanicdb.urologist336@simplelogin.com</a></p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="stamp">Sec 04 · Technical FAQ</span>
+    <h2 class="sec-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Code Anatomy &amp; Structure</h3>
+        <p>Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 specifies SAE standard ('0') vs manufacturer-defined ('1'), character 3 designates the subsystem, and characters 4-5 represent the specific fault index.</p>
+      </div>
+      <div class="faq-item">
+        <h3>DIY Safety &amp; High-Voltage Gate</h3>
+        <p>Procedures involving high-voltage hybrid/EV traction networks (&gt;60V), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Commercial Scan Tool Integration</h3>
+        <p>While the 90-code sample is available under ODbL v1.0, the complete 15,886-code and 56,561-fix dataset is available under an unrestricted commercial license delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database.</p>
+      </div>
+      <div class="faq-item">
+        <h3>OEM Manufacturer Coverage</h3>
+        <p>Our OEM Complete tier maps 6,637 manufacturer-controlled trouble codes across 32 major vehicle makes including Ford, GM, Toyota, BMW, Honda, Mercedes-Benz, and Volkswagen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="supportModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+    <h3 id="modalTitle" style="font-family: var(--disp); font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 8px;">Diagnostic &amp; Licensing Inquiry</h3>
+    <p style="font-size: 0.88rem; color: var(--trace); margin-bottom: 20px;">Request a company invoice, custom scan-tool API integration, or sample verification. Our system ensures zero-outage delivery.</p>
+    <form id="supportForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="bf34ff48-fcc6-4823-b386-9ae3d0712797">
+      <input type="hidden" name="subject" value="New MechanicDB Inquiry / Commercial License">
+      <input type="hidden" name="from_name" value="MechanicDB Contact Form">
+      <div class="form-group">
+        <label for="supName">Your Name / Company</label>
+        <input type="text" id="supName" name="name" required placeholder="Jane Doe / Apex Diagnostics Inc.">
+      </div>
+      <div class="form-group">
+        <label for="supEmail">Work Email Address</label>
+        <input type="email" id="supEmail" name="email" required placeholder="jane@apexdiagnostics.com">
+      </div>
+      <div class="form-group">
+        <label for="supTopic">Inquiry Topic</label>
+        <select id="supTopic" name="topic" required>
+          <option value="OEM Complete Commercial License ($149)">OEM Complete Commercial License ($149)</option>
+          <option value="Scan Tool / OBD App API Integration">Scan Tool / OBD App API Integration</option>
+          <option value="Company Invoice / Purchase Order">Company Invoice / Purchase Order</option>
+          <option value="Diagnostic Data Verification &amp; Sample">Diagnostic Data Verification &amp; Sample</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="supMessage">Message / Specific Requirements</label>
+        <textarea id="supMessage" name="message" rows="4" required placeholder="Let us know target platforms, scan tool models, or billing requirements..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-amber" id="submitSupportBtn" style="width: 100%; justify-content: center;">Send Inquiry</button>
+      <div class="form-status" id="supportStatus"></div>
+    </form>
+  </div>
+</div>
+
+<section id="provenance">
+  <div class="wrap">
+    <span class="stamp">Sec 04 · Provenance &amp; support</span>
+    <h2 class="sec-title">Where the data comes from</h2>
+    <div class="prov-grid">
+      <div>
+        <p>Code-to-definition mappings originate in SAE J2012 / ISO 15031-6 and are compiled from an MIT-licensed public compilation, with the upstream license committed alongside the data. The value layer — fault-family explanations, ranked procedures, difficulty tiers, and cost ranges — is original editorial content grounded in standard diagnostic practice. Cost and labor figures are estimates for typical US aftermarket parts and independent-shop labor, not quotes.</p>
+        <div class="safety"><b>Safety notice.</b> Repair steps are educational reference material, not a substitute for the manufacturer's service manual. High-voltage and SRS/airbag procedures must only be performed by qualified technicians.</div>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="https://github.com/MechanicDB/MechanicDB-public">Sample repository + data dictionary</a></li>
+          <li><a href="https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database">Kaggle dataset</a></li>
+          <li><a href="https://github.com/MechanicDB/MechanicDB-public/blob/main/SOURCES.md">Full provenance (SOURCES.md)</a></li>
+          <li><a href="https://github.com/MechanicDB/MechanicDB-public/issues">Licensing &amp; support — open an issue</a></li>
+          <li><a href="mailto:mechanicdb.urologist336@simplelogin.com">Licensing by email</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>MechanicDB · sample data under ODbL v1.0 · full dataset under commercial license</span>
+    <span>built by a deterministic, test-gated pipeline</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  /* Real rows from samples/dtc_fixes_joined.csv (v1.0). */
+  var DATA = {
+    "P0420": { desc: "Catalyst System Efficiency Below Threshold Bank 1", family: "catalyst_efficiency_below_threshold",
+      explain: "Sets when the ECM compares pre- and post-catalyst oxygen sensor switching activity and finds the catalyst no longer storing oxygen effectively.",
+      fixes: [["Inspect for exhaust leaks near the oxygen sensors","Easy DIY",10,60,0.8],
+              ["Correct an underlying rich/lean fuel condition first","Moderate DIY",15,100,1.0],
+              ["Replace the catalytic converter","Professional Required",250,1500,2.0]] },
+    "P0171": { desc: "System Too Lean Bank 1", family: "fuel_trim_lean",
+      explain: "Sets when the ECM must add more fuel than the calibrated limit allows to correct a lean condition — leading causes are unmetered air and weak fuel delivery.",
+      fixes: [["Smoke-test intake for vacuum/air leaks","Easy DIY",10,40,0.8],
+              ["Replace fuel filter and test fuel pump output","Moderate DIY",30,150,1.0],
+              ["Inspect and repair exhaust manifold gasket leak","Moderate DIY",40,180,1.5]] },
+    "P0300": { desc: "Random/Multiple Cylinder Misfire Detected", family: "misfire_random_multiple",
+      explain: "Sets when the crankshaft-acceleration misfire monitor counts combustion faults across multiple cylinders beyond the calibrated threshold.",
+      fixes: [["Replace spark plugs and inspect ignition coils as a set","Easy DIY",30,90,1.2],
+              ["Smoke-test intake and vacuum lines for a shared leak","Moderate DIY",15,60,1.0],
+              ["Verify fuel delivery and refuel if the tank is low","Easy DIY",5,20,0.2]] },
+    "P0442": { desc: "EVAP System Leak Detected (small leak)", family: "evap_small_leak",
+      explain: "Sets when the EVAP leak-detection monitor cannot hold vacuum or pressure within its small-leak threshold — typically a 0.020 in. equivalent orifice.",
+      fixes: [["Inspect and reseat or replace fuel filler cap","Easy DIY",10,25,0.2],
+              ["Smoke-test EVAP system and replace leaking hose","Moderate DIY",15,60,1.0],
+              ["Replace EVAP purge solenoid valve","Moderate DIY",25,90,0.6]] },
+    "P0128": { desc: "Coolant Temperature Below Thermostat Regulating Temperature", family: "coolant_thermostat_performance",
+      explain: "Sets when engine coolant fails to reach or maintain its regulating temperature within the expected time.",
+      fixes: [["Check coolant level and inspect for external leaks","Easy DIY",10,40,0.5],
+              ["Replace stuck-open thermostat","Moderate DIY",20,90,1.0],
+              ["Replace failing water pump","Professional Required",120,450,2.0]] },
+    "P0715": { desc: "Input/Turbine Shaft Speed Sensor A Circuit", family: "input_turbine_shaft_speed_sensor_circuit",
+      explain: "Sets when the TCM loses, or receives an implausible, input/turbine shaft speed signal used for shift scheduling and torque converter clutch control.",
+      fixes: [["Inspect sensor connector for fluid intrusion","Easy DIY",5,20,0.5],
+              ["Replace input/turbine shaft speed sensor","Moderate DIY",30,110,0.9],
+              ["Repair internal/external transmission wiring harness","Professional Required",40,200,2.0]] },
+    "C0035": { desc: "Right Front Wheel Speed Sensor Supply", family: "wheel_speed_sensor_circuit",
+      explain: "Sets when the ABS module loses a valid electrical signal from a wheel speed sensor — the circuit reads open, shorted, or drops out intermittently.",
+      fixes: [["Inspect wheel speed sensor connector and harness routing","Easy DIY",5,25,0.4],
+              ["Test wheel speed sensor resistance and signal","Moderate DIY",10,40,0.6],
+              ["Replace wheel speed sensor","Moderate DIY",30,120,0.6]] },
+    "U0100": { desc: "Lost Communication With ECM/PCM A", family: "lost_comm_powertrain_module",
+      explain: "Sets when the gateway or another control module stops receiving any messages from a powertrain-side module or smart sensor on the CAN/LIN network.",
+      fixes: [["Check the module's dedicated fuse and battery/ground connections","Easy DIY",8,25,0.4],
+              ["Inspect and clean the engine-harness connector at the named module","Moderate DIY",12,40,0.6],
+              ["Repair the LIN/CAN sub-bus wiring feeding the module","Moderate DIY",20,90,1.3]] }
+  };
+
+  var SYSTEMS = { P: "Powertrain", C: "Chassis", B: "Body", U: "Network" };
+  var P_SUBSYS = { "1": "Fuel & air metering", "2": "Injector circuit", "3": "Ignition / misfire",
+                   "4": "Auxiliary emissions", "5": "Speed & idle control", "6": "Computer circuits",
+                   "7": "Transmission", "8": "Transmission", "9": "Transmission" };
+
+  var picker = document.getElementById('picker');
+  var digitsEl = document.getElementById('digits');
+  var notesEl = document.getElementById('digitNotes');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function chipClass(d) {
+    if (d === 'Easy DIY') return 'chip chip-easy';
+    if (d === 'Moderate DIY') return 'chip chip-mod';
+    return 'chip chip-pro';
+  }
+
+  function anatomy(code) {
+    var sys = SYSTEMS[code[0]] || 'System';
+    var std = code[1] === '0' ? 'SAE standard' : 'SAE extended';
+    var sub = (code[0] === 'P' && code[1] === '0' && P_SUBSYS[code[2]]) ? P_SUBSYS[code[2]] : 'Assignment block';
+    return [
+      { c: code[0], label: sys },
+      { c: code[1], label: std },
+      { c: code[2], label: sub },
+      { c: code.slice(3), label: 'Fault index', span: true }
+    ];
+  }
+
+  function render(code) {
+    var d = DATA[code];
+    var parts = anatomy(code);
+    var dHtml = '', nHtml = '';
+    parts.forEach(function (p) {
+      var span = p.span ? ' note-span-2' : '';
+      dHtml += '<div class="digit' + (p.span ? '' : '') + '"' + (p.span ? ' style="flex:2"' : '') + '>' + p.c + '</div>';
+      nHtml += '<div class="digit-note' + span + '"><b>' + p.c + '</b>' + p.label + '</div>';
+    });
+
+    function paint() {
+      digitsEl.innerHTML = dHtml;
+      notesEl.innerHTML = nHtml;
+      document.getElementById('roTitle').textContent = code + ' — ' + d.desc;
+      document.getElementById('roFam').textContent = d.family;
+      document.getElementById('roExplain').textContent = d.explain;
+      var fx = '';
+      d.fixes.forEach(function (f, i) {
+        fx += '<div class="fix-row"><span class="rank">R' + (i + 1) + '</span>' +
+              '<span class="fix-title"><span class="' + chipClass(f[1]) + '">' + f[1] + '</span>' + f[0] + '</span>' +
+              '<span class="fix-meta">$' + f[2] + '–' + f[3] + ' · ' + f[4] + ' h</span></div>';
+      });
+      document.getElementById('roFixes').innerHTML = fx;
+    }
+
+    if (reduced) { paint(); return; }
+    Array.prototype.forEach.call(digitsEl.children, function (el) { el.classList.add('flip'); });
+    setTimeout(paint, 130);
+  }
+
+  Object.keys(DATA).forEach(function (code, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = code;
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      picker.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      render(code);
+    });
+    picker.appendChild(b);
+  });
+
+  render('P0420');
+
+  /* PWA Service Worker Registration */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function() {});
+    });
+  }
+
+  /* Interactive Modal Logic */
+  var supportModal = document.getElementById('supportModal');
+  var openSupportModalBtn = document.getElementById('openSupportModalBtn');
+  var closeModalBtn = document.getElementById('closeModalBtn');
+
+  if (openSupportModalBtn && supportModal) {
+    openSupportModalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      supportModal.classList.add('active');
+    });
+  }
+  if (closeModalBtn && supportModal) {
+    closeModalBtn.addEventListener('click', function() {
+      supportModal.classList.remove('active');
+    });
+  }
+  if (supportModal) {
+    supportModal.addEventListener('click', function(e) {
+      if (e.target === supportModal) supportModal.classList.remove('active');
+    });
+  }
+
+  /* Resilient Zero-Outage Support Form Handler (7s AbortController + mailto fallback) */
+  var supportForm = document.getElementById('supportForm');
+  var supportStatus = document.getElementById('supportStatus');
+  var submitSupportBtn = document.getElementById('submitSupportBtn');
+
+  if (supportForm) {
+    supportForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (submitSupportBtn) {
+        submitSupportBtn.disabled = true;
+        submitSupportBtn.textContent = 'Transmitting Inquiry...';
+      }
+      if (supportStatus) {
+        supportStatus.className = 'form-status';
+        supportStatus.style.display = 'none';
+      }
+
+      var nameVal = document.getElementById('supName').value.trim();
+      var emailVal = document.getElementById('supEmail').value.trim();
+      var topicVal = document.getElementById('supTopic').value;
+      var msgVal = document.getElementById('supMessage').value.trim();
+
+      var formData = new FormData(supportForm);
+      var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timer = controller ? setTimeout(function() { controller.abort(); }, 7000) : null;
+
+      fetch(supportForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+        signal: controller ? controller.signal : null
+      })
+      .then(function(response) {
+        if (timer) clearTimeout(timer);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function(data) {
+        if (!data || data.success !== true) throw new Error('Form provider did not confirm delivery');
+        if (supportStatus) {
+          supportStatus.className = 'form-status success';
+          supportStatus.textContent = 'Inquiry successfully delivered! A database engineer will respond within 4 hours.';
+          supportStatus.style.display = 'block';
+        }
+        supportForm.reset();
+        if (submitSupportBtn) {
+          submitSupportBtn.disabled = false;
+          submitSupportBtn.textContent = 'Send Inquiry';
+        }
+      })
+      .catch(function(err) {
+        if (timer) clearTimeout(timer);
+        /* Zero-Outage Mailto Fallback */
+        var mailtoUrl = 'mailto:mechanicdb.urologist336@simplelogin.com?subject=' +
+          encodeURIComponent('MechanicDB Inquiry: ' + topicVal + ' (' + nameVal + ')') +
+          '&body=' + encodeURIComponent(
+            'Name/Company: ' + nameVal + '\n' +
+            'Work Email: ' + emailVal + '\n' +
+            'Topic: ' + topicVal + '\n\n' +
+            'Message/Requirements:\n' + msgVal
+          );
+
+        if (supportStatus) {
+          supportStatus.className = 'form-status success';
+          supportStatus.innerHTML = 'Direct email fallback triggered (' + (err.name === 'AbortError' ? 'timeout' : 'network bypass') + '). Opening your email client pre-filled... or <a href="' + mailtoUrl + '" style="color:#86e8a7;text-decoration:underline;">click here to send directly</a>.';
+          supportStatus.style.display = 'block';
+        }
+
+        setTimeout(function() {
+          window.location.href = mailtoUrl;
+          if (submitSupportBtn) {
+            submitSupportBtn.disabled = false;
+            submitSupportBtn.textContent = 'Send Inquiry';
+          }
+        }, 1200);
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

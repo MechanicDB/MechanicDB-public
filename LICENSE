@@ -1,0 +1,27 @@
+MechanicDB Free Developer Sample — Licensing
+
+1. DATASET (all .csv and .parquet files in this repository)
+
+   Licensed under the Open Database License (ODbL) v1.0.
+   Full text: https://opendatacommons.org/licenses/odbl/1-0/
+
+   You are free to share, create from, and adapt this database, provided you:
+   - Attribute: credit "MechanicDB" and link to this repository;
+   - Share-Alike: distribute adapted databases under ODbL v1.0;
+   - Keep open: do not apply technical measures that restrict reuse of
+     redistributed copies.
+
+   Commercial applications requiring the full database (15,886 codes) or
+   rights beyond ODbL terms require a separate commercial license —
+   self-serve at https://mechanicdb-public.pages.dev/ or email
+   mechanicdb.urologist336@simplelogin.com for inquiries.
+
+2. UPSTREAM ATTRIBUTION (code definitions)
+
+   DTC code definitions are compiled from a public, MIT-licensed
+   compilation of SAE J2012-derived trouble codes. The upstream MIT license
+   and copyright notice are preserved in LICENSE-upstream.txt, as required.
+
+3. DOCUMENTATION (README.md, DATA_DICTIONARY.md, SOURCES.md)
+
+   (c) MechanicDB. Licensed under CC BY 4.0.

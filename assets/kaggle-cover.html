@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1600px; height: 640px; overflow: hidden; }
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background:
+      radial-gradient(1100px 700px at 78% 30%, rgba(245,158,11,.10), transparent 60%),
+      radial-gradient(900px 600px at 15% 85%, rgba(0,242,254,.06), transparent 55%),
+      linear-gradient(160deg, #0b0f16 0%, #10161f 55%, #0b0f16 100%);
+    color: #e8edf4;
+    position: relative;
+  }
+  /* blueprint grid */
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(140,160,185,.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(140,160,185,.055) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(1200px 800px at 55% 45%, #000 40%, transparent 95%);
+  }
+  /* faint circuit traces, right side */
+  .traces { position: absolute; right: 0; top: 0; height: 640px; opacity: .5; }
+
+  .wrap { position: absolute; inset: 0; display: flex; align-items: center; padding: 0 76px; gap: 60px; }
+
+  .left { flex: 1.1; }
+  .brandrow { display: flex; align-items: center; gap: 26px; margin-bottom: 26px; }
+  .mil {
+    width: 96px; height: 96px; border-radius: 22px;
+    background: linear-gradient(155deg, rgba(245,158,11,.16), rgba(245,158,11,.05));
+    border: 1px solid rgba(245,158,11,.45);
+    box-shadow: 0 0 44px rgba(245,158,11,.28), inset 0 0 22px rgba(245,158,11,.10);
+    display: grid; place-items: center;
+  }
+  h1 { font-size: 84px; font-weight: 800; letter-spacing: 1px; line-height: 1; }
+  h1 .db { color: #f59e0b; }
+  .tagline {
+    font-size: 30px; font-weight: 350; color: #aeb9c9; letter-spacing: .4px; margin-bottom: 36px;
+  }
+  .tagline b { color: #e8edf4; font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 14px; max-width: 760px; }
+  .chip {
+    font-family: "Cascadia Mono", Consolas, monospace; font-size: 22px;
+    padding: 12px 22px; border-radius: 10px; letter-spacing: .3px;
+    border: 1px solid rgba(140,160,185,.35); background: rgba(20,28,40,.72); color: #c8d2df;
+  }
+  .chip b { color: #f59e0b; font-weight: 700; }
+  .chip.cyan b { color: #00e0f2; }
+
+  /* scanner terminal card */
+  .term {
+    width: 600px; border-radius: 16px; overflow: hidden; flex-shrink: 0;
+    border: 1px solid rgba(245,158,11,.35);
+    background: linear-gradient(170deg, #0e141d 0%, #0a0e15 100%);
+    box-shadow: 0 30px 70px rgba(0,0,0,.55), 0 0 60px rgba(245,158,11,.10);
+    font-family: "Cascadia Mono", Consolas, monospace;
+  }
+  .term-bar {
+    display: flex; align-items: center; gap: 10px; padding: 14px 20px;
+    background: rgba(245,158,11,.08); border-bottom: 1px solid rgba(245,158,11,.25);
+    font-size: 17px; color: #f59e0b; letter-spacing: 1.5px;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; background: #2c3644; }
+  .dot.amber { background: #f59e0b; box-shadow: 0 0 10px #f59e0b; }
+  .term-body { padding: 20px 24px 22px; font-size: 16px; line-height: 1.7; }
+  .fixrow { white-space: nowrap; }
+  .p  { color: #6d7c8f; }
+  .code { color: #00e0f2; font-weight: 700; }
+  .desc { color: #e8edf4; }
+  .amber { color: #f59e0b; }
+  .green { color: #4ade80; }
+  .dim { color: #8a97a8; }
+  .rule { border: 0; border-top: 1px dashed rgba(140,160,185,.28); margin: 12px 0; }
+  .bar { display: inline-block; height: 9px; border-radius: 5px; background: linear-gradient(90deg, #f59e0b, #fbbf24); vertical-align: middle; box-shadow: 0 0 8px rgba(245,158,11,.5); }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <svg class="traces" width="520" height="640" viewBox="0 0 520 640" fill="none">
+    <g stroke="rgba(245,158,11,.30)" stroke-width="1.6">
+      <path d="M520 60 H420 L370 110 V220 L330 260 H240"/>
+      <path d="M520 140 H450 L410 180 V300"/>
+      <path d="M520 520 H400 L350 470 V380 L310 340 H230"/>
+      <path d="M520 600 H460 L430 570 V480"/>
+    </g>
+    <g fill="#f59e0b">
+      <circle cx="240" cy="260" r="5"/><circle cx="410" cy="300" r="5"/>
+      <circle cx="230" cy="340" r="5"/><circle cx="430" cy="480" r="5"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="brandrow">
+        <div class="mil">
+          <!-- check-engine (MIL) glyph -->
+          <svg width="62" height="46" viewBox="0 0 62 46" fill="none">
+            <path d="M14 12 H22 L26 6 H42 L46 12 H50 V18 H56 V34 H50 L44 40 H22 L16 34 H10 V26 H4 V18 H10 V12 Z"
+                  stroke="#f59e0b" stroke-width="3.4" stroke-linejoin="round" fill="rgba(245,158,11,.12)"/>
+            <path d="M26 6 V12 M42 12 V6" stroke="#f59e0b" stroke-width="3.4"/>
+          </svg>
+        </div>
+        <h1>MECHANIC<span class="db">DB</span></h1>
+      </div>
+      <div class="tagline">The Automotive OBD-II <b>Diagnostic &amp; Repair</b> Database</div>
+      <div class="chips">
+        <div class="chip"><b>15,886</b> DTC codes</div>
+        <div class="chip"><b>32</b> makes (OEM)</div>
+        <div class="chip"><b>56,561</b> ranked fixes</div>
+        <div class="chip"><b>75,055</b> parts</div>
+        <div class="chip cyan"><b>CSV · Parquet · SQLite</b></div>
+      </div>
+    </div>
+
+    <div class="term">
+      <div class="term-bar"><span class="dot amber"></span><span class="dot"></span><span class="dot"></span>&nbsp;OBD-II SCAN · MODE 03</div>
+      <div class="term-body">
+        <div><span class="p">&gt;</span> <span class="code">P0420</span> <span class="dim">·</span> <span class="desc">Catalyst System Efficiency Below Threshold&nbsp;Bank&nbsp;1</span></div>
+        <div><span class="dim">family:</span> <span class="amber">catalyst_efficiency_below_threshold</span></div>
+        <hr class="rule">
+        <div class="fixrow"><span class="amber">#1</span> <span class="desc">Inspect for exhaust leaks near the O2 sensors</span></div>
+        <div class="dim fixrow">&nbsp;&nbsp;&nbsp;Easy DIY · $10–60 · 0.8 h <span class="bar" style="width:120px"></span></div>
+        <div class="fixrow"><span class="amber">#2</span> <span class="desc">Correct an underlying rich/lean fuel condition</span></div>
+        <div class="dim fixrow">&nbsp;&nbsp;&nbsp;Moderate DIY · $15–100 · 1.0 h <span class="bar" style="width:82px"></span></div>
+        <div class="fixrow"><span class="amber">#3</span> <span class="desc">Replace the catalytic converter</span></div>
+        <div class="dim fixrow">&nbsp;&nbsp;&nbsp;Professional Required · $250–1,500 · 2.0 h <span class="bar" style="width:54px"></span></div>
+        <hr class="rule">
+        <div class="fixrow"><span class="green">✓ ranked fixes</span> <span class="dim">·</span> <span class="green">✓ parts &amp; costs</span> <span class="dim">·</span> <span class="green">✓ step-by-step</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
