@@ -870,7 +870,13 @@
 
         if (supportStatus) {
           supportStatus.className = 'form-status success';
-          supportStatus.innerHTML = 'Direct email fallback triggered (' + (err.name === 'AbortError' ? 'timeout' : 'network bypass') + '). Opening your email client pre-filled... or <a href="' + mailtoUrl + '" style="color:#86e8a7;text-decoration:underline;">click here to send directly</a>.';
+          supportStatus.textContent = 'Direct email fallback triggered (' + (err.name === 'AbortError' ? 'timeout' : 'network bypass') + '). Opening your email client pre-filled... or ';
+          var mailLink = document.createElement('a');
+          mailLink.href = mailtoUrl;
+          mailLink.style.cssText = 'color:#86e8a7;text-decoration:underline;';
+          mailLink.textContent = 'click here to send directly';
+          supportStatus.appendChild(mailLink);
+          supportStatus.appendChild(document.createTextNode('.'));
           supportStatus.style.display = 'block';
         }
 
