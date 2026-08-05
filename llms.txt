@@ -1,0 +1,21 @@
+# MechanicDB — Automotive OBD-II Diagnostic & Repair Database
+
+> A structured dataset mapping 15,886 verified OBD-II Diagnostic Trouble Codes (9,249 SAE-standard + 6,637 manufacturer-specific across 32 makes) to 56,561 ranked repair procedures with DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, step-by-step instructions, and 75,055 replacement-parts mappings, organized into 647 hand-authored fault families.
+
+## What it is
+- One row per trouble code (SAE rows unique by `dtc_code`; OEM rows unique by `(oem_make, dtc_code)`), joined to ranked fixes (probability rank 1 = most common root cause) and parts.
+- Every fix carries `difficulty_level` (Easy DIY / Moderate DIY / Professional Required), `est_parts_cost_min/max_usd`, `est_labor_hours`, and ` • `-separated step-by-step instructions.
+- Code definitions originate in SAE J2012 / ISO 15031-6 (MIT-licensed upstream compilation, attribution preserved); repair content is original editorial material from a deterministic, test-gated build pipeline. Costs are editorial estimates, not quotes.
+- Formats: pipe-delimited UTF-8-BOM CSV, Snappy Parquet (92.0% smaller), SQLite (full dataset).
+
+## Key pages
+- [Landing & pricing](https://mechanicdb-public.pages.dev/): what's inside, schema, interactive DTC decoder, and how to buy.
+- [Free sample on GitHub](https://github.com/MechanicDB/MechanicDB-public): 90 codes (75 SAE + 15 OEM) in the identical schema, ODbL v1.0.
+- [Free sample on Kaggle](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database): same sample with metadata.
+
+## Pricing & licensing
+- Free sample: 90 codes, ODbL v1.0.
+- Standard: $49 one-time — 9,249 SAE codes, 32,767 fixes, 44,588 parts, CSV + Parquet + SQLite, commercial license, instant download.
+- OEM Complete: $149 one-time — full merged dataset (15,886 codes incl. 32 makes' OEM codes), commercial license, instant download.
+- Contact: mechanicdb.urologist336@simplelogin.com
+- Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.

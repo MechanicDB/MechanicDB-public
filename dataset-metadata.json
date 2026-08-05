@@ -1,0 +1,200 @@
+{
+  "title": "MechanicDB: OBD-II Diagnostic & Repair Database",
+  "subtitle": "Automotive OBD-II trouble codes with ranked repair procedures & cost estimates",
+  "id": "ahtiticheamine/mechanicdb-automotive-obd2-repair-database",
+  "licenses": [
+    {
+      "name": "ODbL-1.0"
+    }
+  ],
+  "keywords": [
+    "automobiles and vehicles",
+    "engineering",
+    "manufacturing",
+    "tabular",
+    "nlp"
+  ],
+  "description": "# MechanicDB: OBD-II Diagnostic & Repair Database\n\nRelational database mapping 15,886 OBD-II trouble codes — 9,249 SAE-standard plus 6,637 manufacturer-specific across 32 makes — to 56,561 ranked repair procedures across 647 authored fault families, with DIY difficulty ratings and 75,055 aftermarket parts mappings with cost estimates. This free Kaggle release contains a 90-code curated sample (75 SAE + 15 OEM).\n\n## Provenance & Methodology\n\nCode definitions are compiled from public SAE J2012-derived sources (MIT-licensed compilation, attribution preserved); repair procedures, DIY difficulty ratings, and cost ranges are original authored content grounded in standard diagnostic practice. Every release is built by a deterministic, test-gated pipeline (anti-template uniqueness checks, referential integrity, no-fabricated-codes gate).\n\nSample source, full documentation, and data dictionary: https://github.com/MechanicDB/MechanicDB-public - the full commercial dataset (15,886 codes) is available under license; see the repository README.",
+  "resources": [
+    {
+      "path": "dtc_codes.csv",
+      "description": "Master registry of standardized SAE-universal and manufacturer-specific (OEM) Diagnostic Trouble Codes.",
+      "schema": {
+        "fields": [
+          {
+            "name": "code_id",
+            "description": "Primary key identifier for the trouble code record."
+          },
+          {
+            "name": "dtc_code",
+            "description": "Standardized 5-character OBD-II trouble code (e.g., P0171, P0300, P0420)."
+          },
+          {
+            "name": "system_category",
+            "description": "Automotive system classification (Powertrain, Chassis, Body, Network)."
+          },
+          {
+            "name": "is_oem_specific",
+            "description": "Boolean flag: 0 = SAE-universal, 1 = manufacturer-specific."
+          },
+          {
+            "name": "oem_make",
+            "description": "Manufacturer display name for OEM rows (e.g., Ford, Chevrolet, BMW); empty for SAE-universal rows."
+          },
+          {
+            "name": "fault_family",
+            "description": "Slug of the authored fault family this code belongs to (groups codes sharing a diagnosis and repair path)."
+          },
+          {
+            "name": "short_description",
+            "description": "Concise summary of the diagnostic trouble code."
+          },
+          {
+            "name": "detailed_technical_explanation",
+            "description": "In-depth technical explanation of what the engine control module detects."
+          }
+        ]
+      }
+    },
+    {
+      "path": "diagnostic_fixes.csv",
+      "description": "Ranked repair procedures and cost estimation matrices for trouble codes.",
+      "schema": {
+        "fields": [
+          {
+            "name": "fix_id",
+            "description": "Primary key identifier for the repair procedure."
+          },
+          {
+            "name": "code_id",
+            "description": "Foreign key referencing dtc_codes.code_id."
+          },
+          {
+            "name": "fix_title",
+            "description": "Actionable title of the recommended diagnostic inspection or repair."
+          },
+          {
+            "name": "probability_rank",
+            "description": "Likelihood rank (1 = most common/probable root cause)."
+          },
+          {
+            "name": "difficulty_level",
+            "description": "Skill requirement rating (Easy DIY, Moderate DIY, Professional Required)."
+          },
+          {
+            "name": "est_parts_cost_min_usd",
+            "description": "Estimated minimum aftermarket parts cost in US dollars."
+          },
+          {
+            "name": "est_parts_cost_max_usd",
+            "description": "Estimated maximum aftermarket parts cost in US dollars."
+          },
+          {
+            "name": "est_labor_hours",
+            "description": "Average professional mechanic labor hours required."
+          },
+          {
+            "name": "step_by_step_instructions",
+            "description": "Bulleted step-by-step diagnostic and repair instructions."
+          }
+        ]
+      }
+    },
+    {
+      "path": "replacement_parts.csv",
+      "description": "Common aftermarket replacement parts mapped to diagnostic fixes.",
+      "schema": {
+        "fields": [
+          {
+            "name": "part_id",
+            "description": "Primary key identifier for the replacement part."
+          },
+          {
+            "name": "fix_id",
+            "description": "Foreign key referencing diagnostic_fixes.fix_id."
+          },
+          {
+            "name": "part_name",
+            "description": "Name or description of the replacement part/kit."
+          },
+          {
+            "name": "amazon_search_query",
+            "description": "Direct search URL for acquiring the part on Amazon or auto parts catalogs."
+          }
+        ]
+      }
+    },
+    {
+      "path": "dtc_fixes_joined.csv",
+      "description": "Pre-joined analytical view combining trouble codes, ranked fixes, and cost estimates.",
+      "schema": {
+        "fields": [
+          {
+            "name": "code_id",
+            "description": "Trouble code ID."
+          },
+          {
+            "name": "dtc_code",
+            "description": "5-character OBD-II code."
+          },
+          {
+            "name": "system_category",
+            "description": "System category."
+          },
+          {
+            "name": "is_oem_specific",
+            "description": "Boolean flag: 0 = SAE-universal, 1 = manufacturer-specific."
+          },
+          {
+            "name": "oem_make",
+            "description": "Manufacturer display name for OEM rows (e.g., Ford, Chevrolet, BMW); empty for SAE-universal rows."
+          },
+          {
+            "name": "fault_family",
+            "description": "Slug of the authored fault family this code belongs to (groups codes sharing a diagnosis and repair path)."
+          },
+          {
+            "name": "short_description",
+            "description": "Code summary."
+          },
+          {
+            "name": "detailed_technical_explanation",
+            "description": "Technical explanation."
+          },
+          {
+            "name": "fix_id",
+            "description": "Fix ID."
+          },
+          {
+            "name": "fix_title",
+            "description": "Repair procedure title."
+          },
+          {
+            "name": "probability_rank",
+            "description": "Likelihood rank."
+          },
+          {
+            "name": "difficulty_level",
+            "description": "DIY difficulty rating."
+          },
+          {
+            "name": "est_parts_cost_min_usd",
+            "description": "Minimum parts cost."
+          },
+          {
+            "name": "est_parts_cost_max_usd",
+            "description": "Maximum parts cost."
+          },
+          {
+            "name": "est_labor_hours",
+            "description": "Labor hours required."
+          },
+          {
+            "name": "step_by_step_instructions",
+            "description": "Repair instructions."
+          }
+        ]
+      }
+    }
+  ]
+}
