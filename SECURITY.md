@@ -6,7 +6,7 @@ We take the integrity of the MechanicDB data seriously. If you discover any of
 the following, please report it privately:
 
 - A security vulnerability in the site
-  ([mechanicdb](https://mechanicdb-public.pages.dev/)) or in anything published
+  ([mechanicdb](https://mechanicdb.dataengineered.io/)) or in anything published
   in this repository.
 - A data concern — especially a **repair instruction that is unsafe as
   written** (high-voltage hybrid/EV systems, SRS/airbag components, fuel

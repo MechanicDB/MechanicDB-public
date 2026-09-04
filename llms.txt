@@ -9,7 +9,7 @@
 - Formats: pipe-delimited UTF-8-BOM CSV, Snappy Parquet (92.0% smaller), SQLite (full dataset).
 
 ## Key pages
-- [Landing & pricing](https://mechanicdb-public.pages.dev/): what's inside, schema, interactive DTC decoder, and how to buy.
+- [Landing & pricing](https://mechanicdb.dataengineered.io/): what's inside, schema, interactive DTC decoder, and how to buy.
 - [Free sample on GitHub](https://github.com/MechanicDB/MechanicDB-public): 90 codes (75 SAE + 15 OEM) in the identical schema, ODbL v1.0.
 - [Free sample on Kaggle](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database): same sample with metadata.
 

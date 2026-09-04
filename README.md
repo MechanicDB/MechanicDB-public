@@ -11,9 +11,9 @@
 [![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)
 [![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
-[![Get the data](https://img.shields.io/badge/Get%20the%20data-mechanicdb-F59E0B.svg)](https://mechanicdb-public.pages.dev/)
+[![Get the data](https://img.shields.io/badge/Get%20the%20data-mechanicdb-F59E0B.svg)](https://mechanicdb.dataengineered.io/)
 
-**[→ Get the full dataset at mechanicdb](https://mechanicdb-public.pages.dev/)**
+**[→ Get the full dataset at mechanicdb](https://mechanicdb.dataengineered.io/)**
 
 </div>
 
@@ -70,7 +70,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 
 Both paid tiers are self-serve: secure Stripe checkout (card / Apple Pay / Google Pay), **instant download** after payment, commercial license included in the archive.
 
-**[→ Get it at mechanicdb](https://mechanicdb-public.pages.dev/)** · or email **[mechanicdb.urologist336@simplelogin.com](mailto:mechanicdb.urologist336@simplelogin.com)** for a company invoice or custom licensing.
+**[→ Get it at mechanicdb](https://mechanicdb.dataengineered.io/)** · or email **[mechanicdb.urologist336@simplelogin.com](mailto:mechanicdb.urologist336@simplelogin.com)** for a company invoice or custom licensing.
 
 ## Use cases
 
@@ -103,7 +103,7 @@ print(duckdb.query("""
 ## License
 
 - **Sample dataset (this repo):** [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/) — free for research, education, and benchmarking with attribution and share-alike (see [LICENSE](LICENSE)).
-- **Full dataset:** commercial license, self-serve at [mechanicdb](https://mechanicdb-public.pages.dev/) — see [Pricing](#pricing).
+- **Full dataset:** commercial license, self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/) — see [Pricing](#pricing).
 - **Documentation:** CC BY 4.0.
 
 ⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag procedures must only be performed by qualified technicians following the manufacturer's lockout and de-energization procedures.

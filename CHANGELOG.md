@@ -41,4 +41,4 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 - Free 75-code sample published here and on
   [Kaggle](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database).
 
-Full dataset & updates: [mechanicdb](https://mechanicdb-public.pages.dev/)
+Full dataset & updates: [mechanicdb](https://mechanicdb.dataengineered.io/)

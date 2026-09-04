@@ -21,7 +21,7 @@ FIXES_CSV = os.path.join(BASE_DIR, "diagnostic_fixes.csv")
 PARTS_CSV = os.path.join(BASE_DIR, "replacement_parts.csv")
 SITEMAP_XML = os.path.join(BASE_DIR, "sitemap.xml")
 
-DOMAIN = "https://mechanicdb-public.pages.dev"
+DOMAIN = "https://mechanicdb.dataengineered.io"
 
 
 def clean_url(fname):

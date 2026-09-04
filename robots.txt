@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mechanicdb-public.pages.dev/sitemap.xml
+Sitemap: https://mechanicdb.dataengineered.io/sitemap.xml
