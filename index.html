@@ -319,6 +319,24 @@
   .join-note { margin-top: 18px; font-family: var(--mono); font-size: 0.74rem; color: var(--trace); }
   .join-note code { color: var(--amber); }
 
+  /* ── OEM coverage by make ────────────────── */
+  .cov-title {
+    font-family: var(--disp); font-size: 1.05rem; letter-spacing: .04em;
+    text-transform: uppercase; margin: 34px 0 8px;
+  }
+  .cov-note { color: var(--trace); font-size: .88rem; line-height: 1.65; max-width: 68ch; margin: 0 0 18px; }
+  .cov-grid {
+    display: grid; gap: 1px; background: var(--paper-dim);
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    border: 1px solid var(--paper-dim); border-radius: 6px; overflow: hidden;
+  }
+  .cov-cell {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    background: var(--paper); color: var(--ink); padding: 10px 14px;
+  }
+  .cov-cell span { font-size: .86rem; }
+  .cov-cell b { font-family: var(--mono); font-size: .82rem; color: var(--amber-deep); }
+
   /* ── specifications ──────────────────────── */
   .spec-sheet {
     background: var(--paper); color: var(--ink); border-radius: 6px;
@@ -506,7 +524,7 @@
     <div class="spec-sheet">
       <table>
         <tr><th scope="row">Coverage</th><td><b>9,249</b> SAE-standard codes — P0, P2, P34–P39, C0, B0, U0, U3 generic ranges. Powertrain, chassis, body, and network, including hybrid/EV (P0Axx–P0Exx) and diesel aftertreatment.</td></tr>
-        <tr><th scope="row">OEM coverage</th><td><b>6,637</b> manufacturer-specific codes across <b>32</b> makes — P1, P30–P33, C1/C2, B1/B2, U1/U2 manufacturer-controlled ranges (Ford, Toyota, BMW, GM, and 28 more). <b>15,886</b> codes total.</td></tr>
+        <tr><th scope="row">OEM coverage</th><td><b>6,637</b> manufacturer-specific codes across <b>32</b> makes — P1, P30–P33, C1/C2, B1/B2, U1/U2 manufacturer-controlled ranges. Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <b>15,886</b> codes total.</td></tr>
         <tr><th scope="row">Repair intelligence</th><td><b>647</b> authored fault families → <b>56,561</b> ranked fixes → <b>75,055</b> parts mappings. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required.</td></tr>
         <tr><th scope="row">Delivery formats</th><td>Pipe-delimited CSV (UTF-8 BOM, Excel-safe) · Apache Parquet, Snappy — a measured <b>92.0%</b> smaller · SQLite database, all four tables.</td></tr>
         <tr><th scope="row">Quality gates</th><td>Deterministic, test-gated build: referential integrity, anti-template uniqueness checks, and a no-fabricated-codes gate — every published code traces to the committed source.</td></tr>
@@ -514,6 +532,47 @@
         <tr><th scope="row">Provenance</th><td>Code definitions compiled from public SAE J2012-derived sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.</td></tr>
       </table>
     </div>
+<!-- COVERAGE:START -->
+      <h3 class="cov-title">OEM codes by make</h3>
+      <p class="cov-note">All <b>6,637</b> manufacturer-specific codes, by marque. Coverage is
+        <b>not even</b> — it is strongest on US-market brands, and some marques are thin. We publish
+        the distribution so you can check the makes you care about before buying rather than after.
+        The <b>9,249</b> SAE-universal codes apply to every vehicle regardless of make.</p>
+      <div class="cov-grid">
+          <div class="cov-cell"><span>Volkswagen</span><b>528</b></div>
+          <div class="cov-cell"><span>Ford</span><b>413</b></div>
+          <div class="cov-cell"><span>Lincoln</span><b>413</b></div>
+          <div class="cov-cell"><span>Mercury</span><b>413</b></div>
+          <div class="cov-cell"><span>Buick</span><b>402</b></div>
+          <div class="cov-cell"><span>Cadillac</span><b>402</b></div>
+          <div class="cov-cell"><span>Chevrolet</span><b>402</b></div>
+          <div class="cov-cell"><span>GM</span><b>402</b></div>
+          <div class="cov-cell"><span>GMC</span><b>402</b></div>
+          <div class="cov-cell"><span>Saturn</span><b>402</b></div>
+          <div class="cov-cell"><span>Oldsmobile</span><b>401</b></div>
+          <div class="cov-cell"><span>Chrysler</span><b>282</b></div>
+          <div class="cov-cell"><span>BMW</span><b>250</b></div>
+          <div class="cov-cell"><span>Mazda</span><b>233</b></div>
+          <div class="cov-cell"><span>Jaguar</span><b>163</b></div>
+          <div class="cov-cell"><span>Pontiac</span><b>115</b></div>
+          <div class="cov-cell"><span>Plymouth</span><b>113</b></div>
+          <div class="cov-cell"><span>Dodge</span><b>97</b></div>
+          <div class="cov-cell"><span>Jeep</span><b>97</b></div>
+          <div class="cov-cell"><span>Acura</span><b>94</b></div>
+          <div class="cov-cell"><span>Honda</span><b>94</b></div>
+          <div class="cov-cell"><span>Infiniti</span><b>94</b></div>
+          <div class="cov-cell"><span>Subaru</span><b>93</b></div>
+          <div class="cov-cell"><span>Kia</span><b>76</b></div>
+          <div class="cov-cell"><span>Nissan</span><b>59</b></div>
+          <div class="cov-cell"><span>Lexus</span><b>49</b></div>
+          <div class="cov-cell"><span>Toyota</span><b>45</b></div>
+          <div class="cov-cell"><span>Mitsubishi</span><b>33</b></div>
+          <div class="cov-cell"><span>Mercedes-Benz</span><b>32</b></div>
+          <div class="cov-cell"><span>Geo</span><b>19</b></div>
+          <div class="cov-cell"><span>Suzuki</span><b>17</b></div>
+          <div class="cov-cell"><span>Audi</span><b>2</b></div>
+      </div>
+<!-- COVERAGE:END -->
   </div>
 </section>
 

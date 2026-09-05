@@ -59,3 +59,31 @@ Maps diagnostic repair procedures to common aftermarket replacement parts and ca
 ## 4. `dtc_fixes_joined` (Pre-Joined Analytical View)
 
 A denormalized analytical table combining code definitions, ranked fixes, and cost estimation matrices into a single flat file for rapid machine learning ingestion and instant frontend rendering. Contains all columns from `dtc_codes` (including `fault_family`) and `diagnostic_fixes` joined on `code_id`.
+
+## 5. OEM coverage by make
+
+<!-- COVERAGE:START -->
+OEM (manufacturer-specific) codes number **6,637** across **32** makes, and are **not evenly distributed** — coverage is
+strongest on US-market brands. The SAE-universal spine (9,249 codes) applies to
+every vehicle regardless of make, so this table describes only the
+manufacturer-controlled ranges (`P1`, `P30`–`P33`, `C1`/`C2`, `B1`/`B2`, `U1`/`U2`).
+
+| Make | OEM codes | Make | OEM codes |
+| :--- | ---: | :--- | ---: |
+| Volkswagen | 528 | Plymouth | 113 |
+| Ford | 413 | Dodge | 97 |
+| Lincoln | 413 | Jeep | 97 |
+| Mercury | 413 | Acura | 94 |
+| Buick | 402 | Honda | 94 |
+| Cadillac | 402 | Infiniti | 94 |
+| Chevrolet | 402 | Subaru | 93 |
+| GM | 402 | Kia | 76 |
+| GMC | 402 | Nissan | 59 |
+| Saturn | 402 | Lexus | 49 |
+| Oldsmobile | 401 | Toyota | 45 |
+| Chrysler | 282 | Mitsubishi | 33 |
+| BMW | 250 | Mercedes-Benz | 32 |
+| Mazda | 233 | Geo | 19 |
+| Jaguar | 163 | Suzuki | 17 |
+| Pontiac | 115 | Audi | 2 |
+<!-- COVERAGE:END -->
