@@ -19,7 +19,7 @@
 
 ---
 
-A structured dataset that turns a check-engine light into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to ranked repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** (Ford, Toyota, BMW, the GM marques, VW/Audi, Honda/Acura, and more).
+A structured dataset that turns a check-engine light into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to ranked repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
 
 This repository is the **free, open developer sample**: 90 curated codes (75 SAE + 15 OEM) in the identical schema as the full database, so you can prototype joins, pipelines, and apps before licensing.
 
