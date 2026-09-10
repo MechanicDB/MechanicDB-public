@@ -32,7 +32,7 @@ informs custom builds.
 ## Correction or removal requests
 
 To request a record be corrected, email
-**mechanicdb.urologist336@simplelogin.com** (or open an issue).
+**mechanicdb@dataengineered.io** (or open an issue).
 
 ## Pull request guidelines
 
@@ -48,7 +48,7 @@ By contributing, you agree that your contributions are licensed under the same
 terms as this repository: **ODbL v1.0** for dataset files, **CC BY 4.0** for
 documentation (see [LICENSE](LICENSE)).
 
-Questions? **mechanicdb.urologist336@simplelogin.com** · full dataset:
+Questions? **mechanicdb@dataengineered.io** · full dataset:
 [mechanicdb](https://mechanicdb.dataengineered.io/)
 
 *Repair steps are educational reference material, not professional repair advice.*

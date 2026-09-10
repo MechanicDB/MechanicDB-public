@@ -13,7 +13,7 @@ the following, please report it privately:
   system, or brakes) or a code definition that could mislead a diagnosis.
 - Any suspected leak of the full (paid) dataset or pipeline source.
 
-**Please email: mechanicdb.urologist336@simplelogin.com**
+**Please email: mechanicdb@dataengineered.io**
 
 Do **not** open a public GitHub issue for security-sensitive reports.
 
