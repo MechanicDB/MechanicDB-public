@@ -15,6 +15,8 @@
 
 **[→ Get the full dataset at mechanicdb](https://mechanicdb.dataengineered.io/)** · **[⬇ Download the free 90-code sample (ZIP)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)**
 
+**$49 Standard (SAE, 9,249 codes) · $149 OEM Complete (15,886 codes) · one-time · instant download** → [Buy Standard](https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403) · [Buy OEM Complete](https://buy.stripe.com/28EfZicVy0ECdM796w38404)
+
 </div>
 
 ---
