@@ -917,30 +917,15 @@
       })
       .catch(function(err) {
         if (timer) clearTimeout(timer);
-        /* Zero-Outage Mailto Fallback */
-        var mailtoUrl = 'mailto:mechanicdb@dataengineered.io?subject=' +
-          encodeURIComponent('MechanicDB Inquiry: ' + topicVal + ' (' + nameVal + ')') +
-          '&body=' + encodeURIComponent(
-            'Name/Company: ' + nameVal + '\n' +
-            'Work Email: ' + emailVal + '\n' +
-            'Topic: ' + topicVal + '\n\n' +
-            'Message/Requirements:\n' + msgVal
-          );
 
         if (supportStatus) {
           supportStatus.className = 'form-status success';
-          supportStatus.textContent = 'Direct email fallback triggered (' + (err.name === 'AbortError' ? 'timeout' : 'network bypass') + '). Opening your email client pre-filled... or ';
-          var mailLink = document.createElement('a');
-          mailLink.href = mailtoUrl;
-          mailLink.style.cssText = 'color:#86e8a7;text-decoration:underline;';
-          mailLink.textContent = 'click here to send directly';
-          supportStatus.appendChild(mailLink);
-          supportStatus.appendChild(document.createTextNode('.'));
+          supportStatus.className = 'form-status';
+          supportStatus.textContent = 'We could not send this automatically. Please write to mechanicdb@dataengineered.io with your inquiry — we reply within 1 business day.';
           supportStatus.style.display = 'block';
         }
 
         setTimeout(function() {
-          window.location.href = mailtoUrl;
           if (submitSupportBtn) {
             submitSupportBtn.disabled = false;
             submitSupportBtn.textContent = 'Send Inquiry';

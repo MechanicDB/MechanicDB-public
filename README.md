@@ -70,7 +70,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 
 Both paid tiers are self-serve: secure Stripe checkout (card / Apple Pay / Google Pay), **instant download** after payment, commercial license included in the archive.
 
-**[→ Get it at mechanicdb](https://mechanicdb.dataengineered.io/)** · or email **[mechanicdb@dataengineered.io](mailto:mechanicdb@dataengineered.io)** for a company invoice or custom licensing.
+**[→ Get it at mechanicdb](https://mechanicdb.dataengineered.io/)** · or use the [licensing form](https://mechanicdb.dataengineered.io/#pricing) (mechanicdb@dataengineered.io) for a company invoice or custom licensing.
 
 ## Use cases
 
@@ -108,7 +108,7 @@ print(duckdb.query("""
 
 ⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag procedures must only be performed by qualified technicians following the manufacturer's lockout and de-energization procedures.
 
-Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTING.md) or email **[mechanicdb@dataengineered.io](mailto:mechanicdb@dataengineered.io)**.
+Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTING.md) or write to mechanicdb@dataengineered.io.
 
 ## Also on Kaggle & Hugging Face
 
