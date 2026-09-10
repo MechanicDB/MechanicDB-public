@@ -7,19 +7,19 @@
 **15,886 verified trouble codes · 9,249 SAE + 6,637 OEM across 32 makes · 56,561 ranked repair procedures · 75,055 parts mappings · 647 authored fault families**
 
 [![Dataset License: ODbL v1.0](https://img.shields.io/badge/Dataset_License-ODbL_v1.0-blue.svg)](https://opendatacommons.org/licenses/odbl/1-0/)
-[![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](#whats-inside)
+[![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
 [![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)
 [![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-mechanicdb-F59E0B.svg)](https://mechanicdb.dataengineered.io/)
 
-**[→ Get the full dataset at mechanicdb](https://mechanicdb.dataengineered.io/)**
+**[→ Get the full dataset at mechanicdb](https://mechanicdb.dataengineered.io/)** · **[⬇ Download the free 90-code sample (ZIP)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)**
 
 </div>
 
 ---
 
-A structured dataset that turns a check-engine light into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to ranked repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
+**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to ranked repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
 
 This repository is the **free, open developer sample**: 90 curated codes (75 SAE + 15 OEM) in the identical schema as the full database, so you can prototype joins, pipelines, and apps before licensing.
 
