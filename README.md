@@ -69,6 +69,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 | **Sample** | 90 codes (this repo + Kaggle) | Free |
 | **Standard** | 9,249 SAE codes · 32,767 fixes · 44,588 parts · CSV + Parquet + SQLite | **[$49](https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403)** one-time |
 | **OEM Complete** | Full merged dataset: 15,886 codes (+ 6,637 OEM across 32 makes) · 56,561 fixes · 75,055 parts | **[$149](https://buy.stripe.com/28EfZicVy0ECdM796w38404)** one-time |
+| **Fault & Recall bundle** | OEM Complete + [RecallDB Vehicle](https://recalldb.dataengineered.io/) (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite) — two instant downloads, one checkout | **[$179](https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h)** one-time · vs $198 separately |
 
 Both paid tiers are self-serve: secure Stripe checkout (card / Apple Pay / Google Pay), **instant download** after payment, commercial license included in the archive.
 
