@@ -17,5 +17,6 @@
 - Free sample: 90 codes, ODbL v1.0.
 - Standard: $49 one-time — 9,249 SAE codes, 32,767 fixes, 44,588 parts, CSV + Parquet + SQLite, commercial license, instant download.
 - OEM Complete: $149 one-time — full merged dataset (15,886 codes incl. 32 makes' OEM codes), commercial license, instant download.
+- Fault & Recall bundle: $179 one-time (vs $198 separately) — OEM Complete + RecallDB Vehicle (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite), two instant downloads after one checkout: https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h
 - Contact: mechanicdb@dataengineered.io
 - Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.
