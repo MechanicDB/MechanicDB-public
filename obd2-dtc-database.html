@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBD-II DTC Database Download — CSV, Parquet, SQLite</title>
+<meta name="description" content="15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked repairs. Download as CSV, Parquet or SQLite. Free 90-code sample.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb.dataengineered.io/obd2-dtc-database">
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/obd2-dtc-database">
+<meta property="og:title" content="OBD-II DTC Database Download — CSV, Parquet, SQLite">
+<meta property="og:description" content="15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked repairs. Download as CSV, Parquet or SQLite. Free 90-code sample.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mechanicdb.dataengineered.io/obd2-dtc-database">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"MechanicDB OBD-II DTC Database","description":"15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked repairs. Download as CSV, Parquet or SQLite. Free 90-code sample.","url":"https://mechanicdb.dataengineered.io/obd2-dtc-database","creator":{"@type":"Organization","name":"DataEngineered","url":"https://dataengineered.io"},"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv"},{"@type":"DataDownload","encodingFormat":"application/vnd.apache.parquet"},{"@type":"DataDownload","encodingFormat":"application/x-sqlite3"}],"variableMeasured":["diagnostic trouble code","system category","fault family","repair procedure","probability rank","difficulty tier","estimated parts cost","labor hours","replacement part name"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --steel: #1b1e22;        /* tool-chest graphite */
+    --steel-2: #24282e;      /* raised panel */
+    --steel-3: #2e333a;      /* panel edge */
+    --paper: #f1efe8;        /* laminated spec sheet */
+    --paper-dim: #e6e3d9;
+    --ink: #22252a;          /* text on paper */
+    --ink-soft: #5a5f66;
+    --trace: #9aa3ad;        /* muted text on steel */
+    --amber: #ffb000;        /* MIL lamp */
+    --amber-deep: #cc8a00;
+    --easy: #4caf6d;         /* data-encoded difficulty */
+    --mod: #e8a13d;
+    --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    --disp: 'Saira Condensed', 'Arial Narrow', sans-serif;
+    --body: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--steel);
+    color: var(--trace);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── top bar ─────────────────────────────── */
+  header.bar {
+    border-bottom: 1px solid var(--steel-3);
+    padding: 18px 0;
+  }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark {
+    font-family: var(--disp); font-weight: 700; font-size: 1.35rem;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #fff;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mil {
+    width: 22px; height: 16px; display: inline-block; flex: none;
+    background: var(--amber);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path d="M8 2h8l3 4h3v8h-3l-2 2H7l-2-2H2V6h3l3-4zm4 3a4 4 0 100 8 4 4 0 000-8z"/></svg>') center/contain no-repeat;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path d="M8 2h8l3 4h3v8h-3l-2 2H7l-2-2H2V6h3l3-4zm4 3a4 4 0 100 8 4 4 0 000-8z"/></svg>') center/contain no-repeat;
+  }
+  nav.bar-nav { display: flex; gap: 22px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; }
+  nav.bar-nav a { color: var(--trace); }
+  nav.bar-nav a:hover { color: var(--amber); text-decoration: none; }
+
+  /* ── section stamps ──────────────────────── */
+  .stamp {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber);
+    border: 1px solid var(--steel-3); padding: 6px 12px; border-radius: 3px;
+    background: var(--steel-2);
+  }
+  .stamp::before { content: ''; width: 7px; height: 7px; background: var(--amber); border-radius: 50%; }
+
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--steel-3); }
+  h2.sec-title {
+    font-family: var(--disp); font-weight: 600; font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    text-transform: uppercase; letter-spacing: 0.04em; color: #fff; margin: 18px 0 10px;
+  }
+  .sec-lede { max-width: 62ch; color: var(--trace); margin-bottom: 36px; }
+
+  /* ── hero ────────────────────────────────── */
+  .hero { padding: 72px 0 64px; }
+  .hero h1 {
+    font-family: var(--disp); font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.02; text-transform: uppercase; letter-spacing: 0.02em;
+    color: #fff; max-width: 21ch; margin: 22px 0 18px;
+  }
+  .hero h1 em { font-style: normal; color: var(--amber); }
+  .hero p.lede { max-width: 58ch; font-size: 1.06rem; margin-bottom: 28px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+  .btn {
+    font-family: var(--mono); font-size: 0.85rem; font-weight: 600;
+    padding: 12px 22px; border-radius: 4px; border: 1px solid transparent;
+    cursor: pointer; display: inline-block;
+  }
+  .btn-amber { background: var(--amber); color: #1b1500; }
+  .btn-amber:hover { background: #ffc23d; text-decoration: none; }
+  .btn-ghost { border-color: var(--steel-3); color: var(--trace); background: transparent; }
+  .btn-ghost:hover { border-color: var(--amber); color: var(--amber); text-decoration: none; }
+
+  /* ── decoder (signature) ─────────────────── */
+  .decoder {
+    background: var(--steel-2);
+    border: 1px solid var(--steel-3);
+    border-radius: 8px;
+    padding: 26px 26px 30px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  }
+  .decoder-head {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .decoder-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--trace); }
+  .code-picker { display: flex; gap: 6px; flex-wrap: wrap; }
+  .code-picker button {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+    background: transparent; border: 1px solid var(--steel-3); color: var(--trace);
+    padding: 5px 10px; border-radius: 3px; cursor: pointer;
+  }
+  .code-picker button:hover { border-color: var(--amber); color: var(--amber); }
+  .code-picker button[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: #1b1500; font-weight: 600; }
+
+  .digits { display: flex; gap: 8px; margin-bottom: 6px; }
+  .digit {
+    flex: 1; min-width: 0; text-align: center;
+    background: var(--steel);
+    border: 1px solid var(--steel-3); border-bottom: 3px solid var(--amber-deep);
+    border-radius: 5px;
+    font-family: var(--mono); font-weight: 600;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    color: var(--amber); padding: 14px 0 10px;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .digit.flip { opacity: 0; transform: translateY(6px); }
+  .digit-notes { display: flex; gap: 8px; margin-bottom: 24px; }
+  .digit-note {
+    flex: 1; min-width: 0; text-align: center;
+    font-family: var(--mono); font-size: 0.62rem; line-height: 1.35;
+    letter-spacing: 0.03em; text-transform: uppercase; color: var(--trace);
+    padding-top: 8px; border-top: 1px dashed var(--steel-3);
+  }
+  .digit-note b { display: block; color: #d7dce2; font-weight: 600; }
+  .note-span-2 { flex: 2; }
+
+  .readout {
+    background: var(--paper); color: var(--ink);
+    border-radius: 6px; padding: 20px 22px;
+  }
+  .readout-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .readout h3 { font-family: var(--disp); font-weight: 600; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .fam-tag { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); background: var(--paper-dim); padding: 3px 8px; border-radius: 3px; }
+  .readout p.explain { font-size: 0.88rem; color: var(--ink-soft); margin: 10px 0 16px; }
+  .fix-row {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 10px 14px; align-items: center;
+    padding: 9px 0; border-top: 1px solid var(--paper-dim);
+    font-size: 0.88rem;
+  }
+  .rank { font-family: var(--mono); font-size: 0.7rem; font-weight: 600; color: var(--ink-soft); }
+  .fix-title { color: var(--ink); font-weight: 500; }
+  .fix-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); white-space: nowrap; }
+  .chip {
+    display: inline-block; font-family: var(--mono); font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase; color: #fff;
+    padding: 2px 7px; border-radius: 3px; margin-right: 8px; vertical-align: 1px;
+  }
+  .chip-easy { background: var(--easy); }
+  .chip-mod { background: var(--mod); color: #2a1d00; }
+  .chip-pro { background: var(--pro); }
+  .readout-foot { margin-top: 14px; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); }
+
+  /* ── schema (what's inside) ──────────────── */
+  .schema-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .table-card {
+    background: var(--paper); color: var(--ink); border-radius: 6px; padding: 20px;
+    position: relative;
+  }
+  .table-card h3 { font-family: var(--mono); font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
+  .table-card .rows { font-family: var(--mono); font-size: 0.7rem; color: var(--amber-deep); font-weight: 600; margin-bottom: 10px; }
+  .table-card p { font-size: 0.82rem; color: var(--ink-soft); }
+  .table-card ul { list-style: none; margin-top: 12px; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-soft); }
+  .table-card li { padding: 3px 0; border-top: 1px dashed var(--paper-dim); }
+  .join-note { margin-top: 18px; font-family: var(--mono); font-size: 0.74rem; color: var(--trace); }
+  .join-note code { color: var(--amber); }
+
+  /* ── OEM coverage by make ────────────────── */
+  .cov-title {
+    font-family: var(--disp); font-size: 1.05rem; letter-spacing: .04em;
+    text-transform: uppercase; margin: 34px 0 8px;
+  }
+  .cov-note { color: var(--trace); font-size: .88rem; line-height: 1.65; max-width: 68ch; margin: 0 0 18px; }
+  .cov-grid {
+    display: grid; gap: 1px; background: var(--paper-dim);
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    border: 1px solid var(--paper-dim); border-radius: 6px; overflow: hidden;
+  }
+  .cov-cell {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    background: var(--paper); color: var(--ink); padding: 10px 14px;
+  }
+  .cov-cell span { font-size: .86rem; }
+  .cov-cell b { font-family: var(--mono); font-size: .82rem; color: var(--amber-deep); }
+
+  /* ── specifications ──────────────────────── */
+  .spec-sheet {
+    background: var(--paper); color: var(--ink); border-radius: 6px;
+    overflow: hidden;
+  }
+  .spec-sheet table { width: 100%; border-collapse: collapse; }
+  .spec-sheet th, .spec-sheet td { text-align: left; padding: 13px 20px; border-bottom: 1px solid var(--paper-dim); vertical-align: top; }
+  .spec-sheet th {
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-soft); width: 34%;
+  }
+  .spec-sheet td { font-size: 0.92rem; }
+  .spec-sheet td b { font-family: var(--mono); color: var(--amber-deep); }
+  .spec-sheet tr:last-child th, .spec-sheet tr:last-child td { border-bottom: none; }
+
+  /* ── pricing ─────────────────────────────── */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tier {
+    background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px;
+    padding: 28px 26px; display: flex; flex-direction: column;
+  }
+  .tier.featured { background: var(--paper); color: var(--ink); border-color: var(--amber); border-width: 2px; }
+  .tier h3 { font-family: var(--disp); font-weight: 600; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.03em; color: #fff; }
+  .tier.featured h3 { color: var(--ink); }
+  .tier .price { font-family: var(--mono); font-size: 2rem; font-weight: 600; color: var(--amber); margin: 8px 0 2px; }
+  .tier.featured .price { color: var(--amber-deep); }
+  .tier .per { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--trace); margin-bottom: 18px; }
+  .tier.featured .per { color: var(--ink-soft); }
+  .tier ul { list-style: none; font-size: 0.88rem; flex: 1; margin-bottom: 22px; }
+  .tier li { padding: 6px 0 6px 22px; position: relative; }
+  .tier li::before { content: '›'; position: absolute; left: 4px; color: var(--amber); font-weight: 700; }
+  .tier.featured li { color: var(--ink-soft); }
+  .tier .btn { text-align: center; }
+
+  /* ── provenance / support ────────────────── */
+  .prov-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; }
+  .prov-grid h3 { font-family: var(--disp); font-size: 1.15rem; font-weight: 600; text-transform: uppercase; color: #fff; margin-bottom: 12px; }
+  .prov-grid p, .prov-grid li { font-size: 0.92rem; }
+  .prov-grid ul { list-style: none; }
+  .prov-grid li { padding: 7px 0; border-top: 1px solid var(--steel-3); font-family: var(--mono); font-size: 0.82rem; }
+  .safety {
+    margin-top: 30px; border: 1px solid var(--amber-deep); border-radius: 6px;
+    padding: 16px 20px; font-size: 0.85rem; color: var(--trace);
+    background: rgba(255, 176, 0, 0.05);
+  }
+  .safety b { color: var(--amber); }
+
+  footer {
+    border-top: 1px solid var(--steel-3); padding: 30px 0 44px;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--trace);
+    display: block;
+  }
+  .foot-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* ── responsive ──────────────────────────── */
+  @media (max-width: 880px) {
+    .schema-strip { grid-template-columns: repeat(2, 1fr); }
+    .tiers { grid-template-columns: 1fr; }
+    .prov-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    section { padding: 52px 0; }
+    .schema-strip { grid-template-columns: 1fr; }
+    .fix-row { grid-template-columns: auto 1fr; }
+    .fix-meta { grid-column: 2; }
+    .digit-note { font-size: 0.55rem; }
+  }
+
+  /* ── faq section & directory links ───────── */
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 28px; }
+  .faq-item { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 22px 24px; }
+  .faq-item h3 { font-family: var(--disp); font-size: 1.15rem; color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .faq-item p { font-size: 0.92rem; color: var(--trace); line-height: 1.55; }
+  .dir-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+  .dir-badge { background: var(--steel-3); color: #fff; padding: 6px 14px; border-radius: 4px; font-family: var(--mono); font-size: 0.8rem; border: 1px solid rgba(255,176,0,0.3); }
+  .dir-badge:hover { background: var(--amber); color: #1b1500; text-decoration: none; font-weight: 600; }
+  .dir-badge-lead { background: rgba(255,176,0,0.14); border-color: var(--amber); color: var(--amber); }
+
+  /* ── fault-family directory (hero) ───────── */
+  .fam-browse { margin-top: 26px; background: var(--steel-2); border: 1px solid var(--steel-3); border-left: 4px solid var(--amber); border-radius: 6px; padding: 22px 24px; }
+  .fam-browse h3 { font-family: var(--disp); font-size: 1.15rem; color: #fff; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 8px; }
+  .fam-browse > p { font-size: 0.9rem; color: var(--trace); line-height: 1.55; max-width: 76ch; }
+  .fam-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .fam-links a { font-family: var(--mono); font-size: 0.78rem; background: var(--steel); border: 1px solid var(--steel-3); padding: 5px 10px; border-radius: 4px; color: #d7dce2; }
+  .fam-links a:hover { border-color: var(--amber); color: var(--amber); text-decoration: none; }
+  .fam-links a b { color: var(--amber); font-weight: 600; margin-left: 4px; }
+  .fam-more { margin-top: 14px; font-family: var(--mono); font-size: 0.82rem; }
+
+  /* ── interactive support modal ───────────── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(4px); }
+  .modal-overlay.active { display: flex; }
+  .modal-box { background: var(--steel-2); border: 1px solid var(--amber); border-radius: 8px; width: 100%; max-width: 540px; padding: 30px; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.6); max-height: 90vh; overflow-y: auto; }
+  .modal-close { position: absolute; top: 16px; right: 20px; background: transparent; border: none; color: var(--trace); font-size: 1.5rem; cursor: pointer; }
+  .modal-close:hover { color: var(--amber); }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; color: #fff; margin-bottom: 6px; letter-spacing: 0.05em; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--steel); border: 1px solid var(--steel-3); border-radius: 4px; padding: 10px 14px; color: #fff; font-family: var(--body); font-size: 0.95rem; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--amber); outline: none; }
+  .form-status { margin-top: 14px; padding: 12px; border-radius: 4px; font-family: var(--mono); font-size: 0.82rem; display: none; }
+  .form-status.success { background: rgba(76,175,109,0.15); border: 1px solid var(--easy); color: #86e8a7; display: block; }
+  .form-status.error { background: rgba(214,84,84,0.15); border: 1px solid var(--pro); color: #ff9e9e; display: block; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <span class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</span>
+    <nav class="bar-nav" aria-label="Page sections">
+      <a href="/#inside">Schema</a>
+      <a href="/#specs">Specifications</a>
+      <a href="/#licensing">Licensing</a>
+      <a href="/#provenance">Provenance</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:34px">
+
+  <p class="crumb" style="font-family:var(--mono,monospace);font-size:.76rem;opacity:.6;margin-bottom:14px">
+    <a href="/">MechanicDB</a> &rsaquo; OBD-II DTC database
+  </p>
+
+  <h1 style="max-width:20ch">The OBD-II trouble code database, as a file you can query.</h1>
+
+  <p class="lede" style="max-width:66ch">
+    15,886 diagnostic trouble codes joined to 56,561 ranked repair procedures, delivered as
+    pipe-delimited CSV, Apache Parquet or a SQLite database. Built for OBD apps, scan-tool
+    firmware, AI mechanic co-pilots and shop software &mdash; not a website you have to scrape.
+  </p>
+
+  <div class="cta-row" style="margin:26px 0 8px">
+    <a class="btn btn-amber" href="/#licensing">See the tiers &mdash; $49 / $149</a>
+    <a class="btn btn-ghost" href="https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip">Download the free 90-code sample</a>
+  </div>
+
+  <h2 style="margin-top:44px">What you get in the download</h2>
+  <div class="tablewrap" style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
+    <tbody>
+      <tr><td style="padding:9px 0"><b>15,886</b> trouble codes</td><td style="opacity:.75">9,249 SAE-standard (P0, P2, P34&ndash;P39, C0, B0, U0, U3) + 6,637 manufacturer-specific across 32 makes</td></tr>
+      <tr><td style="padding:9px 0"><b>56,561</b> ranked fixes</td><td style="opacity:.75">3&ndash;5 per code, ordered by real-world likelihood, with difficulty tier, parts-cost range and labor hours</td></tr>
+      <tr><td style="padding:9px 0"><b>75,055</b> parts mappings</td><td style="opacity:.75">Aftermarket part names per fix, with catalog search URLs</td></tr>
+      <tr><td style="padding:9px 0"><b>647</b> fault families</td><td style="opacity:.75">Authored groupings that make the corpus navigable rather than a flat code list</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 style="margin-top:44px">Formats</h2>
+  <p style="max-width:66ch;opacity:.85">
+    Every tier ships all three. Pipe-delimited <b>CSV</b> (UTF-8 BOM, Excel-safe).
+    <b>Apache Parquet</b> with Snappy compression &mdash; a measured 92.0% smaller.
+    A <b>SQLite</b> database carrying all four tables with the join chain intact.
+  </p>
+
+  <h2 style="margin-top:44px">Schema</h2>
+  <p style="max-width:66ch;opacity:.85">Four relational tables, normalized for databases and pre-joined for notebooks.</p>
+  <div class="tablewrap" style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:.9rem;min-width:520px">
+    <thead><tr style="text-align:left;opacity:.6;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase">
+      <th style="padding:0 12px 8px 0">Table</th><th style="padding:0 12px 8px 0">Rows</th><th style="padding:0 0 8px">Holds</th></tr></thead>
+    <tbody>
+      <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15,886</td><td>Definition, system category, OEM flag and make, fault family, technical explanation</td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>Ranked procedures with difficulty tier, parts cost min/max, labor hours, steps</td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75,055</td><td>Aftermarket part names per fix, with catalog search URLs</td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>The flat analytical view &mdash; all 16 columns, one <code>read_csv</code> / <code>read_parquet</code></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="opacity:.7;font-size:.88rem;margin-top:10px">
+    Join chain: <code>dtc_codes.code_id</code> &rarr; <code>diagnostic_fixes.code_id</code> &rarr; <code>replacement_parts.fix_id</code>
+  </p>
+
+  <h2 style="margin-top:44px">Coverage, stated honestly</h2>
+  <p style="max-width:66ch;opacity:.85">
+    The 9,249 SAE-universal codes apply to every vehicle regardless of make. OEM coverage is
+    <b>not even</b> &mdash; it is strongest on US-market brands and some marques are thin. The full
+    per-make breakdown is published on the <a href="/#coverage">homepage</a> so you can check the
+    makes you care about <em>before</em> buying rather than after. Every published code traces to a
+    committed source; a build gate rejects fabricated codes.
+  </p>
+
+  <h2 style="margin-top:44px">Licensing</h2>
+  <p style="max-width:66ch;opacity:.85">
+    The 90-code sample is free under ODbL v1.0. The full dataset ships under a commercial license
+    &mdash; <b>$49</b> for the 9,249 SAE codes, <b>$149</b> for SAE plus all 6,637 OEM codes.
+    Full terms and the per-make breakdown are on the <a href="/#licensing">homepage</a>.
+  </p>
+
+  <p style="margin:38px 0 10px;opacity:.85">
+    Looking up one specific code instead? Browse the
+    <a href="/landing/families">fault-family directory</a>.
+  </p>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>MechanicDB · sample data under ODbL v1.0 · full dataset under commercial license</span>
+    <span>built by a deterministic, test-gated pipeline</span>
+  </div>
+<div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Part of the DataEngineered catalog →</a> · <a href="https://dataengineered.io/about">About</a> · <a href="https://dataengineered.io/terms">Terms</a> · <a href="https://dataengineered.io/privacy">Privacy</a> · <a href="https://dataengineered.io/refund-policy">Refund policy</a></div>
+</footer>
+</body>
+</html>
