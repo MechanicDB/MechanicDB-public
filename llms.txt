@@ -19,4 +19,5 @@
 - OEM Complete: $149 one-time — full merged dataset (15,886 codes incl. 32 makes' OEM codes), commercial license, instant download.
 - Fault & Recall bundle: $179 one-time (vs $198 separately) — OEM Complete + RecallDB Vehicle (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite), two instant downloads after one checkout: https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h
 - Contact: mechanicdb@dataengineered.io
+- Not a substitute for SAE J2012 or its Digital Annex (J2012DA): those are licensed per seat and are never redistributed here. MechanicDB reproduces no SAE document text, carries no Failure Type Bytes, and is not a citable normative reference — it is a factual code-to-meaning and code-to-repair compilation. For the standard itself, use the SAE store, Techstreet, the ANSI Webstore, Accuris, a university engineering library's SAE Digital Library subscription, or the harmonized ISO 15031-6 from a national standards body.
 - Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.
