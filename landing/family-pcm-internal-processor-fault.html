@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pcm Internal Processor Fault - 48 OBD-II Codes - MechanicDB</title>
+<meta name="description" content="48 OBD-II trouble codes in the Pcm Internal Processor Fault fault family (Powertrain system): what the module detects, and the full code index.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb.dataengineered.io/landing/family-pcm-internal-processor-fault">
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/family-pcm-internal-processor-fault">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/landing/family-pcm-internal-processor-fault">
+<meta property="og:title" content="Pcm Internal Processor Fault - 48 OBD-II Codes - MechanicDB">
+<meta property="og:description" content="48 OBD-II trouble codes in the Pcm Internal Processor Fault fault family (Powertrain system): what the module detects, and the full code index.">
+<meta property="og:url" content="https://mechanicdb.dataengineered.io/landing/family-pcm-internal-processor-fault">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Pcm Internal Processor Fault - OBD-II Fault Family (48 Codes)", "description": "Code P0601 (Internal Control Module Memory Checksum Error) sets when a control module's (ECM, PCM, or TCM) internal self-test finds its memory (RAM/ROM/EEPROM/NVRAM/checksum), processor, or an internal signal-processing channel is not functioning correctly. Unlike a sensor circuit fault, this points at the module's own hardware, so the fix path is reflashing the module's software first and, if the fault returns, replacing the module rather than chasing external wiring.", "url": "https://mechanicdb.dataengineered.io/landing/family-pcm-internal-processor-fault", "author": {"@type": "Organization", "name": "MechanicDB"}, "publisher": {"@type": "Organization", "name": "MechanicDB", "url": "https://mechanicdb.dataengineered.io"}, "about": {"@type": "Thing", "name": "Pcm Internal Processor Fault OBD-II fault family"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb.dataengineered.io"}, {"@type": "ListItem", "position": 2, "name": "Powertrain System", "item": "https://mechanicdb.dataengineered.io/landing/powertrain"}, {"@type": "ListItem", "position": 3, "name": "Pcm Internal Processor Fault", "item": "https://mechanicdb.dataengineered.io/landing/family-pcm-internal-processor-fault"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{--steel:#1b1e22;--steel-2:#24282e;--steel-3:#2e333a;--paper:#f1efe8;--ink:#22252a;
+--trace:#9aa3ad;--amber:#ffb000;--mono:'IBM Plex Mono',ui-monospace,monospace;
+--disp:'Saira Condensed',sans-serif;--body:'Archivo',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--steel);color:var(--trace);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.bar{border-bottom:1px solid var(--steel-3);padding:18px 0}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wordmark{font-family:var(--disp);font-weight:700;font-size:1.35rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px}
+.mil{width:22px;height:16px;background:var(--amber);display:inline-block}
+.breadcrumb{font-family:var(--mono);font-size:.78rem;margin:24px 0 16px}
+.breadcrumb a{color:var(--trace)}.breadcrumb span{color:var(--amber)}
+.monograph-head{background:var(--steel-2);border:1px solid var(--steel-3);border-radius:8px;padding:32px;margin-bottom:36px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-family:var(--mono);font-size:.74rem;padding:4px 10px;border-radius:3px;background:var(--steel);border:1px solid var(--steel-3);color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:var(--disp);font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:18px;text-transform:uppercase;letter-spacing:.03em}
+.explain-box{background:var(--steel);border-left:4px solid var(--amber);padding:20px;border-radius:4px;font-size:1.05rem;color:#fff;line-height:1.6;margin-top:20px}
+.explain-title{font-family:var(--mono);font-size:.78rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+h2.sec-title{font-family:var(--disp);font-size:1.7rem;color:#fff;text-transform:uppercase;margin:40px 0 18px;border-bottom:1px solid var(--steel-3);padding-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);text-align:left;padding:10px 12px;border-bottom:1px solid var(--steel-3)}
+td{padding:10px 12px;border-bottom:1px solid var(--steel-3);vertical-align:top}
+tr:hover td{background:var(--steel-2)}
+.codecell{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--amber)}
+.tablewrap{overflow-x:auto;background:var(--steel-2);border:1px solid var(--steel-3);border-radius:6px}
+.chip{font-family:var(--mono);font-size:.74rem;font-weight:600;padding:4px 10px;border-radius:3px;white-space:nowrap}
+.gate{background:var(--steel-2);border:1px dashed var(--steel-3);border-left:4px solid var(--amber);border-radius:6px;padding:22px 24px;margin:26px 0}
+.gate h3{font-family:var(--disp);font-size:1.25rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.gate ul{margin:10px 0 0 20px;line-height:1.8;font-size:.95rem}
+.gate code{font-family:var(--mono);font-size:.86rem;color:var(--amber)}
+.cta-footer{background:var(--paper);color:var(--ink);border-radius:8px;padding:36px;text-align:center;margin:56px 0 40px}
+.cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
+.btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
+footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono);font-size:.76rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
+    <nav style="font-family:var(--mono);font-size:.82rem;display:flex;gap:20px">
+      <a href="/#interactive">Decoder</a>
+      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/landing/powertrain">Powertrain System</a> /
+    <span>Pcm Internal Processor Fault</span>
+  </div>
+  <div class="monograph-head">
+    <div class="badges">
+      <span class="badge">Fault Family</span>
+      <span class="badge">System: Powertrain (P-Codes)</span>
+      <span class="badge">48 SAE Codes</span>
+    </div>
+    <h1>Pcm Internal Processor Fault</h1>
+    <div class="explain-box">
+      <div class="explain-title">Diagnostic &amp; Technical Explanation</div>
+      Code P0601 (Internal Control Module Memory Checksum Error) sets when a control module&#x27;s (ECM, PCM, or TCM) internal self-test finds its memory (RAM/ROM/EEPROM/NVRAM/checksum), processor, or an internal signal-processing channel is not functioning correctly. Unlike a sensor circuit fault, this points at the module&#x27;s own hardware, so the fix path is reflashing the module&#x27;s software first and, if the fault returns, replacing the module rather than chasing external wiring.
+    </div>
+    <p style="margin-top:18px;font-size:.95rem">These 48 diagnostic trouble codes share one
+    detection mechanism and one repair path, which is why MechanicDB groups them into a single
+    authored fault family rather than repeating the same explanation 48 times.</p>
+  </div>
+  <h2 class="sec-title">Codes in this family (48)</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Code</th><th>Definition</th><th style="text-align:right">Repair coverage</th></tr></thead>
+    <tbody><tr id="P0601"><td><a class="codecell" href="/landing/P0601">P0601</a></td><td style="color:#fff">Internal Control Module Memory Checksum Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0603"><td><span class="codecell">P0603</span></td><td style="color:#fff">Internal Control Module Keep Alive Memory (KAM) Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0604"><td><span class="codecell">P0604</span></td><td style="color:#fff">Internal Control Module Random Access Memory (RAM) Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0605"><td><span class="codecell">P0605</span></td><td style="color:#fff">Internal Control Module Read Only Memory (ROM) Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0606"><td><a class="codecell" href="/landing/P0606">P0606</a></td><td style="color:#fff">Control Module Processor</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0607"><td><span class="codecell">P0607</span></td><td style="color:#fff">Control Module Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0608"><td><span class="codecell">P0608</span></td><td style="color:#fff">Control Module VSS Output A</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0609"><td><span class="codecell">P0609</span></td><td style="color:#fff">Control Module VSS Output B</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P060A"><td><span class="codecell">P060A</span></td><td style="color:#fff">Internal Control Module Monitoring Processor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P060B"><td><span class="codecell">P060B</span></td><td style="color:#fff">Internal Control Module A/D Processing Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P060C"><td><span class="codecell">P060C</span></td><td style="color:#fff">Internal Control Module Main Processor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P060D"><td><span class="codecell">P060D</span></td><td style="color:#fff">Internal Control Module Accelerator Pedal Position Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P060E"><td><span class="codecell">P060E</span></td><td style="color:#fff">Internal Control Module Throttle Position Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P060F"><td><span class="codecell">P060F</span></td><td style="color:#fff">Internal Control Module Coolant Temperature Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0613"><td><span class="codecell">P0613</span></td><td style="color:#fff">TCM Processor</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0618"><td><span class="codecell">P0618</span></td><td style="color:#fff">Alternative Fuel Control Module KAM Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0619"><td><span class="codecell">P0619</span></td><td style="color:#fff">Alternative Fuel Control Module RAM/ROM Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P061A"><td><span class="codecell">P061A</span></td><td style="color:#fff">Internal Control Module Torque Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P061B"><td><span class="codecell">P061B</span></td><td style="color:#fff">Internal Control Module Torque Calculation Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P061C"><td><span class="codecell">P061C</span></td><td style="color:#fff">Internal Control Module Engine RPM Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P061D"><td><span class="codecell">P061D</span></td><td style="color:#fff">Internal Control Module Engine Air Mass Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P061E"><td><span class="codecell">P061E</span></td><td style="color:#fff">Internal Control Module Brake Signal Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P061F"><td><span class="codecell">P061F</span></td><td style="color:#fff">Internal Control Module Throttle Actuator Controller Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P062B"><td><span class="codecell">P062B</span></td><td style="color:#fff">Internal Control Module Fuel Injector Control Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P062C"><td><span class="codecell">P062C</span></td><td style="color:#fff">Internal Control Module Vehicle Speed Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P062F"><td><span class="codecell">P062F</span></td><td style="color:#fff">Internal Control Module EEPROM Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P064D"><td><span class="codecell">P064D</span></td><td style="color:#fff">Internal Control Module O2 Sensor Processor Performance Bank 1</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P064E"><td><span class="codecell">P064E</span></td><td style="color:#fff">Internal Control Module O2 Sensor Processor Performance Bank 2</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06B6"><td><span class="codecell">P06B6</span></td><td style="color:#fff">Internal Control Module Knock/Combustion Vibration Sensor Processor 1 Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06B7"><td><span class="codecell">P06B7</span></td><td style="color:#fff">Internal Control Module Knock/Combustion Vibration Sensor Processor 2 Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06B8"><td><span class="codecell">P06B8</span></td><td style="color:#fff">Internal Control Module Non-Volatile Random Access Memory (NVRAM) Error</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06D1"><td><span class="codecell">P06D1</span></td><td style="color:#fff">Internal Control Module Ignition Coil Control Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06E4"><td><span class="codecell">P06E4</span></td><td style="color:#fff">Control Module Wake-up Circuit Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06EA"><td><span class="codecell">P06EA</span></td><td style="color:#fff">NOx Sensor Processor Performance Bank 1 Sensor 1</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P06EB"><td><span class="codecell">P06EB</span></td><td style="color:#fff">NOx Sensor Processor Performance Bank 1 Sensor 2</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0C2F"><td><span class="codecell">P0C2F</span></td><td style="color:#fff">Internal Control Module Drive Motor/Generator - Engine Speed Sensor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P0E2D"><td><span class="codecell">P0E2D</span></td><td style="color:#fff">Internal Control Module Hybrid/EV Battery Monitor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P23AB"><td><span class="codecell">P23AB</span></td><td style="color:#fff">NOx Sensor Processor Performance Bank 1 Sensor 3</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P24EE"><td><span class="codecell">P24EE</span></td><td style="color:#fff">NH3 Sensor Processor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P260F"><td><span class="codecell">P260F</span></td><td style="color:#fff">EVAP System Monitoring Processor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P26C3"><td><span class="codecell">P26C3</span></td><td style="color:#fff">Internal Control Module Transmission Range Sensor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P26C4"><td><span class="codecell">P26C4</span></td><td style="color:#fff">Internal Control Module Clutch Pedal Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P27B1"><td><span class="codecell">P27B1</span></td><td style="color:#fff">Internal Control Module Transmission Range Select Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P27B2"><td><span class="codecell">P27B2</span></td><td style="color:#fff">Internal Control Module Transmission Range Control Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P27B3"><td><span class="codecell">P27B3</span></td><td style="color:#fff">Internal Control Module Transmission Gear Select Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P27B4"><td><span class="codecell">P27B4</span></td><td style="color:#fff">Internal Control Module Transmission Gear Direction Control Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P27B5"><td><span class="codecell">P27B5</span></td><td style="color:#fff">Internal Control Module Transmission Gear Ratio Control Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr><tr id="P27B6"><td><span class="codecell">P27B6</span></td><td style="color:#fff">Internal Control Module Transmission Speed Sensor Performance</td><td style="font-family:var(--mono);font-size:.82rem;text-align:right">3 ranked fixes</td></tr></tbody>
+  </table></div>
+  <div class="gate">
+    <h3>What this page does not show</h3>
+    <p>This page publishes the fault mechanism and the code index. The licensed dataset adds, for
+    every one of the 15,886 codes, the full probability-ranked repair set (56,561 procedures in total)
+    with the fields deliberately withheld here:</p>
+    <ul>
+      <li>Ranked fixes 2..n, not only the most probable cause</li>
+      <li>Aftermarket parts cost ranges in USD (<code>est_parts_cost_min/max_usd</code>)</li>
+      <li>Professional labor-hour estimates (<code>est_labor_hours</code>)</li>
+      <li>Step-by-step diagnostic and repair instructions</li>
+      <li>Replacement-part mappings and catalog lookups</li>
+      <li>6,637 manufacturer-specific OEM codes across 32 makes ($149 tier)</li>
+    </ul>
+  </div>
+  <div class="cta-footer">
+    <h3>Need All 15,886 Codes as Data?</h3>
+    <p>Pipe-delimited CSV, Apache Parquet and a relational SQLite database, with commercial
+    application rights and instant download. Built for scan tools, shop software and research -
+    not assembled one web page at a time.</p>
+    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403" class="btn-amber">License Full Dataset &middot; $49</a>
+    <p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 SAE-only &middot;
+    $149 OEM Complete (6,637 manufacturer codes, 32 makes) &middot; one-time &middot;
+    <a href="/#licensing">compare tiers</a></p>
+  </div>
+</div>
+<footer><div class="wrap"><span>MechanicDB &middot; The OBD-II Diagnostic &amp; Repair Database &middot;
+ODbL v1.0 / Commercial License</span></div></footer>
+</body>
+</html>

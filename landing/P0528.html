@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code P0528 - Fan Speed Sensor Circuit No Signal - MechanicDB OBD-II Guide</title>
+<meta name="description" content="OBD-II code P0528: Fan Speed Sensor Circuit No Signal. What the module detects, the most probable cause, and related codes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mechanicdb.dataengineered.io/landing/P0528">
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/P0528">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/landing/P0528">
+<meta property="og:title" content="Code P0528 - Fan Speed Sensor Circuit No Signal - MechanicDB OBD-II Guide">
+<meta property="og:description" content="OBD-II code P0528: Fan Speed Sensor Circuit No Signal. What the module detects, the most probable cause, and related codes.">
+<meta property="og:url" content="https://mechanicdb.dataengineered.io/landing/P0528">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "OBD-II Code P0528: Fan Speed Sensor Circuit No Signal", "description": "Code P0528 (Fan Speed Sensor Circuit No Signal) sets when the ECM does not see a plausible tachometer/speed feedback signal from the cooling fan motor, distinct from a fault in the fan's power driver circuit. Causes are a failed Hall-effect speed sensor inside the fan motor, a damaged connector at the fan shroud, or chafed wiring where the harness flexes near the fan.", "url": "https://mechanicdb.dataengineered.io/landing/P0528", "author": {"@type": "Organization", "name": "MechanicDB"}, "publisher": {"@type": "Organization", "name": "MechanicDB", "url": "https://mechanicdb.dataengineered.io"}, "about": {"@type": "Thing", "name": "Automotive Diagnostic Trouble Code P0528", "description": "OBD-II Powertrain fault: Fan Speed Sensor Circuit No Signal"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mechanicdb.dataengineered.io"}, {"@type": "ListItem", "position": 2, "name": "Powertrain System", "item": "https://mechanicdb.dataengineered.io/landing/powertrain"}, {"@type": "ListItem", "position": 3, "name": "Fan Speed Sensor Circuit", "item": "https://mechanicdb.dataengineered.io/landing/family-fan-speed-sensor-circuit"}, {"@type": "ListItem", "position": 4, "name": "Code P0528", "item": "https://mechanicdb.dataengineered.io/landing/P0528"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{--steel:#1b1e22;--steel-2:#24282e;--steel-3:#2e333a;--paper:#f1efe8;--ink:#22252a;
+--trace:#9aa3ad;--amber:#ffb000;--mono:'IBM Plex Mono',ui-monospace,monospace;
+--disp:'Saira Condensed',sans-serif;--body:'Archivo',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--steel);color:var(--trace);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.bar{border-bottom:1px solid var(--steel-3);padding:18px 0}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wordmark{font-family:var(--disp);font-weight:700;font-size:1.35rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px}
+.mil{width:22px;height:16px;background:var(--amber);display:inline-block}
+.breadcrumb{font-family:var(--mono);font-size:.78rem;margin:24px 0 16px}
+.breadcrumb a{color:var(--trace)}.breadcrumb span{color:var(--amber)}
+.monograph-head{background:var(--steel-2);border:1px solid var(--steel-3);border-radius:8px;padding:32px;margin-bottom:36px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-family:var(--mono);font-size:.74rem;padding:4px 10px;border-radius:3px;background:var(--steel);border:1px solid var(--steel-3);color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:var(--disp);font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:18px;text-transform:uppercase;letter-spacing:.03em}
+.explain-box{background:var(--steel);border-left:4px solid var(--amber);padding:20px;border-radius:4px;font-size:1.05rem;color:#fff;line-height:1.6;margin-top:20px}
+.explain-title{font-family:var(--mono);font-size:.78rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+h2.sec-title{font-family:var(--disp);font-size:1.7rem;color:#fff;text-transform:uppercase;margin:40px 0 18px;border-bottom:1px solid var(--steel-3);padding-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);text-align:left;padding:10px 12px;border-bottom:1px solid var(--steel-3)}
+td{padding:10px 12px;border-bottom:1px solid var(--steel-3);vertical-align:top}
+tr:hover td{background:var(--steel-2)}
+.codecell{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--amber)}
+.tablewrap{overflow-x:auto;background:var(--steel-2);border:1px solid var(--steel-3);border-radius:6px}
+.chip{font-family:var(--mono);font-size:.74rem;font-weight:600;padding:4px 10px;border-radius:3px;white-space:nowrap}
+.gate{background:var(--steel-2);border:1px dashed var(--steel-3);border-left:4px solid var(--amber);border-radius:6px;padding:22px 24px;margin:26px 0}
+.gate h3{font-family:var(--disp);font-size:1.25rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.gate ul{margin:10px 0 0 20px;line-height:1.8;font-size:.95rem}
+.gate code{font-family:var(--mono);font-size:.86rem;color:var(--amber)}
+.cta-footer{background:var(--paper);color:var(--ink);border-radius:8px;padding:36px;text-align:center;margin:56px 0 40px}
+.cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
+.btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
+footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono);font-size:.76rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
+    <nav style="font-family:var(--mono);font-size:.82rem;display:flex;gap:20px">
+      <a href="/#interactive">Decoder</a>
+      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/landing/powertrain">Powertrain System</a> /
+    <a href="/landing/family-fan-speed-sensor-circuit">Fan Speed Sensor Circuit</a> / <span>Code P0528</span>
+  </div>
+  <div class="monograph-head">
+    <div class="badges">
+      <span class="badge">System: Powertrain (P-Code)</span>
+      <span class="badge">SAE Standard (Generic)</span>
+      <span class="badge">Family: Fan Speed Sensor Circuit</span>
+    </div>
+    <h1>Code P0528: Fan Speed Sensor Circuit No Signal</h1>
+    <div class="explain-box">
+      <div class="explain-title">Diagnostic &amp; Technical Explanation</div>
+      Code P0528 (Fan Speed Sensor Circuit No Signal) sets when the ECM does not see a plausible tachometer/speed feedback signal from the cooling fan motor, distinct from a fault in the fan&#x27;s power driver circuit. Causes are a failed Hall-effect speed sensor inside the fan motor, a damaged connector at the fan shroud, or chafed wiring where the harness flexes near the fan.
+    </div>
+  </div>
+  <h2 class="sec-title">Most probable cause</h2>
+  <div class="tablewrap" style="padding:20px 24px">
+    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+      <span style="font-family:var(--mono);font-size:.76rem;background:var(--amber);color:#1b1500;padding:3px 10px;border-radius:3px;font-weight:700">Rank #1</span>
+      <b style="font-family:var(--disp);font-size:1.3rem;color:#fff;text-transform:uppercase">Inspect fan speed sensor connector and wiring</b>
+      <span class="chip" style="background:#4caf6d25;color:#4caf6d;border:1px solid #4caf6d">Easy DIY</span>
+    </div>
+    <p style="margin-top:12px;font-size:.93rem">Cost range, labor hours, the step-by-step procedure
+    and the remaining 2 ranked cause(s) for this code are in the licensed dataset.</p>
+  </div>
+  <h2 class="sec-title">Related codes, same fault family</h2><div class="rel"><a href="/landing/P0526">P0526 &middot; Fan Speed Sensor Circuit</a><a href="/landing/P0527">P0527 &middot; Fan Speed Sensor Circuit Range/Performance</a><a href="/landing/P0529">P0529 &middot; Fan Speed Sensor Circuit Intermittent</a></div><p style="margin-top:12px;font-size:.93rem">Full family: <a href="/landing/family-fan-speed-sensor-circuit">Fan Speed Sensor Circuit</a></p>
+  <div class="gate">
+    <h3>What this page does not show</h3>
+    <p>This page publishes the fault mechanism and the code index. The licensed dataset adds, for
+    every one of the 15,886 codes, the full probability-ranked repair set (56,561 procedures in total)
+    with the fields deliberately withheld here:</p>
+    <ul>
+      <li>Ranked fixes 2..n, not only the most probable cause</li>
+      <li>Aftermarket parts cost ranges in USD (<code>est_parts_cost_min/max_usd</code>)</li>
+      <li>Professional labor-hour estimates (<code>est_labor_hours</code>)</li>
+      <li>Step-by-step diagnostic and repair instructions</li>
+      <li>Replacement-part mappings and catalog lookups</li>
+      <li>6,637 manufacturer-specific OEM codes across 32 makes ($149 tier)</li>
+    </ul>
+  </div>
+  <div class="cta-footer">
+    <h3>Need All 15,886 Codes as Data?</h3>
+    <p>Pipe-delimited CSV, Apache Parquet and a relational SQLite database, with commercial
+    application rights and instant download. Built for scan tools, shop software and research -
+    not assembled one web page at a time.</p>
+    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403" class="btn-amber">License Full Dataset &middot; $49</a>
+    <p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 SAE-only &middot;
+    $149 OEM Complete (6,637 manufacturer codes, 32 makes) &middot; one-time &middot;
+    <a href="/#licensing">compare tiers</a></p>
+  </div>
+</div>
+<footer><div class="wrap"><span>MechanicDB &middot; The OBD-II Diagnostic &amp; Repair Database &middot;
+ODbL v1.0 / Commercial License</span></div></footer>
+</body>
+</html>
