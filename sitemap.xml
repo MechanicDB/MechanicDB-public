@@ -7,12 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mechanicdb.dataengineered.io/assets/kaggle-cover</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-  <url>
     <loc>https://mechanicdb.dataengineered.io/landing/B0122</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
