@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>P260C — PTO Control Circuit High | MechanicDB</title>
+<meta content="OBD-II-Code P260C: PTO Control Circuit High. Was das Modul Powertrain erkennt, die wahrscheinlichste Ursache und 2 verwandte Codes derselben Fehlerfamilie." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://mechanicdb.dataengineered.io/de/landing/P260C" rel="canonical"/>
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/P260C">
+<link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/landing/P260C">
+<link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/landing/P260C">
+<link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/landing/P260C">
+<link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/landing/P260C">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/landing/P260C">
+<style>th,td{overflow-wrap:anywhere;hyphens:auto}h1,h2,h3,h4,button,.btn{overflow-wrap:break-word;hyphens:auto}</style>
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<script src="/i18n/i18n.js?v=1" defer></script>
+<!-- /i18n:alternates -->
+<meta content="P260C — PTO Control Circuit High | MechanicDB" property="og:title"/>
+<meta content="OBD-II-Code P260C: PTO Control Circuit High. Was das Modul Powertrain erkennt, die wahrscheinlichste Ursache und 2 verwandte Codes derselben Fehlerfamilie." property="og:description"/>
+<meta content="https://mechanicdb.dataengineered.io/de/landing/P260C" property="og:url"/>
+<meta content="article" property="og:type"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "OBD-II-Code P260C: PTO Control Circuit High",
+  "description": "Code P260C (PTO Control Circuit High) sets when the ECM detects an open circuit, a short to ground, or a short to voltage on the output driver circuit it uses to command power take-off engagement hardware, distinct from the driver's enable switch input or the engagement-status sense circuit. Causes are a failed PTO engagement solenoid or relay coil, a corroded connector at the transmission-mounted PTO unit, or chafed output wiring in the chassis harness.",
+  "url": "https://mechanicdb.dataengineered.io/de/landing/P260C",
+  "author": {
+    "@type": "Organization",
+    "name": "MechanicDB"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MechanicDB",
+    "url": "https://mechanicdb.dataengineered.io/de/"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Kfz-Diagnose-Fehlercode P260C",
+    "description": "OBD-II-Fehler Powertrain: PTO Control Circuit High"
+  },
+  "inLanguage": "de"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://mechanicdb.dataengineered.io/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "System Powertrain",
+      "item": "https://mechanicdb.dataengineered.io/de/landing/powertrain"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PTO Output Control Circuit",
+      "item": "https://mechanicdb.dataengineered.io/de/landing/family-pto-output-control-circuit"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Code P260C",
+      "item": "https://mechanicdb.dataengineered.io/de/landing/P260C"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/></noscript>
+<style>
+:root{--steel:#1b1e22;--steel-2:#24282e;--steel-3:#2e333a;--paper:#f1efe8;--ink:#22252a;
+--trace:#9aa3ad;--amber:#ffb000;--mono:'IBM Plex Mono',ui-monospace,monospace;
+--disp:'Saira Condensed',sans-serif;--body:'Archivo',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--steel);color:var(--trace);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.bar{border-bottom:1px solid var(--steel-3);padding:18px 0}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wordmark{font-family:var(--disp);font-weight:700;font-size:1.35rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px}
+.mil{width:22px;height:16px;background:var(--amber);display:inline-block}
+.breadcrumb{font-family:var(--mono);font-size:.78rem;margin:24px 0 16px}
+.breadcrumb a{color:var(--trace)}.breadcrumb span{color:var(--amber)}
+.monograph-head{background:var(--steel-2);border:1px solid var(--steel-3);border-radius:8px;padding:32px;margin-bottom:36px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-family:var(--mono);font-size:.74rem;padding:4px 10px;border-radius:3px;background:var(--steel);border:1px solid var(--steel-3);color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:var(--disp);font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:18px;text-transform:uppercase;letter-spacing:.03em}
+.explain-box{background:var(--steel);border-left:4px solid var(--amber);padding:20px;border-radius:4px;font-size:1.05rem;color:#fff;line-height:1.6;margin-top:20px}
+.explain-title{font-family:var(--mono);font-size:.78rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+h2.sec-title{font-family:var(--disp);font-size:1.7rem;color:#fff;text-transform:uppercase;margin:40px 0 18px;border-bottom:1px solid var(--steel-3);padding-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);text-align:left;padding:10px 12px;border-bottom:1px solid var(--steel-3)}
+td{padding:10px 12px;border-bottom:1px solid var(--steel-3);vertical-align:top}
+tr:hover td{background:var(--steel-2)}
+.codecell{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--amber)}
+.tablewrap{overflow-x:auto;background:var(--steel-2);border:1px solid var(--steel-3);border-radius:6px}
+.chip{font-family:var(--mono);font-size:.74rem;font-weight:600;padding:4px 10px;border-radius:3px;white-space:nowrap}
+.gate{background:var(--steel-2);border:1px dashed var(--steel-3);border-left:4px solid var(--amber);border-radius:6px;padding:22px 24px;margin:26px 0}
+.gate h3{font-family:var(--disp);font-size:1.25rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.gate ul{margin:10px 0 0 20px;line-height:1.8;font-size:.95rem}
+.gate code{font-family:var(--mono);font-size:.86rem;color:var(--amber)}
+.cta-footer{background:var(--paper);color:var(--ink);border-radius:8px;padding:36px;text-align:center;margin:56px 0 40px}
+.cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
+.btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
+.related ul{list-style:none;padding:0;margin-top:8px}
+.related li{padding:6px 0;border-bottom:1px solid var(--steel-3);font-size:.92rem}
+.related-why{color:var(--trace);font-size:.85em}
+footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono);font-size:.76rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="bar">
+<div class="wrap bar-inner">
+<a class="wordmark" href="/de/"><span aria-hidden="true" class="mil"></span>MechanicDB</a>
+<nav style="font-family:var(--mono);font-size:.82rem;display:flex;gap:20px">
+<a href="/de/#interactive">Decoder</a>
+<a href="/de/#licensing">Datensatzlizenz ($49)</a>
+<a href="/de/#faq">FAQ</a>
+</nav>
+</div>
+</header>
+<div class="wrap">
+<div class="breadcrumb">
+<a href="/de/">Startseite</a> / <a href="/de/landing/powertrain">System <span translate="no">Powertrain</span></a> /
+    <a href="/de/landing/family-pto-output-control-circuit" translate="no">PTO Output Control Circuit</a> / <span>Code <span translate="no">P260C</span></span>
+</div>
+<div class="monograph-head">
+<div class="badges">
+<span class="badge">System: <span translate="no">Powertrain</span> (<span translate="no">P</span>-Code)</span>
+<span class="badge">SAE-Standard (generisch)</span>
+<span class="badge">Familie: <span translate="no">PTO Output Control Circuit</span></span>
+</div>
+<h1>Code <span translate="no">P260C</span>: <span translate="no">PTO Control Circuit High</span></h1>
+<div class="explain-box">
+<div class="explain-title">Diagnose &amp; technische Erläuterung</div>
+<span lang="en" translate="no"><span translate="no">Code P260C (PTO Control Circuit High) sets when the ECM detects an open circuit, a short to</span> <span translate="no">ground, or a short to voltage on the output driver circuit it uses to command power take-off</span> <span translate="no">engagement hardware, distinct from the driver's enable switch input or the engagement-status</span> <span translate="no">sense circuit. Causes are a failed PTO engagement solenoid or relay coil, a corroded connector</span> <span translate="no">at the transmission-mounted PTO unit, or chafed output wiring in the chassis harness.</span></span>
+</div>
+</div>
+<h2 class="sec-title">Wahrscheinlichste Ursache</h2>
+<div class="tablewrap" style="padding:20px 24px">
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+<span style="font-family:var(--mono);font-size:.76rem;background:var(--amber);color:#1b1500;padding:3px 10px;border-radius:3px;font-weight:700">Rang #1</span>
+<b lang="en" style="font-family:var(--disp);font-size:1.3rem;color:#fff;text-transform:uppercase" translate="no">Clean PTO output circuit connector</b>
+<span class="chip" style="background:#e8a13d25;color:#e8a13d;border:1px solid #e8a13d" translate="no">Moderate DIY</span>
+</div>
+<p style="margin-top:12px;font-size:.93rem">Kostenspanne, Arbeitsstunden, die Schritt-für-Schritt-Anleitung und die übrigen 2 priorisierten Ursachen für diesen Code sind im lizenzierten Datensatz enthalten.</p>
+</div>
+<section class="related"><h2>Verwandte Codes derselben Fehlerfamilie</h2><ul><li><a href="/de/landing/P260A" translate="no">P260A · PTO Control Circuit/Open</a> <span class="related-why">— dieselbe Fehlerfamilie</span></li><li><a href="/de/landing/P260B" translate="no">P260B · PTO Control Circuit Low</a> <span class="related-why">— dieselbe Fehlerfamilie</span></li><li><a href="/de/landing/P2610" translate="no">P2610 · ECM/PCM Engine Off Timer Performance</a> <span class="related-why">— benachbarter Code</span></li></ul></section><p style="margin-top:12px;font-size:.93rem">Gesamte Familie: <a href="/de/landing/family-pto-output-control-circuit" translate="no">PTO Output Control Circuit</a></p>
+<div class="gate">
+<h3>Was diese Seite nicht zeigt</h3>
+<p>Diese Seite veröffentlicht den Fehlermechanismus und den Codeindex. Der lizenzierte Datensatz ergänzt für jeden der 15.886 Codes die vollständige, nach Wahrscheinlichkeit geordnete Reparaturliste (insgesamt 56.561 Verfahren) mit den Feldern, die hier bewusst zurückgehalten werden:</p>
+<ul>
+<li>Priorisierte Reparaturen 2..n, nicht nur die wahrscheinlichste Ursache</li>
+<li>Kostenspannen für Nachrüstteile in USD (<code>est_parts_cost_min/max_usd</code>)</li>
+<li>Arbeitszeitschätzungen einer Fachwerkstatt (<code>est_labor_hours</code>)</li>
+<li>Schrittweise Diagnose- und Reparaturanleitungen</li>
+<li>Zuordnungen zu Ersatzteilen und Katalogsuchen</li>
+<li>6.637 herstellerspezifische OEM-Codes aus 32 Marken (Stufe $149)</li>
+</ul>
+</div>
+<div class="cta-footer">
+<h3>Alle 15.886 Codes als Daten benötigt?</h3>
+<p>CSV mit Pipe-Trennzeichen, Apache Parquet und eine relationale SQLite-Datenbank, mit kommerziellen Nutzungsrechten und sofortigem Download. Gebaut für Diagnosegeräte, Werkstattsoftware und Forschung – nicht Webseite für Webseite zusammengetragen.</p>
+<a class="btn-amber" href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403">Vollständigen Datensatz lizenzieren · $49</a>
+<p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 nur SAE · $149 OEM Complete (6.637 Herstellercodes, 32 Marken) · einmalig · <a href="/de/#licensing">Stufen vergleichen</a></p>
+</div>
+</div>
+<footer><div class="wrap"><span>MechanicDB · Die OBD-II-Diagnose- &amp; Reparaturdatenbank · ODbL v1.0 / kommerzielle Lizenz</span>
+<div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Teil des DataEngineered-Katalogs →</a> · <a href="https://dataengineered.io/about">Über uns</a> · <a href="https://dataengineered.io/terms">AGB</a> · <a href="https://dataengineered.io/privacy">Datenschutz</a> · <a href="https://dataengineered.io/refund-policy">Rückerstattungsrichtlinie</a></div></div><!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Sprache" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><a href="/landing/P260C" hreflang="en" lang="en" data-i18n-lang="en">English</a> · <a href="/es/landing/P260C" hreflang="es" lang="es" data-i18n-lang="es">Español</a> · <span aria-current="true" style="font-weight:600">Deutsch</span> · <a href="/fr/landing/P260C" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <a href="/pt-br/landing/P260C" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></nav><!-- /i18n:switcher --></footer>
+</body>
+</html>

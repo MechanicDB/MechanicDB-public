@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>P2AAC — Diesel Fuel Presence Sensor Circuit | MechanicDB</title>
+<meta content="Código OBD-II P2AAC: Diesel Fuel Presence Sensor Circuit. Qué detecta el módulo Powertrain, la causa más probable y 3 códigos relacionados de la misma…" name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://mechanicdb.dataengineered.io/es/landing/P2AAC" rel="canonical"/>
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/P2AAC">
+<link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/landing/P2AAC">
+<link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/landing/P2AAC">
+<link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/landing/P2AAC">
+<link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/landing/P2AAC">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/landing/P2AAC">
+<style>th,td{overflow-wrap:anywhere;hyphens:auto}h1,h2,h3,h4,button,.btn{overflow-wrap:break-word;hyphens:auto}</style>
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<script src="/i18n/i18n.js?v=1" defer></script>
+<!-- /i18n:alternates -->
+<meta content="P2AAC — Diesel Fuel Presence Sensor Circuit | MechanicDB" property="og:title"/>
+<meta content="Código OBD-II P2AAC: Diesel Fuel Presence Sensor Circuit. Qué detecta el módulo Powertrain, la causa más probable y 3 códigos relacionados de la misma…" property="og:description"/>
+<meta content="https://mechanicdb.dataengineered.io/es/landing/P2AAC" property="og:url"/>
+<meta content="article" property="og:type"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Código OBD-II P2AAC: Diesel Fuel Presence Sensor Circuit",
+  "description": "Code P2AAC (Diesel Fuel Presence Sensor Circuit) covers the sensor that detects whether diesel fuel (rather than air or gasoline) is present in the injection system, used on dual-fuel and fuel-quality-sensitive platforms to prevent running the engine on the wrong fuel. The ECM flags an open, shorted, or implausible signal. Causes are a fouled sensor element from fuel contamination, a corroded connector, or damaged wiring between the sensor and ECM.",
+  "url": "https://mechanicdb.dataengineered.io/es/landing/P2AAC",
+  "author": {
+    "@type": "Organization",
+    "name": "MechanicDB"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MechanicDB",
+    "url": "https://mechanicdb.dataengineered.io/es/"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Código de diagnóstico de problemas automotriz P2AAC",
+    "description": "Falla OBD-II Powertrain: Diesel Fuel Presence Sensor Circuit"
+  },
+  "inLanguage": "es"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://mechanicdb.dataengineered.io/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sistema Powertrain",
+      "item": "https://mechanicdb.dataengineered.io/es/landing/powertrain"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Diesel Fuel Presence Sensor Circuit",
+      "item": "https://mechanicdb.dataengineered.io/es/landing/family-diesel-fuel-presence-sensor-circuit"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Código P2AAC",
+      "item": "https://mechanicdb.dataengineered.io/es/landing/P2AAC"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/></noscript>
+<style>
+:root{--steel:#1b1e22;--steel-2:#24282e;--steel-3:#2e333a;--paper:#f1efe8;--ink:#22252a;
+--trace:#9aa3ad;--amber:#ffb000;--mono:'IBM Plex Mono',ui-monospace,monospace;
+--disp:'Saira Condensed',sans-serif;--body:'Archivo',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--steel);color:var(--trace);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.bar{border-bottom:1px solid var(--steel-3);padding:18px 0}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wordmark{font-family:var(--disp);font-weight:700;font-size:1.35rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px}
+.mil{width:22px;height:16px;background:var(--amber);display:inline-block}
+.breadcrumb{font-family:var(--mono);font-size:.78rem;margin:24px 0 16px}
+.breadcrumb a{color:var(--trace)}.breadcrumb span{color:var(--amber)}
+.monograph-head{background:var(--steel-2);border:1px solid var(--steel-3);border-radius:8px;padding:32px;margin-bottom:36px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-family:var(--mono);font-size:.74rem;padding:4px 10px;border-radius:3px;background:var(--steel);border:1px solid var(--steel-3);color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:var(--disp);font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:18px;text-transform:uppercase;letter-spacing:.03em}
+.explain-box{background:var(--steel);border-left:4px solid var(--amber);padding:20px;border-radius:4px;font-size:1.05rem;color:#fff;line-height:1.6;margin-top:20px}
+.explain-title{font-family:var(--mono);font-size:.78rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+h2.sec-title{font-family:var(--disp);font-size:1.7rem;color:#fff;text-transform:uppercase;margin:40px 0 18px;border-bottom:1px solid var(--steel-3);padding-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);text-align:left;padding:10px 12px;border-bottom:1px solid var(--steel-3)}
+td{padding:10px 12px;border-bottom:1px solid var(--steel-3);vertical-align:top}
+tr:hover td{background:var(--steel-2)}
+.codecell{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--amber)}
+.tablewrap{overflow-x:auto;background:var(--steel-2);border:1px solid var(--steel-3);border-radius:6px}
+.chip{font-family:var(--mono);font-size:.74rem;font-weight:600;padding:4px 10px;border-radius:3px;white-space:nowrap}
+.gate{background:var(--steel-2);border:1px dashed var(--steel-3);border-left:4px solid var(--amber);border-radius:6px;padding:22px 24px;margin:26px 0}
+.gate h3{font-family:var(--disp);font-size:1.25rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.gate ul{margin:10px 0 0 20px;line-height:1.8;font-size:.95rem}
+.gate code{font-family:var(--mono);font-size:.86rem;color:var(--amber)}
+.cta-footer{background:var(--paper);color:var(--ink);border-radius:8px;padding:36px;text-align:center;margin:56px 0 40px}
+.cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
+.btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
+.related ul{list-style:none;padding:0;margin-top:8px}
+.related li{padding:6px 0;border-bottom:1px solid var(--steel-3);font-size:.92rem}
+.related-why{color:var(--trace);font-size:.85em}
+footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono);font-size:.76rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="bar">
+<div class="wrap bar-inner">
+<a class="wordmark" href="/es/"><span aria-hidden="true" class="mil"></span>MechanicDB</a>
+<nav style="font-family:var(--mono);font-size:.82rem;display:flex;gap:20px">
+<a href="/es/#interactive">Decodificador</a>
+<a href="/es/#licensing">Licencia del conjunto de datos ($49)</a>
+<a href="/es/#faq">Preguntas frecuentes</a>
+</nav>
+</div>
+</header>
+<div class="wrap">
+<div class="breadcrumb">
+<a href="/es/">Inicio</a> / <a href="/es/landing/powertrain">Sistema <span translate="no">Powertrain</span></a> /
+    <a href="/es/landing/family-diesel-fuel-presence-sensor-circuit" translate="no">Diesel Fuel Presence Sensor Circuit</a> / <span>Código <span translate="no">P2AAC</span></span>
+</div>
+<div class="monograph-head">
+<div class="badges">
+<span class="badge">Sistema: <span translate="no">Powertrain</span> (códigos <span translate="no">P</span>)</span>
+<span class="badge">Estándar SAE (genérico)</span>
+<span class="badge">Familia: <span translate="no">Diesel Fuel Presence Sensor Circuit</span></span>
+</div>
+<h1>Código <span translate="no">P2AAC</span>: <span translate="no">Diesel Fuel Presence Sensor Circuit</span></h1>
+<div class="explain-box">
+<div class="explain-title">Explicación diagnóstica y técnica</div>
+<span lang="en" translate="no"><span translate="no">Code P2AAC (Diesel Fuel Presence Sensor Circuit) covers the sensor that detects whether</span> <span translate="no">diesel fuel (rather than air or gasoline) is present in the injection system, used on dual-fuel</span> <span translate="no">and fuel-quality-sensitive platforms to prevent running the engine on the wrong fuel. The</span> <span translate="no">ECM flags an open, shorted, or implausible signal. Causes are a fouled sensor element from</span> <span translate="no">fuel contamination, a corroded connector, or damaged wiring between the sensor and ECM.</span></span>
+</div>
+</div>
+<h2 class="sec-title">Causa más probable</h2>
+<div class="tablewrap" style="padding:20px 24px">
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+<span style="font-family:var(--mono);font-size:.76rem;background:var(--amber);color:#1b1500;padding:3px 10px;border-radius:3px;font-weight:700">Posición #1</span>
+<b lang="en" style="font-family:var(--disp);font-size:1.3rem;color:#fff;text-transform:uppercase" translate="no">Inspect fuel presence sensor connector</b>
+<span class="chip" style="background:#4caf6d25;color:#4caf6d;border:1px solid #4caf6d" translate="no">Easy DIY</span>
+</div>
+<p style="margin-top:12px;font-size:.93rem">El rango de costes, las horas de mano de obra, el procedimiento paso a paso y las 2 causas clasificadas restantes de este código están en el conjunto de datos con licencia.</p>
+</div>
+<section class="related"><h2>Códigos relacionados, misma familia de fallas</h2><ul><li><a href="/es/landing/P2AAD" translate="no">P2AAD · Diesel Fuel Presence Sensor Circuit Range/Pe</a> <span class="related-why">— misma familia de fallas</span></li><li><a href="/es/landing/P2AAE" translate="no">P2AAE · Diesel Fuel Presence Sensor Circuit Low</a> <span class="related-why">— misma familia de fallas</span></li><li><a href="/es/landing/P2AAF" translate="no">P2AAF · Diesel Fuel Presence Sensor Circuit High</a> <span class="related-why">— misma familia de fallas</span></li></ul></section><p style="margin-top:12px;font-size:.93rem">Familia completa: <a href="/es/landing/family-diesel-fuel-presence-sensor-circuit" translate="no">Diesel Fuel Presence Sensor Circuit</a></p>
+<div class="gate">
+<h3>Lo que esta página no muestra</h3>
+<p>Esta página publica el mecanismo de la falla y el índice de códigos. El conjunto de datos con licencia añade, para cada uno de los 15.886 códigos, el conjunto completo de reparaciones ordenadas por probabilidad (56.561 procedimientos en total) con los campos que aquí se omiten deliberadamente:</p>
+<ul>
+<li>Reparaciones clasificadas 2..n, no solo la causa más probable</li>
+<li>Rangos de coste de piezas de recambio en USD (<code>est_parts_cost_min/max_usd</code>)</li>
+<li>Estimaciones de horas de mano de obra profesional (<code>est_labor_hours</code>)</li>
+<li>Instrucciones de diagnóstico y reparación paso a paso</li>
+<li>Correspondencias de repuestos y búsquedas en catálogos</li>
+<li>6.637 códigos OEM específicos de fabricante en 32 marcas (nivel $149)</li>
+</ul>
+</div>
+<div class="cta-footer">
+<h3>¿Necesitas los 15.886 códigos como datos?</h3>
+<p>CSV delimitado por barras verticales, Apache Parquet y una base de datos relacional SQLite, con derechos de uso comercial y descarga inmediata. Pensado para herramientas de escaneo, software de taller e investigación, no recopilado página web a página web.</p>
+<a class="btn-amber" href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403">Licenciar el dataset completo · $49</a>
+<p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 solo SAE · $149 OEM Complete (6.637 códigos de fabricante, 32 marcas) · pago único · <a href="/es/#licensing">comparar niveles</a></p>
+</div>
+</div>
+<footer><div class="wrap"><span>MechanicDB · La base de datos de diagnóstico y reparación OBD-II · ODbL v1.0 / licencia comercial</span>
+<div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Parte del catálogo DataEngineered →</a> · <a href="https://dataengineered.io/about">Acerca de</a> · <a href="https://dataengineered.io/terms">Términos</a> · <a href="https://dataengineered.io/privacy">Privacidad</a> · <a href="https://dataengineered.io/refund-policy">Política de reembolso</a></div></div><!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Idioma" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><a href="/landing/P2AAC" hreflang="en" lang="en" data-i18n-lang="en">English</a> · <span aria-current="true" style="font-weight:600">Español</span> · <a href="/de/landing/P2AAC" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a> · <a href="/fr/landing/P2AAC" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <a href="/pt-br/landing/P2AAC" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></nav><!-- /i18n:switcher --></footer>
+</body>
+</html>

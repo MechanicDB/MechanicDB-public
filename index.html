@@ -8,8 +8,20 @@
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="2VE0Ll5xPaIkGjSTkvTenDhcKRLJGPFgVqekvGOIw-4" />
 <link rel="canonical" href="https://mechanicdb.dataengineered.io/">
+<!-- i18n:alternates -->
 <link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/">
+<link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/">
+<link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/">
+<link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/">
+<link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/">
 <link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<script src="/i18n/i18n.js?v=1" defer></script>
+<!-- /i18n:alternates -->
 
 <meta property="og:title" content="MechanicDB — The OBD-II Diagnostic &amp; Repair Database">
 <meta property="og:description" content="15,886 verified OBD-II trouble codes mapped to 56,561 ranked repair procedures with DIY difficulty tiers, parts costs, and step-by-step instructions.">
@@ -509,18 +521,18 @@
       <p>Codes that share one detection mechanism and one repair path are grouped into a single
       authored fault family &mdash; 615 of them across 9,249 SAE codes. The largest:</p>
       <div class="fam-links">
-        <a href="/landing/family-lost-comm-powertrain-module">Lost Comm Powertrain Module <b>199</b></a>
-        <a href="/landing/family-pressure-control-solenoid-circuit">Pressure Control Solenoid Circuit <b>158</b></a>
-        <a href="/landing/family-fuel-injector-circuit">Fuel Injector Circuit <b>155</b></a>
-        <a href="/landing/family-hv-battery-voltage-sense">HV Battery Voltage Sense <b>131</b></a>
-        <a href="/landing/family-vvt-actuator-circuit">VVT Actuator Circuit <b>129</b></a>
-        <a href="/landing/family-shift-solenoid-circuit">Shift Solenoid Circuit <b>99</b></a>
-        <a href="/landing/family-hv-battery-temperature-sensor">HV Battery Temperature Sensor <b>88</b></a>
-        <a href="/landing/family-ignition-coil-control-circuit">Ignition Coil Control Circuit <b>87</b></a>
-        <a href="/landing/family-drive-motor-phase-current-circuit">Drive Motor Phase Current Circuit <b>86</b></a>
-        <a href="/landing/family-software-incompatibility-module">Software Incompatibility Module <b>80</b></a>
-        <a href="/landing/family-invalid-data-powertrain-module">Invalid Data Powertrain Module <b>79</b></a>
-        <a href="/landing/family-vehicle-comm-bus-lettered-fault">Vehicle Comm Bus Lettered Fault <b>76</b></a>
+        <a href="/landing/family-lost-comm-powertrain-module"><span translate="no">Lost Comm Powertrain Module</span> <b>199</b></a>
+        <a href="/landing/family-pressure-control-solenoid-circuit"><span translate="no">Pressure Control Solenoid Circuit</span> <b>158</b></a>
+        <a href="/landing/family-fuel-injector-circuit"><span translate="no">Fuel Injector Circuit</span> <b>155</b></a>
+        <a href="/landing/family-hv-battery-voltage-sense"><span translate="no">HV Battery Voltage Sense</span> <b>131</b></a>
+        <a href="/landing/family-vvt-actuator-circuit"><span translate="no">VVT Actuator Circuit</span> <b>129</b></a>
+        <a href="/landing/family-shift-solenoid-circuit"><span translate="no">Shift Solenoid Circuit</span> <b>99</b></a>
+        <a href="/landing/family-hv-battery-temperature-sensor"><span translate="no">HV Battery Temperature Sensor</span> <b>88</b></a>
+        <a href="/landing/family-ignition-coil-control-circuit"><span translate="no">Ignition Coil Control Circuit</span> <b>87</b></a>
+        <a href="/landing/family-drive-motor-phase-current-circuit"><span translate="no">Drive Motor Phase Current Circuit</span> <b>86</b></a>
+        <a href="/landing/family-software-incompatibility-module"><span translate="no">Software Incompatibility Module</span> <b>80</b></a>
+        <a href="/landing/family-invalid-data-powertrain-module"><span translate="no">Invalid Data Powertrain Module</span> <b>79</b></a>
+        <a href="/landing/family-vehicle-comm-bus-lettered-fault"><span translate="no">Vehicle Comm Bus Lettered Fault</span> <b>76</b></a>
       </div>
       <p class="fam-more"><a href="/landing/families">See all 615 fault families &rarr;</a></p>
     </div>
@@ -535,28 +547,28 @@
     <p class="sec-lede">Normalized for databases, pre-joined for notebooks. Every code carries 3–5 fixes ranked by real-world likelihood; every fix maps to purchasable aftermarket parts.</p>
     <div class="schema-strip">
       <div class="table-card">
-        <h3>dtc_codes</h3>
+        <h3 translate="no">dtc_codes</h3>
         <div class="rows">15,886 rows</div>
         <p>The code registry: definition, system category, OEM flag/make, fault family, and a code-specific technical explanation.</p>
-        <ul><li>dtc_code · PK chain start</li><li>is_oem_specific / oem_make</li><li>fault_family</li><li>detailed_technical_explanation</li></ul>
+        <ul><li><span translate="no">dtc_code</span> · PK chain start</li><li translate="no">is_oem_specific / oem_make</li><li translate="no">fault_family</li><li translate="no">detailed_technical_explanation</li></ul>
       </div>
       <div class="table-card">
-        <h3>diagnostic_fixes</h3>
+        <h3 translate="no">diagnostic_fixes</h3>
         <div class="rows">56,561 rows</div>
         <p>Ranked repair procedures with difficulty tier, parts-cost range, labor hours, and step-by-step instructions.</p>
-        <ul><li>probability_rank 1–5</li><li>difficulty_level</li><li>est_parts_cost min/max USD</li></ul>
+        <ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
       </div>
       <div class="table-card">
-        <h3>replacement_parts</h3>
+        <h3 translate="no">replacement_parts</h3>
         <div class="rows">75,055 rows</div>
         <p>Aftermarket part names per fix, with catalog search URLs derived from the part name.</p>
-        <ul><li>part_name</li><li>amazon_search_query</li></ul>
+        <ul><li translate="no">part_name</li><li translate="no">amazon_search_query</li></ul>
       </div>
       <div class="table-card">
-        <h3>dtc_fixes_joined</h3>
+        <h3 translate="no">dtc_fixes_joined</h3>
         <div class="rows">56,561 rows</div>
         <p>The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.</p>
-        <ul><li>all 16 columns</li><li>one read_csv / read_parquet</li></ul>
+        <ul><li>all 16 columns</li><li>one <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
       </div>
     </div>
     <p class="join-note">join chain: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
@@ -584,7 +596,7 @@
         <b>not even</b> — it is strongest on US-market brands, and some marques are thin. We publish
         the distribution so you can check the makes you care about before buying rather than after.
         The <b>9,249</b> SAE-universal codes apply to every vehicle regardless of make.</p>
-      <div class="cov-grid">
+      <div class="cov-grid" translate="no">
           <div class="cov-cell"><span>Volkswagen</span><b>528</b></div>
           <div class="cov-cell"><span>Ford</span><b>413</b></div>
           <div class="cov-cell"><span>Lincoln</span><b>413</b></div>
@@ -676,7 +688,7 @@
         <a class="btn btn-ghost" href="https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h">Buy the bundle · Instant download</a>
       </div>
     </div>
-    <p class="join-note">Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · dataset delivered instantly after payment.<br>Need a company invoice, shop software integration, or custom API access? <a href="#supportModal" id="openSupportModalBtn">Open Diagnostic &amp; Licensing Support Modal</a> · or email <b style="user-select:all;font-weight:600">mechanicdb@dataengineered.io</b></p>
+    <p class="join-note">Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · dataset delivered instantly after payment.<br>Need a company invoice, shop software integration, or custom API access? <a href="#supportModal" id="openSupportModalBtn">Open Diagnostic &amp; Licensing Support Modal</a> · or email <b translate="no" style="user-select:all;font-weight:600">mechanicdb@dataengineered.io</b></p>
   </div>
 </section>
 
@@ -761,7 +773,7 @@
           <li><a href="https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database">Kaggle dataset</a></li>
           <li><a href="https://github.com/MechanicDB/MechanicDB-public/blob/main/SOURCES.md">Full provenance (SOURCES.md)</a></li>
           <li><a href="https://github.com/MechanicDB/MechanicDB-public/issues">Licensing &amp; support — open an issue</a></li>
-          <li><a href="#supportModal" class="js-open-support">Licensing by email — <span style="user-select:all">mechanicdb@dataengineered.io</span></a></li>
+          <li><a href="#supportModal" class="js-open-support">Licensing by email — <span translate="no" style="user-select:all">mechanicdb@dataengineered.io</span></a></li>
         </ul>
       </div>
     </div>
@@ -780,11 +792,34 @@
     <span>built by a deterministic, test-gated pipeline</span>
   </div>
 <div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Part of the DataEngineered catalog →</a> · <a href="https://dataengineered.io/about">About</a> · <a href="https://dataengineered.io/terms">Terms</a> · <a href="https://dataengineered.io/privacy">Privacy</a> · <a href="https://dataengineered.io/refund-policy">Refund policy</a></div>
-</footer>
+<!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Language" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><span aria-current="true" style="font-weight:600">English</span> · <a href="/es/" hreflang="es" lang="es" data-i18n-lang="es">Español</a> · <a href="/de/" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a> · <a href="/fr/" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></nav><!-- /i18n:switcher --></footer>
 
+<script type="application/json" id="i18n-strings" data-i18n>
+{
+  "system": "System",
+  "sae_standard": "SAE standard",
+  "sae_extended": "SAE extended",
+  "assignment_block": "Assignment block",
+  "fault_index": "Fault index",
+  "p_subsystems": {
+    "1": "Fuel & air metering",
+    "2": "Injector circuit",
+    "3": "Ignition / misfire",
+    "4": "Auxiliary emissions",
+    "5": "Speed & idle control",
+    "6": "Computer circuits",
+    "7": "Transmission"
+  },
+  "sending": "Transmitting Inquiry...",
+  "send": "Send Inquiry",
+  "sent": "Inquiry successfully delivered! A database engineer will respond within 4 hours.",
+  "send_failed": "We could not send this automatically. Please write to mechanicdb@dataengineered.io with your inquiry — we reply within 1 business day."
+}
+</script>
 <script>
 (function () {
   'use strict';
+  var I18N = JSON.parse(document.getElementById('i18n-strings').textContent);
   /* Real rows from samples/dtc_fixes_joined.csv (v1.0). */
   var DATA = {
     "P0420": { desc: "Catalyst System Efficiency Below Threshold Bank 1", family: "catalyst_efficiency_below_threshold",
@@ -830,9 +865,10 @@
   };
 
   var SYSTEMS = { P: "Powertrain", C: "Chassis", B: "Body", U: "Network" };
-  var P_SUBSYS = { "1": "Fuel & air metering", "2": "Injector circuit", "3": "Ignition / misfire",
-                   "4": "Auxiliary emissions", "5": "Speed & idle control", "6": "Computer circuits",
-                   "7": "Transmission", "8": "Transmission", "9": "Transmission" };
+  var S = I18N.p_subsystems;
+  var P_SUBSYS = { "1": S["1"], "2": S["2"], "3": S["3"],
+                   "4": S["4"], "5": S["5"], "6": S["6"],
+                   "7": S["7"], "8": S["7"], "9": S["7"] };
 
   var picker = document.getElementById('picker');
   var digitsEl = document.getElementById('digits');
@@ -846,14 +882,14 @@
   }
 
   function anatomy(code) {
-    var sys = SYSTEMS[code[0]] || 'System';
-    var std = code[1] === '0' ? 'SAE standard' : 'SAE extended';
-    var sub = (code[0] === 'P' && code[1] === '0' && P_SUBSYS[code[2]]) ? P_SUBSYS[code[2]] : 'Assignment block';
+    var sys = SYSTEMS[code[0]] || I18N.system;
+    var std = code[1] === '0' ? I18N.sae_standard : I18N.sae_extended;
+    var sub = (code[0] === 'P' && code[1] === '0' && P_SUBSYS[code[2]]) ? P_SUBSYS[code[2]] : I18N.assignment_block;
     return [
       { c: code[0], label: sys },
       { c: code[1], label: std },
       { c: code[2], label: sub },
-      { c: code.slice(3), label: 'Fault index', span: true }
+      { c: code.slice(3), label: I18N.fault_index, span: true }
     ];
   }
 
@@ -944,7 +980,7 @@
       e.preventDefault();
       if (submitSupportBtn) {
         submitSupportBtn.disabled = true;
-        submitSupportBtn.textContent = 'Transmitting Inquiry...';
+        submitSupportBtn.textContent = I18N.sending;
       }
       if (supportStatus) {
         supportStatus.className = 'form-status';
@@ -975,13 +1011,13 @@
         if (!data || data.success !== true) throw new Error('Form provider did not confirm delivery');
         if (supportStatus) {
           supportStatus.className = 'form-status success';
-          supportStatus.textContent = 'Inquiry successfully delivered! A database engineer will respond within 4 hours.';
+          supportStatus.textContent = I18N.sent;
           supportStatus.style.display = 'block';
         }
         supportForm.reset();
         if (submitSupportBtn) {
           submitSupportBtn.disabled = false;
-          submitSupportBtn.textContent = 'Send Inquiry';
+          submitSupportBtn.textContent = I18N.send;
         }
       })
       .catch(function(err) {
@@ -990,14 +1026,14 @@
         if (supportStatus) {
           supportStatus.className = 'form-status success';
           supportStatus.className = 'form-status';
-          supportStatus.textContent = 'We could not send this automatically. Please write to mechanicdb@dataengineered.io with your inquiry — we reply within 1 business day.';
+          supportStatus.textContent = I18N.send_failed;
           supportStatus.style.display = 'block';
         }
 
         setTimeout(function() {
           if (submitSupportBtn) {
             submitSupportBtn.disabled = false;
-            submitSupportBtn.textContent = 'Send Inquiry';
+            submitSupportBtn.textContent = I18N.send;
           }
         }, 1200);
       });
