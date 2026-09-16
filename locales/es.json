@@ -1595,6 +1595,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e5124b41a6cc9140": {
+  "src": "Let us know target platforms, scan tool models, or billing requirements...",
+  "t": "Indícanos plataformas objetivo, modelos de herramientas de diagnóstico o requisitos de facturación...",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
  "e53b0cc154ad009c": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most…",
   "t": "Código OBD-II {0}: {1}. Qué detecta el módulo {2}, la…",

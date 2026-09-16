@@ -372,7 +372,11 @@ def collect_segments(soup):
     segs, jsonld_docs = [], []
 
     def in_skip(tag):
-        for p in [tag] + list(tag.parents):
+        # a <textarea>'s *content* is user input (skipped), but its placeholder/title/aria
+        # attributes are site copy — so SKIP_TAGS applies to the tag itself except textarea
+        if notranslate(tag) or (tag.name in SKIP_TAGS and tag.name != "textarea"):
+            return True
+        for p in tag.parents:
             if isinstance(p, Tag) and (p.name in SKIP_TAGS or notranslate(p)):
                 return True
         return False
