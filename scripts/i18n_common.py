@@ -512,7 +512,7 @@ def localize_numbers_in_text(s, loc):
 # Localized pages only: German/French/Spanish text is longer; let table cells and headings
 # wrap instead of pushing the layout wider than a phone screen. Hyphenation follows <html lang>.
 LOCALIZED_CSS = ("<style>th,td{overflow-wrap:anywhere;hyphens:auto}"
-                 "h1,h2,h3,h4,button,.btn{overflow-wrap:break-word;hyphens:auto}</style>")
+                 "h1,h2,h3,h4,button,.btn{overflow-wrap:break-word}</style>")
 
 
 def render_pattern(soup, pattern, mapping, loc):
