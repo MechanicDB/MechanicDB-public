@@ -253,6 +253,8 @@
   nav.bar-nav { display: flex; gap: 22px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; }
   nav.bar-nav a { color: var(--trace); }
   nav.bar-nav a:hover { color: var(--amber); text-decoration: none; }
+  /* phones: the section links wrap instead of widening the page */
+  @media (max-width: 560px) { nav.bar-nav { flex-wrap: wrap; align-items: center; gap: 10px 18px; } }
 
   /* ── section stamps ──────────────────────── */
   .stamp {
