@@ -1,0 +1,22 @@
+{
+  "base_url": "https://mechanicdb.dataengineered.io",
+  "locales": [
+    "es",
+    "de",
+    "fr",
+    "pt-br"
+  ],
+  "include": [
+    "index.html",
+    "obd2-dtc-database.html",
+    "404.html",
+    "landing/*.html"
+  ],
+  "exclude": [
+    "assets/*.html"
+  ],
+  "not_found": "404.html",
+  "sitemap": "sitemap.xml",
+  "min_coverage": 0.9,
+  "notranslate": []
+}

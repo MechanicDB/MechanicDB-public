@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MechanicDB — 15.886 códigos OBD-II y reparaciones</title>
+<meta content="15.886 códigos de falla OBD-II verificados asociados a 56.561 reparaciones clasificadas con niveles de dificultad y estimación de costes. CSV, Parquet, SQLite." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="2VE0Ll5xPaIkGjSTkvTenDhcKRLJGPFgVqekvGOIw-4" name="google-site-verification"/>
+<link href="https://mechanicdb.dataengineered.io/es/" rel="canonical"/>
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/">
+<link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/">
+<link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/">
+<link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/">
+<link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/">
+<style>th,td{overflow-wrap:anywhere;hyphens:auto}h1,h2,h3,h4,button,.btn{overflow-wrap:break-word}</style>
+<style>.i18n-menu{position:relative;display:inline-block;align-self:center;font-size:.85rem;line-height:1;font-weight:500;text-transform:none;letter-spacing:normal}.i18n-menu.i18n-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .65rem;border:1px solid currentColor;border-color:color-mix(in srgb,currentColor 40%,transparent);border-radius:999px;white-space:nowrap;user-select:none;color:inherit;background:transparent}.i18n-menu>summary::-webkit-details-marker{display:none}.i18n-menu>summary:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}.i18n-menu.i18n-menu>ul{display:block;position:absolute;right:0;top:calc(100% + 6px);z-index:2147482000;min-width:10rem;margin:0;padding:.35rem;list-style:none;background:#111827;border:1px solid #374151;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.35);text-align:left}.i18n-menu.i18n-menu li{display:block;margin:0;padding:0;list-style:none}.i18n-menu.i18n-menu li>a,.i18n-menu.i18n-menu li>span{display:block;padding:.5rem .75rem;border-radius:6px;color:#f9fafb;background:transparent;text-decoration:none;white-space:nowrap;font-size:.9rem;font-weight:400;line-height:1.2;border:0;box-shadow:none}.i18n-menu.i18n-menu li>a:hover,.i18n-menu.i18n-menu li>a:focus-visible{background:#1f2937;color:#fff}.i18n-menu.i18n-menu li>span{font-weight:600;color:#93c5fd}.i18n-menu--row{margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row){margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row)+.i18n-menu--row{margin-left:.75rem}.i18n-menu--float{position:absolute;top:14px;right:16px;z-index:2147481000;color:#e5e7eb}</style>
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<script src="/i18n/i18n.js?v=5" defer></script>
+<!-- /i18n:alternates -->
+<meta content="MechanicDB — La base de datos de diagnóstico y reparación OBD-II" property="og:title"/>
+<meta content="15.886 códigos de falla OBD-II verificados asociados a 56.561 procedimientos de reparación clasificados, con niveles de dificultad, costes de piezas y pasos detallados." property="og:description"/>
+<meta content="https://mechanicdb.dataengineered.io/es/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="https://mechanicdb.dataengineered.io/assets/kaggle-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://mechanicdb.dataengineered.io/assets/kaggle-cover.png" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "MechanicDB: base de datos automotriz de diagnóstico y reparación OBD-II",
+  "description": "Conjunto de datos integral de diagnóstico automotriz que asocia 15.886 códigos de falla OBD-II verificados de 32 marcas de vehículos a 56.561 procedimientos de reparación clasificados, con valoraciones de dificultad DIY y estimaciones de costes de mano de obra y piezas.",
+  "url": "https://mechanicdb.dataengineered.io/es/",
+  "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "base de datos OBD-II",
+    "códigos de diagnóstico de problemas",
+    "instrucciones de reparación de automóviles",
+    "SAE J2012",
+    "diagnóstico del testigo de avería del motor"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "MechanicDB",
+    "url": "https://mechanicdb.dataengineered.io/es/"
+  },
+  "variableMeasured": [
+    "dtc_code",
+    "system_category",
+    "is_oem_specific",
+    "oem_make",
+    "fault_family",
+    "probability_rank",
+    "difficulty_level",
+    "est_parts_cost_min_usd",
+    "est_parts_cost_max_usd",
+    "est_labor_hours"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.csv"
+    }
+  ],
+  "inLanguage": "es"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo se estructura cada código de diagnóstico OBD-II dentro de MechanicDB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada código sigue el formato SAE J2012 de 5 caracteres, en el que el carácter 1 designa el sistema (P=tren motriz, C=chasis, B=carrocería, U=red), el carácter 2 indica si es estándar SAE ('0') o definido por el fabricante ('1'), el carácter 3 designa el subsistema y los caracteres 4-5 representan el índice específico de la falla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué criterios de seguridad determinan si un procedimiento de reparación se clasifica como Easy DIY o Professional Required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los procedimientos que implican redes de tracción de alta tensión de híbridos/eléctricos (>60V), sistemas de retención suplementarios (airbags/pretensores pirotécnicos) o revisiones internas de motor/transmisión se clasifican estrictamente como 'Professional Required', con pasos obligatorios de bloqueo y verificación de ausencia de tensión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo integrar MechanicDB en herramientas de escaneo comerciales o en software de gestión de talleres?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Aunque la muestra de 90 códigos está disponible bajo ODbL v1.0, el conjunto de datos completo de 15.886 códigos y 56.561 reparaciones se ofrece con una licencia comercial sin restricciones, entregado como CSV planos delimitados por barras verticales, tablas Apache Parquet y una base de datos relacional SQLite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cubre MechanicDB los códigos OEM específicos de fabricante más allá del rango genérico SAE P0?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Nuestro nivel OEM Complete asocia 6.637 códigos de falla controlados por el fabricante en 32 marcas principales, entre ellas Ford, GM, Toyota, BMW, Honda, Mercedes-Benz y Volkswagen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Necesito SAE J2012DA, pero la licencia supera mi presupuesto. ¿Es MechanicDB una alternativa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MechanicDB no es una copia de SAE J2012 ni de su Digital Annex (J2012DA) y no puede revenderse como tal: estos se licencian por puesto y su redistribución está prohibida. Si necesitas el documento normativo o sus Failure Type Bytes, las vías legítimas de menor coste son la suscripción a SAE Digital Library de la biblioteca de ingeniería de una universidad, el acceso temporal o por suscripción a través de Techstreet, ANSI Webstore o Accuris, el descuento para miembros de SAE, o la norma armonizada ISO 15031-6 de un organismo nacional de normalización. Si lo que realmente necesitas es la consulta factual de código a significado y no la norma en sí, eso es lo que vende MechanicDB para $49: 9.249 códigos del rango SAE (6.637 códigos específicos de fabricante en el nivel $149), con descripciones, causas probables clasificadas y procedimientos de reparación, recopilado a partir de una fuente pública con licencia MIT sin reproducir texto de ningún documento SAE. No incluye Failure Type Bytes y no es una referencia normativa citable."
+      }
+    }
+  ],
+  "inLanguage": "es"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Principales categorías de códigos de diagnóstico OBD-II y monografías",
+  "description": "Principales sistemas automotrices OBD-II y monografías de referencia diagnóstica.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Sistema de tren motriz (códigos P)",
+      "url": "https://mechanicdb.dataengineered.io/es/landing/powertrain"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sistema de chasis y ABS (códigos C)",
+      "url": "https://mechanicdb.dataengineered.io/es/landing/chassis"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Código P0420 (eficiencia del catalizador por debajo del umbral)",
+      "url": "https://mechanicdb.dataengineered.io/es/landing/P0420"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Código C0035 (sensor de velocidad de la rueda delantera derecha)",
+      "url": "https://mechanicdb.dataengineered.io/es/landing/C0035"
+    }
+  ],
+  "inLanguage": "es"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://mechanicdb.dataengineered.io/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Decodificador de diagnóstico",
+      "item": "https://mechanicdb.dataengineered.io/es/#interactive"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Licencias comerciales",
+      "item": "https://mechanicdb.dataengineered.io/es/#licensing"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/></noscript>
+<style>
+  :root {
+    --steel: #1b1e22;        /* tool-chest graphite */
+    --steel-2: #24282e;      /* raised panel */
+    --steel-3: #2e333a;      /* panel edge */
+    --paper: #f1efe8;        /* laminated spec sheet */
+    --paper-dim: #e6e3d9;
+    --ink: #22252a;          /* text on paper */
+    --ink-soft: #5a5f66;
+    --trace: #9aa3ad;        /* muted text on steel */
+    --amber: #ffb000;        /* MIL lamp */
+    --amber-deep: #cc8a00;
+    --easy: #4caf6d;         /* data-encoded difficulty */
+    --mod: #e8a13d;
+    --pro: #d65454;
+    --mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    --disp: 'Saira Condensed', 'Arial Narrow', sans-serif;
+    --body: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--steel);
+    color: var(--trace);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--amber); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── top bar ─────────────────────────────── */
+  header.bar {
+    border-bottom: 1px solid var(--steel-3);
+    padding: 18px 0;
+  }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .wordmark {
+    font-family: var(--disp); font-weight: 700; font-size: 1.35rem;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #fff;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mil {
+    width: 22px; height: 16px; display: inline-block; flex: none;
+    background: var(--amber);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path d="M8 2h8l3 4h3v8h-3l-2 2H7l-2-2H2V6h3l3-4zm4 3a4 4 0 100 8 4 4 0 000-8z"/></svg>') center/contain no-repeat;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path d="M8 2h8l3 4h3v8h-3l-2 2H7l-2-2H2V6h3l3-4zm4 3a4 4 0 100 8 4 4 0 000-8z"/></svg>') center/contain no-repeat;
+  }
+  nav.bar-nav { display: flex; gap: 22px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; }
+  nav.bar-nav a { color: var(--trace); }
+  nav.bar-nav a:hover { color: var(--amber); text-decoration: none; }
+
+  /* ── section stamps ──────────────────────── */
+  .stamp {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber);
+    border: 1px solid var(--steel-3); padding: 6px 12px; border-radius: 3px;
+    background: var(--steel-2);
+  }
+  .stamp::before { content: ''; width: 7px; height: 7px; background: var(--amber); border-radius: 50%; }
+
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--steel-3); }
+  h2.sec-title {
+    font-family: var(--disp); font-weight: 600; font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    text-transform: uppercase; letter-spacing: 0.04em; color: #fff; margin: 18px 0 10px;
+  }
+  .sec-lede { max-width: 62ch; color: var(--trace); margin-bottom: 36px; }
+
+  /* ── hero ────────────────────────────────── */
+  .hero { padding: 72px 0 64px; }
+  .hero h1 {
+    font-family: var(--disp); font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.02; text-transform: uppercase; letter-spacing: 0.02em;
+    color: #fff; max-width: 21ch; margin: 22px 0 18px;
+  }
+  .hero h1 em { font-style: normal; color: var(--amber); }
+  .hero p.lede { max-width: 58ch; font-size: 1.06rem; margin-bottom: 28px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+  .btn {
+    font-family: var(--mono); font-size: 0.85rem; font-weight: 600;
+    padding: 12px 22px; border-radius: 4px; border: 1px solid transparent;
+    cursor: pointer; display: inline-block;
+  }
+  .btn-amber { background: var(--amber); color: #1b1500; }
+  .btn-amber:hover { background: #ffc23d; text-decoration: none; }
+  .btn-ghost { border-color: var(--steel-3); color: var(--trace); background: transparent; }
+  .btn-ghost:hover { border-color: var(--amber); color: var(--amber); text-decoration: none; }
+
+  /* ── decoder (signature) ─────────────────── */
+  .decoder {
+    background: var(--steel-2);
+    border: 1px solid var(--steel-3);
+    border-radius: 8px;
+    padding: 26px 26px 30px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  }
+  .decoder-head {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .decoder-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--trace); }
+  .code-picker { display: flex; gap: 6px; flex-wrap: wrap; }
+  .code-picker button {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+    background: transparent; border: 1px solid var(--steel-3); color: var(--trace);
+    padding: 5px 10px; border-radius: 3px; cursor: pointer;
+  }
+  .code-picker button:hover { border-color: var(--amber); color: var(--amber); }
+  .code-picker button[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: #1b1500; font-weight: 600; }
+
+  .digits { display: flex; gap: 8px; margin-bottom: 6px; }
+  .digit {
+    flex: 1; min-width: 0; text-align: center;
+    background: var(--steel);
+    border: 1px solid var(--steel-3); border-bottom: 3px solid var(--amber-deep);
+    border-radius: 5px;
+    font-family: var(--mono); font-weight: 600;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    color: var(--amber); padding: 14px 0 10px;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .digit.flip { opacity: 0; transform: translateY(6px); }
+  .digit-notes { display: flex; gap: 8px; margin-bottom: 24px; }
+  .digit-note {
+    flex: 1; min-width: 0; text-align: center;
+    font-family: var(--mono); font-size: 0.62rem; line-height: 1.35;
+    letter-spacing: 0.03em; text-transform: uppercase; color: var(--trace);
+    padding-top: 8px; border-top: 1px dashed var(--steel-3);
+  }
+  .digit-note b { display: block; color: #d7dce2; font-weight: 600; }
+  .note-span-2 { flex: 2; }
+
+  .readout {
+    background: var(--paper); color: var(--ink);
+    border-radius: 6px; padding: 20px 22px;
+  }
+  .readout-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .readout h3 { font-family: var(--disp); font-weight: 600; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .fam-tag { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); background: var(--paper-dim); padding: 3px 8px; border-radius: 3px; }
+  .readout p.explain { font-size: 0.88rem; color: var(--ink-soft); margin: 10px 0 16px; }
+  .fix-row {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 10px 14px; align-items: center;
+    padding: 9px 0; border-top: 1px solid var(--paper-dim);
+    font-size: 0.88rem;
+  }
+  .rank { font-family: var(--mono); font-size: 0.7rem; font-weight: 600; color: var(--ink-soft); }
+  .fix-title { color: var(--ink); font-weight: 500; }
+  .fix-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); white-space: nowrap; }
+  .chip {
+    display: inline-block; font-family: var(--mono); font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase; color: #fff;
+    padding: 2px 7px; border-radius: 3px; margin-right: 8px; vertical-align: 1px;
+  }
+  .chip-easy { background: var(--easy); }
+  .chip-mod { background: var(--mod); color: #2a1d00; }
+  .chip-pro { background: var(--pro); }
+  .readout-foot { margin-top: 14px; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); }
+
+  /* ── schema (what's inside) ──────────────── */
+  .schema-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .table-card {
+    background: var(--paper); color: var(--ink); border-radius: 6px; padding: 20px;
+    position: relative;
+  }
+  .table-card h3 { font-family: var(--mono); font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
+  .table-card .rows { font-family: var(--mono); font-size: 0.7rem; color: var(--amber-deep); font-weight: 600; margin-bottom: 10px; }
+  .table-card p { font-size: 0.82rem; color: var(--ink-soft); }
+  .table-card ul { list-style: none; margin-top: 12px; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-soft); }
+  .table-card li { padding: 3px 0; border-top: 1px dashed var(--paper-dim); }
+  .join-note { margin-top: 18px; font-family: var(--mono); font-size: 0.74rem; color: var(--trace); }
+  .join-note code { color: var(--amber); }
+
+  /* ── OEM coverage by make ────────────────── */
+  .cov-title {
+    font-family: var(--disp); font-size: 1.05rem; letter-spacing: .04em;
+    text-transform: uppercase; margin: 34px 0 8px;
+  }
+  .cov-note { color: var(--trace); font-size: .88rem; line-height: 1.65; max-width: 68ch; margin: 0 0 18px; }
+  .cov-grid {
+    display: grid; gap: 1px; background: var(--paper-dim);
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    border: 1px solid var(--paper-dim); border-radius: 6px; overflow: hidden;
+  }
+  .cov-cell {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    background: var(--paper); color: var(--ink); padding: 10px 14px;
+  }
+  .cov-cell span { font-size: .86rem; }
+  .cov-cell b { font-family: var(--mono); font-size: .82rem; color: var(--amber-deep); }
+
+  /* ── specifications ──────────────────────── */
+  .spec-sheet {
+    background: var(--paper); color: var(--ink); border-radius: 6px;
+    overflow: hidden;
+  }
+  .spec-sheet table { width: 100%; border-collapse: collapse; }
+  .spec-sheet th, .spec-sheet td { text-align: left; padding: 13px 20px; border-bottom: 1px solid var(--paper-dim); vertical-align: top; }
+  .spec-sheet th {
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-soft); width: 34%;
+  }
+  .spec-sheet td { font-size: 0.92rem; }
+  .spec-sheet td b { font-family: var(--mono); color: var(--amber-deep); }
+  .spec-sheet tr:last-child th, .spec-sheet tr:last-child td { border-bottom: none; }
+
+  /* ── pricing ─────────────────────────────── */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tier {
+    background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px;
+    padding: 28px 26px; display: flex; flex-direction: column;
+  }
+  .tier.featured { background: var(--paper); color: var(--ink); border-color: var(--amber); border-width: 2px; }
+  .tier h3 { font-family: var(--disp); font-weight: 600; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.03em; color: #fff; }
+  .tier.featured h3 { color: var(--ink); }
+  .tier .price { font-family: var(--mono); font-size: 2rem; font-weight: 600; color: var(--amber); margin: 8px 0 2px; }
+  .tier.featured .price { color: var(--amber-deep); }
+  .tier .per { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--trace); margin-bottom: 18px; }
+  .tier.featured .per { color: var(--ink-soft); }
+  .tier ul { list-style: none; font-size: 0.88rem; flex: 1; margin-bottom: 22px; }
+  .tier li { padding: 6px 0 6px 22px; position: relative; }
+  .tier li::before { content: '›'; position: absolute; left: 4px; color: var(--amber); font-weight: 700; }
+  .tier.featured li { color: var(--ink-soft); }
+  .tier .btn { text-align: center; }
+
+  /* ── provenance / support ────────────────── */
+  .prov-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; }
+  .prov-grid h3 { font-family: var(--disp); font-size: 1.15rem; font-weight: 600; text-transform: uppercase; color: #fff; margin-bottom: 12px; }
+  .prov-grid p, .prov-grid li { font-size: 0.92rem; }
+  .prov-grid ul { list-style: none; }
+  .prov-grid li { padding: 7px 0; border-top: 1px solid var(--steel-3); font-family: var(--mono); font-size: 0.82rem; }
+  .safety {
+    margin-top: 30px; border: 1px solid var(--amber-deep); border-radius: 6px;
+    padding: 16px 20px; font-size: 0.85rem; color: var(--trace);
+    background: rgba(255, 176, 0, 0.05);
+  }
+  .safety b { color: var(--amber); }
+
+  footer {
+    border-top: 1px solid var(--steel-3); padding: 30px 0 44px;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--trace);
+    display: block;
+  }
+  .foot-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* ── responsive ──────────────────────────── */
+  @media (max-width: 880px) {
+    .schema-strip { grid-template-columns: repeat(2, 1fr); }
+    .tiers { grid-template-columns: 1fr; }
+    .prov-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    section { padding: 52px 0; }
+    .schema-strip { grid-template-columns: 1fr; }
+    .fix-row { grid-template-columns: auto 1fr; }
+    .fix-meta { grid-column: 2; }
+    .digit-note { font-size: 0.55rem; }
+  }
+
+  /* ── faq section & directory links ───────── */
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 28px; }
+  .faq-item { background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 6px; padding: 22px 24px; }
+  .faq-item h3 { font-family: var(--disp); font-size: 1.15rem; color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .faq-item p { font-size: 0.92rem; color: var(--trace); line-height: 1.55; }
+  .dir-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+  .dir-badge { background: var(--steel-3); color: #fff; padding: 6px 14px; border-radius: 4px; font-family: var(--mono); font-size: 0.8rem; border: 1px solid rgba(255,176,0,0.3); }
+  .dir-badge:hover { background: var(--amber); color: #1b1500; text-decoration: none; font-weight: 600; }
+  .dir-badge-lead { background: rgba(255,176,0,0.14); border-color: var(--amber); color: var(--amber); }
+
+  /* ── fault-family directory (hero) ───────── */
+  .fam-browse { margin-top: 26px; background: var(--steel-2); border: 1px solid var(--steel-3); border-left: 4px solid var(--amber); border-radius: 6px; padding: 22px 24px; }
+  .fam-browse h3 { font-family: var(--disp); font-size: 1.15rem; color: #fff; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 8px; }
+  .fam-browse > p { font-size: 0.9rem; color: var(--trace); line-height: 1.55; max-width: 76ch; }
+  .fam-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .fam-links a { font-family: var(--mono); font-size: 0.78rem; background: var(--steel); border: 1px solid var(--steel-3); padding: 5px 10px; border-radius: 4px; color: #d7dce2; }
+  .fam-links a:hover { border-color: var(--amber); color: var(--amber); text-decoration: none; }
+  .fam-links a b { color: var(--amber); font-weight: 600; margin-left: 4px; }
+  .fam-more { margin-top: 14px; font-family: var(--mono); font-size: 0.82rem; }
+
+  /* ── interactive support modal ───────────── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(4px); }
+  .modal-overlay.active { display: flex; }
+  .modal-box { background: var(--steel-2); border: 1px solid var(--amber); border-radius: 8px; width: 100%; max-width: 540px; padding: 30px; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.6); max-height: 90vh; overflow-y: auto; }
+  .modal-close { position: absolute; top: 16px; right: 20px; background: transparent; border: none; color: var(--trace); font-size: 1.5rem; cursor: pointer; }
+  .modal-close:hover { color: var(--amber); }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; color: #fff; margin-bottom: 6px; letter-spacing: 0.05em; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--steel); border: 1px solid var(--steel-3); border-radius: 4px; padding: 10px 14px; color: #fff; font-family: var(--body); font-size: 0.95rem; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--amber); outline: none; }
+  .form-status { margin-top: 14px; padding: 12px; border-radius: 4px; font-family: var(--mono); font-size: 0.82rem; display: none; }
+  .form-status.success { background: rgba(76,175,109,0.15); border: 1px solid var(--easy); color: #86e8a7; display: block; }
+  .form-status.error { background: rgba(214,84,84,0.15); border: 1px solid var(--pro); color: #ff9e9e; display: block; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "MechanicDB: conjunto de datos automotriz de diagnóstico y reparación OBD-II — Snapshot",
+  "description": "Conjunto de datos integral de diagnóstico automotriz que asocia 15.886 códigos de falla OBD-II verificados de 32 marcas de vehículos a 56.561 procedimientos de reparación clasificados, con valoraciones de dificultad DIY y estimaciones de costes de mano de obra y piezas.",
+  "image": "https://mechanicdb.dataengineered.io/assets/kaggle-cover.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "MechanicDB"
+  },
+  "category": "Software > Data & Databases",
+  "offers": {
+    "@type": "Offer",
+    "price": "49.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://mechanicdb.dataengineered.io/es/#licensing",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": [
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "AU"
+        }
+      ],
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
+}
+</script>
+</head>
+<body>
+<header class="bar">
+<div class="wrap bar-inner">
+<span class="wordmark"><span aria-hidden="true" class="mil"></span>MechanicDB</span>
+<nav aria-label="Secciones de la página" class="bar-nav">
+<a href="#inside">Esquema</a>
+<a href="#specs">Especificaciones</a>
+<a href="#licensing">Licencias</a>
+<a href="#provenance">Procedencia</a>
+<!-- i18n:header --><details class="i18n-menu i18n-menu--nav" translate="no"><summary aria-label="Idioma: Español" title="Idioma: Español"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>ES</span></summary><ul><li><a href="/" hreflang="en" lang="en" data-i18n-lang="en">English</a></li><li><span aria-current="true" lang="es">Español</span></li><li><a href="/de/" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></li></ul></details><!-- /i18n:header --></nav>
+</div>
+</header>
+<section class="hero">
+<div class="wrap">
+<span class="stamp">Sec. 00 · Referencia diagnóstica</span>
+<h1>Cada testigo de avería del motor, <em>decodificado y con su coste.</em></h1>
+<p class="lede">Pensado para apps OBD, firmware de herramientas de escaneo, copilotos mecánicos con IA y software de taller: 56.561 procedimientos de reparación clasificados, cada uno con una valoración de dificultad para hacerlo uno mismo, un rango de costes de piezas y una estimación de mano de obra, asociados a 15.886 códigos de falla OBD-II verificados (9.249 estándar SAE más 6.637 específicos de fabricante en 32 marcas). Las listas de códigos gratuitas se quedan en la definición; MechanicDB empieza ahí.</p>
+<div class="cta-row">
+<!-- BEGIN:buyer-link --><a class="btn btn-ghost" href="/es/obd2-dtc-database">Obtén la base de datos — CSV, Parquet, SQLite</a><!-- END:buyer-link -->
+<a class="btn btn-amber" href="#licensing">Licenciar el conjunto de datos completo</a>
+<a class="btn btn-ghost" href="https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip">Descarga la muestra gratuita de 90 códigos (ZIP)</a>
+</div>
+<p class="hero-price" style="font-family: var(--mono); font-size: 0.82rem; color: var(--trace); margin: -40px 0 48px;"><b style="color: var(--amber);">$49 SAE / $149 OEM</b> · pago único · descarga inmediata — para software de taller, hardware OBD y asistentes mecánicos con IA</p>
+<div class="decoder" id="decoder">
+<div class="decoder-head">
+<span class="decoder-title">Anatomía de un código — en vivo desde la muestra</span>
+<div aria-label="Elige un código de falla" class="code-picker" id="picker" role="group"></div>
+</div>
+<div aria-hidden="true" class="digits" id="digits"></div>
+<div class="digit-notes" id="digitNotes"></div>
+<div aria-live="polite" class="readout">
+<div class="readout-top">
+<h3 id="roTitle"></h3>
+<span class="fam-tag" id="roFam"></span>
+</div>
+<p class="explain" id="roExplain"></p>
+<div id="roFixes"></div>
+<div class="readout-foot">ordenado por probabilidad · coste de piezas en USD · mano de obra en horas de taller — se muestran 3 de las reparaciones clasificadas del código</div>
+</div>
+</div>
+<div aria-label="Categorías de diagnóstico" class="dir-links">
+<a class="dir-badge" href="/es/landing/powertrain">⚡ Tren motriz (códigos P)</a>
+<a class="dir-badge" href="/es/landing/chassis">🛑 Chasis y ABS (códigos C)</a>
+<a class="dir-badge" href="/es/landing/body">🚗 Carrocería y SRS (códigos B)</a>
+<a class="dir-badge" href="/es/landing/network">📡 Red CAN (códigos U)</a>
+<!-- BEGIN:fam-badge -->
+<a class="dir-badge dir-badge-lead" href="/es/landing/families">🧬 Las 615 familias de fallas</a>
+<!-- END:fam-badge -->
+</div>
+<!-- BEGIN:fam-browse -->
+<div aria-label="Directorio de familias de fallas" class="fam-browse">
+<h3>Explorar por familia de fallas</h3>
+<p>Los códigos que comparten un mismo mecanismo de detección y una misma vía de reparación se agrupan en una única familia de fallas redactada: 615 familias para 9.249 códigos SAE. Las más grandes:</p>
+<div class="fam-links">
+<a href="/es/landing/family-lost-comm-powertrain-module"><span translate="no">Lost Comm Powertrain Module</span> <b>199</b></a>
+<a href="/es/landing/family-pressure-control-solenoid-circuit"><span translate="no">Pressure Control Solenoid Circuit</span> <b>158</b></a>
+<a href="/es/landing/family-fuel-injector-circuit"><span translate="no">Fuel Injector Circuit</span> <b>155</b></a>
+<a href="/es/landing/family-hv-battery-voltage-sense"><span translate="no">HV Battery Voltage Sense</span> <b>131</b></a>
+<a href="/es/landing/family-vvt-actuator-circuit"><span translate="no">VVT Actuator Circuit</span> <b>129</b></a>
+<a href="/es/landing/family-shift-solenoid-circuit"><span translate="no">Shift Solenoid Circuit</span> <b>99</b></a>
+<a href="/es/landing/family-hv-battery-temperature-sensor"><span translate="no">HV Battery Temperature Sensor</span> <b>88</b></a>
+<a href="/es/landing/family-ignition-coil-control-circuit"><span translate="no">Ignition Coil Control Circuit</span> <b>87</b></a>
+<a href="/es/landing/family-drive-motor-phase-current-circuit"><span translate="no">Drive Motor Phase Current Circuit</span> <b>86</b></a>
+<a href="/es/landing/family-software-incompatibility-module"><span translate="no">Software Incompatibility Module</span> <b>80</b></a>
+<a href="/es/landing/family-invalid-data-powertrain-module"><span translate="no">Invalid Data Powertrain Module</span> <b>79</b></a>
+<a href="/es/landing/family-vehicle-comm-bus-lettered-fault"><span translate="no">Vehicle Comm Bus Lettered Fault</span> <b>76</b></a>
+</div>
+<p class="fam-more"><a href="/es/landing/families">Ver las 615 familias de fallas →</a></p>
+</div>
+<!-- END:fam-browse -->
+</div>
+</section>
+<section id="inside">
+<div class="wrap">
+<span class="stamp">Sec. 01 · Qué incluye</span>
+<h2 class="sec-title">Cuatro tablas relacionales, una cadena de claves de unión</h2>
+<p class="sec-lede">Normalizado para bases de datos, precombinado para notebooks. Cada código incluye 3–5 reparaciones clasificadas según su probabilidad real; cada reparación se asocia a piezas de recambio que se pueden comprar.</p>
+<div class="schema-strip">
+<div class="table-card">
+<h3 translate="no">dtc_codes</h3>
+<div class="rows">15.886 filas</div>
+<p>El registro de códigos: definición, categoría de sistema, indicador OEM/marca, familia de fallas y una explicación técnica específica del código.</p>
+<ul><li><span translate="no">dtc_code</span> · inicio de la cadena de PK</li><li translate="no">is_oem_specific / oem_make</li><li translate="no">fault_family</li><li translate="no">detailed_technical_explanation</li></ul>
+</div>
+<div class="table-card">
+<h3 translate="no">diagnostic_fixes</h3>
+<div class="rows">56.561 filas</div>
+<p>Procedimientos de reparación clasificados con nivel de dificultad, rango de costes de piezas, horas de mano de obra e instrucciones paso a paso.</p>
+<ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> mín./máx. USD</li></ul>
+</div>
+<div class="table-card">
+<h3 translate="no">replacement_parts</h3>
+<div class="rows">75.055 filas</div>
+<p>Nombres de piezas de recambio por reparación, con URL de búsqueda en catálogos derivadas del nombre de la pieza.</p>
+<ul><li translate="no">part_name</li><li translate="no">amazon_search_query</li></ul>
+</div>
+<div class="table-card">
+<h3 translate="no">dtc_fixes_joined</h3>
+<div class="rows">56.561 filas</div>
+<p>La vista analítica precombinada: códigos × reparaciones en un único archivo plano para una ingesta inmediata.</p>
+<ul><li>las 16 columnas</li><li>un solo <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
+</div>
+</div>
+<p class="join-note">cadena de unión: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
+</div>
+</section>
+<section id="specs">
+<div class="wrap">
+<span class="stamp">Sec. 02 · Especificaciones</span>
+<h2 class="sec-title">Ficha técnica</h2>
+<div class="spec-sheet">
+<table>
+<tr><th scope="row">Cobertura</th><td><b>9.249</b> códigos estándar SAE — rangos genéricos P0, P2, P34–P39, C0, B0, U0, U3. Tren motriz, chasis, carrocería y red, incluidos híbridos/eléctricos (P0Axx–P0Exx) y postratamiento diésel.</td></tr>
+<tr><th scope="row">Cobertura OEM</th><td><b>6.637</b> códigos específicos de fabricante en <b>32</b> marcas — rangos P1, P30–P33, C1/C2, B1/B2, U1/U2 controlados por el fabricante. La cobertura es desigual y más sólida en las marcas del mercado estadounidense; el desglose completo por marca está más abajo. <b>15.886</b> códigos en total.</td></tr>
+<tr><th scope="row">Información de reparación</th><td><b>647</b> familias de fallas redactadas → <b>56.561</b> reparaciones clasificadas → <b>75.055</b> correspondencias de piezas. Niveles de dificultad: Easy DIY / Moderate DIY / Professional Required.</td></tr>
+<tr><th scope="row">Formatos de entrega</th><td>CSV delimitado por barras verticales (UTF-8 BOM, compatible con Excel) · Apache Parquet, Snappy: <b>92,0%</b> más pequeño según medición · base de datos SQLite con las cuatro tablas.</td></tr>
+<tr><th scope="row">Controles de calidad</th><td>Compilación determinista validada por pruebas: integridad referencial, comprobaciones de unicidad contra plantillas y un filtro que impide códigos inventados; cada código publicado se remonta a la fuente versionada.</td></tr>
+<tr><th scope="row">Marco de seguridad</th><td>Los procedimientos de alta tensión empiezan con bloqueo y verificación de ausencia de tensión; el trabajo en el SRS exige desconectar la batería y esperar la descarga del condensador. Los pasos peligrosos nunca se clasifican como DIY.</td></tr>
+<tr><th scope="row">Procedencia</th><td>Definiciones de códigos recopiladas de fuentes públicas SAE J2012-derived (con licencia MIT, atribución conservada). Los procedimientos, las valoraciones de dificultad y los costes son contenido original redactado.</td></tr>
+</table>
+</div>
+<!-- COVERAGE:START -->
+<h3 class="cov-title" id="coverage">Códigos OEM por marca</h3>
+<p class="cov-note">Los <b>6.637</b> códigos específicos de fabricante, por marca. La cobertura <b>no es uniforme</b>: es más sólida en las marcas del mercado estadounidense y algunas marcas tienen pocos códigos. Publicamos la distribución para que puedas comprobar las marcas que te interesan antes de comprar, no después. Los <b>9.249</b> códigos universales SAE se aplican a todos los vehículos, sea cual sea la marca.</p>
+<div class="cov-grid" translate="no">
+<div class="cov-cell"><span>Volkswagen</span><b>528</b></div>
+<div class="cov-cell"><span>Ford</span><b>413</b></div>
+<div class="cov-cell"><span>Lincoln</span><b>413</b></div>
+<div class="cov-cell"><span>Mercury</span><b>413</b></div>
+<div class="cov-cell"><span>Buick</span><b>402</b></div>
+<div class="cov-cell"><span>Cadillac</span><b>402</b></div>
+<div class="cov-cell"><span>Chevrolet</span><b>402</b></div>
+<div class="cov-cell"><span>GM</span><b>402</b></div>
+<div class="cov-cell"><span>GMC</span><b>402</b></div>
+<div class="cov-cell"><span>Saturn</span><b>402</b></div>
+<div class="cov-cell"><span>Oldsmobile</span><b>401</b></div>
+<div class="cov-cell"><span>Chrysler</span><b>282</b></div>
+<div class="cov-cell"><span>BMW</span><b>250</b></div>
+<div class="cov-cell"><span>Mazda</span><b>233</b></div>
+<div class="cov-cell"><span>Jaguar</span><b>163</b></div>
+<div class="cov-cell"><span>Pontiac</span><b>115</b></div>
+<div class="cov-cell"><span>Plymouth</span><b>113</b></div>
+<div class="cov-cell"><span>Dodge</span><b>97</b></div>
+<div class="cov-cell"><span>Jeep</span><b>97</b></div>
+<div class="cov-cell"><span>Acura</span><b>94</b></div>
+<div class="cov-cell"><span>Honda</span><b>94</b></div>
+<div class="cov-cell"><span>Infiniti</span><b>94</b></div>
+<div class="cov-cell"><span>Subaru</span><b>93</b></div>
+<div class="cov-cell"><span>Kia</span><b>76</b></div>
+<div class="cov-cell"><span>Nissan</span><b>59</b></div>
+<div class="cov-cell"><span>Lexus</span><b>49</b></div>
+<div class="cov-cell"><span>Toyota</span><b>45</b></div>
+<div class="cov-cell"><span>Mitsubishi</span><b>33</b></div>
+<div class="cov-cell"><span>Mercedes-Benz</span><b>32</b></div>
+<div class="cov-cell"><span>Geo</span><b>19</b></div>
+<div class="cov-cell"><span>Suzuki</span><b>17</b></div>
+<div class="cov-cell"><span>Audi</span><b>2</b></div>
+</div>
+<!-- COVERAGE:END -->
+</div>
+</section>
+<section id="licensing">
+<div class="wrap">
+<span class="stamp">Sec. 03 · Licencias</span>
+<h2 class="sec-title">Cuatro puntos de entrada</h2>
+<div class="tiers">
+<div class="tier">
+<h3>Muestra para desarrolladores</h3>
+<div class="price">$0</div>
+<div class="per">ODbL v1.0 · datos abiertos</div>
+<ul>
+<li>90 códigos seleccionados (75 SAE + 15 OEM): los DTC más buscados</li>
+<li>Mismo esquema que el conjunto de datos completo</li>
+<li>CSV + Parquet, en GitHub y Kaggle</li>
+<li>Investigación, educación, benchmarking</li>
+</ul>
+<a class="btn btn-ghost" href="https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip">Descargar la muestra (ZIP)</a>
+</div>
+<div class="tier featured">
+<h3>Licencia Standard</h3>
+<div class="price">$49</div>
+<div class="per">pago único · uso comercial</div>
+<ul>
+<li>Conjunto de datos solo SAE: 9.249 códigos, 32.767 reparaciones, 44.588 piezas</li>
+<li>Entrega en CSV + Parquet + SQLite</li>
+<li>Derechos de uso comercial: apps, dongles, copilotos, software de taller</li>
+<li>Versiones publicadas desde el pipeline determinista</li>
+</ul>
+<a class="btn btn-amber" href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403">Comprar ahora · Descarga inmediata</a>
+</div>
+<div class="tier">
+<h3>OEM Complete</h3>
+<div class="price">$149</div>
+<div class="per">pago único · uso comercial</div>
+<ul>
+<li>Todo lo de Standard</li>
+<li>6.637 códigos OEM en 32 marcas — distribución desigual, más sólida en las marcas del mercado estadounidense (<a href="#coverage">cobertura por marca</a>)</li>
+<li>Conjunto de datos completo combinado: 15.886 códigos, 56.561 reparaciones, 75.055 piezas</li>
+<li>Entrega en CSV + Parquet + SQLite</li>
+</ul>
+<a class="btn btn-ghost" href="https://buy.stripe.com/28EfZicVy0ECdM796w38404">Comprar ahora · Descarga inmediata</a>
+</div>
+<div class="tier">
+<h3>Paquete Fault &amp; Recall</h3>
+<div class="price">$179</div>
+<div class="per">pago único · frente a $198 por separado</div>
+<ul>
+<li>MechanicDB OEM Complete — todo lo del nivel de la izquierda</li>
+<li>RecallDB Vehicle — retiradas de vehículos y equipos de NHTSA, CSV + Parquet + SQLite</li>
+<li>Dos descargas inmediatas con un solo pago</li>
+<li>Licencia comercial para ambos</li>
+</ul>
+<a class="btn btn-ghost" href="https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h">Comprar el paquete · Descarga inmediata</a>
+</div>
+</div>
+<p class="join-note">Pago seguro con tarjeta a través de Stripe · Apple Pay / Google Pay · conjunto de datos entregado al instante tras el pago.<br/>¿Necesitas una factura a nombre de empresa, integración con software de taller o acceso personalizado a la API? <a href="#supportModal" id="openSupportModalBtn">Abrir el formulario de soporte de diagnóstico y licencias</a> · o escribe a <b style="user-select:all;font-weight:600" translate="no">mechanicdb@dataengineered.io</b></p>
+</div>
+</section>
+<section id="faq">
+<div class="wrap">
+<span class="stamp">Sec. 04 · Preguntas frecuentes técnicas</span>
+<h2 class="sec-title">Preguntas frecuentes</h2>
+<div class="faq-grid">
+<div class="faq-item">
+<h3>Anatomía y estructura del código</h3>
+<p>Cada código sigue el formato SAE J2012 de 5 caracteres, en el que el carácter 1 designa el sistema (P=tren motriz, C=chasis, B=carrocería, U=red), el carácter 2 indica si es estándar SAE ('0') o definido por el fabricante ('1'), el carácter 3 designa el subsistema y los caracteres 4-5 representan el índice específico de la falla.</p>
+</div>
+<div class="faq-item">
+<h3>Seguridad DIY y control de alta tensión</h3>
+<p>Los procedimientos que implican redes de tracción de alta tensión de híbridos/eléctricos (&gt;60V), sistemas de retención suplementarios (airbags/pretensores pirotécnicos) o revisiones internas de motor/transmisión se clasifican estrictamente como 'Professional Required', con pasos obligatorios de bloqueo y verificación de ausencia de tensión.</p>
+</div>
+<div class="faq-item">
+<h3>Integración comercial en herramientas de escaneo</h3>
+<p>Sí. Aunque la muestra de 90 códigos está disponible bajo ODbL v1.0, el conjunto de datos completo de 15.886 códigos y 56.561 reparaciones se ofrece con una licencia comercial sin restricciones, entregado como CSV planos delimitados por barras verticales, tablas Apache Parquet y una base de datos relacional SQLite.</p>
+</div>
+<div class="faq-item">
+<h3>Cobertura OEM por fabricante</h3>
+<p>Sí. Nuestro nivel OEM Complete asocia 6.637 códigos de falla controlados por el fabricante en 32 marcas principales, entre ellas Ford, GM, Toyota, BMW, Honda, Mercedes-Benz y Volkswagen.</p>
+</div>
+<div class="faq-item">
+<h3>SAE J2012DA y licencias de normas</h3>
+<p>MechanicDB no es una copia de SAE J2012 ni de su Digital Annex (J2012DA) y no puede revenderse como tal: estos se licencian por puesto y su redistribución está prohibida. Si necesitas el documento normativo o sus Failure Type Bytes, las vías legítimas de menor coste son la suscripción a SAE Digital Library de la biblioteca de ingeniería de una universidad, el acceso temporal o por suscripción a través de Techstreet, ANSI Webstore o Accuris, el descuento para miembros de SAE, o la norma armonizada ISO 15031-6 de un organismo nacional de normalización. Si lo que realmente necesitas es la consulta factual de código a significado y no la norma en sí, eso es lo que vende MechanicDB para $49: 9.249 códigos del rango SAE (6.637 códigos específicos de fabricante en el nivel $149), con descripciones, causas probables clasificadas y procedimientos de reparación, recopilado a partir de una fuente pública con licencia MIT sin reproducir texto de ningún documento SAE. No incluye Failure Type Bytes y no es una referencia normativa citable.</p>
+</div>
+</div>
+</div>
+</section>
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal-overlay" id="supportModal" role="dialog">
+<div class="modal-box">
+<button aria-label="Cerrar ventana" class="modal-close" id="closeModalBtn">×</button>
+<h3 id="modalTitle" style="font-family: var(--disp); font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 8px;">Consulta sobre diagnóstico y licencias</h3>
+<p style="font-size: 0.88rem; color: var(--trace); margin-bottom: 20px;">Solicita una factura a nombre de empresa, una integración personalizada de API para herramientas de escaneo o la verificación de la muestra. Nuestro sistema garantiza una entrega sin interrupciones.</p>
+<form action="https://api.web3forms.com/submit" id="supportForm" method="POST"><input name="lang" type="hidden" value="es"/>
+<input name="access_key" type="hidden" value="bf34ff48-fcc6-4823-b386-9ae3d0712797"/>
+<input name="subject" type="hidden" value="New MechanicDB Inquiry / Commercial License"/>
+<input name="from_name" type="hidden" value="MechanicDB Contact Form"/>
+<div class="form-group">
+<label for="supName">Tu nombre / empresa</label>
+<input id="supName" name="name" placeholder="Laura Gómez / Diagnósticos Ápex S.A." required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="supEmail">Correo electrónico de trabajo</label>
+<input id="supEmail" name="email" placeholder="laura@diagnosticosapex.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="supTopic">Tema de la consulta</label>
+<select id="supTopic" name="topic" required="">
+<option value="OEM Complete Commercial License ($149)">Licencia comercial OEM Complete ($149)</option>
+<option value="Scan Tool / OBD App API Integration">Integración de API en herramientas de escaneo / apps OBD</option>
+<option value="Company Invoice / Purchase Order">Factura de empresa / orden de compra</option>
+<option value="Diagnostic Data Verification &amp; Sample">Verificación de datos de diagnóstico y muestra</option>
+</select>
+</div>
+<div class="form-group">
+<label for="supMessage">Mensaje / requisitos específicos</label>
+<textarea id="supMessage" name="message" placeholder="Indícanos plataformas objetivo, modelos de herramientas de diagnóstico o requisitos de facturación..." required="" rows="4"></textarea>
+</div>
+<button class="btn btn-amber" id="submitSupportBtn" style="width: 100%; justify-content: center;" type="submit">Enviar consulta</button>
+<div class="form-status" id="supportStatus"></div>
+</form>
+</div>
+</div>
+<section id="provenance">
+<div class="wrap">
+<span class="stamp">Sec. 04 · Procedencia y soporte</span>
+<h2 class="sec-title">De dónde proceden los datos</h2>
+<div class="prov-grid">
+<div>
+<p>Las correspondencias entre códigos y definiciones proceden de SAE J2012 / ISO 15031-6 y se han recopilado a partir de una compilación pública con licencia MIT, con la licencia de origen incluida junto a los datos. La capa de valor (explicaciones de familias de fallas, procedimientos clasificados, niveles de dificultad y rangos de costes) es contenido editorial original basado en la práctica diagnóstica estándar. Las cifras de costes y mano de obra son estimaciones para piezas de recambio típicas en EE. UU. y mano de obra de talleres independientes, no presupuestos.</p>
+<div class="safety"><b>Aviso de seguridad.</b> Los pasos de reparación son material de referencia educativo y no sustituyen el manual de servicio del fabricante. Los procedimientos de alta tensión y de SRS/airbag solo deben realizarlos técnicos cualificados.</div>
+</div>
+<div>
+<h3>Enlaces</h3>
+<ul>
+<li><a href="https://github.com/MechanicDB/MechanicDB-public">Repositorio de muestra + diccionario de datos</a></li>
+<li><a href="https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database">Dataset en Kaggle</a></li>
+<li><a href="https://github.com/MechanicDB/MechanicDB-public/blob/main/SOURCES.md">Procedencia completa (SOURCES.md)</a></li>
+<li><a href="https://github.com/MechanicDB/MechanicDB-public/issues">Licencias y soporte — abrir un issue</a></li>
+<li><a class="js-open-support" href="#supportModal">Licencias por correo electrónico — <span style="user-select:all" translate="no">mechanicdb@dataengineered.io</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="also-need">
+<div class="wrap" style="padding: 28px 0 8px;">
+<span class="stamp">Sec. 05 · También te puede interesar</span>
+<p style="max-width: 72ch; color: var(--trace); margin-top: 12px;"><a href="https://recalldb.dataengineered.io/">RecallDB</a> — 127.783 retiradas oficiales de EE. UU. de CPSC, NHTSA, FDA, FSIS y USCG, $49 pago único: la retirada del vehículo junto al código de falla. · <a href="https://appliancedb.dataengineered.io/">ApplianceDB</a> — 438 códigos de error de electrodomésticos asociados a reparaciones clasificadas, $99: la misma estructura código → reparaciones clasificadas, para electrodomésticos.</p>
+</div>
+</section>
+<footer>
+<div class="wrap foot-inner">
+<span>MechanicDB · datos de muestra bajo ODbL v1.0 · conjunto de datos completo bajo licencia comercial</span>
+<span>generado por un pipeline determinista y validado por pruebas</span>
+</div>
+<div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Parte del catálogo DataEngineered →</a> · <a href="https://dataengineered.io/about">Acerca de</a> · <a href="https://dataengineered.io/terms">Términos</a> · <a href="https://dataengineered.io/privacy">Privacidad</a> · <a href="https://dataengineered.io/refund-policy">Política de reembolso</a></div>
+<!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Idioma" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><a href="/" hreflang="en" lang="en" data-i18n-lang="en">English</a> · <span aria-current="true" style="font-weight:600">Español</span> · <a href="/de/" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a> · <a href="/fr/" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></nav><!-- /i18n:switcher --></footer>
+<script data-i18n="" id="i18n-strings" type="application/json">
+{
+  "system": "Sistema",
+  "sae_standard": "Estándar SAE",
+  "sae_extended": "SAE ampliado",
+  "assignment_block": "Bloque de asignación",
+  "fault_index": "Índice de falla",
+  "p_subsystems": {
+    "1": "Dosificación de combustible y aire",
+    "2": "Circuito de inyectores",
+    "3": "Encendido / fallos de encendido",
+    "4": "Emisiones auxiliares",
+    "5": "Control de velocidad y ralentí",
+    "6": "Circuitos de la computadora de a bordo",
+    "7": "Transmisión"
+  },
+  "sending": "Enviando consulta...",
+  "send": "Enviar consulta",
+  "sent": "¡Consulta enviada correctamente! Un ingeniero de bases de datos responderá en un plazo de 4 horas.",
+  "send_failed": "No hemos podido enviarlo automáticamente. Escribe a mechanicdb@dataengineered.io con tu consulta; respondemos en un plazo de 1 día hábil."
+}
+</script>
+<script>
+(function () {
+  'use strict';
+  var I18N = JSON.parse(document.getElementById('i18n-strings').textContent);
+  /* Real rows from samples/dtc_fixes_joined.csv (v1.0). */
+  var DATA = {
+    "P0420": { desc: "Catalyst System Efficiency Below Threshold Bank 1", family: "catalyst_efficiency_below_threshold",
+      explain: "Sets when the ECM compares pre- and post-catalyst oxygen sensor switching activity and finds the catalyst no longer storing oxygen effectively.",
+      fixes: [["Inspect for exhaust leaks near the oxygen sensors","Easy DIY",10,60,0.8],
+              ["Correct an underlying rich/lean fuel condition first","Moderate DIY",15,100,1.0],
+              ["Replace the catalytic converter","Professional Required",250,1500,2.0]] },
+    "P0171": { desc: "System Too Lean Bank 1", family: "fuel_trim_lean",
+      explain: "Sets when the ECM must add more fuel than the calibrated limit allows to correct a lean condition — leading causes are unmetered air and weak fuel delivery.",
+      fixes: [["Smoke-test intake for vacuum/air leaks","Easy DIY",10,40,0.8],
+              ["Replace fuel filter and test fuel pump output","Moderate DIY",30,150,1.0],
+              ["Inspect and repair exhaust manifold gasket leak","Moderate DIY",40,180,1.5]] },
+    "P0300": { desc: "Random/Multiple Cylinder Misfire Detected", family: "misfire_random_multiple",
+      explain: "Sets when the crankshaft-acceleration misfire monitor counts combustion faults across multiple cylinders beyond the calibrated threshold.",
+      fixes: [["Replace spark plugs and inspect ignition coils as a set","Easy DIY",30,90,1.2],
+              ["Smoke-test intake and vacuum lines for a shared leak","Moderate DIY",15,60,1.0],
+              ["Verify fuel delivery and refuel if the tank is low","Easy DIY",5,20,0.2]] },
+    "P0442": { desc: "EVAP System Leak Detected (small leak)", family: "evap_small_leak",
+      explain: "Sets when the EVAP leak-detection monitor cannot hold vacuum or pressure within its small-leak threshold — typically a 0.020 in. equivalent orifice.",
+      fixes: [["Inspect and reseat or replace fuel filler cap","Easy DIY",10,25,0.2],
+              ["Smoke-test EVAP system and replace leaking hose","Moderate DIY",15,60,1.0],
+              ["Replace EVAP purge solenoid valve","Moderate DIY",25,90,0.6]] },
+    "P0128": { desc: "Coolant Temperature Below Thermostat Regulating Temperature", family: "coolant_thermostat_performance",
+      explain: "Sets when engine coolant fails to reach or maintain its regulating temperature within the expected time.",
+      fixes: [["Check coolant level and inspect for external leaks","Easy DIY",10,40,0.5],
+              ["Replace stuck-open thermostat","Moderate DIY",20,90,1.0],
+              ["Replace failing water pump","Professional Required",120,450,2.0]] },
+    "P0715": { desc: "Input/Turbine Shaft Speed Sensor A Circuit", family: "input_turbine_shaft_speed_sensor_circuit",
+      explain: "Sets when the TCM loses, or receives an implausible, input/turbine shaft speed signal used for shift scheduling and torque converter clutch control.",
+      fixes: [["Inspect sensor connector for fluid intrusion","Easy DIY",5,20,0.5],
+              ["Replace input/turbine shaft speed sensor","Moderate DIY",30,110,0.9],
+              ["Repair internal/external transmission wiring harness","Professional Required",40,200,2.0]] },
+    "C0035": { desc: "Right Front Wheel Speed Sensor Supply", family: "wheel_speed_sensor_circuit",
+      explain: "Sets when the ABS module loses a valid electrical signal from a wheel speed sensor — the circuit reads open, shorted, or drops out intermittently.",
+      fixes: [["Inspect wheel speed sensor connector and harness routing","Easy DIY",5,25,0.4],
+              ["Test wheel speed sensor resistance and signal","Moderate DIY",10,40,0.6],
+              ["Replace wheel speed sensor","Moderate DIY",30,120,0.6]] },
+    "U0100": { desc: "Lost Communication With ECM/PCM A", family: "lost_comm_powertrain_module",
+      explain: "Sets when the gateway or another control module stops receiving any messages from a powertrain-side module or smart sensor on the CAN/LIN network.",
+      fixes: [["Check the module's dedicated fuse and battery/ground connections","Easy DIY",8,25,0.4],
+              ["Inspect and clean the engine-harness connector at the named module","Moderate DIY",12,40,0.6],
+              ["Repair the LIN/CAN sub-bus wiring feeding the module","Moderate DIY",20,90,1.3]] }
+  };
+
+  var SYSTEMS = { P: "Powertrain", C: "Chassis", B: "Body", U: "Network" };
+  var S = I18N.p_subsystems;
+  var P_SUBSYS = { "1": S["1"], "2": S["2"], "3": S["3"],
+                   "4": S["4"], "5": S["5"], "6": S["6"],
+                   "7": S["7"], "8": S["7"], "9": S["7"] };
+
+  var picker = document.getElementById('picker');
+  var digitsEl = document.getElementById('digits');
+  var notesEl = document.getElementById('digitNotes');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function chipClass(d) {
+    if (d === 'Easy DIY') return 'chip chip-easy';
+    if (d === 'Moderate DIY') return 'chip chip-mod';
+    return 'chip chip-pro';
+  }
+
+  function anatomy(code) {
+    var sys = SYSTEMS[code[0]] || I18N.system;
+    var std = code[1] === '0' ? I18N.sae_standard : I18N.sae_extended;
+    var sub = (code[0] === 'P' && code[1] === '0' && P_SUBSYS[code[2]]) ? P_SUBSYS[code[2]] : I18N.assignment_block;
+    return [
+      { c: code[0], label: sys },
+      { c: code[1], label: std },
+      { c: code[2], label: sub },
+      { c: code.slice(3), label: I18N.fault_index, span: true }
+    ];
+  }
+
+  function render(code) {
+    var d = DATA[code];
+    var parts = anatomy(code);
+    var dHtml = '', nHtml = '';
+    parts.forEach(function (p) {
+      var span = p.span ? ' note-span-2' : '';
+      dHtml += '<div class="digit' + (p.span ? '' : '') + '"' + (p.span ? ' style="flex:2"' : '') + '>' + p.c + '</div>';
+      nHtml += '<div class="digit-note' + span + '"><b>' + p.c + '</b>' + p.label + '</div>';
+    });
+
+    function paint() {
+      digitsEl.innerHTML = dHtml;
+      notesEl.innerHTML = nHtml;
+      document.getElementById('roTitle').textContent = code + ' — ' + d.desc;
+      document.getElementById('roFam').textContent = d.family;
+      document.getElementById('roExplain').textContent = d.explain;
+      var fx = '';
+      d.fixes.forEach(function (f, i) {
+        fx += '<div class="fix-row"><span class="rank">R' + (i + 1) + '</span>' +
+              '<span class="fix-title"><span class="' + chipClass(f[1]) + '">' + f[1] + '</span>' + f[0] + '</span>' +
+              '<span class="fix-meta">$' + f[2] + '–' + f[3] + ' · ' + f[4] + ' h</span></div>';
+      });
+      document.getElementById('roFixes').innerHTML = fx;
+    }
+
+    if (reduced) { paint(); return; }
+    Array.prototype.forEach.call(digitsEl.children, function (el) { el.classList.add('flip'); });
+    setTimeout(paint, 130);
+  }
+
+  Object.keys(DATA).forEach(function (code, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = code;
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      picker.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      render(code);
+    });
+    picker.appendChild(b);
+  });
+
+  render('P0420');
+
+  /* PWA Service Worker Registration */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function() {});
+    });
+  }
+
+  /* Interactive Modal Logic */
+  var supportModal = document.getElementById('supportModal');
+  var openSupportModalBtn = document.getElementById('openSupportModalBtn');
+  var closeModalBtn = document.getElementById('closeModalBtn');
+
+  if (supportModal) {
+    var openSupportTriggers = document.querySelectorAll('#openSupportModalBtn, .js-open-support');
+    Array.prototype.forEach.call(openSupportTriggers, function(trigger) {
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        supportModal.classList.add('active');
+      });
+    });
+  }
+  if (closeModalBtn && supportModal) {
+    closeModalBtn.addEventListener('click', function() {
+      supportModal.classList.remove('active');
+    });
+  }
+  if (supportModal) {
+    supportModal.addEventListener('click', function(e) {
+      if (e.target === supportModal) supportModal.classList.remove('active');
+    });
+  }
+
+  /* Resilient Zero-Outage Support Form Handler (7s AbortController + mailto fallback) */
+  var supportForm = document.getElementById('supportForm');
+  var supportStatus = document.getElementById('supportStatus');
+  var submitSupportBtn = document.getElementById('submitSupportBtn');
+
+  if (supportForm) {
+    supportForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (submitSupportBtn) {
+        submitSupportBtn.disabled = true;
+        submitSupportBtn.textContent = I18N.sending;
+      }
+      if (supportStatus) {
+        supportStatus.className = 'form-status';
+        supportStatus.style.display = 'none';
+      }
+
+      var nameVal = document.getElementById('supName').value.trim();
+      var emailVal = document.getElementById('supEmail').value.trim();
+      var topicVal = document.getElementById('supTopic').value;
+      var msgVal = document.getElementById('supMessage').value.trim();
+
+      var formData = new FormData(supportForm);
+      var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timer = controller ? setTimeout(function() { controller.abort(); }, 7000) : null;
+
+      fetch(supportForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+        signal: controller ? controller.signal : null
+      })
+      .then(function(response) {
+        if (timer) clearTimeout(timer);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function(data) {
+        if (!data || data.success !== true) throw new Error('Form provider did not confirm delivery');
+        if (supportStatus) {
+          supportStatus.className = 'form-status success';
+          supportStatus.textContent = I18N.sent;
+          supportStatus.style.display = 'block';
+        }
+        supportForm.reset();
+        if (submitSupportBtn) {
+          submitSupportBtn.disabled = false;
+          submitSupportBtn.textContent = I18N.send;
+        }
+      })
+      .catch(function(err) {
+        if (timer) clearTimeout(timer);
+
+        if (supportStatus) {
+          supportStatus.className = 'form-status success';
+          supportStatus.className = 'form-status';
+          supportStatus.textContent = I18N.send_failed;
+          supportStatus.style.display = 'block';
+        }
+
+        setTimeout(function() {
+          if (submitSupportBtn) {
+            submitSupportBtn.disabled = false;
+            submitSupportBtn.textContent = I18N.send;
+          }
+        }, 1200);
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

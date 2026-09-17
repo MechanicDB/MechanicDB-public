@@ -1,0 +1,1748 @@
+{
+ "00d5a335efa88bae": {
+  "src": "Commercial Scan Tool Integration",
+  "t": "Integration in kommerzielle Diagnosegeräte",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "014bcd654c60d525": {
+  "src": "Links",
+  "t": "Links",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "03688ba6aa340b87": {
+  "src": "FAQ",
+  "t": "FAQ",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "03af8069b7942196": {
+  "src": "Fault index",
+  "t": "Fehlerindex",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "03f42a0cb016511c": {
+  "src": "Replacement-part mappings and catalog lookups",
+  "t": "Zuordnungen zu Ersatzteilen und Katalogsuchen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0424f6e7026fa4bc": {
+  "src": "Table",
+  "t": "Tabelle",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "042824c250f97eae": {
+  "src": "diagnostic trouble codes",
+  "t": "Diagnose-Fehlercodes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "047eb733a40bc1db": {
+  "src": "Codes that share one detection mechanism and one repair path belong to a single authored fault family. Grouping {0} SAE trouble codes into {1} families is what makes the diagnosis tractable: you learn the mechanism once, then read off which codes it sets.",
+  "t": "Codes mit gemeinsamem Erkennungsmechanismus und gemeinsamem Reparaturweg gehören zu einer redaktionell erstellten Fehlerfamilie. Erst die Gruppierung von {0} SAE-Fehlercodes in {1} Familien macht die Diagnose beherrschbar: Sie lernen den Mechanismus einmal und lesen dann ab, welche Codes er auslöst.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "049820de09806963": {
+  "src": "Ranked fixes {0}, not only the most probable cause",
+  "t": "Priorisierte Reparaturen {0}, nicht nur die wahrscheinlichste Ursache",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "08a4e4f1bf1e1745": {
+  "src": "The flat analytical view — all {0} columns, one {1} / {2}",
+  "t": "Die flache Analyseansicht — alle {0} Spalten, ein einziges {1} / {2}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "09187490bb23f140": {
+  "src": "These {0} diagnostic trouble codes share one detection mechanism and one repair path, which is why MechanicDB groups them into a single authored fault family rather than repeating the same explanation {1} times.",
+  "t": "Diese {0} Diagnose-Fehlercodes teilen einen Erkennungsmechanismus und einen Reparaturweg. Deshalb fasst MechanicDB sie in einer einzigen, redaktionell erstellten Fehlerfamilie zusammen, statt dieselbe Erklärung {1}-mal zu wiederholen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "09d130b3d83cd89f": {
+  "src": "<0>{1}</0> authored fault families → <2>{3}</2> ranked fixes → <4>{5}</4> parts mappings. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required.",
+  "t": "<0>{1}</0> redaktionell erstellte Fehlerfamilien → <2>{3}</2> priorisierte Reparaturen → <4>{5}</4> Teilezuordnungen. Schwierigkeitsstufen: Easy DIY / Moderate DIY / Professional Required.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "09d8d0dbb347fbac": {
+  "src": "Request a company invoice, custom scan-tool API integration, or sample verification. Our system ensures zero-outage delivery.",
+  "t": "Fordern Sie eine Firmenrechnung, eine individuelle API-Integration für Diagnosegeräte oder eine Überprüfung der Beispieldaten an. Unser System gewährleistet eine ausfallfreie Zustellung.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0a66c3b83fd8ae92": {
+  "src": "Procedures involving high-voltage hybrid/EV traction networks (&gt;{0}), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps.",
+  "t": "Verfahren an Hochvolt-Traktionsnetzen von Hybrid- und Elektrofahrzeugen (&gt;{0}), an Rückhaltesystemen (Airbags/pyrotechnische Gurtstraffer) sowie Motor- oder Getriebeüberholungen werden ausnahmslos als „Professional Required“ eingestuft – mit verpflichtender Freischaltung (Lockout) und Prüfung der Spannungsfreiheit.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0be198dcc3a163ef": {
+  "src": "All <0>{1}</0> manufacturer-specific codes, by marque. Coverage is <2>not even</2> — it is strongest on US-market brands, and some marques are thin. We publish the distribution so you can check the makes you care about before buying rather than after. The <3>{4}</3> SAE-universal codes apply to every vehicle regardless of make.",
+  "t": "Alle <0>{1}</0> herstellerspezifischen Codes nach Marke. Die Abdeckung ist <2>nicht gleichmäßig</2> – am stärksten bei Marken des US-Markts, einige Marken sind dünn besetzt. Wir veröffentlichen die Verteilung, damit Sie die für Sie relevanten Marken vor dem Kauf prüfen können statt danach. Die <3>{4}</3> SAE-universellen Codes gelten für jedes Fahrzeug, unabhängig von der Marke.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0c709f9886c34419": {
+  "src": "Specifications",
+  "t": "Spezifikationen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0d23ab8b6de00e13": {
+  "src": "Repair intelligence",
+  "t": "Reparaturwissen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0d5240a3ac9f84f2": {
+  "src": "How MechanicDB groups codes",
+  "t": "Wie MechanicDB Codes gruppiert",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0ec56de4d2fd48ef": {
+  "src": "Fault &amp; Recall bundle",
+  "t": "Fehler- &amp; Rückruf-Paket",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0ec7d39d28f3a691": {
+  "src": "OEM complete",
+  "t": "OEM Complete",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0f09b22f72874343": {
+  "src": "OEM Complete Commercial License ({0})",
+  "t": "Kommerzielle Lizenz OEM Complete ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "101ceb9fa35dccd1": {
+  "src": "Codes in this family ({0})",
+  "t": "Codes dieser Familie ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "145d9d6c0d59eff6": {
+  "src": "MechanicDB — OBD-II Diagnostic &amp; Repair Database",
+  "t": "MechanicDB — OBD-II-Diagnose- &amp; Reparaturdatenbank",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "14a86cc650205699": {
+  "src": "License the full dataset",
+  "t": "Vollständigen Datensatz lizenzieren",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "15259fc42acf34f5": {
+  "src": "What this hub covers",
+  "t": "Was dieser Hub abdeckt",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "17d701db72194400": {
+  "src": "Jane Doe / Apex Diagnostics Inc.",
+  "t": "Max Mustermann / Muster Diagnose GmbH",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "17f55d3756d443ed": {
+  "src": "all {0} columns",
+  "t": "alle {0} Spalten",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "182de348692d87d8": {
+  "src": "Four ways in",
+  "t": "Vier Einstiegswege",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1907a9f0778aea59": {
+  "src": "Choose a trouble code",
+  "t": "Fehlercode auswählen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1b97d070d0b66d1e": {
+  "src": "{0} rows",
+  "t": "{0} Zeilen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1bb3fd6d6dcb7b17": {
+  "src": "Full merged dataset: {0} codes, {1} fixes, {2} parts",
+  "t": "Vollständiger zusammengeführter Datensatz: {0} Codes, {1} Reparaturen, {2} Teile",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1c0db765274dac4a": {
+  "src": "Sec {0} · Technical FAQ",
+  "t": "Abschn. {0} · Technische FAQ",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1caea4560821e25d": {
+  "src": "System: {0} ({1}-Codes)",
+  "t": "System: {0} ({1}-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1d99f36610228a45": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related codes…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und verwandte Codes…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1da9700bd0a6cfd2": {
+  "src": "Key automotive OBD-II systems and diagnostic reference monographs.",
+  "t": "Wichtige OBD-II-Fahrzeugsysteme und Diagnose-Referenzmonografien.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1e813b2e4ee05685": {
+  "src": "Every tier ships all three. Pipe-delimited <0>CSV</0> ({1} BOM, Excel-safe). <2>Apache Parquet</2> with Snappy compression — a measured {3} smaller. A <4>SQLite</4> database carrying all four tables with the join chain intact.",
+  "t": "Jede Stufe enthält alle drei. <0>CSV</0> mit Pipe-Trennzeichen ({1} BOM, Excel-tauglich). <2>Apache Parquet</2> mit Snappy-Komprimierung — gemessen {3} kleiner. Eine <4>SQLite</4>-Datenbank mit allen vier Tabellen und intakter Join-Kette.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1ef23109774eacbf": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und verwandte…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2056287fa879f37c": {
+  "src": "Fault families in the {0} system ({1})",
+  "t": "Fehlerfamilien im System {0} ({1})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "210b0f66f093d750": {
+  "src": "join chain: {0}",
+  "t": "Join-Kette: {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2133648b0384585f": {
+  "src": "{0} System — {1} fault families, {2} codes | MechanicDB",
+  "t": "System {0} — {1} Fehlerfamilien, {2} Codes | MechanicDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "21410e8f2cd7b2f4": {
+  "src": "Can I integrate MechanicDB into commercial scan tools or shop management software?",
+  "t": "Kann ich MechanicDB in kommerzielle Diagnosegeräte oder Werkstattmanagement-Software integrieren?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "217dfb7cfbef60d7": {
+  "src": "⚡ Powertrain (P-Codes)",
+  "t": "⚡ Antriebsstrang (P-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "22ea99ef06ff309e": {
+  "src": "Send Inquiry",
+  "t": "Anfrage senden",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2390ad3f2414c710": {
+  "src": "{0} min/max USD",
+  "t": "{0} Min./Max. USD",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2635673694e42c91": {
+  "src": "Aftermarket part names per fix, with catalog search URLs",
+  "t": "Namen der Nachrüstteile je Reparatur, mit Katalogsuch-URLs",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "266cd3348d480fec": {
+  "src": "What this page does not show",
+  "t": "Was diese Seite nicht zeigt",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "27657758a306b3cb": {
+  "src": "Aftermarket part names per fix, with catalog search URLs derived from the part name.",
+  "t": "Namen der Nachrüstteile je Reparatur, mit Katalogsuch-URLs, die aus dem Teilenamen abgeleitet sind.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "278759d959ab50c8": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related codes in the same…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandte Codes derselben…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2804d9f16a38553f": {
+  "src": "Formats",
+  "t": "Formate",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "283e6afa902f7966": {
+  "src": "Secure card checkout via Stripe · Apple Pay / Google Pay · dataset delivered instantly after payment.{0}Need a company invoice, shop software integration, or custom API access? <1>Open Diagnostic &amp; Licensing Support Modal</1> · or email {2}",
+  "t": "Sichere Kartenzahlung über Stripe · Apple Pay / Google Pay · Datensatz wird sofort nach der Zahlung bereitgestellt.{0}Sie benötigen eine Firmenrechnung, eine Integration in Werkstattsoftware oder individuellen API-Zugang? <1>Diagnose- &amp; Lizenz-Supportformular öffnen</1> · oder schreiben Sie an {2}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2877fe6aaa16599f": {
+  "src": "System: {0} ({1}-Code)",
+  "t": "System: {0} ({1}-Code)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "296680539c4a9330": {
+  "src": "Licensing by email — {0}",
+  "t": "Lizenzierung per E-Mail — {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2a2f04e0e58eb1a3": {
+  "src": "Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: {0} ranked repair procedures — each with a DIY difficulty rating, a parts-cost range and a labor estimate — attached to {1} verified OBD-II trouble codes ({2} SAE-standard plus {3} manufacturer-specific across {4} makes). Free code lists stop at the definition; MechanicDB starts there.",
+  "t": "Gebaut für OBD-Apps, Diagnosegeräte-Firmware, KI-Assistenten für Mechaniker und Werkstattsoftware: {0} priorisierte Reparaturverfahren – jeweils mit DIY-Schwierigkeitsgrad, Teilekostenspanne und Arbeitszeitschätzung – verknüpft mit {1} verifizierten OBD-II-Fehlercodes ({2} nach SAE-Standard plus {3} herstellerspezifische aus {4} Marken). Kostenlose Codelisten enden bei der Definition; MechanicDB beginnt dort.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2a365a27cece744e": {
+  "src": "MechanicDB · The OBD-II Diagnostic &amp; Repair Database · ODbL {0} / Commercial License",
+  "t": "MechanicDB · Die OBD-II-Diagnose- &amp; Reparaturdatenbank · ODbL {0} / kommerzielle Lizenz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2b8c737d38337ce8": {
+  "src": "Fault Family",
+  "t": "Fehlerfamilie",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2cad4678fd485856": {
+  "src": "OEM coverage",
+  "t": "OEM-Abdeckung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2f8486c2f6c8a9d4": {
+  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} fixes ranked by real-world likelihood; every fix maps to purchasable aftermarket parts.",
+  "t": "Normalisiert für Datenbanken, vorab verknüpft für Notebooks. Jeder Code enthält {0} Reparaturen, geordnet nach realer Wahrscheinlichkeit; jede Reparatur ist käuflichen Nachrüstteilen zugeordnet.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3487bb91bd5bb47a": {
+  "src": "License Full Dataset · {0}",
+  "t": "Vollständigen Datensatz lizenzieren · {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "34ac37f56e147bf6": {
+  "src": "Back to home",
+  "t": "Zurück zur Startseite",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3706a34a76a69052": {
+  "src": "OBD-II Code {0}: {1}",
+  "t": "OBD-II-Code {0}: {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3958c456f29ff950": {
+  "src": "Repair coverage",
+  "t": "Reparaturabdeckung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "397fff8755a0e400": {
+  "src": "We could not send this automatically. Please write to {0} with your inquiry — we reply within {1} business day.",
+  "t": "Die Anfrage konnte nicht automatisch gesendet werden. Bitte schreiben Sie Ihr Anliegen an {0} — wir antworten innerhalb von {1} Werktag.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "39c16d5920343552": {
+  "src": "OEM codes by make",
+  "t": "OEM-Codes nach Marke",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "39f8d7886c7ce8d8": {
+  "src": "<0>{1} SAE / {2} OEM</0> · one-time · instant download — for shop software, OBD hardware and AI mechanic assistants",
+  "t": "<0>{1} SAE / {2} OEM</0> · einmalig · sofortiger Download — für Werkstattsoftware, OBD-Hardware und KI-Assistenten für Mechaniker",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "39fd9c9a126e4a23": {
+  "src": "See all {0} fault families →",
+  "t": "Alle {0} Fehlerfamilien ansehen →",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3a640fb55e74cbb7": {
+  "src": "Code {0} (Catalyst Efficiency Below Threshold)",
+  "t": "Code {0} (Katalysatorwirkungsgrad unter Schwellenwert)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3bc9c1860bfda7d6": {
+  "src": "View licensing",
+  "t": "Lizenzen ansehen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3bf260c56b002b6b": {
+  "src": "Code {0}",
+  "t": "Code {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3c5893745eb84dc6": {
+  "src": "Deterministic, test-gated build: referential integrity, anti-template uniqueness checks, and a no-fabricated-codes gate — every published code traces to the committed source.",
+  "t": "Deterministischer, testgesicherter Build: referenzielle Integrität, Eindeutigkeitsprüfungen gegen Textvorlagen und eine Sperre gegen erfundene Codes — jeder veröffentlichte Code lässt sich auf die eingecheckte Quelle zurückführen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3caa70a70760202a": {
+  "src": "<0>{1}</0> fault families",
+  "t": "<0>{1}</0> Fehlerfamilien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3cff15010df4fba8": {
+  "src": "Commercial application rights — apps, dongles, co-pilots, shop software",
+  "t": "Kommerzielle Nutzungsrechte — Apps, Dongles, Assistenten, Werkstattsoftware",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3fadefb81920d77b": {
+  "src": "Code definitions compiled from public SAE {0} sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.",
+  "t": "Codedefinitionen zusammengestellt aus öffentlichen SAE-{0}-Quellen (MIT-lizenziert, Namensnennung beibehalten). Verfahren, Schwierigkeitsgrade und Kosten sind eigenständig erstellte Inhalte.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3fd55337378e0985": {
+  "src": "Code anatomy — live from the sample",
+  "t": "Aufbau eines Codes — live aus den Beispieldaten",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "423c3b9bb1708c87": {
+  "src": "Sec {0} · What's inside",
+  "t": "Abschn. {0} · Inhalt",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "42a9e096d493169d": {
+  "src": "<0>{1}</0> manufacturer-specific codes across <2>{3}</2> makes — {4} manufacturer-controlled ranges. Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <5>{6}</5> codes total.",
+  "t": "<0>{1}</0> herstellerspezifische Codes aus <2>{3}</2> Marken — {4} herstellerkontrollierte Bereiche. Die Abdeckung ist ungleichmäßig und am stärksten bei Marken des US-Markts — die vollständige Aufschlüsselung nach Marke finden Sie unten. <5>{6}</5> Codes insgesamt.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4381781f3bf2e7e2": {
+  "src": "{0} verified OBD-II trouble codes mapped to {1} ranked repair procedures with DIY difficulty tiers, parts costs, and step-by-step instructions.",
+  "t": "{0} verifizierte OBD-II-Fehlercodes mit {1} priorisierten Reparaturverfahren, DIY-Schwierigkeitsstufen, Teilekosten und Schritt-für-Schritt-Anleitungen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "43c7d56efb0908b2": {
+  "src": "Family: {0}",
+  "t": "Familie: {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "445ab3ab6af444fc": {
+  "src": "See the tiers — {0}",
+  "t": "Stufen ansehen — {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4479cc9f2655eff0": {
+  "src": "SAE Standard (Generic)",
+  "t": "SAE-Standard (generisch)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "44827038f22bf60f": {
+  "src": "Every check-engine light, <0>decoded and costed.</0>",
+  "t": "Jede Motorkontrollleuchte, <0>entschlüsselt und mit Kosten.</0>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "489af480aa77f451": {
+  "src": "🚗 Body &amp; SRS (B-Codes)",
+  "t": "🚗 Karosserie &amp; SRS (B-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "49f5049a56656ea0": {
+  "src": "Related codes, same fault family",
+  "t": "Verwandte Codes derselben Fehlerfamilie",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4aa7f28eefbbe309": {
+  "src": "OBD-II Fault Family Directory | MechanicDB",
+  "t": "Verzeichnis der OBD-II-Fehlerfamilien | MechanicDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4b892fe0c040fa8a": {
+  "src": "Directory",
+  "t": "Verzeichnis",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4baf2edd9afc39b9": {
+  "src": "{0} OBD-II trouble codes in the {1} fault family ({2} system): what the module detects, and the full…",
+  "t": "{0} OBD-II-Fehlercodes der Fehlerfamilie {1} (System {2}): was das Modul erkennt, und der…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4c02c23d11375314": {
+  "src": "Automotive Diagnostic Trouble Code {0}",
+  "t": "Kfz-Diagnose-Fehlercode {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4c06f43ebae703c6": {
+  "src": "Licensing &amp; support — open an issue",
+  "t": "Lizenzierung &amp; Support — Issue eröffnen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4c2da3f499b47da6": {
+  "src": "MechanicDB · sample data under ODbL {0} · full dataset under commercial license",
+  "t": "MechanicDB · Beispieldaten unter ODbL {0} · vollständiger Datensatz unter kommerzieller Lizenz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4ee92c702e47fdd8": {
+  "src": "High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Hazardous steps are never rated DIY.",
+  "t": "Hochvolt-Verfahren beginnen mit Freischaltung und Prüfung der Spannungsfreiheit; Arbeiten am SRS erfordern das Abklemmen der Batterie und das Abwarten der Kondensatorentladung. Gefährliche Schritte werden nie als DIY eingestuft.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4f7cdbd0724abf54": {
+  "src": "{0} OBD-II trouble codes ({1} SAE + {2} OEM) joined to {3} ranked repairs. Download as CSV, Parquet or SQLite. Free {4}-code sample.",
+  "t": "{0} OBD-II-Fehlercodes ({1} SAE + {2} OEM) mit {3} priorisierten Reparaturen. Download als CSV, Parquet oder SQLite. Kostenlose Beispieldaten ({4} Codes).",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5162b84096e20d7a": {
+  "src": "{0} — fault family | MechanicDB",
+  "t": "{0} — Fehlerfamilie | MechanicDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "52d0b35277ee4b2b": {
+  "src": "Rows",
+  "t": "Zeilen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "53a7a2a626fb238c": {
+  "src": "Diagnostic &amp; Licensing Inquiry",
+  "t": "Diagnose- &amp; Lizenzanfrage",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "55212182046d5005": {
+  "src": "Assignment block",
+  "t": "Zuordnungsblock",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "56e96cdc42f75413": {
+  "src": "MechanicDB Automotive OBD-II Diagnostic &amp; Repair Database",
+  "t": "MechanicDB OBD-II-Diagnose- &amp; Reparaturdatenbank für Kraftfahrzeuge",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5816221341a14fd1": {
+  "src": "MechanicDB Automotive OBD-II Diagnostic &amp; Repair Dataset — Snapshot",
+  "t": "MechanicDB OBD-II-Diagnose- &amp; Reparaturdatensatz für Kraftfahrzeuge — Snapshot",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "59210ccfa306c400": {
+  "src": "Pipe-delimited CSV ({0} BOM, Excel-safe) · Apache Parquet, Snappy — a measured <1>{2}</1> smaller · SQLite database, all four tables.",
+  "t": "CSV mit Pipe-Trennzeichen ({0} BOM, Excel-tauglich) · Apache Parquet, Snappy — gemessen <1>{2}</1> kleiner · SQLite-Datenbank mit allen vier Tabellen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5927ec8bb99b4deb": {
+  "src": "Message / Specific Requirements",
+  "t": "Nachricht / konkrete Anforderungen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5a6e4e722025289d": {
+  "src": "Ignition / misfire",
+  "t": "Zündung / Fehlzündung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5b5fe7ef02086c8a": {
+  "src": "Work Email Address",
+  "t": "Geschäftliche E-Mail-Adresse",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5b8d2481ae4f0b44": {
+  "src": "Part of the DataEngineered catalog →",
+  "t": "Teil des DataEngineered-Katalogs →",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5bff1e66184a36f9": {
+  "src": "Safety framing",
+  "t": "Sicherheitsrahmen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5c4eb395fcc3051c": {
+  "src": "{0} OBD-II trouble codes in the {1} fault family ({2} system): what the module detects, and the full code index.",
+  "t": "{0} OBD-II-Fehlercodes der Fehlerfamilie {1} (System {2}): was das Modul erkennt, und der vollständige Codeindex.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5c8c65dc3597ab4d": {
+  "src": "Code Anatomy &amp; Structure",
+  "t": "Aufbau &amp; Struktur der Codes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5f358efbcb6312dd": {
+  "src": "Directory of all {0} MechanicDB OBD-II fault families covering {1} SAE diagnostic trouble codes, grouped by vehicle system.",
+  "t": "Verzeichnis aller {0} OBD-II-Fehlerfamilien von MechanicDB mit {1} SAE-Diagnose-Fehlercodes, gruppiert nach Fahrzeugsystem.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5ff4b80d50a8b370": {
+  "src": "{0} verified OBD-II trouble codes mapped to {1} ranked repair procedures with DIY difficulty tiers and cost estimates. CSV, Parquet, SQLite.",
+  "t": "{0} verifizierte OBD-II-Fehlercodes mit {1} priorisierten Reparaturverfahren, DIY-Schwierigkeitsstufen und Kostenschätzungen. CSV, Parquet, SQLite.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "618e242a70147565": {
+  "src": "🧬 All {0} Fault Families",
+  "t": "🧬 Alle {0} Fehlerfamilien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6195ddb0830f5c45": {
+  "src": "built by a deterministic, test-gated pipeline",
+  "t": "erstellt von einer deterministischen, testgesicherten Pipeline",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "61c9dac24da9113d": {
+  "src": "Auxiliary emissions",
+  "t": "Zusätzliche Emissionsregelung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "61fc0628b744edce": {
+  "src": "The {0} SAE-universal codes apply to every vehicle regardless of make. OEM coverage is <1>not even</1> — it is strongest on US-market brands and some marques are thin. The full per-make breakdown is published on the <2>homepage</2> so you can check the makes you care about <3>before</3> buying rather than after. Every published code traces to a committed source; a build gate rejects fabricated codes.",
+  "t": "Die {0} SAE-universellen Codes gelten für jedes Fahrzeug, unabhängig von der Marke. Die OEM-Abdeckung ist <1>nicht gleichmäßig</1> — am stärksten bei Marken des US-Markts, einige Marken sind dünn besetzt. Die vollständige Aufschlüsselung nach Marke ist auf der <2>Startseite</2> veröffentlicht, damit Sie die für Sie relevanten Marken <3>vor</3> dem Kauf prüfen können statt danach. Jeder veröffentlichte Code lässt sich auf eine eingecheckte Quelle zurückführen; eine Build-Sperre weist erfundene Codes zurück.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "630cb51eecc0c585": {
+  "src": "Page sections",
+  "t": "Seitenabschnitte",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "66efdb5a0cb44bd9": {
+  "src": "{0} — {1} families, {2} codes",
+  "t": "{0} — {1} Familien, {2} Codes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6a6c9315a517cd44": {
+  "src": "The code registry: definition, system category, OEM flag/make, fault family, and a code-specific technical explanation.",
+  "t": "Das Coderegister: Definition, Systemkategorie, OEM-Kennzeichen/Marke, Fehlerfamilie und eine codespezifische technische Erläuterung.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6b21fb791ac05170": {
+  "src": "About",
+  "t": "Über uns",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6c204c16a4346505": {
+  "src": "{0} OEM codes across {1} makes — unevenly distributed, strongest on US-market brands (<2>per-make coverage</2>)",
+  "t": "{0} OEM-Codes aus {1} Marken — ungleichmäßig verteilt, am stärksten bei Marken des US-Markts (<2>Abdeckung nach Marke</2>)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6d558f22b75381d9": {
+  "src": "Four relational tables, one join key chain",
+  "t": "Vier relationale Tabellen, eine Schlüsselkette für Joins",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6f8ddc1ee92860dc": {
+  "src": "{0} SAE-only · {1} OEM Complete ({2} manufacturer codes, {3} makes) · one-time · <4>compare tiers</4>",
+  "t": "{0} nur SAE · {1} OEM Complete ({2} Herstellercodes, {3} Marken) · einmalig · <4>Stufen vergleichen</4>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "70d3a544a361354a": {
+  "src": "Close modal",
+  "t": "Dialog schließen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "70f8bb9a8a5393ef": {
+  "src": "Home",
+  "t": "Startseite",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7263c3bb35c70bb1": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related codes in the same fault family.",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandte Codes derselben Fehlerfamilie.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "73bba656777c9e3d": {
+  "src": "📡 CAN Network (U-Codes)",
+  "t": "📡 CAN-Netzwerk (U-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7462be06702493e0": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related code in the same…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandter Code derselben…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "755a395f1373d853": {
+  "src": "Diagnostic Decoder",
+  "t": "Diagnose-Decoder",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "76f20774cb9169ea": {
+  "src": "MechanicDB — {0} OBD-II Trouble Codes &amp; Ranked Fixes",
+  "t": "MechanicDB — {0} OBD-II-Fehlercodes &amp; Reparaturen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "77505e86a1487b27": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related code in the same fault…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandter Code derselben…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "77d143911a8b2211": {
+  "src": "OEM Manufacturer Coverage",
+  "t": "Abdeckung nach OEM-Hersteller",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "77e86e2dd7337ed4": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related codes in the {3}…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und verwandte Codes im System {3}…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "77f03a385b8feafd": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related codes in the same fault…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandte Codes derselben…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "78af188821edd7d9": {
+  "src": "Aftermarket parts cost ranges in USD ({0})",
+  "t": "Kostenspannen für Nachrüstteile in USD ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7a08cebfeb20b546": {
+  "src": "{0} Families",
+  "t": "Familien: {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7be2f0f143224d91": {
+  "src": "Decoder",
+  "t": "Decoder",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7d9908551f2532ad": {
+  "src": "What you get in the download",
+  "t": "Was der Download enthält",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7db5ed61a999bff1": {
+  "src": "<0>RecallDB</0> — {1} official U.S. recalls across CPSC, NHTSA, FDA, FSIS and USCG, {2} one-time: the vehicle recall that sits next to a fault code. · <3>ApplianceDB</3> — {4} home-appliance error codes mapped to ranked repairs, {5}: the same code → ranked-repair shape for appliances.",
+  "t": "<0>RecallDB</0> — {1} offizielle US-Rückrufe von CPSC, NHTSA, FDA, FSIS und USCG, {2} einmalig: der Fahrzeugrückruf, der neben einem Fehlercode steht. · <3>ApplianceDB</3> — {4} Fehlercodes von Haushaltsgeräten mit priorisierten Reparaturen, {5}: dieselbe Struktur Code → priorisierte Reparatur für Haushaltsgeräte.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7ecb76f681fc1e54": {
+  "src": "The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.",
+  "t": "Die vorab verknüpfte Analyseansicht — Codes × Reparaturen in einer flachen Datei zum sofortigen Einlesen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7eccbe4df142245e": {
+  "src": "Diagnostic Data Verification &amp; Sample",
+  "t": "Prüfung der Diagnosedaten &amp; Beispieldaten",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7f6a9be944a91c42": {
+  "src": "Research, education, benchmarking",
+  "t": "Forschung, Lehre, Benchmarking",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7fd18d0dc34b021a": {
+  "src": "ODbL {0} · open data",
+  "t": "ODbL {0} · offene Daten",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "80e13549b47a4dfc": {
+  "src": "Coverage",
+  "t": "Abdeckung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "80ff0a21e13e2551": {
+  "src": "Fault Family Directory",
+  "t": "Verzeichnis der Fehlerfamilien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "811d4f18ea885565": {
+  "src": "RecallDB Vehicle — NHTSA vehicle &amp; equipment recalls, CSV + Parquet + SQLite",
+  "t": "RecallDB Vehicle — NHTSA-Rückrufe für Fahrzeuge &amp; Ausrüstung, CSV + Parquet + SQLite",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "82a19be3ea17a546": {
+  "src": "{0} diagnostic trouble codes joined to {1} ranked repair procedures, delivered as pipe-delimited CSV, Apache Parquet or a SQLite database. Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software — not a website you have to scrape.",
+  "t": "{0} Diagnose-Fehlercodes verknüpft mit {1} priorisierten Reparaturverfahren, geliefert als CSV mit Pipe-Trennzeichen, Apache Parquet oder SQLite-Datenbank. Gebaut für OBD-Apps, Diagnosegeräte-Firmware, KI-Assistenten für Mechaniker und Werkstattsoftware — keine Website, die Sie scrapen müssen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8561030ad5a747df": {
+  "src": "<0>Safety notice.</0> Repair steps are educational reference material, not a substitute for the manufacturer's service manual. High-voltage and SRS/airbag procedures must only be performed by qualified technicians.",
+  "t": "<0>Sicherheitshinweis.</0> Die Reparaturschritte sind Referenzmaterial zu Schulungszwecken und ersetzen nicht das Werkstatthandbuch des Herstellers. Hochvolt- und SRS-/Airbag-Verfahren dürfen nur von qualifizierten Fachkräften durchgeführt werden.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "85b6b768dbe587c2": {
+  "src": "Full provenance (SOURCES.md)",
+  "t": "Vollständige Herkunftsangaben (SOURCES.md)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "86b6a69145736869": {
+  "src": "Sec {0} · Specifications",
+  "t": "Abschn. {0} · Spezifikationen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "89b380366b021299": {
+  "src": "probability-ranked · parts cost in USD · labor in shop hours — {0} of the code's ranked fixes shown",
+  "t": "nach Wahrscheinlichkeit geordnet · Teilekosten in USD · Arbeitszeit in Werkstattstunden — {0} der priorisierten Reparaturen dieses Codes angezeigt",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8a30ea2d544eb2b1": {
+  "src": "DIY Safety &amp; High-Voltage Gate",
+  "t": "DIY-Sicherheits- &amp; Hochvolt-Sperre",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8e02db481d369c77": {
+  "src": "automotive repair instructions",
+  "t": "Kfz-Reparaturanleitungen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8e072025366d8304": {
+  "src": "Refund policy",
+  "t": "Rückerstattungsrichtlinie",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8ef5989520b53701": {
+  "src": "Sec {0} · Licensing",
+  "t": "Abschn. {0} · Lizenzierung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "90182e1b2efbc656": {
+  "src": "Professional labor-hour estimates ({0})",
+  "t": "Arbeitszeitschätzungen einer Fachwerkstatt ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "915e01df01752ddc": {
+  "src": "Data sheet",
+  "t": "Datenblatt",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "92d6167e0b62b7d6": {
+  "src": "Dataset License ({0})",
+  "t": "Datensatzlizenz ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "92e2ed6d74a44ec6": {
+  "src": "<0>{1}</0> trouble codes",
+  "t": "<0>{1}</0> Fehlercodes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "932c2e9a1c483b2a": {
+  "src": "{0} SAE Codes",
+  "t": "{0} SAE-Codes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9441b5fa251064a0": {
+  "src": "Yes. Our OEM Complete tier maps {0} manufacturer-controlled trouble codes across {1} major vehicle makes including Ford, GM, Toyota, BMW, Honda, Mercedes-Benz, and Volkswagen.",
+  "t": "Ja. Unsere Stufe OEM Complete erfasst {0} herstellerkontrollierte Fehlercodes aus {1} großen Fahrzeugmarken, darunter Ford, GM, Toyota, BMW, Honda, Mercedes-Benz und Volkswagen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "94c98bbe53a3dcbc": {
+  "src": "one-time · commercial use",
+  "t": "einmalig · kommerzielle Nutzung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9549e93d4fc95e96": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "970262c6c4d203d6": {
+  "src": "Powertrain System (P-Codes)",
+  "t": "Antriebsstrang (P-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "972a9c3e8d1677bd": {
+  "src": "Sample repository + data dictionary",
+  "t": "Beispiel-Repository + Datenwörterbuch",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "97c945bca2519af5": {
+  "src": "one-time · vs {0} separately",
+  "t": "einmalig · statt {0} einzeln",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "98bb7ee7420c4efa": {
+  "src": "Top OBD-II Diagnostic Code Categories &amp; Monographs",
+  "t": "Wichtige OBD-II-Diagnosecode-Kategorien &amp; Monografien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "99c706ba919e28f2": {
+  "src": "MechanicDB OEM Complete — everything in the tier to the left",
+  "t": "MechanicDB OEM Complete — alles aus der Stufe links",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9a01561f2467c46b": {
+  "src": "Inquiry Topic",
+  "t": "Thema der Anfrage",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9db2cb3df63a4adb": {
+  "src": "{0} System",
+  "t": "System {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9e8a30f6bca2b606": {
+  "src": "Every code follows the {0}-character SAE {1} format where character {2} designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character {3} specifies SAE standard ('{4}') vs manufacturer-defined ('{5}'), character {6} designates the subsystem, and characters {7} represent the specific fault index.",
+  "t": "Jeder Code folgt dem {0}-stelligen SAE-{1}-Format: Stelle {2} bezeichnet das System (P=Antriebsstrang, C=Fahrwerk, B=Karosserie, U=Netzwerk), Stelle {3} unterscheidet SAE-Standard („{4}“) und herstellerdefiniert („{5}“), Stelle {6} bezeichnet das Teilsystem, und die Stellen {7} stehen für den konkreten Fehlerindex.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9f4b28648c4a378c": {
+  "src": "How is each OBD-II diagnostic trouble code structured inside MechanicDB?",
+  "t": "Wie ist jeder OBD-II-Diagnose-Fehlercode in MechanicDB aufgebaut?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9f9ed1f952cf1223": {
+  "src": "Need All {0} Codes as Data?",
+  "t": "Alle {0} Codes als Daten benötigt?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a0a6d28bc9ad6016": {
+  "src": "Cost range, labor hours, the step-by-step procedure and the remaining {0} ranked cause(s) for this code are in the licensed dataset.",
+  "t": "Kostenspanne, Arbeitsstunden, die Schritt-für-Schritt-Anleitung und die übrigen {0} priorisierten Ursachen für diesen Code sind im lizenzierten Datensatz enthalten.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a0e16748f9bc848d": {
+  "src": "Delivery formats",
+  "t": "Lieferformate",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a127283b45ac2bde": {
+  "src": "Get the database — CSV, Parquet, SQLite",
+  "t": "Datenbank erhalten — CSV, Parquet, SQLite",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a13facc558dc9218": {
+  "src": "The {0}-code sample is free under ODbL {1}. The full dataset ships under a commercial license — <2>{3}</2> for the {4} SAE codes, <5>{6}</5> for SAE plus all {7} OEM codes. Full terms and the per-make breakdown are on the <8>homepage</8>.",
+  "t": "Die Beispieldaten mit {0} Codes sind kostenlos unter ODbL {1}. Der vollständige Datensatz wird unter einer kommerziellen Lizenz geliefert — <2>{3}</2> für die {4} SAE-Codes, <5>{6}</5> für SAE plus alle {7} OEM-Codes. Vollständige Bedingungen und die Aufschlüsselung nach Marke finden Sie auf der <8>Startseite</8>.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a26ee0ae24edd320": {
+  "src": "check engine light diagnosis",
+  "t": "Diagnose der Motorkontrollleuchte",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a3141e24422c2e28": {
+  "src": "<0>{1}</0> parts mappings",
+  "t": "<0>{1}</0> Teilezuordnungen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a35472781ffbf8f4": {
+  "src": "Does MechanicDB cover manufacturer-specific OEM codes beyond the SAE {0} generic range?",
+  "t": "Deckt MechanicDB herstellerspezifische OEM-Codes über den generischen Bereich von SAE {0} hinaus ab?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a37a0d01e08e5c0c": {
+  "src": "Step-by-step diagnostic and repair instructions",
+  "t": "Schrittweise Diagnose- und Reparaturanleitungen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a39708c947f101d9": {
+  "src": "CSV + Parquet + SQLite delivery",
+  "t": "Lieferung als CSV + Parquet + SQLite",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a4b1e3f5caf73db8": {
+  "src": "Code {0}: {1}",
+  "t": "Code {0}: {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a5307986491d9a3f": {
+  "src": "{0} SAE-standard ({1}) + {2} manufacturer-specific across {3} makes",
+  "t": "{0} nach SAE-Standard ({1}) + {2} herstellerspezifische aus {3} Marken",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a5579ca47a3d2a63": {
+  "src": "SAE standard",
+  "t": "SAE-Standard",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a55a275aa676930d": {
+  "src": "Terms",
+  "t": "AGB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a5886be3ccea4ee3": {
+  "src": "{0} OBD-II fault family",
+  "t": "OBD-II-Fehlerfamilie {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a5c3c51062ca21b0": {
+  "src": "{0} System — {1} fault families | MechanicDB",
+  "t": "System {0} — {1} Fehlerfamilien | MechanicDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a6696bcae1b3601f": {
+  "src": "{0} manufacturer-specific OEM codes across {1} makes ({2} tier)",
+  "t": "{0} herstellerspezifische OEM-Codes aus {1} Marken (Stufe {2})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a6e7f8b7fdcdb81b": {
+  "src": "Sec {0} · You might also need",
+  "t": "Abschn. {0} · Das könnte Sie auch interessieren",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a83da8ecfd8384ee": {
+  "src": "Authored groupings that make the corpus navigable rather than a flat code list",
+  "t": "Redaktionell erstellte Gruppierungen, die den Bestand navigierbar machen statt einer flachen Codeliste",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a9001ebdb29bc9ea": {
+  "src": "Your Name / Company",
+  "t": "Ihr Name / Unternehmen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a9f0cece6e56b86b": {
+  "src": "Browse by fault family",
+  "t": "Nach Fehlerfamilie durchsuchen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aa58472b2883709e": {
+  "src": "🛑 Chassis &amp; ABS (C-Codes)",
+  "t": "🛑 Fahrwerk &amp; ABS (C-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aa636d6486992862": {
+  "src": "Licensing",
+  "t": "Lizenzierung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aaa0c8e0d67ff922": {
+  "src": "Inquiry successfully delivered! A database engineer will respond within {0} hours.",
+  "t": "Anfrage erfolgreich übermittelt! Ein Datenbankingenieur antwortet innerhalb von {0} Stunden.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aaca96a0b054c032": {
+  "src": "Quality gates",
+  "t": "Qualitätsprüfungen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aaf3045d8bd2a959": {
+  "src": "Rank {0}",
+  "t": "Rang {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ab191688a10c66a7": {
+  "src": "{0} ranked fixes",
+  "t": "{0} priorisierte Reparaturen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ab2fcd5e948e4f09": {
+  "src": "{0} — {1} OBD-II codes | MechanicDB",
+  "t": "{0} — {1} OBD-II-Codes | MechanicDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "abffd2237dff7e86": {
+  "src": "Everything in Standard",
+  "t": "Alles aus Standard",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aca956415f7ca3a2": {
+  "src": "<0>{1}</0> ranked fixes",
+  "t": "<0>{1}</0> priorisierte Reparaturen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ace17e480781eb53": {
+  "src": "Transmission",
+  "t": "Getriebe",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ad5e76b8d159aae9": {
+  "src": "Buy now · Instant download",
+  "t": "Jetzt kaufen · Sofortiger Download",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "adac69379a626c24": {
+  "src": "Code",
+  "t": "Code",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ade656ec3d722697": {
+  "src": "Transmitting Inquiry...",
+  "t": "Anfrage wird übermittelt …",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ae791791b94c531c": {
+  "src": "{0} OBD-II trouble codes in the {1} fault family ({2} system): what the module detects, and the full code…",
+  "t": "{0} OBD-II-Fehlercodes der Fehlerfamilie {1} (System {2}): was das Modul erkennt, und der vollständige…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aeaf14369a7b9218": {
+  "src": "Chassis &amp; ABS System (C-Codes)",
+  "t": "Fahrwerk- &amp; ABS-System (C-Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "afba25473dbd4833": {
+  "src": "MechanicDB is not a copy of SAE {0} or its Digital Annex ({1}) and cannot be resold as one — those are licensed per seat and redistribution is prohibited. If you need the normative document or its Failure Type Bytes, the legitimate lower-cost routes are a university engineering library's SAE Digital Library subscription, short-term or subscription access via Techstreet, the ANSI Webstore or Accuris, the SAE member discount, or the harmonized ISO {2} from a national standards body. If what you actually need is the factual code-to-meaning lookup rather than the standard itself, that is what MechanicDB sells for {3} SAE-range codes ({4} manufacturer-specific codes on the {5} tier) with descriptions, ranked probable causes and repair procedures, compiled from an MIT-licensed public source with no SAE document text reproduced. It carries no Failure Type Bytes and is not a citable normative reference.",
+  "t": "MechanicDB ist keine Kopie von SAE {0} oder dessen Digital Annex ({1}) und kann nicht als solche weiterverkauft werden — diese werden pro Arbeitsplatz lizenziert, und die Weitergabe ist untersagt. Wenn Sie das normative Dokument oder seine Failure Type Bytes benötigen, sind die legitimen günstigeren Wege ein Abonnement der SAE Digital Library über die Ingenieursbibliothek einer Hochschule, kurzfristiger oder abonnementbasierter Zugang über Techstreet, den ANSI Webstore oder Accuris, der Rabatt für SAE-Mitglieder oder die harmonisierte ISO {2} über eine nationale Normungsorganisation. Wenn Sie eigentlich die faktische Zuordnung von Code zu Bedeutung brauchen und nicht die Norm selbst, dann ist das genau das, was MechanicDB verkauft: für {3} Codes aus dem SAE-Bereich ({4} herstellerspezifische Codes in der Stufe {5}), mit Beschreibungen, priorisierten wahrscheinlichen Ursachen und Reparaturverfahren, zusammengestellt aus einer MIT-lizenzierten öffentlichen Quelle, ohne wiedergegebenen Text aus SAE-Dokumenten. Es enthält keine Failure Type Bytes und ist keine zitierfähige normative Referenz.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b0c9bb9826764bb5": {
+  "src": "Fuel &amp; air metering",
+  "t": "Kraftstoff- &amp; Luftzumessung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b10c4339f58de5b6": {
+  "src": "Pipe-delimited CSV, Apache Parquet and a relational SQLite database, with commercial application rights and instant download. Built for scan tools, shop software and research - not assembled one web page at a time.",
+  "t": "CSV mit Pipe-Trennzeichen, Apache Parquet und eine relationale SQLite-Datenbank, mit kommerziellen Nutzungsrechten und sofortigem Download. Gebaut für Diagnosegeräte, Werkstattsoftware und Forschung – nicht Webseite für Webseite zusammengetragen.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b1737e856cf79b34": {
+  "src": "Buy the bundle · Instant download",
+  "t": "Paket kaufen · Sofortiger Download",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b1c8168d6aa87eee": {
+  "src": "Holds",
+  "t": "Inhalt",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b21a946724d19f25": {
+  "src": "{0} · PK chain start",
+  "t": "{0} · Beginn der PK-Kette",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b4035d50a03b57e7": {
+  "src": "Ranked repair procedures with difficulty tier, parts-cost range, labor hours, and step-by-step instructions.",
+  "t": "Priorisierte Reparaturverfahren mit Schwierigkeitsstufe, Teilekostenspanne, Arbeitsstunden und Schritt-für-Schritt-Anleitung.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b48e1d97eaebd937": {
+  "src": "Sec {0} · Diagnostic Reference",
+  "t": "Abschn. {0} · Diagnose-Referenz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b4b08be0164738d4": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related code…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandter Code…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b5230ecdf4e78f0d": {
+  "src": "Schema",
+  "t": "Schema",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b60912bfb0e952e7": {
+  "src": "Four relational tables, normalized for databases and pre-joined for notebooks.",
+  "t": "Vier relationale Tabellen, normalisiert für Datenbanken und vorab verknüpft für Notebooks.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b969b8deb86ee423": {
+  "src": "Kaggle dataset",
+  "t": "Kaggle-Datensatz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b98b595627a87c0a": {
+  "src": "{0} OBD-II fault families and {1} diagnostic trouble codes in the {2} system, each linked to its own family page.",
+  "t": "{0} OBD-II-Fehlerfamilien und {1} Diagnose-Fehlercodes im System {2}, jeweils mit eigener Familienseite verlinkt.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "baf2f7cb3e37fa00": {
+  "src": "Join chain: {0} → {1} → {2}",
+  "t": "Join-Kette: {0} → {1} → {2}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bbe83cefc5f6fc22": {
+  "src": "Where the data comes from",
+  "t": "Woher die Daten stammen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bc0792d8dc81e8aa": {
+  "src": "System",
+  "t": "System",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bc1a1c7ace81995d": {
+  "src": "Standard license",
+  "t": "Standard-Lizenz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bc3023b36063a768": {
+  "src": "Page not found",
+  "t": "Seite nicht gefunden",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bd0b3597b798424e": {
+  "src": "Download the sample (ZIP)",
+  "t": "Beispieldaten herunterladen (ZIP)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bd525759fbd379c4": {
+  "src": "{0} System OBD-II Fault Families",
+  "t": "OBD-II-Fehlerfamilien im System {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "be28ace26dece1cb": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3}",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bf1be2b7ad07bae2": {
+  "src": "Definition",
+  "t": "Definition",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c05994d12b064765": {
+  "src": "Full family: {0}",
+  "t": "Gesamte Familie: {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c07ce100224fb6f6": {
+  "src": "{0} - OBD-II Fault Family ({1} Codes)",
+  "t": "{0} – OBD-II-Fehlerfamilie ({1} Codes)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c15a94379a5b21b3": {
+  "src": "{0} Fault Families",
+  "t": "Fehlerfamilien: {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c172d53120289d04": {
+  "src": "Codes that share one detection mechanism and one repair path are grouped into a single authored fault family — {0} of them across {1} SAE codes. The largest:",
+  "t": "Codes mit gemeinsamem Erkennungsmechanismus und gemeinsamem Reparaturweg sind in einer redaktionell erstellten Fehlerfamilie zusammengefasst — {0} davon über {1} SAE-Codes. Die größten:",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c20fabb079dc3116": {
+  "src": "CSV + Parquet, on GitHub and Kaggle",
+  "t": "CSV + Parquet, auf GitHub und Kaggle",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c21580c4a2dffd1d": {
+  "src": "Page not found — MechanicDB",
+  "t": "Seite nicht gefunden — MechanicDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c28b44f118c1ee7c": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related code in the same fault family.",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandter Code derselben Fehlerfamilie.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c3b0aefdc18d969d": {
+  "src": "Scan Tool / OBD App API Integration",
+  "t": "API-Integration für Diagnosegeräte / OBD-Apps",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c3d4fde051c11cdd": {
+  "src": "Looking up one specific code instead? Browse the <0>fault-family directory</0>.",
+  "t": "Suchen Sie stattdessen einen bestimmten Code? Durchsuchen Sie das <0>Verzeichnis der Fehlerfamilien</0>.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c40b66d10021d8b1": {
+  "src": "<0>{1}</0> SAE-standard codes — {2} generic ranges. Powertrain, chassis, body, and network, including hybrid/EV ({3}) and diesel aftertreatment.",
+  "t": "<0>{1}</0> Codes nach SAE-Standard — {2} generische Bereiche. Antriebsstrang, Fahrwerk, Karosserie und Netzwerk, einschließlich Hybrid/Elektro ({3}) und Diesel-Abgasnachbehandlung.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c42021d20aaba8df": {
+  "src": "Two instant downloads after one checkout",
+  "t": "Zwei sofortige Downloads nach einem Bezahlvorgang",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c54bc4ad16925a3a": {
+  "src": "MechanicDB OBD-II DTC Database",
+  "t": "MechanicDB OBD-II-DTC-Datenbank",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c595cf2015137501": {
+  "src": "one {0} / {1}",
+  "t": "ein einziges {0} / {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c605fa14d66f968a": {
+  "src": "The page you're looking for doesn't exist or may have moved.",
+  "t": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c67afdb16b9b6f89": {
+  "src": "OBD-II database",
+  "t": "OBD-II-Datenbank",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c9f55e0981521c39": {
+  "src": "— same fault family",
+  "t": "— dieselbe Fehlerfamilie",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cb53439a76083e86": {
+  "src": "Commercial license on both",
+  "t": "Kommerzielle Lizenz für beide",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cb8e455d5f12d3f3": {
+  "src": "Company Invoice / Purchase Order",
+  "t": "Firmenrechnung / Bestellung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cc0277b815089efe": {
+  "src": "SAE-only dataset: {0} codes, {1} fixes, {2} parts",
+  "t": "Datensatz nur SAE: {0} Codes, {1} Reparaturen, {2} Teile",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cde1df12deaf8b24": {
+  "src": "{0} curated codes ({1} SAE + {2} OEM) — the most-searched DTCs",
+  "t": "{0} kuratierte Codes ({1} SAE + {2} OEM) — die meistgesuchten DTCs",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ce8c5e5f94b91f02": {
+  "src": "— neighbouring code",
+  "t": "— benachbarter Code",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cec6c17f43a100ac": {
+  "src": "Fault Families",
+  "t": "Fehlerfamilien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cf01481f626d5127": {
+  "src": "Privacy",
+  "t": "Datenschutz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d05b54aaeaa6304e": {
+  "src": "The OBD-II trouble code database, as a file you can query.",
+  "t": "Die OBD-II-Fehlercode-Datenbank als Datei, die Sie abfragen können.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d3fa7513e2176325": {
+  "src": "<0>MechanicDB</0> › OBD-II DTC database",
+  "t": "<0>MechanicDB</0> › OBD-II-DTC-Datenbank",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d5180fa89b3bab33": {
+  "src": "Speed &amp; idle control",
+  "t": "Geschwindigkeits- &amp; Leerlaufregelung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d790b402d79ac1a7": {
+  "src": "Frequently Asked Questions",
+  "t": "Häufig gestellte Fragen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d8e8a962c786dc3e": {
+  "src": "jane@apexdiagnostics.com",
+  "t": "max@muster-diagnose.de",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d9e0c9b83da202bb": {
+  "src": "MechanicDB — The OBD-II Diagnostic &amp; Repair Database",
+  "t": "MechanicDB — Die OBD-II-Diagnose- &amp; Reparaturdatenbank",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d9eff510bd0cc137": {
+  "src": "Developer sample",
+  "t": "Beispieldaten für Entwickler",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "db76c114fa277c70": {
+  "src": "Code-to-definition mappings originate in SAE {0} / ISO {1} and are compiled from an MIT-licensed public compilation, with the upstream license committed alongside the data. The value layer — fault-family explanations, ranked procedures, difficulty tiers, and cost ranges — is original editorial content grounded in standard diagnostic practice. Cost and labor figures are estimates for typical US aftermarket parts and independent-shop labor, not quotes.",
+  "t": "Die Zuordnungen von Code zu Definition stammen aus SAE {0} / ISO {1} und sind aus einer MIT-lizenzierten öffentlichen Sammlung zusammengestellt; die Lizenz der Quelle ist zusammen mit den Daten eingecheckt. Die Wertschicht — Erläuterungen der Fehlerfamilien, priorisierte Verfahren, Schwierigkeitsstufen und Kostenspannen — ist eigenständig redaktionell erstellter Inhalt auf Grundlage gängiger Diagnosepraxis. Kosten- und Arbeitszeitangaben sind Schätzungen für typische US-Nachrüstteile und Arbeitszeit freier Werkstätten, keine Angebote.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "db8d1696c9919192": {
+  "src": "Coverage, stated honestly",
+  "t": "Abdeckung, ehrlich angegeben",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dd23353ee9485240": {
+  "src": "Yes. While the {0}-code sample is available under ODbL {1}, the complete {2}-code and {3}-fix dataset is available under an unrestricted commercial license delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database.",
+  "t": "Ja. Während die Beispieldaten mit {0} Codes unter ODbL {1} verfügbar sind, ist der vollständige Datensatz mit {2} Codes und {3} Reparaturen unter einer uneingeschränkten kommerziellen Lizenz erhältlich — geliefert als flache CSV-Dateien mit Pipe-Trennzeichen, Apache-Parquet-Tabellen und eine relationale SQLite-Datenbank.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dd35a81646abbc39": {
+  "src": "Provenance",
+  "t": "Herkunft",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dde056043a8a2430": {
+  "src": "Comprehensive automotive diagnostic dataset mapping {0} verified OBD-II trouble codes across {1} vehicle makes to {2} ranked repair procedures with DIY difficulty ratings and labor/parts cost estimations.",
+  "t": "Umfassender Kfz-Diagnosedatensatz, der {0} verifizierte OBD-II-Fehlercodes aus {1} Fahrzeugmarken {2} priorisierten Reparaturverfahren zuordnet, mit DIY-Schwierigkeitsgraden sowie Schätzungen der Arbeits- und Teilekosten.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dde328e66f02919b": {
+  "src": "Sec {0} · Provenance &amp; support",
+  "t": "Abschn. {0} · Herkunft &amp; Support",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "de9084c2576344f4": {
+  "src": "Ranked procedures with difficulty tier, parts cost min/max, labor hours, steps",
+  "t": "Priorisierte Verfahren mit Schwierigkeitsstufe, Teilekosten Min./Max., Arbeitsstunden, Schritten",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e0c43182635c50b7": {
+  "src": "System Hub",
+  "t": "System-Hub",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e1f629aa3e4d637c": {
+  "src": "Download the free {0}-code sample (ZIP)",
+  "t": "Kostenlose Beispieldaten mit {0} Codes herunterladen (ZIP)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e2d892fa093ce93f": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related codes in the {3} system.",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und verwandte Codes im System {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e42e37a97505b68c": {
+  "src": "Diagnostic &amp; Technical Explanation",
+  "t": "Diagnose &amp; technische Erläuterung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e47a05ddc5b2d4ce": {
+  "src": "Download the free {0}-code sample",
+  "t": "Kostenlose Beispieldaten mit {0} Codes herunterladen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e5124b41a6cc9140": {
+  "src": "Let us know target platforms, scan tool models, or billing requirements...",
+  "t": "Nennen Sie Zielplattformen, Diagnosegeräte-Modelle oder Abrechnungsanforderungen...",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e53b0cc154ad009c": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e5880d908a2cafa3": {
+  "src": "This page publishes the fault mechanism and the code index. The licensed dataset adds, for every one of the {0} codes, the full probability-ranked repair set ({1} procedures in total) with the fields deliberately withheld here:",
+  "t": "Diese Seite veröffentlicht den Fehlermechanismus und den Codeindex. Der lizenzierte Datensatz ergänzt für jeden der {0} Codes die vollständige, nach Wahrscheinlichkeit geordnete Reparaturliste (insgesamt {1} Verfahren) mit den Feldern, die hier bewusst zurückgehalten werden:",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e5da25372df58a7e": {
+  "src": "OBD-II {0} fault: {1}",
+  "t": "OBD-II-Fehler {0}: {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e71ecd1ae9735879": {
+  "src": "{0} OBD-II trouble codes in the {1} fault family ({2} system): what the module detects…",
+  "t": "{0} OBD-II-Fehlercodes der Fehlerfamilie {1} (System {2}): was das Modul erkennt…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e73b01cb8518745f": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandte…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e895929f225de710": {
+  "src": "Injector circuit",
+  "t": "Einspritzdüsenkreis",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e8a8e0ec3acd8ebe": {
+  "src": "Definition, system category, OEM flag and make, fault family, technical explanation",
+  "t": "Definition, Systemkategorie, OEM-Kennzeichen und Marke, Fehlerfamilie, technische Erläuterung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ea80315c43d90cd8": {
+  "src": "SAE extended",
+  "t": "SAE-erweitert",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ec0ed3ebc6d9a19d": {
+  "src": "Most probable cause",
+  "t": "Wahrscheinlichste Ursache",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ed2a5d74c4f3c1e4": {
+  "src": "Identical schema to the full dataset",
+  "t": "Identisches Schema wie der vollständige Datensatz",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ed5b54c0d0fce17a": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related codes…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste Ursache und {3} verwandte Codes…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ef6fd9d64a4be9a4": {
+  "src": "Commercial Licensing",
+  "t": "Kommerzielle Lizenzierung",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f275792f4f7444a5": {
+  "src": "SAE {0} &amp; Standards Licensing",
+  "t": "SAE {0} &amp; Lizenzierung von Normen",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f29b4de4b4f4a6ba": {
+  "src": "Computer circuits",
+  "t": "Steuergerätekreise",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f39b156120c76dc5": {
+  "src": "{0} per code, ordered by real-world likelihood, with difficulty tier, parts-cost range and labor hours",
+  "t": "{0} pro Code, geordnet nach realer Wahrscheinlichkeit, mit Schwierigkeitsstufe, Teilekostenspanne und Arbeitsstunden",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f4817c8afff36409": {
+  "src": "Code {0} (Right Front Wheel Speed Sensor)",
+  "t": "Code {0} (Raddrehzahlsensor vorne rechts)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f510dac48a601337": {
+  "src": "Diagnostic Categories",
+  "t": "Diagnosekategorien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f6bfd56cab7e2f98": {
+  "src": "Versioned releases from the deterministic pipeline",
+  "t": "Versionierte Releases aus der deterministischen Pipeline",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f7a4fcd61edab7e6": {
+  "src": "OBD-II Fault Family Directory",
+  "t": "Verzeichnis der OBD-II-Fehlerfamilien",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fa81aab139aafa60": {
+  "src": "Every fault family whose codes set on the {0} module or one of the sensors and actuators it controls. Each entry below is one authored fault family; open it for the diagnostic explanation and the full list of codes it covers.",
+  "t": "Jede Fehlerfamilie, deren Codes im Modul {0} oder in einem der von ihm gesteuerten Sensoren und Aktoren gesetzt werden. Jeder Eintrag unten ist eine redaktionell erstellte Fehlerfamilie; öffnen Sie ihn für die Diagnoseerläuterung und die vollständige Liste der erfassten Codes.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fa954454fbaccb99": {
+  "src": "What safety criteria determine whether a repair procedure is rated Easy DIY vs Professional Required?",
+  "t": "Nach welchen Sicherheitskriterien wird ein Reparaturverfahren als Easy DIY oder Professional Required eingestuft?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fc8542bd983657a5": {
+  "src": "OBD-II DTC Database Download — CSV, Parquet, SQLite",
+  "t": "OBD-II-DTC-Datenbank herunterladen — CSV, Parquet, SQLite",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "feba85bf7e25b5d2": {
+  "src": "I need SAE {0} but the licence is over my budget. Is MechanicDB an alternative?",
+  "t": "Ich benötige SAE {0}, aber die Lizenz übersteigt mein Budget. Ist MechanicDB eine Alternative?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fef78529a312fa8e": {
+  "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable…",
+  "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ }
+}
