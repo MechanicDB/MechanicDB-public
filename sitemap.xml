@@ -83820,4 +83820,10 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/obd2-dtc-database"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
   </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/stats/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

@@ -10,7 +10,8 @@
     "index.html",
     "obd2-dtc-database.html",
     "404.html",
-    "landing/*.html"
+    "landing/*.html",
+    "stats/index.html"
   ],
   "exclude": [
     "assets/*.html"

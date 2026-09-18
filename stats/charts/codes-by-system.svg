@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 222" width="720" height="222" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t">OBD-II fault codes by vehicle system</title><desc id="d">15,886 codes (SAE standard + manufacturer-specific) by first letter</desc>
+<rect width="720" height="222" fill="#1b1e22"/>
+<text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">OBD-II fault codes by vehicle system</text>
+<text x="20" y="44" font-size="12" fill="#9aa3ad">15,886 codes (SAE standard + manufacturer-specific) by first letter</text>
+<line x1="202" y1="56" x2="202" y2="182" stroke="#2e333a" stroke-width="1"/>
+<g><title>Powertrain (P-codes): 13,991 (88.1%)</title><rect x="0" y="62" width="720" height="30" fill="transparent"/><path d="M202 68.0 h414.0 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-414.0 z" fill="#ffb000"/><text x="192" y="81.0" text-anchor="end" fill="#f1efe8">Powertrain (P-codes)</text><text x="628.0" y="81.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">13,991 (88.1%)</text></g>
+<g><title>Chassis (C-codes): 478 (3.0%)</title><rect x="0" y="92" width="720" height="30" fill="transparent"/><path d="M202 98.0 h10.3 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-10.3 z" fill="#ffb000"/><text x="192" y="111.0" text-anchor="end" fill="#f1efe8">Chassis (C-codes)</text><text x="224.3" y="111.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">478 (3.0%)</text></g>
+<g><title>Body (B-codes): 189 (1.2%)</title><rect x="0" y="122" width="720" height="30" fill="transparent"/><rect x="202" y="128.0" width="5.6" height="18" fill="#ffb000"/><text x="192" y="141.0" text-anchor="end" fill="#f1efe8">Body (B-codes)</text><text x="215.6" y="141.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">189 (1.2%)</text></g>
+<g><title>Network (U-codes): 1,228 (7.7%)</title><rect x="0" y="152" width="720" height="30" fill="transparent"/><path d="M202 158.0 h32.7 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-32.7 z" fill="#ffb000"/><text x="192" y="171.0" text-anchor="end" fill="#f1efe8">Network (U-codes)</text><text x="246.7" y="171.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">1,228 (7.7%)</text></g>
+<text x="20" y="210" font-size="11" fill="#9aa3ad">Source: MechanicDB, mechanicdb.dataengineered.io/stats · build 2026-07-13 · CC BY 4.0</text>
+</svg>
