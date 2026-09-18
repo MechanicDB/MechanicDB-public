@@ -149,6 +149,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "163a06565dac7732": {
+  "src": "Fault code statistics",
+  "t": "Fehlercode-Statistiken",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "17d701db72194400": {
   "src": "Jane Doe / Apex Diagnostics Inc.",
   "t": "Max Mustermann / Muster Diagnose GmbH",
@@ -226,6 +232,12 @@
   "t": "Fehlerfamilien im System {0} ({1})",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "2086b21f8f492741": {
+  "src": "Statistics",
+  "t": "Statistiken",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "210b0f66f093d750": {
   "src": "join chain: {0}",

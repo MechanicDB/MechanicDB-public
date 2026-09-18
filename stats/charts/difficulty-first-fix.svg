@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 192" width="720" height="192" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t">DIY difficulty of the most probable fix per code</title><desc id="d">15,886 rank-1 fixes</desc>
+<rect width="720" height="192" fill="#1b1e22"/>
+<text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">DIY difficulty of the most probable fix per code</text>
+<text x="20" y="44" font-size="12" fill="#9aa3ad">15,886 rank-1 fixes</text>
+<line x1="202" y1="56" x2="202" y2="152" stroke="#2e333a" stroke-width="1"/>
+<g><title>Easy DIY: 12,794 (80.5%)</title><rect x="0" y="62" width="720" height="30" fill="transparent"/><path d="M202 68.0 h414.0 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-414.0 z" fill="#ffb000"/><text x="192" y="81.0" text-anchor="end" fill="#f1efe8">Easy DIY</text><text x="628.0" y="81.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">12,794 (80.5%)</text></g>
+<g><title>Moderate DIY: 2,482 (15.6%)</title><rect x="0" y="92" width="720" height="30" fill="transparent"/><path d="M202 98.0 h77.1 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-77.1 z" fill="#ffb000"/><text x="192" y="111.0" text-anchor="end" fill="#f1efe8">Moderate DIY</text><text x="291.1" y="111.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">2,482 (15.6%)</text></g>
+<g><title>Professional Required: 610 (3.8%)</title><rect x="0" y="122" width="720" height="30" fill="transparent"/><path d="M202 128.0 h15.9 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-15.9 z" fill="#ffb000"/><text x="192" y="141.0" text-anchor="end" fill="#f1efe8">Professional Required</text><text x="229.9" y="141.0" fill="#9aa3ad" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" font-size="11">610 (3.8%)</text></g>
+<text x="20" y="180" font-size="11" fill="#9aa3ad">Source: MechanicDB, mechanicdb.dataengineered.io/stats · build 2026-07-13 · CC BY 4.0</text>
+</svg>

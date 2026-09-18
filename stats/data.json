@@ -1,0 +1,808 @@
+{
+ "dataset": "MechanicDB",
+ "page": "https://mechanicdb.dataengineered.io/stats/",
+ "generated": "2026-09-18",
+ "build": "2026-07-13",
+ "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) - attribute with a link to the page",
+ "note": "Catalogue statistics: nothing here measures how often a code is set on real vehicles. Costs and labor hours are editorial estimates, not quotes.",
+ "totals": {
+  "codes": 15886,
+  "sae_codes": 9249,
+  "oem_codes": 6637,
+  "makes": 32,
+  "families": 647,
+  "fixes": 56561,
+  "parts": 75055,
+  "distinct_code_strings": 10047
+ },
+ "by_system": [
+  {
+   "system": "Powertrain",
+   "letter": "P",
+   "codes": 13991,
+   "share_pct": 88.1,
+   "sae": 7354,
+   "oem": 6637,
+   "families": 592
+  },
+  {
+   "system": "Chassis",
+   "letter": "C",
+   "codes": 478,
+   "share_pct": 3.0,
+   "sae": 478,
+   "oem": 0,
+   "families": 35
+  },
+  {
+   "system": "Body",
+   "letter": "B",
+   "codes": 189,
+   "share_pct": 1.2,
+   "sae": 189,
+   "oem": 0,
+   "families": 10
+  },
+  {
+   "system": "Network",
+   "letter": "U",
+   "codes": 1228,
+   "share_pct": 7.7,
+   "sae": 1228,
+   "oem": 0,
+   "families": 34
+  }
+ ],
+ "oem_codes_by_make": [
+  {
+   "make": "Volkswagen",
+   "codes": 528,
+   "share_pct": 8.0
+  },
+  {
+   "make": "Ford",
+   "codes": 413,
+   "share_pct": 6.2
+  },
+  {
+   "make": "Lincoln",
+   "codes": 413,
+   "share_pct": 6.2
+  },
+  {
+   "make": "Mercury",
+   "codes": 413,
+   "share_pct": 6.2
+  },
+  {
+   "make": "Buick",
+   "codes": 402,
+   "share_pct": 6.1
+  },
+  {
+   "make": "Cadillac",
+   "codes": 402,
+   "share_pct": 6.1
+  },
+  {
+   "make": "Chevrolet",
+   "codes": 402,
+   "share_pct": 6.1
+  },
+  {
+   "make": "GM",
+   "codes": 402,
+   "share_pct": 6.1
+  },
+  {
+   "make": "GMC",
+   "codes": 402,
+   "share_pct": 6.1
+  },
+  {
+   "make": "Saturn",
+   "codes": 402,
+   "share_pct": 6.1
+  },
+  {
+   "make": "Oldsmobile",
+   "codes": 401,
+   "share_pct": 6.0
+  },
+  {
+   "make": "Chrysler",
+   "codes": 282,
+   "share_pct": 4.2
+  },
+  {
+   "make": "BMW",
+   "codes": 250,
+   "share_pct": 3.8
+  },
+  {
+   "make": "Mazda",
+   "codes": 233,
+   "share_pct": 3.5
+  },
+  {
+   "make": "Jaguar",
+   "codes": 163,
+   "share_pct": 2.5
+  },
+  {
+   "make": "Pontiac",
+   "codes": 115,
+   "share_pct": 1.7
+  },
+  {
+   "make": "Plymouth",
+   "codes": 113,
+   "share_pct": 1.7
+  },
+  {
+   "make": "Dodge",
+   "codes": 97,
+   "share_pct": 1.5
+  },
+  {
+   "make": "Jeep",
+   "codes": 97,
+   "share_pct": 1.5
+  },
+  {
+   "make": "Acura",
+   "codes": 94,
+   "share_pct": 1.4
+  },
+  {
+   "make": "Honda",
+   "codes": 94,
+   "share_pct": 1.4
+  },
+  {
+   "make": "Infiniti",
+   "codes": 94,
+   "share_pct": 1.4
+  },
+  {
+   "make": "Subaru",
+   "codes": 93,
+   "share_pct": 1.4
+  },
+  {
+   "make": "Kia",
+   "codes": 76,
+   "share_pct": 1.1
+  },
+  {
+   "make": "Nissan",
+   "codes": 59,
+   "share_pct": 0.9
+  },
+  {
+   "make": "Lexus",
+   "codes": 49,
+   "share_pct": 0.7
+  },
+  {
+   "make": "Toyota",
+   "codes": 45,
+   "share_pct": 0.7
+  },
+  {
+   "make": "Mitsubishi",
+   "codes": 33,
+   "share_pct": 0.5
+  },
+  {
+   "make": "Mercedes-Benz",
+   "codes": 32,
+   "share_pct": 0.5
+  },
+  {
+   "make": "Geo",
+   "codes": 19,
+   "share_pct": 0.3
+  },
+  {
+   "make": "Suzuki",
+   "codes": 17,
+   "share_pct": 0.3
+  },
+  {
+   "make": "Audi",
+   "codes": 2,
+   "share_pct": 0.0
+  }
+ ],
+ "code_strings_shared_across_makes": {
+  "oem_strings": 798,
+  "defined_by_more_than_one_make": 745,
+  "overlapping_sae": 0,
+  "top": [
+   {
+    "code": "P1121",
+    "makes": 21,
+    "distinct_meanings": 9
+   },
+   {
+    "code": "P1690",
+    "makes": 21,
+    "distinct_meanings": 7
+   },
+   {
+    "code": "P1105",
+    "makes": 20,
+    "distinct_meanings": 8
+   },
+   {
+    "code": "P1243",
+    "makes": 20,
+    "distinct_meanings": 6
+   },
+   {
+    "code": "P1410",
+    "makes": 20,
+    "distinct_meanings": 8
+   },
+   {
+    "code": "P1500",
+    "makes": 20,
+    "distinct_meanings": 10
+   },
+   {
+    "code": "P1705",
+    "makes": 20,
+    "distinct_meanings": 9
+   },
+   {
+    "code": "P1122",
+    "makes": 19,
+    "distinct_meanings": 9
+   },
+   {
+    "code": "P1300",
+    "makes": 19,
+    "distinct_meanings": 8
+   },
+   {
+    "code": "P1450",
+    "makes": 19,
+    "distinct_meanings": 8
+   },
+   {
+    "code": "P1795",
+    "makes": 19,
+    "distinct_meanings": 8
+   },
+   {
+    "code": "P1120",
+    "makes": 18,
+    "distinct_meanings": 10
+   },
+   {
+    "code": "P1361",
+    "makes": 18,
+    "distinct_meanings": 8
+   },
+   {
+    "code": "P1362",
+    "makes": 18,
+    "distinct_meanings": 7
+   },
+   {
+    "code": "P1408",
+    "makes": 18,
+    "distinct_meanings": 7
+   }
+  ]
+ },
+ "fault_families": {
+  "top": [
+   {
+    "family": "ignition coil control circuit",
+    "codes": 397,
+    "share_pct": 2.5,
+    "system": "Powertrain"
+   },
+   {
+    "family": "throttle position sensor circuit",
+    "codes": 334,
+    "share_pct": 2.1,
+    "system": "Powertrain"
+   },
+   {
+    "family": "fuel injector circuit",
+    "codes": 286,
+    "share_pct": 1.8,
+    "system": "Powertrain"
+   },
+   {
+    "family": "lost comm powertrain module",
+    "codes": 229,
+    "share_pct": 1.4,
+    "system": "Network"
+   },
+   {
+    "family": "pressure control solenoid circuit",
+    "codes": 221,
+    "share_pct": 1.4,
+    "system": "Powertrain"
+   },
+   {
+    "family": "shift solenoid circuit",
+    "codes": 207,
+    "share_pct": 1.3,
+    "system": "Powertrain"
+   },
+   {
+    "family": "vvt actuator circuit",
+    "codes": 193,
+    "share_pct": 1.2,
+    "system": "Powertrain"
+   },
+   {
+    "family": "pcm internal processor fault",
+    "codes": 176,
+    "share_pct": 1.1,
+    "system": "Powertrain"
+   },
+   {
+    "family": "o2 sensor slow response",
+    "codes": 173,
+    "share_pct": 1.1,
+    "system": "Powertrain"
+   },
+   {
+    "family": "serial communication link fault",
+    "codes": 153,
+    "share_pct": 1.0,
+    "system": "Powertrain"
+   },
+   {
+    "family": "instrument output circuit",
+    "codes": 150,
+    "share_pct": 0.9,
+    "system": "Powertrain"
+   },
+   {
+    "family": "wheel speed sensor circuit",
+    "codes": 145,
+    "share_pct": 0.9,
+    "system": "Chassis"
+   },
+   {
+    "family": "o2 heater circuit",
+    "codes": 142,
+    "share_pct": 0.9,
+    "system": "Powertrain"
+   },
+   {
+    "family": "cruise control input switch circuit",
+    "codes": 133,
+    "share_pct": 0.8,
+    "system": "Powertrain"
+   },
+   {
+    "family": "ect sensor circuit",
+    "codes": 133,
+    "share_pct": 0.8,
+    "system": "Powertrain"
+   }
+  ],
+  "fixes_per_code": [
+   {
+    "fixes": 3,
+    "codes": 7365,
+    "share_pct": 46.4
+   },
+   {
+    "fixes": 4,
+    "codes": 8139,
+    "share_pct": 51.2
+   },
+   {
+    "fixes": 5,
+    "codes": 382,
+    "share_pct": 2.4
+   }
+  ],
+  "top_rank1_fix_titles": [
+   {
+    "title": "Inspect and reseat the ignition coil connector",
+    "codes": 397
+   },
+   {
+    "title": "Inspect and clean throttle/pedal position sensor connector",
+    "codes": 334
+   },
+   {
+    "title": "Inspect and clean fuel injector connector",
+    "codes": 286
+   },
+   {
+    "title": "Check the module's dedicated fuse and battery/ground connections",
+    "codes": 229
+   },
+   {
+    "title": "Verify fluid level and condition before solenoid diagnosis",
+    "codes": 221
+   },
+   {
+    "title": "Check transmission fluid level and filter condition",
+    "codes": 207
+   },
+   {
+    "title": "Inspect and reseat VVT solenoid connector",
+    "codes": 193
+   },
+   {
+    "title": "Verify battery/charging voltage before further diagnosis",
+    "codes": 176
+   },
+   {
+    "title": "Inspect for contamination sources (oil, coolant, silicone) reaching the exhaust",
+    "codes": 173
+   },
+   {
+    "title": "Check transmission fluid level and condition",
+    "codes": 166
+   },
+   {
+    "title": "Compare live three-phase current data with a scan tool",
+    "codes": 161
+   },
+   {
+    "title": "Check network wiring for obvious damage near recent repairs",
+    "codes": 153
+   }
+  ]
+ },
+ "difficulty": {
+  "all_fixes": [
+   {
+    "level": "Easy DIY",
+    "fixes": 15025,
+    "share_pct": 26.6
+   },
+   {
+    "level": "Moderate DIY",
+    "fixes": 22246,
+    "share_pct": 39.3
+   },
+   {
+    "level": "Professional Required",
+    "fixes": 19290,
+    "share_pct": 34.1
+   }
+  ],
+  "rank1_fixes": [
+   {
+    "level": "Easy DIY",
+    "fixes": 12794,
+    "share_pct": 80.5
+   },
+   {
+    "level": "Moderate DIY",
+    "fixes": 2482,
+    "share_pct": 15.6
+   },
+   {
+    "level": "Professional Required",
+    "fixes": 610,
+    "share_pct": 3.8
+   }
+  ],
+  "by_system": [
+   {
+    "system": "Powertrain",
+    "fixes": 48961,
+    "easy_diy": 13658,
+    "moderate_diy": 19471,
+    "professional_required": 15832
+   },
+   {
+    "system": "Chassis",
+    "fixes": 1900,
+    "easy_diy": 295,
+    "moderate_diy": 742,
+    "professional_required": 863
+   },
+   {
+    "system": "Body",
+    "fixes": 756,
+    "easy_diy": 60,
+    "moderate_diy": 237,
+    "professional_required": 459
+   },
+   {
+    "system": "Network",
+    "fixes": 4944,
+    "easy_diy": 1012,
+    "moderate_diy": 1796,
+    "professional_required": 2136
+   }
+  ]
+ },
+ "parts_cost_usd": {
+  "fixes_with_range": 56561,
+  "groups": [
+   {
+    "group": "All fixes",
+    "fixes": 56561,
+    "median_min": 15.0,
+    "median_max": 60.0,
+    "mean_max": 184.0,
+    "median_labor": 0.8
+   },
+   {
+    "group": "Most probable cause (rank 1)",
+    "fixes": 15886,
+    "median_min": 8.0,
+    "median_max": 25.0,
+    "mean_max": 34.7,
+    "median_labor": 0.4
+   },
+   {
+    "group": "Easy DIY",
+    "fixes": 15025,
+    "median_min": 6.0,
+    "median_max": 25.0,
+    "mean_max": 30.3,
+    "median_labor": 0.4
+   },
+   {
+    "group": "Moderate DIY",
+    "fixes": 22246,
+    "median_min": 20.0,
+    "median_max": 70.0,
+    "mean_max": 106.3,
+    "median_labor": 0.8
+   },
+   {
+    "group": "Professional Required",
+    "fixes": 19290,
+    "median_min": 40.0,
+    "median_max": 200.0,
+    "mean_max": 393.3,
+    "median_labor": 1.5
+   }
+  ],
+  "by_system": [
+   {
+    "system": "Powertrain",
+    "fixes": 48961,
+    "median_min": 15.0,
+    "median_max": 63.0,
+    "median_labor": 0.8
+   },
+   {
+    "system": "Chassis",
+    "fixes": 1900,
+    "median_min": 10.0,
+    "median_max": 45.0,
+    "median_labor": 0.7
+   },
+   {
+    "system": "Body",
+    "fixes": 756,
+    "median_min": 10.0,
+    "median_max": 40.0,
+    "median_labor": 0.6
+   },
+   {
+    "system": "Network",
+    "fixes": 4944,
+    "median_min": 20.0,
+    "median_max": 85.0,
+    "median_labor": 1.0
+   }
+  ],
+  "upper_estimate_buckets": [
+   {
+    "bucket": "under $50",
+    "fixes": 21394,
+    "share_pct": 37.8
+   },
+   {
+    "bucket": "$50 to $99",
+    "fixes": 14428,
+    "share_pct": 25.5
+   },
+   {
+    "bucket": "$100 to $249",
+    "fixes": 9530,
+    "share_pct": 16.8
+   },
+   {
+    "bucket": "$250 to $499",
+    "fixes": 5702,
+    "share_pct": 10.1
+   },
+   {
+    "bucket": "$500 to $999",
+    "fixes": 4279,
+    "share_pct": 7.6
+   },
+   {
+    "bucket": "$1,000 and above",
+    "fixes": 1228,
+    "share_pct": 2.2
+   }
+  ],
+  "max_upper_estimate": 5862.0,
+  "highest": [
+   {
+    "fix": "Replace the HV battery pack (or the worst-performing modules)",
+    "upper_estimate": 5862.0,
+    "fixes": 30
+   },
+   {
+    "fix": "De-energize the HV pack and correct the HV battery pack system-level voltage/current monitor fault at its source",
+    "upper_estimate": 3942.0,
+    "fixes": 16
+   },
+   {
+    "fix": "Replace ash-restricted DPF (high reading)",
+    "upper_estimate": 3500.0,
+    "fixes": 4
+   },
+   {
+    "fix": "Replace ash-saturated DPF",
+    "upper_estimate": 3500.0,
+    "fixes": 2
+   },
+   {
+    "fix": "Replace saturated DPF",
+    "upper_estimate": 3500.0,
+    "fixes": 4
+   },
+   {
+    "fix": "Replace saturated DPF after failed regen",
+    "upper_estimate": 3500.0,
+    "fixes": 2
+   },
+   {
+    "fix": "Replace the planetary gear set (or transmission)",
+    "upper_estimate": 3500.0,
+    "fixes": 1
+   },
+   {
+    "fix": "De-energize the HV pack and correct the HV battery module section fault at its source",
+    "upper_estimate": 3477.0,
+    "fixes": 24
+   }
+  ]
+ },
+ "labor_hours": {
+  "fixes_with_estimate": 56561,
+  "median": 0.8,
+  "max": 10.0,
+  "buckets": [
+   {
+    "bucket": "0.5 h or less",
+    "fixes": 16536,
+    "share_pct": 29.2
+   },
+   {
+    "bucket": "0.6 to 1.0 h",
+    "fixes": 18228,
+    "share_pct": 32.2
+   },
+   {
+    "bucket": "1.1 to 2.0 h",
+    "fixes": 19126,
+    "share_pct": 33.8
+   },
+   {
+    "bucket": "2.1 to 4.0 h",
+    "fixes": 2043,
+    "share_pct": 3.6
+   },
+   {
+    "bucket": "over 4 h",
+    "fixes": 628,
+    "share_pct": 1.1
+   }
+  ],
+  "median_by_difficulty": [
+   {
+    "level": "Easy DIY",
+    "median_hours": 0.4
+   },
+   {
+    "level": "Moderate DIY",
+    "median_hours": 0.8
+   },
+   {
+    "level": "Professional Required",
+    "median_hours": 1.5
+   }
+  ]
+ },
+ "parts": {
+  "mappings": 75055,
+  "distinct_items": 1250,
+  "mean_per_fix": 1.33,
+  "fixes_without_mapping": 0,
+  "per_fix": [
+   {
+    "parts": 1,
+    "fixes": 38434,
+    "share_pct": 68.0
+   },
+   {
+    "parts": 2,
+    "fixes": 17760,
+    "share_pct": 31.4
+   },
+   {
+    "parts": 3,
+    "fixes": 367,
+    "share_pct": 0.6
+   }
+  ],
+  "most_mapped": [
+   {
+    "item": "Automotive wiring repair kit (solder + heat-shrink)",
+    "fixes": 8090,
+    "share_pct": 14.3
+   },
+   {
+    "item": "Electrical contact cleaner",
+    "fixes": 6626,
+    "share_pct": 11.7
+   },
+   {
+    "item": "Digital multimeter",
+    "fixes": 3460,
+    "share_pct": 6.1
+   },
+   {
+    "item": "Programming/subscription session",
+    "fixes": 1502,
+    "share_pct": 2.7
+   },
+   {
+    "item": "OBD-II / manufacturer scan tool session (shop supply)",
+    "fixes": 986,
+    "share_pct": 1.7
+   },
+   {
+    "item": "HV connector seal kit",
+    "fixes": 951,
+    "share_pct": 1.7
+   },
+   {
+    "item": "Automatic transmission fluid (manufacturer-spec)",
+    "fixes": 929,
+    "share_pct": 1.6
+   },
+   {
+    "item": "Automotive fuse assortment",
+    "fixes": 918,
+    "share_pct": 1.6
+   },
+   {
+    "item": "Transmission filter/pan gasket",
+    "fixes": 854,
+    "share_pct": 1.5
+   },
+   {
+    "item": "Dielectric grease",
+    "fixes": 846,
+    "share_pct": 1.5
+   },
+   {
+    "item": "Dielectric grease pack",
+    "fixes": 734,
+    "share_pct": 1.3
+   },
+   {
+    "item": "Replacement control module",
+    "fixes": 702,
+    "share_pct": 1.2
+   }
+  ]
+ }
+}

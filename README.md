@@ -62,6 +62,12 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 - **Repair procedures, difficulty ratings, cost ranges, and explanations** are original authored content grounded in standard diagnostic practice.
 - Every release is produced by a **deterministic, test-gated build pipeline**: referential integrity, anti-template uniqueness, and no-fabricated-codes gates; rebuilds are byte-identical.
 
+## Statistics page (`/stats/`)
+
+[mechanicdb.dataengineered.io/stats/](https://mechanicdb.dataengineered.io/stats/) publishes aggregate statistics computed from the **full** catalogue — codes by vehicle system and make, code strings defined by the most makes, the largest fault families, the DIY share of the ranked fixes, parts-cost and labor-hour estimates, the most-mapped parts — as a citable page with embeddable SVG charts and a machine-readable `stats/data.json`. They describe the catalogue, not how often codes occur on the road, and the page says so. The figures and charts are **CC BY 4.0**: reuse them with a link to the page. Only aggregates are published; the code-level records stay in the commercial dataset.
+
+`scripts/generate_stats.py` regenerates `stats/` from the private pipeline's `commercial_dataset/mechanicdb.sqlite` after each build (see the private repo's RELEASING.md); the private `generate_public_pages.py` lists `/stats/` in the sitemap, then run the i18n `build` + `check`.
+
 ## Pricing
 
 | Tier | What | Price |
