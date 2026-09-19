@@ -8,7 +8,7 @@
 
 [![Dataset License: ODbL v1.0](https://img.shields.io/badge/Dataset_License-ODbL_v1.0-blue.svg)](https://opendatacommons.org/licenses/odbl/1-0/)
 [![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
-[![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database)
+[![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)
 [![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-mechanicdb-F59E0B.svg)](https://mechanicdb.dataengineered.io/)
@@ -121,4 +121,4 @@ Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTIN
 
 ## Also on Kaggle & Hugging Face
 
-The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Repair Database](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database)** (with a [starter notebook](https://www.kaggle.com/code/ahtiticheamine/decode-your-check-engine-light-with-mechanicdb)) — and on Hugging Face as **[Ichlibitiche/mechanicdb-obd2-repair-sample](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)** (4 parquet configs, loadable with `datasets`).
+The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Repair Database](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)** (with a [starter notebook](https://www.kaggle.com/code/dataengineered/decode-your-check-engine-light-with-mechanicdb)) — and on Hugging Face as **[Ichlibitiche/mechanicdb-obd2-repair-sample](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)** (4 parquet configs, loadable with `datasets`).
