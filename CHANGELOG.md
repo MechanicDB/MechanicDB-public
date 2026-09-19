@@ -39,6 +39,6 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
   compilation (see [SOURCES.md](SOURCES.md)); repair content is original
   authored material produced by a deterministic, test-gated pipeline.
 - Free 75-code sample published here and on
-  [Kaggle](https://www.kaggle.com/datasets/ahtiticheamine/mechanicdb-automotive-obd2-repair-database).
+  [Kaggle](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database).
 
 Full dataset & updates: [mechanicdb](https://mechanicdb.dataengineered.io/)

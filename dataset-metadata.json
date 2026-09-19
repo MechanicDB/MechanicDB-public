@@ -1,7 +1,7 @@
 {
   "title": "MechanicDB: OBD-II Diagnostic & Repair Database",
   "subtitle": "Automotive OBD-II trouble codes with ranked repair procedures & cost estimates",
-  "id": "ahtiticheamine/mechanicdb-automotive-obd2-repair-database",
+  "id": "dataengineered/mechanicdb-automotive-obd2-repair-database",
   "licenses": [
     {
       "name": "ODbL-1.0"
