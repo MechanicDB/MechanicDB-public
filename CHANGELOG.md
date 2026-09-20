@@ -5,6 +5,10 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Site update — 2026-09-20
+
+- **Sale attribution**: every Stripe buy link carries `?client_reference_id=<brand>_<lang>_<surface>` (`home` / `landing`); the i18n build swaps the language token per locale and the delivery worker prints the id in the order email. Stripe does not store UTM parameters, so this is the only per-page attribution that reaches the order record (2026-09-20).
+
 ## 2026.07 (v2 — "OEM Complete") — 2026-07-12
 
 - **+6,637 manufacturer-specific (OEM) codes across 32 makes** merged into the
