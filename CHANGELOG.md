@@ -5,6 +5,35 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Heavy Duty (J1939) tier — release pending — 2026-09-21
+
+- **New standalone tier, MechanicDB Heavy Duty ($149, sold and delivered separately from
+  Standard/OEM Complete):** SAE J1939 SPN+FMI fault pairs read from published OEM fault
+  tables — Eaton, WABCO, Bendix, Deutz, John Deere, Navistar, Cummins, Caterpillar, PSI,
+  Perkins, Yanmar — mapped to authored short descriptions, fault families, explanations,
+  ranked fixes and part mappings across six tables (`j1939_fmi`, `j1939_spn`,
+  `j1939_faults`, `diagnostic_fixes`, `replacement_parts`, `j1939_fixes_joined`). Currently
+  measures **6,502 fault pairs · 1,536 SPN rows (per OEM for proprietary SPNs) · 25,608 ranked fixes · 8,365 part
+  mappings across 11 OEMs and 21 official-host sources**. Documented in
+  [DATA_DICTIONARY.md](DATA_DICTIONARY.md) section 6.
+- **This is not the SAE J1939 Digital Annex and contains no SAE text** — every row carries
+  its own `source_url` to the OEM's published fault table; descriptions, names and
+  explanations are our own words. The on-highway engine fault lists of Cummins, Detroit,
+  PACCAR, Volvo/Mack and Cat *trucks* are dealer-gated and are not in this tier.
+- New `difficulty_level` vocabulary for this tier only (`Driver check`, `Fleet technician`,
+  `Dealer / specialist`) — the Standard/OEM tiers' DIY-oriented scale doesn't fit
+  heavy-duty trucks.
+- **Free sample:** 100 of the 6,502 faults (deterministically sampled so every one of the
+  11 OEMs is represented), their SPNs, ranked fixes, part mappings and the full 32-row FMI
+  register, added to this repository under [`samples/heavyduty/`](samples/heavyduty/) —
+  same ODbL v1.0 terms as the existing OBD-II sample.
+- Shopfront (mechanicdb.dataengineered.io): new "Heavy Duty" pricing card, a J1939
+  OEM/controller/pairs coverage table, and two new FAQ entries ("Is this the SAE J1939
+  Digital Annex?" and "Which truck engines are covered?").
+- **Release pending:** `claims.json["heavyduty"]["released"]` is `false` — no Stripe link
+  yet. The shopfront shows an "Ask for early access" call-to-action (support form) instead of a
+  buy button until the tier launches.
+
 ## Site update — 2026-09-20
 
 - **Sale attribution**: every Stripe buy link carries `?client_reference_id=<brand>_<lang>_<surface>` (`home` / `landing`); the i18n build swaps the language token per locale and the delivery worker prints the id in the order email. Stripe does not store UTM parameters, so this is the only per-page attribution that reaches the order record (2026-09-20).

@@ -83,6 +83,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "0a907fb25789793a": {
+  "src": "{0} ranked fixes with editorial cost and labour estimates",
+  "t": "{0} priorisierte Reparaturen mit redaktionellen Kosten- und Arbeitszeitschätzungen",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "0be198dcc3a163ef": {
   "src": "All <0>{1}</0> manufacturer-specific codes, by marque. Coverage is <2>not even</2> — it is strongest on US-market brands, and some marques are thin. We publish the distribution so you can check the makes you care about before buying rather than after. The <3>{4}</3> SAE-universal codes apply to every vehicle regardless of make.",
   "t": "Alle <0>{1}</0> herstellerspezifischen Codes nach Marke. Die Abdeckung ist <2>nicht gleichmäßig</2> – am stärksten bei Marken des US-Markts, einige Marken sind dünn besetzt. Wir veröffentlichen die Verteilung, damit Sie die für Sie relevanten Marken vor dem Kauf prüfen können statt danach. Die <3>{4}</3> SAE-universellen Codes gelten für jedes Fahrzeug, unabhängig von der Marke.",
@@ -274,6 +280,12 @@
   "t": "{0} Min./Max. USD",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "245a057c3ebae7b6": {
+  "src": "{0} {1} SPN/FMI fault pairs across {2} OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<3>coverage</3>)",
+  "t": "{0} {1} SPN/FMI-Fehlerpaare bei {2} Herstellern — Getriebe, ABS, Off-Highway- und Stationärmotoren, Karosseriesteuergeräte (<3>Abdeckung</3>)",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
  },
  "2635673694e42c91": {
   "src": "Aftermarket part names per fix, with catalog search URLs",
@@ -575,6 +587,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "55d841cacb2d2eac": {
+  "src": "Which heavy-duty systems are covered?",
+  "t": "Welche Nutzfahrzeugsysteme werden abgedeckt?",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "56e96cdc42f75413": {
   "src": "MechanicDB Automotive OBD-II Diagnostic &amp; Repair Database",
   "t": "MechanicDB OBD-II-Diagnose- &amp; Reparaturdatenbank für Kraftfahrzeuge",
@@ -677,6 +695,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "633be3e24ed83862": {
+  "src": "Heavy Duty",
+  "t": "Heavy Duty",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "66efdb5a0cb44bd9": {
   "src": "{0} — {1} families, {2} codes",
   "t": "{0} — {1} Familien, {2} Codes",
@@ -713,6 +737,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "70bfbd782aa53a68": {
+  "src": "Transmission, ABS/ESC, engine ECU, aftertreatment and body controllers across {0} OEMs: {1} — off-highway, stationary, marine, agricultural and specialty applications. On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included.",
+  "t": "Getriebe, ABS/ESC, Motorsteuergerät, Abgasnachbehandlung und Karosseriesteuergeräte bei {0} Herstellern: {1} — Off-Highway-, Stationär-, Marine-, Landwirtschafts- und Spezialanwendungen. Fehlercodelisten für On-Highway-Motoren von Cummins, Detroit Diesel, PACCAR, Volvo/Mack und Caterpillar-Lkw stammen aus Händlerportalen und sind nicht enthalten.",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "70d3a544a361354a": {
   "src": "Close modal",
   "t": "Dialog schließen",
@@ -748,6 +778,12 @@
   "t": "Diagnose-Decoder",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "75c759931f8cc2cc": {
+  "src": "Fault pairs",
+  "t": "Fehlerpaare",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
  },
  "76f20774cb9169ea": {
   "src": "MechanicDB — {0} OBD-II Trouble Codes &amp; Ranked Fixes",
@@ -875,6 +911,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "87f66a8e34d18805": {
+  "src": "Heavy Duty coverage by OEM",
+  "t": "Heavy Duty-Abdeckung nach Hersteller",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "89b380366b021299": {
   "src": "probability-ranked · parts cost in USD · labor in shop hours — {0} of the code's ranked fixes shown",
   "t": "nach Wahrscheinlichkeit geordnet · Teilekosten in USD · Arbeitszeit in Werkstattstunden — {0} der priorisierten Reparaturen dieses Codes angezeigt",
@@ -1001,6 +1043,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9eeda41d96871b64": {
+  "src": "Per-row source URL to the published OEM fault table — no SAE text, not the {0} Digital Annex",
+  "t": "Quell-URL pro Zeile zur veröffentlichten OEM-Fehlertabelle — kein SAE-Text, nicht der Digital Annex von {0}",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "9f4b28648c4a378c": {
   "src": "How is each OBD-II diagnostic trouble code structured inside MechanicDB?",
   "t": "Wie ist jeder OBD-II-Diagnose-Fehlercode in MechanicDB aufgebaut?",
@@ -1054,6 +1102,12 @@
   "t": "Deckt MechanicDB herstellerspezifische OEM-Codes über den generischen Bereich von SAE {0} hinaus ab?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a36a5ffa6e0dcfb6": {
+  "src": "Controller",
+  "t": "Steuergerät",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
  },
  "a37a0d01e08e5c0c": {
   "src": "Step-by-step diagnostic and repair instructions",
@@ -1222,6 +1276,12 @@
   "t": "Fahrwerk- &amp; ABS-System (C-Codes)",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "af1e1eb98bc6b044": {
+  "src": "Ask for early access",
+  "t": "Frühzugang anfragen",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
  },
  "afba25473dbd4833": {
   "src": "MechanicDB is not a copy of SAE {0} or its Digital Annex ({1}) and cannot be resold as one — those are licensed per seat and redistribution is prohibited. If you need the normative document or its Failure Type Bytes, the legitimate lower-cost routes are a university engineering library's SAE Digital Library subscription, short-term or subscription access via Techstreet, the ANSI Webstore or Accuris, the SAE member discount, or the harmonized ISO {2} from a national standards body. If what you actually need is the factual code-to-meaning lookup rather than the standard itself, that is what MechanicDB sells for {3} SAE-range codes ({4} manufacturer-specific codes on the {5} tier) with descriptions, ranked probable causes and repair procedures, compiled from an MIT-licensed public source with no SAE document text reproduced. It carries no Failure Type Bytes and is not a citable normative reference.",
@@ -1499,6 +1559,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d072e3172f65284a": {
+  "src": "{0} published OEM fault-code documents across {1} manufacturers — transmission, ABS/ESC, engine, aftertreatment and body controllers for off-highway, stationary and specialty applications. Each row links to the source document it was taken from.",
+  "t": "{0} veröffentlichte OEM-Fehlercode-Dokumente bei {1} Herstellern — Getriebe, ABS/ESC, Motor, Abgasnachbehandlung und Karosseriesteuergeräte für Off-Highway-, Stationär- und Spezialanwendungen. Jede Zeile verlinkt auf das Quelldokument, aus dem sie stammt.",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "d3fa7513e2176325": {
   "src": "<0>MechanicDB</0> › OBD-II DTC database",
   "t": "<0>MechanicDB</0> › OBD-II-DTC-Datenbank",
@@ -1583,11 +1649,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e1e25124a9a8cf97": {
+  "src": "Source document",
+  "t": "Quelldokument",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "e1f629aa3e4d637c": {
   "src": "Download the free {0}-code sample (ZIP)",
   "t": "Kostenlose Beispieldaten mit {0} Codes herunterladen (ZIP)",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "e25c64043f80dd47": {
+  "src": "No. MechanicDB Heavy Duty does not reproduce the SAE {0} Digital Annex, any {1} DBC file, or SPN/FMI text licensed from SAE. Every fault pair is compiled from a published OEM fault-code document — a service manual, maintenance guide or DTC list hosted by the manufacturer itself — with our own wording and a per-row link to the document it came from.",
+  "t": "Nein. MechanicDB Heavy Duty gibt weder den SAE-{0}-Digital-Annex noch eine {1}-DBC-Datei oder von SAE lizenzierten SPN/FMI-Text wieder. Jedes Fehlerpaar wird aus einem veröffentlichten OEM-Fehlercode-Dokument zusammengestellt — einem Servicehandbuch, einer Wartungsanleitung oder einer vom Hersteller selbst gehosteten DTC-Liste — mit eigener Formulierung und einem Link pro Zeile zum Ursprungsdokument.",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
  },
  "e2d892fa093ce93f": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related codes in the {3} system.",
@@ -1727,6 +1805,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f9f68e884b5e4ee8": {
+  "src": "Is this the SAE {0} Digital Annex?",
+  "t": "Ist das der SAE-{0}-Digital-Annex?",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
+ },
  "fa81aab139aafa60": {
   "src": "Every fault family whose codes set on the {0} module or one of the sensors and actuators it controls. Each entry below is one authored fault family; open it for the diagnostic explanation and the full list of codes it covers.",
   "t": "Jede Fehlerfamilie, deren Codes im Modul {0} oder in einem der von ihm gesteuerten Sensoren und Aktoren gesetzt werden. Jeder Eintrag unten ist eine redaktionell erstellte Fehlerfamilie; öffnen Sie ihn für die Diagnoseerläuterung und die vollständige Liste der erfassten Codes.",
@@ -1756,5 +1840,11 @@
   "t": "OBD-II-Code {0}: {1}. Was das Modul {2} erkennt, die wahrscheinlichste…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ff781f5878afb52c": {
+  "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Every row in this tier links to the OEM document it was taken from; descriptions are written by us and no SAE {0} text is reproduced.",
+  "t": "Fehlercodelisten für On-Highway-Motoren von Cummins, Detroit Diesel, PACCAR, Volvo/Mack und Caterpillar-Lkw stammen aus Händlerportalen und sind nicht enthalten. Jede Zeile dieser Stufe verlinkt auf das OEM-Dokument, aus dem sie stammt; die Beschreibungen sind von uns verfasst, und es wird kein SAE-{0}-Text wiedergegeben.",
+  "by": "claude-sonnet-5",
+  "at": "2026-09-21"
  }
 }

@@ -1,0 +1,33 @@
+﻿fmi|fmi_name|failure_class|is_reserved
+0|Reading in-range but far too high|range_high|0
+1|Reading in-range but far too low|range_low|0
+2|Signal unstable, intermittent or implausible|erratic|0
+3|Circuit voltage high / short to supply|circuit_high|0
+4|Circuit voltage low / short to ground|circuit_low|0
+5|Current too low; open circuit|open_circuit|0
+6|Current too high; short to ground|short_ground|0
+7|Mechanical part not reacting or misadjusted|mechanical|0
+8|Wrong frequency, pulse width or period|frequency|0
+9|Message not arriving at expected rate|update_rate|0
+10|Value changing implausibly fast or slow|rate_of_change|0
+11|Fault detected, cause undetermined|unknown_cause|0
+12|Smart device or component defective|device|0
+13|Calibration data outside limits|calibration|0
+14|See manufacturer-specific instructions|special|0
+15|Slightly above normal range|range_high|0
+16|Moderately above normal range|range_high|0
+17|Slightly below normal range|range_low|0
+18|Moderately below normal range|range_low|0
+19|Network-received value flagged as error|network_error|0
+20|Value has drifted upward over time|drift_high|0
+21|Value has drifted downward over time|drift_low|0
+22|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+23|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+24|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+25|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+26|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+27|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+28|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+29|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+30|Reserved by SAE; some OEMs assign proprietary meanings|reserved|1
+31|Fault present; no further detail|condition|0
