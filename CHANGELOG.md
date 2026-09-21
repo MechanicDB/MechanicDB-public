@@ -13,7 +13,7 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
   Perkins, Yanmar — mapped to authored short descriptions, fault families, explanations,
   ranked fixes and part mappings across six tables (`j1939_fmi`, `j1939_spn`,
   `j1939_faults`, `diagnostic_fixes`, `replacement_parts`, `j1939_fixes_joined`). Currently
-  measures **6,502 fault pairs · 1,482 distinct SPNs · 25,608 ranked fixes · 8,364 part
+  measures **6,502 fault pairs · 1,536 SPN rows (per OEM for proprietary SPNs) · 25,608 ranked fixes · 8,365 part
   mappings across 11 OEMs and 21 official-host sources**. Documented in
   [DATA_DICTIONARY.md](DATA_DICTIONARY.md) section 6.
 - **This is not the SAE J1939 Digital Annex and contains no SAE text** — every row carries
@@ -31,8 +31,12 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
   OEM/controller/pairs coverage table, and two new FAQ entries ("Is this the SAE J1939
   Digital Annex?" and "Which truck engines are covered?").
 - **Release pending:** `claims.json["heavyduty"]["released"]` is `false` — no Stripe link
-  yet. The shopfront shows a "notify me" call-to-action instead of a buy button until the
-  tier launches.
+  yet. The shopfront shows an "Ask for early access" call-to-action (support form) instead of a
+  buy button until the tier launches.
+
+## Site update — 2026-09-20
+
+- **Sale attribution**: every Stripe buy link carries `?client_reference_id=<brand>_<lang>_<surface>` (`home` / `landing`); the i18n build swaps the language token per locale and the delivery worker prints the id in the order email. Stripe does not store UTM parameters, so this is the only per-page attribution that reaches the order record (2026-09-20).
 
 ## 2026.07 (v2 — "OEM Complete") — 2026-07-12
 
