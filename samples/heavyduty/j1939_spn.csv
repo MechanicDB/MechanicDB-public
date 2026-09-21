@@ -1,0 +1,97 @@
+﻿spn|spn_name|is_proprietary|oem_make|system_category|source_count
+27|EGR valve actuator position|0||Engine|4
+29|Secondary accelerator pedal position sensor|0||Engine|11
+51|Throttle valve position sensor|0||Air Intake|7
+70|Park brake switch|0||Brakes/ABS|3
+100|Engine oil pressure|0||Lubrication|13
+105|Intake manifold air temperature|0||Air Intake|12
+108|Barometric pressure sensor|0||Air Intake|10
+154|ABS controller auxiliary I/O circuit|0||Brakes/ABS|1
+157|Fuel rail pressure|0||Fuel|9
+160|Transmission countershaft speed|0||Transmission|2
+171|Engine coolant level sensor|0||Cooling|4
+172|Intake air temperature sensor|0||Air Intake|4
+188|Engine idle speed / configuration message|0||Engine|3
+524|Transmission selected gear|0||Transmission|2
+595|Cruise control active status|0||Engine|2
+598|Clutch pedal switch|0||Transmission|6
+627|Controller ignition/battery input voltage|0||Electrical|6
+629|Engine control unit internal fault|0||Engine|14
+651|Injector cylinder 1|0||Fuel|10
+653|Injector cylinder 3|0||Fuel|10
+654|Injector cylinder 4|0||Fuel|11
+705|Auxiliary I/O channel 5|0||Electrical|1
+767|Transmission reverse gear output|0||Transmission|2
+787|Transmission inertia brake solenoid|0||Transmission|2
+789|Wheel speed sensor, steer axle left|0||Brakes/ABS|4
+791|Wheel speed sensor, drive axle left|0||Brakes/ABS|4
+794|Wheel speed sensor, additional axle right|0||Brakes/ABS|4
+810|Wheel speed sensors reversed on axle (configuration)|0||Brakes/ABS|6
+1068|Brake demand sensor, secondary circuit|0||Brakes/ABS|2
+1076|Fuel injection pump metering valve|0||Fuel|5
+1136|Engine control unit (ECU) internal temperature|0||Electrical|5
+1146|Cylinder 4 exhaust temperature, right bank|0||Engine|1
+1239|Common rail (fuel) pressure sensor|0||Fuel|4
+1268|Ignition coil A primary circuit|0||Electrical|1
+1321|Starter enable relay circuit|0||Electrical|3
+1669|CAN bus communication fault (general)|0||Network|1
+2368|Parameter 2368 (role not stated by the OEM tables)|0||Body/Cab|1
+2622|Hill start assist (HSA) valve/lamp circuit|0||Brakes/ABS|2
+2659|EGR flow/temperature mismatch|0||Engine|3
+2970|Parameter 2970 (role not stated by the OEM tables)|0||Engine|2
+3216|NOx sensor, upstream of SCR|0||Aftertreatment|2
+3217|Oxygen (O2) sensor, bank 1 sensor 1|0||Aftertreatment|1
+3251|DPF differential pressure sensor|0||Aftertreatment|6
+3349|TSC1 (torque/speed control) message receive timeout|0||Network|2
+3452|PTO 1 request signal|0||Transmission|2
+3457|PTO 2 engage signal|0||Transmission|3
+3512|ECU sensor supply voltage 4, out-of-range fault|0||Electrical|3
+3651|Primary automatic drive selector (ADS) signal|0||Transmission|2
+3719|DPF/SCR regeneration status (backup/standby/inhibited)|0||Aftertreatment|3
+3822|EGR valve 2 position sensor|0||Engine|1
+3837|Parameter 3837 (role not stated by the OEM tables)|0||Engine|1
+3960|Auxiliary transmission range switch|0||Transmission|2
+4057|Windshield wiper motor circuit|0||Body/Cab|1
+4219|Shift rail B position sensor|0||Transmission|2
+4220|Shift rail C position sensor|0||Transmission|2
+4239|Fuel trim, bank 2 (lean/rich)|0||Fuel|1
+4340|DEF supply line heater circuit|0||Aftertreatment|1
+4363|Exhaust gas temperature sensor (SCR inlet/outlet)|0||Aftertreatment|1
+5099|Oil pressure / cold-engine indicator lamp|0||Instrument|1
+5491|DEF suction line heater circuit|0||Aftertreatment|1
+5615|Clutch engage solenoid 2|0||Transmission|2
+5900|Shift rail A, fore solenoid|0||Transmission|1
+5903|Shift rail D, fore solenoid|0||Transmission|2
+5909|Shift rail B, aft solenoid|0||Transmission|2
+5941|Shift rail D position sensor|0||Transmission|2
+5954|Shift rail D calibration|0||Transmission|2
+6146|Shift rail C operation status|0||Transmission|2
+6160|Alternate shift schedule selector|0||Transmission|2
+7107|DEF dosing pump circuit|0||Aftertreatment|1
+7941|Rail-road (hi-rail) mode switch|0||Transmission|1
+20874|Secondary automatic drive selector (ADS) operation status|0||Transmission|2
+516138|Machine-specific lamp output 3|0|Deutz|Body/Cab|1
+516346|Fuel injector current-rise fault (multiple cylinders)|0|Deutz|Fuel|1
+516657|Deutz parameter 516657 (role not stated)|0|Deutz|Engine|1
+518267|MSC inter-microcontroller communication link|0|Yanmar|Electrical|1
+520247|Steering angle parameter external timeout fault|1|WABCO|Brakes/ABS|1
+520259|Temperature sensor before intake valve|1|Deutz|Air Intake|1
+520321|Deutz parameter 520321 (role not stated)|1|Deutz|Engine|1
+520388|Main/secondary ECU CAN link|1|Deutz|Network|1
+520453|CAN receive frame ComMS_SWS19|1|Deutz|Network|1
+520510|Remote power module 4, channel 4 output|1|Navistar|Electrical|1
+520510|Wheel-speed plausibility, axle 5 right|1|WABCO|Brakes/ABS|1
+520530|ABS valve overheating protection (thermal cutoff)|1|WABCO|Brakes/ABS|1
+520542|Remote power module 7, channel 2 output|1|Navistar|Electrical|1
+520674|Body controller switch input circuit|1|Navistar|Body/Cab|1
+520816|Dash indicator LED circuit|1|Navistar|Instrument|1
+521006|Deutz parameter 521006 (role not stated)|1|Deutz|Engine|1
+523558|DCU internal supply voltage, rail/check 1-2|1|Yanmar|Electrical|1
+523615|Deutz parameter 523615 (role not stated)|1|Deutz|Engine|1
+523615|Supply module temperature PWM signal waveform|1|Yanmar|Aftertreatment|1
+523627|Supply module pressure level|1|Yanmar|Aftertreatment|1
+523911|Burner dosing valve|1|Deutz|Aftertreatment|1
+523935|NOx sensor after SCR|1|Deutz|Aftertreatment|1
+524052|CAN Main Secondary|1|Deutz|Network|1
+524147|Deutz parameter 524147 (role not stated)|1|Deutz|Engine|1
+524270|EEPROM parameter block 1 checksum fault|1|WABCO|Electrical|1

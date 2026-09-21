@@ -1,0 +1,28 @@
+{
+  "snapshot": "2026.10",
+  "standard": {
+    "codes": 9249,
+    "fixes": 32767,
+    "parts": 44588,
+    "price_usd": 49
+  },
+  "oem": {
+    "codes": 15886,
+    "fixes": 56561,
+    "parts": 75055,
+    "price_usd": 149
+  },
+  "heavyduty": {
+    "faults": 6502,
+    "spns": 1536,
+    "fixes": 25608,
+    "parts": 8365,
+    "oems": 11,
+    "sources": 21,
+    "price_usd": 149,
+    "released": false,
+    "launch_date": null,
+    "stripe_price_id": "",
+    "payment_link": ""
+  }
+}

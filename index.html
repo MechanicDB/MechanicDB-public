@@ -375,7 +375,7 @@
   .spec-sheet tr:last-child th, .spec-sheet tr:last-child td { border-bottom: none; }
 
   /* ── pricing ─────────────────────────────── */
-  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .tier {
     background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px;
     padding: 28px 26px; display: flex; flex-direction: column;
@@ -416,8 +416,13 @@
   /* ── responsive ──────────────────────────── */
   @media (max-width: 880px) {
     .schema-strip { grid-template-columns: repeat(2, 1fr); }
-    .tiers { grid-template-columns: 1fr; }
     .prov-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 1100px) {
+    .tiers { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .tiers { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
     section { padding: 52px 0; }
@@ -635,6 +640,17 @@
           <div class="cov-cell"><span>Audi</span><b>2</b></div>
       </div>
 <!-- COVERAGE:END -->
+<!-- COVERAGE-HD:START -->
+      <h3 class="cov-title" id="coverage-hd">Heavy Duty coverage by OEM</h3>
+      <p class="cov-note"><span translate="no">21</span> published OEM fault-code documents across <span translate="no">11</span> manufacturers —
+        transmission, ABS/ESC, engine, aftertreatment and body controllers for off-highway, stationary and
+        specialty applications. Each row links to the source document it was taken from.</p>
+      <div class="tablewrap"><table><thead><tr><th>OEM</th><th>Controller</th><th>Fault pairs</th><th>Source document</th></tr></thead><tbody><tr><td translate="no">Bendix</td><td translate="no">ABS/ESC</td><td translate="no">111</td><td translate="no"><a href="https://www.bendixvrc.com/itemDisplay.asp?documentID=6735">SD-13-4869 EC-60 ABS/ATC/ESP service data sheet (2013)</a></td></tr><tr><td translate="no">Bendix</td><td translate="no">ABS/ESC</td><td translate="no">155</td><td translate="no"><a href="https://www.bendixvrc.com/itemDisplay.asp?documentID=6722">SD-13-4983 EC-80 ABS/ATC service data sheet (2014)</a></td></tr><tr><td translate="no">Caterpillar</td><td translate="no">Engine ECU</td><td translate="no">66</td><td translate="no"><a href="https://s7d2.scene7.com/is/content/Caterpillar/C10882888">1200 Series marine auxiliary engines troubleshooting guide</a></td></tr><tr><td translate="no">Cummins</td><td translate="no">Engine ECU</td><td translate="no">200</td><td translate="no"><a href="https://mart.cummins.com/imagelibrary/data/assetfiles/0056191.pdf">A042J565 fire pump drive engine IOM, fault code charts</a></td></tr><tr><td translate="no">Cummins</td><td translate="no">Engine ECU</td><td translate="no">38</td><td translate="no"><a href="https://www.cummins.com/sites/default/files/2024-07/cummins-onan-manual-marlin.pdf">Onan marine generator MDDCA operator manual</a></td></tr><tr><td translate="no">Deutz</td><td translate="no">Aftertreatment DCU</td><td translate="no">136</td><td translate="no"><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_MD1_DOC_DPF_DE_EN.pdf">DTC list MD1 DOC/DPF (2019)</a></td></tr><tr><td translate="no">Deutz</td><td translate="no">Engine ECU</td><td translate="no">155</td><td translate="no"><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_LPG_CNG_BiFuel_Gasoline_22072025_DE_EN.pdf">DTC list LPG/CNG/BiFuel/Gasoline eControls (2025-07-22)</a></td></tr><tr><td translate="no">Deutz</td><td translate="no">Engine ECU</td><td translate="no">589</td><td translate="no"><a href="https://serdia.deutz.com/fileadmin/contents/serdia/KWPList_EMR4_DE_EN.pdf">KWP list EMR4 (2026-06-10)</a></td></tr><tr><td translate="no">Deutz</td><td translate="no">Engine ECU</td><td translate="no">507</td><td translate="no"><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_EMRL1_MainECU_EN.pdf">DTC list EMRL1 main + secondary ECU</a></td></tr><tr><td translate="no">Deutz</td><td translate="no">Engine ECU</td><td translate="no">903</td><td translate="no"><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_MD1_DE_EN.pdf">DTC list EMR5 / MD1 (2026-07-22)</a></td></tr><tr><td translate="no">Eaton</td><td translate="no">Transmission</td><td translate="no">763</td><td translate="no"><a href="https://productinfo.serviceranger4.com/books/TRTS0950/lang/en-us/section/TS0950FCIndex">TRTS0950 Endurant HD fault code index</a></td></tr><tr><td translate="no">Eaton</td><td translate="no">Transmission</td><td translate="no">876</td><td translate="no"><a href="https://productinfo.serviceranger4.com/books/TRTS0960/lang/en-us/section/TS0960FCIndex">TRTS0960 Endurant XD fault code index</a></td></tr><tr><td translate="no">John Deere</td><td translate="no">Engine ECU</td><td translate="no">161</td><td translate="no"><a href="http://manuals.deere.com/omview/OMH229936_19/OUO6075_0000B3D_19_02AUG07_1.htm">OMH229936 9670/9770 STS engine control unit DTCs</a></td></tr><tr><td translate="no">John Deere</td><td translate="no">Engine ECU</td><td translate="no">153</td><td translate="no"><a href="http://manuals.deere.com/omview/OMRG35856_19/OURGP12,00001FC_19_20100408.html">OMRG35856 PowerTech DTC list</a></td></tr><tr><td translate="no">Navistar</td><td translate="no">Body controller</td><td translate="no">25</td><td translate="no"><a href="http://bodybuilder.navistar.com/General/documents/s08/s082504_FC.xml">s082504 Electrical System Troubleshooting Guide fault-code XML</a></td></tr><tr><td translate="no">Navistar</td><td translate="no">Body controller</td><td translate="no">326</td><td translate="no"><a href="http://bodybuilder.navistar.com/General/documents/svcmanpdf/S08327.pdf">S08327 Body Controller Diagnostic Trouble Codes (2010)</a></td></tr><tr><td translate="no">PSI</td><td translate="no">Engine ECU</td><td translate="no">271</td><td translate="no"><a href="https://dtnacontent-dtna.prd.freightliner.com/content/dam/dtna-servicelit/dtna/pdfs/en_us/fccc/engines/6.0L%20OBD%20MT-88%20HD%20Gasoline%20Diagnostic%20Manual%20(pre-released).pdf">PSI 6.0L OBD-HD engine diagnostic manual (FCCC chassis)</a></td></tr><tr><td translate="no">Perkins</td><td translate="no">Engine ECU</td><td translate="no">179</td><td translate="no"><a href="https://s7d2.scene7.com/is/content/Caterpillar/CM20260911-9f181-9e283">SEBU8601-07 1206E-E70TTA industrial engine OMM, Table 3 diagnostic codes</a></td></tr><tr><td translate="no">WABCO</td><td translate="no">ABS/ESC</td><td translate="no">113</td><td translate="no"><a href="https://www.zf.com/products/media/automotive/cv/literature_downloads_wna/truck_solutions/abs_maintenance_manuals_/MM0112_web.pdf">MM0112 ABS/ESC E-version maintenance manual (05.2020)</a></td></tr><tr><td translate="no">WABCO</td><td translate="no">ABS/ESC</td><td translate="no">448</td><td translate="no"><a href="https://www.zf.com/products/media/automotive/cv/literature_downloads_wna/truck_solutions/abs_maintenance_manuals_/MM1719_web.pdf">MM1719 mBSP ABS/ESC maintenance manual (08.2018)</a></td></tr><tr><td translate="no">Yanmar</td><td translate="no">Engine ECU</td><td translate="no">327</td><td translate="no"><a href="https://www.yanmar.com/media/news/2024/08/08065132/over_56kw_troubleshooting_manual.pdf">Troubleshooting manual, engines over 56 kW (2024)</a></td></tr></tbody></table></div>
+      <p class="cov-note">On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and
+        Caterpillar trucks are dealer-portal material and are not included. Every row in this tier links to
+        the OEM document it was taken from; descriptions are written by us and no SAE J1939 text is
+        reproduced.</p>
+<!-- COVERAGE-HD:END -->
   </div>
 </section>
 
@@ -679,6 +695,20 @@
         </ul>
         <a class="btn btn-ghost" href="https://buy.stripe.com/28EfZicVy0ECdM796w38404">Buy now · Instant download</a>
       </div>
+<!-- HD-TIER:START -->
+<div class="tier">
+  <h3>Heavy Duty</h3>
+  <div class="price">$149</div>
+  <div class="per">one-time · commercial use</div>
+  <ul>
+    <li><span translate="no">6,502</span> J1939 SPN/FMI fault pairs across <span translate="no">11</span> OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<a href="#coverage-hd">coverage</a>)</li>
+    <li><span translate="no">25,608</span> ranked fixes with editorial cost and labour estimates</li>
+    <li>Per-row source URL to the published OEM fault table — no SAE text, not the J1939 Digital Annex</li>
+    <li>CSV + Parquet + SQLite delivery</li>
+  </ul>
+  <a class="btn btn-ghost js-open-support" href="#supportModal" data-subject="Heavy Duty early access">Ask for early access</a>
+</div>
+<!-- HD-TIER:END -->
       <div class="tier">
         <h3>Fault &amp; Recall bundle</h3>
         <div class="price">$179</div>
@@ -721,6 +751,22 @@
         <h3>SAE J2012DA &amp; Standards Licensing</h3>
         <p>MechanicDB is not a copy of SAE J2012 or its Digital Annex (J2012DA) and cannot be resold as one — those are licensed per seat and redistribution is prohibited. If you need the normative document or its Failure Type Bytes, the legitimate lower-cost routes are a university engineering library's SAE Digital Library subscription, short-term or subscription access via Techstreet, the ANSI Webstore or Accuris, the SAE member discount, or the harmonized ISO 15031-6 from a national standards body. If what you actually need is the factual code-to-meaning lookup rather than the standard itself, that is what MechanicDB sells for $49: 9,249 SAE-range codes (6,637 manufacturer-specific codes on the $149 tier) with descriptions, ranked probable causes and repair procedures, compiled from an MIT-licensed public source with no SAE document text reproduced. It carries no Failure Type Bytes and is not a citable normative reference.</p>
       </div>
+<!-- HD-FAQ:START -->
+      <div class="faq-item">
+        <h3>Is this the SAE J1939 Digital Annex?</h3>
+        <p>No. MechanicDB Heavy Duty does not reproduce the SAE J1939 Digital Annex, any J1939 DBC file, or
+        SPN/FMI text licensed from SAE. Every fault pair is compiled from a published OEM fault-code
+        document — a service manual, maintenance guide or DTC list hosted by the manufacturer itself —
+        with our own wording and a per-row link to the document it came from.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which heavy-duty systems are covered?</h3>
+        <p>Transmission, ABS/ESC, engine ECU, aftertreatment and body controllers across <span translate="no">11</span> OEMs:
+        <span translate="no">Bendix, Caterpillar, Cummins, Deutz, Eaton, John Deere, Navistar, Perkins, PSI, WABCO, Yanmar</span> — off-highway, stationary, marine, agricultural and specialty applications. On-highway
+        engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are
+        dealer-portal material and are not included.</p>
+      </div>
+<!-- HD-FAQ:END -->
     </div>
   </div>
 </section>
