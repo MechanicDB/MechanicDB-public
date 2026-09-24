@@ -5,6 +5,10 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Heavy Duty coverage table restyled — 2026-09-24
+
+- The homepage `#coverage-hd` table (OEM / controller / fault pairs / source document) now uses the site's paper spec-sheet styling (`.cov-table`, matching the per-make coverage grid and the specifications sheet): mono uppercase headers, amber fault-pair counts, manufacturer groups ruled off, and a stacked card layout under 640px. No data or counts changed; es/de/fr/pt-br homepages rebuilt.
+
 ## Heavy Duty tier released — 2026-09-24
 
 - The Heavy Duty card now carries the buy button (Stripe payment link, `client_reference_id=mechanicdb_<lang>_pricing`) instead of the early-access request; `claims.json["heavyduty"]` is `released: true` with `launch_date` 2026-09-24. Instant download through the delivery worker.
