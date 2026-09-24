@@ -5,6 +5,10 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Heavy Duty tier released — 2026-09-24
+
+- The Heavy Duty card now carries the buy button (Stripe payment link, `client_reference_id=mechanicdb_<lang>_pricing`) instead of the early-access request; `claims.json["heavyduty"]` is `released: true` with `launch_date` 2026-09-24. Instant download through the delivery worker.
+
 ## Heavy Duty (J1939) tier — release pending — 2026-09-21
 
 - **New standalone tier, MechanicDB Heavy Duty ($149, sold and delivered separately from

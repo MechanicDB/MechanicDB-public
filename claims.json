@@ -20,9 +20,9 @@
     "oems": 11,
     "sources": 21,
     "price_usd": 149,
-    "released": false,
-    "launch_date": null,
-    "stripe_price_id": "",
-    "payment_link": ""
+    "released": true,
+    "launch_date": "2026-09-24",
+    "stripe_price_id": "price_1UJCmaJan3lr9lV5rpgI8iJ9",
+    "payment_link": "https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j"
   }
 }
