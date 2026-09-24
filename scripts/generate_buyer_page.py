@@ -141,6 +141,12 @@ BODY = """
     <a href="/landing/families">fault-family directory</a>.
   </p>
 
+  <p style="margin:10px 0 10px;opacity:.85">
+    Working on trucks, buses or off-highway diesels? The
+    <a href="/j1939-fault-code-database">J1939 fault code database</a> covers SAE J1939 SPN/FMI
+    fault pairs from published OEM documents.
+  </p>
+
 </main>
 """
 

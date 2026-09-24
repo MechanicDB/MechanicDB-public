@@ -5,6 +5,21 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Heavy Duty SEO pages — 2026-09-24
+
+- New page **/j1939-fault-code-database**: the Heavy Duty tier in full — six tables with row counts,
+  coverage by OEM and by system, the 32-entry J1939 FMI reference, one sample row per OEM, three FAQ
+  answers, buy button; Dataset, Product, FAQPage and BreadcrumbList structured data.
+- One page per manufacturer under **/j1939/** (Bendix, Caterpillar, Cummins, Deutz, Eaton, John Deere,
+  Navistar, Perkins, PSI, WABCO, Yanmar): source documents, pairs by system, largest fault families,
+  FMI breakdown, standard vs OEM-assigned SPNs and that OEM's rows from the free sample. Counts,
+  names and sample rows only; ranked fixes, costs, labour, steps and parts stay in the paid dataset.
+- Homepage: title, meta and social descriptions now name the J1939 tier; the Dataset, FAQPage and
+  Product structured data carry it (all three tiers are listed as offers, and the two Heavy Duty FAQ
+  answers are in the FAQ schema as well as on the page). The coverage table links each OEM to its page.
+- README, DATA_DICTIONARY and llms.txt no longer say "release pending"; the OBD-II buyer page links the
+  J1939 page. All new copy translated into es/de/fr/pt-br; i18n check 0 errors.
+
 ## Heavy Duty coverage table restyled — 2026-09-24
 
 - The homepage `#coverage-hd` table (OEM / controller / fault pairs / source document) now uses the site's paper spec-sheet styling (`.cov-table`, matching the per-make coverage grid and the specifications sheet): mono uppercase headers, amber fault-pair counts, manufacturer groups ruled off, and a stacked card layout under 640px. No data or counts changed; es/de/fr/pt-br homepages rebuilt.

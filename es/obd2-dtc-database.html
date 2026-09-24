@@ -72,6 +72,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>.i18n-menu{position:relative;display:inline-block;align-self:center;font-size:.85rem;line-height:1;font-weight:500;text-transform:none;letter-spacing:normal}.i18n-menu.i18n-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .65rem;border:1px solid currentColor;border-color:color-mix(in srgb,currentColor 40%,transparent);border-radius:999px;white-space:nowrap;user-select:none;color:inherit;background:transparent}.i18n-menu>summary::-webkit-details-marker{display:none}.i18n-menu>summary:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}.i18n-menu.i18n-menu>ul{display:block;position:absolute;right:0;top:calc(100% + 6px);z-index:2147482000;min-width:10rem;margin:0;padding:.35rem;list-style:none;background:#111827;border:1px solid #374151;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.35);text-align:left}.i18n-menu.i18n-menu li{display:block;margin:0;padding:0;list-style:none}.i18n-menu.i18n-menu li>a,.i18n-menu.i18n-menu li>span{display:block;padding:.5rem .75rem;border-radius:6px;color:#f9fafb;background:transparent;text-decoration:none;white-space:nowrap;font-size:.9rem;font-weight:400;line-height:1.2;border:0;box-shadow:none}.i18n-menu.i18n-menu li>a:hover,.i18n-menu.i18n-menu li>a:focus-visible{background:#1f2937;color:#fff}.i18n-menu.i18n-menu li>span{font-weight:600;color:#93c5fd}.i18n-menu--row{margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row){margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row)+.i18n-menu--row{margin-left:.75rem}.i18n-menu--float{position:absolute;top:14px;right:16px;z-index:2147481000;color:#e5e7eb}</style>
 <style>
   :root {
     --steel: #1b1e22;        /* tool-chest graphite */
@@ -274,6 +275,27 @@
   }
   .cov-cell span { font-size: .86rem; }
   .cov-cell b { font-family: var(--mono); font-size: .82rem; color: var(--amber-deep); }
+  .cov-table {
+    background: var(--paper); color: var(--ink); border: 1px solid var(--paper-dim);
+    border-radius: 6px; overflow: hidden; margin-bottom: 18px;
+  }
+  .cov-table table { width: 100%; border-collapse: collapse; }
+  .cov-table th, .cov-table td { text-align: left; padding: 11px 16px; vertical-align: baseline; }
+  .cov-table th {
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-soft); background: var(--paper-dim);
+  }
+  .cov-table td { border-top: 1px solid var(--paper-dim); font-size: .88rem; }
+  .cov-table tr.grp td { border-top-color: #cfcabd; }
+  .cov-table tbody tr:first-child td { border-top: none; }
+  .cov-table tr:not(.grp) td.oem { color: var(--ink-soft); }
+  .cov-table td.oem { font-weight: 600; white-space: nowrap; }
+  .cov-table td.ctl { font-family: var(--mono); font-size: .74rem; color: var(--ink-soft); white-space: nowrap; }
+  .cov-table .num { text-align: right; white-space: nowrap; }
+  .cov-table td.num { font-family: var(--mono); font-size: .82rem; font-weight: 600; color: var(--amber-deep); }
+  .cov-table td.doc a { color: var(--ink); border-bottom: 1px solid var(--amber-deep); }
+  .cov-table td.doc a:hover { color: var(--amber-deep); text-decoration: none; }
+  .cov-table tbody tr:hover td { background: #faf8f2; }
 
   /* ── specifications ──────────────────────── */
   .spec-sheet {
@@ -291,7 +313,7 @@
   .spec-sheet tr:last-child th, .spec-sheet tr:last-child td { border-bottom: none; }
 
   /* ── pricing ─────────────────────────────── */
-  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .tier {
     background: var(--steel-2); border: 1px solid var(--steel-3); border-radius: 8px;
     padding: 28px 26px; display: flex; flex-direction: column;
@@ -332,8 +354,25 @@
   /* ── responsive ──────────────────────────── */
   @media (max-width: 880px) {
     .schema-strip { grid-template-columns: repeat(2, 1fr); }
-    .tiers { grid-template-columns: 1fr; }
     .prov-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 1100px) {
+    .tiers { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .tiers { grid-template-columns: 1fr; }
+    .cov-table thead { display: none; }
+    .cov-table tr {
+      display: grid; grid-template-columns: 1fr auto; gap: 2px 12px;
+      padding: 11px 14px; border-top: 1px solid var(--paper-dim);
+    }
+    .cov-table tr.grp { border-top-color: #cfcabd; }
+    .cov-table tbody tr:first-child { border-top: none; }
+    .cov-table td { padding: 0; border: none; }
+    .cov-table td.oem { grid-column: 1; grid-row: 1; }
+    .cov-table td.num { grid-column: 2; grid-row: 1; }
+    .cov-table td.ctl { grid-column: 1 / -1; grid-row: 2; }
+    .cov-table td.doc { grid-column: 1 / -1; grid-row: 3; font-size: .84rem; }
   }
   @media (max-width: 560px) {
     section { padding: 52px 0; }
@@ -387,6 +426,7 @@
 <a href="/es/#specs">Especificaciones</a>
 <a href="/es/#licensing">Licencias</a>
 <a href="/es/#provenance">Procedencia</a>
+<a href="/stats/">Estadísticas</a>
 <!-- i18n:header --><details class="i18n-menu i18n-menu--nav" translate="no"><summary aria-label="Idioma: Español" title="Idioma: Español"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>ES</span></summary><ul><li><a href="/obd2-dtc-database" hreflang="en" lang="en" data-i18n-lang="en">English</a></li><li><span aria-current="true" lang="es">Español</span></li><li><a href="/de/obd2-dtc-database" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a></li><li><a href="/fr/obd2-dtc-database" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a></li><li><a href="/pt-br/obd2-dtc-database" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></li></ul></details><!-- /i18n:header --></nav>
 </div>
 </header>
@@ -445,11 +485,15 @@
 <p style="margin:38px 0 10px;opacity:.85">
     ¿Buscas un código concreto? Explora el <a href="/es/landing/families">directorio de familias de fallas</a>.
   </p>
+<p style="margin:10px 0 10px;opacity:.85">
+    ¿Trabaja con camiones, autobuses o motores diésel fuera de carretera? La <a href="/es/j1939-fault-code-database">base de datos de códigos de falla J1939</a> cubre pares de fallo SPN/FMI SAE J1939 tomados de documentos publicados por los fabricantes.
+  </p>
 </main>
 <footer>
 <div class="wrap foot-inner">
 <span>MechanicDB · datos de muestra bajo ODbL v1.0 · conjunto de datos completo bajo licencia comercial</span>
 <span>generado por un pipeline determinista y validado por pruebas</span>
+<span><a href="/stats/">Estadísticas de códigos de avería</a></span>
 </div>
 <div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Parte del catálogo DataEngineered →</a> · <a href="https://dataengineered.io/about">Acerca de</a> · <a href="https://dataengineered.io/terms">Términos</a> · <a href="https://dataengineered.io/privacy">Privacidad</a> · <a href="https://dataengineered.io/refund-policy">Política de reembolso</a></div>
 <!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Idioma" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><a href="/obd2-dtc-database" hreflang="en" lang="en" data-i18n-lang="en">English</a> · <span aria-current="true" style="font-weight:600">Español</span> · <a href="/de/obd2-dtc-database" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a> · <a href="/fr/obd2-dtc-database" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <a href="/pt-br/obd2-dtc-database" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></nav><!-- /i18n:switcher --></footer>

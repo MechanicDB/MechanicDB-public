@@ -11,6 +11,14 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "02436ad2aa761602": {
+  "src": "All OEMs and the FMI reference",
+  "t": "Todos los OEM y la referencia FMI"
+ },
+ "025f6a2df9c754ff": {
+  "src": "Breakdown by OEM, system and failure mode, with the full FMI reference, on the <0>{1} fault code database</0> page.",
+  "t": "Desglose por OEM, sistema y modo de fallo, con la referencia FMI completa, en la página de la <0>base de datos de códigos de falla {1}</0>."
+ },
  "03688ba6aa340b87": {
   "src": "FAQ",
   "t": "Preguntas frecuentes",
@@ -53,6 +61,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "04e36ec916582845": {
+  "src": "Sample rows",
+  "t": "Filas de muestra"
+ },
+ "0615842c81e42170": {
+  "src": "{0} SAE {1} SPN/FMI fault pairs from {2} published OEM documents, mapped to {3} ranked repairs. CSV, Parquet, SQLite. Free {4}-fault sample.",
+  "t": "{0} pares de fallo SPN/FMI SAE {1} de {2} documentos publicados por los fabricantes, asignados a {3} reparaciones clasificadas. CSV, Parquet, SQLite. Muestra gratuita de {4} fallos."
+ },
+ "0836a17221e01842": {
+  "src": "{0}, {1}, engine ECU, aftertreatment and body controllers across {2} OEMs: {3} — off-highway, stationary, marine, agricultural and specialty applications. On-highway engine fault lists from {4}, Detroit Diesel, PACCAR, Volvo/Mack and {5} trucks are dealer-portal material and are not included.",
+  "t": "{0}, {1}, ECU del motor, postratamiento y controladores de carrocería en {2} OEM: {3} — aplicaciones fuera de carretera, estacionarias, marinas, agrícolas y especiales. Las listas de fallos de motores de carretera de los camiones {4}, Detroit Diesel, PACCAR, Volvo/Mack y {5} son material de portales de concesionario y no están incluidas."
+ },
  "08a4e4f1bf1e1745": {
   "src": "The flat analytical view — all {0} columns, one {1} / {2}",
   "t": "La vista analítica plana: las {0} columnas, un solo {1} / {2}",
@@ -64,6 +84,10 @@
   "t": "Estos {0} códigos de diagnóstico comparten un mismo mecanismo de detección y una misma vía de reparación; por eso MechanicDB los agrupa en una única familia de fallas redactada, en lugar de repetir la misma explicación {1} veces.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "09ca55ca52d207f2": {
+  "src": "Share",
+  "t": "Proporción"
  },
  "09d130b3d83cd89f": {
   "src": "<0>{1}</0> authored fault families → <2>{3}</2> ranked fixes → <4>{5}</4> parts mappings. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required.",
@@ -83,11 +107,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "0a778b57d88673b6": {
+  "src": "{0} verified OBD-II trouble codes and {1} SPN/FMI fault pairs mapped to ranked repair procedures with difficulty tiers, parts costs and step-by-step instructions.",
+  "t": "{0} códigos de falla OBD-II verificados y {1} pares de fallo SPN/FMI asignados a procedimientos de reparación clasificados con niveles de dificultad, costes de piezas e instrucciones paso a paso."
+ },
  "0a907fb25789793a": {
   "src": "{0} ranked fixes with editorial cost and labour estimates",
   "t": "{0} reparaciones clasificadas con estimaciones editoriales de coste y mano de obra",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "0b43eeeb33175edd": {
+  "src": "The flat view joining faults and fixes, one read for notebooks",
+  "t": "La vista plana que une fallos y reparaciones, una sola lectura para notebooks"
  },
  "0be198dcc3a163ef": {
   "src": "All <0>{1}</0> manufacturer-specific codes, by marque. Coverage is <2>not even</2> — it is strongest on US-market brands, and some marques are thin. We publish the distribution so you can check the makes you care about before buying rather than after. The <3>{4}</3> SAE-universal codes apply to every vehicle regardless of make.",
@@ -131,11 +163,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "0fe35884b6681be7": {
+  "src": "SPN names: standard SPNs once, manufacturer-assigned SPNs once per OEM",
+  "t": "Nombres de SPN: los SPN estándar una vez, los SPN asignados por el fabricante una vez por OEM"
+ },
  "101ceb9fa35dccd1": {
   "src": "Codes in this family ({0})",
   "t": "Códigos de esta familia ({0})",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "1380191b44ae229c": {
+  "src": "Rows for this OEM from the free sample. The dataset adds the ranked repairs, costs, labour estimates and parts for every pair.",
+  "t": "Filas de este OEM incluidas en la muestra gratuita. El conjunto de datos añade las reparaciones clasificadas, los costes, las estimaciones de mano de obra y las piezas de cada par."
  },
  "145d9d6c0d59eff6": {
   "src": "MechanicDB — OBD-II Diagnostic &amp; Repair Database",
@@ -161,6 +201,10 @@
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
  },
+ "17629301f59288d4": {
+  "src": "{0} fault codes",
+  "t": "códigos de falla {0}"
+ },
  "17d701db72194400": {
   "src": "Jane Doe / Apex Diagnostics Inc.",
   "t": "Laura Gómez / Diagnósticos Ápex S.A.",
@@ -179,11 +223,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "1890c73e7d93437c": {
+  "src": "{0} SPN/FMI fault pairs published by {1} in {2} fault-code documents, as they appear in the MechanicDB Heavy Duty dataset. The dataset maps every pair to an authored fault family with probability-ranked repairs, difficulty ratings, parts-cost ranges and labour estimates; this page shows the coverage and the rows that are in the free sample.",
+  "t": "{0} pares de fallo SPN/FMI publicados por {1} en {2} documentos de códigos de falla, tal como figuran en el conjunto de datos MechanicDB Heavy Duty. El conjunto de datos asigna cada par a una familia de fallas redactada con reparaciones clasificadas por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra; esta página muestra la cobertura y las filas incluidas en la muestra gratuita."
+ },
  "1907a9f0778aea59": {
   "src": "Choose a trouble code",
   "t": "Elige un código de falla",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "19cd7d185cfd95a7": {
+  "src": "Meaning",
+  "t": "Significado"
  },
  "1b97d070d0b66d1e": {
   "src": "{0} rows",
@@ -220,6 +272,10 @@
   "t": "Principales sistemas automotrices OBD-II y monografías de referencia diagnóstica.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "1dc30abc0f54f8ae": {
+  "src": "Source documents",
+  "t": "Documentos de origen"
  },
  "1e813b2e4ee05685": {
   "src": "Every tier ships all three. Pipe-delimited <0>CSV</0> ({1} BOM, Excel-safe). <2>Apache Parquet</2> with Snappy compression — a measured {3} smaller. A <4>SQLite</4> database carrying all four tables with the join chain intact.",
@@ -269,6 +325,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2272c3e9fe6a56f5": {
+  "src": "What are SPN and FMI in a {0} fault code?",
+  "t": "¿Qué son el SPN y el FMI en un código de falla {0}?"
+ },
  "22ea99ef06ff309e": {
   "src": "Send Inquiry",
   "t": "Enviar consulta",
@@ -280,6 +340,10 @@
   "t": "{0} mín./máx. USD",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "24252e33ada38fba": {
+  "src": "What this page covers",
+  "t": "Qué cubre esta página"
  },
  "245a057c3ebae7b6": {
   "src": "{0} {1} SPN/FMI fault pairs across {2} OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<3>coverage</3>)",
@@ -293,11 +357,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2649b509b730163f": {
+  "src": "{0} {1} Fault Codes",
+  "t": "Códigos de falla {1} de {0}"
+ },
  "266cd3348d480fec": {
   "src": "What this page does not show",
   "t": "Lo que esta página no muestra",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "270fc77681e1b77a": {
+  "src": "one-time · commercial use · <0>compare tiers</0> · <1>free {2}-fault sample</1>",
+  "t": "pago único · uso comercial · <0>comparar niveles</0> · <1>muestra gratuita de {2} fallos</1>"
  },
  "27657758a306b3cb": {
   "src": "Aftermarket part names per fix, with catalog search URLs derived from the part name.",
@@ -335,6 +407,14 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "29d3576e9e1cc3f7": {
+  "src": "{0} {1} Fault Codes — {2} Fault Pairs | MechanicDB",
+  "t": "Códigos de falla {1} de {0} — {2} pares de fallo | MechanicDB"
+ },
+ "29d83db8d2821438": {
+  "src": "{0} {1} {2} SPN/FMI fault pairs from {3} published {4} documents, each mapped to a fault family and ranked repairs. Coverage by system, FMI…",
+  "t": "{0} pares de fallo SPN/FMI {2} de {1}, tomados de {3} documentos publicados por {4} y asignados a una familia de fallas con reparaciones clasificadas. Cobertura por sistema y por FMI."
+ },
  "2a2f04e0e58eb1a3": {
   "src": "Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: {0} ranked repair procedures — each with a DIY difficulty rating, a parts-cost range and a labor estimate — attached to {1} verified OBD-II trouble codes ({2} SAE-standard plus {3} manufacturer-specific across {4} makes). Free code lists stop at the definition; MechanicDB starts there.",
   "t": "Pensado para apps OBD, firmware de herramientas de escaneo, copilotos mecánicos con IA y software de taller: {0} procedimientos de reparación clasificados, cada uno con una valoración de dificultad para hacerlo uno mismo, un rango de costes de piezas y una estimación de mano de obra, asociados a {1} códigos de falla OBD-II verificados ({2} estándar SAE más {3} específicos de fabricante en {4} marcas). Las listas de códigos gratuitas se quedan en la definición; MechanicDB empieza ahí.",
@@ -359,11 +439,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2d3cdb95703c1892": {
+  "src": "MechanicDB — The OBD-II &amp; {0} Diagnostic &amp; Repair Database",
+  "t": "MechanicDB — la base de datos de diagnóstico y reparación OBD-II &amp; {0}"
+ },
  "2f8486c2f6c8a9d4": {
   "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} fixes ranked by real-world likelihood; every fix maps to purchasable aftermarket parts.",
   "t": "Normalizado para bases de datos, precombinado para notebooks. Cada código incluye {0} reparaciones clasificadas según su probabilidad real; cada reparación se asocia a piezas de recambio que se pueden comprar.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "2f97efa7e05fbf1c": {
+  "src": "{0} {1} SPN/FMI fault pairs across {2} OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<3>full coverage</3>)",
+  "t": "{0} pares de fallo SPN/FMI {1} en {2} OEM — transmisión, ABS, motores fuera de carretera y estacionarios, controladores de carrocería (<3>cobertura completa</3>)"
  },
  "3487bb91bd5bb47a": {
   "src": "License Full Dataset · {0}",
@@ -382,6 +470,10 @@
   "t": "Código OBD-II {0}: {1}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "3747fca97dab46a1": {
+  "src": "Standard and OEM-assigned SPNs",
+  "t": "SPN estándar y SPN asignados por el OEM"
  },
  "3958c456f29ff950": {
   "src": "Repair coverage",
@@ -449,6 +541,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "3d3c755b14b82054": {
+  "src": "MechanicDB — {0} OBD-II &amp; {1} SAE {2} Fault Codes",
+  "t": "MechanicDB — {0} códigos OBD-II &amp; {1} SAE {2}"
+ },
  "3fadefb81920d77b": {
   "src": "Code definitions compiled from public SAE {0} sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.",
   "t": "Definiciones de códigos recopiladas de fuentes públicas SAE {0} (con licencia MIT, atribución conservada). Los procedimientos, las valoraciones de dificultad y los costes son contenido original redactado.",
@@ -479,6 +575,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "43b2545613e0e22e": {
+  "src": "What this dataset is",
+  "t": "Qué es este conjunto de datos"
+ },
  "43c7d56efb0908b2": {
   "src": "Family: {0}",
   "t": "Familia: {0}",
@@ -503,6 +603,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "450a96789563278a": {
+  "src": "Heavy Duty tier",
+  "t": "Nivel Heavy Duty"
+ },
  "489af480aa77f451": {
   "src": "🚗 Body &amp; SRS (B-Codes)",
   "t": "🚗 Carrocería y SRS (códigos B)",
@@ -520,6 +624,10 @@
   "t": "Directorio de familias de fallas OBD-II | MechanicDB",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "4b569b91c52a6bf4": {
+  "src": "MechanicDB — {0} OBD-II &amp; {1} Fault Codes",
+  "t": "MechanicDB — {0} códigos OBD-II &amp; {1}"
  },
  "4b892fe0c040fa8a": {
   "src": "Directory",
@@ -563,6 +671,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "514905041a0f8526": {
+  "src": "MechanicDB Heavy Duty — {0} Fault &amp; Repair Database",
+  "t": "MechanicDB Heavy Duty — base de datos de fallos y reparaciones {0}"
+ },
  "5162b84096e20d7a": {
   "src": "{0} — fault family | MechanicDB",
   "t": "{0} — familia de fallas | MechanicDB",
@@ -593,6 +705,14 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
+ "55f8ebc805e65b5b": {
+  "src": "Description",
+  "t": "Descripción"
+ },
+ "5674ef246889bd76": {
+  "src": "Automotive diagnostic dataset mapping {0} verified OBD-II trouble codes across {1} vehicle makes to {2} ranked repair procedures with DIY difficulty ratings and labor/parts cost estimations. A separate Heavy Duty tier adds {3} SAE {4} SPN/FMI fault pairs compiled from {5} published OEM fault-code documents.",
+  "t": "Conjunto de datos de diagnóstico automotriz que asigna {0} códigos de falla OBD-II verificados de {1} marcas de vehículos a {2} procedimientos de reparación clasificados, con niveles de dificultad DIY y estimaciones de coste de mano de obra y piezas. Un nivel Heavy Duty aparte añade {3} pares de fallo SPN/FMI SAE {4} recopilados de {5} documentos de códigos de falla publicados por los fabricantes."
+ },
  "56e96cdc42f75413": {
   "src": "MechanicDB Automotive OBD-II Diagnostic &amp; Repair Database",
   "t": "MechanicDB: base de datos automotriz de diagnóstico y reparación OBD-II",
@@ -617,6 +737,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "59f77ccd2ec71014": {
+  "src": "{0} verified OBD-II trouble codes and {1} SAE {2} SPN/FMI fault pairs mapped to ranked repair procedures with difficulty tiers, parts costs and step-by-step instructions.",
+  "t": "{0} códigos de falla OBD-II verificados y {1} pares de fallo SPN/FMI SAE {2} asignados a procedimientos de reparación clasificados con niveles de dificultad, costes de piezas e instrucciones paso a paso."
+ },
  "5a6e4e722025289d": {
   "src": "Ignition / misfire",
   "t": "Encendido / fallos de encendido",
@@ -635,6 +759,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "5bd1ae999b846ee0": {
+  "src": "heavy-duty diagnostics",
+  "t": "diagnóstico de vehículos pesados"
+ },
  "5bff1e66184a36f9": {
   "src": "Safety framing",
   "t": "Marco de seguridad",
@@ -652,6 +780,10 @@
   "t": "Anatomía y estructura del código",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "5e64e14247f18c36": {
+  "src": "License Heavy Duty · {0}",
+  "t": "Licenciar Heavy Duty · {0}"
  },
  "5f358efbcb6312dd": {
   "src": "Directory of all {0} MechanicDB OBD-II fault families covering {1} SAE diagnostic trouble codes, grouped by vehicle system.",
@@ -707,6 +839,14 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "689aa69e0ab32a7f": {
+  "src": "{0} fault pairs",
+  "t": "{0} pares de fallo"
+ },
+ "68cdb74bed017825": {
+  "src": "{0} distinct SPNs appear in these pairs, all of them standard SPNs whose meaning is the same on every make.",
+  "t": "En estos pares aparecen {0} SPN distintos, todos ellos SPN estándar cuyo significado es el mismo en todas las marcas."
+ },
  "6a6c9315a517cd44": {
   "src": "The code registry: definition, system category, OEM flag/make, fault family, and a code-specific technical explanation.",
   "t": "El registro de códigos: definición, categoría de sistema, indicador OEM/marca, familia de fallas y una explicación técnica específica del código.",
@@ -737,6 +877,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "70bdec98a469e9c2": {
+  "src": "Free {0}-fault sample on GitHub (ODbL) →",
+  "t": "Muestra gratuita de {0} fallos en GitHub (ODbL) →"
+ },
  "70bfbd782aa53a68": {
   "src": "Transmission, ABS/ESC, engine ECU, aftertreatment and body controllers across {0} OEMs: {1} — off-highway, stationary, marine, agricultural and specialty applications. On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included.",
   "t": "Transmisión, ABS/ESC, ECU de motor, postratamiento y controladores de carrocería en {0} fabricantes: {1} — aplicaciones fuera de carretera, estacionarias, marinas, agrícolas y especiales. Las listas de fallos de motores de uso en carretera de Cummins, Detroit Diesel, PACCAR, Volvo/Mack y camiones Caterpillar son material de portal exclusivo del concesionario y no están incluidas.",
@@ -754,6 +898,18 @@
   "t": "Inicio",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7193d2bc95c84849": {
+  "src": "SPN FMI codes",
+  "t": "códigos SPN FMI"
+ },
+ "719d9604f2438182": {
+  "src": "SPN FMI list",
+  "t": "lista SPN FMI"
+ },
+ "72193a19aadc0516": {
+  "src": "{0} OBD-II trouble codes and {1} SPN/FMI fault pairs, mapped to ranked repairs with difficulty tiers and cost estimates. CSV, Parquet, SQLite.",
+  "t": "{0} códigos de falla OBD-II y {1} pares de fallo SPN/FMI, asignados a reparaciones clasificadas con niveles de dificultad y estimaciones de coste. CSV, Parquet, SQLite."
  },
  "7263c3bb35c70bb1": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related codes in the same fault family.",
@@ -821,6 +977,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "78c46ee022df7b91": {
+  "src": "{0} {1} {2} SPN/FMI fault pairs from {3} published {4} document, each mapped to a fault family and ranked repairs. Coverage by system, FMI breakdown…",
+  "t": "{0} pares de fallo SPN/FMI {2} de {1}, tomados de {3} documento publicado por {4} y asignados a una familia de fallas con reparaciones clasificadas. Cobertura por sistema y por FMI."
+ },
  "7a08cebfeb20b546": {
   "src": "{0} Families",
   "t": "{0} familias",
@@ -844,6 +1004,10 @@
   "t": "<0>RecallDB</0> — {1} retiradas oficiales de EE. UU. de CPSC, NHTSA, FDA, FSIS y USCG, {2} pago único: la retirada del vehículo junto al código de falla. · <3>ApplianceDB</3> — {4} códigos de error de electrodomésticos asociados a reparaciones clasificadas, {5}: la misma estructura código → reparaciones clasificadas, para electrodomésticos.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7dcdd2969ba9eb62": {
+  "src": "OEM code",
+  "t": "Código OEM"
  },
  "7ecb76f681fc1e54": {
   "src": "The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.",
@@ -875,6 +1039,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "80e3e0ad95a001a3": {
+  "src": "{0} FMI reference",
+  "t": "Referencia FMI {0}"
+ },
  "80ff0a21e13e2551": {
   "src": "Fault Family Directory",
   "t": "Directorio de familias de fallas",
@@ -892,6 +1060,18 @@
   "t": "{0} códigos de diagnóstico unidos a {1} procedimientos de reparación clasificados, entregados como CSV delimitado por barras verticales, Apache Parquet o una base de datos SQLite. Pensado para apps OBD, firmware de herramientas de escaneo, copilotos mecánicos con IA y software de taller, no un sitio web que tengas que extraer con scraping.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "835b77b7a492f1b6": {
+  "src": "{0} published fault-code documents across {1} manufacturers. Each row links to the document the pairs were taken from; open an OEM for its own breakdown.",
+  "t": "{0} documentos de códigos de falla publicados por {1} fabricantes. Cada fila enlaza al documento del que se tomaron los pares; abra un OEM para ver su propio desglose."
+ },
+ "83c73cb15060a757": {
+  "src": "Six tables, delivered as pipe-delimited CSV, Apache Parquet and one SQLite database, joined on {0} and {1}.",
+  "t": "Seis tablas, entregadas en CSV delimitado por barras verticales, Apache Parquet y una base de datos SQLite, unidas por {0} y {1}."
+ },
+ "85576d4a56d5d2a9": {
+  "src": "fleet telematics",
+  "t": "telemática de flotas"
  },
  "8561030ad5a747df": {
   "src": "<0>Safety notice.</0> Repair steps are educational reference material, not a substitute for the manufacturer's service manual. High-voltage and SRS/airbag procedures must only be performed by qualified technicians.",
@@ -928,6 +1108,22 @@
   "t": "Seguridad DIY y control de alta tensión",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "8ac7aa173f261d8b": {
+  "src": "What you get",
+  "t": "Qué incluye"
+ },
+ "8b670c5d97345535": {
+  "src": "One row per SPN/FMI pair per OEM: OEM code, controller, short description, fault family, explanation, source document and URL",
+  "t": "Una fila por par SPN/FMI y por OEM: código OEM, controlador, descripción breve, familia de fallas, explicación, documento de origen y URL"
+ },
+ "8cd99dbf213a1a6b": {
+  "src": "Part names per fix with a catalog search query",
+  "t": "Nombres de piezas por reparación, con una consulta de búsqueda en catálogo"
+ },
+ "8cedbc74482abcae": {
+  "src": "Other OEMs",
+  "t": "Otros OEM"
  },
  "8e02db481d369c77": {
   "src": "automotive repair instructions",
@@ -977,6 +1173,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "93a2fa21a37d662e": {
+  "src": "SPN",
+  "t": "SPN"
+ },
  "9441b5fa251064a0": {
   "src": "Yes. Our OEM Complete tier maps {0} manufacturer-controlled trouble codes across {1} major vehicle makes including Ford, GM, Toyota, BMW, Honda, Mercedes-Benz, and Volkswagen.",
   "t": "Sí. Nuestro nivel OEM Complete asocia {0} códigos de falla controlados por el fabricante en {1} marcas principales, entre ellas Ford, GM, Toyota, BMW, Honda, Mercedes-Benz y Volkswagen.",
@@ -994,6 +1194,10 @@
   "t": "Código OBD-II {0}: {1}. Qué detecta el módulo {2}, la causa más probable…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "96e754fe4a6f41ae": {
+  "src": "(reserved)",
+  "t": "(reservado)"
  },
  "970262c6c4d203d6": {
   "src": "Powertrain System (P-Codes)",
@@ -1031,6 +1235,14 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9a1fc1731f624d1f": {
+  "src": "Questions",
+  "t": "Preguntas"
+ },
+ "9a49b39f87552249": {
+  "src": "Fault pairs by system",
+  "t": "Pares de fallo por sistema"
+ },
  "9db2cb3df63a4adb": {
   "src": "{0} System",
   "t": "Sistema {0}",
@@ -1054,6 +1266,10 @@
   "t": "¿Cómo se estructura cada código de diagnóstico OBD-II dentro de MechanicDB?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "9f54a7802f6cfc2b": {
+  "src": "{0} {1} {2} SPN/FMI fault pairs from {3} published {4} document, each mapped to a fault family and ranked repairs. Coverage by system, FMI…",
+  "t": "{0} pares de fallo SPN/FMI {2} de {1}, tomados de {3} documento publicado por {4} y asignados a una familia de fallas con reparaciones clasificadas. Cobertura por sistema y por FMI."
  },
  "9f9ed1f952cf1223": {
   "src": "Need All {0} Codes as Data?",
@@ -1091,6 +1307,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a2ac24ff3c46c8ca": {
+  "src": "<0>{1} SAE / {2} OEM / {3} Heavy Duty ({4})</0> · one-time · instant download — for shop software, OBD hardware, fleet telematics and AI mechanic assistants",
+  "t": "<0>{1} SAE / {2} OEM / {3} Heavy Duty ({4})</0> · pago único · descarga inmediata — para software de taller, hardware OBD, telemática de flotas y asistentes mecánicos con IA"
+ },
  "a3141e24422c2e28": {
   "src": "<0>{1}</0> parts mappings",
   "t": "<0>{1}</0> correspondencias de piezas",
@@ -1120,6 +1340,10 @@
   "t": "Entrega en CSV + Parquet + SQLite",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a39e0e6744ee8ab2": {
+  "src": "Diagnostic and repair datasets: {0} verified OBD-II trouble codes across {1} vehicle makes mapped to {2} ranked repair procedures, plus a Heavy Duty tier of {3} SAE {4} SPN/FMI fault pairs with {5} ranked repairs.",
+  "t": "Conjuntos de datos de diagnóstico y reparación: {0} códigos de falla OBD-II verificados de {1} marcas de vehículos asignados a {2} procedimientos de reparación clasificados, más un nivel Heavy Duty de {3} pares de fallo SPN/FMI SAE {4} con {5} reparaciones clasificadas."
  },
  "a4b1e3f5caf73db8": {
   "src": "Code {0}: {1}",
@@ -1235,6 +1459,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ac9796b43eb5ec08": {
+  "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Descriptions are written by us and no SAE {0} text is reproduced.",
+  "t": "Las listas de fallos de motores de carretera de los camiones Cummins, Detroit Diesel, PACCAR, Volvo/Mack y Caterpillar son material de portales de concesionario y no están incluidas. Las descripciones las redactamos nosotros y no se reproduce ningún texto de SAE {0}."
+ },
  "aca956415f7ca3a2": {
   "src": "<0>{1}</0> ranked fixes",
   "t": "<0>{1}</0> reparaciones clasificadas",
@@ -1282,6 +1510,10 @@
   "t": "Solicitar acceso anticipado",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "af953ea6e4043d37": {
+  "src": "{0} {1} Fault Codes — {2} SPN/FMI Pairs | MechanicDB",
+  "t": "Códigos de falla {1} de {0} — {2} pares SPN/FMI | MechanicDB"
  },
  "afba25473dbd4833": {
   "src": "MechanicDB is not a copy of SAE {0} or its Digital Annex ({1}) and cannot be resold as one — those are licensed per seat and redistribution is prohibited. If you need the normative document or its Failure Type Bytes, the legitimate lower-cost routes are a university engineering library's SAE Digital Library subscription, short-term or subscription access via Techstreet, the ANSI Webstore or Accuris, the SAE member discount, or the harmonized ISO {2} from a national standards body. If what you actually need is the factual code-to-meaning lookup rather than the standard itself, that is what MechanicDB sells for {3} SAE-range codes ({4} manufacturer-specific codes on the {5} tier) with descriptions, ranked probable causes and repair procedures, compiled from an MIT-licensed public source with no SAE document text reproduced. It carries no Failure Type Bytes and is not a citable normative reference.",
@@ -1343,6 +1575,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "b5e1c72bf78ff4b3": {
+  "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents across {3} manufacturers, each mapped to an authored fault family with {4} probability-ranked repair procedures, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
+  "t": "{0} pares de fallo SPN/FMI SAE {1} recopilados de {2} documentos de códigos de falla publicados por {3} fabricantes, cada uno asignado a una familia de fallas redactada con {4} procedimientos de reparación clasificados por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra. Cada fila enlaza a su documento de origen."
+ },
  "b60912bfb0e952e7": {
   "src": "Four relational tables, normalized for databases and pre-joined for notebooks.",
   "t": "Cuatro tablas relacionales, normalizadas para bases de datos y precombinadas para notebooks.",
@@ -1361,11 +1597,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ba1b966f3e2364b2": {
+  "src": "{0} OEM documents",
+  "t": "{0} documentos OEM"
+ },
  "baf2f7cb3e37fa00": {
   "src": "Join chain: {0} → {1} → {2}",
   "t": "Cadena de unión: {0} → {1} → {2}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "bbb3178712a87adf": {
+  "src": "Standard (SAE) — {0} codes",
+  "t": "Standard (SAE) — {0} códigos"
  },
  "bbe83cefc5f6fc22": {
   "src": "Where the data comes from",
@@ -1378,6 +1622,10 @@
   "t": "Sistema",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "bc1298f94a9e5948": {
+  "src": "OEM Complete — {0} codes",
+  "t": "OEM Complete — {0} códigos"
  },
  "bc1a1c7ace81995d": {
   "src": "Standard license",
@@ -1402,6 +1650,10 @@
   "t": "Familias de fallas OBD-II del sistema {0}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "bdbacfc9cc5b0672": {
+  "src": "Coverage by system",
+  "t": "Cobertura por sistema"
  },
  "be28ace26dece1cb": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3}",
@@ -1499,11 +1751,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "c63e2bd66d64d838": {
+  "src": "Probability-ranked repairs per fault with difficulty, parts-cost range, labour hours and steps",
+  "t": "Reparaciones clasificadas por probabilidad para cada fallo, con dificultad, rango de coste de piezas, horas de mano de obra y pasos"
+ },
  "c67afdb16b9b6f89": {
   "src": "OBD-II database",
   "t": "base de datos OBD-II",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "c6ace56db76c343f": {
+  "src": "Need all {0} fault pairs as data?",
+  "t": "¿Necesita los {0} pares de fallo como datos?"
+ },
+ "c921486de135ead8": {
+  "src": "{0} SPN/FMI fault pairs published by {1} in one fault-code document, as they appear in the MechanicDB Heavy Duty dataset. The dataset maps every pair to an authored fault family with probability-ranked repairs, difficulty ratings, parts-cost ranges and labour estimates; this page shows the coverage and the rows that are in the free sample.",
+  "t": "{0} pares de fallo SPN/FMI publicados por {1} en un documento de códigos de falla, tal como figuran en el conjunto de datos MechanicDB Heavy Duty. El conjunto de datos asigna cada par a una familia de fallas redactada con reparaciones clasificadas por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra; esta página muestra la cobertura y las filas incluidas en la muestra gratuita."
  },
  "c9f55e0981521c39": {
   "src": "— same fault family",
@@ -1517,6 +1781,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "cb6f7b6ced0cc465": {
+  "src": "Largest fault families",
+  "t": "Familias de fallas más grandes"
+ },
  "cb8e455d5f12d3f3": {
   "src": "Company Invoice / Purchase Order",
   "t": "Factura de empresa / orden de compra",
@@ -1528,6 +1796,10 @@
   "t": "Conjunto de datos solo SAE: {0} códigos, {1} reparaciones, {2} piezas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "cc435b953f20ae09": {
+  "src": "{0} DTC database",
+  "t": "base de datos DTC {0}"
  },
  "cde1df12deaf8b24": {
   "src": "{0} curated codes ({1} SAE + {2} OEM) — the most-searched DTCs",
@@ -1553,6 +1825,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "cf2c2732dd15a759": {
+  "src": "Failure modes (FMI)",
+  "t": "Modos de fallo (FMI)"
+ },
  "d05b54aaeaa6304e": {
   "src": "The OBD-II trouble code database, as a file you can query.",
   "t": "La base de datos de códigos de falla OBD-II, como un archivo que puedes consultar.",
@@ -1564,6 +1840,10 @@
   "t": "{0} documentos OEM de códigos de fallo publicados en {1} fabricantes — transmisión, ABS/ESC, motor, postratamiento y controladores de carrocería para aplicaciones fuera de carretera, estacionarias y especiales. Cada fila enlaza al documento de origen del que se tomó.",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "d0bdd39049bca77e": {
+  "src": "Coverage by OEM",
+  "t": "Cobertura por OEM"
  },
  "d3fa7513e2176325": {
   "src": "<0>MechanicDB</0> › OBD-II DTC database",
@@ -1595,11 +1875,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d9eba7340ba66dc1": {
+  "src": "Heavy Duty ({0}) — {1} fault pairs",
+  "t": "Heavy Duty ({0}) — {1} pares de fallo"
+ },
  "d9eff510bd0cc137": {
   "src": "Developer sample",
   "t": "Muestra para desarrolladores",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "da5d461c92003b99": {
+  "src": "diesel fault codes",
+  "t": "códigos de falla diésel"
  },
  "db76c114fa277c70": {
   "src": "Code-to-definition mappings originate in SAE {0} / ISO {1} and are compiled from an MIT-licensed public compilation, with the upstream license committed alongside the data. The value layer — fault-family explanations, ranked procedures, difficulty tiers, and cost ranges — is original editorial content grounded in standard diagnostic practice. Cost and labor figures are estimates for typical US aftermarket parts and independent-shop labor, not quotes.",
@@ -1625,6 +1913,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "dda33e47dd6050f6": {
+  "src": "One row per OEM from the free sample. The dataset adds the ranked repairs, costs, labour estimates and parts for every pair.",
+  "t": "Una fila por OEM tomada de la muestra gratuita. El conjunto de datos añade las reparaciones clasificadas, los costes, las estimaciones de mano de obra y las piezas de cada par."
+ },
  "dde056043a8a2430": {
   "src": "Comprehensive automotive diagnostic dataset mapping {0} verified OBD-II trouble codes across {1} vehicle makes to {2} ranked repair procedures with DIY difficulty ratings and labor/parts cost estimations.",
   "t": "Conjunto de datos integral de diagnóstico automotriz que asocia {0} códigos de falla OBD-II verificados de {1} marcas de vehículos a {2} procedimientos de reparación clasificados, con valoraciones de dificultad DIY y estimaciones de costes de mano de obra y piezas.",
@@ -1642,6 +1934,10 @@
   "t": "Procedimientos clasificados con nivel de dificultad, coste mín./máx. de piezas, horas de mano de obra y pasos",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "de9e72ab7746b9ff": {
+  "src": "{0} Fault Code Database — {1} SPN/FMI Pairs | MechanicDB",
+  "t": "Base de datos de códigos de falla {0} — {1} pares SPN/FMI | MechanicDB"
  },
  "e0c43182635c50b7": {
   "src": "System Hub",
@@ -1673,6 +1969,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e3a9f624f90fbd05": {
+  "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents, each mapped to an authored fault family with {3} probability-ranked repair procedures, difficulty ratings, parts-cost ranges and labour estimates. Delivered as CSV, Parquet and SQLite, with a link to the source document on every row.",
+  "t": "{0} pares de fallo SPN/FMI SAE {1} recopilados de {2} documentos de códigos de falla publicados por los fabricantes, cada uno asignado a una familia de fallas redactada con {3} procedimientos de reparación clasificados por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra. Se entrega en CSV, Parquet y SQLite, con un enlace al documento de origen en cada fila."
+ },
  "e42e37a97505b68c": {
   "src": "Diagnostic &amp; Technical Explanation",
   "t": "Explicación diagnóstica y técnica",
@@ -1697,6 +1997,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e54ba739f5ea253a": {
+  "src": "A {0} fault is a pair. The SPN (Suspect Parameter Number) names the parameter or component a controller is reporting on, such as coolant temperature or a wheel-speed sensor. The FMI (Failure Mode Identifier, {1} to {2}) says how it failed: above or below its range, shorted high or low, open, erratic, not updating and so on. Standard SPNs mean the same thing on every make; SPNs from {3} up are assigned by each manufacturer, which is why the dataset names those per OEM.",
+  "t": "Un fallo {0} es un par. El SPN (Suspect Parameter Number) identifica el parámetro o componente sobre el que informa un controlador, como la temperatura del refrigerante o un sensor de velocidad de rueda. El FMI (Failure Mode Identifier, de {1} a {2}) indica cómo ha fallado: por encima o por debajo de su rango, cortocircuito a positivo o a masa, circuito abierto, señal errática, sin actualización, etc. Los SPN estándar significan lo mismo en todas las marcas; los SPN a partir de {3} los asigna cada fabricante, por eso el conjunto de datos los nombra por OEM."
+ },
  "e5880d908a2cafa3": {
   "src": "This page publishes the fault mechanism and the code index. The licensed dataset adds, for every one of the {0} codes, the full probability-ranked repair set ({1} procedures in total) with the fields deliberately withheld here:",
   "t": "Esta página publica el mecanismo de la falla y el índice de códigos. El conjunto de datos con licencia añade, para cada uno de los {0} códigos, el conjunto completo de reparaciones ordenadas por probabilidad ({1} procedimientos en total) con los campos que aquí se omiten deliberadamente:",
@@ -1715,11 +2019,19 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e729bc5f7ed84637": {
+  "src": "Every SPN/FMI pair with its fault family, explanation, probability-ranked repairs, difficulty, parts-cost range, labour estimate and source link, as pipe-delimited CSV, Apache Parquet and a SQLite database. Commercial use, instant download.",
+  "t": "Cada par SPN/FMI con su familia de fallas, explicación, reparaciones clasificadas por probabilidad, dificultad, rango de coste de piezas, estimación de mano de obra y enlace a la fuente, en CSV delimitado por barras verticales, Apache Parquet y una base de datos SQLite. Uso comercial, descarga inmediata."
+ },
  "e73b01cb8518745f": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related…",
   "t": "Código OBD-II {0}: {1}. Qué detecta el módulo {2}, la causa más probable y {3} relacionados…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "e743c755d5291efb": {
+  "src": "Fault family",
+  "t": "Familia de fallas"
  },
  "e895929f225de710": {
   "src": "Injector circuit",
@@ -1763,6 +2075,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f1394f3d12c08535": {
+  "src": "The {0} failure mode identifiers with plain-language meanings",
+  "t": "Los {0} identificadores de modo de fallo con su significado en lenguaje sencillo"
+ },
+ "f229a983e5a47b53": {
+  "src": "Working on trucks, buses or off-highway diesels? The <0>{1} fault code database</0> covers SAE {2} SPN/FMI fault pairs from published OEM documents.",
+  "t": "¿Trabaja con camiones, autobuses o motores diésel fuera de carretera? La <0>base de datos de códigos de falla {1}</0> cubre pares de fallo SPN/FMI SAE {2} tomados de documentos publicados por los fabricantes."
+ },
+ "f26e9a51227dbc09": {
+  "src": "The failure mode identifier is the second half of every {0} fault. These are the plain-language meanings used across the dataset, with the number of fault pairs that carry each one.",
+  "t": "El identificador de modo de fallo es la segunda mitad de cada fallo {0}. Estos son los significados en lenguaje sencillo que se usan en todo el conjunto de datos, con el número de pares de fallo que lleva cada uno."
+ },
  "f275792f4f7444a5": {
   "src": "SAE {0} &amp; Standards Licensing",
   "t": "SAE {0} y licencias de normas",
@@ -1780,6 +2104,10 @@
   "t": "{0} por código, ordenadas según su probabilidad real, con nivel de dificultad, rango de costes de piezas y horas de mano de obra",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f3dc7b7ba8b17138": {
+  "src": "{0} OEMs",
+  "t": "{0} OEM"
  },
  "f4817c8afff36409": {
   "src": "Code {0} (Right Front Wheel Speed Sensor)",
@@ -1805,11 +2133,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f7e2c58b07912efd": {
+  "src": "{0} OBD-II trouble codes and {1} SAE {2} SPN/FMI fault pairs, mapped to ranked repairs with difficulty and cost estimates. CSV, Parquet, SQLite.",
+  "t": "{0} códigos de falla OBD-II y {1} pares de fallo SPN/FMI SAE {2}, asignados a reparaciones clasificadas con estimaciones de dificultad y coste. CSV, Parquet, SQLite."
+ },
+ "f88089ee41c26c28": {
+  "src": "{0} Fault Code Database",
+  "t": "Base de datos de códigos de falla {0}"
+ },
  "f9f68e884b5e4ee8": {
   "src": "Is this the SAE {0} Digital Annex?",
   "t": "¿Es este el Digital Annex de SAE {0}?",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "fa743946944a5d02": {
+  "src": "{0} distinct SPNs appear in these pairs. {1} of the {2} pairs use SPNs that {3} assigns itself ({4} and above), named from its own documents; the rest use standard SPNs whose meaning is the same on every make.",
+  "t": "En estos pares aparecen {0} SPN distintos. {1} de los {2} pares usan SPN que {3} asigna por sí mismo ({4} en adelante), con el nombre de sus propios documentos; el resto usa SPN estándar cuyo significado es el mismo en todas las marcas."
  },
  "fa81aab139aafa60": {
   "src": "Every fault family whose codes set on the {0} module or one of the sensors and actuators it controls. Each entry below is one authored fault family; open it for the diagnostic explanation and the full list of codes it covers.",
@@ -1828,6 +2168,10 @@
   "t": "Descarga de base de datos de DTC OBD-II — CSV, Parquet, SQLite",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "fd615fc0472d3c16": {
+  "src": "FMI",
+  "t": "FMI"
  },
  "feba85bf7e25b5d2": {
   "src": "I need SAE {0} but the licence is over my budget. Is MechanicDB an alternative?",

@@ -61,6 +61,726 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/"/>
   </url>
   <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939-fault-code-database</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939-fault-code-database</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939-fault-code-database</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/bendix</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/bendix</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/bendix</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/bendix</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/bendix</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/bendix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/bendix"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/caterpillar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/caterpillar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/caterpillar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/caterpillar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/caterpillar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/caterpillar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/caterpillar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/cummins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/cummins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/cummins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/cummins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/cummins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/cummins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/cummins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/deutz</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/deutz</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/deutz</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/deutz</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/deutz</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/deutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/deutz"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/eaton</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/eaton</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/eaton</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/eaton</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/eaton</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/eaton"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/eaton"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/john-deere</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/john-deere</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/john-deere</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/john-deere</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/john-deere</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/john-deere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/john-deere"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/navistar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/navistar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/navistar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/navistar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/navistar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/navistar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/navistar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/perkins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/perkins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/perkins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/perkins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/perkins</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/perkins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/perkins"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/psi</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/psi</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/psi</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/psi</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/psi</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/psi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/psi"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/wabco</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/wabco</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/wabco</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/wabco</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/wabco</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/wabco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/wabco"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/j1939/yanmar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/es/j1939/yanmar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/de/j1939/yanmar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/fr/j1939/yanmar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+  </url>
+  <url>
+    <loc>https://mechanicdb.dataengineered.io/pt-br/j1939/yanmar</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939/yanmar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939/yanmar"/>
+  </url>
+  <url>
     <loc>https://mechanicdb.dataengineered.io/landing/B0122</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -83762,7 +84482,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/obd2-dtc-database</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -83774,7 +84494,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/es/obd2-dtc-database</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -83786,7 +84506,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/de/obd2-dtc-database</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -83798,7 +84518,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/fr/obd2-dtc-database</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -83810,7 +84530,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/pt-br/obd2-dtc-database</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
