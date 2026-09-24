@@ -12,6 +12,7 @@
 - [Landing & pricing](https://mechanicdb.dataengineered.io/): what's inside, schema, interactive DTC decoder, and how to buy.
 - [Free sample on GitHub](https://github.com/MechanicDB/MechanicDB-public): 90 codes (75 SAE + 15 OEM) in the identical schema, ODbL v1.0.
 - [Free sample on Kaggle](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database): same sample with metadata.
+- [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database): the Heavy Duty tier — 6,502 SAE J1939 SPN/FMI fault pairs from 21 published OEM documents across 11 manufacturers, coverage by OEM and system, the 32-entry J1939 FMI reference, sample rows; one page per OEM under https://mechanicdb.dataengineered.io/j1939/ (e.g. /j1939/eaton, /j1939/wabco, /j1939/deutz).
 - [Fault code statistics](https://mechanicdb.dataengineered.io/stats/): codes by vehicle system and make, code strings shared across makes, fault families, DIY difficulty of the ranked fixes, parts-cost and labor-hour estimates, most-mapped parts, computed from the full catalogue (catalogue statistics, not road incidence); CC BY 4.0, with [data.json](https://mechanicdb.dataengineered.io/stats/data.json) and embeddable SVG charts.
 
 ## Pricing & licensing
@@ -19,7 +20,7 @@
 - Standard: $49 one-time — 9,249 SAE codes, 32,767 fixes, 44,588 parts, CSV + Parquet + SQLite, commercial license, instant download.
 - OEM Complete: $149 one-time — full merged dataset (15,886 codes incl. 32 makes' OEM codes), commercial license, instant download.
 - Fault & Recall bundle: $179 one-time (vs $198 separately) — OEM Complete + RecallDB Vehicle (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite), two instant downloads after one checkout: https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h
-- Heavy Duty (J1939): $149 one-time, standalone — SAE J1939 SPN+FMI fault pairs from published OEM fault tables (Eaton, WABCO, Bendix, Deutz, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) with ranked fixes and part mappings; release pending (no buy link yet) — 100-fault free sample in `samples/heavyduty/`, ODbL v1.0, schema in DATA_DICTIONARY.md section 6.
+- Heavy Duty (J1939): $149 one-time, standalone — SAE J1939 SPN+FMI fault pairs from published OEM fault tables (Eaton, WABCO, Bendix, Deutz, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) with ranked fixes and part mappings, CSV + Parquet + SQLite, commercial license, instant download: https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j — 100-fault free sample in `samples/heavyduty/`, ODbL v1.0, schema in DATA_DICTIONARY.md section 6.
 - Contact: mechanicdb@dataengineered.io
 - Not a substitute for SAE J2012 or its Digital Annex (J2012DA): those are licensed per seat and are never redistributed here. MechanicDB reproduces no SAE document text, carries no Failure Type Bytes, and is not a citable normative reference — it is a factual code-to-meaning and code-to-repair compilation. For the standard itself, use the SAE store, Techstreet, the ANSI Webstore, Accuris, a university engineering library's SAE Digital Library subscription, or the harmonized ISO 15031-6 from a national standards body.
 - Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.

@@ -9,9 +9,11 @@
   "include": [
     "index.html",
     "obd2-dtc-database.html",
+    "j1939-fault-code-database.html",
     "404.html",
     "landing/*.html",
-    "stats/index.html"
+    "stats/index.html",
+    "j1939/*.html"
   ],
   "exclude": [
     "assets/*.html"

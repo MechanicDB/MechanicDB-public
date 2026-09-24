@@ -90,11 +90,11 @@ manufacturer-controlled ranges (`P1`, `P30`–`P33`, `C1`/`C2`, `B1`/`B2`, `U1`/
 
 ---
 
-## 6. Heavy Duty tier (J1939) — six tables — **release pending**
+## 6. Heavy Duty tier (J1939) — six tables
 
 MechanicDB Heavy Duty is a **standalone** commercial product, `$149`, sold and delivered separately
-from the OBD-II Standard/OEM Complete tiers above (see [README.md](README.md) — release pending, no
-buy link yet). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
+from the OBD-II Standard/OEM Complete tiers above (on sale since 2026-09-24, see [README.md](README.md) and the
+[J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) page). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
 WABCO, Bendix, Deutz, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
 short descriptions, fault families, explanations, ranked fixes and part mappings — currently **6,502
 fault pairs, 1,482 distinct SPNs, 25,608 ranked fixes and 8,364 part mappings across 11 OEMs and 21

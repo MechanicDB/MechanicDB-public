@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Base de datos de códigos de falla J1939 — 6.502 pares SPN/FMI | MechanicDB</title>
+<meta content="6.502 pares de fallo SPN/FMI SAE J1939 de 21 documentos publicados por los fabricantes, asignados a 25.608 reparaciones clasificadas. CSV, Parquet, SQLite. Muestra gratuita de 100 fallos." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database" rel="canonical"/>
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database">
+<link rel="alternate" hreflang="es" href="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database">
+<link rel="alternate" hreflang="de" href="https://mechanicdb.dataengineered.io/de/j1939-fault-code-database">
+<link rel="alternate" hreflang="fr" href="https://mechanicdb.dataengineered.io/fr/j1939-fault-code-database">
+<link rel="alternate" hreflang="pt-BR" href="https://mechanicdb.dataengineered.io/pt-br/j1939-fault-code-database">
+<link rel="alternate" hreflang="x-default" href="https://mechanicdb.dataengineered.io/j1939-fault-code-database">
+<style>th,td{overflow-wrap:anywhere;hyphens:auto}h1,h2,h3,h4,button,.btn{overflow-wrap:break-word}</style>
+<style>.i18n-menu{position:relative;display:inline-block;align-self:center;font-size:.85rem;line-height:1;font-weight:500;text-transform:none;letter-spacing:normal}.i18n-menu.i18n-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .65rem;border:1px solid currentColor;border-color:color-mix(in srgb,currentColor 40%,transparent);border-radius:999px;white-space:nowrap;user-select:none;color:inherit;background:transparent}.i18n-menu>summary::-webkit-details-marker{display:none}.i18n-menu>summary:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}.i18n-menu.i18n-menu>ul{display:block;position:absolute;right:0;top:calc(100% + 6px);z-index:2147482000;min-width:10rem;margin:0;padding:.35rem;list-style:none;background:#111827;border:1px solid #374151;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.35);text-align:left}.i18n-menu.i18n-menu li{display:block;margin:0;padding:0;list-style:none}.i18n-menu.i18n-menu li>a,.i18n-menu.i18n-menu li>span{display:block;padding:.5rem .75rem;border-radius:6px;color:#f9fafb;background:transparent;text-decoration:none;white-space:nowrap;font-size:.9rem;font-weight:400;line-height:1.2;border:0;box-shadow:none}.i18n-menu.i18n-menu li>a:hover,.i18n-menu.i18n-menu li>a:focus-visible{background:#1f2937;color:#fff}.i18n-menu.i18n-menu li>span{font-weight:600;color:#93c5fd}.i18n-menu--row{margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row){margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row)+.i18n-menu--row{margin-left:.75rem}.i18n-menu--float{position:absolute;top:14px;right:16px;z-index:2147481000;color:#e5e7eb}</style>
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pt_BR">
+<script src="/i18n/i18n.js?v=5" defer></script>
+<!-- /i18n:alternates -->
+<meta content="Base de datos de códigos de falla J1939 — 6.502 pares SPN/FMI | MechanicDB" property="og:title"/>
+<meta content="6.502 pares de fallo SPN/FMI SAE J1939 de 21 documentos publicados por los fabricantes, asignados a 25.608 reparaciones clasificadas. CSV, Parquet, SQLite. Muestra gratuita de 100 fallos." property="og:description"/>
+<meta content="https://mechanicdb.dataengineered.io/es/j1939-fault-code-database" property="og:url"/>
+<meta content="website" property="og:type"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "MechanicDB Heavy Duty — base de datos de fallos y reparaciones J1939",
+  "description": "6.502 pares de fallo SPN/FMI SAE J1939 recopilados de 21 documentos de códigos de falla publicados por 11 fabricantes, cada uno asignado a una familia de fallas redactada con 25.608 procedimientos de reparación clasificados por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra. Cada fila enlaza a su documento de origen.",
+  "url": "https://mechanicdb.dataengineered.io/es/j1939-fault-code-database",
+  "keywords": [
+    "códigos de falla J1939",
+    "lista SPN FMI",
+    "base de datos DTC J1939",
+    "diagnóstico de vehículos pesados",
+    "telemática de flotas",
+    "códigos de falla diésel"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "DataEngineered",
+    "url": "https://dataengineered.io"
+  },
+  "isAccessibleForFree": false,
+  "variableMeasured": [
+    "spn",
+    "fmi",
+    "oem_make",
+    "oem_code",
+    "controller",
+    "fault_family",
+    "probability_rank",
+    "difficulty_level",
+    "est_parts_cost_min_usd",
+    "est_parts_cost_max_usd",
+    "est_labor_hours",
+    "source_url"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-sqlite3"
+    }
+  ],
+  "inLanguage": "es"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "MechanicDB Heavy Duty — base de datos de fallos y reparaciones J1939",
+  "description": "6.502 pares de fallo SPN/FMI SAE J1939 de 21 documentos publicados por los fabricantes, asignados a 25.608 reparaciones clasificadas. CSV, Parquet, SQLite. Muestra gratuita de 100 fallos.",
+  "image": "https://mechanicdb.dataengineered.io/assets/kaggle-cover.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "MechanicDB"
+  },
+  "category": "Software > Data & Databases",
+  "offers": {
+    "@type": "Offer",
+    "name": "Heavy Duty (J1939) — 6.502 pares de fallo",
+    "price": "149.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": [
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "AU"
+        }
+      ],
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    },
+    "url": "https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es este el Digital Annex de SAE J1939?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. MechanicDB Heavy Duty no reproduce el Digital Annex de SAE J1939, ningún archivo DBC de J1939 ni texto SPN/FMI con licencia de SAE. Cada par de fallo se compila a partir de un documento OEM de códigos de fallo publicado — un manual de servicio, una guía de mantenimiento o una lista de DTC alojada por el propio fabricante — con redacción propia y un enlace por fila al documento del que procede."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué sistemas de vehículos pesados están cubiertos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Transmission, ABS/ESC, ECU del motor, postratamiento y controladores de carrocería en 11 OEM: Bendix, Caterpillar, Cummins, Deutz, Eaton, John Deere, Navistar, Perkins, PSI, WABCO, Yanmar — aplicaciones fuera de carretera, estacionarias, marinas, agrícolas y especiales. Las listas de fallos de motores de carretera de los camiones Cummins, Detroit Diesel, PACCAR, Volvo/Mack y Caterpillar son material de portales de concesionario y no están incluidas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué son el SPN y el FMI en un código de falla J1939?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un fallo J1939 es un par. El SPN (Suspect Parameter Number) identifica el parámetro o componente sobre el que informa un controlador, como la temperatura del refrigerante o un sensor de velocidad de rueda. El FMI (Failure Mode Identifier, de 0 a 31) indica cómo ha fallado: por encima o por debajo de su rango, cortocircuito a positivo o a masa, circuito abierto, señal errática, sin actualización, etc. Los SPN estándar significan lo mismo en todas las marcas; los SPN a partir de 516096 los asigna cada fabricante, por eso el conjunto de datos los nombra por OEM."
+      }
+    }
+  ],
+  "inLanguage": "es"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://mechanicdb.dataengineered.io/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Base de datos de códigos de falla J1939",
+      "item": "https://mechanicdb.dataengineered.io/es/j1939-fault-code-database"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/></noscript>
+<style>
+:root{--steel:#1b1e22;--steel-2:#24282e;--steel-3:#2e333a;--paper:#f1efe8;--ink:#22252a;
+--trace:#9aa3ad;--amber:#ffb000;--mono:'IBM Plex Mono',ui-monospace,monospace;
+--disp:'Saira Condensed',sans-serif;--body:'Archivo',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--steel);color:var(--trace);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.bar{border-bottom:1px solid var(--steel-3);padding:18px 0}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wordmark{font-family:var(--disp);font-weight:700;font-size:1.35rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px}
+.mil{width:22px;height:16px;background:var(--amber);display:inline-block}
+.breadcrumb{font-family:var(--mono);font-size:.78rem;margin:24px 0 16px}
+.breadcrumb a{color:var(--trace)}.breadcrumb span{color:var(--amber)}
+.monograph-head{background:var(--steel-2);border:1px solid var(--steel-3);border-radius:8px;padding:32px;margin-bottom:36px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-family:var(--mono);font-size:.74rem;padding:4px 10px;border-radius:3px;background:var(--steel);border:1px solid var(--steel-3);color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:var(--disp);font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:18px;text-transform:uppercase;letter-spacing:.03em}
+.explain-box{background:var(--steel);border-left:4px solid var(--amber);padding:20px;border-radius:4px;font-size:1.05rem;color:#fff;line-height:1.6;margin-top:20px}
+.explain-title{font-family:var(--mono);font-size:.78rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+h2.sec-title{font-family:var(--disp);font-size:1.7rem;color:#fff;text-transform:uppercase;margin:40px 0 18px;border-bottom:1px solid var(--steel-3);padding-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);text-align:left;padding:10px 12px;border-bottom:1px solid var(--steel-3)}
+td{padding:10px 12px;border-bottom:1px solid var(--steel-3);vertical-align:top}
+tr:hover td{background:var(--steel-2)}
+.codecell{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--amber)}
+.tablewrap{overflow-x:auto;background:var(--steel-2);border:1px solid var(--steel-3);border-radius:6px}
+.chip{font-family:var(--mono);font-size:.74rem;font-weight:600;padding:4px 10px;border-radius:3px;white-space:nowrap}
+.gate{background:var(--steel-2);border:1px dashed var(--steel-3);border-left:4px solid var(--amber);border-radius:6px;padding:22px 24px;margin:26px 0}
+.gate h3{font-family:var(--disp);font-size:1.25rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.gate ul{margin:10px 0 0 20px;line-height:1.8;font-size:.95rem}
+.gate code{font-family:var(--mono);font-size:.86rem;color:var(--amber)}
+.cta-footer{background:var(--paper);color:var(--ink);border-radius:8px;padding:36px;text-align:center;margin:56px 0 40px}
+.cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
+.btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
+.related ul{list-style:none;padding:0;margin-top:8px}
+.related li{padding:6px 0;border-bottom:1px solid var(--steel-3);font-size:.92rem}
+.related-why{color:var(--trace);font-size:.85em}
+footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono);font-size:.76rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="bar">
+<div class="wrap bar-inner">
+<a class="wordmark" href="/es/"><span aria-hidden="true" class="mil"></span>MechanicDB</a>
+<nav style="font-family:var(--mono);font-size:.82rem;display:flex;gap:20px">
+<a href="/es/#interactive">Decodificador</a>
+<a href="/es/#licensing">Licencia del conjunto de datos ($49)</a>
+<a href="/es/#faq">Preguntas frecuentes</a>
+<!-- i18n:header --><details class="i18n-menu i18n-menu--nav" translate="no"><summary aria-label="Idioma: Español" title="Idioma: Español"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>ES</span></summary><ul><li><a href="/j1939-fault-code-database" hreflang="en" lang="en" data-i18n-lang="en">English</a></li><li><span aria-current="true" lang="es">Español</span></li><li><a href="/de/j1939-fault-code-database" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a></li><li><a href="/fr/j1939-fault-code-database" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a></li><li><a href="/pt-br/j1939-fault-code-database" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></li></ul></details><!-- /i18n:header --></nav>
+</div>
+</header>
+<div class="wrap">
+<div class="breadcrumb"><a href="/es/">Inicio</a> / <span>Base de datos de códigos de falla J1939</span></div>
+<div class="monograph-head">
+<div class="badges">
+<span class="badge">Nivel Heavy Duty</span>
+<span class="badge"><span translate="no">6,502</span> pares de fallo</span>
+<span class="badge"><span translate="no">11</span> OEM</span>
+<span class="badge"><span translate="no">21</span> documentos OEM</span>
+</div>
+<h1>Base de datos de códigos de falla J1939</h1>
+<div class="explain-box">
+<div class="explain-title">Qué es este conjunto de datos</div>
+<span translate="no">6,502</span> pares de fallo SPN/FMI SAE J1939 recopilados de <span translate="no">21</span> documentos de códigos de falla publicados por los fabricantes, cada uno asignado a una familia de fallas redactada con <span translate="no">25,608</span> procedimientos de reparación clasificados por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra. Se entrega en CSV, Parquet y SQLite, con un enlace al documento de origen en cada fila.
+    </div>
+<a class="btn-amber" href="https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j?client_reference_id=mechanicdb_es_j1939">Licenciar Heavy Duty · $149</a>
+<p style="margin-top:14px;font-family:var(--mono);font-size:.85rem"><a href="https://github.com/MechanicDB/MechanicDB-public/tree/main/samples/heavyduty">Muestra gratuita de 100 fallos en GitHub (ODbL) →</a></p>
+</div>
+<h2 class="sec-title">Qué incluye</h2>
+<p>Seis tablas, entregadas en CSV delimitado por barras verticales, Apache Parquet y una base de datos SQLite, unidas por <code translate="no">fault_id</code> y <code translate="no">fix_id</code>.</p>
+<div class="tablewrap"><table><thead><tr><th>Tabla</th><th>Filas</th><th>Contenido</th></tr></thead><tbody><tr><td><code translate="no">j1939_faults</code></td><td><span translate="no">6,502</span></td><td>Una fila por par SPN/FMI y por OEM: código OEM, controlador, descripción breve, familia de fallas, explicación, documento de origen y URL</td></tr><tr><td><code translate="no">j1939_spn</code></td><td><span translate="no">1,536</span></td><td>Nombres de SPN: los SPN estándar una vez, los SPN asignados por el fabricante una vez por OEM</td></tr><tr><td><code translate="no">j1939_fmi</code></td><td><span translate="no">32</span></td><td>Los 32 identificadores de modo de fallo con su significado en lenguaje sencillo</td></tr><tr><td><code translate="no">diagnostic_fixes</code></td><td><span translate="no">25,608</span></td><td>Reparaciones clasificadas por probabilidad para cada fallo, con dificultad, rango de coste de piezas, horas de mano de obra y pasos</td></tr><tr><td><code translate="no">replacement_parts</code></td><td><span translate="no">8,365</span></td><td>Nombres de piezas por reparación, con una consulta de búsqueda en catálogo</td></tr><tr><td><code translate="no">j1939_fixes_joined</code></td><td><span translate="no">25,608</span></td><td>La vista plana que une fallos y reparaciones, una sola lectura para notebooks</td></tr></tbody></table></div>
+<h2 class="sec-title">Cobertura por OEM</h2>
+<p><span translate="no">21</span> documentos de códigos de falla publicados por <span translate="no">11</span> fabricantes. Cada fila enlaza al documento del que se tomaron los pares; abra un OEM para ver su propio desglose.</p>
+<div class="tablewrap"><table><thead><tr><th>OEM</th><th>Controlador</th><th>Pares de fallo</th><th>Documento de origen</th></tr></thead><tbody><tr><td><a href="/es/j1939/bendix"><span translate="no">Bendix</span></a></td><td><span translate="no">ABS/ESC</span></td><td><span translate="no">111</span></td><td><a href="https://www.bendixvrc.com/itemDisplay.asp?documentID=6735"><span translate="no">SD-13-4869 EC-60 ABS/ATC/ESP service data sheet (2013)</span></a></td></tr><tr><td><a href="/es/j1939/bendix"><span translate="no">Bendix</span></a></td><td><span translate="no">ABS/ESC</span></td><td><span translate="no">155</span></td><td><a href="https://www.bendixvrc.com/itemDisplay.asp?documentID=6722"><span translate="no">SD-13-4983 EC-80 ABS/ATC service data sheet (2014)</span></a></td></tr><tr><td><a href="/es/j1939/caterpillar"><span translate="no">Caterpillar</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">66</span></td><td><a href="https://s7d2.scene7.com/is/content/Caterpillar/C10882888"><span translate="no">1200 Series marine auxiliary engines troubleshooting guide</span></a></td></tr><tr><td><a href="/es/j1939/cummins"><span translate="no">Cummins</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">200</span></td><td><a href="https://mart.cummins.com/imagelibrary/data/assetfiles/0056191.pdf"><span translate="no">A042J565 fire pump drive engine IOM, fault code charts</span></a></td></tr><tr><td><a href="/es/j1939/cummins"><span translate="no">Cummins</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">38</span></td><td><a href="https://www.cummins.com/sites/default/files/2024-07/cummins-onan-manual-marlin.pdf"><span translate="no">Onan marine generator MDDCA operator manual</span></a></td></tr><tr><td><a href="/es/j1939/deutz"><span translate="no">Deutz</span></a></td><td><span translate="no">Aftertreatment DCU</span></td><td><span translate="no">136</span></td><td><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_MD1_DOC_DPF_DE_EN.pdf"><span translate="no">DTC list MD1 DOC/DPF (2019)</span></a></td></tr><tr><td><a href="/es/j1939/deutz"><span translate="no">Deutz</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">903</span></td><td><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_MD1_DE_EN.pdf"><span translate="no">DTC list EMR5 / MD1 (2026-07-22)</span></a></td></tr><tr><td><a href="/es/j1939/deutz"><span translate="no">Deutz</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">507</span></td><td><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_EMRL1_MainECU_EN.pdf"><span translate="no">DTC list EMRL1 main + secondary ECU</span></a></td></tr><tr><td><a href="/es/j1939/deutz"><span translate="no">Deutz</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">155</span></td><td><a href="https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_LPG_CNG_BiFuel_Gasoline_22072025_DE_EN.pdf"><span translate="no">DTC list LPG/CNG/BiFuel/Gasoline eControls (2025-07-22)</span></a></td></tr><tr><td><a href="/es/j1939/deutz"><span translate="no">Deutz</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">589</span></td><td><a href="https://serdia.deutz.com/fileadmin/contents/serdia/KWPList_EMR4_DE_EN.pdf"><span translate="no">KWP list EMR4 (2026-06-10)</span></a></td></tr><tr><td><a href="/es/j1939/eaton"><span translate="no">Eaton</span></a></td><td><span translate="no">Transmission</span></td><td><span translate="no">763</span></td><td><a href="https://productinfo.serviceranger4.com/books/TRTS0950/lang/en-us/section/TS0950FCIndex"><span translate="no">TRTS0950 Endurant HD fault code index</span></a></td></tr><tr><td><a href="/es/j1939/eaton"><span translate="no">Eaton</span></a></td><td><span translate="no">Transmission</span></td><td><span translate="no">876</span></td><td><a href="https://productinfo.serviceranger4.com/books/TRTS0960/lang/en-us/section/TS0960FCIndex"><span translate="no">TRTS0960 Endurant XD fault code index</span></a></td></tr><tr><td><a href="/es/j1939/john-deere"><span translate="no">John Deere</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">161</span></td><td><a href="http://manuals.deere.com/omview/OMH229936_19/OUO6075_0000B3D_19_02AUG07_1.htm"><span translate="no">OMH229936 9670/9770 STS engine control unit DTCs</span></a></td></tr><tr><td><a href="/es/j1939/john-deere"><span translate="no">John Deere</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">153</span></td><td><a href="http://manuals.deere.com/omview/OMRG35856_19/OURGP12,00001FC_19_20100408.html"><span translate="no">OMRG35856 PowerTech DTC list</span></a></td></tr><tr><td><a href="/es/j1939/navistar"><span translate="no">Navistar</span></a></td><td><span translate="no">Body controller</span></td><td><span translate="no">326</span></td><td><a href="http://bodybuilder.navistar.com/General/documents/svcmanpdf/S08327.pdf"><span translate="no">S08327 Body Controller Diagnostic Trouble Codes (2010)</span></a></td></tr><tr><td><a href="/es/j1939/navistar"><span translate="no">Navistar</span></a></td><td><span translate="no">Body controller</span></td><td><span translate="no">25</span></td><td><a href="http://bodybuilder.navistar.com/General/documents/s08/s082504_FC.xml"><span translate="no">s082504 Electrical System Troubleshooting Guide fault-code XML</span></a></td></tr><tr><td><a href="/es/j1939/psi"><span translate="no">PSI</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">271</span></td><td><a href="https://dtnacontent-dtna.prd.freightliner.com/content/dam/dtna-servicelit/dtna/pdfs/en_us/fccc/engines/6.0L%20OBD%20MT-88%20HD%20Gasoline%20Diagnostic%20Manual%20(pre-released).pdf"><span translate="no">PSI 6.0L OBD-HD engine diagnostic manual (FCCC chassis)</span></a></td></tr><tr><td><a href="/es/j1939/perkins"><span translate="no">Perkins</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">179</span></td><td><a href="https://s7d2.scene7.com/is/content/Caterpillar/CM20260911-9f181-9e283"><span translate="no">SEBU8601-07 1206E-E70TTA industrial engine OMM, Table 3 diagnostic codes</span></a></td></tr><tr><td><a href="/es/j1939/wabco"><span translate="no">WABCO</span></a></td><td><span translate="no">ABS/ESC</span></td><td><span translate="no">113</span></td><td><a href="https://www.zf.com/products/media/automotive/cv/literature_downloads_wna/truck_solutions/abs_maintenance_manuals_/MM0112_web.pdf"><span translate="no">MM0112 ABS/ESC E-version maintenance manual (05.2020)</span></a></td></tr><tr><td><a href="/es/j1939/wabco"><span translate="no">WABCO</span></a></td><td><span translate="no">ABS/ESC</span></td><td><span translate="no">448</span></td><td><a href="https://www.zf.com/products/media/automotive/cv/literature_downloads_wna/truck_solutions/abs_maintenance_manuals_/MM1719_web.pdf"><span translate="no">MM1719 mBSP ABS/ESC maintenance manual (08.2018)</span></a></td></tr><tr><td><a href="/es/j1939/yanmar"><span translate="no">Yanmar</span></a></td><td><span translate="no">Engine ECU</span></td><td><span translate="no">327</span></td><td><a href="https://www.yanmar.com/media/news/2024/08/08065132/over_56kw_troubleshooting_manual.pdf"><span translate="no">Troubleshooting manual, engines over 56 kW (2024)</span></a></td></tr></tbody></table></div>
+<p style="margin-top:14px">Las listas de fallos de motores de carretera de los camiones Cummins, Detroit Diesel, PACCAR, Volvo/Mack y Caterpillar son material de portales de concesionario y no están incluidas. Las descripciones las redactamos nosotros y no se reproduce ningún texto de SAE J1939.</p>
+<div class="rel" style="margin-top:14px"><a href="/es/j1939/bendix"><span translate="no">Bendix</span> <span style="color:var(--trace)">· <span translate="no">266</span></span></a><a href="/es/j1939/caterpillar"><span translate="no">Caterpillar</span> <span style="color:var(--trace)">· <span translate="no">66</span></span></a><a href="/es/j1939/cummins"><span translate="no">Cummins</span> <span style="color:var(--trace)">· <span translate="no">238</span></span></a><a href="/es/j1939/deutz"><span translate="no">Deutz</span> <span style="color:var(--trace)">· <span translate="no">2,290</span></span></a><a href="/es/j1939/eaton"><span translate="no">Eaton</span> <span style="color:var(--trace)">· <span translate="no">1,639</span></span></a><a href="/es/j1939/john-deere"><span translate="no">John Deere</span> <span style="color:var(--trace)">· <span translate="no">314</span></span></a><a href="/es/j1939/navistar"><span translate="no">Navistar</span> <span style="color:var(--trace)">· <span translate="no">351</span></span></a><a href="/es/j1939/perkins"><span translate="no">Perkins</span> <span style="color:var(--trace)">· <span translate="no">179</span></span></a><a href="/es/j1939/psi"><span translate="no">PSI</span> <span style="color:var(--trace)">· <span translate="no">271</span></span></a><a href="/es/j1939/wabco"><span translate="no">WABCO</span> <span style="color:var(--trace)">· <span translate="no">561</span></span></a><a href="/es/j1939/yanmar"><span translate="no">Yanmar</span> <span style="color:var(--trace)">· <span translate="no">327</span></span></a></div>
+<h2 class="sec-title">Cobertura por sistema</h2>
+<div class="tablewrap"><table><thead><tr><th>Sistema</th><th>Pares de fallo</th><th>Proporción</th></tr></thead><tbody><tr><td><span translate="no">Transmission</span></td><td><span translate="no">1,363</span></td><td><span translate="no">21.0%</span></td></tr><tr><td><span translate="no">Engine</span></td><td><span translate="no">1,328</span></td><td><span translate="no">20.4%</span></td></tr><tr><td><span translate="no">Aftertreatment</span></td><td><span translate="no">880</span></td><td><span translate="no">13.5%</span></td></tr><tr><td><span translate="no">Brakes/ABS</span></td><td><span translate="no">818</span></td><td><span translate="no">12.6%</span></td></tr><tr><td><span translate="no">Fuel</span></td><td><span translate="no">610</span></td><td><span translate="no">9.4%</span></td></tr><tr><td><span translate="no">Electrical</span></td><td><span translate="no">543</span></td><td><span translate="no">8.4%</span></td></tr><tr><td><span translate="no">Air Intake</span></td><td><span translate="no">298</span></td><td><span translate="no">4.6%</span></td></tr><tr><td><span translate="no">Network</span></td><td><span translate="no">212</span></td><td><span translate="no">3.3%</span></td></tr><tr><td><span translate="no">Body/Cab</span></td><td><span translate="no">167</span></td><td><span translate="no">2.6%</span></td></tr><tr><td><span translate="no">Lubrication</span></td><td><span translate="no">123</span></td><td><span translate="no">1.9%</span></td></tr><tr><td><span translate="no">Cooling</span></td><td><span translate="no">105</span></td><td><span translate="no">1.6%</span></td></tr><tr><td><span translate="no">Instrument</span></td><td><span translate="no">55</span></td><td><span translate="no">0.8%</span></td></tr></tbody></table></div>
+<h2 class="sec-title">Referencia FMI J1939</h2>
+<p>El identificador de modo de fallo es la segunda mitad de cada fallo J1939. Estos son los significados en lenguaje sencillo que se usan en todo el conjunto de datos, con el número de pares de fallo que lleva cada uno.</p>
+<div class="tablewrap"><table><thead><tr><th>FMI</th><th>Significado</th><th>Pares de fallo</th></tr></thead><tbody><tr><td><span class="codecell"><span translate="no">0</span></span></td><td><span translate="no">Reading in-range but far too high</span></td><td><span translate="no">397</span></td></tr><tr><td><span class="codecell"><span translate="no">1</span></span></td><td><span translate="no">Reading in-range but far too low</span></td><td><span translate="no">277</span></td></tr><tr><td><span class="codecell"><span translate="no">2</span></span></td><td><span translate="no">Signal unstable, intermittent or implausible</span></td><td><span translate="no">601</span></td></tr><tr><td><span class="codecell"><span translate="no">3</span></span></td><td><span translate="no">Circuit voltage high / short to supply</span></td><td><span translate="no">578</span></td></tr><tr><td><span class="codecell"><span translate="no">4</span></span></td><td><span translate="no">Circuit voltage low / short to ground</span></td><td><span translate="no">576</span></td></tr><tr><td><span class="codecell"><span translate="no">5</span></span></td><td><span translate="no">Current too low; open circuit</span></td><td><span translate="no">447</span></td></tr><tr><td><span class="codecell"><span translate="no">6</span></span></td><td><span translate="no">Current too high; short to ground</span></td><td><span translate="no">348</span></td></tr><tr><td><span class="codecell"><span translate="no">7</span></span></td><td><span translate="no">Mechanical part not reacting or misadjusted</span></td><td><span translate="no">224</span></td></tr><tr><td><span class="codecell"><span translate="no">8</span></span></td><td><span translate="no">Wrong frequency, pulse width or period</span></td><td><span translate="no">133</span></td></tr><tr><td><span class="codecell"><span translate="no">9</span></span></td><td><span translate="no">Message not arriving at expected rate</span></td><td><span translate="no">296</span></td></tr><tr><td><span class="codecell"><span translate="no">10</span></span></td><td><span translate="no">Value changing implausibly fast or slow</span></td><td><span translate="no">137</span></td></tr><tr><td><span class="codecell"><span translate="no">11</span></span></td><td><span translate="no">Fault detected, cause undetermined</span></td><td><span translate="no">345</span></td></tr><tr><td><span class="codecell"><span translate="no">12</span></span></td><td><span translate="no">Smart device or component defective</span></td><td><span translate="no">358</span></td></tr><tr><td><span class="codecell"><span translate="no">13</span></span></td><td><span translate="no">Calibration data outside limits</span></td><td><span translate="no">336</span></td></tr><tr><td><span class="codecell"><span translate="no">14</span></span></td><td><span translate="no">See manufacturer-specific instructions</span></td><td><span translate="no">298</span></td></tr><tr><td><span class="codecell"><span translate="no">15</span></span></td><td><span translate="no">Slightly above normal range</span></td><td><span translate="no">135</span></td></tr><tr><td><span class="codecell"><span translate="no">16</span></span></td><td><span translate="no">Moderately above normal range</span></td><td><span translate="no">136</span></td></tr><tr><td><span class="codecell"><span translate="no">17</span></span></td><td><span translate="no">Slightly below normal range</span></td><td><span translate="no">94</span></td></tr><tr><td><span class="codecell"><span translate="no">18</span></span></td><td><span translate="no">Moderately below normal range</span></td><td><span translate="no">123</span></td></tr><tr><td><span class="codecell"><span translate="no">19</span></span></td><td><span translate="no">Network-received value flagged as error</span></td><td><span translate="no">160</span></td></tr><tr><td><span class="codecell"><span translate="no">20</span></span></td><td><span translate="no">Value has drifted upward over time</span></td><td><span translate="no">71</span></td></tr><tr><td><span class="codecell"><span translate="no">21</span></span></td><td><span translate="no">Value has drifted downward over time</span></td><td><span translate="no">54</span></td></tr><tr><td><span class="codecell"><span translate="no">22</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">23</span></td></tr><tr><td><span class="codecell"><span translate="no">23</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">8</span></td></tr><tr><td><span class="codecell"><span translate="no">24</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">5</span></td></tr><tr><td><span class="codecell"><span translate="no">25</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">22</span></td></tr><tr><td><span class="codecell"><span translate="no">26</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">4</span></td></tr><tr><td><span class="codecell"><span translate="no">27</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">22</span></td></tr><tr><td><span class="codecell"><span translate="no">28</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">4</span></td></tr><tr><td><span class="codecell"><span translate="no">29</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">6</span></td></tr><tr><td><span class="codecell"><span translate="no">30</span></span></td><td><span translate="no">Reserved by SAE; some OEMs assign proprietary meanings</span> <em>(reservado)</em></td><td><span translate="no">16</span></td></tr><tr><td><span class="codecell"><span translate="no">31</span></span></td><td><span translate="no">Fault present; no further detail</span></td><td><span translate="no">268</span></td></tr></tbody></table></div>
+<h2 class="sec-title">Filas de muestra</h2>
+<p>Una fila por OEM tomada de la muestra gratuita. El conjunto de datos añade las reparaciones clasificadas, los costes, las estimaciones de mano de obra y las piezas de cada par.</p>
+<div class="tablewrap"><table><thead><tr><th>SPN</th><th>FMI</th><th>OEM</th><th>Código OEM</th><th>Descripción</th><th>Familia de fallas</th></tr></thead><tbody><tr><td><span translate="no">154</span></td><td><span translate="no">13</span></td><td><span translate="no">Bendix</span></td><td><span translate="no">12-23</span></td><td><span translate="no">ABS controller auxiliary I/O circuit (I/O 2 or I/O 3) shorted high</span></td><td><span translate="no">Configurable Auxiliary Output Solenoid Circuit</span></td></tr><tr><td><span translate="no">2970</span></td><td><span translate="no">2</span></td><td><span translate="no">Caterpillar</span></td><td><span translate="no">2970-2</span></td><td><span translate="no">Parameter 2970 (validation switch) signal erratic, intermittent or implausible</span></td><td><span translate="no">Accelerator Pedal Position Sensor</span></td></tr><tr><td><span translate="no">157</span></td><td><span translate="no">4</span></td><td><span translate="no">Cummins</span></td><td><span translate="no">452</span></td><td><span translate="no">Fuel rail pressure sensor circuit reads low (shorted to ground)</span></td><td><span translate="no">Fuel Rail / Common Rail Pressure</span></td></tr><tr><td><span translate="no">105</span></td><td><span translate="no">0</span></td><td><span translate="no">Deutz</span></td><td><span translate="no">1355 0</span></td><td><span translate="no">Intake manifold air temperature reads in-range but abnormally high</span></td><td><span translate="no">DCU-Relayed Engine Pressure/Temperature Sensor Circuit</span></td></tr><tr><td><span translate="no">29</span></td><td><span translate="no">9</span></td><td><span translate="no">Eaton</span></td><td><span translate="no">166</span></td><td><span translate="no">Secondary accelerator pedal position sensor message not received at the expected rate</span></td><td><span translate="no">J1939-Received Engine Data Fault (Speed, Torque, Pedal Position)</span></td></tr><tr><td><span translate="no">105</span></td><td><span translate="no">3</span></td><td><span translate="no">John Deere</span></td><td>—</td><td><span translate="no">Intake manifold air temperature, shorted to supply (voltage high)</span></td><td><span translate="no">Intake / Charge Air Temperature Sensor</span></td></tr><tr><td><span translate="no">2368</span></td><td><span translate="no">6</span></td><td><span translate="no">Navistar</span></td><td>—</td><td><span translate="no">Exterior light relay driver circuit is shorted to ground or drawing excess current</span></td><td><span translate="no">Lighting Relay Driver Circuit</span></td></tr><tr><td><span translate="no">172</span></td><td><span translate="no">10</span></td><td><span translate="no">PSI</span></td><td>—</td><td><span translate="no">Intake air temperature sensor 1 reading out of expected range for conditions</span></td><td><span translate="no">Intake / Charge Air Temperature Sensor</span></td></tr><tr><td><span translate="no">108</span></td><td><span translate="no">3</span></td><td><span translate="no">Perkins</span></td><td>—</td><td><span translate="no">Barometric pressure sensor circuit reads high (shorted to supply)</span></td><td><span translate="no">Ambient (Barometric) Pressure Sensor</span></td></tr><tr><td><span translate="no">705</span></td><td><span translate="no">5</span></td><td><span translate="no">WABCO</span></td><td>—</td><td><span translate="no">Pneumatic governor valve (3/2-way) circuit: open, current too low</span></td><td><span translate="no">Configurable Auxiliary Output Solenoid Circuit</span></td></tr><tr><td><span translate="no">172</span></td><td><span translate="no">19</span></td><td><span translate="no">Yanmar</span></td><td><span translate="no">P1555</span></td><td><span translate="no">ECU received an invalid intake air temperature value over the network</span></td><td><span translate="no">Aftertreatment DCU Internal Processor/Memory Fault</span></td></tr></tbody></table></div>
+<h2 class="sec-title">Preguntas</h2>
+<h3 style="color:#fff;margin:22px 0 6px">¿Es este el Digital Annex de SAE J1939?</h3><p>No. MechanicDB Heavy Duty no reproduce el Digital Annex de SAE J1939, ningún archivo DBC de J1939 ni texto SPN/FMI con licencia de SAE. Cada par de fallo se compila a partir de un documento OEM de códigos de fallo publicado — un manual de servicio, una guía de mantenimiento o una lista de DTC alojada por el propio fabricante — con redacción propia y un enlace por fila al documento del que procede.</p>
+<h3 style="color:#fff;margin:22px 0 6px">¿Qué sistemas de vehículos pesados están cubiertos?</h3><p>Transmisión, ABS/ESC, ECU de motor, postratamiento y controladores de carrocería en <span translate="no">11</span> fabricantes: <span translate="no">Bendix, Caterpillar, Cummins, Deutz, Eaton, John Deere, Navistar, Perkins, PSI, WABCO, Yanmar</span> — aplicaciones fuera de carretera, estacionarias, marinas, agrícolas y especiales. Las listas de fallos de motores de uso en carretera de Cummins, Detroit Diesel, PACCAR, Volvo/Mack y camiones Caterpillar son material de portal exclusivo del concesionario y no están incluidas.</p>
+<h3 style="color:#fff;margin:22px 0 6px">¿Qué son el SPN y el FMI en un código de falla J1939?</h3><p>Un fallo J1939 es un par. El SPN (Suspect Parameter Number) identifica el parámetro o componente sobre el que informa un controlador, como la temperatura del refrigerante o un sensor de velocidad de rueda. El FMI (Failure Mode Identifier, de 0 a 31) indica cómo ha fallado: por encima o por debajo de su rango, cortocircuito a positivo o a masa, circuito abierto, señal errática, sin actualización, etc. Los SPN estándar significan lo mismo en todas las marcas; los SPN a partir de 516096 los asigna cada fabricante, por eso el conjunto de datos los nombra por OEM.</p>
+<div class="cta-footer">
+<h3>¿Necesita los <span translate="no">6,502</span> pares de fallo como datos?</h3>
+<p>Cada par SPN/FMI con su familia de fallas, explicación, reparaciones clasificadas por probabilidad, dificultad, rango de coste de piezas, estimación de mano de obra y enlace a la fuente, en CSV delimitado por barras verticales, Apache Parquet y una base de datos SQLite. Uso comercial, descarga inmediata.</p>
+<a class="btn-amber" href="https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j?client_reference_id=mechanicdb_es_j1939">Licenciar Heavy Duty · $149</a>
+<p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">pago único · uso comercial · <a href="/es/#licensing">comparar niveles</a> · <a href="https://github.com/MechanicDB/MechanicDB-public/tree/main/samples/heavyduty">muestra gratuita de 100 fallos</a></p>
+</div>
+</div>
+<footer><div class="wrap"><span>MechanicDB · La base de datos de diagnóstico y reparación OBD-II · ODbL v1.0 / licencia comercial</span>
+<div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Parte del catálogo DataEngineered →</a> · <a href="https://dataengineered.io/about">Acerca de</a> · <a href="https://dataengineered.io/terms">Términos</a> · <a href="https://dataengineered.io/privacy">Privacidad</a> · <a href="https://dataengineered.io/refund-policy">Política de reembolso</a></div></div><!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Idioma" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><a href="/j1939-fault-code-database" hreflang="en" lang="en" data-i18n-lang="en">English</a> · <span aria-current="true" style="font-weight:600">Español</span> · <a href="/de/j1939-fault-code-database" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a> · <a href="/fr/j1939-fault-code-database" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <a href="/pt-br/j1939-fault-code-database" hreflang="pt-BR" lang="pt-BR" data-i18n-lang="pt-br">Português</a></nav><!-- /i18n:switcher --></footer>
+</body>
+</html>
