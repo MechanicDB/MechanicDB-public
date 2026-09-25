@@ -113,7 +113,7 @@ print(duckdb.query("""
 ## License
 
 - **Sample dataset (this repo):** [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/) — free for research, education, and benchmarking with attribution and share-alike (see [LICENSE](LICENSE)).
-- **Full dataset:** commercial license, self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/) — see [Pricing](#pricing).
+- **Full dataset:** [commercial license](https://mechanicdb.dataengineered.io/license), self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/) — see [Pricing](#pricing).
 - **Documentation:** CC BY 4.0.
 
 ⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag procedures must only be performed by qualified technicians following the manufacturer's lockout and de-energization procedures.

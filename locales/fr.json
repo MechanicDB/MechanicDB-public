@@ -201,6 +201,12 @@
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
  },
+ "1652f6bd5d1fdf1c": {
+  "src": "MechanicDB · sample data under ODbL {0} · full dataset under <1>commercial license</1>",
+  "t": "MechanicDB · données d'échantillon sous ODbL {0} · jeu de données complet sous <1>licence commerciale</1>",
+  "by": "claude",
+  "at": "2026-09-25"
+ },
  "17629301f59288d4": {
   "src": "{0} fault codes",
   "t": "codes défaut {0}"
@@ -992,6 +998,12 @@
   "t": "Décodeur",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7c4528372dca5087": {
+  "src": "Every paid tier ships under the same terms: <0>read the commercial license</0>.",
+  "t": "Chaque formule payante est livrée sous les mêmes conditions : <0>lire la licence commerciale</0>.",
+  "by": "claude",
+  "at": "2026-09-25"
  },
  "7d9908551f2532ad": {
   "src": "What you get in the download",

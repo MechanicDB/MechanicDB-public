@@ -43,12 +43,12 @@ END = "<!-- END:buyer-link -->"
 
 # Dataset JSON-LD: Google wants a license and a contentUrl on every DataDownload. The paid
 # files have no public URL, so the downloads are the free ODbL sample served from the repo
-# root, and the Dataset's own license points at the commercial terms.
+# root, and the Dataset's own license points at the commercial terms (/license).
 SAMPLE_DOWNLOADS = (("dtc_codes.csv", "text/csv"),
                     ("dtc_codes.parquet", "application/vnd.apache.parquet"),
                     ("diagnostic_fixes.csv", "text/csv"),
                     ("diagnostic_fixes.parquet", "application/vnd.apache.parquet"))
-LICENSING_URL = BASE + "/#licensing"
+LICENSE_URL = BASE + "/license"
 ODBL_URL = "https://opendatacommons.org/licenses/odbl/1.0/"  # as in the homepage Dataset JSON-LD
 
 TITLE = "OBD-II DTC Database Download — CSV, Parquet, SQLite"
@@ -204,7 +204,7 @@ def build():
 </html>
 """.format(
         title=TITLE, desc=DESC, base=BASE,
-        license=LICENSING_URL, distribution=sample_downloads(),
+        license=LICENSE_URL, distribution=sample_downloads(),
         chrome=lifted_chrome(src),
         header=lifted_block("header", src).replace('href="#', 'href="/#'),
         body=BODY,
