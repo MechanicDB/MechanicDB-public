@@ -687,11 +687,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "51c14a9d8905ebb1": {
+  "src": "Yes. The {0}-code sample is available under ODbL {1}. The complete {2}-code and {3}-fix dataset comes with a perpetual commercial license to build it into your own scan tools, apps and services, delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database. You can't resell or redistribute the raw data itself; see the full license terms.",
+  "t": "Sim. A amostra de {0} códigos está disponível sob ODbL {1}. O conjunto de dados completo com {2} códigos e {3} reparos vem com uma licença comercial perpétua para integrá-lo às suas próprias ferramentas de diagnóstico, aplicativos e serviços, e é entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite. Você não pode revender nem redistribuir os dados brutos em si; consulte os termos completos da licença.",
+  "by": "claude",
+  "at": "2026-09-25"
+ },
  "52d0b35277ee4b2b": {
   "src": "Rows",
   "t": "Linhas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "52de3ac3353eb23e": {
+  "src": "Yes. The {0}-code sample is available under ODbL {1}. The complete {2}-code and {3}-fix dataset comes with a perpetual commercial license to build it into your own scan tools, apps and services, delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database. You can't resell or redistribute the raw data itself; see the <4>full license terms</4>.",
+  "t": "Sim. A amostra de {0} códigos está disponível sob ODbL {1}. O conjunto de dados completo com {2} códigos e {3} reparos vem com uma licença comercial perpétua para integrá-lo às suas próprias ferramentas de diagnóstico, aplicativos e serviços, e é entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite. Você não pode revender nem redistribuir os dados brutos em si; consulte os <4>termos completos da licença</4>.",
+  "by": "claude",
+  "at": "2026-09-25"
  },
  "53a7a2a626fb238c": {
   "src": "Diagnostic &amp; Licensing Inquiry",
@@ -1910,12 +1922,6 @@
  "db8d1696c9919192": {
   "src": "Coverage, stated honestly",
   "t": "Cobertura, com honestidade",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "dd23353ee9485240": {
-  "src": "Yes. While the {0}-code sample is available under ODbL {1}, the complete {2}-code and {3}-fix dataset is available under an unrestricted commercial license delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database.",
-  "t": "Sim. Embora a amostra de {0} códigos esteja disponível sob ODbL {1}, o conjunto de dados completo com {2} códigos e {3} reparos está disponível sob uma licença comercial irrestrita, entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
