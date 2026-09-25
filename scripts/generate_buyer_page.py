@@ -27,6 +27,7 @@ point at the homepage.
 Run from the repo root:  python scripts/generate_buyer_page.py
 """
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -40,6 +41,16 @@ BASE = "https://mechanicdb.dataengineered.io"
 BEGIN = "<!-- BEGIN:buyer-link -->"
 END = "<!-- END:buyer-link -->"
 
+# Dataset JSON-LD: Google wants a license and a contentUrl on every DataDownload. The paid
+# files have no public URL, so the downloads are the free ODbL sample served from the repo
+# root, and the Dataset's own license points at the commercial terms.
+SAMPLE_DOWNLOADS = (("dtc_codes.csv", "text/csv"),
+                    ("dtc_codes.parquet", "application/vnd.apache.parquet"),
+                    ("diagnostic_fixes.csv", "text/csv"),
+                    ("diagnostic_fixes.parquet", "application/vnd.apache.parquet"))
+LICENSING_URL = BASE + "/#licensing"
+ODBL_URL = "https://opendatacommons.org/licenses/odbl/1.0/"  # as in the homepage Dataset JSON-LD
+
 TITLE = "OBD-II DTC Database Download — CSV, Parquet, SQLite"
 DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked "
         "repairs. Download as CSV, Parquet or SQLite. Free 90-code sample.")
@@ -47,6 +58,18 @@ DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ra
 # Homepage title/meta: led with framing rather than with anything anyone types.
 HOME_TITLE_OLD = "<title>OBD-II DTC Database — 15,886 Trouble Codes &amp; Fixes | MechanicDB</title>"
 HOME_TITLE_NEW = "<title>MechanicDB — 15,886 OBD-II Trouble Codes &amp; Ranked Fixes</title>"
+
+
+def sample_downloads():
+    """DataDownload entries for the free sample files, each checked on disk so the page never
+    carries a contentUrl that 404s."""
+    out = []
+    for fname, fmt in SAMPLE_DOWNLOADS:
+        if not (ROOT / fname).exists():
+            sys.exit("sample file missing from the repo root: %s" % fname)
+        out.append({"@type": "DataDownload", "encodingFormat": fmt,
+                    "contentUrl": "%s/%s" % (BASE, fname), "license": ODBL_URL})
+    return json.dumps(out, separators=(",", ":"))
 
 
 def lifted_chrome(src):
@@ -169,7 +192,7 @@ def build():
 <meta property="og:type" content="website">
 <meta property="og:url" content="{base}/obd2-dtc-database">
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Dataset","name":"MechanicDB OBD-II DTC Database","description":"{desc}","url":"{base}/obd2-dtc-database","creator":{{"@type":"Organization","name":"DataEngineered","url":"https://dataengineered.io"}},"distribution":[{{"@type":"DataDownload","encodingFormat":"text/csv"}},{{"@type":"DataDownload","encodingFormat":"application/vnd.apache.parquet"}},{{"@type":"DataDownload","encodingFormat":"application/x-sqlite3"}}],"variableMeasured":["diagnostic trouble code","system category","fault family","repair procedure","probability rank","difficulty tier","estimated parts cost","labor hours","replacement part name"]}}
+{{"@context":"https://schema.org","@type":"Dataset","name":"MechanicDB OBD-II DTC Database","description":"{desc}","url":"{base}/obd2-dtc-database","creator":{{"@type":"Organization","name":"DataEngineered","url":"https://dataengineered.io"}},"license":"{license}","isAccessibleForFree":false,"distribution":{distribution},"variableMeasured":["diagnostic trouble code","system category","fault family","repair procedure","probability rank","difficulty tier","estimated parts cost","labor hours","replacement part name"]}}
 </script>
 {chrome}
 </head>
@@ -181,6 +204,7 @@ def build():
 </html>
 """.format(
         title=TITLE, desc=DESC, base=BASE,
+        license=LICENSING_URL, distribution=sample_downloads(),
         chrome=lifted_chrome(src),
         header=lifted_block("header", src).replace('href="#', 'href="/#'),
         body=BODY,
