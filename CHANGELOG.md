@@ -5,6 +5,19 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Deutz sources withdrawn from Heavy Duty — 2026-09-26
+
+- The five Deutz documents (serdia.deutz.com) are no longer part of the Heavy Duty tier. The paid
+  tier now measures **4,212 fault pairs · 884 SPN rows (870 distinct SPNs) · 16,998 ranked fixes · 5,904 part mappings
+  across 10 OEMs and 16 official-host sources** (was 6,502 · 1,536 · 25,608 · 8,365, 11 OEMs, 21
+  sources); `fault_id`, `fix_id` and `part_id` are renumbered, so join editions on
+  (`source_id`, `spn`, `fmi`, `oem_code`).
+- **Free sample** regenerated: 100 of the 4,212 faults, every one of the 10 OEMs represented, no
+  Deutz rows. FMI register unchanged.
+- **/j1939/deutz** and its es/de/fr/pt-br copies removed (they now return 404) and dropped from the
+  sitemap; the homepage, the J1939 database page, the other OEM pages, README, DATA_DICTIONARY and
+  llms.txt carry the new counts and OEM list.
+
 ## Heavy Duty SEO pages — 2026-09-24
 
 - New page **/j1939-fault-code-database**: the Heavy Duty tier in full — six tables with row counts,
