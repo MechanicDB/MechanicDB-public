@@ -17,6 +17,9 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 - **/j1939/deutz** and its es/de/fr/pt-br copies removed (they now return 404) and dropped from the
   sitemap; the homepage, the J1939 database page, the other OEM pages, README, DATA_DICTIONARY and
   llms.txt carry the new counts and OEM list.
+- An edge cache kept serving the deleted /j1939/deutz pages after the deploy (the zone purge
+  does not reach it), so functions/_middleware.js now answers those five paths itself with the
+  locale's 404 page and a real 404 status.
 
 ## Heavy Duty SEO pages — 2026-09-24
 
