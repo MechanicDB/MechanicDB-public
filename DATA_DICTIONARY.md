@@ -95,9 +95,9 @@ manufacturer-controlled ranges (`P1`, `P30`–`P33`, `C1`/`C2`, `B1`/`B2`, `U1`/
 MechanicDB Heavy Duty is a **standalone** commercial product, `$149`, sold and delivered separately
 from the OBD-II Standard/OEM Complete tiers above (on sale since 2026-09-24, see [README.md](README.md) and the
 [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) page). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
-WABCO, Bendix, Deutz, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
-short descriptions, fault families, explanations, ranked fixes and part mappings — currently **6,502
-fault pairs, 1,482 distinct SPNs, 25,608 ranked fixes and 8,364 part mappings across 11 OEMs and 21
+WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
+short descriptions, fault families, explanations, ranked fixes and part mappings — currently **4,212
+fault pairs, 870 distinct SPNs, 16,998 ranked fixes and 5,904 part mappings across 10 OEMs and 16
 official-host sources**, measured at build time. It follows the same physical conventions as the
 tables above: pipe-delimited CSV, `utf-8-sig`, no embedded `\r`/`\n` (replaced with ` • `), Parquet
 Snappy, one SQLite.
@@ -118,8 +118,8 @@ is the single join key for the other tables.
 `diagnostic_fixes` rows are editorial estimates — here, for **US independent heavy-duty / fleet
 shops**, not dealer rates and not a quote. They are not sourced from the OEM documents.
 
-**Free sample:** [`samples/heavyduty/`](samples/heavyduty/) in this repository ships 100 of the 6,502
-faults (deterministically sampled across the full spine, so every one of the 11 OEMs is represented),
+**Free sample:** [`samples/heavyduty/`](samples/heavyduty/) in this repository ships 100 of the 4,212
+faults (deterministically sampled across the full spine, so every one of the 10 OEMs is represented),
 their referenced SPNs, ranked fixes, part mappings, and the complete 32-row FMI register — same
 schema, same ODbL v1.0 terms as the OBD-II sample above (see [LICENSE](LICENSE)).
 
@@ -152,19 +152,19 @@ One row per extracted OEM SPN+FMI fault pair.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
-| `fault_id` | Integer (PK) | Primary key, assigned after sorting rows by (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`). | `1` |
+| `fault_id` | Integer (PK) | Primary key, assigned after sorting rows by (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`). | `280` |
 | `spn` | Integer (FK → `j1939_spn.spn`) | | `110` |
 | `fmi` | Integer (FK → `j1939_fmi.fmi`) | | `3` |
-| `oem_make` | String | One of `Eaton`, `WABCO`, `Bendix`, `Deutz`, `John Deere`, `Navistar`, `Cummins`, `Caterpillar`, `PSI`, `Perkins`, `Yanmar`. | `Deutz` |
-| `oem_code` | String | The OEM's own code for this fault as printed in its document; empty string when the source document does not print one. | `16` |
+| `oem_make` | String | One of `Eaton`, `WABCO`, `Bendix`, `John Deere`, `Navistar`, `Cummins`, `Caterpillar`, `PSI`, `Perkins`, `Yanmar`. | `Caterpillar` |
+| `oem_code` | String | The OEM's own code for this fault as printed in its document; empty string when the source document does not print one. | `110-3` |
 | `controller` | String | Fixed vocabulary: `Engine ECU`, `Aftertreatment DCU`, `Transmission`, `ABS/ESC`, `Body controller`. | `Engine ECU` |
-| `short_description` | String | Authored, our words, ≤ 120 characters. Never a copy of OEM text. | `Coolant temperature reading implausibly high` |
-| `fault_family` | String | Slug of the authored fault family that groups this fault with others sharing a diagnosis/repair path; joins `diagnostic_fixes` via the family's authored fixes. | `hde_coolant_temp_circuit` |
-| `detailed_technical_explanation` | String | Authored explanation, rendered from the family's template — never OEM prose. | `The Engine ECU reports Engine Coolant Temperature reading in-range but far too high...` |
-| `source_id` | String | Register key for the OEM document this row's fact was read from. | `deutz_md1` |
-| `source_url` | String | The official OEM document URL this row's fact was read from. | `https://serdia.deutz.com/fileadmin/contents/serdia/DTCList_MD1_DE_EN.pdf` |
-| `source_page` | String | Page/section marker within the source document, when the source format carries one. | `12` |
-| `source_doc` | String | Human-readable document title/ID. | `DTC list EMR5 / MD1 (2026-07-22)` |
+| `short_description` | String | Authored, our words, ≤ 120 characters. Never a copy of OEM text. | `Engine coolant temperature sensor circuit voltage above normal (short to supply)` |
+| `fault_family` | String | Slug of the authored fault family that groups this fault with others sharing a diagnosis/repair path; joins `diagnostic_fixes` via the family's authored fixes. | `hde_coolant_temp_sensor` |
+| `detailed_technical_explanation` | String | Authored explanation, rendered from the family's template — never OEM prose. | `SPN 110 (Engine coolant temperature) with FMI 3 (Circuit voltage high / short to supply) is set by the Engine ECU when the engine coolant temperature sensor signal leaves its plausible window...` |
+| `source_id` | String | Register key for the OEM document this row's fact was read from. | `cat_c10882888` |
+| `source_url` | String | The official OEM document URL this row's fact was read from. | `https://s7d2.scene7.com/is/content/Caterpillar/C10882888` |
+| `source_page` | String | Page/section marker within the source document, when the source format carries one. | `102` |
+| `source_doc` | String | Human-readable document title/ID. | `1200 Series marine auxiliary engines troubleshooting guide` |
 
 ### 6.4 `diagnostic_fixes`
 

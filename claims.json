@@ -13,12 +13,12 @@
     "price_usd": 149
   },
   "heavyduty": {
-    "faults": 6502,
-    "spns": 1536,
-    "fixes": 25608,
-    "parts": 8365,
-    "oems": 11,
-    "sources": 21,
+    "faults": 4212,
+    "spns": 884,
+    "fixes": 16998,
+    "parts": 5904,
+    "oems": 10,
+    "sources": 16,
     "price_usd": 149,
     "released": true,
     "launch_date": "2026-09-24",
