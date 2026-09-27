@@ -25,6 +25,8 @@ header nav is rewritten to absolute anchors, since its section links
 point at the homepage.
 
 Run from the repo root:  python scripts/generate_buyer_page.py
+Then re-run ../MechanicDB/scripts/generate_public_pages.py (the homepage Dataset's hasPart
+repeats this page's Dataset name and description) and the i18n build.
 """
 
 import json
@@ -50,6 +52,10 @@ SAMPLE_DOWNLOADS = (("dtc_codes.csv", "text/csv"),
                     ("diagnostic_fixes.parquet", "application/vnd.apache.parquet"))
 LICENSE_URL = BASE + "/license"
 ODBL_URL = "https://opendatacommons.org/licenses/odbl/1.0/"  # as in the homepage Dataset JSON-LD
+# Each DataDownload is named as the free sample it is -- the same names the homepage's
+# Dataset carries (MechanicDB scripts/generate_public_pages.py _obd_sample_downloads).
+SAMPLE_LABEL = "Free 90-code OBD-II sample"
+FORMAT_LABEL = {"text/csv": "CSV", "application/vnd.apache.parquet": "Parquet"}
 
 TITLE = "OBD-II DTC Database Download — CSV, Parquet, SQLite"
 DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked "
@@ -67,9 +73,11 @@ def sample_downloads():
     for fname, fmt in SAMPLE_DOWNLOADS:
         if not (ROOT / fname).exists():
             sys.exit("sample file missing from the repo root: %s" % fname)
-        out.append({"@type": "DataDownload", "encodingFormat": fmt,
-                    "contentUrl": "%s/%s" % (BASE, fname), "license": ODBL_URL})
-    return json.dumps(out, separators=(",", ":"))
+        out.append({"@type": "DataDownload",
+                    "name": "%s — %s (%s)" % (SAMPLE_LABEL, fname.rsplit(".", 1)[0], FORMAT_LABEL[fmt]),
+                    "encodingFormat": fmt, "contentUrl": "%s/%s" % (BASE, fname),
+                    "license": ODBL_URL, "isAccessibleForFree": True})
+    return json.dumps(out, separators=(",", ":"), ensure_ascii=False)
 
 
 def lifted_chrome(src):

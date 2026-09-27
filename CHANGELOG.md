@@ -5,6 +5,26 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Page header and footer, sample labels, dated license terms — 2026-09-27
+
+- Every generated page (code and family pages and the J1939 pages in all five languages, plus the
+  English-only /license and /stats/): the header's "Decoder" link now opens the homepage decoder (/#decoder — it pointed at
+  an anchor the homepage never had), the pricing link reads "Licensing" rather than a single $49
+  price (there are three paid tiers), and the footer carries the homepage wording, "sample data
+  under ODbL v1.0 · full dataset under commercial license", with a link to /license. The /stats/
+  contact link opens the inquiry form, and the homepage breadcrumb's "Diagnostic Decoder" item
+  points at /#decoder.
+- Structured data: every free-sample download in the Dataset markup (homepage, /obd2-dtc-database,
+  /j1939-fault-code-database) is named as the free sample it is — e.g. "Free 90-code OBD-II sample
+  — dtc_codes (CSV)", "Free 100-fault Heavy Duty sample — j1939_faults (Parquet)" — and marked free.
+  The homepage Dataset's two parts are now full Dataset entries repeating each buyer page's own name
+  and description (Google's Rich Results Test flagged the bare links as invalid). The /j1939/<oem>
+  pages name the J1939 database page as the one they belong to (isPartOf) instead of nesting an
+  incomplete copy of its Dataset, which the Rich Results Test rejected for its missing description.
+- /license states the terms version, 2026-09-25: the date the current terms took effect (the Heavy
+  Duty Section 3 rewrite). The terms themselves are unchanged; the paid downloads are re-issued with
+  the same line in their COMMERCIAL_LICENSE.md, and the page's structured data states the version.
+
 ## Homepage Dataset markup describes the paid collection — 2026-09-27
 
 - The homepage's Dataset structured data (all five languages) no longer calls the full paid database

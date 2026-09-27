@@ -71,32 +71,66 @@
   "distribution": [
     {
       "@type": "DataDownload",
+      "name": "Muestra gratuita OBD-II de 90 códigos — dtc_codes (CSV)",
       "encodingFormat": "text/csv",
       "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.csv",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     },
     {
       "@type": "DataDownload",
+      "name": "Muestra gratuita OBD-II de 90 códigos — dtc_codes (Parquet)",
       "encodingFormat": "application/vnd.apache.parquet",
       "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.parquet",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     },
     {
       "@type": "DataDownload",
+      "name": "Muestra gratuita OBD-II de 90 códigos — diagnostic_fixes (CSV)",
       "encodingFormat": "text/csv",
       "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.csv",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     },
     {
       "@type": "DataDownload",
+      "name": "Muestra gratuita OBD-II de 90 códigos — diagnostic_fixes (Parquet)",
       "encodingFormat": "application/vnd.apache.parquet",
       "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.parquet",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     }
   ],
   "hasPart": [
-    "https://mechanicdb.dataengineered.io/obd2-dtc-database",
-    "https://mechanicdb.dataengineered.io/j1939-fault-code-database"
+    {
+      "@type": "Dataset",
+      "name": "MechanicDB: base de datos de DTC OBD-II",
+      "description": "15.886 códigos de falla OBD-II (9.249 SAE + 6.637 OEM) unidos a 56.561 reparaciones clasificadas. Descarga en CSV, Parquet o SQLite. Muestra gratuita de 90 códigos.",
+      "url": "https://mechanicdb.dataengineered.io/es/obd2-dtc-database",
+      "creator": {
+        "@type": "Organization",
+        "name": "DataEngineered",
+        "url": "https://dataengineered.io"
+      },
+      "license": "https://mechanicdb.dataengineered.io/license",
+      "isAccessibleForFree": false,
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Dataset",
+      "name": "MechanicDB Heavy Duty — base de datos de fallos y reparaciones J1939",
+      "description": "4.212 pares de fallo SPN/FMI SAE J1939 recopilados de 16 documentos de códigos de falla publicados por 10 fabricantes, cada uno asignado a una familia de fallas redactada con 16.998 procedimientos de reparación clasificados por probabilidad, niveles de dificultad, rangos de coste de piezas y estimaciones de mano de obra. Cada fila enlaza a su documento de origen.",
+      "url": "https://mechanicdb.dataengineered.io/es/j1939-fault-code-database",
+      "creator": {
+        "@type": "Organization",
+        "name": "DataEngineered",
+        "url": "https://dataengineered.io"
+      },
+      "license": "https://mechanicdb.dataengineered.io/license",
+      "isAccessibleForFree": false,
+      "inLanguage": "es"
+    }
   ],
   "inLanguage": "es"
 }
@@ -216,7 +250,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Decodificador de diagnóstico",
-      "item": "https://mechanicdb.dataengineered.io/es/#interactive"
+      "item": "https://mechanicdb.dataengineered.io/es/#decoder"
     },
     {
       "@type": "ListItem",

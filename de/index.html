@@ -71,32 +71,66 @@
   "distribution": [
     {
       "@type": "DataDownload",
+      "name": "Kostenlose OBD-II-Beispieldaten mit 90 Codes — dtc_codes (CSV)",
       "encodingFormat": "text/csv",
       "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.csv",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     },
     {
       "@type": "DataDownload",
+      "name": "Kostenlose OBD-II-Beispieldaten mit 90 Codes — dtc_codes (Parquet)",
       "encodingFormat": "application/vnd.apache.parquet",
       "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.parquet",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     },
     {
       "@type": "DataDownload",
+      "name": "Kostenlose OBD-II-Beispieldaten mit 90 Codes — diagnostic_fixes (CSV)",
       "encodingFormat": "text/csv",
       "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.csv",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     },
     {
       "@type": "DataDownload",
+      "name": "Kostenlose OBD-II-Beispieldaten mit 90 Codes — diagnostic_fixes (Parquet)",
       "encodingFormat": "application/vnd.apache.parquet",
       "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.parquet",
-      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/",
+      "isAccessibleForFree": true
     }
   ],
   "hasPart": [
-    "https://mechanicdb.dataengineered.io/obd2-dtc-database",
-    "https://mechanicdb.dataengineered.io/j1939-fault-code-database"
+    {
+      "@type": "Dataset",
+      "name": "MechanicDB OBD-II-DTC-Datenbank",
+      "description": "15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM) mit 56.561 priorisierten Reparaturen. Download als CSV, Parquet oder SQLite. Kostenlose Beispieldaten (90 Codes).",
+      "url": "https://mechanicdb.dataengineered.io/de/obd2-dtc-database",
+      "creator": {
+        "@type": "Organization",
+        "name": "DataEngineered",
+        "url": "https://dataengineered.io"
+      },
+      "license": "https://mechanicdb.dataengineered.io/license",
+      "isAccessibleForFree": false,
+      "inLanguage": "de"
+    },
+    {
+      "@type": "Dataset",
+      "name": "MechanicDB Heavy Duty — J1939-Fehler- & Reparaturdatenbank",
+      "description": "4.212 SAE-J1939-SPN/FMI-Fehlerpaare aus 16 veröffentlichten Fehlercode-Dokumenten von 10 Herstellern, jeweils einer redaktionell erstellten Fehlerfamilie mit 16.998 nach Wahrscheinlichkeit priorisierten Reparaturverfahren, Schwierigkeitsgraden, Teilekostenspannen und Arbeitszeitschätzungen zugeordnet. Jede Zeile verlinkt ihr Quelldokument.",
+      "url": "https://mechanicdb.dataengineered.io/de/j1939-fault-code-database",
+      "creator": {
+        "@type": "Organization",
+        "name": "DataEngineered",
+        "url": "https://dataengineered.io"
+      },
+      "license": "https://mechanicdb.dataengineered.io/license",
+      "isAccessibleForFree": false,
+      "inLanguage": "de"
+    }
   ],
   "inLanguage": "de"
 }
@@ -216,7 +250,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Diagnose-Decoder",
-      "item": "https://mechanicdb.dataengineered.io/de/#interactive"
+      "item": "https://mechanicdb.dataengineered.io/de/#decoder"
     },
     {
       "@type": "ListItem",
