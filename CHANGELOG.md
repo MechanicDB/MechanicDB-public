@@ -5,6 +5,16 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Homepage Dataset markup describes the paid collection — 2026-09-27
+
+- The homepage's Dataset structured data (all five languages) no longer calls the full paid database
+  free and ODbL-licensed: `license` now points at the commercial terms (/license) and
+  `isAccessibleForFree` is false; its downloads are the free OBD-II sample the homepage offers (CSV and
+  Parquet), each marked ODbL v1.0; `hasPart` links the two buyer pages (/obd2-dtc-database and
+  /j1939-fault-code-database), whose Datasets already followed this rule and list their own samples;
+  the creator is DataEngineered. Name, description and visible page text are unchanged.
+- README: the license badge reads "Sample License: ODbL v1.0" (it covers the free samples only).
+
 ## Heavy Duty wording and licensing docs — 2026-09-27
 
 - Heavy Duty paid snapshot re-issued (label unchanged): 39 fault `short_description`s and the SPN 2209

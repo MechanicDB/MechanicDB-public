@@ -6,7 +6,7 @@
 
 **15,886 verified trouble codes · 9,249 SAE + 6,637 OEM across 32 makes · 56,561 ranked repair procedures · 75,055 parts mappings · 647 authored fault families**
 
-[![Dataset License: ODbL v1.0](https://img.shields.io/badge/Dataset_License-ODbL_v1.0-blue.svg)](https://opendatacommons.org/licenses/odbl/1-0/)
+[![Sample License: ODbL v1.0](https://img.shields.io/badge/Sample_License-ODbL_v1.0-blue.svg)](https://opendatacommons.org/licenses/odbl/1-0/)
 [![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
 [![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)

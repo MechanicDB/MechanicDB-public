@@ -39,8 +39,8 @@
   "name": "MechanicDB: banco de dados automotivo de diagnóstico e reparo OBD-II",
   "description": "Conjunto de dados de diagnóstico automotivo que associa 15.886 códigos de falha OBD-II verificados de 32 marcas de veículos a 56.561 procedimentos de reparo classificados, com níveis de dificuldade DIY e estimativas de custo de mão de obra e peças. Um plano Heavy Duty separado acrescenta 4.212 pares de falha SPN/FMI SAE J1939 compilados a partir de 16 documentos de códigos de falha publicados pelos fabricantes.",
   "url": "https://mechanicdb.dataengineered.io/pt-br/",
-  "license": "https://opendatacommons.org/licenses/odbl/1.0/",
-  "isAccessibleForFree": true,
+  "license": "https://mechanicdb.dataengineered.io/license",
+  "isAccessibleForFree": false,
   "keywords": [
     "banco de dados OBD-II",
     "códigos de diagnóstico de falhas",
@@ -53,8 +53,8 @@
   ],
   "creator": {
     "@type": "Organization",
-    "name": "MechanicDB",
-    "url": "https://mechanicdb.dataengineered.io/pt-br/"
+    "name": "DataEngineered",
+    "url": "https://dataengineered.io"
   },
   "variableMeasured": [
     "dtc_code",
@@ -72,13 +72,31 @@
     {
       "@type": "DataDownload",
       "encodingFormat": "text/csv",
-      "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.csv"
+      "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.csv",
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet",
+      "contentUrl": "https://mechanicdb.dataengineered.io/dtc_codes.parquet",
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
     },
     {
       "@type": "DataDownload",
       "encodingFormat": "text/csv",
-      "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.csv"
+      "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.csv",
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet",
+      "contentUrl": "https://mechanicdb.dataengineered.io/diagnostic_fixes.parquet",
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/"
     }
+  ],
+  "hasPart": [
+    "https://mechanicdb.dataengineered.io/obd2-dtc-database",
+    "https://mechanicdb.dataengineered.io/j1939-fault-code-database"
   ],
   "inLanguage": "pt-BR"
 }
