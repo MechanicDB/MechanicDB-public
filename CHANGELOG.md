@@ -5,6 +5,13 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Homepage: current RecallDB recall count in "You might also need" — 2026-09-28
+
+- The homepage's "You might also need" section (all five languages) introduced RecallDB with
+  127,783 official U.S. recalls, the July 2026 edition's count. It now gives 128,936, the recall
+  count of the RecallDB 2026.09 edition that buyers download today (built 2026-09-20). The rest of
+  the sentence (five agencies, $49 one-time) is unchanged and still correct.
+
 ## Statistics page: chart embed links land on their chart — 2026-09-27
 
 - /stats/: the copy-paste "Embed this chart" code of all nine charts linked
