@@ -5,6 +5,15 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Homepage section links land on their section — 2026-09-27
+
+- Links to a homepage section from another page (/#decoder, /#licensing, /#faq, in all five
+  languages) now land on the section. The web fonts load without blocking the page, so they swap
+  in after the browser has scrolled to the section and move every section up by 70-210 px, which
+  left the heading above the screen (measured: #licensing 51 px off in Chrome, the full 144 px in
+  browsers without scroll anchoring). The homepage now re-aligns once the fonts have loaded, unless
+  the visitor has already scrolled; /#supportModal still just opens the inquiry form.
+
 ## Landing-page buy block, pricing heading, Heavy Duty inquiry topic — 2026-09-27
 
 - Code and family pages (all five languages): the buy block under "Need all 15,886 codes as data?"

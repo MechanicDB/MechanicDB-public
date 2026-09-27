@@ -1131,6 +1131,30 @@
   openSupportFromHash();
   window.addEventListener('hashchange', openSupportFromHash);
 
+  /* Section links from other pages (/#decoder, /#licensing, ...): the browser scrolls to the
+     section before the web fonts (loaded without blocking the page) swap in, and the swap moves
+     every section up by 70-210 px, leaving the heading above the screen. Re-align once the fonts
+     have loaded, unless the visitor has already scrolled. */
+  (function () {
+    var id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; }
+    if (!id || id === 'supportModal' || !document.getElementById(id)) return;
+    var moved = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+      window.addEventListener(ev, function () { moved = true; }, { passive: true, once: true });
+    });
+    function realign() {
+      var el = document.getElementById(id);
+      if (moved || !el || performance.now() > 15000) return;
+      var root = document.documentElement, behavior = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';  /* a jump, not a second smooth scroll */
+      window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset);
+      root.style.scrollBehavior = behavior;
+    }
+    if (document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', realign);
+    window.addEventListener('load', realign);
+  })();
+
   /* Resilient Zero-Outage Support Form Handler (7s AbortController; on failure it shows a message - no mailto) */
   var supportForm = document.getElementById('supportForm');
   var supportStatus = document.getElementById('supportStatus');
