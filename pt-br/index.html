@@ -988,7 +988,7 @@
 </div>
 </div>
 <p class="join-note">Pagamento seguro com cartão via Stripe · Apple Pay / Google Pay · conjunto de dados entregue imediatamente após o pagamento.<br/>Precisa de nota fiscal para empresa, integração com software de oficina ou acesso personalizado à API? <a href="#supportModal" id="openSupportModalBtn">Abrir o formulário de suporte de diagnóstico e licenciamento</a> · ou envie um e-mail para <b style="user-select:all;font-weight:600" translate="no">mechanicdb@dataengineered.io</b></p>
-<p class="join-note">Todos os planos pagos são entregues com os mesmos termos: <a href="/license">leia a licença comercial</a>.</p>
+<p class="join-note">Standard, OEM Complete e Heavy Duty compartilham os mesmos termos de licença (concessão, restrições, garantia, rescisão); a licença que acompanha cada plano indica seu próprio produto, seus casos de uso e suas fontes de dados. <a href="/license">Leia a licença comercial</a>.</p>
 </div>
 </section>
 <section id="faq">
@@ -1275,8 +1275,14 @@
       if (e.target === supportModal) supportModal.classList.remove('active');
     });
   }
+  /* /#supportModal (linked from /license and the README) opens the form on arrival */
+  function openSupportFromHash() {
+    if (supportModal && location.hash === '#supportModal') supportModal.classList.add('active');
+  }
+  openSupportFromHash();
+  window.addEventListener('hashchange', openSupportFromHash);
 
-  /* Resilient Zero-Outage Support Form Handler (7s AbortController + mailto fallback) */
+  /* Resilient Zero-Outage Support Form Handler (7s AbortController; on failure it shows a message - no mailto) */
   var supportForm = document.getElementById('supportForm');
   var supportStatus = document.getElementById('supportStatus');
   var submitSupportBtn = document.getElementById('submitSupportBtn');

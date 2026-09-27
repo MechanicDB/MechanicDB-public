@@ -121,7 +121,7 @@ shops**, not dealer rates and not a quote. They are not sourced from the OEM doc
 **Free sample:** [`samples/heavyduty/`](samples/heavyduty/) in this repository ships 100 of the 4,212
 faults (deterministically sampled across the full spine, so every one of the 10 OEMs is represented),
 their referenced SPNs, ranked fixes, part mappings, and the complete 32-row FMI register — same
-schema, same ODbL v1.0 terms as the OBD-II sample above (see [LICENSE](LICENSE)).
+schema, same ODbL v1.0 terms as the OBD-II sample above (see [LICENSE](LICENSE)); its source documents are listed in [SOURCES.md](SOURCES.md#heavy-duty-sample-j1939).
 
 ### 6.1 `j1939_fmi` (Failure Mode Identifier register, 32 rows)
 
@@ -161,7 +161,7 @@ One row per extracted OEM SPN+FMI fault pair.
 | `short_description` | String | Authored, our words, ≤ 120 characters. Never a copy of OEM text. | `Engine coolant temperature sensor circuit voltage above normal (short to supply)` |
 | `fault_family` | String | Slug of the authored fault family that groups this fault with others sharing a diagnosis/repair path; joins `diagnostic_fixes` via the family's authored fixes. | `hde_coolant_temp_sensor` |
 | `detailed_technical_explanation` | String | Authored explanation, rendered from the family's template — never OEM prose. | `SPN 110 (Engine coolant temperature) with FMI 3 (Circuit voltage high / short to supply) is set by the Engine ECU when the engine coolant temperature sensor signal leaves its plausible window...` |
-| `source_id` | String | Register key for the OEM document this row's fact was read from. | `cat_c10882888` |
+| `source_id` | String | Register key for the OEM document this row's fact was read from; listed in [SOURCES.md](SOURCES.md#heavy-duty-sample-j1939). | `cat_c10882888` |
 | `source_url` | String | The official OEM document URL this row's fact was read from. | `https://s7d2.scene7.com/is/content/Caterpillar/C10882888` |
 | `source_page` | String | Page/section marker within the source document, when the source format carries one. | `102` |
 | `source_doc` | String | Human-readable document title/ID. | `1200 Series marine auxiliary engines troubleshooting guide` |

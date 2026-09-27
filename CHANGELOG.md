@@ -5,6 +5,27 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Heavy Duty wording and licensing docs — 2026-09-27
+
+- Heavy Duty paid snapshot re-issued (label unchanged): 39 fault `short_description`s and the SPN 2209
+  parameter name reworded in our own words — they repeated, or differed by one word from, the OEM's own
+  fault text — plus the one explanation and the `j1939_fixes_joined` rows that repeat them. Counts,
+  fault_ids, fix_ids, families and joins are unchanged. The automated copy checks now ignore case,
+  punctuation and the ` - ` separator, and also catch a description that contains a whole OEM fault
+  sentence.
+- `samples/heavyduty/`: fault_id 1 (Bendix SPN 154 / FMI 13) `short_description` rewritten in our own
+  words (it repeated the OEM's phrase). No counts, fault_ids or other rows change; the J1939 database
+  page and /j1939/bendix show the new text.
+- /license, the homepage pricing note and llms.txt no longer say the terms are simply "the same" for
+  every tier: the grant, restrictions, warranty and termination are shared by Standard, OEM Complete
+  and Heavy Duty, while each tier's copy names its own product and use cases and its Section 3 names
+  that tier's sources. Homepage note translated into es/de/fr/pt-br.
+- /license contact is the homepage inquiry form (/#supportModal, which now opens the form on arrival)
+  instead of a mailto: link.
+- LICENSE and SOURCES.md now cover the Heavy Duty sample (ODbL v1.0; register of the tier's 16 source
+  documents, 15 of them with rows in the free sample). README: the licensing-form link pointed at a
+  `#pricing` anchor the site never had; the three paid tiers and both samples are named.
+
 ## Deutz sources withdrawn from Heavy Duty — 2026-09-26
 
 - The five Deutz documents (serdia.deutz.com) are no longer part of the Heavy Duty tier. The paid

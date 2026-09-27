@@ -23,7 +23,7 @@
 
 **Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to ranked repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
 
-This repository is the **free, open developer sample**: 90 curated codes (75 SAE + 15 OEM) in the identical schema as the full database, so you can prototype joins, pipelines, and apps before licensing.
+This repository holds the **free, open developer samples**: 90 curated OBD-II codes (75 SAE + 15 OEM) at the root and a 100-fault Heavy Duty (J1939) sample in [`samples/heavyduty/`](samples/heavyduty/), each in the same schema as its paid tier, so you can prototype joins, pipelines, and apps before licensing.
 
 ## What's inside
 
@@ -59,6 +59,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 ## Provenance
 
 - **Code definitions** originate in SAE J2012 / ISO 15031-6 and are compiled from a public, MIT-licensed compilation (attribution in [LICENSE-upstream.txt](LICENSE-upstream.txt); full lineage and transformations in [SOURCES.md](SOURCES.md)).
+- **Heavy Duty (J1939) facts** — SPN/FMI pairs, OEM fault codes, controllers — are taken from fault-code documents the manufacturers publish; every row links its document (`source_url`) and [SOURCES.md](SOURCES.md#heavy-duty-sample-j1939) lists them. Descriptions, explanations and fixes are our own words; nothing comes from the SAE J1939 Digital Annex.
 - **Repair procedures, difficulty ratings, cost ranges, and explanations** are original authored content grounded in standard diagnostic practice.
 - Every release is produced by a **deterministic, test-gated build pipeline**: referential integrity, anti-template uniqueness, and no-fabricated-codes gates; rebuilds are byte-identical.
 
@@ -78,9 +79,9 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 | **Fault & Recall bundle** | OEM Complete + [RecallDB Vehicle](https://recalldb.dataengineered.io/) (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite) — two instant downloads, one checkout | **[$179](https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h)** one-time · vs $198 separately |
 | **Heavy Duty (J1939)** | Standalone: SAE J1939 SPN+FMI fault pairs from published OEM fault tables (Eaton, WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) with ranked fixes and part mappings · CSV + Parquet + SQLite | $149 — [buy](https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j) · [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) · [100-fault free sample](samples/heavyduty/) · see [DATA_DICTIONARY.md](DATA_DICTIONARY.md), section 6 |
 
-Both paid tiers are self-serve: secure Stripe checkout (card / Apple Pay / Google Pay), **instant download** after payment, commercial license included in the archive.
+All three paid tiers (Standard, OEM Complete, Heavy Duty) and the Fault & Recall bundle are self-serve: secure Stripe checkout (card / Apple Pay / Google Pay), **instant download** after payment, commercial license included in each archive ([read the terms](https://mechanicdb.dataengineered.io/license) before you buy).
 
-**[→ Get it at mechanicdb](https://mechanicdb.dataengineered.io/)** · or use the [licensing form](https://mechanicdb.dataengineered.io/#pricing) (mechanicdb@dataengineered.io) for a company invoice or custom licensing.
+**[→ Get it at mechanicdb](https://mechanicdb.dataengineered.io/)** · or use the [licensing form](https://mechanicdb.dataengineered.io/#supportModal) (mechanicdb@dataengineered.io) for a company invoice or custom licensing.
 
 ## Use cases
 
@@ -112,8 +113,8 @@ print(duckdb.query("""
 
 ## License
 
-- **Sample dataset (this repo):** [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/) — free for research, education, and benchmarking with attribution and share-alike (see [LICENSE](LICENSE)).
-- **Full dataset:** [commercial license](https://mechanicdb.dataengineered.io/license), self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/) — see [Pricing](#pricing).
+- **Sample datasets (this repo — the OBD-II sample at the root and the Heavy Duty sample in [`samples/heavyduty/`](samples/heavyduty/)):** [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/) — free for research, education, and benchmarking with attribution and share-alike (see [LICENSE](LICENSE); sources in [SOURCES.md](SOURCES.md)).
+- **Full datasets (Standard, OEM Complete, Heavy Duty):** [commercial license](https://mechanicdb.dataengineered.io/license) — each paid archive ships its own copy, naming its product and its upstream sources — self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/); see [Pricing](#pricing).
 - **Documentation:** CC BY 4.0.
 
 ⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag procedures must only be performed by qualified technicians following the manufacturer's lockout and de-energization procedures.
