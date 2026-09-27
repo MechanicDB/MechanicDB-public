@@ -255,6 +255,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "1be65f8e203047d4": {
+  "src": "Free {0}-code OBD-II sample — diagnostic_fixes (Parquet)",
+  "t": "Amostra gratuita OBD-II de {0} códigos — diagnostic_fixes (Parquet)",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "1c0db765274dac4a": {
   "src": "Sec {0} · Technical FAQ",
   "t": "Seç. {0} · Perguntas frequentes técnicas",
@@ -562,6 +568,12 @@
   "t": "Anatomia de um código — ao vivo a partir da amostra",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "412357b5c28b5c2b": {
+  "src": "Free {0}-code OBD-II sample — dtc_codes (CSV)",
+  "t": "Amostra gratuita OBD-II de {0} códigos — dtc_codes (CSV)",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "423c3b9bb1708c87": {
   "src": "Sec {0} · What's inside",
@@ -1051,6 +1063,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "7f8b1626ca20dc5e": {
+  "src": "Free {0}-fault Heavy Duty sample — {1} (CSV)",
+  "t": "Amostra gratuita Heavy Duty de {0} falhas — {1} (CSV)",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "7fd18d0dc34b021a": {
   "src": "ODbL {0} · open data",
   "t": "ODbL {0} · dados abertos",
@@ -1285,6 +1303,12 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
+ "9f07457bde54754b": {
+  "src": "Free {0}-code OBD-II sample — dtc_codes (Parquet)",
+  "t": "Amostra gratuita OBD-II de {0} códigos — dtc_codes (Parquet)",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "9f4b28648c4a378c": {
   "src": "How is each OBD-II diagnostic trouble code structured inside MechanicDB?",
   "t": "Como cada código de diagnóstico de falha OBD-II é estruturado no MechanicDB?",
@@ -1416,6 +1440,12 @@
   "t": "Seç. {0} · Você também pode precisar",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a6f71d4d8fdddcea": {
+  "src": "Free {0}-code OBD-II sample — diagnostic_fixes (CSV)",
+  "t": "Amostra gratuita OBD-II de {0} códigos — diagnostic_fixes (CSV)",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "a83da8ecfd8384ee": {
   "src": "Authored groupings that make the corpus navigable rather than a flat code list",
@@ -1757,6 +1787,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "c4ad433a7a80743b": {
+  "src": "Free {0}-code OBD-II sample — {1} (Parquet)",
+  "t": "Amostra gratuita OBD-II de {0} códigos — {1} (Parquet)",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "c54bc4ad16925a3a": {
   "src": "MechanicDB OBD-II DTC Database",
   "t": "MechanicDB: banco de dados de DTCs OBD-II",
@@ -1798,6 +1834,12 @@
   "t": "— mesma família de falhas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ca12b69839e81456": {
+  "src": "Free {0}-fault Heavy Duty sample — {1} (Parquet)",
+  "t": "Amostra gratuita Heavy Duty de {0} falhas — {1} (Parquet)",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "cb53439a76083e86": {
   "src": "Commercial license on both",
@@ -1852,6 +1894,12 @@
  "cf2c2732dd15a759": {
   "src": "Failure modes (FMI)",
   "t": "Modos de falha (FMI)"
+ },
+ "cf3e195eb5deb73d": {
+  "src": "Free {0}-code OBD-II sample — {1} (CSV)",
+  "t": "Amostra gratuita OBD-II de {0} códigos — {1} (CSV)",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "d05b54aaeaa6304e": {
   "src": "The OBD-II trouble code database, as a file you can query.",

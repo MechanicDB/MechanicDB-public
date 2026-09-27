@@ -377,8 +377,8 @@ def build_page(s, charts):
   <div class="wrap bar-inner">
     <a href="/" class="wordmark"><span class="mil" aria-hidden="true"></span>MechanicDB</a>
     <nav class="bar-nav" aria-label="Site">
-      <a href="/#interactive">Decoder</a>
-      <a href="/#licensing">Dataset License ($49)</a>
+      <a href="/#decoder">Decoder</a>
+      <a href="/#licensing">Licensing</a>
       <a href="/landing/families">Fault families</a>
       <a href="/#faq">FAQ</a>
     </nav>
@@ -403,7 +403,7 @@ def build_page(s, charts):
       <li><strong>Refresh.</strong> MechanicDB is curated; this page and its charts are regenerated with each new build, so figures move. Cite the build date.</li>
       <li><strong>Reuse.</strong> The figures and charts on this page are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: use them in forum posts, articles, slides and videos with a link to <span translate="no">{site.page_url}</span>. The machine-readable version is <a href="/stats/data.json">data.json</a>. The row-level dataset is a separate <a href="/#licensing">commercial product</a>; a free 90-code sample is in the <a href="https://github.com/MechanicDB/MechanicDB-public">public repository</a>.</li>
       <li><strong>Suggested citation.</strong> <span translate="no">MechanicDB ({snap[:4]}). <em>OBD-II fault codes in numbers</em>, build {snap}. DataEngineered. {site.page_url}</span></li>
-      <li><strong>Questions or corrections:</strong> <a href="/#contact">contact form</a> or mechanicdb@dataengineered.io.</li>
+      <li><strong>Questions or corrections:</strong> <a href="/#supportModal">contact form</a> or mechanicdb@dataengineered.io.</li>
     </ul>
   </section>
 
@@ -413,7 +413,7 @@ def build_page(s, charts):
     <a class="btn-amber" href="/#licensing">License the dataset · from $49</a>
   </div>
 </main>
-<footer><div class="wrap"><span>MechanicDB &middot; The OBD-II Diagnostic &amp; Repair Database &middot; ODbL v1.0 / Commercial License</span>
+<footer><div class="wrap"><span>MechanicDB &middot; sample data under ODbL v1.0 &middot; full dataset under <a href="/license">commercial license</a></span>
 <div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Part of the DataEngineered catalog &rarr;</a> &middot; <a href="https://dataengineered.io/about">About</a> &middot; <a href="https://dataengineered.io/terms">Terms</a> &middot; <a href="https://dataengineered.io/privacy">Privacy</a> &middot; <a href="https://dataengineered.io/refund-policy">Refund policy</a></div></div></footer>
 {COPY_JS}
 </body>
