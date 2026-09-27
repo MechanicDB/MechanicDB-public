@@ -25,6 +25,8 @@ header nav is rewritten to absolute anchors, since its section links
 point at the homepage.
 
 Run from the repo root:  python scripts/generate_buyer_page.py
+Then re-run ../MechanicDB/scripts/generate_public_pages.py (the homepage Dataset's hasPart
+repeats this page's Dataset name and description) and the i18n build.
 """
 
 import json

@@ -7,8 +7,8 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 
 ## Page header and footer, sample labels, dated license terms — 2026-09-27
 
-- Every generated page (code and family pages, the J1939 pages, /license and /stats/, in all five
-  languages): the header's "Decoder" link now opens the homepage decoder (/#decoder — it pointed at
+- Every generated page (code and family pages and the J1939 pages in all five languages, plus the
+  English-only /license and /stats/): the header's "Decoder" link now opens the homepage decoder (/#decoder — it pointed at
   an anchor the homepage never had), the pricing link reads "Licensing" rather than a single $49
   price (there are three paid tiers), and the footer carries the homepage wording, "sample data
   under ODbL v1.0 · full dataset under commercial license", with a link to /license. The /stats/
@@ -19,8 +19,8 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
   — dtc_codes (CSV)", "Free 100-fault Heavy Duty sample — j1939_faults (Parquet)" — and marked free.
   The homepage Dataset's two parts are now full Dataset entries repeating each buyer page's own name
   and description (Google's Rich Results Test flagged the bare links as invalid). The /j1939/<oem>
-  pages reference the J1939 Dataset instead of nesting an incomplete copy of it, which the Rich
-  Results Test rejected for its missing description.
+  pages name the J1939 database page as the one they belong to (isPartOf) instead of nesting an
+  incomplete copy of its Dataset, which the Rich Results Test rejected for its missing description.
 - /license states the terms version, 2026-09-25: the date the current terms took effect (the Heavy
   Duty Section 3 rewrite). The terms themselves are unchanged; the paid downloads are re-issued with
   the same line in their COMMERCIAL_LICENSE.md, and the page's structured data states the version.
