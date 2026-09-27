@@ -9,10 +9,15 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 
 - Links to a homepage section from another page (/#decoder, /#licensing, /#faq, in all five
   languages) now land on the section. The web fonts load without blocking the page, so they swap
-  in after the browser has scrolled to the section and move every section up by 70-210 px, which
-  left the heading above the screen (measured: #licensing 51 px off in Chrome, the full 144 px in
-  browsers without scroll anchoring). The homepage now re-aligns once the fonts have loaded, unless
-  the visitor has already scrolled; /#supportModal still just opens the inquiry form.
+  in after the browser has scrolled to the section and move the sections up (measured at 1280x800:
+  #decoder 69 px, #licensing 144, #faq 175, #provenance 212), which left the heading above the
+  screen (in Chrome, on a simulated first visit, #licensing ended 51 px above the screen; a browser
+  without scroll anchoring would keep the whole shift). The homepage now re-aligns once the fonts
+  have loaded, unless the visitor has already scrolled or is reloading / going back, where the
+  browser's own restored position is kept; /#supportModal still just opens the inquiry form.
+- The code decoder at the top of the homepage paints its first example at once instead of after a
+  short delay, so the page no longer grows by a few hundred pixels (685 px on a phone) right after
+  loading.
 
 ## Landing-page buy block, pricing heading, Heavy Duty inquiry topic — 2026-09-27
 

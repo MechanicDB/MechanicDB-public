@@ -1276,7 +1276,9 @@
       document.getElementById('roFixes').innerHTML = fx;
     }
 
-    if (reduced) { paint(); return; }
+    /* the first render paints at once (nothing to flip yet), so the hero has its final height
+       before the page loads - a late paint would move every section below it */
+    if (reduced || !digitsEl.children.length) { paint(); return; }
     Array.prototype.forEach.call(digitsEl.children, function (el) { el.classList.add('flip'); });
     setTimeout(paint, 130);
   }
@@ -1336,12 +1338,16 @@
 
   /* Section links from other pages (/#decoder, /#licensing, ...): the browser scrolls to the
      section before the web fonts (loaded without blocking the page) swap in, and the swap moves
-     every section up by 70-210 px, leaving the heading above the screen. Re-align once the fonts
-     have loaded, unless the visitor has already scrolled. */
+     the sections up (69-212 px at 1280x800), leaving the heading above the screen. Re-align once
+     the fonts have loaded, unless the visitor has already scrolled. A reload or Back/Forward keeps
+     the scroll position the browser restores. */
   (function () {
     var id;
     try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; }
     if (!id || id === 'supportModal' || !document.getElementById(id)) return;
+    var nav = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (nav ? (nav.type === 'reload' || nav.type === 'back_forward')
+            : (window.performance && performance.navigation && performance.navigation.type !== 0)) return;
     var moved = false;
     ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
       window.addEventListener(ev, function () { moved = true; }, { passive: true, once: true });
