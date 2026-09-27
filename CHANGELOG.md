@@ -5,6 +5,22 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Statistics page: chart embed links land on their chart — 2026-09-27
+
+- /stats/: the copy-paste "Embed this chart" code of all nine charts linked
+  /stats/#<chart-name> (e.g. #codes-by-system), which is no element on the page, so a visitor
+  following an embedded chart landed at the top of the page. The links now point at the chart
+  itself (/stats/#fig-codes-by-system, and the same for the other eight). Code already pasted
+  elsewhere with the old link still opens the page, at the top.
+- /stats/ also re-aligns a link to one of its sections or charts from another page once the web
+  fonts have loaded (they load without blocking and move the sections when they swap in), unless
+  the visitor has already scrolled or is reloading / going back. It uses the portfolio's shared
+  section-links snippet (scripts/section_links.py); the page header is not sticky, so no scroll
+  offset is added. The homepage keeps its own re-align from the entry below.
+- scripts/stats_common.py is the current portfolio copy (it writes both changes on the next
+  regeneration) and scripts/section_links.py is new next to it; the committed page was patched to
+  exactly what they write, without regenerating it (no figure, chart, date or data.json changes).
+
 ## Homepage section links land on their section — 2026-09-27
 
 - Links to a homepage section from another page (/#decoder, /#licensing, /#faq, in all five
