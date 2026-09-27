@@ -477,6 +477,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "349110df542ff077": {
+  "src": "{0} Standard: {1} SAE codes · {2} OEM Complete: all {3} codes, including {4} OEM codes across {5} makes · <6>{7} Heavy Duty: {8} fault pairs ({9})</6> · one-time · <10>compare tiers</10>",
+  "t": "{0} Standard: {1} códigos SAE · {2} OEM Complete: todos os {3} códigos, incluindo {4} códigos OEM de {5} marcas · <6>{7} Heavy Duty: {8} pares de falha ({9})</6> · pagamento único · <10>comparar planos</10>",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "34ac37f56e147bf6": {
   "src": "Back to home",
   "t": "Voltar ao início",
@@ -1656,12 +1662,6 @@
   "t": "Quatro tabelas relacionais, normalizadas para bancos de dados e pré-unidas para notebooks.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "b8be0c237d94119d": {
-  "src": "{0} Standard: {1} SAE codes · {2} OEM Complete: all {3} codes from {4} makes · <5>{6} Heavy Duty: {7} fault pairs ({8})</5> · one-time · <9>compare tiers</9>",
-  "t": "{0} Standard: {1} códigos SAE · {2} OEM Complete: todos os {3} códigos de {4} marcas · <5>{6} Heavy Duty: {7} pares de falha ({8})</5> · pagamento único · <9>comparar planos</9>",
-  "by": "claude",
-  "at": "2026-09-27"
  },
  "b969b8deb86ee423": {
   "src": "Kaggle dataset",
