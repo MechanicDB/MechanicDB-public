@@ -64,6 +64,9 @@ tr:hover td{background:var(--steel-2)}
 .cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
 .btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
 .btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.cta-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:0 12px}
+.btn-line{display:inline-block;border:1px solid var(--ink);color:var(--ink);font-family:var(--mono);font-weight:600;padding:11px 24px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-line:hover{background:rgba(0,0,0,.06);text-decoration:none}
 .rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
 .related ul{list-style:none;padding:0;margin-top:8px}
@@ -119,9 +122,13 @@ footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono
     <p>Pipe-delimited CSV, Apache Parquet and a relational SQLite database, with commercial
     application rights and instant download. Built for scan tools, shop software and research -
     not assembled one web page at a time.</p>
-    <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403?client_reference_id=mechanicdb_en_landing" class="btn-amber">License Full Dataset &middot; $49</a>
-    <p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 SAE-only &middot;
-    $149 OEM Complete (6,637 manufacturer codes, 32 makes) &middot; one-time &middot;
+    <div class="cta-buttons">
+      <a href="https://buy.stripe.com/28EfZicVy0ECdM796w38404?client_reference_id=mechanicdb_en_landing" class="btn-amber">License OEM Complete &middot; $149</a>
+      <a href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403?client_reference_id=mechanicdb_en_landing" class="btn-line">Standard (SAE only) &middot; $49</a>
+    </div>
+    <p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 Standard: 9,249 SAE codes &middot;
+    $149 OEM Complete: all 15,886 codes from 32 makes &middot;
+    <a href="/j1939-fault-code-database">$149 Heavy Duty: 4,212 fault pairs (J1939)</a> &middot; one-time &middot;
     <a href="/#licensing">compare tiers</a></p>
   </div>
 </div>

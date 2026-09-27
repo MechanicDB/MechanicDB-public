@@ -310,6 +310,9 @@ tr:hover td{background:var(--steel-2)}
 .cta-footer h3{font-family:var(--disp);font-size:1.9rem;text-transform:uppercase;margin-bottom:10px}
 .btn-amber{display:inline-block;background:var(--amber);color:#1b1500;font-family:var(--mono);font-weight:600;padding:12px 28px;border-radius:4px;margin-top:16px;text-transform:uppercase}
 .btn-amber:hover{background:#ffbe2e;text-decoration:none}
+.cta-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:0 12px}
+.btn-line{display:inline-block;border:1px solid var(--ink);color:var(--ink);font-family:var(--mono);font-weight:600;padding:11px 24px;border-radius:4px;margin-top:16px;text-transform:uppercase}
+.btn-line:hover{background:rgba(0,0,0,.06);text-decoration:none}
 .rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .rel a{font-family:var(--mono);font-size:.8rem;background:var(--steel-2);border:1px solid var(--steel-3);padding:5px 10px;border-radius:4px}
 .related ul{list-style:none;padding:0;margin-top:8px}
@@ -362,8 +365,11 @@ footer{border-top:1px solid var(--steel-3);padding:30px 0;font-family:var(--mono
 <div class="cta-footer">
 <h3>Besoin des 15 886 codes sous forme de données ?</h3>
 <p>CSV délimité par des barres verticales, Apache Parquet et une base de données relationnelle SQLite, avec droits d'utilisation commerciale et téléchargement immédiat. Conçu pour les outils de diagnostic, les logiciels d'atelier et la recherche – et non assemblé une page web à la fois.</p>
-<a class="btn-amber" href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403?client_reference_id=mechanicdb_fr_landing">Acheter la licence du jeu de données complet · $49</a>
-<p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 SAE uniquement · $149 OEM Complete (6 637 codes constructeur, 32 marques) · paiement unique · <a href="/fr/#licensing">comparer les formules</a></p>
+<div class="cta-buttons">
+<a class="btn-amber" href="https://buy.stripe.com/28EfZicVy0ECdM796w38404?client_reference_id=mechanicdb_fr_landing">Acheter la licence OEM Complete · $149</a>
+<a class="btn-line" href="https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403?client_reference_id=mechanicdb_fr_landing">Standard (SAE uniquement) · $49</a>
+</div>
+<p style="margin-top:14px;font-family:var(--mono);font-size:.8rem">$49 Standard : 9 249 codes SAE · $149 OEM Complete : les 15 886 codes de 32 marques · <a href="/fr/j1939-fault-code-database">$149 Heavy Duty : 4 212 paires de défauts (J1939)</a> · paiement unique · <a href="/fr/#licensing">comparer les formules</a></p>
 </div>
 </div>
 <footer><div class="wrap"><span>MechanicDB · données d'échantillon sous ODbL v1.0 · jeu de données complet sous <a href="/license">licence commerciale</a></span>

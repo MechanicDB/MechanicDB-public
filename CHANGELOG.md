@@ -5,6 +5,18 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Landing-page buy block, pricing heading, Heavy Duty inquiry topic — 2026-09-27
+
+- Code and family pages (all five languages): the buy block under "Need all 15,886 codes as data?"
+  now leads with "License OEM Complete · $149", the tier that has every code the heading promises,
+  next to "Standard (SAE only) · $49"; it no longer sells the $49 SAE-only tier as the "full
+  dataset". Its tier line names all three paid tiers: $49 Standard (9,249 SAE codes), $149 OEM
+  Complete (all 15,886 codes from 32 makes) and $149 Heavy Duty (4,212 J1939 fault pairs, linking
+  the J1939 page), with prices and counts taken from claims.json.
+- Homepage: the pricing heading reads "Five ways in" (it sits over five cards: the free sample and
+  four paid options), and the inquiry form adds a "Heavy Duty (J1939) Commercial License ($149)"
+  topic.
+
 ## Translated Dataset markup names its English original — 2026-09-27
 
 - The Spanish, German, French and Portuguese pages' Dataset structured data (homepage,

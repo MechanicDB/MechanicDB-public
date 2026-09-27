@@ -439,6 +439,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2acd315e980941a6": {
+  "src": "Five ways in",
+  "t": "Cinq points d'entrée",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "2b8c737d38337ce8": {
   "src": "Fault Family",
   "t": "Famille de défauts",
@@ -586,6 +592,12 @@
   "t": "<0>{1}</0> codes propres aux constructeurs sur <2>{3}</2> marques — {4} plages contrôlées par les constructeurs. La couverture est inégale et plus forte sur les marques du marché américain — la répartition complète par marque figure ci-dessous. <5>{6}</5> codes au total.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "4318a03335fecca8": {
+  "src": "Heavy Duty ({0}) Commercial License ({1})",
+  "t": "Licence commerciale Heavy Duty ({0}) ({1})",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "4381781f3bf2e7e2": {
   "src": "{0} verified OBD-II trouble codes mapped to {1} ranked repair procedures with DIY difficulty tiers, parts costs, and step-by-step instructions.",
@@ -1016,6 +1028,12 @@
   "t": "Familles : {0}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7b84171950d9a8d9": {
+  "src": "Standard (SAE only) · {0}",
+  "t": "Standard (SAE uniquement) · {0}",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "7be2f0f143224d91": {
   "src": "Decoder",
@@ -1639,6 +1657,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "b8be0c237d94119d": {
+  "src": "{0} Standard: {1} SAE codes · {2} OEM Complete: all {3} codes from {4} makes · <5>{6} Heavy Duty: {7} fault pairs ({8})</5> · one-time · <9>compare tiers</9>",
+  "t": "{0} Standard : {1} codes SAE · {2} OEM Complete : les {3} codes de {4} marques · <5>{6} Heavy Duty : {7} paires de défauts ({8})</5> · paiement unique · <9>comparer les formules</9>",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "b969b8deb86ee423": {
   "src": "Kaggle dataset",
   "t": "Jeu de données Kaggle",
@@ -2228,6 +2252,12 @@
   "t": "Quels critères de sécurité déterminent si une procédure de réparation est classée Easy DIY ou Professional Required ?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "fbf19768e55d3c6a": {
+  "src": "License OEM Complete · {0}",
+  "t": "Acheter la licence OEM Complete · {0}",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "fc8542bd983657a5": {
   "src": "OBD-II DTC Database Download — CSV, Parquet, SQLite",
