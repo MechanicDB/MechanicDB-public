@@ -439,6 +439,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2acd315e980941a6": {
+  "src": "Five ways in",
+  "t": "Cinco formas de entrada",
+  "by": "claude",
+  "at": "2026-09-27"
+ },
  "2b8c737d38337ce8": {
   "src": "Fault Family",
   "t": "Família de falhas",
@@ -470,6 +476,12 @@
   "t": "Licenciar o conjunto de dados completo · {0}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "349110df542ff077": {
+  "src": "{0} Standard: {1} SAE codes · {2} OEM Complete: all {3} codes, including {4} OEM codes across {5} makes · <6>{7} Heavy Duty: {8} fault pairs ({9})</6> · one-time · <10>compare tiers</10>",
+  "t": "{0} Standard: {1} códigos SAE · {2} OEM Complete: todos os {3} códigos, incluindo {4} códigos OEM de {5} marcas · <6>{7} Heavy Duty: {8} pares de falha ({9})</6> · pagamento único · <10>comparar planos</10>",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "34ac37f56e147bf6": {
   "src": "Back to home",
@@ -586,6 +598,12 @@
   "t": "<0>{1}</0> códigos específicos de fabricante em <2>{3}</2> marcas — faixas {4} controladas pelo fabricante. A cobertura é desigual e mais forte em marcas do mercado norte-americano — o detalhamento completo por marca está abaixo. <5>{6}</5> códigos no total.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "4318a03335fecca8": {
+  "src": "Heavy Duty ({0}) Commercial License ({1})",
+  "t": "Licença comercial Heavy Duty ({0}) ({1})",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "4381781f3bf2e7e2": {
   "src": "{0} verified OBD-II trouble codes mapped to {1} ranked repair procedures with DIY difficulty tiers, parts costs, and step-by-step instructions.",
@@ -1016,6 +1034,12 @@
   "t": "{0} famílias",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7b84171950d9a8d9": {
+  "src": "Standard (SAE only) · {0}",
+  "t": "Standard (somente SAE) · {0}",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "7be2f0f143224d91": {
   "src": "Decoder",
@@ -2228,6 +2252,12 @@
   "t": "Quais critérios de segurança determinam se um procedimento de reparo é classificado como Easy DIY ou Professional Required?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "fbf19768e55d3c6a": {
+  "src": "License OEM Complete · {0}",
+  "t": "Licenciar o OEM Complete · {0}",
+  "by": "claude",
+  "at": "2026-09-27"
  },
  "fc8542bd983657a5": {
   "src": "OBD-II DTC Database Download — CSV, Parquet, SQLite",
