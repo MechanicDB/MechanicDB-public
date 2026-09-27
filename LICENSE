@@ -1,6 +1,7 @@
-MechanicDB Free Developer Sample — Licensing
+MechanicDB Free Developer Samples — Licensing
 
-1. DATASET (all .csv and .parquet files in this repository)
+1. DATASET (all .csv and .parquet files in this repository, including the
+   Heavy Duty (J1939) sample in samples/heavyduty/)
 
    Licensed under the Open Database License (ODbL) v1.0.
    Full text: https://opendatacommons.org/licenses/odbl/1-0/
@@ -11,16 +12,30 @@ MechanicDB Free Developer Sample — Licensing
    - Keep open: do not apply technical measures that restrict reuse of
      redistributed copies.
 
-   Commercial applications requiring the full database (15,886 codes) or
-   rights beyond ODbL terms require a separate commercial license —
-   self-serve at https://mechanicdb.dataengineered.io/ or email
+   Commercial applications requiring the full databases (the OBD-II
+   Standard and OEM Complete tiers, or the Heavy Duty tier) or rights beyond
+   ODbL terms require a separate commercial license — self-serve at
+   https://mechanicdb.dataengineered.io/ (terms:
+   https://mechanicdb.dataengineered.io/license) or email
    mechanicdb@dataengineered.io for inquiries.
 
-2. UPSTREAM ATTRIBUTION (code definitions)
+2. UPSTREAM ATTRIBUTION
 
+   OBD-II sample (the .csv and .parquet files at the repository root):
    DTC code definitions are compiled from a public, MIT-licensed
    compilation of SAE J2012-derived trouble codes. The upstream MIT license
    and copyright notice are preserved in LICENSE-upstream.txt, as required.
+
+   Heavy Duty (J1939) sample (samples/heavyduty/): SPN/FMI fault pairs, OEM
+   fault codes and controller assignments are facts taken from fault-code
+   documents the manufacturers publish. Each row's source_url and
+   source_doc identify its document, and SOURCES.md lists every source.
+   Descriptions, explanations, fault families and fixes are written in
+   DataEngineered's own words (a parameter name may match the
+   manufacturer's own plain name); no sentences from OEM documents, and
+   nothing from the SAE J1939 Digital Annex or J1939 DBC files, are
+   included. The Heavy Duty sample is licensed under ODbL v1.0 like the
+   rest of this repository (Section 1).
 
 3. DOCUMENTATION (README.md, DATA_DICTIONARY.md, SOURCES.md)
 

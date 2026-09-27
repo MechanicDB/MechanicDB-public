@@ -775,7 +775,7 @@
       </div>
     </div>
     <p class="join-note">Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · dataset delivered instantly after payment.<br>Need a company invoice, shop software integration, or custom API access? <a href="#supportModal" id="openSupportModalBtn">Open Diagnostic &amp; Licensing Support Modal</a> · or email <b translate="no" style="user-select:all;font-weight:600">mechanicdb@dataengineered.io</b></p>
-    <p class="join-note">Every paid tier ships under the same terms: <a href="/license">read the commercial license</a>.</p>
+    <p class="join-note">Standard, OEM Complete and Heavy Duty share the same license terms (grant, restrictions, warranty, termination); each tier's copy names its own product, use cases and data sources. <a href="/license">Read the commercial license</a>.</p>
   </div>
 </section>
 
@@ -1073,8 +1073,14 @@
       if (e.target === supportModal) supportModal.classList.remove('active');
     });
   }
+  /* /#supportModal (linked from /license and the README) opens the form on arrival */
+  function openSupportFromHash() {
+    if (supportModal && location.hash === '#supportModal') supportModal.classList.add('active');
+  }
+  openSupportFromHash();
+  window.addEventListener('hashchange', openSupportFromHash);
 
-  /* Resilient Zero-Outage Support Form Handler (7s AbortController + mailto fallback) */
+  /* Resilient Zero-Outage Support Form Handler (7s AbortController; on failure it shows a message - no mailto) */
   var supportForm = document.getElementById('supportForm');
   var supportStatus = document.getElementById('supportStatus');
   var submitSupportBtn = document.getElementById('submitSupportBtn');

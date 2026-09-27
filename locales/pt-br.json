@@ -2191,6 +2191,12 @@
   "src": "FMI",
   "t": "FMI"
  },
+ "fe782ebc73c54eee": {
+  "src": "Standard, OEM Complete and Heavy Duty share the same license terms (grant, restrictions, warranty, termination); each tier's copy names its own product, use cases and data sources. <0>Read the commercial license</0>.",
+  "t": "Standard, OEM Complete e Heavy Duty compartilham os mesmos termos de licença (concessão, restrições, garantia, rescisão); a licença que acompanha cada plano indica seu próprio produto, seus casos de uso e suas fontes de dados. <0>Leia a licença comercial</0>.",
+  "by": "claude-opus-5-5",
+  "at": "2026-09-27"
+ },
  "feba85bf7e25b5d2": {
   "src": "I need SAE {0} but the licence is over my budget. Is MechanicDB an alternative?",
   "t": "Preciso da SAE {0}, mas a licença está acima do meu orçamento. O MechanicDB é uma alternativa?",
