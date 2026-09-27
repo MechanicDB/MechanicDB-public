@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Manufacturer-specific codes per make</title><desc id="d">Top 15 of 32 makes, 6,637 manufacturer-specific codes</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t-oem-codes-by-make d-oem-codes-by-make" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-oem-codes-by-make">Manufacturer-specific codes per make</title><desc id="d-oem-codes-by-make">Top 15 of 32 makes, 6,637 manufacturer-specific codes</desc>
 <rect width="720" height="552" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">Manufacturer-specific codes per make</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">Top 15 of 32 makes, 6,637 manufacturer-specific codes</text>

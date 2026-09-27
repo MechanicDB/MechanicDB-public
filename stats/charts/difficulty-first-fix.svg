@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 192" width="720" height="192" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">DIY difficulty of the most probable fix per code</title><desc id="d">15,886 rank-1 fixes</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 192" width="720" height="192" role="img" aria-labelledby="t-difficulty-first-fix d-difficulty-first-fix" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-difficulty-first-fix">DIY difficulty of the most probable fix per code</title><desc id="d-difficulty-first-fix">15,886 rank-1 fixes</desc>
 <rect width="720" height="192" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">DIY difficulty of the most probable fix per code</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">15,886 rank-1 fixes</text>

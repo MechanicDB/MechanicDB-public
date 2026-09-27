@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Fault families with the most codes</title><desc id="d">Top 15 of 647 hand-authored families, 15,886 codes</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t-fault-families d-fault-families" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-fault-families">Fault families with the most codes</title><desc id="d-fault-families">Top 15 of 647 hand-authored families, 15,886 codes</desc>
 <rect width="720" height="552" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">Fault families with the most codes</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">Top 15 of 647 hand-authored families, 15,886 codes</text>

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 282" width="720" height="282" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Upper parts-cost estimate per fix</title><desc id="d">56,561 fixes by est_parts_cost_max_usd</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 282" width="720" height="282" role="img" aria-labelledby="t-parts-cost-ranges d-parts-cost-ranges" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-parts-cost-ranges">Upper parts-cost estimate per fix</title><desc id="d-parts-cost-ranges">56,561 fixes by est_parts_cost_max_usd</desc>
 <rect width="720" height="282" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">Upper parts-cost estimate per fix</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">56,561 fixes by est_parts_cost_max_usd</text>

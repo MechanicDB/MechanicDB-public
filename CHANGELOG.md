@@ -5,6 +5,16 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Statistics page: each chart is announced with its own title — 2026-09-28
+
+- /stats/: every chart's built-in title and description (what a screen reader announces for the
+  chart) used the same two ids, t and d, repeated once per chart, so the page had duplicate ids
+  and every chart was announced with the first chart's title. The ids now carry the chart's name
+  (t-codes-by-system / d-codes-by-system, and so on) on the page and in the downloadable SVGs
+  under /stats/charts/. scripts/stats_common.py is the current portfolio copy, which writes them
+  on the next regeneration; the committed page and SVGs were patched to exactly what it writes,
+  without regenerating (no figure, date or data.json changes).
+
 ## Statistics page: chart embed links land on their chart — 2026-09-27
 
 - /stats/: the copy-paste "Embed this chart" code of all nine charts linked

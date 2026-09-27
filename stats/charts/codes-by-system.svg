@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 222" width="720" height="222" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">OBD-II fault codes by vehicle system</title><desc id="d">15,886 codes (SAE standard + manufacturer-specific) by first letter</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 222" width="720" height="222" role="img" aria-labelledby="t-codes-by-system d-codes-by-system" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-codes-by-system">OBD-II fault codes by vehicle system</title><desc id="d-codes-by-system">15,886 codes (SAE standard + manufacturer-specific) by first letter</desc>
 <rect width="720" height="222" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">OBD-II fault codes by vehicle system</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">15,886 codes (SAE standard + manufacturer-specific) by first letter</text>

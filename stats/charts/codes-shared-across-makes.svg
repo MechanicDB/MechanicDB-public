@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Code strings defined by the most makes</title><desc id="d">Top 15 of 798 manufacturer-specific code strings</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t-codes-shared-across-makes d-codes-shared-across-makes" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-codes-shared-across-makes">Code strings defined by the most makes</title><desc id="d-codes-shared-across-makes">Top 15 of 798 manufacturer-specific code strings</desc>
 <rect width="720" height="552" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">Code strings defined by the most makes</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">Top 15 of 798 manufacturer-specific code strings</text>
