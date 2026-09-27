@@ -5,6 +5,14 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Translated Dataset markup names its English original — 2026-09-27
+
+- The Spanish, German, French and Portuguese pages' Dataset structured data (homepage,
+  /obd2-dtc-database, /j1939-fault-code-database) names its English original in `sameAs`, so
+  dataset search can tie the language copies to one canonical entry. The homepage Dataset's two
+  parts (`hasPart`) are the English buyer pages' Datasets in every language. English pages and all
+  visible text are unchanged.
+
 ## Page header and footer, sample labels, dated license terms — 2026-09-27
 
 - Every generated page (code and family pages and the J1939 pages in all five languages, plus the
