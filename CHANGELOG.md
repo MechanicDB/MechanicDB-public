@@ -5,6 +5,14 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Website: repository files no longer served — 2026-09-28
+
+- The translation catalogs (`/locales/`), the build scripts (`/scripts/`), `i18n.config.json`,
+  `README.md`, `vercel.json` and the dotfiles belong to this repository, not to the website, but
+  the site served them as plain files. They now answer the site's normal 404 page (also when
+  requested as `/locales%2Fes.json` or `//locales/es.json`) and stay available here on GitHub.
+  Pages, data files, samples, `llms.txt` and the sitemap are unchanged (2026-09-28).
+
 ## Statistics page: chart embed links land on their chart — 2026-09-27
 
 - /stats/: the copy-paste "Embed this chart" code of all nine charts linked
