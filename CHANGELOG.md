@@ -12,6 +12,21 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
   count of the RecallDB 2026.09 edition that buyers download today (built 2026-09-20). The rest of
   the sentence (five agencies, $49 one-time) is unchanged and still correct.
 
+## README edition badge — 2026-09-28
+
+- The README badge said "Snapshot 2026.07"; the Standard, OEM Complete and Heavy Duty ZIPs buyers
+  download are edition 2026.09 (built 2026-09-27). The badge now says 2026.09. `claims.json` is
+  unchanged: it is a byte copy of the private pipeline's file, and its `snapshot` value is not
+  read by the build or the pages (the edition comes from the build date).
+
+## Website: repository files no longer served — 2026-09-28
+
+- The translation catalogs (`/locales/`), the build scripts (`/scripts/`), `i18n.config.json`,
+  `README.md`, `vercel.json` and the dotfiles belong to this repository, not to the website, but
+  the site served them as plain files. They now answer the site's normal 404 page (also when
+  requested as `/locales%2Fes.json` or `//locales/es.json`) and stay available here on GitHub.
+  Pages, data files, samples, `llms.txt` and the sitemap are unchanged (2026-09-28).
+
 ## Statistics page: chart embed links land on their chart — 2026-09-27
 
 - /stats/: the copy-paste "Embed this chart" code of all nine charts linked
