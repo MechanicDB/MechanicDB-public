@@ -5,6 +5,13 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## README edition badge — 2026-09-28
+
+- The README badge said "Snapshot 2026.07"; the Standard, OEM Complete and Heavy Duty ZIPs buyers
+  download are edition 2026.09 (built 2026-09-27). The badge now says 2026.09. `claims.json` is
+  unchanged: it is a byte copy of the private pipeline's file, and its `snapshot` value is not
+  read by the build or the pages (the edition comes from the build date).
+
 ## Statistics page: chart embed links land on their chart — 2026-09-27
 
 - /stats/: the copy-paste "Embed this chart" code of all nine charts linked
