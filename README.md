@@ -10,7 +10,7 @@
 [![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
 [![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)
-[![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
+[![Snapshot: 2026.09](https://img.shields.io/badge/Snapshot-2026.09-blue.svg)](CHANGELOG.md)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-mechanicdb-F59E0B.svg)](https://mechanicdb.dataengineered.io/)
 
 **[→ Get the full dataset at mechanicdb](https://mechanicdb.dataengineered.io/)** · **[⬇ Download the free 90-code sample (ZIP)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)**
