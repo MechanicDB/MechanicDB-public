@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 192" width="720" height="192" role="img" aria-labelledby="t d" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">DIY difficulty of all ranked fixes</title><desc id="d">56,561 ranked repair procedures</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 192" width="720" height="192" role="img" aria-labelledby="t-difficulty-all-fixes d-difficulty-all-fixes" font-family="'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-difficulty-all-fixes">DIY difficulty of all ranked fixes</title><desc id="d-difficulty-all-fixes">56,561 ranked repair procedures</desc>
 <rect width="720" height="192" fill="#1b1e22"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#f1efe8">DIY difficulty of all ranked fixes</text>
 <text x="20" y="44" font-size="12" fill="#9aa3ad">56,561 ranked repair procedures</text>
