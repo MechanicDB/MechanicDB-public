@@ -135,16 +135,32 @@ technical explainers — never SAE text.
 | `failure_class` | String | Normalized failure-mode class used to drive fix ordering (see 6.9 below). One of: `range_high`, `range_low`, `erratic`, `circuit_high`, `circuit_low`, `open_circuit`, `short_ground`, `mechanical`, `frequency`, `update_rate`, `rate_of_change`, `unknown_cause`, `device`, `calibration`, `special`, `network_error`, `drift_high`, `drift_low`, `reserved`, `condition`. | `circuit_high` |
 | `is_reserved` | Integer | `1` for FMI 22–30 (SAE-reserved; some OEMs assign proprietary meanings), `0` otherwise. | `0` |
 
-### 6.2 `j1939_spn` (Suspect Parameter Number register — one row per distinct SPN)
+### 6.2 `j1939_spn` (Suspect Parameter Number register — one row per (`spn`, `oem_make`))
+
+**Key:** `j1939_spn` is keyed on (`spn`, `oem_make`), not on `spn` alone. SPNs below `516096` are
+standard SAE parameters: one row, `oem_make` empty, a neutral name shared across every OEM that
+references the SPN. SPNs `>= 516096` fall in the OEM-controlled naming range — this covers both the
+OEM-naming band `516096`–`520191` (OEM-published but not SAE-reserved-proprietary) and the
+proprietary range `>= 520192` — and get **one row per OEM that uses the SPN**, each named from that
+OEM's own document; the same SPN can therefore appear once per OEM with a different `spn_name` in
+each row. `j1939_faults.detailed_technical_explanation` renders `{spn_name}` for a standard SPN
+from the shared neutral name and, for `spn >= 516096`, from the fault's own source document,
+never another OEM's; when two documents of the same OEM name an SPN differently, this table
+keeps the name from the first `source_id` (sorted) and each fault keeps its own document's name.
+
+**In the free sample,** [`samples/heavyduty/j1939_spn.csv`](samples/heavyduty/j1939_spn.csv) holds
+every full-tier row for each SPN number the sampled faults reference, so an OEM-range SPN can also
+appear under an OEM that has no fault in the sample; `source_count` is the full tier's value, so it
+can exceed the number of sources visible in the sample's `j1939_faults.csv`.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
-| `spn` | Integer (PK) | The J1939 Suspect Parameter Number. | `110` |
-| `spn_name` | String | Our paraphrase of the parameter. Standard SPNs get one name shared across every OEM that references them; proprietary SPNs get the name from whichever source documents them. | `Engine Coolant Temperature` |
-| `is_proprietary` | Integer | `1` when `spn >= 520192` (the SAE proprietary SPN block), `0` otherwise. | `0` |
-| `oem_make` | String | Owner of a proprietary SPN; empty string for standard (non-proprietary) SPNs. | `` |
+| `spn` | Integer (PK part 1) | The J1939 Suspect Parameter Number. | `110` |
+| `spn_name` | String | Our paraphrase of the parameter. For a standard SPN, one neutral name shared by every OEM. For `spn >= 516096`, this OEM's own name for the parameter, read from this OEM's document. When the source documents do not state a role for the SPN, the name says so rather than guessing: `Parameter <spn> (role not stated by the OEM tables)` for a standard SPN, `<OEM> parameter <spn> (role not stated)` for an OEM-range SPN. | `Engine coolant temperature` |
+| `is_proprietary` | Integer | `1` when `spn >= 520192` (the SAE-reserved proprietary SPN block), `0` otherwise — including for the `516096`–`520191` OEM-naming band, which is OEM-published but not SAE-reserved-proprietary. | `0` |
+| `oem_make` | String | Part 2 of the composite key. Empty string for a standard SPN (`spn < 516096`); for `spn >= 516096`, the `oem_make` (same values as `j1939_faults.oem_make`) of the OEM whose document uses the SPN. | `` |
 | `system_category` | String | Fixed vocabulary: `Engine`, `Fuel`, `Air Intake`, `Aftertreatment`, `Cooling`, `Lubrication`, `Electrical`, `Transmission`, `Brakes/ABS`, `Body/Cab`, `Network`, `Instrument`. | `Cooling` |
-| `source_count` | Integer | Number of distinct `source_id` values in `j1939_faults` that reference this SPN. | `4` |
+| `source_count` | Integer | Number of distinct `source_id` values behind this row: every source that references the SPN for a standard SPN, that OEM's sources for an OEM-range row. | `4` |
 
 ### 6.3 `j1939_faults` (Master Fault Registry — this tier's spine, analogue of `dtc_codes`)
 
@@ -153,7 +169,7 @@ One row per extracted OEM SPN+FMI fault pair.
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
 | `fault_id` | Integer (PK) | Primary key, assigned after sorting rows by (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`). | `280` |
-| `spn` | Integer (FK → `j1939_spn.spn`) | | `110` |
+| `spn` | Integer (FK, with `oem_make` below, → `j1939_spn`) | Join to `j1939_spn` on `spn` plus `oem_make` when `spn >= 516096` (this fault's own OEM row, see 6.2), and on `spn` with an empty `oem_make` below `516096`; joining on `spn` alone repeats a fault once per OEM that uses an OEM-range SPN. | `110` |
 | `fmi` | Integer (FK → `j1939_fmi.fmi`) | | `3` |
 | `oem_make` | String | One of `Eaton`, `WABCO`, `Bendix`, `John Deere`, `Navistar`, `Cummins`, `Caterpillar`, `PSI`, `Perkins`, `Yanmar`. | `Caterpillar` |
 | `oem_code` | String | The OEM's own code for this fault as printed in its document; empty string when the source document does not print one. | `110-3` |

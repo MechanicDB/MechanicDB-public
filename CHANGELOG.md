@@ -5,6 +5,28 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## License page: Section 2 names LICENSE-upstream.txt for the OBD-II tiers only — 2026-09-30
+
+- /license: Section 2 now reads "remove or misrepresent provenance information (SOURCES.md, and
+  LICENSE-upstream.txt in the Standard and OEM Complete tiers)", and the page states Terms version
+  2026-09-30. LICENSE-upstream.txt is the MIT notice of the SAE J2012 compilation behind the OBD-II
+  tiers' DTC definitions; the Heavy Duty data does not come from it (its Section 3 already named its
+  own sources), so the Heavy Duty download's COMMERCIAL_LICENSE.md and README no longer name the file
+  and its ZIP no longer includes it. The Standard and OEM Complete terms are unchanged apart from the
+  new Terms version date. The sitemap also dates /stats/ by its 2026-09-28 change.
+
+## Data dictionary: `j1939_spn` is one row per SPN and OEM — 2026-09-30
+
+- DATA_DICTIONARY.md section 6.2 still described the Heavy Duty `j1939_spn` table as one row per
+  distinct SPN. Since the 2026-09-21 schema change it is keyed on (`spn`, `oem_make`): a standard
+  SPN (below 516096) has one row with an empty `oem_make`; an SPN from 516096 up has one row per OEM
+  that uses it, each with that OEM's own name. The section now says so, documents the
+  516096–520191 band (OEM-named but `is_proprietary` 0), the name fallback (a standard and an OEM
+  form), which name a fault's explanation uses (the shared name for a standard SPN, its own
+  document's name from 516096 up) and `source_count` per row, and notes that the free sample's `j1939_spn.csv` carries the full
+  tier's rows and `source_count` for each SPN its faults reference. Section 6.3 gives the matching
+  join. No data changes.
+
 ## Statistics page: each chart is announced with its own title — 2026-09-28
 
 - /stats/: every chart's built-in title and description (what a screen reader announces for the
@@ -155,6 +177,35 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 - An edge cache kept serving the deleted /j1939/deutz pages after the deploy (the zone purge
   does not reach it), so functions/_middleware.js now answers those five paths itself with the
   locale's 404 page and a real 404 status.
+
+## License page, Dataset license markup, FAQ wording, sitemap dates — 2026-09-25
+
+- New page **/license** (English only): the commercial license every paid download ships as
+  `COMMERCIAL_LICENSE.md`, with the product names and use cases of all three paid tiers filled in.
+  The homepage links it from its footer and from a new line under the pricing cards ("Every paid
+  tier ships under the same terms: read the commercial license", translated into es/de/fr/pt-br);
+  the /obd2-dtc-database footer, README and llms.txt link it too, and the sitemap lists it.
+- Dataset structured data on /obd2-dtc-database and /j1939-fault-code-database (all five
+  languages): `license` now points at /license, and every download carries a `contentUrl` and its
+  own ODbL v1.0 `license` (Google Search Console reported both as missing). The paid files have no
+  public URL, so the downloads are the free samples this site serves: the OBD-II sample's
+  `dtc_codes` and `diagnostic_fixes` and the Heavy Duty sample's `j1939_faults` and
+  `diagnostic_fixes` (`samples/heavyduty/`), each as CSV and Parquet. The SQLite download entry is
+  dropped (there is no public SQLite sample), and the OBD-II Dataset is marked
+  `isAccessibleForFree: false`, as the J1939 one already was.
+- Homepage FAQ "Commercial Scan Tool Integration" (visible answer and FAQ structured data, all five
+  languages) no longer calls the commercial license "unrestricted": the answer now describes a
+  perpetual license to build the data into your own scan tools, apps and services, says the raw
+  data itself can't be resold or redistributed, and links /license.
+- /license Section 3 names each tier's own sources: the MIT-licensed SAE J2012 compilation for
+  Standard and OEM Complete, the manufacturers' published fault-code documents for Heavy Duty (it
+  used to give every tier the OBD-II text). The Heavy Duty paid download was re-issued the same day
+  with this Section 3 in its `COMMERCIAL_LICENSE.md` (edition label 2026.09 unchanged); the
+  Standard and OEM Complete license text is unchanged.
+- Sitemap: `lastmod` now gives each page's last content change instead of the date of the last
+  site build. 6,975 of its 7,047 URLs went back from 2026-09-24 to 2026-09-20 (a one-time
+  correction); the other 72 keep their dates: 2026-09-25 for the homepage, both database pages and
+  /license, 2026-09-24 for the `/j1939/<oem>` pages, 2026-09-18 for /stats/.
 
 ## Heavy Duty SEO pages — 2026-09-24
 
