@@ -5,6 +5,13 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Homepage: "why a download, not an API" line under the pricing cards — 2026-10-01
+
+- index.html: one new sentence under the checkout note says the tiers are a one-time payment with no
+  per-request fees or monthly API bill, and that the code, fix and part tables (CSV and Parquet) run offline.
+  English only: the es/de/fr/pt-br pages show it after the next i18n regeneration. No counts, no competitor
+  names, no data change.
+
 ## License page: Section 2 names LICENSE-upstream.txt for the OBD-II tiers only — 2026-09-30
 
 - /license: Section 2 now reads "remove or misrepresent provenance information (SOURCES.md, and
