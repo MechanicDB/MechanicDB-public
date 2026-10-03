@@ -11,6 +11,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "0227e4d41093126d": {
+  "src": "Codes where it is ranked first",
+  "t": "Códigos en los que ocupa el primer puesto",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "02436ad2aa761602": {
   "src": "All OEMs and the FMI reference",
   "t": "Todos los OEM y la referencia FMI"
@@ -18,6 +24,12 @@
  "025f6a2df9c754ff": {
   "src": "Breakdown by OEM, system and failure mode, with the full FMI reference, on the <0>{1} fault code database</0> page.",
   "t": "Desglose por OEM, sistema y modo de fallo, con la referencia FMI completa, en la página de la <0>base de datos de códigos de falla {1}</0>."
+ },
+ "02e1b2eb09c19859": {
+  "src": "Codes per make",
+  "t": "Códigos por marca",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "03688ba6aa340b87": {
   "src": "FAQ",
@@ -64,6 +76,12 @@
  "04e36ec916582845": {
   "src": "Sample rows",
   "t": "Filas de muestra"
+ },
+ "05a977c661b24ce2": {
+  "src": "est_parts_cost_min_usd and est_parts_cost_max_usd are the dataset's editorial aftermarket parts estimates in US dollars at build time; they are not quotes, exclude labor and vary by vehicle and region. Medians are computed over fixes, so a family with {0} codes weighs {1} times. Compare groups within this page, not against a shop invoice.",
+  "t": "est_parts_cost_min_usd y est_parts_cost_max_usd son las estimaciones editoriales del conjunto de datos para piezas del mercado de recambios, en dólares estadounidenses en el momento de la compilación; no son presupuestos, excluyen la mano de obra y varían según el vehículo y la región. Las medianas se calculan sobre las reparaciones, así que una familia con {0} códigos pesa {1} veces. Compara grupos dentro de esta página, no con una factura de taller.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "0615842c81e42170": {
   "src": "{0} SAE {1} SPN/FMI fault pairs from {2} published OEM documents, mapped to {3} ranked repairs. CSV, Parquet, SQLite. Free {4}-fault sample.",
@@ -121,6 +139,18 @@
   "src": "The flat view joining faults and fixes, one read for notebooks",
   "t": "La vista plana que une fallos y reparaciones, una sola lectura para notebooks"
  },
+ "0b7712bc0ee20a3a": {
+  "src": "Every one of the {0} fixes carries a parts-cost range ({1} coverage). The median range is <2>{3} to {4}</2> in parts; for the most probable fix per code it is {5} to {6}. {7} of fixes top out under {8} and {9} ({10}) at {11} or more; the highest upper estimate is {12} ({13}).",
+  "t": "Cada una de las {0} reparaciones tiene un rango de coste de piezas (cobertura del {1}). El rango mediano es de <2>{3} a {4}</2> en piezas; para la reparación más probable de cada código es de {5} a {6}. En el {7} de las reparaciones, la estimación superior queda por debajo de {8}, y en el {9} ({10}) alcanza {11} o más; la estimación superior más alta es de {12} ({13}).",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "0b869d257996af0c": {
+  "src": "<0>Questions or corrections:</0> <1>contact form</1> or mechanicdb@dataengineered.io.",
+  "t": "<0>Preguntas o correcciones:</0> <1>formulario de contacto</1> o mechanicdb@dataengineered.io.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "0be198dcc3a163ef": {
   "src": "All <0>{1}</0> manufacturer-specific codes, by marque. Coverage is <2>not even</2> — it is strongest on US-market brands, and some marques are thin. We publish the distribution so you can check the makes you care about before buying rather than after. The <3>{4}</3> SAE-universal codes apply to every vehicle regardless of make.",
   "t": "Los <0>{1}</0> códigos específicos de fabricante, por marca. La cobertura <2>no es uniforme</2>: es más sólida en las marcas del mercado estadounidense y algunas marcas tienen pocos códigos. Publicamos la distribución para que puedas comprobar las marcas que te interesan antes de comprar, no después. Los <3>{4}</3> códigos universales SAE se aplican a todos los vehículos, sea cual sea la marca.",
@@ -173,9 +203,21 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "120270535417f094": {
+  "src": "{0} codes",
+  "t": "{0} códigos",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "1380191b44ae229c": {
   "src": "Rows for this OEM from the free sample. The dataset adds the ranked repairs, costs, labour estimates and parts for every pair.",
   "t": "Filas de este OEM incluidas en la muestra gratuita. El conjunto de datos añade las reparaciones clasificadas, los costes, las estimaciones de mano de obra y las piezas de cada par."
+ },
+ "13d81bd56245b93b": {
+  "src": "{0} h",
+  "t": "{0} h",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "145d9d6c0d59eff6": {
   "src": "MechanicDB — OBD-II Diagnostic &amp; Repair Database",
@@ -207,9 +249,21 @@
   "by": "claude",
   "at": "2026-09-25"
  },
+ "171a0606f7c74580": {
+  "src": "Group",
+  "t": "Grupo",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "17629301f59288d4": {
   "src": "{0} fault codes",
   "t": "códigos de falla {0}"
+ },
+ "17d4edf2a1de8da4": {
+  "src": "Parts and supplies",
+  "t": "Piezas y suministros",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "17d701db72194400": {
   "src": "Jane Doe / Apex Diagnostics Inc.",
@@ -238,6 +292,12 @@
   "t": "Elige un código de falla",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "199993be9fef4c50": {
+  "src": "Codes",
+  "t": "Códigos",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "19cd7d185cfd95a7": {
   "src": "Meaning",
@@ -272,6 +332,12 @@
   "t": "Sistema: {0} (códigos {1})",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "1d57df5947cce592": {
+  "src": "OBD-II fault codes in numbers — MechanicDB statistics {0}",
+  "t": "Códigos de falla OBD-II en cifras — estadísticas MechanicDB {0}",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "1d99f36610228a45": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related codes…",
@@ -313,6 +379,12 @@
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
  },
+ "20a2a4ea19330a7b": {
+  "src": "Fixes",
+  "t": "Reparaciones",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "210b0f66f093d750": {
   "src": "join chain: {0}",
   "t": "cadena de unión: {0}",
@@ -347,6 +419,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "230b7757ef81efcd": {
+  "src": "Paste the snippet into your post. It links the chart back to this page, which is the only attribution we ask for.",
+  "t": "Pega el fragmento en tu publicación. Enlaza el gráfico a esta página, que es la única atribución que pedimos.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "2390ad3f2414c710": {
   "src": "{0} min/max USD",
   "t": "{0} mín./máx. USD",
@@ -357,11 +435,23 @@
   "src": "What this page covers",
   "t": "Qué cubre esta página"
  },
+ "2428c58cba2cf119": {
+  "src": "Professional Required",
+  "t": "Professional Required",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "245a057c3ebae7b6": {
   "src": "{0} {1} SPN/FMI fault pairs across {2} OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<3>coverage</3>)",
   "t": "{0} {1} pares de fallo SPN/FMI en {2} fabricantes — transmisión, ABS, motores fuera de carretera y estacionarios, controladores de carrocería (<3>cobertura</3>)",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "24f9065341a5f341": {
+  "src": "OBD-II Fault Code Statistics {0} — Codes by System, Repair Cost, DIY Share | MechanicDB",
+  "t": "Estadísticas de códigos de falla OBD-II {0} — Códigos por sistema, coste de reparación, cuota DIY | MechanicDB",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "2635673694e42c91": {
   "src": "Aftermarket part names per fix, with catalog search URLs",
@@ -378,6 +468,12 @@
   "t": "Lo que esta página no muestra",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "26a7d54f9d60ed04": {
+  "src": "DIY difficulty",
+  "t": "Dificultad DIY",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "270fc77681e1b77a": {
   "src": "one-time · commercial use · <0>compare tiers</0> · <1>free {2}-fault sample</1>",
@@ -439,6 +535,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2a783b65f05fae03": {
+  "src": "Repair cost estimates",
+  "t": "Estimaciones de coste de reparación",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "2acd315e980941a6": {
   "src": "Five ways in",
   "t": "Cinco puntos de entrada",
@@ -461,6 +563,12 @@
   "src": "MechanicDB — The OBD-II &amp; {0} Diagnostic &amp; Repair Database",
   "t": "MechanicDB — la base de datos de diagnóstico y reparación OBD-II &amp; {0}"
  },
+ "2f58ea9ac48d5e49": {
+  "src": "OBD-II fault codes in numbers",
+  "t": "Códigos de falla OBD-II en cifras",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "2f8486c2f6c8a9d4": {
   "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} fixes ranked by real-world likelihood; every fix maps to purchasable aftermarket parts.",
   "t": "Normalizado para bases de datos, precombinado para notebooks. Cada código incluye {0} reparaciones clasificadas según su probabilidad real; cada reparación se asocia a piezas de recambio que se pueden comprar.",
@@ -470,6 +578,12 @@
  "2f97efa7e05fbf1c": {
   "src": "{0} {1} SPN/FMI fault pairs across {2} OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<3>full coverage</3>)",
   "t": "{0} pares de fallo SPN/FMI {1} en {2} OEM — transmisión, ABS, motores fuera de carretera y estacionarios, controladores de carrocería (<3>cobertura completa</3>)"
+ },
+ "311573d45522e50c": {
+  "src": "Distinct meanings",
+  "t": "Significados distintos",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "3487bb91bd5bb47a": {
   "src": "License Full Dataset · {0}",
@@ -498,6 +612,12 @@
  "3747fca97dab46a1": {
   "src": "Standard and OEM-assigned SPNs",
   "t": "SPN estándar y SPN asignados por el OEM"
+ },
+ "38561b3d92097a8e": {
+  "src": "<0>Refresh.</0> MechanicDB is curated; this page and its charts are regenerated with each new build, so figures move. Cite the build date.",
+  "t": "<0>Actualización.</0> MechanicDB es un conjunto de datos curado; esta página y sus gráficos se regeneran con cada nueva compilación, así que las cifras cambian. Cita la fecha de la compilación.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "3958c456f29ff950": {
   "src": "Repair coverage",
@@ -535,6 +655,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "3b333516ec19346c": {
+  "src": "Makes",
+  "t": "Marcas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "3bc9c1860bfda7d6": {
   "src": "View licensing",
   "t": "Ver licencias",
@@ -553,6 +679,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "3c9b83d8a9c40605": {
+  "src": "How long the repairs are estimated to take",
+  "t": "Cuánto se estima que duran las reparaciones",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "3caa70a70760202a": {
   "src": "<0>{1}</0> fault families",
   "t": "<0>{1}</0> familias de fallas",
@@ -569,6 +701,12 @@
   "src": "MechanicDB — {0} OBD-II &amp; {1} SAE {2} Fault Codes",
   "t": "MechanicDB — {0} códigos OBD-II &amp; {1} SAE {2}"
  },
+ "3f95e096c1a1dcf2": {
+  "src": "Highest upper estimates",
+  "t": "Estimaciones superiores más altas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "3fadefb81920d77b": {
   "src": "Code definitions compiled from public SAE {0} sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.",
   "t": "Definiciones de códigos recopiladas de fuentes públicas SAE {0} (con licencia MIT, atribución conservada). Los procedimientos, las valoraciones de dificultad y los costes son contenido original redactado.",
@@ -580,6 +718,12 @@
   "t": "Anatomía de un código — en vivo desde la muestra",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "40c62976cef9eba6": {
+  "src": "Counts describe the catalogue's coverage of each make's published code list, not how often the codes occur on the road. Sister brands that share a platform (for example the GM divisions, or Ford, Lincoln and Mercury) publish the same list and therefore show identical counts.",
+  "t": "Los recuentos describen la cobertura del catálogo sobre la lista de códigos publicada por cada marca, no la frecuencia con que los códigos aparecen en carretera. Las marcas hermanas que comparten plataforma (por ejemplo, las divisiones de GM, o Ford, Lincoln y Mercury) publican la misma lista y por eso muestran recuentos idénticos.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "412357b5c28b5c2b": {
   "src": "Free {0}-code OBD-II sample — dtc_codes (CSV)",
@@ -639,9 +783,21 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "44ce77942d4bcd16": {
+  "src": "Which makes have the most manufacturer-specific codes",
+  "t": "Qué marcas tienen más códigos específicos de fabricante",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "450a96789563278a": {
   "src": "Heavy Duty tier",
   "t": "Nivel Heavy Duty"
+ },
+ "454f26d6d251aa58": {
+  "src": "<0>Source.</0> The full MechanicDB build of {1} code definitions, {2} ranked fixes and {3} part mappings in {4} hand-authored fault families. Code definitions originate in SAE {5} / ISO {6} via an MIT-licensed upstream compilation; the repair content is original editorial material from a deterministic, test-gated pipeline. See <7>Sources</7> and the <8>data dictionary</8>.",
+  "t": "<0>Fuente.</0> La compilación completa de MechanicDB de {1} definiciones de códigos, {2} reparaciones clasificadas y {3} correspondencias de piezas en {4} familias de fallas redactadas a mano. Las definiciones de códigos proceden de SAE {5} / ISO {6} a través de una recopilación previa con licencia MIT; el contenido de reparación es material editorial original de un proceso determinista validado por pruebas. Consulta las <7>fuentes</7> y el <8>diccionario de datos</8>.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "489af480aa77f451": {
   "src": "🚗 Body &amp; SRS (B-Codes)",
@@ -654,6 +810,12 @@
   "t": "Códigos relacionados, misma familia de fallas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "4a83e8e3473166cc": {
+  "src": "Median labor",
+  "t": "Mano de obra mediana",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "4aa7f28eefbbe309": {
   "src": "OBD-II Fault Family Directory | MechanicDB",
@@ -785,6 +947,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "596fa80fd19bd6ed": {
+  "src": "What the repairs are estimated to cost",
+  "t": "Cuánto se estima que cuestan las reparaciones",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "59f77ccd2ec71014": {
   "src": "{0} verified OBD-II trouble codes and {1} SAE {2} SPN/FMI fault pairs mapped to ranked repair procedures with difficulty tiers, parts costs and step-by-step instructions.",
   "t": "{0} códigos de falla OBD-II verificados y {1} pares de fallo SPN/FMI SAE {2} asignados a procedimientos de reparación clasificados con niveles de dificultad, costes de piezas e instrucciones paso a paso."
@@ -795,11 +963,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "5aa6acf5d0b9cb54": {
+  "src": "Need the code-level records behind these numbers?",
+  "t": "¿Necesitas los registros por código detrás de estas cifras?",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "5b5fe7ef02086c8a": {
   "src": "Work Email Address",
   "t": "Correo electrónico de trabajo",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "5b6825d3c67a3589": {
+  "src": "Site",
+  "t": "Sitio",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "5b8d2481ae4f0b44": {
   "src": "Part of the DataEngineered catalog →",
@@ -845,11 +1025,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "608176310f57e7d3": {
+  "src": "<0>{1}</0> and {2} are each defined by {3} of the {4} makes, with {5} and {6} distinct meanings respectively. {7} of the {8} manufacturer-specific code strings ({9}) are defined by more than one make, and none of them reuses an SAE-standard string.",
+  "t": "<0>{1}</0> y {2} están definidos cada uno por {3} de las {4} marcas, con {5} y {6} significados distintos respectivamente. {7} de las {8} cadenas de código específicas de fabricante ({9}) están definidas por más de una marca, y ninguna reutiliza una cadena estándar SAE.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "618e242a70147565": {
   "src": "🧬 All {0} Fault Families",
   "t": "🧬 Las {0} familias de fallas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "6190db10926e439e": {
+  "src": "top {0} of {1} families",
+  "t": "las {0} primeras de {1} familias",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "6195ddb0830f5c45": {
   "src": "built by a deterministic, test-gated pipeline",
@@ -880,6 +1072,18 @@
   "t": "Heavy Duty",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "64799947ea800195": {
+  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; diagnosis time before the repair is not included.",
+  "t": "est_labor_hours es la estimación editorial del conjunto de datos del tiempo de trabajo efectivo en un taller, presente en el {0} de las reparaciones; no incluye el tiempo de diagnóstico previo a la reparación.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "65fa5d9a2f27e703": {
+  "src": "Part or supply",
+  "t": "Pieza o suministro",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "66efdb5a0cb44bd9": {
   "src": "{0} — {1} families, {2} codes",
@@ -913,17 +1117,41 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "6cb7de50389af957": {
+  "src": "<0>Catalogue, not incidence.</0> MechanicDB records what each code means and how it is repaired. No figure on this page measures how often a code appears on real vehicles; \"most common\" here always means most common within the catalogue, and each section says which denominator it uses.",
+  "t": "<0>Catálogo, no incidencia.</0> MechanicDB registra qué significa cada código y cómo se repara. Ninguna cifra de esta página mide con qué frecuencia aparece un código en vehículos reales; aquí, «más común» significa siempre más común dentro del catálogo, y cada sección indica qué denominador usa.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "6d1f54ef62017c22": {
+  "src": "The median fix is estimated at <0>{1} h</0> of labor; {2} of fixes are {3} h or less and {4} are over {5} h, with a maximum of {6} h. By difficulty the medians are {7} h ({8}), {9} h ({10}) and {11} h ({12}).",
+  "t": "La reparación mediana se estima en <0>{1} h</0> de mano de obra; el {2} de las reparaciones lleva {3} h o menos y el {4} más de {5} h, con un máximo de {6} h. Por dificultad, las medianas son {7} h ({8}), {9} h ({10}) y {11} h ({12}).",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "6d558f22b75381d9": {
   "src": "Four relational tables, one join key chain",
   "t": "Cuatro tablas relacionales, una cadena de claves de unión",
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "6dd991183a7a2ba2": {
+  "src": "Manufacturer-specific codes",
+  "t": "Códigos específicos de fabricante",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "6f8ddc1ee92860dc": {
   "src": "{0} SAE-only · {1} OEM Complete ({2} manufacturer codes, {3} makes) · one-time · <4>compare tiers</4>",
   "t": "{0} solo SAE · {1} OEM Complete ({2} códigos de fabricante, {3} marcas) · pago único · <4>comparar niveles</4>",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "701327677aea3e03": {
+  "src": "difficulty_level is assigned per fix by the editorial pipeline: Easy DIY (basic hand tools, no lifting or programming), Moderate DIY (specialty tools or partial disassembly), Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The {0} fix is the first item of each code's probability-ranked repair set.",
+  "t": "difficulty_level lo asigna el proceso editorial a cada reparación: Easy DIY (herramientas manuales básicas, sin elevar el vehículo ni programar), Moderate DIY (herramientas especiales o desmontaje parcial), Professional Required (programación, alta tensión, SRS, trabajos internos de transmisión o de motor). La reparación {0} es el primer elemento del conjunto de reparaciones de cada código, clasificado por probabilidad.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "70bdec98a469e9c2": {
   "src": "Free {0}-fault sample on GitHub (ODbL) →",
@@ -970,6 +1198,12 @@
   "t": "📡 Red CAN (códigos U)",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "73d11ccd12069a02": {
+  "src": "Labor estimate",
+  "t": "Estimación de mano de obra",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "7462be06702493e0": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and {3} related code in the same…",
@@ -1029,6 +1263,18 @@
   "src": "{0} {1} {2} SPN/FMI fault pairs from {3} published {4} document, each mapped to a fault family and ranked repairs. Coverage by system, FMI breakdown…",
   "t": "{0} pares de fallo SPN/FMI {2} de {1}, tomados de {3} documento publicado por {4} y asignados a una familia de fallas con reparaciones clasificadas. Cobertura por sistema y por FMI."
  },
+ "78e39a1904cf8742": {
+  "src": "One row per code definition: SAE rows are unique by code string, manufacturer rows by make and code string, so a {0} string defined by several makes counts once per make. The system is the code's first letter as defined by SAE {1} / ISO {2}. {3} definitions cover {4} distinct code strings.",
+  "t": "Una fila por definición de código: las filas SAE son únicas por cadena de código y las de fabricante por marca y cadena de código, así que una cadena {0} definida por varias marcas cuenta una vez por marca. El sistema es la primera letra del código según SAE {1} / ISO {2}. {3} definiciones abarcan {4} cadenas de código distintas.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "7945d3c8f7a0dee3": {
+  "src": "Difficulty",
+  "t": "Dificultad",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "7a08cebfeb20b546": {
   "src": "{0} Families",
   "t": "{0} familias",
@@ -1068,6 +1314,18 @@
  "7dcdd2969ba9eb62": {
   "src": "OEM code",
   "t": "Código OEM"
+ },
+ "7e439c353ec807e1": {
+  "src": "On this page",
+  "t": "En esta página",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "7ec15c570545f141": {
+  "src": "Ranked fixes",
+  "t": "Reparaciones clasificadas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "7ecb76f681fc1e54": {
   "src": "The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.",
@@ -1121,6 +1379,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "81bc580f55a8e282": {
+  "src": "{0} fix title",
+  "t": "Título de la reparación {0}",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "81ddb0215ee4caf4": {
+  "src": "Parts mappings",
+  "t": "Correspondencias de piezas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "82a19be3ea17a546": {
   "src": "{0} diagnostic trouble codes joined to {1} ranked repair procedures, delivered as pipe-delimited CSV, Apache Parquet or a SQLite database. Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software — not a website you have to scrape.",
   "t": "{0} códigos de diagnóstico unidos a {1} procedimientos de reparación clasificados, entregados como CSV delimitado por barras verticales, Apache Parquet o una base de datos SQLite. Pensado para apps OBD, firmware de herramientas de escaneo, copilotos mecánicos con IA y software de taller, no un sitio web que tengas que extraer con scraping.",
@@ -1131,9 +1401,21 @@
   "src": "{0} published fault-code documents across {1} manufacturers. Each row links to the document the pairs were taken from; open an OEM for its own breakdown.",
   "t": "{0} documentos de códigos de falla publicados por {1} fabricantes. Cada fila enlaza al documento del que se tomaron los pares; abra un OEM para ver su propio desglose."
  },
+ "836d86671b720dce": {
+  "src": "OBD-II fault codes in numbers: statistics from the MechanicDB catalogue",
+  "t": "Códigos de falla OBD-II en cifras: estadísticas del catálogo MechanicDB",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "83c73cb15060a757": {
   "src": "Six tables, delivered as pipe-delimited CSV, Apache Parquet and one SQLite database, joined on {0} and {1}.",
   "t": "Seis tablas, entregadas en CSV delimitado por barras verticales, Apache Parquet y una base de datos SQLite, unidas por {0} y {1}."
+ },
+ "84e1c8e8a0f1b7eb": {
+  "src": "<0>{1}</0> is the largest of the {2} fault families with {3} codes ({4}), followed by {5} ({6}) and {7} ({8}). Every code carries {9} to {10} ranked fixes ({11} codes with {12} codes with {13} codes with {14}); the most frequent most-probable first step, {15}, is ranked first for {16} codes.",
+  "t": "<0>{1}</0> es la mayor de las {2} familias de fallas, con {3} códigos ({4}), seguida de {5} ({6}) y {7} ({8}). Cada código tiene de {9} a {10} reparaciones clasificadas ({11} códigos con {12} códigos con {13} códigos con {14}); el primer paso más frecuente entre las reparaciones más probables, {15}, ocupa el primer puesto en {16} códigos.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "85576d4a56d5d2a9": {
   "src": "fleet telematics",
@@ -1203,6 +1485,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "8e562bb0ec6241fc": {
+  "src": "<0>Reuse.</0> The figures and charts on this page are published under <1>CC BY {2}</1>: use them in forum posts, articles, slides and videos with a link to {3}. The machine-readable version is <4>data.json</4>. The row-level dataset is a separate <5>commercial product</5>; a free {6}-code sample is in the <7>public repository</7>.",
+  "t": "<0>Reutilización.</0> Las cifras y gráficos de esta página se publican bajo <1>CC BY {2}</1>: úsalos en foros, artículos, diapositivas y vídeos con un enlace a {3}. La versión legible por máquina es <4>data.json</4>. El conjunto de datos fila a fila es un <5>producto comercial</5> aparte; en el <7>repositorio público</7> hay una muestra gratuita de {6} códigos.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "8ef5989520b53701": {
   "src": "Sec {0} · Licensing",
   "t": "Sec. {0} · Licencias",
@@ -1215,11 +1503,35 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9066b80ebae536bd": {
+  "src": "Most frequent most-probable first step",
+  "t": "Primer paso más frecuente entre las reparaciones más probables",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "9147d417a94a3110": {
+  "src": "The {0} and higher ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. Distinct meanings counts distinct short descriptions in the catalogue; makes that publish the same wording count once.",
+  "t": "Los rangos {0} y superiores están reservados a los fabricantes, así que una misma cadena tiene una definición distinta según la marca; un lector de códigos genérico que solo muestra la cadena no puede distinguirlas. Significados distintos es el número de descripciones breves distintas del catálogo; las marcas que publican la misma redacción cuentan una vez.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "915e01df01752ddc": {
   "src": "Data sheet",
   "t": "Ficha técnica",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "9201ce45f2e48fcb": {
+  "src": "Code strings that mean different things per make",
+  "t": "Cadenas de código que significan algo distinto según la marca",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "9297913eea881537": {
+  "src": "Copy snippet",
+  "t": "Copiar fragmento",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "92d6167e0b62b7d6": {
   "src": "Dataset License ({0})",
@@ -1238,6 +1550,12 @@
   "t": "{0} códigos SAE",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "937f58e67ac12b6b": {
+  "src": "Fixes mapped",
+  "t": "Reparaciones asociadas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "93a2fa21a37d662e": {
   "src": "SPN",
@@ -1277,6 +1595,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "974688ec3925abfb": {
+  "src": "Codes by vehicle system",
+  "t": "Códigos por sistema del vehículo",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "97c945bca2519af5": {
   "src": "one-time · vs {0} separately",
   "t": "pago único · frente a {0} por separado",
@@ -1288,6 +1612,12 @@
   "t": "Principales categorías de códigos de diagnóstico OBD-II y monografías",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "99a423164819c464": {
+  "src": "Fix",
+  "t": "Reparación",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "99c706ba919e28f2": {
   "src": "MechanicDB OEM Complete — everything in the tier to the left",
@@ -1308,6 +1638,18 @@
  "9a49b39f87552249": {
   "src": "Fault pairs by system",
   "t": "Pares de fallo por sistema"
+ },
+ "9c3a5922e52ef926": {
+  "src": "Across all {0} ranked fixes, <1>{2}</1> are {3}, {4} {5} and {6} {7}. Looking only at the most probable cause of each code, <8>{9}</8> of the {10} fixes are Easy DIY and {11} need a professional. {12} codes have the highest professional share among {13} fixes; see the table.",
+  "t": "En el conjunto de las {0} reparaciones clasificadas, <1>{2}</1> son {3}, {4} {5} y {6} {7}. Si solo se mira la causa más probable de cada código, <8>{9}</8> de las {10} reparaciones son Easy DIY y {11} requieren un profesional. Los códigos {12} tienen la mayor proporción de trabajo profesional entre las reparaciones {13}; consulta la tabla.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "9d9d6636e46bc629": {
+  "src": "Median lower estimate",
+  "t": "Estimación inferior mediana",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "9db2cb3df63a4adb": {
   "src": "{0} System",
@@ -1373,6 +1715,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a21ffa92cfb86632": {
+  "src": "Aggregate statistics computed from the full MechanicDB dataset: {0} diagnostic trouble codes ({1} SAE-standard, {2} manufacturer-specific across {3} makes) mapped to {4} probability-ranked repair procedures with difficulty, parts-cost and labor estimates. These figures describe the catalogue, not how often codes are set on the road. Every figure states its denominator and is free to cite, quote and embed with a link to this page.",
+  "t": "Estadísticas agregadas calculadas a partir del conjunto de datos completo de MechanicDB: {0} códigos de diagnóstico ({1} estándar SAE, {2} específicos de fabricante en {3} marcas) asociados a {4} procedimientos de reparación clasificados por probabilidad, con estimaciones de dificultad, coste de piezas y mano de obra. Estas cifras describen el catálogo, no la frecuencia con que los códigos se activan en carretera. Cada cifra indica su denominador y puede citarse, reproducirse e insertarse libremente con un enlace a esta página.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "a26ee0ae24edd320": {
   "src": "check engine light diagnosis",
   "t": "diagnóstico del testigo de avería del motor",
@@ -1388,6 +1736,12 @@
   "t": "<0>{1}</0> correspondencias de piezas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a33097b27fbb821f": {
+  "src": "top {0} of {1} strings",
+  "t": "las {0} primeras de {1} cadenas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "a35472781ffbf8f4": {
   "src": "Does MechanicDB cover manufacturer-specific OEM codes beyond the SAE {0} generic range?",
@@ -1422,6 +1776,12 @@
   "t": "Código {0}: {1}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a4cc2abeee384339": {
+  "src": "The {0} fixes map to <1>{2}</1> replacement-part entries, {3} per fix on average ({4} with {5} with {6} with {7}), drawn from {8} distinct catalogue items. {9} is mapped to the most fixes ({10}), ahead of {11} ({12}) and {13} ({14}).",
+  "t": "Las {0} reparaciones se asocian a <1>{2}</1> entradas de piezas de recambio, {3} por reparación de media ({4} con {5} con {6} con {7}), procedentes de {8} artículos distintos del catálogo. {9} es el artículo asociado a más reparaciones ({10}), por delante de {11} ({12}) y {13} ({14}).",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "a5307986491d9a3f": {
   "src": "{0} SAE-standard ({1}) + {2} manufacturer-specific across {3} makes",
@@ -1477,6 +1837,18 @@
   "by": "claude",
   "at": "2026-09-27"
  },
+ "a7a203e97a4cb139": {
+  "src": "Fault families",
+  "t": "Familias de fallas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "a7ed38d5e0217bf7": {
+  "src": "Moderate DIY",
+  "t": "Moderate DIY",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "a83da8ecfd8384ee": {
   "src": "Authored groupings that make the corpus navigable rather than a flat code list",
   "t": "Agrupaciones redactadas que hacen navegable el corpus, en lugar de una lista plana de códigos",
@@ -1488,6 +1860,18 @@
   "t": "Tu nombre / empresa",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a9432f59c057868b": {
+  "src": "Mean upper estimate",
+  "t": "Estimación superior media",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "a94431ee22f05f14": {
+  "src": "Make",
+  "t": "Marca",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "a9f0cece6e56b86b": {
   "src": "Browse by fault family",
@@ -1559,6 +1943,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ad2061c832f808bf": {
+  "src": "Which parts and supplies the fixes call for",
+  "t": "Qué piezas y suministros requieren las reparaciones",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "ad5e76b8d159aae9": {
   "src": "Buy now · Instant download",
   "t": "Comprar ahora · Descarga inmediata",
@@ -1605,6 +1995,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "b0b56c89e4d99497": {
+  "src": "Which fault families hold the most codes",
+  "t": "Qué familias de fallas reúnen más códigos",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "b0c9bb9826764bb5": {
   "src": "Fuel &amp; air metering",
   "t": "Dosificación de combustible y aire",
@@ -1622,6 +2018,12 @@
   "t": "Comprar el paquete · Descarga inmediata",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "b179fbe793f0fe90": {
+  "src": "{0} has the most manufacturer-specific codes in the catalogue with <1>{2}</1> ({3} of {4}), followed by {5}, {6} and {7} with {8} each. The {9} makes range from {10} down to {11} codes ({12}).",
+  "t": "{0} es la marca con más códigos específicos de fabricante del catálogo, con <1>{2}</1> ({3} de {4}), seguida de {5}, {6} y {7} con {8} cada una. Las {9} marcas van de {10} a {11} códigos ({12}).",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "b1c8168d6aa87eee": {
   "src": "Holds",
@@ -1669,6 +2071,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "b734e5f80e629e0a": {
+  "src": "Upper estimate",
+  "t": "Estimación superior",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "b969b8deb86ee423": {
   "src": "Kaggle dataset",
   "t": "Dataset en Kaggle",
@@ -1694,6 +2102,12 @@
  "bbb3178712a87adf": {
   "src": "Standard (SAE) — {0} codes",
   "t": "Standard (SAE) — {0} códigos"
+ },
+ "bbd80cf7e2ded5ef": {
+  "src": "Build",
+  "t": "Compilación",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "bbe83cefc5f6fc22": {
   "src": "Where the data comes from",
@@ -1793,6 +2207,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "c34e1af2fef9bc56": {
+  "src": "Download SVG",
+  "t": "Descargar SVG",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "c3b0aefdc18d969d": {
   "src": "Scan Tool / OBD App API Integration",
   "t": "Integración de API en herramientas de escaneo / apps OBD",
@@ -1822,6 +2242,12 @@
   "t": "Muestra gratuita OBD-II de {0} códigos — {1} (Parquet)",
   "by": "claude",
   "at": "2026-09-27"
+ },
+ "c5416dbc3a9947fa": {
+  "src": "Each replacement_parts row links one fix to one catalogue item with a search query, not a part number; {0} fixes have no mapping. Tools and consumables (wiring kits, contact cleaner, multimeters) are catalogue items too, which is why they lead the count.",
+  "t": "Cada fila de replacement_parts vincula una reparación con un artículo del catálogo mediante una consulta de búsqueda, no un número de pieza; {0} reparaciones no tienen correspondencia. Las herramientas y los consumibles (kits de cableado, limpiador de contactos, multímetros) también son artículos del catálogo, y por eso encabezan el recuento.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "c54bc4ad16925a3a": {
   "src": "MechanicDB OBD-II DTC Database",
@@ -1871,11 +2297,23 @@
   "by": "claude",
   "at": "2026-09-27"
  },
+ "ca1b1d72fe446478": {
+  "src": "<0>{1}</0> of the {2} catalogued codes are {3} codes ({4}-codes): {5} SAE-standard and {6} manufacturer-specific. {7} ({8}) holds {9}, {10} ({11}) {12} and {13} ({14}) {15}. All {16} manufacturer-specific codes in the catalogue are {17} codes.",
+  "t": "<0>{1}</0> de los {2} códigos catalogados son códigos {3} (códigos {4}): {5} estándar SAE y {6} específicos de fabricante. {7} ({8}) reúne {9}, {10} ({11}) {12} y {13} ({14}) {15}. Los {16} códigos específicos de fabricante del catálogo son, todos ellos, códigos {17}.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "cb53439a76083e86": {
   "src": "Commercial license on both",
   "t": "Licencia comercial para ambos",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "cb6c56cb764935d6": {
+  "src": "Median upper estimate",
+  "t": "Estimación superior mediana",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "cb6f7b6ced0cc465": {
   "src": "Largest fault families",
@@ -1908,6 +2346,12 @@
   "t": "— código cercano",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "cec3e9678ff0a30c": {
+  "src": "Embed this chart",
+  "t": "Insertar este gráfico",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "cec6c17f43a100ac": {
   "src": "Fault Families",
@@ -1947,11 +2391,29 @@
   "src": "Coverage by OEM",
   "t": "Cobertura por OEM"
  },
+ "d0beb1b172182b5c": {
+  "src": "A fault family groups codes that share a failure mechanism and repair set; every code belongs to exactly one family. Rank {0} is the most probable root cause in the family's ranked repair set, so a family's first step is ranked first for every code in that family.",
+  "t": "Una familia de fallas agrupa códigos que comparten un mecanismo de falla y un conjunto de reparaciones; cada código pertenece exactamente a una familia. El puesto {0} es la causa raíz más probable en el conjunto de reparaciones clasificadas de la familia, por lo que el primer paso de una familia ocupa el primer puesto en todos sus códigos.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "d2e2793f17ea847e": {
+  "src": "Share of fixes",
+  "t": "Proporción de reparaciones",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "d3fa7513e2176325": {
   "src": "<0>MechanicDB</0> › OBD-II DTC database",
   "t": "<0>MechanicDB</0> › Base de datos de DTC OBD-II",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "d43dcd62b7612f78": {
+  "src": "OBD-II diagnostic trouble codes in numbers: {0} codes across {1} makes and {2} ranked fixes. Codes by vehicle system and make, code strings shared across makes, fault families, DIY difficulty ({3} of most-probable fixes are Easy DIY), parts-cost and labor estimates, most-mapped parts. Free to cite and embed.",
+  "t": "Códigos de diagnóstico OBD-II en cifras: {0} códigos de {1} marcas y {2} reparaciones clasificadas. Códigos por sistema del vehículo y por marca, cadenas de código compartidas entre marcas, familias de fallas, dificultad DIY (el {3} de las reparaciones más probables son Easy DIY), estimaciones de coste de piezas y mano de obra, piezas más asociadas. Libre para citar e insertar.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "d5180fa89b3bab33": {
   "src": "Speed &amp; idle control",
@@ -1965,11 +2427,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d7f74d7da465b441": {
+  "src": "License the dataset · from {0}",
+  "t": "Obtén la licencia del conjunto de datos · desde {0}",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "d8e8a962c786dc3e": {
   "src": "jane@apexdiagnostics.com",
   "t": "laura@diagnosticosapex.com",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "d96fbed934876133": {
+  "src": "Suggested citation.",
+  "t": "Cita sugerida.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "d9e0c9b83da202bb": {
   "src": "MechanicDB — The OBD-II Diagnostic &amp; Repair Database",
@@ -2003,6 +2477,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "dc2b470d3f8b03a0": {
+  "src": "Fault codes by vehicle system",
+  "t": "Códigos de falla por sistema del vehículo",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "dcfdfb9d408ce756": {
+  "src": "Makes defining it",
+  "t": "Marcas que la definen",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "dd35a81646abbc39": {
   "src": "Provenance",
   "t": "Procedencia",
@@ -2024,6 +2510,18 @@
   "t": "Sec. {0} · Procedencia y soporte",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "de39f4653e0c7009": {
+  "src": "Method, reuse and citation",
+  "t": "Método, reutilización y cita",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "de7bad6570502faa": {
+  "src": "By vehicle system",
+  "t": "Por sistema del vehículo",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "de9084c2576344f4": {
   "src": "Ranked procedures with difficulty tier, parts cost min/max, labor hours, steps",
@@ -2058,6 +2556,12 @@
   "t": "No. MechanicDB Heavy Duty no reproduce el Digital Annex de SAE {0}, ningún archivo DBC de {1} ni texto SPN/FMI con licencia de SAE. Cada par de fallo se compila a partir de un documento OEM de códigos de fallo publicado — un manual de servicio, una guía de mantenimiento o una lista de DTC alojada por el propio fabricante — con redacción propia y un enlace por fila al documento del que procede.",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "e26485a1e0e38b24": {
+  "src": "top {0} of {1} items",
+  "t": "los {0} primeros de {1} artículos",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "e2d892fa093ce93f": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the most probable cause, and related codes in the {3} system.",
@@ -2109,6 +2613,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e689fda2d2efb61c": {
+  "src": "Catalogue statistics · build {0}",
+  "t": "Estadísticas del catálogo · compilación {0}",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "e6c0ddea2e64f4af": {
+  "src": "Code strings shared across makes",
+  "t": "Cadenas de código compartidas entre marcas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "e71ecd1ae9735879": {
   "src": "{0} OBD-II trouble codes in the {1} fault family ({2} system): what the module detects…",
   "t": "{0} códigos de falla OBD-II de la familia {1} (sistema {2}): qué detecta el módulo…",
@@ -2141,6 +2657,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e9bc6435adb6cde3": {
+  "src": "Fault families and first steps",
+  "t": "Familias de fallas y primeros pasos",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "ea401beb54c7357c": {
+  "src": "Easy DIY",
+  "t": "Easy DIY",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "ea80315c43d90cd8": {
   "src": "SAE extended",
   "t": "SAE ampliado",
@@ -2152,6 +2680,12 @@
   "t": "Causa más probable",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ecc2dfc9ecceafad": {
+  "src": "Share of OEM codes",
+  "t": "Proporción de códigos OEM",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "ed2a5d74c4f3c1e4": {
   "src": "Identical schema to the full dataset",
@@ -2165,11 +2699,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ee14050617b7b58e": {
+  "src": "Letter",
+  "t": "Letra",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "ef6fd9d64a4be9a4": {
   "src": "Commercial Licensing",
   "t": "Licencias comerciales",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f0eb3d69840d51a8": {
+  "src": "Every code with its ranked fixes, difficulty, parts-cost range, labor hours, step-by-step instructions and part mappings, as CSV, Parquet and SQLite.",
+  "t": "Cada código con sus reparaciones clasificadas, dificultad, rango de coste de piezas, horas de mano de obra, instrucciones paso a paso y correspondencias de piezas, en CSV, Parquet y SQLite.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "f1394f3d12c08535": {
   "src": "The {0} failure mode identifiers with plain-language meanings",
@@ -2178,6 +2724,12 @@
  "f229a983e5a47b53": {
   "src": "Working on trucks, buses or off-highway diesels? The <0>{1} fault code database</0> covers SAE {2} SPN/FMI fault pairs from published OEM documents.",
   "t": "¿Trabaja con camiones, autobuses o motores diésel fuera de carretera? La <0>base de datos de códigos de falla {1}</0> cubre pares de fallo SPN/FMI SAE {2} tomados de documentos publicados por los fabricantes."
+ },
+ "f2313a3d353ae580": {
+  "src": "<0>Estimates are estimates.</0> Parts costs (USD) and labor hours are the dataset's editorial values at build time, useful for comparison between fixes, not quotes. Difficulty is an editorial tier. Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.",
+  "t": "<0>Las estimaciones son estimaciones.</0> Los costes de piezas (USD) y las horas de mano de obra son valores editoriales del conjunto de datos en el momento de la compilación, útiles para comparar reparaciones entre sí, no presupuestos. La dificultad es un nivel editorial. Los pasos de reparación son material de referencia educativo, no asesoramiento profesional de reparación; los trabajos de alta tensión y de SRS/airbag requieren técnicos cualificados.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "f26e9a51227dbc09": {
   "src": "The failure mode identifier is the second half of every {0} fault. These are the plain-language meanings used across the dataset, with the number of fault pairs that carry each one.",
@@ -2201,6 +2753,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f3baadf431ed28c4": {
+  "src": "Labor hours",
+  "t": "Horas de mano de obra",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "f3dc7b7ba8b17138": {
   "src": "{0} OEMs",
   "t": "{0} OEM"
@@ -2216,6 +2774,12 @@
   "t": "Categorías de diagnóstico",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f5cbdf6bfb51439b": {
+  "src": "Contents",
+  "t": "Contenido",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "f6bfd56cab7e2f98": {
   "src": "Versioned releases from the deterministic pipeline",
@@ -2236,6 +2800,12 @@
  "f88089ee41c26c28": {
   "src": "{0} Fault Code Database",
   "t": "Base de datos de códigos de falla {0}"
+ },
+ "f8956648b439452b": {
+  "src": "Manufacturer-specific",
+  "t": "Específicos de fabricante",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "f9f68e884b5e4ee8": {
   "src": "Is this the SAE {0} Digital Annex?",
@@ -2259,6 +2829,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "fbc59ee65c7b3e57": {
+  "src": "{0} fixes",
+  "t": "{0} reparaciones",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "fbf19768e55d3c6a": {
   "src": "License OEM Complete · {0}",
   "t": "Licenciar OEM Complete · {0}",
@@ -2274,6 +2850,24 @@
  "fd615fc0472d3c16": {
   "src": "FMI",
   "t": "FMI"
+ },
+ "fd6648092667fe23": {
+  "src": "Fault codes",
+  "t": "Códigos de falla",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "fda606969114e353": {
+  "src": "top {0} of {1} makes",
+  "t": "las {0} primeras de {1} marcas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
+ "fe69b0e6c4155158": {
+  "src": "Median labor by difficulty",
+  "t": "Mano de obra mediana por dificultad",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  },
  "fe782ebc73c54eee": {
   "src": "Standard, OEM Complete and Heavy Duty share the same license terms (grant, restrictions, warranty, termination); each tier's copy names its own product, use cases and data sources. <0>Read the commercial license</0>.",
@@ -2298,5 +2892,11 @@
   "t": "Las listas de fallos de motores de uso en carretera de Cummins, Detroit Diesel, PACCAR, Volvo/Mack y camiones Caterpillar son material de portal exclusivo del concesionario y no están incluidas. Cada fila de este nivel enlaza al documento OEM del que se tomó; las descripciones están redactadas por nosotros y no se reproduce ningún texto de SAE {0}.",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "ffa104d4758ce5b6": {
+  "src": "How much of the repair work is DIY",
+  "t": "Qué parte del trabajo de reparación es DIY",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
  }
 }
