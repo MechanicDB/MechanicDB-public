@@ -5,6 +5,19 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## /stats/ in Spanish, German, French and Portuguese — 2026-10-03
+
+- The statistics page was English-only: its 100 text segments had no translation, so the i18n build never
+  published it in the other languages. All 100 are now in `locales/es.json`, `de.json`, `fr.json` and `pt-br.json`
+  (9 shared stats strings reused verbatim from SuppDB's catalogs, 91 new; merge validated, 0 rejected), and
+  `/es/stats/`, `/de/stats/`, `/fr/stats/` and `/pt-br/stats/` are published (`check`: 7,050 pages, 0 errors).
+- Terms follow the site's catalogs (fault families, ranked fixes, parts mappings, manufacturer-specific, labor).
+  Data values stay English as on the rest of the site: system, family, fix and part names, and the difficulty
+  tiers Easy DIY / Moderate DIY / Professional Required. Column names stay verbatim. No figure changed.
+- Also changed by the build: the English /stats/ gets its hreflang alternates and language switcher; the
+  Statistics links on the four localized homepages and buyer pages now open the page in the same language;
+  the sitemap lists the four new URLs with their alternates (dated like the English page, 2026-09-28).
+
 ## Homepage: the "why a download, not an API" line in Spanish, German, French and Portuguese — 2026-10-03
 
 - The sentence under the pricing cards (English since PR #27) is now translated in `locales/es.json`, `de.json`,
