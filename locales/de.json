@@ -1465,6 +1465,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a6f27ddbd16e3f42": {
+  "src": "Why a download and not an API: you pay once, with no per-request fees and no monthly API bill. The full code, fix and part tables (CSV and Parquet) sit on your own disk, so scan tools and shop software can query them offline, as often as they like.",
+  "t": "Warum ein Download und keine API: Sie zahlen einmal, ohne Gebühren pro Anfrage und ohne monatliche API-Rechnung. Die vollständigen Code-, Reparatur- und Teiletabellen (CSV und Parquet) liegen auf Ihrer eigenen Festplatte, sodass Diagnosegeräte und Werkstattsoftware sie offline abfragen können, so oft sie wollen.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-03"
+ },
  "a6f71d4d8fdddcea": {
   "src": "Free {0}-code OBD-II sample — diagnostic_fixes (CSV)",
   "t": "Kostenlose OBD-II-Beispieldaten mit {0} Codes — diagnostic_fixes (CSV)",
