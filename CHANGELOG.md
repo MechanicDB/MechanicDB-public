@@ -5,6 +5,14 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Homepage: the "why a download, not an API" line in Spanish, German, French and Portuguese — 2026-10-03
+
+- The sentence under the pricing cards (English since PR #27) is now translated in `locales/es.json`, `de.json`,
+  `fr.json` and `pt-br.json`, and the es/de/fr/pt-br homepages were rebuilt with it (`i18n_common.py build`;
+  `check`: 0 errors). The wording follows the catalogs' existing terms for scan tools, shop software, fixes and parts.
+- Sitemap: the homepage and its four language copies are dated 2026-10-03 (the English page changed with PR #27).
+- No other page changes. /stats/ stays English-only (its 100 segments were never translated).
+
 ## Homepage: "why a download, not an API" line under the pricing cards — 2026-10-01
 
 - index.html: one new sentence under the checkout note says the tiers are a one-time payment with no
