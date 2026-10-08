@@ -37,7 +37,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "MechanicDB: base de datos automotriz de diagnóstico y reparación OBD-II",
-  "description": "Conjunto de datos de diagnóstico automotriz que asigna 15.886 códigos de falla OBD-II verificados de 32 marcas de vehículos a 56.561 procedimientos de reparación clasificados, con niveles de dificultad DIY y estimaciones de coste de mano de obra y piezas. Un nivel Heavy Duty aparte añade 4.212 pares de fallo SPN/FMI SAE J1939 recopilados de 16 documentos de códigos de falla publicados por los fabricantes.",
+  "description": "Conjunto de datos de diagnóstico de automóviles que asigna 15.886 códigos de avería OBD-II verificados de 32 marcas de vehículos a 56.561 procedimientos de reparación creados por el equipo, con niveles de dificultad de bricolaje y estimaciones de costes de mano de obra y piezas. Un nivel Heavy Duty independiente añade 4.212 pares de falla SPN/FMI SAE J1939 recopilados de 16 documentos de códigos de falla publicados por los fabricantes.",
   "url": "https://mechanicdb.dataengineered.io/es/",
   "license": "https://mechanicdb.dataengineered.io/license",
   "isAccessibleForFree": false,
@@ -106,7 +106,7 @@
     {
       "@type": "Dataset",
       "name": "MechanicDB OBD-II DTC Database",
-      "description": "15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked repairs. Download as CSV, Parquet or SQLite. Free 90-code sample.",
+      "description": "15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 authored repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.",
       "url": "https://mechanicdb.dataengineered.io/obd2-dtc-database",
       "creator": {
         "@type": "Organization",
@@ -119,7 +119,7 @@
     {
       "@type": "Dataset",
       "name": "MechanicDB Heavy Duty — J1939 Fault & Repair Database",
-      "description": "4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents across 10 manufacturers, each mapped to an authored fault family with 16,998 probability-ranked repair procedures, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
+      "description": "4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents across 10 manufacturers, each mapped to an authored fault family with 16,998 authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
       "url": "https://mechanicdb.dataengineered.io/j1939-fault-code-database",
       "creator": {
         "@type": "Organization",
@@ -176,7 +176,7 @@
       "name": "Necesito SAE J2012DA, pero la licencia supera mi presupuesto. ¿Es MechanicDB una alternativa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MechanicDB no es una copia de SAE J2012 ni de su Digital Annex (J2012DA) y no puede revenderse como tal: estos se licencian por puesto y su redistribución está prohibida. Si necesitas el documento normativo o sus Failure Type Bytes, las vías legítimas de menor coste son la suscripción a SAE Digital Library de la biblioteca de ingeniería de una universidad, el acceso temporal o por suscripción a través de Techstreet, ANSI Webstore o Accuris, el descuento para miembros de SAE, o la norma armonizada ISO 15031-6 de un organismo nacional de normalización. Si lo que realmente necesitas es la consulta factual de código a significado y no la norma en sí, eso es lo que vende MechanicDB para $49: 9.249 códigos del rango SAE (6.637 códigos específicos de fabricante en el nivel $149), con descripciones, causas probables clasificadas y procedimientos de reparación, recopilado a partir de una fuente pública con licencia MIT sin reproducir texto de ningún documento SAE. No incluye Failure Type Bytes y no es una referencia normativa citable."
+        "text": "MechanicDB no es una copia de SAE J2012 ni de su Anexo Digital (J2012DA) y no puede revenderse como tal: estos productos se licencian por usuario y su redistribución está prohibida. Si necesita el documento normativo o sus bytes de tipo de falla, las vías legítimas de menor coste son la suscripción de una biblioteca universitaria de ingeniería a SAE Digital Library, el acceso temporal o por suscripción mediante Techstreet, ANSI Webstore o Accuris, el descuento para miembros de SAE o la norma ISO 15031-6 armonizada de un organismo nacional de normalización. Si lo que necesita es la correspondencia factual entre códigos y significados, MechanicDB vende precisamente eso para $49: 9.249 códigos del rango SAE (6.637 códigos específicos de fabricante en el nivel $149), con descripciones y procedimientos de reparación creados por el equipo en orden de consideración, recopilados de una fuente pública con licencia MIT sin reproducir texto de documentos SAE. El orden no es una probabilidad medida de la causa. No contiene bytes de tipo de falla ni es una referencia normativa citable."
       }
     },
     {
@@ -612,7 +612,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "MechanicDB: conjunto de datos automotriz de diagnóstico y reparación OBD-II — Snapshot",
-  "description": "Conjuntos de datos de diagnóstico y reparación: 15.886 códigos de falla OBD-II verificados de 32 marcas de vehículos asignados a 56.561 procedimientos de reparación clasificados, más un nivel Heavy Duty de 4.212 pares de fallo SPN/FMI SAE J1939 con 16.998 reparaciones clasificadas.",
+  "description": "Conjuntos de datos de diagnóstico y reparación: 15.886 códigos de avería OBD-II verificados de 32 marcas de vehículos asignados a 56.561 procedimientos de reparación creados por el equipo, más un nivel Heavy Duty con 4.212 pares de falla SPN/FMI SAE J1939 y 16.998 reparaciones creadas por el equipo.",
   "image": "https://mechanicdb.dataengineered.io/assets/kaggle-cover.png",
   "brand": {
     "@type": "Brand",
@@ -839,7 +839,7 @@
 </div>
 <p class="explain" id="roExplain"></p>
 <div id="roFixes"></div>
-<div class="readout-foot">ordenado por probabilidad · coste de piezas en USD · mano de obra en horas de taller — se muestran 3 de las reparaciones clasificadas del código</div>
+<div class="readout-foot">orden de procedimientos creado por el equipo · coste de piezas en USD · mano de obra en horas de taller — se muestran 3 procedimientos; el orden no es una probabilidad medida</div>
 </div>
 </div>
 <div aria-label="Categorías de diagnóstico" class="dir-links">
@@ -878,7 +878,7 @@
 <div class="wrap">
 <span class="stamp">Sec. 01 · Qué incluye</span>
 <h2 class="sec-title">Cuatro tablas relacionales, una cadena de claves de unión</h2>
-<p class="sec-lede">Normalizado para bases de datos, precombinado para notebooks. Cada código incluye 3–5 reparaciones clasificadas según su probabilidad real; cada reparación se asocia a piezas de recambio que se pueden comprar.</p>
+<p class="sec-lede">Normalizado para bases de datos, precombinado para notebooks. Cada código incluye 3–5 procedimientos en un orden de consideración creado por el equipo; la ejecución depende de los requisitos previos y de los hallazgos del diagnóstico. Cada procedimiento se vincula a piezas de recambio adquiribles.</p>
 <div class="schema-strip">
 <div class="table-card">
 <h3 translate="no">dtc_codes</h3>
@@ -889,7 +889,7 @@
 <div class="table-card">
 <h3 translate="no">diagnostic_fixes</h3>
 <div class="rows">56.561 filas</div>
-<p>Procedimientos de reparación clasificados con nivel de dificultad, rango de costes de piezas, horas de mano de obra e instrucciones paso a paso.</p>
+<p>Procedimientos de reparación creados por el equipo con orden de consideración, nivel de dificultad, intervalo de coste de piezas, horas de mano de obra e instrucciones paso a paso.</p>
 <ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> mín./máx. USD</li></ul>
 </div>
 <div class="table-card">
@@ -916,7 +916,7 @@
 <table>
 <tr><th scope="row">Cobertura</th><td><b>9.249</b> códigos estándar SAE — rangos genéricos P0, P2, P34–P39, C0, B0, U0, U3. Tren motriz, chasis, carrocería y red, incluidos híbridos/eléctricos (P0Axx–P0Exx) y postratamiento diésel.</td></tr>
 <tr><th scope="row">Cobertura OEM</th><td><b>6.637</b> códigos específicos de fabricante en <b>32</b> marcas — rangos P1, P30–P33, C1/C2, B1/B2, U1/U2 controlados por el fabricante. La cobertura es desigual y más sólida en las marcas del mercado estadounidense; el desglose completo por marca está más abajo. <b>15.886</b> códigos en total.</td></tr>
-<tr><th scope="row">Información de reparación</th><td><b>647</b> familias de fallas redactadas → <b>56.561</b> reparaciones clasificadas → <b>75.055</b> correspondencias de piezas. Niveles de dificultad: Easy DIY / Moderate DIY / Professional Required.</td></tr>
+<tr><th scope="row">Información de reparación</th><td><b>647</b> familias de fallas creadas por el equipo → <b>56.561</b> procedimientos ordenados → <b>75.055</b> correspondencias de piezas. <code>probability_rank</code> es el nombre compatible de un campo heredado para el orden de consideración, no para probabilidad, éxito, gravedad ni coste. Niveles de dificultad: bricolaje fácil / bricolaje moderado / requiere profesional. <a href="/ordering_metadata.json">Contexto del orden</a>.</td></tr>
 <tr><th scope="row">Formatos de entrega</th><td>CSV delimitado por barras verticales (UTF-8 BOM, compatible con Excel) · Apache Parquet, Snappy: <b>92,0%</b> más pequeño según medición · base de datos SQLite con las cuatro tablas.</td></tr>
 <tr><th scope="row">Controles de calidad</th><td>Compilación determinista validada por pruebas: integridad referencial, comprobaciones de unicidad contra plantillas y un filtro que impide códigos inventados; cada código publicado se remonta a la fuente versionada.</td></tr>
 <tr><th scope="row">Marco de seguridad</th><td>Los procedimientos de alta tensión empiezan con bloqueo y verificación de ausencia de tensión; el trabajo en el SRS exige desconectar la batería y esperar la descarga del condensador. Los pasos peligrosos nunca se clasifican como DIY.</td></tr>
@@ -1066,7 +1066,7 @@
 </div>
 <div class="faq-item">
 <h3>SAE J2012DA y licencias de normas</h3>
-<p>MechanicDB no es una copia de SAE J2012 ni de su Digital Annex (J2012DA) y no puede revenderse como tal: estos se licencian por puesto y su redistribución está prohibida. Si necesitas el documento normativo o sus Failure Type Bytes, las vías legítimas de menor coste son la suscripción a SAE Digital Library de la biblioteca de ingeniería de una universidad, el acceso temporal o por suscripción a través de Techstreet, ANSI Webstore o Accuris, el descuento para miembros de SAE, o la norma armonizada ISO 15031-6 de un organismo nacional de normalización. Si lo que realmente necesitas es la consulta factual de código a significado y no la norma en sí, eso es lo que vende MechanicDB para $49: 9.249 códigos del rango SAE (6.637 códigos específicos de fabricante en el nivel $149), con descripciones, causas probables clasificadas y procedimientos de reparación, recopilado a partir de una fuente pública con licencia MIT sin reproducir texto de ningún documento SAE. No incluye Failure Type Bytes y no es una referencia normativa citable.</p>
+<p>MechanicDB no es una copia de SAE J2012 ni de su Anexo Digital (J2012DA) y no puede revenderse como tal: estos productos se licencian por usuario y su redistribución está prohibida. Si necesita el documento normativo o sus bytes de tipo de falla, las vías legítimas de menor coste son la suscripción de una biblioteca universitaria de ingeniería a SAE Digital Library, el acceso temporal o por suscripción mediante Techstreet, ANSI Webstore o Accuris, el descuento para miembros de SAE o la norma ISO 15031-6 armonizada de un organismo nacional de normalización. Si lo que necesita es la correspondencia factual entre códigos y significados, MechanicDB vende precisamente eso para $49: 9.249 códigos del rango SAE (6.637 códigos específicos de fabricante en el nivel $149), con descripciones y procedimientos de reparación creados por el equipo en orden de consideración, recopilados de una fuente pública con licencia MIT sin reproducir texto de documentos SAE. El orden no es una probabilidad medida de la causa. No contiene bytes de tipo de falla ni es una referencia normativa citable.</p>
 </div>
 <!-- HD-FAQ:START -->
 <div class="faq-item">

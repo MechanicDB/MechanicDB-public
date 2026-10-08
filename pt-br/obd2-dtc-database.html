@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Download do banco de dados de DTCs OBD-II — CSV, Parquet, SQLite</title>
-<meta content="15.886 códigos de falha OBD-II (9.249 SAE + 6.637 OEM) vinculados a 56.561 reparos classificados. Baixe em CSV, Parquet ou SQLite. Amostra gratuita de 90 códigos." name="description"/>
+<meta content="15.886 códigos de falha OBD-II (9.249 SAE + 6.637 OEM) associados a 56.561 procedimentos de reparo elaborados pela equipe. Baixe em CSV, Parquet ou SQLite. Amostra grátis com 90 códigos." name="description"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://mechanicdb.dataengineered.io/pt-br/obd2-dtc-database" rel="canonical"/>
 <!-- i18n:alternates -->
@@ -25,7 +25,7 @@
 <script src="/i18n/i18n.js?v=5" defer></script>
 <!-- /i18n:alternates -->
 <meta content="Download do banco de dados de DTCs OBD-II — CSV, Parquet, SQLite" property="og:title"/>
-<meta content="15.886 códigos de falha OBD-II (9.249 SAE + 6.637 OEM) vinculados a 56.561 reparos classificados. Baixe em CSV, Parquet ou SQLite. Amostra gratuita de 90 códigos." property="og:description"/>
+<meta content="15.886 códigos de falha OBD-II (9.249 SAE + 6.637 OEM) associados a 56.561 procedimentos de reparo elaborados pela equipe. Baixe em CSV, Parquet ou SQLite. Amostra grátis com 90 códigos." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://mechanicdb.dataengineered.io/pt-br/obd2-dtc-database" property="og:url"/>
 <script type="application/ld+json">
@@ -33,7 +33,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "MechanicDB: banco de dados de DTCs OBD-II",
-  "description": "15.886 códigos de falha OBD-II (9.249 SAE + 6.637 OEM) vinculados a 56.561 reparos classificados. Baixe em CSV, Parquet ou SQLite. Amostra gratuita de 90 códigos.",
+  "description": "15.886 códigos de falha OBD-II (9.249 SAE + 6.637 OEM) associados a 56.561 procedimentos de reparo elaborados pela equipe. Baixe em CSV, Parquet ou SQLite. Amostra grátis com 90 códigos.",
   "url": "https://mechanicdb.dataengineered.io/pt-br/obd2-dtc-database",
   "creator": {
     "@type": "Organization",
@@ -81,7 +81,7 @@
     "system category",
     "fault family",
     "repair procedure",
-    "probability rank",
+    "authored procedure consideration order",
     "difficulty tier",
     "estimated parts cost",
     "labor hours",
@@ -470,7 +470,7 @@
 <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
 <tbody>
 <tr><td style="padding:9px 0"><b>15.886</b> códigos de falha</td><td style="opacity:.75">9.249 padrão SAE (P0, P2, P34–P39, C0, B0, U0, U3) + 6.637 específicos de fabricante em 32 marcas</td></tr>
-<tr><td style="padding:9px 0"><b>56.561</b> reparos classificados</td><td style="opacity:.75">3–5 por código, ordenados pela probabilidade no mundo real, com nível de dificuldade, faixa de custo de peças e horas de mão de obra</td></tr>
+<tr><td style="padding:9px 0"><b>56.561</b> procedimentos ordenados</td><td style="opacity:.75">3–5 por código em uma ordem de consideração elaborada pela equipe e condicionada a pré-requisitos e achados, com nível de dificuldade, faixa de custo de peças e horas de mão de obra</td></tr>
 <tr><td style="padding:9px 0"><b>75.055</b> mapeamentos de peças</td><td style="opacity:.75">Nomes de peças de reposição por reparo, com URLs de busca em catálogos</td></tr>
 <tr><td style="padding:9px 0"><b>647</b> famílias de falhas</td><td style="opacity:.75">Agrupamentos redigidos que tornam o corpus navegável, em vez de uma lista plana de códigos</td></tr>
 </tbody>
@@ -488,7 +488,7 @@
 <th style="padding:0 12px 8px 0">Tabela</th><th style="padding:0 12px 8px 0">Linhas</th><th style="padding:0 0 8px">Conteúdo</th></tr></thead>
 <tbody>
 <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15.886</td><td>Definição, categoria do sistema, indicador OEM e marca, família de falhas, explicação técnica</td></tr>
-<tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56.561</td><td>Procedimentos classificados com nível de dificuldade, custo mín./máx. de peças, horas de mão de obra e etapas</td></tr>
+<tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56.561</td><td>Procedimentos elaborados pela equipe com ordem de consideração, nível de dificuldade, custo mínimo/máximo de peças, horas de mão de obra e etapas</td></tr>
 <tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75.055</td><td>Nomes de peças de reposição por reparo, com URLs de busca em catálogos</td></tr>
 <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56.561</td><td>A visão analítica plana — todas as 16 colunas, um único <code>read_csv</code> / <code>read_parquet</code></td></tr>
 </tbody>
@@ -497,6 +497,9 @@
 <p style="opacity:.7;font-size:.88rem;margin-top:10px">
     Cadeia de junção: <code>dtc_codes.code_id</code> → <code>diagnostic_fixes.code_id</code> → <code>replacement_parts.fix_id</code>
 </p>
+<p style="max-width:66ch;opacity:.85">
+<code>probability_rank</code> é o nome legado compatível da ordem de consideração de procedimentos elaborada pela equipe dentro de um código (<code>1</code> = primeiro). Ele não mede a probabilidade da causa, o sucesso do reparo, a gravidade, a urgência nem o custo mínimo. Siga os pré-requisitos e os achados de diagnóstico de cada procedimento. Consulte os <a href="/ordering_metadata.json">metadados de ordenação</a>.
+  </p>
 <h2 style="margin-top:44px">Cobertura, com honestidade</h2>
 <p style="max-width:66ch;opacity:.85">
     Os 9.249 códigos universais SAE se aplicam a todos os veículos, independentemente da marca. A cobertura OEM <b>não é uniforme</b>: é mais forte em marcas do mercado norte-americano, e algumas marcas têm poucos códigos. O detalhamento completo por marca é publicado na <a href="/pt-br/#coverage">página inicial</a> para que você verifique as marcas que lhe interessam <em>antes</em> de comprar, e não depois. Cada código publicado remonta a uma fonte versionada; uma barreira no build rejeita códigos inventados.

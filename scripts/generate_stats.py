@@ -134,7 +134,7 @@ def compute(db_path):
     def cost_summary(label, sub):
         return dict(group=label, fixes=len(sub), median_min=med([r[0] for r in sub]), median_max=med([r[1] for r in sub]),
                     mean_max=round(statistics.mean([r[1] for r in sub]), 1) if sub else 0, median_labor=med([r[2] for r in sub]))
-    s["cost_groups"] = [cost_summary("All fixes", rows), cost_summary("Most probable cause (rank 1)", [r for r in rows if r[3] == 1])]
+    s["cost_groups"] = [cost_summary("All procedures", rows), cost_summary("First-listed procedures (rank 1)", [r for r in rows if r[3] == 1])]
     s["cost_groups"] += [cost_summary(d, [r for r in rows if r[4] == d]) for d in DIFFICULTY]
     bys = {}
     for sc, mn, mx, lh in q("select c.system_category, f.est_parts_cost_min_usd, f.est_parts_cost_max_usd, f.est_labor_hours from diagnostic_fixes f join dtc_codes c using(code_id)"):
@@ -261,33 +261,33 @@ def build_page(s, charts):
     sections.append(section(
         site, "families", "Which fault families hold the most codes",
         f"<strong>{data(tf[0][0])}</strong> is the largest of the {n(s['families'])} fault families with {n(tf[0][1])} codes ({tf[0][2]}%), followed by {data(tf[1][0])} ({n(tf[1][1])}) and {data(tf[2][0])} ({n(tf[2][1])}). "
-        f"Every code carries {fpc[0][0]} to {fpc[-1][0]} ranked fixes ({', '.join(f'{n(c)} codes with {k}' for k, c, p in fpc)}); the most frequent most-probable first step, {data(fs[0][0])}, is ranked first for {n(fs[0][1])} codes.",
+        f"Every code carries {fpc[0][0]} to {fpc[-1][0]} authored procedures ({', '.join(f'{n(c)} codes with {k}' for k, c, p in fpc)}); the most frequent first-listed procedure, {data(fs[0][0])}, appears first for {n(fs[0][1])} codes.",
         figure(site, "fault-families", charts["fault-families"], "Fault families with the most codes", f"top 15 of {n(s['families'])} families"),
         table(["Fault family", "Codes", "Share", "System"], [(f, n(c), f"{p}%", sc_) for f, c, p, sc_ in tf], {1, 2})
-        + "<h3>Most frequent most-probable first step</h3>"
-        + table(["Rank-1 fix title", "Codes where it is ranked first"], [(t, n(c)) for t, c in fs], {1}),
+        + "<h3>Most frequent first-listed procedure</h3>"
+        + table(["First-listed procedure title", "Codes where it appears first"], [(t, n(c)) for t, c in fs], {1}),
         "A fault family groups codes that share a failure mechanism and repair set; every code belongs to exactly one family. "
-        "Rank 1 is the most probable root cause in the family's ranked repair set, so a family's first step is ranked first for every code in that family."))
+        "Rank 1 is the first item in the family's authored consideration order, so a family's first procedure appears first for every code in that family. Execution depends on prerequisites and findings; rank is not measured cause likelihood or outcome."))
 
     # 5. difficulty
     da, d1 = s["difficulty_all"], s["difficulty_rank1"]
-    charts["difficulty-all-fixes"] = svg_hbar(site, "DIY difficulty of all ranked fixes", f"{n(s['fixes'])} ranked repair procedures",
+    charts["difficulty-all-fixes"] = svg_hbar(site, "DIY difficulty of all repair procedures", f"{n(s['fixes'])} authored repair procedures",
                                               [(d, c, f"{n(c)} ({p}%)") for d, c, p in da], src_note, label_w=190)
-    charts["difficulty-first-fix"] = svg_hbar(site, "DIY difficulty of the most probable fix per code", f"{n(s['codes'])} rank-1 fixes",
+    charts["difficulty-first-fix"] = svg_hbar(site, "DIY difficulty of the first-listed procedure per code", f"{n(s['codes'])} first-listed procedures",
                                               [(d, c, f"{n(c)} ({p}%)") for d, c, p in d1], src_note, label_w=190)
     easy1 = next(p for d, c, p in d1 if d == "Easy DIY")
     pro1 = next(p for d, c, p in d1 if d == "Professional Required")
     dbs = s["difficulty_by_system"]
     sections.append(section(
         site, "difficulty", "How much of the repair work is DIY",
-        f"Across all {n(s['fixes'])} ranked fixes, <strong>{da[0][2]}%</strong> are {data('Easy DIY')}, {da[1][2]}% {data('Moderate DIY')} and {da[2][2]}% {data('Professional Required')}. "
-        f"Looking only at the most probable cause of each code, <strong>{easy1}%</strong> of the {n(s['codes'])} rank-1 fixes are Easy DIY and {pro1}% need a professional. "
-        f"{data('Body')} codes have the highest professional share among rank-1 fixes; see the table.",
-        figure(site, "difficulty-all-fixes", charts["difficulty-all-fixes"], "DIY difficulty of all ranked fixes", f"{n(s['fixes'])} fixes")
-        + figure(site, "difficulty-first-fix", charts["difficulty-first-fix"], "DIY difficulty of the most probable fix per code", f"{n(s['codes'])} rank-1 fixes"),
+        f"Across all {n(s['fixes'])} repair procedures, <strong>{da[0][2]}%</strong> are {data('Easy DIY')}, {da[1][2]}% {data('Moderate DIY')} and {da[2][2]}% {data('Professional Required')}. "
+        f"Looking only at the first-listed procedure of each code, <strong>{easy1}%</strong> of the {n(s['codes'])} first-listed procedures are Easy DIY and {pro1}% need a professional. "
+        f"{data('Body')} codes have the highest professional share among first-listed procedures; see the table.",
+        figure(site, "difficulty-all-fixes", charts["difficulty-all-fixes"], "DIY difficulty of all repair procedures", f"{n(s['fixes'])} procedures")
+        + figure(site, "difficulty-first-fix", charts["difficulty-first-fix"], "DIY difficulty of the first-listed procedure per code", f"{n(s['codes'])} first-listed procedures"),
         table(["System", "Fixes"] + DIFFICULTY, [(sc_, n(t)) + tuple(f"{n(d[k])} ({pct(d[k], t)}%)" for k in DIFFICULTY) for sc_, d, t in dbs], {1, 2, 3, 4}),
         "difficulty_level is assigned per fix by the editorial pipeline: Easy DIY (basic hand tools, no lifting or programming), Moderate DIY (specialty tools or partial disassembly), "
-        "Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The rank-1 fix is the first item of each code's probability-ranked repair set."))
+        "Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The rank-1 procedure is the first item of each code's authored consideration order, not a measured probability."))
 
     # 6. cost
     cg, cb = s["cost_groups"], s["cost_buckets"]
@@ -297,7 +297,7 @@ def build_page(s, charts):
     sections.append(section(
         site, "repair-cost", "What the repairs are estimated to cost",
         f"Every one of the {n(s['fixes'])} fixes carries a parts-cost range ({pct(s['fixes_with_cost'], s['fixes'])}% coverage). The median range is <strong>{usd(allc['median_min'])} to {usd(allc['median_max'])}</strong> in parts; "
-        f"for the most probable fix per code it is {usd(r1['median_min'])} to {usd(r1['median_max'])}. "
+        f"among first-listed procedures it is {usd(r1['median_min'])} to {usd(r1['median_max'])}. "
         f"{cb[0][2]}% of fixes top out under $50 and {pct(s['cost_1000plus'], s['fixes'])}% ({n(s['cost_1000plus'])}) at $1,000 or more; the highest upper estimate is {usd(s['cost_max'])} ({data(s['costliest'][0][0])}).",
         figure(site, "parts-cost-ranges", charts["parts-cost-ranges"], "Upper parts-cost estimate per fix", f"{n(s['fixes'])} fixes"),
         table(["Group", "Fixes", "Median lower estimate", "Median upper estimate", "Mean upper estimate", "Median labor"],
@@ -343,10 +343,10 @@ def build_page(s, charts):
                     ("families", "Fault families and first steps"), ("difficulty", "DIY difficulty"), ("repair-cost", "Repair cost estimates"),
                     ("labor", "Labor hours"), ("parts", "Parts and supplies"), ("method", "Method, reuse and citation")])
     tile_html = tiles([("Fault codes", n(s["codes"])), ("SAE standard", n(s["sae_codes"])), ("Manufacturer-specific", n(s["oem_codes"])), ("Makes", n(s["makes"])),
-                       ("Ranked fixes", n(s["fixes"])), ("Fault families", n(s["families"])), ("Parts mappings", n(s["parts"])), ("Build", snap)], date_labels=("Build",))
+                       ("Repair procedures", n(s["fixes"])), ("Fault families", n(s["families"])), ("Parts mappings", n(s["parts"])), ("Build", snap)], date_labels=("Build",))
     title_tag = f"OBD-II Fault Code Statistics {snap[:4]} — Codes by System, Repair Cost, DIY Share | MechanicDB"
-    desc = (f"OBD-II diagnostic trouble codes in numbers: {n(s['codes'])} codes across {n(s['makes'])} makes and {n(s['fixes'])} ranked fixes. Codes by vehicle system and make, "
-            f"code strings shared across makes, fault families, DIY difficulty ({easy1}% of most-probable fixes are Easy DIY), parts-cost and labor estimates, most-mapped parts. Free to cite and embed.")
+    desc = (f"OBD-II diagnostic trouble codes in numbers: {n(s['codes'])} codes across {n(s['makes'])} makes and {n(s['fixes'])} authored repair procedures. Codes by vehicle system and make, "
+            f"code strings shared across makes, fault families, DIY difficulty ({easy1}% of first-listed procedures are Easy DIY), parts-cost and labor estimates, most-mapped parts. Free to cite and embed.")
     ld = article_ld(site, "OBD-II fault codes in numbers: statistics from the MechanicDB catalogue", desc, FIRST_PUBLISHED,
                     f"{site.base_url}/assets/kaggle-cover.png", ["OBD-II", "diagnostic trouble codes", "car repair", "DIY", "automotive diagnostics"])
 
@@ -388,7 +388,7 @@ def build_page(s, charts):
   <p class="crumb"><a href="/">Home</a> / <span>Statistics</span></p>
   <p class="eyebrow">Catalogue statistics · build {esc(snap)}</p>
   <h1>OBD-II fault codes in numbers</h1>
-  <p class="lede">Aggregate statistics computed from the full MechanicDB dataset: {n(s['codes'])} diagnostic trouble codes ({n(s['sae_codes'])} SAE-standard, {n(s['oem_codes'])} manufacturer-specific across {n(s['makes'])} makes) mapped to {n(s['fixes'])} probability-ranked repair procedures with difficulty, parts-cost and labor estimates. These figures describe the catalogue, not how often codes are set on the road. Every figure states its denominator and is free to cite, quote and embed with a link to this page.</p>
+  <p class="lede">Aggregate statistics computed from the full MechanicDB dataset: {n(s['codes'])} diagnostic trouble codes ({n(s['sae_codes'])} SAE-standard, {n(s['oem_codes'])} manufacturer-specific across {n(s['makes'])} makes) mapped to {n(s['fixes'])} authored repair procedures with difficulty, parts-cost and labor estimates. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.</p>
   <ul class="tiles">{tile_html}</ul>
   <nav class="toc" aria-label="Contents"><strong>On this page</strong><ol>{contents}</ol></nav>
 
@@ -397,7 +397,7 @@ def build_page(s, charts):
   <section class="stat" id="method">
     <h2>Method, reuse and citation</h2>
     <ul class="method">
-      <li><strong>Source.</strong> The full MechanicDB build of {snap}: {n(s['codes'])} code definitions, {n(s['fixes'])} ranked fixes and {n(s['parts'])} part mappings in {n(s['families'])} hand-authored fault families. Code definitions originate in SAE J2012 / ISO 15031-6 via an MIT-licensed upstream compilation; the repair content is original editorial material from a deterministic, test-gated pipeline. See <a href="/SOURCES.md">Sources</a> and the <a href="/DATA_DICTIONARY.md">data dictionary</a>.</li>
+      <li><strong>Source.</strong> The full MechanicDB build of {snap}: {n(s['codes'])} code definitions, {n(s['fixes'])} authored procedures and {n(s['parts'])} part mappings in {n(s['families'])} hand-authored fault families. Code definitions originate in SAE J2012 / ISO 15031-6 via an MIT-licensed upstream compilation; the repair content is original editorial material from a deterministic, test-gated pipeline. Procedure order is conditional on prerequisites and findings and is not measured likelihood, success, severity, urgency or minimum cost; see <a href="/ordering_metadata.json">ordering metadata</a>, <a href="/SOURCES.md">Sources</a> and the <a href="/DATA_DICTIONARY.md">data dictionary</a>.</li>
       <li><strong>Catalogue, not incidence.</strong> MechanicDB records what each code means and how it is repaired. No figure on this page measures how often a code appears on real vehicles; "most common" here always means most common within the catalogue, and each section says which denominator it uses.</li>
       <li><strong>Estimates are estimates.</strong> Parts costs (USD) and labor hours are the dataset's editorial values at build time, useful for comparison between fixes, not quotes. Difficulty is an editorial tier. Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.</li>
       <li><strong>Refresh.</strong> MechanicDB is curated; this page and its charts are regenerated with each new build, so figures move. Cite the build date.</li>
@@ -409,7 +409,7 @@ def build_page(s, charts):
 
   <div class="cta-inline">
     <h3 style="margin:0">Need the code-level records behind these numbers?</h3>
-    <p>Every code with its ranked fixes, difficulty, parts-cost range, labor hours, step-by-step instructions and part mappings, as CSV, Parquet and SQLite.</p>
+    <p>Every code with its authored procedures, consideration order, difficulty, parts-cost range, labor hours, step-by-step instructions and part mappings, as CSV, Parquet and SQLite.</p>
     <a class="btn-amber" href="/#licensing">License the dataset · from $49</a>
   </div>
 </main>

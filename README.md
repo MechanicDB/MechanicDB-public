@@ -21,7 +21,7 @@
 
 ---
 
-**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to ranked repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
+**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to authored repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
 
 This repository holds the **free, open developer samples**: 90 curated OBD-II codes (75 SAE + 15 OEM) at the root and a 100-fault Heavy Duty (J1939) sample in [`samples/heavyduty/`](samples/heavyduty/), each in the same schema as its paid tier, so you can prototype joins, pipelines, and apps before licensing.
 
@@ -50,7 +50,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 
 ## How the content is built (the honest part)
 
-- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 repair procedures ranked by likelihood, with 1–3 parts per procedure. Rendered explanations are unique per code — an anti-template test gate enforces it.
+- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order, with 1–3 parts per procedure. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
 - **Costs and labor are editorial estimates** for typical US aftermarket parts and independent-shop labor — not quotes, not scraped prices.
 - **OEM rows are per-marque, exactly as sourced.** Makes that share engineering platforms (GM's seven marques, Ford/Mercury/Lincoln, Honda/Acura, …) legitimately share many definitions; rows are kept per marque so `oem_make = 'Buick'` returns complete results. Disclosed in detail in [SOURCES.md](SOURCES.md).
 - **Make-level, not model/year-level.** OEM coverage is per manufacturer; the dataset does not claim model- or model-year-specific applicability.

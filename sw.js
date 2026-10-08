@@ -14,13 +14,15 @@
     - redirected responses are never written to or served from the cache.
 */
 
-const CACHE_NAME = 'mechanicdb-public-cache-v2026.09.1';
+const CACHE_NAME = 'mechanicdb-public-cache-v2026.10.1';
 const CORE_ASSETS = [
   '/',
   '/site.webmanifest',
   '/dtc_codes.csv',
   '/diagnostic_fixes.csv',
   '/replacement_parts.csv',
+  '/ordering_metadata.json',
+  '/samples/heavyduty/ordering_metadata.json',
   '/landing/powertrain',
   '/landing/chassis',
   '/landing/body',

@@ -8,13 +8,17 @@ here focus on **data quality, docs, and examples**.
 ## Ways to help
 
 ### 🐛 Report a data issue
-Spotted a wrong code definition, fix ranking, cost range, or repair step in the
+Spotted a wrong code definition, procedure ordering, cost range, or repair step in the
 sample? Open an issue with:
 
 - the `dtc_code` (and `oem_make` if it's a manufacturer-specific row),
 - what's wrong and what it should be,
 - ideally a reference (service-manual excerpt, manufacturer TSB, or standard
   diagnostic practice) so we can re-verify.
+
+An ordering report concerns the authored sequence for considering procedures,
+not a claim about measured cause probability. Existing ordering context is in
+[`ordering_metadata.json`](ordering_metadata.json).
 
 **Safety-related errors are the highest priority** — if a repair step could be
 dangerous as written (especially anything touching high-voltage hybrid/EV
