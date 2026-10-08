@@ -124,3 +124,14 @@ Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTIN
 ## Also on Kaggle & Hugging Face
 
 The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Repair Database](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)** (with a [starter notebook](https://www.kaggle.com/code/dataengineered/decode-your-check-engine-light-with-mechanicdb)) — and on Hugging Face as **[Ichlibitiche/mechanicdb-obd2-repair-sample](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)** (4 parquet configs, loadable with `datasets`).
+
+## Incoming SQLite enforcement (I05)
+
+The locally prepared schema version 1 preserves every existing identifier, value,
+table and column, including Standard's all-TEXT SQLite profile. It adds keys,
+constraints and lookup indexes, with HD's conditional SPN relation enforced by
+four triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
+transactions; joined tables remain materialized snapshots. See
+[the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-1)
+for exact keys and runnable queries. I01's `probability_rank` meaning and ordering
+metadata are unchanged. This incoming change has not been published.

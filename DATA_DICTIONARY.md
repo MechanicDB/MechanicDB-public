@@ -168,7 +168,7 @@ One row per extracted OEM SPN+FMI fault pair.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
-| `fault_id` | Integer (PK) | Primary key, assigned after sorting rows by (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`). | `280` |
+| `fault_id` | Integer (PK) | Primary key, assigned after sorting rows by (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`, `source_id`). | `280` |
 | `spn` | Integer (FK, with `oem_make` below, → `j1939_spn`) | Join to `j1939_spn` on `spn` plus `oem_make` when `spn >= 516096` (this fault's own OEM row, see 6.2), and on `spn` with an empty `oem_make` below `516096`; joining on `spn` alone repeats a fault once per OEM that uses an OEM-range SPN. | `110` |
 | `fmi` | Integer (FK → `j1939_fmi.fmi`) | | `3` |
 | `oem_make` | String | One of `Eaton`, `WABCO`, `Bendix`, `John Deere`, `Navistar`, `Cummins`, `Caterpillar`, `PSI`, `Perkins`, `Yanmar`. | `Caterpillar` |
@@ -249,3 +249,94 @@ rate of causes or successful repairs. The generated class-kind mapping and tie/f
 [`samples/heavyduty/ordering_metadata.json`](samples/heavyduty/ordering_metadata.json). Every
 fault gets at least one fix (the family default), so — as with the OBD-II tiers — fixes exist for
 100% of faults.
+
+## 7. SQLite enforcement — schema version 1
+
+This contract applies to the incoming constrained snapshots (`PRAGMA user_version = 1`).
+It describes the local I05 implementation; publication is a separate release action.
+The four OBD-II and six Heavy Duty tables, column order, identifiers and values are
+unchanged. Standard keeps **all columns TEXT**, including IDs, rank and estimates;
+OEM Complete and Heavy Duty retain INTEGER/REAL storage for numeric fields.
+CSV/Parquet contracts and `ordering_metadata.json` remain unchanged.
+
+| Table | Enforced key and references |
+| :--- | :--- |
+| OBD `dtc_codes` | PK `code_id`; UNIQUE `(dtc_code, oem_make)`. SAE uses make `''`; OEM requires a make. A DTC string alone is not a globally unique OEM identifier. |
+| OBD `diagnostic_fixes` | PK `fix_id`; FK `code_id`; UNIQUE `(code_id, probability_rank)` and `(fix_id, code_id)`. |
+| Both `replacement_parts` | PK `part_id`; FK `fix_id`. Multiple parts per fix and HD fixes without parts remain valid. |
+| OBD `dtc_fixes_joined` | PK `fix_id`; composite FK `(fix_id, code_id)`; UNIQUE `(code_id, probability_rank)`. |
+| HD `j1939_fmi` | PK `fmi` (0–31); reserved flag agrees with FMI 22–30. |
+| HD `j1939_spn` | Composite PK `(spn, oem_make)`; SPN 1–524287; source_count positive; proprietary flag agrees with SPN >= 520192. |
+| HD `j1939_faults` | PK `fault_id`; FK `fmi`; UNIQUE `(spn, fmi, oem_make, controller, oem_code, source_id)`. |
+| HD `diagnostic_fixes` | PK `fix_id`; FK `fault_id`; UNIQUE `(fault_id, probability_rank)` and `(fix_id, fault_id)`. |
+| HD `j1939_fixes_joined` | PK `fix_id`; composite FK `(fix_id, fault_id)`; UNIQUE `(fault_id, probability_rank)`. |
+
+HD's SPN relation is **trigger-enforced**, with four guards covering fault
+INSERT/UPDATE and SPN DELETE/key UPDATE. Below **516096**, a fault resolves to
+`(spn, '')`; at/above that boundary it resolves to `(spn, fault.oem_make)`.
+This naming boundary differs from the proprietary flag boundary **520192**.
+There is no direct `(spn, oem_make)` fault foreign key. SPN/controller/OEM code
+pairs may repeat across makes, controllers and sources. Empty OEM codes,
+unknown controllers `''`, neutral SPN makes, optional page/link values and
+zero-cost HD procedures retain their existing meaning.
+
+Required IDs, references and numeric fields are NOT NULL. CHECKs reject
+malformed DTCs, noninteger/negative ranks, invalid flags/difficulty values,
+nonfinite or negative estimates and reversed costs. OBD requires
+`0 < min < max` and labor 0.1–20 hours; HD allows `0 <= min <= max` and labor >= 0.
+Required names, descriptions and instructions are nonblank text. Optional
+source_page/search links may be NULL; existing empty strings are preserved.
+Standard checks numeric text without converting stored strings: integer
+fields use canonical decimal digits, estimates use finite unsigned decimal
+text (no exponent notation). These checks do not impose today's maximum rank.
+
+Foreign keys restrict parent deletion/key updates. Enable them **on every writing
+connection before a transaction**; the file cannot enable this connection setting
+for you. HD SPN triggers operate independently, and `foreign_key_check` does not
+audit their conditional relation.
+
+```python
+import sqlite3
+con = sqlite3.connect("mechanicdb.sqlite")
+con.execute("PRAGMA foreign_keys = ON")
+assert con.execute("PRAGMA foreign_keys").fetchone()[0] == 1
+rows = con.execute(
+    "SELECT probability_rank, fix_title FROM dtc_fixes_joined "
+    "WHERE dtc_code=? AND oem_make=? ORDER BY CAST(probability_rank AS INTEGER)",
+    ("P0420", ""),
+).fetchall()
+con.close()
+```
+
+The numeric cast gives correct rank ordering for Standard's TEXT profile, including
+ranks above 9. Its lookup index bounds the matching rows; the numeric sort can use
+a temporary B-tree. OEM/HD can order by probability_rank directly using numeric
+storage. Always use explicit ordering: added indexes may change unordered results.
+
+```sql
+-- HD discovery returns every scoped fault; select fault_id for its procedure order.
+SELECT fault_id, oem_make, controller, oem_code, source_id
+FROM j1939_faults WHERE spn=110 AND fmi=3;
+SELECT fix_title, probability_rank FROM diagnostic_fixes
+WHERE fault_id=280 ORDER BY probability_rank;
+SELECT part_name FROM replacement_parts WHERE fix_id=1205 ORDER BY part_id;
+```
+
+PK/UNIQUE indexes support code/make, scoped fault identity and parent/rank
+lookups. Additional indexes cover parts by fix_id, joined OBD code/make/rank,
+joined HD SPN/FMI/rank, HD FMI references, and OEM make/code browsing.
+There are no substring-search indexes or measured production latency guarantees.
+
+Joined tables remain **materialized snapshots**: the exporter and delivery gates
+verify their exact normalized projection. Their copied text and estimates do not
+automatically synchronize after customer edits. Replacing a table through
+`pandas.to_sql(if_exists="replace")` or CREATE TABLE AS SELECT loses this schema.
+Numeric INTEGER PRIMARY KEYs retain SQLite's normal NULL-autoallocation behavior
+for customer inserts; the exporter rejects missing IDs and always binds supplied IDs.
+
+Replace an older read-only snapshot after backing it up; importing into a mutable
+customer database needs deliberate DDL/migration and reports invalid custom rows.
+No customer data is automatically migrated or discarded. Schema introspection and
+invalid writes intentionally change; read values and CSV/Parquet interfaces remain
+compatible. Byte reproducibility is verified within a pinned runtime, not across
+different SQLite or ZIP compression versions.
