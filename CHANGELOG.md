@@ -5,6 +5,16 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Incoming SQLite enforcement (I05) — 2026-10-09
+
+- Documented schema version 1 keys, constraints, scoped OEM/HD identities and
+  HD's trigger-enforced conditional SPN relation for the locally prepared edition.
+- Added writing-connection and lookup examples, Standard TEXT compatibility,
+  numeric rank ordering and materialized joined-table limitations. Corrected the
+  existing HD fault-ID sort tuple to include source_id.
+- Samples, identifiers, data values and I01 ordering metadata are unchanged.
+  The new constrained commercial artifacts have not been published.
+
 ## Honest authored procedure ordering — 2026-10-08
 
 - `probability_rank` remains the supported field with the same values and schemas. It now has one
