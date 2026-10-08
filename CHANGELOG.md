@@ -5,6 +5,21 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
 > All counts are **measured from the shipped artifacts** by the build pipeline
 > (`build_report.json`) — never rounded up, never projected.
 
+## Honest authored procedure ordering — 2026-10-08
+
+- `probability_rank` remains the supported field with the same values and schemas. It now has one
+  explicit meaning: authored procedure consideration order within a code or fault. Execution depends
+  on each procedure's prerequisites and diagnostic findings; rank does not measure cause likelihood,
+  repair success, severity, urgency or minimum cost.
+- Added machine-readable `ordering_metadata.json` beside the OBD-II sample and
+  `samples/heavyduty/ordering_metadata.json` beside the Heavy Duty sample. The OBD-II basis is
+  `authored_family_order`; Heavy Duty uses `fmi_failure_class_then_authored_family_order`.
+- Corrected the homepage, buyer pages, code/family/system pages, structured data, statistics and SVG
+  captions, notebook copy, metadata, documentation and all four translation catalogs. Rebuilt all
+  four locale trees at 100% coverage; the i18n check reports 7,050 pages with no errors or warnings.
+- No diagnostic row, procedure order, ID, cost, part mapping, source, count, sample membership,
+  paywall boundary or default lookup shape changed.
+
 ## /stats/ in Spanish, German, French and Portuguese — 2026-10-03
 
 - The statistics page was English-only: its 100 text segments had no translation, so the i18n build never

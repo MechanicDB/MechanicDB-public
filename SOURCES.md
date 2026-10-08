@@ -43,6 +43,10 @@ are original content authored for MechanicDB. Cost and labor figures are
 editorial estimates for typical aftermarket parts and independent-shop labor
 in the US market; they are not quotes.
 
+`probability_rank` is the supported legacy name for authored procedure consideration
+order, not measured cause likelihood. See the applicable `ordering_metadata.json` sidecar;
+the Heavy Duty sample's class-kind mapping is generated from the validated FMI policy.
+
 ## Heavy Duty sample (J1939)
 
 - **Files:** `samples/heavyduty/` — 100 fault rows from the MechanicDB Heavy Duty tier with their

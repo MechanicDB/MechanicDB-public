@@ -1,0 +1,23 @@
+{
+  "metadata_version": 1,
+  "ordering_semantics_version": 1,
+  "product_scope": "obd2",
+  "order_field": "probability_rank",
+  "tables": [
+    "diagnostic_fixes",
+    "dtc_fixes_joined"
+  ],
+  "group_key": "code_id",
+  "direction": "ascending",
+  "first": 1,
+  "ranking_basis": "authored_family_order",
+  "basis_is_empirical": false,
+  "order_meaning": "Authored order for considering diagnostic inspection or repair procedures; execution depends on each procedure's prerequisites and diagnostic findings.",
+  "does_not_measure": [
+    "cause_likelihood",
+    "repair_success",
+    "severity",
+    "urgency",
+    "minimum_cost"
+  ]
+}

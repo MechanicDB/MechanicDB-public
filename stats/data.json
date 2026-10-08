@@ -1,7 +1,7 @@
 {
  "dataset": "MechanicDB",
  "page": "https://mechanicdb.dataengineered.io/stats/",
- "generated": "2026-09-18",
+ "generated": "2026-10-08",
  "build": "2026-07-13",
  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) - attribute with a link to the page",
  "note": "Catalogue statistics: nothing here measures how often a code is set on real vehicles. Costs and labor hours are editorial estimates, not quotes.",
@@ -528,7 +528,7 @@
   "fixes_with_range": 56561,
   "groups": [
    {
-    "group": "All fixes",
+    "group": "All procedures",
     "fixes": 56561,
     "median_min": 15.0,
     "median_max": 60.0,
@@ -536,7 +536,7 @@
     "median_labor": 0.8
    },
    {
-    "group": "Most probable cause (rank 1)",
+    "group": "First-listed procedures (rank 1)",
     "fixes": 15886,
     "median_min": 8.0,
     "median_max": 25.0,

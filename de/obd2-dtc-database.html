@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>OBD-II-DTC-Datenbank herunterladen — CSV, Parquet, SQLite</title>
-<meta content="15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM) mit 56.561 priorisierten Reparaturen. Download als CSV, Parquet oder SQLite. Kostenlose Beispieldaten (90 Codes)." name="description"/>
+<meta content="15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM), verknüpft mit 56.561 redaktionell erstellten Reparaturverfahren. Download als CSV, Parquet oder SQLite. Kostenlose Stichprobe mit 90 Codes." name="description"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://mechanicdb.dataengineered.io/de/obd2-dtc-database" rel="canonical"/>
 <!-- i18n:alternates -->
@@ -25,7 +25,7 @@
 <script src="/i18n/i18n.js?v=5" defer></script>
 <!-- /i18n:alternates -->
 <meta content="OBD-II-DTC-Datenbank herunterladen — CSV, Parquet, SQLite" property="og:title"/>
-<meta content="15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM) mit 56.561 priorisierten Reparaturen. Download als CSV, Parquet oder SQLite. Kostenlose Beispieldaten (90 Codes)." property="og:description"/>
+<meta content="15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM), verknüpft mit 56.561 redaktionell erstellten Reparaturverfahren. Download als CSV, Parquet oder SQLite. Kostenlose Stichprobe mit 90 Codes." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://mechanicdb.dataengineered.io/de/obd2-dtc-database" property="og:url"/>
 <script type="application/ld+json">
@@ -33,7 +33,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "MechanicDB OBD-II-DTC-Datenbank",
-  "description": "15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM) mit 56.561 priorisierten Reparaturen. Download als CSV, Parquet oder SQLite. Kostenlose Beispieldaten (90 Codes).",
+  "description": "15.886 OBD-II-Fehlercodes (9.249 SAE + 6.637 OEM), verknüpft mit 56.561 redaktionell erstellten Reparaturverfahren. Download als CSV, Parquet oder SQLite. Kostenlose Stichprobe mit 90 Codes.",
   "url": "https://mechanicdb.dataengineered.io/de/obd2-dtc-database",
   "creator": {
     "@type": "Organization",
@@ -81,7 +81,7 @@
     "system category",
     "fault family",
     "repair procedure",
-    "probability rank",
+    "authored procedure consideration order",
     "difficulty tier",
     "estimated parts cost",
     "labor hours",
@@ -470,7 +470,7 @@
 <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
 <tbody>
 <tr><td style="padding:9px 0"><b>15.886</b> Fehlercodes</td><td style="opacity:.75">9.249 nach SAE-Standard (P0, P2, P34–P39, C0, B0, U0, U3) + 6.637 herstellerspezifische aus 32 Marken</td></tr>
-<tr><td style="padding:9px 0"><b>56.561</b> priorisierte Reparaturen</td><td style="opacity:.75">3–5 pro Code, geordnet nach realer Wahrscheinlichkeit, mit Schwierigkeitsstufe, Teilekostenspanne und Arbeitsstunden</td></tr>
+<tr><td style="padding:9px 0"><b>56.561</b> geordnete Verfahren</td><td style="opacity:.75">3–5 je Code in redaktionell erstellter, von Voraussetzungen und Befunden abhängiger Prüfreihenfolge, mit Schwierigkeitsstufe, Teilekostenspanne und Arbeitsstunden</td></tr>
 <tr><td style="padding:9px 0"><b>75.055</b> Teilezuordnungen</td><td style="opacity:.75">Namen der Nachrüstteile je Reparatur, mit Katalogsuch-URLs</td></tr>
 <tr><td style="padding:9px 0"><b>647</b> Fehlerfamilien</td><td style="opacity:.75">Redaktionell erstellte Gruppierungen, die den Bestand navigierbar machen statt einer flachen Codeliste</td></tr>
 </tbody>
@@ -488,7 +488,7 @@
 <th style="padding:0 12px 8px 0">Tabelle</th><th style="padding:0 12px 8px 0">Zeilen</th><th style="padding:0 0 8px">Inhalt</th></tr></thead>
 <tbody>
 <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15.886</td><td>Definition, Systemkategorie, OEM-Kennzeichen und Marke, Fehlerfamilie, technische Erläuterung</td></tr>
-<tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56.561</td><td>Priorisierte Verfahren mit Schwierigkeitsstufe, Teilekosten Min./Max., Arbeitsstunden, Schritten</td></tr>
+<tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56.561</td><td>Redaktionell erstellte Verfahren mit Prüfreihenfolge, Schwierigkeitsstufe, minimalen/maximalen Teilekosten, Arbeitsstunden und Arbeitsschritten</td></tr>
 <tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75.055</td><td>Namen der Nachrüstteile je Reparatur, mit Katalogsuch-URLs</td></tr>
 <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56.561</td><td>Die flache Analyseansicht — alle 16 Spalten, ein einziges <code>read_csv</code> / <code>read_parquet</code></td></tr>
 </tbody>
@@ -497,6 +497,9 @@
 <p style="opacity:.7;font-size:.88rem;margin-top:10px">
     Join-Kette: <code>dtc_codes.code_id</code> → <code>diagnostic_fixes.code_id</code> → <code>replacement_parts.fix_id</code>
 </p>
+<p style="max-width:66ch;opacity:.85">
+<code>probability_rank</code> ist der unterstützte ältere Name für die redaktionell erstellte Prüfreihenfolge der Verfahren innerhalb eines Codes (<code>1</code> = zuerst). Das Feld misst weder Ursachenwahrscheinlichkeit noch Reparaturerfolg, Schweregrad, Dringlichkeit oder Mindestkosten. Beachten Sie die Voraussetzungen und Diagnosebefunde jedes Verfahrens. Siehe <a href="/ordering_metadata.json">Metadaten zur Reihenfolge</a>.
+  </p>
 <h2 style="margin-top:44px">Abdeckung, ehrlich angegeben</h2>
 <p style="max-width:66ch;opacity:.85">
     Die 9.249 SAE-universellen Codes gelten für jedes Fahrzeug, unabhängig von der Marke. Die OEM-Abdeckung ist <b>nicht gleichmäßig</b> — am stärksten bei Marken des US-Markts, einige Marken sind dünn besetzt. Die vollständige Aufschlüsselung nach Marke ist auf der <a href="/de/#coverage">Startseite</a> veröffentlicht, damit Sie die für Sie relevanten Marken <em>vor</em> dem Kauf prüfen können statt danach. Jeder veröffentlichte Code lässt sich auf eine eingecheckte Quelle zurückführen; eine Build-Sperre weist erfundene Codes zurück.

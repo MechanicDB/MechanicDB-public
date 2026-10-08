@@ -25,16 +25,16 @@ Contains definitions for both universal SAE-standard OBD-II trouble codes and ma
 
 ---
 
-## 2. `diagnostic_fixes` (Ranked Repair Procedures & Cost Matrix)
+## 2. `diagnostic_fixes` (Ordered Repair Procedures & Cost Matrix)
 
-Maps diagnostic trouble codes to actionable repair procedures, ranked by statistical likelihood and accompanied by aftermarket cost matrices.
+Maps diagnostic trouble codes to actionable inspection or repair procedures in authored consideration order, accompanied by aftermarket cost matrices. The companion [`ordering_metadata.json`](ordering_metadata.json) records the applicable machine-readable ordering basis.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
 | `fix_id` | Integer (PK) | Primary key unique identifier for the repair procedure. | `101` |
 | `code_id` | Integer (FK) | Foreign key referencing `dtc_codes.code_id`. | `1` |
 | `fix_title` | String | Actionable title of the recommended diagnostic inspection or repair procedure. | `Clean or Replace MAF Sensor` |
-| `probability_rank` | Integer | Statistical likelihood rank (`1` = most common root cause, `2` = secondary cause). | `1` |
+| `probability_rank` | Integer | Supported legacy-named positive ordinal giving the authored order for considering procedures within one code. Lower values appear earlier; `1` is first. Apply each procedure's prerequisites and diagnostic findings before acting. It does not measure cause likelihood, repair success, severity, urgency or minimum cost, and values are not comparable across codes. | `1` |
 | `difficulty_level` | String | Skill requirement rating (`Easy DIY`, `Moderate DIY`, `Professional Required`). | `Easy DIY` |
 | `est_parts_cost_min_usd` | Float | Estimated minimum aftermarket replacement parts cost in US dollars. | `15.00` |
 | `est_parts_cost_max_usd` | Float | Estimated maximum aftermarket replacement parts cost in US dollars. | `45.00` |
@@ -193,7 +193,7 @@ this tier — see 6.7/6.9 below.
 | `fix_id` | Integer (PK) | Primary key. | `101` |
 | `fault_id` | Integer (FK → `j1939_faults.fault_id`) | | `1` |
 | `fix_title` | String | Actionable title of the recommended inspection or repair. | `Inspect coolant temperature sensor connector` |
-| `probability_rank` | Integer | `1` = most likely fix for this fault, `2` = next, etc. Order is FMI-driven — see 6.9. | `1` |
+| `probability_rank` | Integer | Supported legacy-named positive ordinal giving procedure consideration order within this fault; `1` is first. Execution is conditional on prerequisites and findings. The authored FMI-class policy contributes to the order — see 6.9 — but the value is not a measured likelihood or outcome. | `1` |
 | `difficulty_level` | String | Fixed vocabulary for this tier — see 6.7. | `Fleet technician` |
 | `est_parts_cost_min_usd` | Float | Editorial estimate, US independent heavy-duty shop. | `35.00` |
 | `est_parts_cost_max_usd` | Float | Editorial estimate, US independent heavy-duty shop. | `120.00` |
@@ -240,10 +240,12 @@ service tool, and "DIY" is not a meaningful buyer segment. This tier's `difficul
 reported it: `Engine`, `Fuel`, `Air Intake`, `Aftertreatment`, `Cooling`, `Lubrication`, `Electrical`,
 `Transmission`, `Brakes/ABS`, `Body/Cab`, `Network`, `Instrument`.
 
-### 6.9 FMI-driven fix ordering
+### 6.9 FMI-informed authored procedure ordering
 
 Unlike the OBD-II tiers, where `probability_rank` is purely an authored per-family order, this tier's
-ranking is **fact-driven by the FMI**: the FMI already states the failure mode (a short to ground is
-diagnosed differently from a value out of range), so fix order follows it rather than guesswork. Every
+order combines the fault's FMI failure class with an authored kind policy. The FMI states the failure
+mode, while the kind policy and family rank remain editorial decisions; the result is not an observed
+rate of causes or successful repairs. The generated class-kind mapping and tie/fallback rules are in
+[`samples/heavyduty/ordering_metadata.json`](samples/heavyduty/ordering_metadata.json). Every
 fault gets at least one fix (the family default), so — as with the OBD-II tiers — fixes exist for
 100% of faults.

@@ -1,0 +1,227 @@
+{
+  "metadata_version": 1,
+  "ordering_semantics_version": 1,
+  "product_scope": "heavyduty",
+  "order_field": "probability_rank",
+  "tables": [
+    "diagnostic_fixes",
+    "j1939_fixes_joined"
+  ],
+  "group_key": "fault_id",
+  "direction": "ascending",
+  "first": 1,
+  "ranking_basis": "fmi_failure_class_then_authored_family_order",
+  "basis_is_empirical": false,
+  "order_meaning": "Authored order for considering diagnostic inspection or repair procedures; execution depends on each procedure's prerequisites and diagnostic findings.",
+  "does_not_measure": [
+    "cause_likelihood",
+    "repair_success",
+    "severity",
+    "urgency",
+    "minimum_cost"
+  ],
+  "failure_class_kind_order": {
+    "range_high": [
+      "mechanical",
+      "service",
+      "component",
+      "calibration",
+      "connector",
+      "circuit",
+      "software",
+      "network"
+    ],
+    "range_low": [
+      "mechanical",
+      "service",
+      "component",
+      "calibration",
+      "connector",
+      "circuit",
+      "software",
+      "network"
+    ],
+    "erratic": [
+      "connector",
+      "circuit",
+      "component",
+      "network",
+      "calibration",
+      "mechanical",
+      "software",
+      "service"
+    ],
+    "circuit_high": [
+      "connector",
+      "circuit",
+      "component",
+      "software",
+      "calibration",
+      "mechanical",
+      "network",
+      "service"
+    ],
+    "circuit_low": [
+      "connector",
+      "circuit",
+      "component",
+      "software",
+      "calibration",
+      "mechanical",
+      "network",
+      "service"
+    ],
+    "open_circuit": [
+      "connector",
+      "circuit",
+      "component",
+      "software",
+      "calibration",
+      "mechanical",
+      "network",
+      "service"
+    ],
+    "short_ground": [
+      "circuit",
+      "connector",
+      "component",
+      "software",
+      "calibration",
+      "mechanical",
+      "network",
+      "service"
+    ],
+    "mechanical": [
+      "mechanical",
+      "component",
+      "service",
+      "calibration",
+      "connector",
+      "circuit",
+      "software",
+      "network"
+    ],
+    "frequency": [
+      "connector",
+      "component",
+      "circuit",
+      "mechanical",
+      "calibration",
+      "software",
+      "network",
+      "service"
+    ],
+    "update_rate": [
+      "network",
+      "connector",
+      "software",
+      "component",
+      "circuit",
+      "calibration",
+      "mechanical",
+      "service"
+    ],
+    "rate_of_change": [
+      "component",
+      "mechanical",
+      "connector",
+      "circuit",
+      "calibration",
+      "service",
+      "software",
+      "network"
+    ],
+    "unknown_cause": [
+      "service",
+      "component",
+      "connector",
+      "circuit",
+      "mechanical",
+      "calibration",
+      "software",
+      "network"
+    ],
+    "device": [
+      "component",
+      "software",
+      "connector",
+      "circuit",
+      "calibration",
+      "mechanical",
+      "network",
+      "service"
+    ],
+    "calibration": [
+      "calibration",
+      "software",
+      "component",
+      "service",
+      "connector",
+      "circuit",
+      "mechanical",
+      "network"
+    ],
+    "special": [
+      "service",
+      "software",
+      "component",
+      "connector",
+      "circuit",
+      "calibration",
+      "mechanical",
+      "network"
+    ],
+    "network_error": [
+      "network",
+      "software",
+      "connector",
+      "component",
+      "circuit",
+      "calibration",
+      "mechanical",
+      "service"
+    ],
+    "drift_high": [
+      "component",
+      "calibration",
+      "service",
+      "mechanical",
+      "connector",
+      "circuit",
+      "software",
+      "network"
+    ],
+    "drift_low": [
+      "component",
+      "calibration",
+      "service",
+      "mechanical",
+      "connector",
+      "circuit",
+      "software",
+      "network"
+    ],
+    "reserved": [
+      "service",
+      "component",
+      "connector",
+      "circuit",
+      "mechanical",
+      "calibration",
+      "software",
+      "network"
+    ],
+    "condition": [
+      "service",
+      "mechanical",
+      "component",
+      "connector",
+      "circuit",
+      "calibration",
+      "software",
+      "network"
+    ]
+  },
+  "tie_break": "authored_family_rank",
+  "unlisted_kind_policy": "after_listed_kinds_then_authored_family_rank"
+}

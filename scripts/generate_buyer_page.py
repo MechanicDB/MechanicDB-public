@@ -58,8 +58,8 @@ SAMPLE_LABEL = "Free 90-code OBD-II sample"
 FORMAT_LABEL = {"text/csv": "CSV", "application/vnd.apache.parquet": "Parquet"}
 
 TITLE = "OBD-II DTC Database Download — CSV, Parquet, SQLite"
-DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 ranked "
-        "repairs. Download as CSV, Parquet or SQLite. Free 90-code sample.")
+DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 authored "
+        "repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.")
 
 # Homepage title/meta: led with framing rather than with anything anyone types.
 HOME_TITLE_OLD = "<title>OBD-II DTC Database — 15,886 Trouble Codes &amp; Fixes | MechanicDB</title>"
@@ -119,7 +119,7 @@ BODY = """
   <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
     <tbody>
       <tr><td style="padding:9px 0"><b>15,886</b> trouble codes</td><td style="opacity:.75">9,249 SAE-standard (P0, P2, P34&ndash;P39, C0, B0, U0, U3) + 6,637 manufacturer-specific across 32 makes</td></tr>
-      <tr><td style="padding:9px 0"><b>56,561</b> ranked fixes</td><td style="opacity:.75">3&ndash;5 per code, ordered by real-world likelihood, with difficulty tier, parts-cost range and labor hours</td></tr>
+      <tr><td style="padding:9px 0"><b>56,561</b> ordered procedures</td><td style="opacity:.75">3&ndash;5 per code in authored consideration order, conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours</td></tr>
       <tr><td style="padding:9px 0"><b>75,055</b> parts mappings</td><td style="opacity:.75">Aftermarket part names per fix, with catalog search URLs</td></tr>
       <tr><td style="padding:9px 0"><b>647</b> fault families</td><td style="opacity:.75">Authored groupings that make the corpus navigable rather than a flat code list</td></tr>
     </tbody>
@@ -141,7 +141,7 @@ BODY = """
       <th style="padding:0 12px 8px 0">Table</th><th style="padding:0 12px 8px 0">Rows</th><th style="padding:0 0 8px">Holds</th></tr></thead>
     <tbody>
       <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15,886</td><td>Definition, system category, OEM flag and make, fault family, technical explanation</td></tr>
-      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>Ranked procedures with difficulty tier, parts cost min/max, labor hours, steps</td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours, steps</td></tr>
       <tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75,055</td><td>Aftermarket part names per fix, with catalog search URLs</td></tr>
       <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>The flat analytical view &mdash; all 16 columns, one <code>read_csv</code> / <code>read_parquet</code></td></tr>
     </tbody>
@@ -149,6 +149,12 @@ BODY = """
   </div>
   <p style="opacity:.7;font-size:.88rem;margin-top:10px">
     Join chain: <code>dtc_codes.code_id</code> &rarr; <code>diagnostic_fixes.code_id</code> &rarr; <code>replacement_parts.fix_id</code>
+  </p>
+  <p style="max-width:66ch;opacity:.85">
+    <code>probability_rank</code> is the supported legacy name for authored procedure
+    consideration order within a code (<code>1</code> = first). It is not measured cause
+    likelihood, repair success, severity, urgency or minimum cost. Follow each procedure's
+    prerequisites and diagnostic findings. See <a href="/ordering_metadata.json">ordering metadata</a>.
   </p>
 
   <h2 style="margin-top:44px">Coverage, stated honestly</h2>
@@ -200,7 +206,7 @@ def build():
 <meta property="og:type" content="website">
 <meta property="og:url" content="{base}/obd2-dtc-database">
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Dataset","name":"MechanicDB OBD-II DTC Database","description":"{desc}","url":"{base}/obd2-dtc-database","creator":{{"@type":"Organization","name":"DataEngineered","url":"https://dataengineered.io"}},"license":"{license}","isAccessibleForFree":false,"distribution":{distribution},"variableMeasured":["diagnostic trouble code","system category","fault family","repair procedure","probability rank","difficulty tier","estimated parts cost","labor hours","replacement part name"]}}
+{{"@context":"https://schema.org","@type":"Dataset","name":"MechanicDB OBD-II DTC Database","description":"{desc}","url":"{base}/obd2-dtc-database","creator":{{"@type":"Organization","name":"DataEngineered","url":"https://dataengineered.io"}},"license":"{license}","isAccessibleForFree":false,"distribution":{distribution},"variableMeasured":["diagnostic trouble code","system category","fault family","repair procedure","authored procedure consideration order","difficulty tier","estimated parts cost","labor hours","replacement part name"]}}
 </script>
 {chrome}
 </head>
