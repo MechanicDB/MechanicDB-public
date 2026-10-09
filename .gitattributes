@@ -1,0 +1,5 @@
+# Preserve the byte-fingerprinted sample surface on Windows and Linux.
+/*.csv text eol=crlf
+samples/heavyduty/*.csv text eol=crlf
+/ordering_metadata.json text eol=crlf
+samples/heavyduty/ordering_metadata.json text eol=crlf

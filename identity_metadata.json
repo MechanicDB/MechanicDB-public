@@ -1,0 +1,20 @@
+{
+  "identity_contract": "mechanicdb:v1",
+  "canonicalization": 1,
+  "content_digest_algorithm": "sha256-128",
+  "data_release_id": "mechanicdb-data-v1-2028c03d28712f99b900b2a0383ff62d35dbc7a40912434be81bc0e8888d4d91",
+  "registry_digest": "a913276fc9ff4786b1d834e14d5802c5a6da42899860c5dab89b33ab8dad1e2c",
+  "domain": "obd",
+  "profile": "sample",
+  "map_formats": [
+    "csv",
+    "parquet"
+  ],
+  "map_rows": 859,
+  "checksums": {
+    "identity_events.csv": "155114684467eb8b29dc56d790d604f7c7021195ff7cc8ed1d8179dadf3070d0",
+    "identity_map.csv": "a6279f04f55a2d2e3274cdd94b78c8eca423f03ee5f1af862f39b03523fb4697",
+    "identity_map.parquet": "21eec51533e943ed51a0d710d67744436f59c1e705f846bacbfec4ff81077712"
+  },
+  "artifact_id": "mechanicdb-artifact-v1-c79e93118fc442f3f7432eb84868145cefbd0a9b8508b61ff0d5dbb9d72695b3"
+}

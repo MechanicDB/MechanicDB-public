@@ -25,3 +25,5 @@
 - Contact: mechanicdb@dataengineered.io
 - Not a substitute for SAE J2012 or its Digital Annex (J2012DA): those are licensed per seat and are never redistributed here. MechanicDB reproduces no SAE document text, carries no Failure Type Bytes, and is not a citable normative reference — it is a factual code-to-meaning and code-to-repair compilation. For the standard itself, use the SAE store, Techstreet, the ANSI Webstore, Accuris, a university engineering library's SAE Digital Library subscription, or the harmonized ISO 15031-6 from a national standards body.
 - Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.
+
+- Stable identity contract (prepared cutover): IDENTITY.md; qualified domain/entity references, filtered sample companions, immutable release IDs and ambiguity-safe legacy migration.

@@ -168,7 +168,7 @@ One row per extracted OEM SPN+FMI fault pair.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
-| `fault_id` | Integer (PK) | Primary key, assigned after sorting rows by (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`, `source_id`). | `280` |
+| `fault_id` | Integer (PK) | Permanent source/controller-scoped fault identity; numeric order is independent of its locator and display order. | `280` |
 | `spn` | Integer (FK, with `oem_make` below, → `j1939_spn`) | Join to `j1939_spn` on `spn` plus `oem_make` when `spn >= 516096` (this fault's own OEM row, see 6.2), and on `spn` with an empty `oem_make` below `516096`; joining on `spn` alone repeats a fault once per OEM that uses an OEM-range SPN. | `110` |
 | `fmi` | Integer (FK → `j1939_fmi.fmi`) | | `3` |
 | `oem_make` | String | One of `Eaton`, `WABCO`, `Bendix`, `John Deere`, `Navistar`, `Cummins`, `Caterpillar`, `PSI`, `Perkins`, `Yanmar`. | `Caterpillar` |
@@ -340,3 +340,34 @@ No customer data is automatically migrated or discarded. Schema introspection an
 invalid writes intentionally change; read values and CSV/Parquet interfaces remain
 compatible. Byte reproducibility is verified within a pinned runtime, not across
 different SQLite or ZIP compression versions.
+
+
+## Stable identity companions (prepared cutover)
+
+Existing code_id, fault_id, fix_id and part_id values are preserved by a committed
+allocation registry. IDs may be sparse and are scoped by domain/entity type.
+Use qualified references such as `mechanicdb:v1:obd:fix:571`; the same integer
+in HD or another table is a different identity. Numeric exports use permanent-ID
+order; procedure display remains ascending probability_rank (numeric CAST for
+Standard TEXT), with the existing I01 authored-order meaning.
+
+`identity_metadata.json` identifies the immutable data release and artifact;
+`identity_map.csv` / `.parquet` provide entitled references, decimal-text numeric
+aliases, parent references, authored keys and content revision digests;
+`identity_events.csv` provides relevant lifecycle information. The core SQLite
+schema remains version 1. Public maps include only the authorized fixed samples.
+Text, rank and component-name changes preserve intended identity. Retired or
+withdrawn allocations are never reused; merge/split migration requires review.
+
+Historical integers require an exact artifact or verified source release. Two
+known September 2026 HD artifacts reused fault 571 for different entities; month
+and number alone are ambiguous. Migration reports preserve original targets and
+do not guess missing or changed historical procedure/part mappings. The locally
+prepared cutover is not a claim that the paid release has been published.
+
+Paid ZIPs carry the compact Parquet identity map; generated master directories
+and public samples provide both CSV and Parquet maps. Content revision detectors
+use the declared sha256-128 algorithm; full artifact/file/registry checksums use
+SHA-256. CSV consumers can convert the companion with pandas.read_parquet().
+
+HD's delivered natural UNIQUE key remains (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`, `source_id`); the registry resolves this scoped assertion permanently.
