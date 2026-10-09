@@ -157,6 +157,14 @@ BODY = """
     prerequisites and diagnostic findings. See <a href="/ordering_metadata.json">ordering metadata</a>.
   </p>
 
+  <p style="max-width:66ch;opacity:.85">
+    The prepared stable-identifier cutover preserves numeric IDs across expansion.
+    IDs are scoped by domain and entity; procedure display remains ordered by rank.
+    Sample companions identify their immutable release. Historical numbers require
+    exact artifact context. See the <a href="/IDENTITY.md">identity and migration contract</a>.
+    Paid publication is a separate release step.
+  </p>
+
   <h2 style="margin-top:44px">Coverage, stated honestly</h2>
   <p style="max-width:66ch;opacity:.85">
     The 9,249 SAE-universal codes apply to every vehicle regardless of make. OEM coverage is
@@ -224,6 +232,12 @@ def build():
         body=BODY,
         footer=lifted_block("footer", src),
     )
+    # Keep existing locale navigation when this English page is regenerated.
+    # The full i18n build can subsequently translate new segments.
+    from i18n_common import Site, inject
+    site = Site(ROOT)
+    langs = ["en"] + [lang for lang in site.locales if (ROOT / lang / OUT.name).is_file()]
+    page = inject(page, site, OUT.name, langs, "en")
     OUT.write_text(page, encoding="utf-8", newline="")
 
 

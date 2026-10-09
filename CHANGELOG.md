@@ -1,3 +1,9 @@
+## I04 — locally prepared stable-identifier cutover (2026-10-09)
+
+Preserve numeric identities across expansion; document sparse IDs, entitled
+identity companions and release-scoped migration. Sample cutover preparation
+does not indicate paid publication.
+
 # Changelog
 
 All notable changes to the MechanicDB dataset snapshots and this sample repository.

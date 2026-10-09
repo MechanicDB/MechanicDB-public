@@ -95,3 +95,32 @@ are recorded in [CHANGELOG.md](CHANGELOG.md).
 
 Both free samples are offered under ODbL v1.0; the full databases are available
 under commercial license tiers (see README.md and the LICENSE file).
+
+
+## Stable identity companions (prepared cutover)
+
+Existing code_id, fault_id, fix_id and part_id values are preserved by a committed
+allocation registry. IDs may be sparse and are scoped by domain/entity type.
+Use qualified references such as `mechanicdb:v1:obd:fix:571`; the same integer
+in HD or another table is a different identity. Numeric exports use permanent-ID
+order; procedure display remains ascending probability_rank (numeric CAST for
+Standard TEXT), with the existing I01 authored-order meaning.
+
+`identity_metadata.json` identifies the immutable data release and artifact;
+`identity_map.csv` / `.parquet` provide entitled references, decimal-text numeric
+aliases, parent references, authored keys and content revision digests;
+`identity_events.csv` provides relevant lifecycle information. The core SQLite
+schema remains version 1. Public maps include only the authorized fixed samples.
+Text, rank and component-name changes preserve intended identity. Retired or
+withdrawn allocations are never reused; merge/split migration requires review.
+
+Historical integers require an exact artifact or verified source release. Two
+known September 2026 HD artifacts reused fault 571 for different entities; month
+and number alone are ambiguous. Migration reports preserve original targets and
+do not guess missing or changed historical procedure/part mappings. The locally
+prepared cutover is not a claim that the paid release has been published.
+
+Paid ZIPs carry the compact Parquet identity map; generated master directories
+and public samples provide both CSV and Parquet maps. Content revision detectors
+use the declared sha256-128 algorithm; full artifact/file/registry checksums use
+SHA-256. CSV consumers can convert the companion with pandas.read_parquet().
