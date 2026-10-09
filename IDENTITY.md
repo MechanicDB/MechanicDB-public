@@ -68,3 +68,30 @@ aliases; its exact 859-row historical crosswalk preserves every intended entity.
 The regenerated sample uses paid-master allocations. Private/Kaggle samples
 already match those allocations. Content, ranks, sample membership and counts
 are unchanged. Legacy sample numeric aliases require their pinned artifact.
+
+## Scoped migration support and revision pins
+
+For the old public OBD sample, use its exact artifact fingerprint:
+`sample-tables-sha256-176d6921520e0bc28720a801ece4308775df5a39ce8bc5aa246cdc5fd7bdc1cc`.
+The sample-only support bundle contains the standalone Python migration tool,
+instructions, a scoped catalogue and the complete 859-row pinned crosswalk.
+It corrects the 42 fix and 61 part aliases above. It contains no private registry,
+paid tables, unrelated customer history or withdrawn source content.
+
+From the extracted bundle, run:
+
+```sh
+python migrate_annotations.py notes.jsonl --source sample-tables-sha256-176d6921520e0bc28720a801ece4308775df5a39ce8bc5aa246cdc5fd7bdc1cc --identity-dir identity --report report.json
+```
+
+Review the report before optionally adding `--apply NEW-notes.jsonl`. Original
+annotations remain intact. Verify the bundle manifest/checksums through the
+trusted channel supplying it. A historical Git artifact alone does not prove
+that a customer received that snapshot. Month-only identifiers remain insufficient.
+
+The tool now supports explicit catalogue revision/path pins. Select a retained
+revision using `--crosswalk-revision original`; default selection follows the
+catalogue. Reports preserve the selected revision/path/checksum. Legacy catalogues
+remain compatible. Tampered crosswalk/evidence bytes, conflicting revision pins
+and paths escaping the supplied identity directory are rejected. Customer bundles
+must be scoped to the verified original artifact and recipient entitlement.

@@ -1,3 +1,10 @@
+## I04 follow-ups — scoped sample migration support (2026-10-09)
+
+Standalone migration supports pinned crosswalk revisions, confined relative paths,
+checksum validation and reproducible reports. Document the sample-only support
+bundle for the 42 fix/61 part alias corrections. Existing sample/data bytes stay
+unchanged; this local follow-up performs no publication or deployment.
+
 ## I04 — locally prepared stable-identifier cutover (2026-10-09)
 
 Preserve numeric identities across expansion; document sparse IDs, entitled
