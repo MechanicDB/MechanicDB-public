@@ -1,3 +1,34 @@
+## Procedure actions, cost status and SQLite v2 — I02/I42 Phase A (2026-10-11)
+
+Five columns are appended to `diagnostic_fixes` and both joined views, after
+`step_by_step_instructions`: `action_type`, `parts_cost_status`, `labor_status`,
+`cost_basis_id` and `procedure_rationale`. Existing columns keep their names, order and
+values. The three estimate columns may now be NULL: `parts_cost_status` is `estimated`,
+`none_required` (both values 0, no part rows) or `unknown` (NULL); `labor_status` is
+`estimated` or `unknown` (NULL hours). Unreviewed rows keep their estimates, with
+`action_type` and `procedure_rationale` empty.
+
+- `cost_metadata.json` ships next to `ordering_metadata.json` in every product, sample and
+  ZIP: currency, geography, the editorial basis of each `cost_basis_id`, what is not specified
+  (tax, shipping, core charges, shop-supplies fees, labor rate, programming or subscription
+  fees), and the action, status and labor-class vocabularies. DATA_DICTIONARY.md gains a
+  "Cost basis" section; the OBD-II `est_labor_hours` description now says "Editorial estimate"
+  instead of "Average".
+- SQLite schema version 2 (`PRAGMA user_version = 2`) for Standard, OEM Complete and Heavy
+  Duty: the five columns, nullable estimates, and CHECKs for the vocabularies, the profile's
+  basis and the status / NULL / zero rules.
+- Identity content canonicalization 2: new columns at their unreviewed default are left out of
+  the content digest, so unreviewed rows keep their digest; NULL estimates hash as null. IDs
+  are unchanged.
+- D10: Heavy Duty fixes at 0/0 with no part rows (60 curated procedures, 1,495 delivered rows)
+  are `none_required`; HD 0/0 rows that list a part stay `estimated`.
+- Three proof families exercise `none_required`, unknown parts cost, unknown labor, a split
+  and a retirement. No new cost or labor numbers: each is carried unchanged from the base row
+  it described, or is 0/0 or NULL.
+- Counts: re-synced in the same release (see claims.json).
+- Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
+  version 2 and canonicalization 2.
+
 ## Stable IDs and SQLite enforcement are live, not prepared (2026-10-10)
 
 The I04 identity companions and the I05 SQLite contracts shipped in the paid 2026.10 editions

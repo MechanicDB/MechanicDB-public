@@ -132,7 +132,7 @@ table and column, including Standard's all-TEXT SQLite profile. It adds keys,
 constraints and lookup indexes, with HD's conditional SPN relation enforced by
 four triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
 transactions; joined tables remain materialized snapshots. See
-[the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-1)
+[the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-2)
 for exact keys and runnable queries. I01's `probability_rank` meaning and ordering
 metadata are unchanged.
 
@@ -150,7 +150,7 @@ Standard TEXT), with the existing I01 authored-order meaning.
 `identity_map.csv` / `.parquet` provide entitled references, decimal-text numeric
 aliases, parent references, authored keys and content revision digests;
 `identity_events.csv` provides relevant lifecycle information. The core SQLite
-schema remains version 1. Public maps include only the authorized fixed samples.
+schema is version 2. Public maps include only the authorized fixed samples.
 Text, rank and component-name changes preserve intended identity. Retired or
 withdrawn allocations are never reused; merge/split migration requires review.
 

@@ -14,7 +14,8 @@ not renumber rows. Fix IDs identify procedures under one code/fault; part IDs
 identify authored component suggestions under one fix, not universal SKUs or
 verified vehicle fitment.
 
-The core schema and SQLite version 1 remain unchanged. Numeric tables export in
+The core schema and SQLite version 2 add five procedure/cost columns and keep every existing
+column and ID. Numeric tables export in
 permanent-ID order; procedures display by probability_rank, with numeric CAST for
 Standard TEXT SQL. That rank retains the I01 authored consideration-order meaning
 and is never an identity or a measured probability.
@@ -24,6 +25,8 @@ and is never an identity or a measured probability.
 | identity_metadata.json | immutable shared data release ID, exact artifact fingerprint, domain/profile and registry digest |
 | identity_map.csv / .parquet | entitled row references, decimal-text numeric aliases, parent references, authored procedure/part-use keys and content revision digests |
 | identity_events.csv | relevant lifecycle information; public samples exclude unrelated and withdrawn content |
+
+Version 2 uses content canonicalization 2: new columns at their unreviewed default are left out of the content digest, so unreviewed rows keep their digest; NULL estimates hash as null.
 
 Descriptions, rank, costs and component names can change without changing their
 intended identity. Withdrawn or retired identities remain reserved. Reinstatement
