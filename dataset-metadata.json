@@ -83,19 +83,39 @@
           },
           {
             "name": "est_parts_cost_min_usd",
-            "description": "Estimated minimum aftermarket parts cost in US dollars."
+            "description": "Estimated minimum aftermarket parts cost in US dollars; empty when parts_cost_status is unknown, 0 when none_required."
           },
           {
             "name": "est_parts_cost_max_usd",
-            "description": "Estimated maximum aftermarket parts cost in US dollars."
+            "description": "Estimated maximum aftermarket parts cost in US dollars; empty when parts_cost_status is unknown, 0 when none_required."
           },
           {
             "name": "est_labor_hours",
-            "description": "Average professional mechanic labor hours required."
+            "description": "Editorial estimate of professional labor hours; empty when labor_status is unknown."
           },
           {
             "name": "step_by_step_instructions",
             "description": "Bulleted step-by-step diagnostic and repair instructions."
+          },
+          {
+            "name": "action_type",
+            "description": "Procedure action: inspect, measure, scan, repair, replace, program or verify; empty when not yet classified."
+          },
+          {
+            "name": "parts_cost_status",
+            "description": "estimated, none_required (no parts; costs 0) or unknown (costs empty)."
+          },
+          {
+            "name": "labor_status",
+            "description": "estimated or unknown (labor empty)."
+          },
+          {
+            "name": "cost_basis_id",
+            "description": "Key into cost_metadata.json: currency, geography and editorial basis of the estimates."
+          },
+          {
+            "name": "procedure_rationale",
+            "description": "Why this step, why its cost status and why its position; empty when not yet written."
           }
         ]
       }
@@ -179,19 +199,39 @@
           },
           {
             "name": "est_parts_cost_min_usd",
-            "description": "Minimum parts cost."
+            "description": "Minimum parts cost; empty when parts_cost_status is unknown, 0 when none_required."
           },
           {
             "name": "est_parts_cost_max_usd",
-            "description": "Maximum parts cost."
+            "description": "Maximum parts cost; empty when parts_cost_status is unknown, 0 when none_required."
           },
           {
             "name": "est_labor_hours",
-            "description": "Labor hours required."
+            "description": "Editorial estimate of professional labor hours; empty when labor_status is unknown."
           },
           {
             "name": "step_by_step_instructions",
             "description": "Repair instructions."
+          },
+          {
+            "name": "action_type",
+            "description": "Procedure action: inspect, measure, scan, repair, replace, program or verify; empty when not yet classified."
+          },
+          {
+            "name": "parts_cost_status",
+            "description": "estimated, none_required (no parts; costs 0) or unknown (costs empty)."
+          },
+          {
+            "name": "labor_status",
+            "description": "estimated or unknown (labor empty)."
+          },
+          {
+            "name": "cost_basis_id",
+            "description": "Key into cost_metadata.json: currency, geography and editorial basis of the estimates."
+          },
+          {
+            "name": "procedure_rationale",
+            "description": "Why this step, why its cost status and why its position; empty when not yet written."
           }
         ]
       }
