@@ -342,7 +342,7 @@ compatible. Byte reproducibility is verified within a pinned runtime, not across
 different SQLite or ZIP compression versions.
 
 
-## Stable identity companions (prepared cutover)
+## Stable identity companions (since edition 2026.10)
 
 Existing code_id, fault_id, fix_id and part_id values are preserved by a committed
 allocation registry. IDs may be sparse and are scoped by domain/entity type.
@@ -362,8 +362,8 @@ withdrawn allocations are never reused; merge/split migration requires review.
 Historical integers require an exact artifact or verified source release. Two
 known September 2026 HD artifacts reused fault 571 for different entities; month
 and number alone are ambiguous. Migration reports preserve original targets and
-do not guess missing or changed historical procedure/part mappings. The locally
-prepared cutover is not a claim that the paid release has been published.
+do not guess missing or changed historical procedure/part mappings. Paid
+editions carry these companions from 2026.10.
 
 Paid ZIPs carry the compact Parquet identity map; generated master directories
 and public samples provide both CSV and Parquet maps. Content revision detectors

@@ -125,19 +125,19 @@ Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTIN
 
 The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Repair Database](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)** (with a [starter notebook](https://www.kaggle.com/code/dataengineered/decode-your-check-engine-light-with-mechanicdb)) — and on Hugging Face as **[Ichlibitiche/mechanicdb-obd2-repair-sample](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)** (4 parquet configs, loadable with `datasets`).
 
-## Incoming SQLite enforcement (I05)
+## SQLite enforcement (I05, since edition 2026.10)
 
-The locally prepared schema version 1 preserves every existing identifier, value,
+Schema version 1 preserves every existing identifier, value,
 table and column, including Standard's all-TEXT SQLite profile. It adds keys,
 constraints and lookup indexes, with HD's conditional SPN relation enforced by
 four triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
 transactions; joined tables remain materialized snapshots. See
 [the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-1)
 for exact keys and runnable queries. I01's `probability_rank` meaning and ordering
-metadata are unchanged. This incoming change has not been published.
+metadata are unchanged.
 
 
-## Stable identity companions (prepared cutover)
+## Stable identity companions (since edition 2026.10)
 
 Existing code_id, fault_id, fix_id and part_id values are preserved by a committed
 allocation registry. IDs may be sparse and are scoped by domain/entity type.
@@ -157,8 +157,8 @@ withdrawn allocations are never reused; merge/split migration requires review.
 Historical integers require an exact artifact or verified source release. Two
 known September 2026 HD artifacts reused fault 571 for different entities; month
 and number alone are ambiguous. Migration reports preserve original targets and
-do not guess missing or changed historical procedure/part mappings. The locally
-prepared cutover is not a claim that the paid release has been published.
+do not guess missing or changed historical procedure/part mappings. Paid
+editions carry these companions from 2026.10.
 
 Paid ZIPs carry the compact Parquet identity map; generated master directories
 and public samples provide both CSV and Parquet maps. Content revision detectors
