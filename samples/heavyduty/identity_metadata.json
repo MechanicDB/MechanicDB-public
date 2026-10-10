@@ -2,19 +2,19 @@
   "identity_contract": "mechanicdb:v1",
   "canonicalization": 2,
   "content_digest_algorithm": "sha256-128",
-  "data_release_id": "mechanicdb-data-v1-835d5bbd6fc9900f4efb0dd44cf5341e3f62da1b500ded27cc0f655f03f5a757",
-  "registry_digest": "a913276fc9ff4786b1d834e14d5802c5a6da42899860c5dab89b33ab8dad1e2c",
+  "data_release_id": "mechanicdb-data-v1-78de28b01170f7e3153991de7a2d1ff7da0a60fea018684c159d2accb103b0c8",
+  "registry_digest": "9497d694820f1ab5709e74c3f0f51748163c4e1ded78adbb959fb4c046d773e7",
   "domain": "hd",
   "profile": "sample",
   "map_formats": [
     "csv",
     "parquet"
   ],
-  "map_rows": 650,
+  "map_rows": 651,
   "checksums": {
     "identity_events.csv": "155114684467eb8b29dc56d790d604f7c7021195ff7cc8ed1d8179dadf3070d0",
-    "identity_map.csv": "c27aa9b096d2e25c2fdc5a441b43b89a6b8ed8b88f70c8f45d9e0bdaf91e2b31",
-    "identity_map.parquet": "9b6913eee3700957508b93042a523609fc892bc02e764b1f60bf562e7aab1d15"
+    "identity_map.csv": "323e36eec1bb90fd7a83618797239497a57d36cea7850939922446ee2988cb81",
+    "identity_map.parquet": "3dadbdf280b1da2e09f97cfcd915ab04e552307e10de64f7b7e16472f9a29b01"
   },
-  "artifact_id": "mechanicdb-artifact-v1-ef2e545a7dbd4b68f0907a0971919bfbb4d8bb6cdbd881b35f3fc0c7f759d948"
+  "artifact_id": "mechanicdb-artifact-v1-6738b968190b5fa729f40511a751b9ace2d7cf15bc237b53fe0afb21e69e58b1"
 }
