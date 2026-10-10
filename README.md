@@ -134,7 +134,7 @@ four triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
 transactions; joined tables remain materialized snapshots. See
 [the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-2)
 for exact keys and runnable queries. I01's `probability_rank` meaning and ordering
-metadata are unchanged.
+metadata are unchanged. Schema version 2 appends five procedure/cost columns; see DATA_DICTIONARY.md §7.
 
 
 ## Stable identity companions (since edition 2026.10)

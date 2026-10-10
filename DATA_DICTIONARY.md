@@ -40,11 +40,11 @@ Maps diagnostic trouble codes to actionable inspection or repair procedures in a
 | `est_parts_cost_max_usd` | Float, nullable | Editorial estimate (see [Cost basis](#cost-basis)) of the maximum parts cost in US dollars. `0` when `parts_cost_status` is `none_required`; NULL when `unknown`. | `45.00` |
 | `est_labor_hours` | Float, nullable | Editorial estimate of professional labor hours to complete the procedure. NULL when `labor_status` is `unknown`. | `0.5` |
 | `step_by_step_instructions` | String | Bulleted step-by-step diagnostic and repair instructions (separated by ` • `). | `1. Disconnect battery • 2. Spray sensor...` |
-| `action_type` | String, nullable | What the procedure does: `inspect`, `measure`, `scan`, `repair`, `replace`, `program` or `verify` (definitions in [Cost basis](#cost-basis)). NULL until the procedure's family is reviewed. | `measure` |
+| `action_type` | String, nullable | What the procedure does: `inspect`, `measure`, `scan`, `repair`, `replace`, `program` or `verify` (definitions in [Cost basis](#cost-basis)). NULL until the procedure's family is reviewed. | `replace` |
 | `parts_cost_status` | String | `estimated`, `none_required` or `unknown`. | `estimated` |
 | `labor_status` | String | `estimated` or `unknown`. | `estimated` |
 | `cost_basis_id` | String | Key into `cost_metadata.json`: `obd-editorial-us-aftermarket-v1` for this tier. | `obd-editorial-us-aftermarket-v1` |
-| `procedure_rationale` | String, nullable | Why this step, why its cost status and why its position; NULL until reviewed. | `Confirms the reading before a part is bought.` |
+| `procedure_rationale` | String, nullable | Why this step, why its cost status and why its position; NULL until reviewed. | `Fits the part once the earlier steps point to it.` |
 
 Labor class follows `action_type` (`labor_kind_by_action` in `cost_metadata.json`): inspect, measure, scan and verify are diagnostic; repair and replace are repair; program is programming.
 
@@ -208,11 +208,11 @@ this tier — see 6.7/6.9 below.
 | `est_parts_cost_max_usd` | Float, nullable | Editorial estimate, US independent heavy-duty shop (see [Cost basis](#cost-basis)). `0` when `parts_cost_status` is `none_required`; NULL when `unknown`. | `120.00` |
 | `est_labor_hours` | Float, nullable | Editorial estimate, US independent heavy-duty shop. NULL when `labor_status` is `unknown`. | `0.75` |
 | `step_by_step_instructions` | String | Bulleted, ` • `-separated. | `1. Disconnect ECU harness connector • 2. Inspect pins for corrosion...` |
-| `action_type` | String, nullable | What the procedure does: `inspect`, `measure`, `scan`, `repair`, `replace`, `program` or `verify`. NULL until the procedure's family is reviewed. | `measure` |
+| `action_type` | String, nullable | What the procedure does: `inspect`, `measure`, `scan`, `repair`, `replace`, `program` or `verify`. NULL until the procedure's family is reviewed. | `replace` |
 | `parts_cost_status` | String | `estimated`, `none_required` or `unknown`. | `estimated` |
 | `labor_status` | String | `estimated` or `unknown`. | `estimated` |
 | `cost_basis_id` | String | Key into `cost_metadata.json`: `hd-editorial-us-independent-shop-v1` for this tier. | `hd-editorial-us-independent-shop-v1` |
-| `procedure_rationale` | String, nullable | Why this step, why its cost status and why its position; NULL until reviewed. | `Confirms the reading before a part is bought.` |
+| `procedure_rationale` | String, nullable | Why this step, why its cost status and why its position; NULL until reviewed. | `Fits the part once the earlier steps point to it.` |
 
 HD `estimated` rows keep `0 <= min <= max`. A 0/0 `estimated` HD row always lists a part (a zero editorial parts estimate although a part is listed); 0/0 HD rows without parts are `none_required`. Labor class follows `action_type` as in section 2.
 
@@ -305,7 +305,7 @@ This contract applies to the snapshots this build writes (`PRAGMA user_version =
 The four OBD-II and six Heavy Duty tables, existing column order, identifiers and values are
 unchanged from version 1. Standard keeps **all columns TEXT**, including IDs, rank and estimates;
 OEM Complete and Heavy Duty retain INTEGER/REAL storage for numeric fields.
-CSV/Parquet contracts and `ordering_metadata.json` remain unchanged.
+CSV and Parquet gain the same five appended columns (estimates are null only when their status is `unknown`); `ordering_metadata.json` is unchanged.
 
 | Table | Enforced key and references |
 | :--- | :--- |
