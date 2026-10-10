@@ -7,6 +7,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 import re
 import sqlite3
@@ -136,6 +137,27 @@ def validate_identity_fingerprint(directory, metadata):
         raise ValueError("identity artifact fingerprint mismatch")
 
 
+def normalize_core(core):
+    """CSV decimal scalars and SQLite numeric scalars have one response shape."""
+    integers = IDS | {"spn", "fmi", "probability_rank"}
+    reals = {"est_parts_cost_min_usd", "est_parts_cost_max_usd", "est_labor_hours"}
+    for rows in core.values():
+        for row in rows:
+            for field in integers & set(row):
+                value = row[field]
+                low = 0 if field == "fmi" else 1
+                high = 31 if field == "fmi" else 524287 if field == "spn" else 9223372036854775807
+                if isinstance(value, bool) or not re.fullmatch(r"0|[1-9][0-9]*", str(value)) or not low <= int(value) <= high:
+                    raise ValueError(f"invalid core integer: {field}")
+                row[field] = int(value)
+            for field in reals & set(row):
+                value = float(row[field])
+                if not math.isfinite(value) or value < 0:
+                    raise ValueError(f"invalid core estimate: {field}")
+                row[field] = value
+    return core
+
+
 def load_dataset(path):
     path = Path(path)
     sql = path.is_file()
@@ -166,6 +188,7 @@ def load_dataset(path):
             return flat if flat.exists() else directory / "csv" / f"{name}.csv"
         core = {name: read_csv(location(name)) for name in core_names}
         tables = {name: read_csv(location(name), fields) for name, fields in SCHEMAS.items()} if manifest else None
+    core = normalize_core(core)
     if manifest is None:
         if not sql and any((directory / f"{name}.csv").exists() or (directory / "csv" / f"{name}.csv").exists() for name in SCHEMAS):
             raise ValueError("applicability files without declaration")

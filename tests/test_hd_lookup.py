@@ -1,5 +1,6 @@
 """Synthetic public consumer tests; no commercial corpus dependency."""
 import importlib.util
+import csv
 from pathlib import Path
 
 import pytest
@@ -53,3 +54,16 @@ def test_malformed_relationships_fail():
     tables["hd_fix_contexts"][0]["fault_id"] = 2
     with pytest.raises(ValueError):
         helper.validate_memberships(tables, core)
+
+
+def test_legacy_csv_numeric_scalars_are_typed(tmp_path):
+    core, _, _ = synthetic()
+    for name, rows in core.items():
+        fields = list(rows[0]) if rows else ["part_id", "fix_id", "part_name", "amazon_search_query"]
+        with (tmp_path / f"{name}.csv").open("w", encoding="utf-8-sig", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=fields, delimiter="|")
+            writer.writeheader()
+            writer.writerows(rows)
+    loaded, membership, metadata = helper.load_dataset(tmp_path)
+    assert loaded == core
+    assert membership is metadata is None
