@@ -371,3 +371,10 @@ use the declared sha256-128 algorithm; full artifact/file/registry checksums use
 SHA-256. CSV consumers can convert the companion with pandas.read_parquet().
 
 HD's delivered natural UNIQUE key remains (`oem_make`, `controller`, `spn`, `fmi`, `oem_code`, `source_id`); the registry resolves this scoped assertion permanently.
+# Incoming HD applicability contract
+
+See [the staged contract and CSV/SQLite/Parquet examples](docs/hd-applicability-contract.md).
+Current shipped snapshots have no applicability declaration; the standalone
+helper labels their guidance `metadata_unavailable`. The incoming extension
+preserves core columns and IDs and adds four companions and HD SQLite v2.
+Filtered probability_rank retains its original numeric values, including gaps.

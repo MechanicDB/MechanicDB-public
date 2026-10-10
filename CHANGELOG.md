@@ -366,3 +366,9 @@ All notable changes to the MechanicDB dataset snapshots and this sample reposito
   [Kaggle](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database).
 
 Full dataset & updates: [mechanicdb](https://mechanicdb.dataengineered.io/)
+## Staged HD applicability tooling (2026-10-10)
+
+Add a standalone CSV/SQLite reference lookup, explicit unknown/invalid/legacy
+statuses, synthetic consumer tests, and the incoming four-table HD SQLite v2
+contract with Parquet examples. Existing samples and content are unchanged.
+The production EC-60 correction remains blocked on supported numeric estimates.

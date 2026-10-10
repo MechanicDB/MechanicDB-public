@@ -95,3 +95,11 @@ catalogue. Reports preserve the selected revision/path/checksum. Legacy catalogu
 remain compatible. Tampered crosswalk/evidence bytes, conflicting revision pins
 and paths escaping the supplied identity directory are rejected. Customer bundles
 must be scoped to the verified original artifact and recipient entitlement.
+# Incoming HD configuration membership
+
+The [staged applicability contract](docs/hd-applicability-contract.md) preserves
+fault identity and adds persistent authored context keys and additive HD SQLite
+v2 tables. Existing content_digest remains a core-row digest; data_release_id and
+applicability_revision detect membership/evidence/label changes. Retired fix/part
+annotations stay attached to historical references with no automatic transfer.
+Current shipped snapshots remain unchanged pending content review and rebuild.
