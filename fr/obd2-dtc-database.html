@@ -500,6 +500,9 @@
 <p style="max-width:66ch;opacity:.85">
 <code>probability_rank</code> est l’ancien nom pris en charge pour l’ordre d’examen rédigé des procédures au sein d’un code (<code>1</code> = premier). Il ne mesure ni la probabilité de la cause, ni la réussite de la réparation, ni la gravité, ni l’urgence, ni le coût minimal. Respectez les prérequis et les constatations de diagnostic de chaque procédure. Consultez les <a href="/ordering_metadata.json">métadonnées d’ordre</a>.
   </p>
+<p style="max-width:66ch;opacity:.85">
+    À partir de l'édition 2026.10, les identifiants sont stables : code_id, fault_id, fix_id et part_id gardent leur numéro quand le jeu de données s'agrandit, de sorte que vos jointures et annotations survivent aux mises à jour. Chaque identifiant est propre à son domaine et à sa table, et les réparations restent listées par ordre de rang. Les numéros des éditions antérieures se convertissent via le <a href="/IDENTITY.md">contrat d'identité et de migration</a>.
+  </p>
 <h2 style="margin-top:44px">La couverture, en toute transparence</h2>
 <p style="max-width:66ch;opacity:.85">
     Les 9 249 codes SAE universels s'appliquent à tous les véhicules, quelle que soit la marque. La couverture OEM n'est <b>pas homogène</b> — elle est la plus forte sur les marques du marché américain et certaines marques sont peu couvertes. La répartition complète par marque est publiée sur la <a href="/fr/#coverage">page d'accueil</a> pour que vous puissiez vérifier les marques qui vous intéressent <em>avant</em> l'achat plutôt qu'après. Chaque code publié remonte à une source versionnée ; un verrou de build rejette les codes inventés.

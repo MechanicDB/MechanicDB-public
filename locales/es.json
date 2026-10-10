@@ -1405,6 +1405,12 @@
   "by": "I01",
   "at": "2026-10-08"
  },
+ "8442802f124d709a": {
+  "src": "From edition {0}, IDs are stable: code_id, fault_id, fix_id and part_id keep their numbers when the dataset grows, so your joins and annotations survive updates. IDs are scoped by domain and table, and repairs are still listed in rank order. Numbers from earlier editions map through the <1>identity and migration contract</1>.",
+  "t": "Desde la edición {0}, los ID son estables: code_id, fault_id, fix_id y part_id conservan su número cuando el conjunto de datos crece, así que tus uniones (joins) y anotaciones sobreviven a las actualizaciones. Cada ID es propio de su dominio y su tabla, y las reparaciones siguen listadas por orden de rango. Los números de ediciones anteriores se asignan mediante el <1>contrato de identidad y migración</1>.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-10"
+ },
  "84feb204606f3ec6": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the first-listed procedure, and {3}",
   "t": "Código OBD-II {0}: {1}. Lo que detecta el módulo {2}, el primer procedimiento de la lista y {3}",

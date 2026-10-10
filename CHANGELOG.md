@@ -1,3 +1,13 @@
+## Stable IDs and SQLite enforcement are live, not prepared (2026-10-10)
+
+The I04 identity companions and the I05 SQLite contracts shipped in the paid 2026.10 editions
+(10-10: identity_map / identity_metadata / identity_events in every ZIP; schema version 1 with
+keys, indexes and foreign keys), but the docs still called them a locally prepared, unpublished
+cutover. Reworded in IDENTITY.md, README.md, DATA_DICTIONARY.md, SOURCES.md, llms.txt and the
+buyer page (scripts/generate_buyer_page.py, regenerated). The buyer-page paragraph is now
+translated into es/de/fr/pt-br (it was English-only and missing from the locale pages);
+i18n check: 7,050 pages, 0 errors. Sitemap: obd2-dtc-database rows dated 2026-10-10.
+
 ## Fault & Recall bundle — bulletin index (2026-10-10)
 
 The bundle card, README and llms.txt list the bundle-only bulletin index: NHTSA service

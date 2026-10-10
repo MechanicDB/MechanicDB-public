@@ -1,8 +1,8 @@
-# Stable identifiers — prepared cutover
+# Stable identifiers
 
-The locally prepared identity contract keeps the existing numeric code_id,
-fault_id, fix_id and part_id values across expansion and editorial changes.
-Publication of the paid cutover is a separate release step. The sample's exact
+Since edition 2026.10 the identity contract keeps the existing numeric code_id,
+fault_id, fix_id and part_id values across expansion and editorial changes; the
+paid editions and this sample ship its companion files. The sample's exact
 edition is identified by its `identity_metadata.json`, not the monthly badge.
 
 IDs are sparse and meaningful only within domain and entity type. Use qualified
