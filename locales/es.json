@@ -1,4 +1,10 @@
 {
+ "002c99450f34890b": {
+  "src": "Instant downloads after one checkout",
+  "t": "Descargas inmediatas con un solo pago",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-10"
+ },
  "00d5a335efa88bae": {
   "src": "Commercial Scan Tool Integration",
   "t": "Integración comercial en herramientas de escaneo",
@@ -230,6 +236,12 @@
   "t": "MechanicDB — Base de datos de diagnóstico y reparación OBD-II",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "145eba8677a0a655": {
+  "src": "Bulletin index (bundle only): NHTSA service bulletins that cite each trouble code, with the vehicles they cover",
+  "t": "Índice de boletines (solo en el paquete): boletines de servicio de la NHTSA que citan cada código de falla, con los vehículos a los que se aplican",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-10"
  },
  "14a86cc650205699": {
   "src": "License the full dataset",

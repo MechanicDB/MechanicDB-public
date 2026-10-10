@@ -1,4 +1,10 @@
 {
+ "002c99450f34890b": {
+  "src": "Instant downloads after one checkout",
+  "t": "Sofortige Downloads nach einem Bezahlvorgang",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-10"
+ },
  "00d5a335efa88bae": {
   "src": "Commercial Scan Tool Integration",
   "t": "Integration in kommerzielle Diagnosegeräte",
@@ -230,6 +236,12 @@
   "t": "MechanicDB — OBD-II-Diagnose- &amp; Reparaturdatenbank",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "145eba8677a0a655": {
+  "src": "Bulletin index (bundle only): NHTSA service bulletins that cite each trouble code, with the vehicles they cover",
+  "t": "Bulletin-Index (nur im Paket): NHTSA-Service-Bulletins, die den jeweiligen Fehlercode nennen, mit den betroffenen Fahrzeugen",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-10"
  },
  "14a86cc650205699": {
   "src": "License the full dataset",
