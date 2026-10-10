@@ -6,7 +6,7 @@
 - One row per trouble code (SAE rows unique by `dtc_code`; OEM rows unique by `(oem_make, dtc_code)`), joined to authored procedures and parts. The supported legacy field `probability_rank` gives procedure consideration order within a code (`1` = first), conditional on prerequisites and findings; it is not measured cause likelihood, repair success, severity, urgency or minimum cost. Machine-readable context: https://mechanicdb.dataengineered.io/ordering_metadata.json
 - Every fix carries `difficulty_level` (Easy DIY / Moderate DIY / Professional Required), `est_parts_cost_min/max_usd`, `est_labor_hours`, and ` • `-separated step-by-step instructions.
 - Code definitions originate in SAE J2012 / ISO 15031-6 (MIT-licensed upstream compilation, attribution preserved); repair content is original editorial material from a deterministic, test-gated build pipeline. Costs are editorial estimates, not quotes.
-- Formats: pipe-delimited UTF-8-BOM CSV, Snappy Parquet (92.0% smaller), SQLite (full dataset).
+- Formats: pipe-delimited UTF-8-BOM CSV, Snappy Parquet (92.5% smaller), SQLite (full dataset).
 
 ## Key pages
 - [Landing & pricing](https://mechanicdb.dataengineered.io/): what's inside, schema, interactive DTC decoder, and how to buy.

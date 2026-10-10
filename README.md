@@ -37,7 +37,7 @@ This repository holds the **free, open developer samples**: 90 curated OBD-II co
 | Replacement-parts mappings | **75,055** | 449 |
 | Formats | CSV · Parquet · SQLite | CSV · Parquet |
 
-The sample covers the most commonly searched codes (P0420, P0171, P0300, …). Parquet files are Snappy-compressed — **92.0% smaller** than the equivalent CSVs.
+The sample covers the most commonly searched codes (P0420, P0171, P0300, …). Parquet files are Snappy-compressed — **92.5% smaller** than the equivalent CSVs.
 
 | Sample file | Rows | Description |
 | :--- | :--- | :--- |

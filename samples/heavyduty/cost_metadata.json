@@ -1,0 +1,60 @@
+{
+  "metadata_version": 1,
+  "product_scope": "heavyduty",
+  "currency": "USD",
+  "cost_basis_id": "hd-editorial-us-independent-shop-v1",
+  "bases": {
+    "hd-editorial-us-independent-shop-v1": {
+      "basis": "editorial_estimate",
+      "geography": "United States",
+      "shop_type": "Independent heavy-duty or fleet shop; not dealer rates.",
+      "parts_scope": "Parts used by the procedure.",
+      "parts_quality": null,
+      "labor_scope": "Labor hours to complete the procedure; hours only, no labor rate.",
+      "range_method": "Editorial minimum-maximum range per procedure; not a quote; not sourced from OEM documents.",
+      "first_authored": "2026-09 (repository history)",
+      "last_repriced": null,
+      "not_specified": [
+        "sales_tax",
+        "shipping",
+        "core_charge",
+        "shop_supplies_fee",
+        "labor_rate",
+        "parts_quality",
+        "programming_or_subscription_fee"
+      ]
+    }
+  },
+  "basis_vocabulary": {
+    "editorial_estimate": "Set by the dataset's editors; no price observations, invoices or labor-guide data are recorded for these values."
+  },
+  "action_vocabulary": {
+    "inspect": "Visual or physical check without an instrument reading.",
+    "measure": "Instrumented test such as a meter, gauge, pressure, smoke or scope reading.",
+    "scan": "Scan-tool read or command: codes, freeze frame, live data or a bidirectional test.",
+    "repair": "Restore the existing component without a new part: clean, reseat, splice, adjust, flush or refill.",
+    "replace": "Fit a new or remanufactured part.",
+    "program": "Software flash, coding, relearn or calibration.",
+    "verify": "Confirm a completed repair: clear codes, drive cycle, readiness or re-test."
+  },
+  "status_vocabulary": {
+    "parts_cost_status": {
+      "estimated": "est_parts_cost_min_usd and est_parts_cost_max_usd hold an editorial estimate.",
+      "none_required": "The procedure needs no parts; both values are 0 and it has no replacement_parts rows.",
+      "unknown": "No parts cost estimate exists; both values are NULL."
+    },
+    "labor_status": {
+      "estimated": "est_labor_hours holds an editorial estimate.",
+      "unknown": "No labor estimate exists; est_labor_hours is NULL."
+    }
+  },
+  "labor_kind_by_action": {
+    "inspect": "diagnostic",
+    "measure": "diagnostic",
+    "scan": "diagnostic",
+    "verify": "diagnostic",
+    "repair": "repair",
+    "replace": "repair",
+    "program": "programming"
+  }
+}
