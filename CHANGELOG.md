@@ -1,3 +1,12 @@
+## Fault & Recall bundle — bulletin index (2026-10-10)
+
+The bundle card, README and llms.txt list the bundle-only bulletin index: NHTSA service
+bulletins that cite each trouble code, with the vehicles they cover, built monthly by RecallDB
+and delivered with the bundle. The copy carries no count. "Two instant downloads after one
+checkout" now reads "Instant downloads after one checkout". Translated into es, de, fr and
+pt-br (2 segments per language, 0 rejected; check: 7,050 pages, 0 errors). Sitemap: the five
+home URLs dated 2026-10-10.
+
 ## I04 follow-ups — scoped sample migration support (2026-10-09)
 
 Standalone migration supports pinned crosswalk revisions, confined relative paths,
