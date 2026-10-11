@@ -297,8 +297,8 @@ def build_page(s, charts):
         figure(site, "difficulty-all-fixes", charts["difficulty-all-fixes"], "DIY difficulty of all repair procedures", f"{n(s['fixes'])} procedures")
         + figure(site, "difficulty-first-fix", charts["difficulty-first-fix"], "DIY difficulty of the first-listed procedure per code", f"{n(s['codes'])} first-listed procedures"),
         table(["System", "Fixes"] + DIFFICULTY, [(sc_, n(t)) + tuple(f"{n(d[k])} ({pct(d[k], t)}%)" for k in DIFFICULTY) for sc_, d, t in dbs], {1, 2, 3, 4}),
-        "difficulty_level is assigned per fix by the editorial pipeline: Easy DIY (basic hand tools, no lifting or programming), Moderate DIY (specialty tools or partial disassembly), "
-        "Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The rank-1 procedure is the first item of each code's authored consideration order, not a measured probability."))
+        "difficulty_level is an editorial tier assigned per fix (Easy DIY, Moderate DIY, Professional Required). It is not a safety classification: "
+        "some DIY-rated procedures include an SRS step or a scan-tool relearn; follow the service manual's safety procedure whatever the rating. The rank-1 procedure is the first item of each code's authored consideration order, not a measured probability."))
 
     # 6. cost
     cg, cb = s["cost_groups"], s["cost_buckets"]

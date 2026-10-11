@@ -41,11 +41,22 @@ rank, steps or estimates (IDs kept). The three estimate columns may now be NULL:
   safety procedure for any SRS or high-voltage step, whatever the difficulty rating. The FAQ
   answer (and its structured-data copy) no longer says high-voltage, SRS and overhaul
   procedures are strictly classified 'Professional Required'; it says a difficulty rating does
-  not replace the manufacturer's lockout and safety procedure.
+  not replace the manufacturer's lockout and safety procedure. The FAQ's structured-data
+  question now asks how difficulty ratings relate to high-voltage and SRS safety (it asked
+  which safety criteria decide between Easy DIY and Professional Required), and the FAQ
+  heading "DIY Safety & High-Voltage Gate" is now "Difficulty ratings & HV/SRS safety": no
+  such gate exists.
+- Stats page: the `difficulty_level` note no longer says Easy DIY means no lifting or
+  programming and Professional Required covers programming, high-voltage and SRS work; some
+  DIY-rated procedures include an SRS step or a scan-tool relearn. It now calls the field an
+  editorial tier, not a safety classification. Stats data and charts are unchanged.
+- Heavy Duty tier (homepage): "ranked fixes with editorial cost and labour estimates" now ends
+  "where known"; some Heavy Duty fixes have an unknown labor or parts-cost estimate.
 - J1939 pages: the sample-rows note now says the dataset adds a part name where one is mapped,
   not parts wherever a procedure needs them (many costed Heavy Duty fixes map no part).
 - Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
-  version 2 and canonicalization 2.
+  version 2 and canonicalization 2. README.md says version 2 keeps version 1's keys,
+  constraints, indexes and triggers.
 
 ## Stable IDs and SQLite enforcement are live, not prepared (2026-10-10)
 

@@ -130,7 +130,7 @@ The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Re
 Schema version 1 (the first 2026.10 build) preserved every existing identifier,
 value, table and column, including Standard's all-TEXT SQLite profile, and added keys,
 constraints and lookup indexes, with HD's conditional SPN relation enforced by
-four triggers; version 2 keeps all of them. Writing connections must enable `PRAGMA foreign_keys=ON` before
+four triggers; version 2 keeps these keys, constraints, indexes and triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
 transactions; joined tables remain materialized snapshots. See
 [the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-2)
 for exact keys and runnable queries. I01's `probability_rank` meaning and ordering

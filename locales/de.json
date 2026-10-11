@@ -125,12 +125,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "0a907fb25789793a": {
-  "src": "{0} ranked fixes with editorial cost and labour estimates",
-  "t": "{0} priorisierte Reparaturen mit redaktionellen Kosten- und Arbeitszeitschätzungen",
-  "by": "claude-sonnet-5",
-  "at": "2026-09-21"
- },
  "0b43eeeb33175edd": {
   "src": "The flat view joining faults and fixes, one read for notebooks",
   "t": "Die flache Ansicht aus Fehlern und Reparaturen, ein einziger Lesevorgang für Notebooks"
@@ -630,6 +624,12 @@
   "t": "<0>Aktualisierung.</0> MechanicDB wird redaktionell gepflegt; diese Seite und ihre Diagramme werden mit jedem neuen Build neu erzeugt, die Zahlen bewegen sich also. Zitieren Sie das Build-Datum.",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
+ },
+ "390327794ed046d3": {
+  "src": "{0} ranked fixes with editorial cost and labour estimates where known",
+  "t": "{0} priorisierte Reparaturen mit redaktionellen Kosten- und Arbeitszeitschätzungen, soweit bekannt",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
  },
  "3958c456f29ff950": {
   "src": "Repair coverage",
@@ -1277,6 +1277,12 @@
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
+ "7e7c9bbdf473409a": {
+  "src": "Difficulty ratings &amp; HV/SRS safety",
+  "t": "Schwierigkeitsgrade &amp; Hochvolt-/SRS-Sicherheit",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
+ },
  "7ecb76f681fc1e54": {
   "src": "The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.",
   "t": "Die vorab verknüpfte Analyseansicht — Codes × Reparaturen in einer flachen Datei zum sofortigen Einlesen.",
@@ -1340,6 +1346,12 @@
   "t": "RecallDB Vehicle — NHTSA-Rückrufe für Fahrzeuge &amp; Ausrüstung, CSV + Parquet + SQLite",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "81d17027cd98e237": {
+  "src": "difficulty_level is an editorial tier assigned per fix (Easy DIY, Moderate DIY, Professional Required). It is not a safety classification: some DIY-rated procedures include an SRS step or a scan-tool relearn; follow the service manual's safety procedure whatever the rating. The {0} procedure is the first item of each code's authored consideration order, not a measured probability.",
+  "t": "difficulty_level ist eine redaktionelle Stufe, die je Reparatur vergeben wird (Easy DIY, Moderate DIY, Professional Required). Sie ist keine Sicherheitseinstufung: Einige als DIY eingestufte Verfahren enthalten einen Schritt am SRS oder einen Anlernvorgang mit dem Diagnosegerät; befolgen Sie unabhängig von der Einstufung das Sicherheitsverfahren aus dem Werkstatthandbuch. Das Verfahren {0} ist der erste Eintrag der redaktionell erstellten Prüfreihenfolge jedes Codes, keine gemessene Wahrscheinlichkeit.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
  },
  "81ddb0215ee4caf4": {
   "src": "Parts mappings",
@@ -1419,23 +1431,11 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
- "88383555e6b3037d": {
-  "src": "difficulty_level is assigned per fix by the editorial pipeline: Easy DIY (basic hand tools, no lifting or programming), Moderate DIY (specialty tools or partial disassembly), Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The {0} procedure is the first item of each code's authored consideration order, not a measured probability.",
-  "t": "difficulty_level wird jedem Reparaturverfahren durch den redaktionellen Prozess zugewiesen: einfache Eigenarbeit (grundlegendes Handwerkzeug, kein Anheben oder Programmieren), mittlere Eigenarbeit (Spezialwerkzeug oder teilweise Demontage), Fachbetrieb erforderlich (Programmierung, Hochspannung, SRS, Arbeiten im Getriebe- oder Motorinneren). Das Verfahren {0} ist der erste Eintrag der redaktionell erstellten Prüfreihenfolge jedes Codes, keine gemessene Wahrscheinlichkeit.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "8963d535bfaf4cd2": {
   "src": "The median fix is estimated at <0>{1} h</0> of labor across the {2} fixes that carry an estimate; {3} are {4} h or less and {5} are over {6} h, with a maximum of {7} h. By difficulty the medians are {8} h ({9}), {10} h ({11}) and {12} h ({13}).",
   "t": "Im Median wird eine Reparatur auf <0>{1} h</0> Arbeitszeit geschätzt, bezogen auf die {2} Reparaturen mit einer Schätzung; {3} dauern {4} h oder weniger und {5} über {6} h, maximal {7} h. Nach Schwierigkeit liegen die Mediane bei {8} h ({9}), {10} h ({11}) und {12} h ({13}).",
   "by": "I02",
   "at": "2026-10-11"
- },
- "8a30ea2d544eb2b1": {
-  "src": "DIY Safety &amp; High-Voltage Gate",
-  "t": "DIY-Sicherheits- &amp; Hochvolt-Sperre",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
  },
  "8ac7aa173f261d8b": {
   "src": "What you get",
