@@ -106,7 +106,7 @@ from the OBD-II Standard/OEM Complete tiers above (on sale since 2026-09-24, see
 [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) page). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
 WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
 short descriptions, fault families, explanations, ranked fixes and part mappings — currently **4,212
-fault pairs, 870 distinct SPNs, 16,998 ranked fixes and 5,904 part mappings across 10 OEMs and 16
+fault pairs, 870 distinct SPNs, 17,028 ranked fixes and 5,915 part mappings across 10 OEMs and 16
 official-host sources**, measured at build time. It follows the same physical conventions as the
 tables above: pipe-delimited CSV, `utf-8-sig`, no embedded `\r`/`\n` (replaced with ` • `), Parquet
 Snappy, one SQLite.

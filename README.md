@@ -4,7 +4,7 @@
 
 # 🔧 MechanicDB — Automotive OBD-II Diagnostic & Repair Database
 
-**15,886 verified trouble codes · 9,249 SAE + 6,637 OEM across 32 makes · 56,561 ranked repair procedures · 75,055 parts mappings · 647 authored fault families**
+**15,886 verified trouble codes · 9,249 SAE + 6,637 OEM across 32 makes · 56,673 ranked repair procedures · 75,055 parts mappings · 647 authored fault families**
 
 [![Sample License: ODbL v1.0](https://img.shields.io/badge/Sample_License-ODbL_v1.0-blue.svg)](https://opendatacommons.org/licenses/odbl/1-0/)
 [![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
@@ -33,7 +33,7 @@ This repository holds the **free, open developer samples**: 90 curated OBD-II co
 | — SAE-standard (universal) | **9,249** | 75 |
 | — OEM manufacturer-specific | **6,637** (32 makes) | 15 |
 | Authored fault families | **647** | (linked) |
-| Ranked repair procedures | **56,561** | 320 |
+| Ranked repair procedures | **56,673** | 320 |
 | Replacement-parts mappings | **75,055** | 449 |
 | Formats | CSV · Parquet · SQLite | CSV · Parquet |
 
@@ -74,8 +74,8 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 | Tier | What | Price |
 | :--- | :--- | :--- |
 | **Sample** | 90 codes (this repo + Kaggle) | Free |
-| **Standard** | 9,249 SAE codes · 32,767 fixes · 44,588 parts · CSV + Parquet + SQLite | **[$49](https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403)** one-time |
-| **OEM Complete** | Full merged dataset: 15,886 codes (+ 6,637 OEM across 32 makes) · 56,561 fixes · 75,055 parts | **[$149](https://buy.stripe.com/28EfZicVy0ECdM796w38404)** one-time |
+| **Standard** | 9,249 SAE codes · 32,797 fixes · 44,588 parts · CSV + Parquet + SQLite | **[$49](https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403)** one-time |
+| **OEM Complete** | Full merged dataset: 15,886 codes (+ 6,637 OEM across 32 makes) · 56,673 fixes · 75,055 parts | **[$149](https://buy.stripe.com/28EfZicVy0ECdM796w38404)** one-time |
 | **Fault & Recall bundle** | OEM Complete + [RecallDB Vehicle](https://recalldb.dataengineered.io/) (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite) + a bundle-only bulletin index (NHTSA service bulletins that cite each trouble code, with their vehicles) — instant downloads, one checkout | **[$179](https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h)** one-time · vs $198 separately |
 | **Heavy Duty (J1939)** | Standalone: SAE J1939 SPN+FMI fault pairs from published OEM fault tables (Eaton, WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) with ranked fixes and part mappings · CSV + Parquet + SQLite | $149 — [buy](https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j) · [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) · [100-fault free sample](samples/heavyduty/) · see [DATA_DICTIONARY.md](DATA_DICTIONARY.md), section 6 |
 

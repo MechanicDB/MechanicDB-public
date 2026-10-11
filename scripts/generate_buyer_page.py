@@ -16,7 +16,7 @@ carries neither "DTC" nor any format or download word.
 This page owns that cluster. Every figure in it is lifted from the claims
 already on the homepage, so nothing new is asserted:
   15,886 codes (9,249 SAE + 6,637 OEM across 32 makes), 647 fault
-  families, 56,561 ranked fixes, 75,055 parts mappings, four tables,
+  families, 56,673 ranked fixes, 75,055 parts mappings, four tables,
   CSV / Parquet / SQLite, $49 SAE and $149 OEM, 90-code free sample.
 
 The page sits at the repo root, the same depth as index.html, so the
@@ -58,7 +58,7 @@ SAMPLE_LABEL = "Free 90-code OBD-II sample"
 FORMAT_LABEL = {"text/csv": "CSV", "application/vnd.apache.parquet": "Parquet"}
 
 TITLE = "OBD-II DTC Database Download — CSV, Parquet, SQLite"
-DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 authored "
+DESC = ("15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,673 authored "
         "repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.")
 
 # Homepage title/meta: led with framing rather than with anything anyone types.
@@ -104,7 +104,7 @@ BODY = """
   <h1 style="max-width:20ch">The OBD-II trouble code database, as a file you can query.</h1>
 
   <p class="lede" style="max-width:66ch">
-    15,886 diagnostic trouble codes joined to 56,561 ranked repair procedures, delivered as
+    15,886 diagnostic trouble codes joined to 56,673 ranked repair procedures, delivered as
     pipe-delimited CSV, Apache Parquet or a SQLite database. Built for OBD apps, scan-tool
     firmware, AI mechanic co-pilots and shop software &mdash; not a website you have to scrape.
   </p>
@@ -119,7 +119,7 @@ BODY = """
   <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
     <tbody>
       <tr><td style="padding:9px 0"><b>15,886</b> trouble codes</td><td style="opacity:.75">9,249 SAE-standard (P0, P2, P34&ndash;P39, C0, B0, U0, U3) + 6,637 manufacturer-specific across 32 makes</td></tr>
-      <tr><td style="padding:9px 0"><b>56,561</b> ordered procedures</td><td style="opacity:.75">3&ndash;5 per code in authored consideration order, conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours</td></tr>
+      <tr><td style="padding:9px 0"><b>56,673</b> ordered procedures</td><td style="opacity:.75">3&ndash;5 per code in authored consideration order, conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours</td></tr>
       <tr><td style="padding:9px 0"><b>75,055</b> parts mappings</td><td style="opacity:.75">Aftermarket part names per fix, with catalog search URLs</td></tr>
       <tr><td style="padding:9px 0"><b>647</b> fault families</td><td style="opacity:.75">Authored groupings that make the corpus navigable rather than a flat code list</td></tr>
     </tbody>
@@ -129,7 +129,7 @@ BODY = """
   <h2 style="margin-top:44px">Formats</h2>
   <p style="max-width:66ch;opacity:.85">
     Every tier ships all three. Pipe-delimited <b>CSV</b> (UTF-8 BOM, Excel-safe).
-    <b>Apache Parquet</b> with Snappy compression &mdash; a measured 92.0% smaller.
+    <b>Apache Parquet</b> with Snappy compression &mdash; a measured 92.5% smaller.
     A <b>SQLite</b> database carrying all four tables with the join chain intact.
   </p>
 
@@ -141,9 +141,9 @@ BODY = """
       <th style="padding:0 12px 8px 0">Table</th><th style="padding:0 12px 8px 0">Rows</th><th style="padding:0 0 8px">Holds</th></tr></thead>
     <tbody>
       <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15,886</td><td>Definition, system category, OEM flag and make, fault family, technical explanation</td></tr>
-      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours, steps</td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,673</td><td>Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours, steps</td></tr>
       <tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75,055</td><td>Aftermarket part names per fix, with catalog search URLs</td></tr>
-      <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56,561</td><td>The flat analytical view &mdash; all 16 columns, one <code>read_csv</code> / <code>read_parquet</code></td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56,673</td><td>The flat analytical view &mdash; all 16 columns, one <code>read_csv</code> / <code>read_parquet</code></td></tr>
     </tbody>
   </table>
   </div>

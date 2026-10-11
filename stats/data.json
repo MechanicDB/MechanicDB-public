@@ -1,8 +1,8 @@
 {
  "dataset": "MechanicDB",
  "page": "https://mechanicdb.dataengineered.io/stats/",
- "generated": "2026-10-08",
- "build": "2026-07-13",
+ "generated": "2026-10-11",
+ "build": "2026-10-11",
  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) - attribute with a link to the page",
  "note": "Catalogue statistics: nothing here measures how often a code is set on real vehicles. Costs and labor hours are editorial estimates, not quotes.",
  "totals": {
@@ -11,7 +11,7 @@
   "oem_codes": 6637,
   "makes": 32,
   "families": 647,
-  "fixes": 56561,
+  "fixes": 56673,
   "parts": 75055,
   "distinct_code_strings": 10047
  },
@@ -398,13 +398,18 @@
    },
    {
     "fixes": 4,
-    "codes": 8139,
-    "share_pct": 51.2
+    "codes": 8083,
+    "share_pct": 50.9
    },
    {
     "fixes": 5,
     "codes": 382,
     "share_pct": 2.4
+   },
+   {
+    "fixes": 6,
+    "codes": 56,
+    "share_pct": 0.4
    }
   ],
   "top_rank1_fix_titles": [
@@ -462,7 +467,7 @@
   "all_fixes": [
    {
     "level": "Easy DIY",
-    "fixes": 15025,
+    "fixes": 15081,
     "share_pct": 26.6
    },
    {
@@ -472,7 +477,7 @@
    },
    {
     "level": "Professional Required",
-    "fixes": 19290,
+    "fixes": 19346,
     "share_pct": 34.1
    }
   ],
@@ -496,10 +501,10 @@
   "by_system": [
    {
     "system": "Powertrain",
-    "fixes": 48961,
-    "easy_diy": 13658,
+    "fixes": 49073,
+    "easy_diy": 13714,
     "moderate_diy": 19471,
-    "professional_required": 15832
+    "professional_required": 15888
    },
    {
     "system": "Chassis",
@@ -525,14 +530,14 @@
   ]
  },
  "parts_cost_usd": {
-  "fixes_with_range": 56561,
+  "fixes_with_range": 56673,
   "groups": [
    {
     "group": "All procedures",
-    "fixes": 56561,
+    "fixes": 56673,
     "median_min": 15.0,
     "median_max": 60.0,
-    "mean_max": 184.0,
+    "mean_max": 183.6,
     "median_labor": 0.8
    },
    {
@@ -540,15 +545,15 @@
     "fixes": 15886,
     "median_min": 8.0,
     "median_max": 25.0,
-    "mean_max": 34.7,
+    "mean_max": 34.6,
     "median_labor": 0.4
    },
    {
     "group": "Easy DIY",
-    "fixes": 15025,
+    "fixes": 15081,
     "median_min": 6.0,
     "median_max": 25.0,
-    "mean_max": 30.3,
+    "mean_max": 30.2,
     "median_labor": 0.4
    },
    {
@@ -561,19 +566,19 @@
    },
    {
     "group": "Professional Required",
-    "fixes": 19290,
+    "fixes": 19346,
     "median_min": 40.0,
     "median_max": 200.0,
-    "mean_max": 393.3,
+    "mean_max": 392.2,
     "median_labor": 1.5
    }
   ],
   "by_system": [
    {
     "system": "Powertrain",
-    "fixes": 48961,
+    "fixes": 49073,
     "median_min": 15.0,
-    "median_max": 63.0,
+    "median_max": 60.0,
     "median_labor": 0.8
    },
    {
@@ -601,8 +606,8 @@
   "upper_estimate_buckets": [
    {
     "bucket": "under $50",
-    "fixes": 21394,
-    "share_pct": 37.8
+    "fixes": 21506,
+    "share_pct": 37.9
    },
    {
     "bucket": "$50 to $99",
@@ -675,23 +680,23 @@
   ]
  },
  "labor_hours": {
-  "fixes_with_estimate": 56561,
+  "fixes_with_estimate": 56449,
   "median": 0.8,
   "max": 10.0,
   "buckets": [
    {
     "bucket": "0.5 h or less",
-    "fixes": 16536,
+    "fixes": 16480,
     "share_pct": 29.2
    },
    {
     "bucket": "0.6 to 1.0 h",
     "fixes": 18228,
-    "share_pct": 32.2
+    "share_pct": 32.3
    },
    {
     "bucket": "1.1 to 2.0 h",
-    "fixes": 19126,
+    "fixes": 19070,
     "share_pct": 33.8
    },
    {
@@ -723,18 +728,18 @@
  "parts": {
   "mappings": 75055,
   "distinct_items": 1250,
-  "mean_per_fix": 1.33,
-  "fixes_without_mapping": 0,
+  "mean_per_fix": 1.32,
+  "fixes_without_mapping": 112,
   "per_fix": [
    {
     "parts": 1,
     "fixes": 38434,
-    "share_pct": 68.0
+    "share_pct": 67.8
    },
    {
     "parts": 2,
     "fixes": 17760,
-    "share_pct": 31.4
+    "share_pct": 31.3
    },
    {
     "parts": 3,

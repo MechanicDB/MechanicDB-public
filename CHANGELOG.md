@@ -25,7 +25,7 @@ values. The three estimate columns may now be NULL: `parts_cost_status` is `esti
 - Three proof families exercise `none_required`, unknown parts cost, unknown labor, a split
   and a retirement. No new cost or labor numbers: each is carried unchanged from the base row
   it described, or is 0/0 or NULL.
-- Counts: re-synced in the same release (see claims.json).
+- Counts: re-synced from the rebuilt tables (claims.json). Standard fixes 32,767 -> 32,797 (parts 44,588 unchanged); OEM fixes 56,561 -> 56,673 (parts 75,055 unchanged); Heavy Duty fixes 16,998 -> 17,028 and parts 5,904 -> 5,915. Code counts unchanged (9,249 / 15,886; HD 4,212 faults). Parquet reduction 92.5%.
 - Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
   version 2 and canonicalization 2.
 
