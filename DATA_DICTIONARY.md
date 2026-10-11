@@ -302,8 +302,8 @@ from `action_type` with the `labor_kind_by_action` map in `cost_metadata.json`.
 ## 7. SQLite enforcement — schema version 2
 
 This contract applies to the snapshots this build writes (`PRAGMA user_version = 2`; version 1 shipped in the first 2026.10 build; version 2 ships from this release, identified by `data_release_id`).
-The four OBD-II and six Heavy Duty tables, existing column order, identifiers and values are
-unchanged from version 1. Standard keeps **all columns TEXT**, including IDs, rank and estimates;
+The four OBD-II and six Heavy Duty tables, existing column order and identifiers are
+unchanged from version 1; values change only in reviewed families (see "Version 2 changes"). Standard keeps **all columns TEXT**, including IDs, rank and estimates;
 OEM Complete and Heavy Duty retain INTEGER/REAL storage for numeric fields.
 CSV and Parquet gain the same five appended columns (estimates are null only when their status is `unknown`); `ordering_metadata.json` is unchanged.
 
@@ -392,7 +392,7 @@ different SQLite or ZIP compression versions.
 
 ### Version 2 changes
 
-- **Five appended columns.** `diagnostic_fixes` and both joined views gain `action_type`, `parts_cost_status`, `labor_status`, `cost_basis_id` and `procedure_rationale`, in that order after `step_by_step_instructions`. Existing columns keep their names, order and values. A file with `PRAGMA user_version = 1` predates them.
+- **Five appended columns.** `diagnostic_fixes` and both joined views gain `action_type`, `parts_cost_status`, `labor_status`, `cost_basis_id` and `procedure_rationale`, in that order after `step_by_step_instructions`. Existing columns keep their names and order. Unreviewed rows keep their values; rows in reviewed families (non-NULL `action_type`) may change title, rank, steps and estimates, and keep their IDs. A file with `PRAGMA user_version = 1` predates them.
 - **Nullable cost and labor.** `est_parts_cost_min_usd`, `est_parts_cost_max_usd`, `est_labor_hours`, `action_type` and `procedure_rationale` may be NULL; `parts_cost_status`, `labor_status` and `cost_basis_id` are NOT NULL. Standard stays all TEXT and stores an empty string in a nullable field as NULL.
 - **CHECKs.** `action_type` is NULL or one of the seven actions; `parts_cost_status` is `estimated`, `none_required` or `unknown`; `labor_status` is `estimated` or `unknown`; `cost_basis_id` equals the profile's basis (`obd-editorial-us-aftermarket-v1` for Standard and OEM Complete, `hd-editorial-us-independent-shop-v1` for Heavy Duty). `unknown` requires NULL costs; `none_required` requires `0` / `0`; `estimated` requires non-NULL costs with `min <= max` and, for OBD, `max > 0`. A NULL result of any of these checks fails.
 - **Labor bounds.** `unknown` requires NULL hours; `estimated` requires hours of 0.1–20 for OBD and >= 0 for HD.

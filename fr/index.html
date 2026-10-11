@@ -818,7 +818,7 @@
 <div class="wrap">
 <span class="stamp">Sect. 00 · Référence diagnostic</span>
 <h1>Chaque voyant moteur, <em>décodé et chiffré.</em></h1>
-<p class="lede">Conçu pour les applications OBD, les firmwares d'outils de diagnostic, les copilotes IA pour mécaniciens et les logiciels d'atelier : 56 729 procédures de réparation classées — chacune avec un niveau de difficulté DIY, une fourchette de coût des pièces et une estimation de main-d'œuvre — rattachées à 15 886 codes défaut OBD-II vérifiés (9 249 de la norme SAE plus 6 637 propres aux constructeurs sur 32 marques). Les listes de codes gratuites s'arrêtent à la définition ; MechanicDB commence là.</p>
+<p class="lede">Conçu pour les applications OBD, les firmwares d'outils de diagnostic, les copilotes IA pour mécaniciens et les logiciels d'atelier : 56 729 procédures de réparation classées — chacune avec un niveau de difficulté DIY et une fourchette de coût des pièces, ainsi qu'une estimation de main-d'œuvre lorsqu'elle existe — rattachées à 15 886 codes défaut OBD-II vérifiés (9 249 de la norme SAE plus 6 637 propres aux constructeurs sur 32 marques). Les listes de codes gratuites s'arrêtent à la définition ; MechanicDB commence là.</p>
 <div class="cta-row">
 <!-- BEGIN:buyer-link --><a class="btn btn-ghost" href="/fr/obd2-dtc-database">Obtenir la base de données — CSV, Parquet, SQLite</a><!-- END:buyer-link -->
 <a class="btn btn-amber" href="#licensing">Acheter la licence du jeu de données complet</a>
@@ -878,7 +878,7 @@
 <div class="wrap">
 <span class="stamp">Sect. 01 · Contenu</span>
 <h2 class="sec-title">Quatre tables relationnelles, une seule chaîne de clés de jointure</h2>
-<p class="sec-lede">Normalisé pour les bases de données, préjoint pour les notebooks. Chaque code comporte 3–5 procédures dans un ordre d’examen rédigé (jusqu’à 8 dans les familles révisées) ; leur exécution dépend des prérequis et des constatations du diagnostic. Les procédures de réparation sont associées à des pièces de rechange ; les étapes de diagnostic ne mentionnent aucune pièce.</p>
+<p class="sec-lede">Normalisé pour les bases de données, préjoint pour les notebooks. Chaque code comporte 3–5 procédures dans un ordre d’examen rédigé (jusqu’à 8 dans les familles révisées) ; leur exécution dépend des prérequis et des constatations du diagnostic. Les procédures de réparation sont associées à des pièces de rechange ; dans les familles révisées, les étapes de diagnostic ne mentionnent aucune pièce.</p>
 <div class="schema-strip">
 <div class="table-card">
 <h3 translate="no">dtc_codes</h3>
@@ -890,7 +890,7 @@
 <h3 translate="no">diagnostic_fixes</h3>
 <div class="rows">56 729 lignes</div>
 <p>Procédures de réparation rédigées avec ordre d’examen, niveau de difficulté, fourchette du coût des pièces, heures de main-d’œuvre et instructions détaillées.</p>
-<ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
+<ul><li><span translate="no">probability_rank</span> 1–7</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
 </div>
 <div class="table-card">
 <h3 translate="no">replacement_parts</h3>
@@ -902,7 +902,7 @@
 <h3 translate="no">dtc_fixes_joined</h3>
 <div class="rows">56 729 lignes</div>
 <p>La vue analytique pré-jointe — codes × réparations dans un seul fichier plat pour une ingestion immédiate.</p>
-<ul><li>les 16 colonnes</li><li>un seul <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
+<ul><li>les 21 colonnes</li><li>un seul <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
 </div>
 </div>
 <p class="join-note">chaîne de jointure : <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
@@ -919,7 +919,7 @@
 <tr><th scope="row">Connaissances de réparation</th><td><b>647</b> familles de pannes rédigées → <b>56 729</b> procédures ordonnées → <b>75 055</b> associations de pièces. <code>probability_rank</code> est un ancien nom de champ pris en charge pour l’ordre d’examen, et non pour la probabilité, la réussite, la gravité ou le coût. Niveaux de difficulté : bricolage facile / bricolage modéré / professionnel requis. <a href="/ordering_metadata.json">Contexte de l’ordre</a>.</td></tr>
 <tr><th scope="row">Formats de livraison</th><td>CSV délimité par des barres verticales (UTF-8 BOM, compatible Excel) · Apache Parquet, Snappy — <b>92,5%</b> plus léger (mesuré) · base de données SQLite, les quatre tables.</td></tr>
 <tr><th scope="row">Contrôles qualité</th><td>Build déterministe verrouillé par des tests : intégrité référentielle, contrôles d'unicité anti-modèles et un verrou contre les codes inventés — chaque code publié remonte à la source versionnée.</td></tr>
-<tr><th scope="row">Cadre de sécurité</th><td>Les procédures haute tension commencent par la consignation et la vérification d'absence de tension ; les interventions sur le SRS exigent de débrancher la batterie et d'attendre la décharge du condensateur. Les étapes dangereuses ne sont jamais classées DIY.</td></tr>
+<tr><th scope="row">Cadre de sécurité</th><td>Les procédures haute tension commencent par la consignation et la vérification d'absence de tension ; les interventions sur le SRS exigent de débrancher la batterie et d'attendre la décharge du condensateur. Quel que soit le niveau de difficulté d'une procédure, suivez la procédure de sécurité du manuel d'atelier pour toute étape touchant au SRS ou à la haute tension.</td></tr>
 <tr><th scope="row">Provenance</th><td>Définitions de codes compilées à partir de sources publiques SAE J2012-derived (sous licence MIT, attribution conservée). Les procédures, niveaux de difficulté et coûts sont des contenus originaux rédigés.</td></tr>
 </table>
 </div>

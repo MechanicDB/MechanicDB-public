@@ -818,7 +818,7 @@
 <div class="wrap">
 <span class="stamp">Abschn. 00 · Diagnose-Referenz</span>
 <h1>Jede Motorkontrollleuchte, <em>entschlüsselt und mit Kosten.</em></h1>
-<p class="lede">Gebaut für OBD-Apps, Diagnosegeräte-Firmware, KI-Assistenten für Mechaniker und Werkstattsoftware: 56.729 priorisierte Reparaturverfahren – jeweils mit DIY-Schwierigkeitsgrad, Teilekostenspanne und Arbeitszeitschätzung – verknüpft mit 15.886 verifizierten OBD-II-Fehlercodes (9.249 nach SAE-Standard plus 6.637 herstellerspezifische aus 32 Marken). Kostenlose Codelisten enden bei der Definition; MechanicDB beginnt dort.</p>
+<p class="lede">Gebaut für OBD-Apps, Diagnosegeräte-Firmware, KI-Assistenten für Mechaniker und Werkstattsoftware: 56.729 priorisierte Reparaturverfahren – jeweils mit DIY-Schwierigkeitsgrad und Teilekostenspanne, dazu eine Arbeitszeitschätzung, wo eine vorliegt – verknüpft mit 15.886 verifizierten OBD-II-Fehlercodes (9.249 nach SAE-Standard plus 6.637 herstellerspezifische aus 32 Marken). Kostenlose Codelisten enden bei der Definition; MechanicDB beginnt dort.</p>
 <div class="cta-row">
 <!-- BEGIN:buyer-link --><a class="btn btn-ghost" href="/de/obd2-dtc-database">Datenbank erhalten — CSV, Parquet, SQLite</a><!-- END:buyer-link -->
 <a class="btn btn-amber" href="#licensing">Vollständigen Datensatz lizenzieren</a>
@@ -878,7 +878,7 @@
 <div class="wrap">
 <span class="stamp">Abschn. 01 · Inhalt</span>
 <h2 class="sec-title">Vier relationale Tabellen, eine Schlüsselkette für Joins</h2>
-<p class="sec-lede">Für Datenbanken normalisiert, für Notebooks vorverknüpft. Jeder Code enthält 3–5 Verfahren in redaktionell erstellter Prüfreihenfolge (bis zu 8 in überprüften Familien); die Ausführung hängt von Voraussetzungen und Diagnosebefunden ab. Reparaturverfahren sind Zubehörteilen zugeordnet; Diagnoseschritte führen keine Teile auf.</p>
+<p class="sec-lede">Für Datenbanken normalisiert, für Notebooks vorverknüpft. Jeder Code enthält 3–5 Verfahren in redaktionell erstellter Prüfreihenfolge (bis zu 8 in überprüften Familien); die Ausführung hängt von Voraussetzungen und Diagnosebefunden ab. Reparaturverfahren sind Ersatzteilen aus dem freien Markt zugeordnet; in überprüften Familien führen Diagnoseschritte keine Teile auf.</p>
 <div class="schema-strip">
 <div class="table-card">
 <h3 translate="no">dtc_codes</h3>
@@ -890,7 +890,7 @@
 <h3 translate="no">diagnostic_fixes</h3>
 <div class="rows">56.729 Zeilen</div>
 <p>Redaktionell erstellte Reparaturverfahren mit Prüfreihenfolge, Schwierigkeitsstufe, Teilekostenspanne, Arbeitsstunden und Schritt-für-Schritt-Anleitungen.</p>
-<ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> Min./Max. USD</li></ul>
+<ul><li><span translate="no">probability_rank</span> 1–7</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> Min./Max. USD</li></ul>
 </div>
 <div class="table-card">
 <h3 translate="no">replacement_parts</h3>
@@ -902,7 +902,7 @@
 <h3 translate="no">dtc_fixes_joined</h3>
 <div class="rows">56.729 Zeilen</div>
 <p>Die vorab verknüpfte Analyseansicht — Codes × Reparaturen in einer flachen Datei zum sofortigen Einlesen.</p>
-<ul><li>alle 16 Spalten</li><li>ein einziges <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
+<ul><li>alle 21 Spalten</li><li>ein einziges <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
 </div>
 </div>
 <p class="join-note">Join-Kette: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
@@ -919,7 +919,7 @@
 <tr><th scope="row">Reparaturwissen</th><td><b>647</b> redaktionell erstellte Fehlerfamilien → <b>56.729</b> geordnete Verfahren → <b>75.055</b> Teilezuordnungen. <code>probability_rank</code> ist ein unterstützter älterer Feldname für die Prüfreihenfolge, nicht für Wahrscheinlichkeit, Erfolg, Schweregrad oder Kosten. Schwierigkeitsstufen: einfache Eigenarbeit / mittlere Eigenarbeit / Fachbetrieb erforderlich. <a href="/ordering_metadata.json">Kontext der Reihenfolge</a>.</td></tr>
 <tr><th scope="row">Lieferformate</th><td>CSV mit Pipe-Trennzeichen (UTF-8 BOM, Excel-tauglich) · Apache Parquet, Snappy — gemessen <b>92,5%</b> kleiner · SQLite-Datenbank mit allen vier Tabellen.</td></tr>
 <tr><th scope="row">Qualitätsprüfungen</th><td>Deterministischer, testgesicherter Build: referenzielle Integrität, Eindeutigkeitsprüfungen gegen Textvorlagen und eine Sperre gegen erfundene Codes — jeder veröffentlichte Code lässt sich auf die eingecheckte Quelle zurückführen.</td></tr>
-<tr><th scope="row">Sicherheitsrahmen</th><td>Hochvolt-Verfahren beginnen mit Freischaltung und Prüfung der Spannungsfreiheit; Arbeiten am SRS erfordern das Abklemmen der Batterie und das Abwarten der Kondensatorentladung. Gefährliche Schritte werden nie als DIY eingestuft.</td></tr>
+<tr><th scope="row">Sicherheitsrahmen</th><td>Hochvolt-Verfahren beginnen mit Freischaltung und Prüfung der Spannungsfreiheit; Arbeiten am SRS erfordern das Abklemmen der Batterie und das Abwarten der Kondensatorentladung. Unabhängig vom Schwierigkeitsgrad eines Verfahrens befolgen Sie bei jedem Schritt am SRS oder am Hochvoltsystem das Sicherheitsverfahren aus dem Werkstatthandbuch.</td></tr>
 <tr><th scope="row">Herkunft</th><td>Codedefinitionen zusammengestellt aus öffentlichen SAE-J2012-derived-Quellen (MIT-lizenziert, Namensnennung beibehalten). Verfahren, Schwierigkeitsgrade und Kosten sind eigenständig erstellte Inhalte.</td></tr>
 </table>
 </div>

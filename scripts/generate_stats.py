@@ -334,7 +334,7 @@ def build_page(s, charts):
         table(["Labor estimate", "Fixes", "Share"], [(lbl, n(c), f"{p}%") for lbl, c, p in lb], {1, 2})
         + "<h3>Median labor by difficulty</h3>"
         + table(["Difficulty", "Median labor"], [(d, hours(v)) for d, v in lbd], {1}),
-        f"est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {pct(s['fixes_with_labor'], s['fixes'])}% of fixes; diagnostic procedures carry their own estimate, or none when it is unknown; see parts_cost_status and labor_status."))
+        f"est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {pct(s['fixes_with_labor'], s['fixes'])}% of fixes; fixes without an estimate have labor_status unknown; see parts_cost_status and labor_status."))
 
     # 8. parts
     tp = s["top_parts"]

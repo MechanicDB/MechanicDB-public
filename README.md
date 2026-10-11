@@ -50,7 +50,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 
 ## How the content is built (the honest part)
 
-- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 parts per procedure; diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
+- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 parts per procedure; in reviewed families, diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
 - **Costs and labor are editorial estimates** for typical US aftermarket parts and independent-shop labor — not quotes, not scraped prices.
 - **OEM rows are per-marque, exactly as sourced.** Makes that share engineering platforms (GM's seven marques, Ford/Mercury/Lincoln, Honda/Acura, …) legitimately share many definitions; rows are kept per marque so `oem_make = 'Buick'` returns complete results. Disclosed in detail in [SOURCES.md](SOURCES.md).
 - **Make-level, not model/year-level.** OEM coverage is per manufacturer; the dataset does not claim model- or model-year-specific applicability.
@@ -127,10 +127,10 @@ The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Re
 
 ## SQLite enforcement (I05, since edition 2026.10)
 
-Schema version 1 preserves every existing identifier, value,
-table and column, including Standard's all-TEXT SQLite profile. It adds keys,
+Schema version 1 (the first 2026.10 build) preserved every existing identifier,
+value, table and column, including Standard's all-TEXT SQLite profile, and added keys,
 constraints and lookup indexes, with HD's conditional SPN relation enforced by
-four triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
+four triggers; version 2 keeps all of them. Writing connections must enable `PRAGMA foreign_keys=ON` before
 transactions; joined tables remain materialized snapshots. See
 [the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-2)
 for exact keys and runnable queries. I01's `probability_rank` meaning and ordering

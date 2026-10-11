@@ -2,8 +2,9 @@
 
 Five columns are appended to `diagnostic_fixes` and both joined views, after
 `step_by_step_instructions`: `action_type`, `parts_cost_status`, `labor_status`,
-`cost_basis_id` and `procedure_rationale`. Existing columns keep their names, order and
-values. The three estimate columns may now be NULL: `parts_cost_status` is `estimated`,
+`cost_basis_id` and `procedure_rationale`. Existing columns keep their names and order;
+unreviewed rows keep their values, while rows in the three reviewed families changed title,
+rank, steps or estimates (IDs kept). The three estimate columns may now be NULL: `parts_cost_status` is `estimated`,
 `none_required` (both values 0, no part rows) or `unknown` (NULL); `labor_status` is
 `estimated` or `unknown` (NULL hours). Unreviewed rows keep their estimates, with
 `action_type` and `procedure_rationale` empty.
@@ -22,6 +23,8 @@ values. The three estimate columns may now be NULL: `parts_cost_status` is `esti
   are unchanged.
 - D10: Heavy Duty fixes at 0/0 with no part rows (60 curated procedures, 1,495 delivered rows)
   are `none_required`; HD 0/0 rows that list a part stay `estimated`.
+- Heavy Duty order: in the source-address-conflict family, the conditional reconfiguration
+  step is delivered directly after the check that gates it, in every fault.
 - Three proof families exercise `none_required`, unknown parts cost, unknown labor, a split
   and a retirement. No new cost or labor numbers: each is carried unchanged from the base row
   it described, or is 0/0 or NULL.
@@ -30,8 +33,12 @@ values. The three estimate columns may now be NULL: `parts_cost_status` is `esti
   -> 17,047 and parts 5,904 -> 5,915. Code counts unchanged (9,249 / 15,886; HD 4,212 faults).
   Parquet reduction 92.5%.
 - Shopfront wording: "3–5 procedures per code" now adds "up to 8 in reviewed families" and
-  that diagnostic steps list no parts; the stats page counts fixes with no part rows in its
+  that diagnostic steps in those families list no parts; labor estimates are described as
+  present where one exists; the stats page counts fixes with no part rows in its
   parts-per-fix shares and calls recorded zeros parts-cost values, not estimates.
+- Safety framing (homepage): "Hazardous steps are never rated DIY" is withdrawn, because some
+  DIY-rated procedures include an SRS step; the cell now says to follow the service manual's
+  safety procedure for any SRS or high-voltage step, whatever the difficulty rating.
 - Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
   version 2 and canonicalization 2.
 

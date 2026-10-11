@@ -589,7 +589,7 @@
   <div class="wrap">
     <span class="stamp">Sec 00 · Diagnostic Reference</span>
     <h1>Every check-engine light, <em>decoded and costed.</em></h1>
-    <p class="lede">Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: 56,729 ranked repair procedures — each with a DIY difficulty rating, a parts-cost range and a labor estimate — attached to 15,886 verified OBD-II trouble codes (9,249 SAE-standard plus 6,637 manufacturer-specific across 32 makes). Free code lists stop at the definition; MechanicDB starts there.</p>
+    <p class="lede">Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: 56,729 ranked repair procedures — each with a DIY difficulty rating and a parts-cost range, plus a labor estimate where one exists — attached to 15,886 verified OBD-II trouble codes (9,249 SAE-standard plus 6,637 manufacturer-specific across 32 makes). Free code lists stop at the definition; MechanicDB starts there.</p>
     <div class="cta-row">
   <!-- BEGIN:buyer-link --><a href="/obd2-dtc-database" class="btn btn-ghost">Get the database &mdash; CSV, Parquet, SQLite</a><!-- END:buyer-link -->
       <a class="btn btn-amber" href="#licensing">License the full dataset</a>
@@ -653,7 +653,7 @@
   <div class="wrap">
     <span class="stamp">Sec 01 · What's inside</span>
     <h2 class="sec-title">Four relational tables, one join key chain</h2>
-    <p class="sec-lede">Normalized for databases, pre-joined for notebooks. Every code carries 3–5 procedures in authored consideration order (up to 8 in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; diagnostic steps list no parts.</p>
+    <p class="sec-lede">Normalized for databases, pre-joined for notebooks. Every code carries 3–5 procedures in authored consideration order (up to 8 in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; in reviewed families, diagnostic steps list no parts.</p>
     <div class="schema-strip">
       <div class="table-card">
         <h3 translate="no">dtc_codes</h3>
@@ -665,7 +665,7 @@
         <h3 translate="no">diagnostic_fixes</h3>
         <div class="rows">56,729 rows</div>
         <p>Authored repair procedures with consideration order, difficulty tier, parts-cost range, labor hours, and step-by-step instructions.</p>
-        <ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
+        <ul><li><span translate="no">probability_rank</span> 1–7</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
       </div>
       <div class="table-card">
         <h3 translate="no">replacement_parts</h3>
@@ -677,7 +677,7 @@
         <h3 translate="no">dtc_fixes_joined</h3>
         <div class="rows">56,729 rows</div>
         <p>The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.</p>
-        <ul><li>all 16 columns</li><li>one <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
+        <ul><li>all 21 columns</li><li>one <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
       </div>
     </div>
     <p class="join-note">join chain: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
@@ -695,7 +695,7 @@
         <tr><th scope="row">Repair intelligence</th><td><b>647</b> authored fault families → <b>56,729</b> ordered procedures → <b>75,055</b> parts mappings. <code>probability_rank</code> is a supported legacy field name for consideration order, not probability, success, severity or cost. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required. <a href="/ordering_metadata.json">Ordering context</a>.</td></tr>
         <tr><th scope="row">Delivery formats</th><td>Pipe-delimited CSV (UTF-8 BOM, Excel-safe) · Apache Parquet, Snappy — a measured <b>92.5%</b> smaller · SQLite database, all four tables.</td></tr>
         <tr><th scope="row">Quality gates</th><td>Deterministic, test-gated build: referential integrity, anti-template uniqueness checks, and a no-fabricated-codes gate — every published code traces to the committed source.</td></tr>
-        <tr><th scope="row">Safety framing</th><td>High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Hazardous steps are never rated DIY.</td></tr>
+        <tr><th scope="row">Safety framing</th><td>High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Whatever a procedure's difficulty rating, follow the service manual's safety procedure for any SRS or high-voltage step.</td></tr>
         <tr><th scope="row">Provenance</th><td>Code definitions compiled from public SAE J2012-derived sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.</td></tr>
       </table>
     </div>

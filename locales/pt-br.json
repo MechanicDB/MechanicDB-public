@@ -83,6 +83,10 @@
   "src": "Sample rows",
   "t": "Linhas de amostra"
  },
+ "04ec6c403f4a12e3": {
+  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order (up to {1} in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; in reviewed families, diagnostic steps list no parts.",
+  "t": "Normalizado para bancos de dados, pré-associado para notebooks. Cada código contém {0} procedimentos em uma ordem de consideração elaborada pela equipe (até {1} nas famílias revisadas); a execução depende dos pré-requisitos e dos achados do diagnóstico. Os procedimentos de reparo são associados a peças de reposição; nas famílias revisadas, as etapas de diagnóstico não listam peças."
+ },
  "05a977c661b24ce2": {
   "src": "est_parts_cost_min_usd and est_parts_cost_max_usd are the dataset's editorial aftermarket parts estimates in US dollars at build time; they are not quotes, exclude labor and vary by vehicle and region. Medians are computed over fixes, so a family with {0} codes weighs {1} times. Compare groups within this page, not against a shop invoice.",
   "t": "est_parts_cost_min_usd e est_parts_cost_max_usd são as estimativas editoriais do conjunto de dados para peças de reposição do mercado independente, em dólares americanos na data do build; não são orçamentos, excluem a mão de obra e variam conforme o veículo e a região. As medianas são calculadas sobre os reparos, então uma família com {0} códigos pesa {1} vezes. Compare grupos dentro desta página, não com uma nota de oficina.",
@@ -155,6 +159,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "0d1f1571660cb6cd": {
+  "src": "High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Whatever a procedure's difficulty rating, follow the service manual's safety procedure for any SRS or high-voltage step.",
+  "t": "Procedimentos de alta tensão começam com bloqueio e verificação de ausência de tensão; trabalhos no SRS exigem desconectar a bateria e aguardar a descarga do capacitor. Seja qual for a classificação de dificuldade de um procedimento, siga o procedimento de segurança do manual de serviço em qualquer etapa de SRS ou de alta tensão."
+ },
  "0d23ab8b6de00e13": {
   "src": "Repair intelligence",
   "t": "Inteligência de reparo",
@@ -224,12 +232,6 @@
   "t": "{0} h",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "13e0303472cd4c1b": {
-  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order (up to {1} in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; diagnostic steps list no parts.",
-  "t": "Normalizado para bancos de dados, pré-associado para notebooks. Cada código contém {0} procedimentos em uma ordem de consideração elaborada pela equipe (até {1} nas famílias revisadas); a execução depende dos pré-requisitos e dos achados do diagnóstico. Os procedimentos de reparo são associados a peças de reposição; as etapas de diagnóstico não listam peças.",
-  "by": "I02",
-  "at": "2026-10-11"
  },
  "13ff097d8b36850e": {
   "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents across {3} manufacturers, each mapped to an authored fault family with {4} authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
@@ -306,12 +308,6 @@
   "t": "todas as {0} colunas",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "17ffc2febe8a4fb7": {
-  "src": "{0} per code in authored consideration order (up to {1} in reviewed families; diagnostic steps list no parts), conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours",
-  "t": "{0} por código em uma ordem de consideração elaborada pela equipe (até {1} nas famílias revisadas; as etapas de diagnóstico não listam peças) e condicionada a pré-requisitos e achados, com nível de dificuldade, faixa de custo de peças e horas de mão de obra",
-  "by": "I02",
-  "at": "2026-10-11"
  },
  "1907a9f0778aea59": {
   "src": "Choose a trouble code",
@@ -557,12 +553,6 @@
   "src": "{0} {1} Fault Codes — {2} Fault Pairs | MechanicDB",
   "t": "Códigos de falha {1} da {0} — {2} pares de falha | MechanicDB"
  },
- "2a2f04e0e58eb1a3": {
-  "src": "Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: {0} ranked repair procedures — each with a DIY difficulty rating, a parts-cost range and a labor estimate — attached to {1} verified OBD-II trouble codes ({2} SAE-standard plus {3} manufacturer-specific across {4} makes). Free code lists stop at the definition; MechanicDB starts there.",
-  "t": "Feito para apps OBD, firmware de scanners, copilotos mecânicos com IA e software de oficina: {0} procedimentos de reparo classificados — cada um com classificação de dificuldade para quem faz por conta própria, faixa de custo de peças e estimativa de mão de obra — vinculados a {1} códigos de falha OBD-II verificados ({2} padrão SAE mais {3} específicos de fabricante em {4} marcas). Listas de códigos gratuitas param na definição; o MechanicDB começa aí.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "2a783b65f05fae03": {
   "src": "Repair cost estimates",
   "t": "Estimativas de custo de reparo",
@@ -640,6 +630,10 @@
   "t": "Código OBD-II {0}: {1}. O que o módulo {2} detecta, o primeiro procedimento da lista e {3} código relacionado…",
   "by": "I01",
   "at": "2026-10-08"
+ },
+ "380e91471b591b42": {
+  "src": "One row per OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and parts where a procedure needs them.",
+  "t": "Uma linha por fabricante na amostra gratuita. O conjunto de dados acrescenta os procedimentos ordenados de cada par, com estimativas de custo e de mão de obra quando conhecidas e peças quando um procedimento as exige."
  },
  "38561b3d92097a8e": {
   "src": "<0>Refresh.</0> MechanicDB is curated; this page and its charts are regenerated with each new build, so figures move. Cite the build date.",
@@ -771,12 +765,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "430dd6d971c6a405": {
-  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; diagnostic procedures carry their own estimate, or none when it is unknown; see parts_cost_status and labor_status.",
-  "t": "est_labor_hours é a estimativa editorial do conjunto de dados para o tempo de trabalho efetivo em uma oficina, presente em {0} dos reparos; os procedimentos de diagnóstico têm sua própria estimativa, ou nenhuma quando ela é desconhecida; veja parts_cost_status e labor_status.",
-  "by": "I02",
-  "at": "2026-10-11"
- },
  "4318a03335fecca8": {
   "src": "Heavy Duty ({0}) Commercial License ({1})",
   "t": "Licença comercial Heavy Duty ({0}) ({1})",
@@ -886,18 +874,6 @@
   "t": "Licenciamento e suporte — abrir uma issue",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "4ee92c702e47fdd8": {
-  "src": "High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Hazardous steps are never rated DIY.",
-  "t": "Procedimentos de alta tensão começam com bloqueio e verificação de ausência de tensão; trabalhos no SRS exigem desconectar a bateria e aguardar a descarga do capacitor. Etapas perigosas nunca são classificadas como DIY.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "4ef9ca84d68c94a6": {
-  "src": "This is the first procedure in the authored consideration order, not a measured cause likelihood. Execute it only when its prerequisites and diagnostic findings support it. Cost range, labor hours, the step-by-step procedure and the remaining {0} procedure(s) are in the licensed dataset. <1>Ordering context</1>.",
-  "t": "Este é o primeiro procedimento na ordem de consideração elaborada pela equipe, não uma probabilidade medida da causa. Execute-o somente quando seus pré-requisitos e os achados do diagnóstico o justificarem. A faixa de custos, as horas de mão de obra, o procedimento passo a passo e os {0} procedimento(s) restantes estão no conjunto de dados licenciado. <1>Contexto da ordem</1>.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "514905041a0f8526": {
   "src": "MechanicDB Heavy Duty — {0} Fault &amp; Repair Database",
@@ -1110,6 +1086,10 @@
   "t": "Heavy Duty",
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
+ },
+ "65f5250fb1571027": {
+  "src": "Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: {0} ranked repair procedures — each with a DIY difficulty rating and a parts-cost range, plus a labor estimate where one exists — attached to {1} verified OBD-II trouble codes ({2} SAE-standard plus {3} manufacturer-specific across {4} makes). Free code lists stop at the definition; MechanicDB starts there.",
+  "t": "Feito para apps OBD, firmware de scanners, copilotos mecânicos com IA e software de oficina: {0} procedimentos de reparo classificados — cada um com classificação de dificuldade para quem faz por conta própria e faixa de custo de peças, além de estimativa de mão de obra quando existe — vinculados a {1} códigos de falha OBD-II verificados ({2} padrão SAE mais {3} específicos de fabricante em {4} marcas). Listas de códigos gratuitas param na definição; o MechanicDB começa aí."
  },
  "65fa5d9a2f27e703": {
   "src": "Part or supply",
@@ -1470,6 +1450,10 @@
  "8b670c5d97345535": {
   "src": "One row per SPN/FMI pair per OEM: OEM code, controller, short description, fault family, explanation, source document and URL",
   "t": "Uma linha por par SPN/FMI e por OEM: código OEM, controlador, descrição curta, família de falhas, explicação, documento de origem e URL"
+ },
+ "8b928071eef7b693": {
+  "src": "Rows for this OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and parts where a procedure needs them.",
+  "t": "Linhas desta fabricante na amostra gratuita. O conjunto de dados acrescenta os procedimentos ordenados de cada par, com estimativas de custo e de mão de obra quando conhecidas e peças quando um procedimento as exige."
  },
  "8cd99dbf213a1a6b": {
   "src": "Part names per fix with a catalog search query",
@@ -2183,12 +2167,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "c42021d20aaba8df": {
-  "src": "Two instant downloads after one checkout",
-  "t": "Dois downloads imediatos com um único pagamento",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "c499f80e75254529": {
   "src": "<0>Source.</0> The full MechanicDB build of {1} code definitions, {2} authored procedures and {3} part mappings in {4} hand-authored fault families. Code definitions originate in SAE {5} / ISO {6} via an MIT-licensed upstream compilation; the repair content is original editorial material from a deterministic, test-gated pipeline. Procedure order is conditional on prerequisites and findings and is not measured likelihood, success, severity, urgency or minimum cost; see <7>ordering metadata</7>, <8>Sources</8> and the <9>data dictionary</9>.",
   "t": "<0>Fonte.</0> A compilação completa do MechanicDB contém {1} definições de códigos, {2} procedimentos elaborados pela equipe e {3} associações de peças em {4} famílias de falhas elaboradas manualmente. As definições de códigos são originárias da SAE {5} / ISO {6} por meio de uma compilação upstream sob licença MIT; o conteúdo de reparo é material editorial original de um pipeline determinístico com testes obrigatórios. A ordem dos procedimentos depende de pré-requisitos e achados e não mede probabilidade, sucesso, gravidade, urgência nem custo mínimo; consulte os <7>metadados de ordenação</7>, as <8>Fontes</8> e o <9>dicionário de dados</9>.",
@@ -2303,6 +2281,10 @@
   "src": "{0} DTC database",
   "t": "banco de dados DTC {0}"
  },
+ "ccdc7abb71e46c41": {
+  "src": "This is the first procedure in the authored consideration order, not a measured cause likelihood. Execute it only when its prerequisites and diagnostic findings support it. Its cost and labor estimates (where known), the step-by-step procedure and the remaining {0} procedure(s) are in the licensed dataset. <1>Ordering context</1>.",
+  "t": "Este é o primeiro procedimento na ordem de consideração elaborada pela equipe, não uma probabilidade medida da causa. Execute-o somente quando seus pré-requisitos e os achados do diagnóstico o justificarem. Suas estimativas de custo e de mão de obra (quando conhecidas), o procedimento passo a passo e os {0} procedimento(s) restantes estão no conjunto de dados licenciado. <1>Contexto da ordem</1>."
+ },
  "cde1df12deaf8b24": {
   "src": "{0} curated codes ({1} SAE + {2} OEM) — the most-searched DTCs",
   "t": "{0} códigos selecionados ({1} SAE + {2} OEM) — os DTCs mais buscados",
@@ -2382,12 +2364,6 @@
   "t": "<0>MechanicDB</0> › Banco de dados de DTCs OBD-II",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "d4ea404c7eb3c66c": {
-  "src": "Rows for this OEM from the free sample. The dataset adds the ordered procedures, costs, labour estimates and parts for every pair.",
-  "t": "Linhas desta fabricante na amostra gratuita. O conjunto de dados acrescenta os procedimentos ordenados, os custos, as estimativas de mão de obra e as peças de cada par.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "d5180fa89b3bab33": {
   "src": "Speed &amp; idle control",
@@ -2505,6 +2481,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ddb207f96cea844a": {
+  "src": "{0} per code in authored consideration order (up to {1} in reviewed families, where diagnostic steps list no parts), conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours where estimated",
+  "t": "{0} por código em uma ordem de consideração elaborada pela equipe (até {1} nas famílias revisadas, nas quais as etapas de diagnóstico não listam peças) e condicionada a pré-requisitos e achados, com nível de dificuldade, faixa de custo de peças e horas de mão de obra quando estimadas"
+ },
  "dde328e66f02919b": {
   "src": "Sec {0} · Provenance &amp; support",
   "t": "Seç. {0} · Procedência e suporte",
@@ -2574,12 +2554,6 @@
   "t": "os {0} primeiros de {1} itens",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "e399a5e856c24d30": {
-  "src": "One row per OEM from the free sample. The dataset adds the ordered procedures, costs, labour estimates and parts for every pair.",
-  "t": "Uma linha por fabricante na amostra gratuita. O conjunto de dados acrescenta os procedimentos ordenados, os custos, as estimativas de mão de obra e as peças de cada par.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "e3dc15d7726bbcfc": {
   "src": "Procedures {0} after the first-listed procedure",
@@ -2802,6 +2776,10 @@
   "t": "Quais critérios de segurança determinam se um procedimento de reparo é classificado como Easy DIY ou Professional Required?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "fb27d598fefcc160": {
+  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; fixes without an estimate have labor_status unknown; see parts_cost_status and labor_status.",
+  "t": "est_labor_hours é a estimativa editorial do conjunto de dados para o tempo de trabalho efetivo em uma oficina, presente em {0} dos reparos; os reparos sem estimativa têm labor_status unknown; veja parts_cost_status e labor_status."
  },
  "fbc59ee65c7b3e57": {
   "src": "{0} fixes",
