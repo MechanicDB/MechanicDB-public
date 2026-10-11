@@ -38,7 +38,12 @@ rank, steps or estimates (IDs kept). The three estimate columns may now be NULL:
   parts-per-fix shares and calls recorded zeros parts-cost values, not estimates.
 - Safety framing (homepage): "Hazardous steps are never rated DIY" is withdrawn, because some
   DIY-rated procedures include an SRS step; the cell now says to follow the service manual's
-  safety procedure for any SRS or high-voltage step, whatever the difficulty rating.
+  safety procedure for any SRS or high-voltage step, whatever the difficulty rating. The FAQ
+  answer (and its structured-data copy) no longer says high-voltage, SRS and overhaul
+  procedures are strictly classified 'Professional Required'; it says a difficulty rating does
+  not replace the manufacturer's lockout and safety procedure.
+- J1939 pages: the sample-rows note now says the dataset adds a part name where one is mapped,
+  not parts wherever a procedure needs them (many costed Heavy Duty fixes map no part).
 - Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
   version 2 and canonicalization 2.
 

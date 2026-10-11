@@ -125,12 +125,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "0a66c3b83fd8ae92": {
-  "src": "Procedures involving high-voltage hybrid/EV traction networks (&gt;{0}), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps.",
-  "t": "Les procédures touchant aux réseaux de traction haute tension des véhicules hybrides et électriques (&gt;{0}), aux systèmes de retenue supplémentaires (airbags/prétensionneurs pyrotechniques) ou aux révisions internes du moteur ou de la boîte de vitesses sont strictement classées « Professional Required », avec consignation obligatoire et vérification d'absence de tension.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "0a907fb25789793a": {
   "src": "{0} ranked fixes with editorial cost and labour estimates",
   "t": "{0} réparations classées avec estimations éditoriales de coût et de main-d'œuvre",
@@ -631,10 +625,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "380e91471b591b42": {
-  "src": "One row per OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and parts where a procedure needs them.",
-  "t": "Une ligne par équipementier dans l’échantillon gratuit. Le jeu de données ajoute les procédures ordonnées pour chaque paire, avec les estimations de coût et de main-d’œuvre lorsqu’elles sont connues et les pièces lorsqu’une procédure en nécessite."
- },
  "38561b3d92097a8e": {
   "src": "<0>Refresh.</0> MechanicDB is curated; this page and its charts are regenerated with each new build, so figures move. Cite the build date.",
   "t": "<0>Mise à jour.</0> MechanicDB fait l'objet d'une curation éditoriale ; cette page et ses graphiques sont régénérés à chaque nouveau build, les chiffres évoluent donc. Citez la date du build.",
@@ -1109,6 +1099,10 @@
   "by": "I01",
   "at": "2026-10-08"
  },
+ "687b0d01794cde3c": {
+  "src": "One row per OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and a part name where one is mapped.",
+  "t": "Une ligne par équipementier dans l’échantillon gratuit. Le jeu de données ajoute les procédures ordonnées pour chaque paire, avec les estimations de coût et de main-d’œuvre lorsqu’elles sont connues et un nom de pièce lorsqu’une pièce est associée."
+ },
  "689aa69e0ab32a7f": {
   "src": "{0} fault pairs",
   "t": "{0} paires de défauts"
@@ -1450,10 +1444,6 @@
  "8b670c5d97345535": {
   "src": "One row per SPN/FMI pair per OEM: OEM code, controller, short description, fault family, explanation, source document and URL",
   "t": "Une ligne par paire SPN/FMI et par OEM : code OEM, calculateur, description courte, famille de défauts, explication, document source et URL"
- },
- "8b928071eef7b693": {
-  "src": "Rows for this OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and parts where a procedure needs them.",
-  "t": "Lignes de cet équipementier dans l’échantillon gratuit. Le jeu de données ajoute les procédures ordonnées pour chaque paire, avec les estimations de coût et de main-d’œuvre lorsqu’elles sont connues et les pièces lorsqu’une procédure en nécessite."
  },
  "8cd99dbf213a1a6b": {
   "src": "Part names per fix with a catalog search query",
@@ -1878,6 +1868,10 @@
   "t": "Tout le contenu de Standard",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ac8cdb0776a0edf5": {
+  "src": "Rows for this OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and a part name where one is mapped.",
+  "t": "Lignes de cet équipementier dans l’échantillon gratuit. Le jeu de données ajoute les procédures ordonnées pour chaque paire, avec les estimations de coût et de main-d’œuvre lorsqu’elles sont connues et un nom de pièce lorsqu’une pièce est associée."
  },
  "ac9796b43eb5ec08": {
   "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Descriptions are written by us and no SAE {0} text is reproduced.",
@@ -2589,6 +2583,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e6405a1674aa359a": {
+  "src": "A difficulty rating does not replace the safety procedure. Work on high-voltage hybrid/EV traction networks (&gt;{0}) or supplemental restraint systems (airbags/pyrotechnic pretensioners) calls for the manufacturer's lockout and safety procedure, whatever the rating; follow the service manual.",
+  "t": "Un niveau de difficulté ne remplace pas la procédure de sécurité. Les interventions sur les réseaux de traction haute tension des véhicules hybrides et électriques (&gt;{0}) ou sur les systèmes de retenue supplémentaires (airbags/prétensionneurs pyrotechniques) exigent la consignation et la procédure de sécurité du constructeur, quel que soit ce niveau ; suivez le manuel d'atelier."
+ },
  "e689fda2d2efb61c": {
   "src": "Catalogue statistics · build {0}",
   "t": "Statistiques du catalogue · build {0}",
@@ -2695,6 +2693,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f36288d2a871cde7": {
+  "src": "How do difficulty ratings relate to high-voltage and SRS safety?",
+  "t": "Quel lien entre les niveaux de difficulté et la sécurité en haute tension et sur le SRS ?"
+ },
  "f3baadf431ed28c4": {
   "src": "Labor hours",
   "t": "Heures de main-d'œuvre",
@@ -2768,12 +2770,6 @@
  "fa81aab139aafa60": {
   "src": "Every fault family whose codes set on the {0} module or one of the sensors and actuators it controls. Each entry below is one authored fault family; open it for the diagnostic explanation and the full list of codes it covers.",
   "t": "Toutes les familles de défauts dont les codes sont enregistrés par le module {0} ou par l'un des capteurs et actionneurs qu'il pilote. Chaque entrée ci-dessous est une famille de défauts rédigée ; ouvrez-la pour lire l'explication diagnostique et la liste complète des codes qu'elle couvre.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "fa954454fbaccb99": {
-  "src": "What safety criteria determine whether a repair procedure is rated Easy DIY vs Professional Required?",
-  "t": "Quels critères de sécurité déterminent si une procédure de réparation est classée Easy DIY ou Professional Required ?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
