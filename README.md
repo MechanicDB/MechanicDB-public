@@ -4,7 +4,7 @@
 
 # 🔧 MechanicDB — Automotive OBD-II Diagnostic & Repair Database
 
-**15,886 verified trouble codes · 9,249 SAE + 6,637 OEM across 32 makes · 56,561 ranked repair procedures · 75,055 parts mappings · 647 authored fault families**
+**15,886 verified trouble codes · 9,249 SAE + 6,637 OEM across 32 makes · 56,729 ranked repair procedures · 75,055 parts mappings · 647 authored fault families**
 
 [![Sample License: ODbL v1.0](https://img.shields.io/badge/Sample_License-ODbL_v1.0-blue.svg)](https://opendatacommons.org/licenses/odbl/1-0/)
 [![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
@@ -33,24 +33,24 @@ This repository holds the **free, open developer samples**: 90 curated OBD-II co
 | — SAE-standard (universal) | **9,249** | 75 |
 | — OEM manufacturer-specific | **6,637** (32 makes) | 15 |
 | Authored fault families | **647** | (linked) |
-| Ranked repair procedures | **56,561** | 320 |
+| Ranked repair procedures | **56,729** | 326 |
 | Replacement-parts mappings | **75,055** | 449 |
 | Formats | CSV · Parquet · SQLite | CSV · Parquet |
 
-The sample covers the most commonly searched codes (P0420, P0171, P0300, …). Parquet files are Snappy-compressed — **92.0% smaller** than the equivalent CSVs.
+The sample covers the most commonly searched codes (P0420, P0171, P0300, …). Parquet files are Snappy-compressed — **92.5% smaller** than the equivalent CSVs.
 
 | Sample file | Rows | Description |
 | :--- | :--- | :--- |
 | `dtc_codes.csv` / `.parquet` | 90 | Code registry: DTC, system category, OEM flag/make, fault family, short description, detailed technical explanation |
-| `diagnostic_fixes.csv` / `.parquet` | 320 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours, step-by-step instructions |
+| `diagnostic_fixes.csv` / `.parquet` | 326 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours, step-by-step instructions |
 | `replacement_parts.csv` / `.parquet` | 449 | Aftermarket part names per fix with catalog search URLs |
-| `dtc_fixes_joined.csv` / `.parquet` | 320 | Pre-joined analytical view (codes × fixes) for one-file ingestion |
+| `dtc_fixes_joined.csv` / `.parquet` | 326 | Pre-joined analytical view (codes × fixes) for one-file ingestion |
 
 Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pipe-delimited (`|`), UTF-8 with BOM; string fields are guaranteed free of embedded linebreaks.
 
 ## How the content is built (the honest part)
 
-- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order, with 1–3 parts per procedure. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
+- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 parts per procedure; in reviewed families, diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
 - **Costs and labor are editorial estimates** for typical US aftermarket parts and independent-shop labor — not quotes, not scraped prices.
 - **OEM rows are per-marque, exactly as sourced.** Makes that share engineering platforms (GM's seven marques, Ford/Mercury/Lincoln, Honda/Acura, …) legitimately share many definitions; rows are kept per marque so `oem_make = 'Buick'` returns complete results. Disclosed in detail in [SOURCES.md](SOURCES.md).
 - **Make-level, not model/year-level.** OEM coverage is per manufacturer; the dataset does not claim model- or model-year-specific applicability.
@@ -74,8 +74,8 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 | Tier | What | Price |
 | :--- | :--- | :--- |
 | **Sample** | 90 codes (this repo + Kaggle) | Free |
-| **Standard** | 9,249 SAE codes · 32,767 fixes · 44,588 parts · CSV + Parquet + SQLite | **[$49](https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403)** one-time |
-| **OEM Complete** | Full merged dataset: 15,886 codes (+ 6,637 OEM across 32 makes) · 56,561 fixes · 75,055 parts | **[$149](https://buy.stripe.com/28EfZicVy0ECdM796w38404)** one-time |
+| **Standard** | 9,249 SAE codes · 32,812 fixes · 44,588 parts · CSV + Parquet + SQLite | **[$49](https://buy.stripe.com/5kQ3cw7Be9b88rNfuU38403)** one-time |
+| **OEM Complete** | Full merged dataset: 15,886 codes (+ 6,637 OEM across 32 makes) · 56,729 fixes · 75,055 parts | **[$149](https://buy.stripe.com/28EfZicVy0ECdM796w38404)** one-time |
 | **Fault & Recall bundle** | OEM Complete + [RecallDB Vehicle](https://recalldb.dataengineered.io/) (NHTSA vehicle & equipment recalls, CSV + Parquet + SQLite) + a bundle-only bulletin index (NHTSA service bulletins that cite each trouble code, with their vehicles) — instant downloads, one checkout | **[$179](https://buy.stripe.com/3cI3cw1cQevsazVaaA3840h)** one-time · vs $198 separately |
 | **Heavy Duty (J1939)** | Standalone: SAE J1939 SPN+FMI fault pairs from published OEM fault tables (Eaton, WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) with ranked fixes and part mappings · CSV + Parquet + SQLite | $149 — [buy](https://buy.stripe.com/6oUeVef3G2MK5fB3Mc3840j) · [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) · [100-fault free sample](samples/heavyduty/) · see [DATA_DICTIONARY.md](DATA_DICTIONARY.md), section 6 |
 
@@ -127,14 +127,14 @@ The same sample is published on Kaggle — **[MechanicDB: OBD-II Diagnostic & Re
 
 ## SQLite enforcement (I05, since edition 2026.10)
 
-Schema version 1 preserves every existing identifier, value,
-table and column, including Standard's all-TEXT SQLite profile. It adds keys,
+Schema version 1 (the first 2026.10 build) preserved every existing identifier,
+value, table and column, including Standard's all-TEXT SQLite profile, and added keys,
 constraints and lookup indexes, with HD's conditional SPN relation enforced by
-four triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
+four triggers; version 2 keeps these keys, constraints, indexes and triggers. Writing connections must enable `PRAGMA foreign_keys=ON` before
 transactions; joined tables remain materialized snapshots. See
-[the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-1)
+[the SQLite contract](DATA_DICTIONARY.md#7-sqlite-enforcement--schema-version-2)
 for exact keys and runnable queries. I01's `probability_rank` meaning and ordering
-metadata are unchanged.
+metadata are unchanged. Schema version 2 appends five procedure/cost columns; see DATA_DICTIONARY.md §7.
 
 
 ## Stable identity companions (since edition 2026.10)
@@ -150,7 +150,7 @@ Standard TEXT), with the existing I01 authored-order meaning.
 `identity_map.csv` / `.parquet` provide entitled references, decimal-text numeric
 aliases, parent references, authored keys and content revision digests;
 `identity_events.csv` provides relevant lifecycle information. The core SQLite
-schema remains version 1. Public maps include only the authorized fixed samples.
+schema is version 2. Public maps include only the authorized fixed samples.
 Text, rank and component-name changes preserve intended identity. Retired or
 withdrawn allocations are never reused; merge/split migration requires review.
 

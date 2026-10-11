@@ -36,16 +36,25 @@ Maps diagnostic trouble codes to actionable inspection or repair procedures in a
 | `fix_title` | String | Actionable title of the recommended diagnostic inspection or repair procedure. | `Clean or Replace MAF Sensor` |
 | `probability_rank` | Integer | Supported legacy-named positive ordinal giving the authored order for considering procedures within one code. Lower values appear earlier; `1` is first. Apply each procedure's prerequisites and diagnostic findings before acting. It does not measure cause likelihood, repair success, severity, urgency or minimum cost, and values are not comparable across codes. | `1` |
 | `difficulty_level` | String | Skill requirement rating (`Easy DIY`, `Moderate DIY`, `Professional Required`). | `Easy DIY` |
-| `est_parts_cost_min_usd` | Float | Estimated minimum aftermarket replacement parts cost in US dollars. | `15.00` |
-| `est_parts_cost_max_usd` | Float | Estimated maximum aftermarket replacement parts cost in US dollars. | `45.00` |
-| `est_labor_hours` | Float | Average professional mechanic labor hours required to complete the procedure. | `0.5` |
+| `est_parts_cost_min_usd` | Float, nullable | Editorial estimate (see [Cost basis](#cost-basis)) of the minimum parts cost in US dollars. `0` when `parts_cost_status` is `none_required`; NULL when `unknown`. | `15.00` |
+| `est_parts_cost_max_usd` | Float, nullable | Editorial estimate (see [Cost basis](#cost-basis)) of the maximum parts cost in US dollars. `0` when `parts_cost_status` is `none_required`; NULL when `unknown`. | `45.00` |
+| `est_labor_hours` | Float, nullable | Editorial estimate of professional labor hours to complete the procedure. NULL when `labor_status` is `unknown`. | `0.5` |
 | `step_by_step_instructions` | String | Bulleted step-by-step diagnostic and repair instructions (separated by ` • `). | `1. Disconnect battery • 2. Spray sensor...` |
+| `action_type` | String, nullable | What the procedure does: `inspect`, `measure`, `scan`, `repair`, `replace`, `program` or `verify` (definitions in [Cost basis](#cost-basis)). NULL until the procedure's family is reviewed. | `replace` |
+| `parts_cost_status` | String | `estimated`, `none_required` or `unknown`. | `estimated` |
+| `labor_status` | String | `estimated` or `unknown`. | `estimated` |
+| `cost_basis_id` | String | Key into `cost_metadata.json`: `obd-editorial-us-aftermarket-v1` for this tier. | `obd-editorial-us-aftermarket-v1` |
+| `procedure_rationale` | String, nullable | Why this step, why its cost status and why its position; NULL until reviewed. | `Fits the part once the earlier steps point to it.` |
+
+Labor class follows `action_type` (`labor_kind_by_action` in `cost_metadata.json`): inspect, measure, scan and verify are diagnostic; repair and replace are repair; program is programming.
 
 ---
 
 ## 3. `replacement_parts` (Aftermarket Part Mappings)
 
 Maps diagnostic repair procedures to common aftermarket replacement parts and catalog search queries.
+
+A procedure with `parts_cost_status = none_required` has no rows here.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
@@ -58,7 +67,7 @@ Maps diagnostic repair procedures to common aftermarket replacement parts and ca
 
 ## 4. `dtc_fixes_joined` (Pre-Joined Analytical View)
 
-A denormalized analytical table combining code definitions, ranked fixes, and cost estimation matrices into a single flat file for rapid machine learning ingestion and instant frontend rendering. Contains all columns from `dtc_codes` (including `fault_family`) and `diagnostic_fixes` joined on `code_id`.
+A denormalized analytical table combining code definitions, ranked fixes, and cost estimation matrices into a single flat file for rapid machine learning ingestion and instant frontend rendering. Contains all columns from `dtc_codes` (including `fault_family`) and `diagnostic_fixes` joined on `code_id`, including the five procedure/cost columns appended in schema version 2.
 
 ## 5. OEM coverage by make
 
@@ -97,7 +106,7 @@ from the OBD-II Standard/OEM Complete tiers above (on sale since 2026-09-24, see
 [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) page). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
 WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
 short descriptions, fault families, explanations, ranked fixes and part mappings — currently **4,212
-fault pairs, 870 distinct SPNs, 16,998 ranked fixes and 5,904 part mappings across 10 OEMs and 16
+fault pairs, 870 distinct SPNs, 17,047 ranked fixes and 5,915 part mappings across 10 OEMs and 16
 official-host sources**, measured at build time. It follows the same physical conventions as the
 tables above: pipe-delimited CSV, `utf-8-sig`, no embedded `\r`/`\n` (replaced with ` • `), Parquet
 Snappy, one SQLite.
@@ -116,7 +125,7 @@ is the single join key for the other tables.
 **Editorial-estimate note:** as with `diagnostic_fixes` above, `difficulty_level`,
 `est_parts_cost_min_usd`, `est_parts_cost_max_usd` and `est_labor_hours` in this tier's
 `diagnostic_fixes` rows are editorial estimates — here, for **US independent heavy-duty / fleet
-shops**, not dealer rates and not a quote. They are not sourced from the OEM documents.
+shops**, not dealer rates and not a quote. They are not sourced from the OEM documents. The basis is `hd-editorial-us-independent-shop-v1` (see [Cost basis](#cost-basis)), carried by the five procedure/cost columns of 6.4 (`action_type`, `parts_cost_status`, `labor_status`, `cost_basis_id`, `procedure_rationale`).
 
 **Free sample:** [`samples/heavyduty/`](samples/heavyduty/) in this repository ships 100 of the 4,212
 faults (deterministically sampled across the full spine, so every one of the 10 OEMs is represented),
@@ -195,10 +204,17 @@ this tier — see 6.7/6.9 below.
 | `fix_title` | String | Actionable title of the recommended inspection or repair. | `Inspect coolant temperature sensor connector` |
 | `probability_rank` | Integer | Supported legacy-named positive ordinal giving procedure consideration order within this fault; `1` is first. Execution is conditional on prerequisites and findings. The authored FMI-class policy contributes to the order — see 6.9 — but the value is not a measured likelihood or outcome. | `1` |
 | `difficulty_level` | String | Fixed vocabulary for this tier — see 6.7. | `Fleet technician` |
-| `est_parts_cost_min_usd` | Float | Editorial estimate, US independent heavy-duty shop. | `35.00` |
-| `est_parts_cost_max_usd` | Float | Editorial estimate, US independent heavy-duty shop. | `120.00` |
-| `est_labor_hours` | Float | Editorial estimate, US independent heavy-duty shop. | `0.75` |
+| `est_parts_cost_min_usd` | Float, nullable | Editorial estimate, US independent heavy-duty shop (see [Cost basis](#cost-basis)). `0` when `parts_cost_status` is `none_required`; NULL when `unknown`. | `35.00` |
+| `est_parts_cost_max_usd` | Float, nullable | Editorial estimate, US independent heavy-duty shop (see [Cost basis](#cost-basis)). `0` when `parts_cost_status` is `none_required`; NULL when `unknown`. | `120.00` |
+| `est_labor_hours` | Float, nullable | Editorial estimate, US independent heavy-duty shop. NULL when `labor_status` is `unknown`. | `0.75` |
 | `step_by_step_instructions` | String | Bulleted, ` • `-separated. | `1. Disconnect ECU harness connector • 2. Inspect pins for corrosion...` |
+| `action_type` | String, nullable | What the procedure does: `inspect`, `measure`, `scan`, `repair`, `replace`, `program` or `verify`. NULL until the procedure's family is reviewed. | `replace` |
+| `parts_cost_status` | String | `estimated`, `none_required` or `unknown`. | `estimated` |
+| `labor_status` | String | `estimated` or `unknown`. | `estimated` |
+| `cost_basis_id` | String | Key into `cost_metadata.json`: `hd-editorial-us-independent-shop-v1` for this tier. | `hd-editorial-us-independent-shop-v1` |
+| `procedure_rationale` | String, nullable | Why this step and why its cost status; NULL until reviewed. In this tier it never states an absolute position (first, last, before, after...): the delivered `probability_rank` is reordered per fault by FMI failure class (6.9), so it says at most "in the authored family order", and it never assumes that another procedure has already run. | `A tool reading buys nothing, so no parts are listed.` |
+
+HD `estimated` rows keep `0 <= min <= max`. A 0/0 `estimated` HD row always lists a part (a zero editorial parts estimate although a part is listed); 0/0 HD rows without parts are `none_required`. Labor class follows `action_type` as in section 2.
 
 ### 6.5 `replacement_parts`
 
@@ -217,7 +233,7 @@ get an empty string (NULL over guess).
 
 A denormalized flat table combining `j1939_faults` and `diagnostic_fixes` (joined on `fault_id`) —
 every column from both tables in one row, for ML ingestion and instant frontend rendering, mirroring
-`dtc_fixes_joined` above.
+`dtc_fixes_joined` above, including the five procedure/cost columns appended in schema version 2.
 
 ### 6.7 Difficulty vocabulary (this tier only)
 
@@ -250,14 +266,46 @@ rate of causes or successful repairs. The generated class-kind mapping and tie/f
 fault gets at least one fix (the family default), so — as with the OBD-II tiers — fixes exist for
 100% of faults.
 
-## 7. SQLite enforcement — schema version 1
+## Cost basis
 
-This contract applies to the incoming constrained snapshots (`PRAGMA user_version = 1`).
-It describes the local I05 implementation; publication is a separate release action.
-The four OBD-II and six Heavy Duty tables, column order, identifiers and values are
-unchanged. Standard keeps **all columns TEXT**, including IDs, rank and estimates;
+Every `diagnostic_fixes` row (and its joined view) carries a `cost_basis_id`. Each id resolves
+to an entry under `bases` in `cost_metadata.json`, which ships next to `ordering_metadata.json`
+in every ZIP and every free sample, scoped to its product (`obd2` or `heavyduty`).
+
+| `cost_basis_id` | Applies to |
+| :--- | :--- |
+| `obd-editorial-us-aftermarket-v1` | Standard and OEM Complete |
+| `hd-editorial-us-independent-shop-v1` | Heavy Duty |
+
+- **Editorial.** The values are set by the dataset's editors. No price observations, invoices or labor-guide data are recorded for them.
+- **Currency and geography.** US dollars, United States. OBD-II parts are aftermarket replacement parts; Heavy Duty is an independent heavy-duty or fleet shop, not dealer rates.
+- **Not specified.** Sales tax, shipping, core charges, shop-supplies fees, labor rate (labor is given in hours only) and programming or subscription fees. Heavy Duty does not specify parts quality either.
+- **Dates.** The OBD-II estimates were first authored in 2026-07 and the Heavy Duty estimates in 2026-09. No re-pricing is recorded.
+- **Statuses.** `estimated` means the cost columns hold an editorial estimate. `none_required` means the procedure needs no parts: both values are `0` and it has no `replacement_parts` rows. `unknown` means no estimate exists and both values are NULL (a part can be listed while its price is not). For labor, `estimated` means `est_labor_hours` holds an editorial estimate and `unknown` means it is NULL.
+- **Filtering.** `WHERE parts_cost_status = 'estimated'` selects rows with an estimate; `WHERE est_parts_cost_min_usd IS NULL` (equivalently `parts_cost_status = 'unknown'`) selects rows without one. Do not read NULL as zero.
+- **Where `unknown` and `none_required` occur.** Only reviewed families (those whose procedures carry an `action_type`) use `unknown`, or `none_required` apart from the legacy Heavy Duty zeros of section 6.4.
+
+| `action_type` | Meaning | Labor class (`labor_kind_by_action`) |
+| :--- | :--- | :--- |
+| `inspect` | Visual or physical check without an instrument reading. | diagnostic |
+| `measure` | Instrumented test such as a meter, gauge, pressure, smoke or scope reading. | diagnostic |
+| `scan` | Scan-tool read or command: codes, freeze frame, live data or a bidirectional test. | diagnostic |
+| `repair` | Restore the existing component without a new part: clean, reseat, splice, adjust, flush or refill. | repair |
+| `replace` | Fit a new or remanufactured part. | repair |
+| `program` | Software flash, coding, relearn or calibration. | programming |
+| `verify` | Confirm a completed repair: clear codes, drive cycle, readiness or re-test. | diagnostic |
+
+An `action_type` describes what the procedure does unconditionally; a conditional follow-up
+("replace if out of spec") is its own procedure. The labor class is documented only: derive it
+from `action_type` with the `labor_kind_by_action` map in `cost_metadata.json`.
+
+## 7. SQLite enforcement — schema version 2
+
+This contract applies to the snapshots this build writes (`PRAGMA user_version = 2`; version 1 shipped in the first 2026.10 build; version 2 ships from this release, identified by `data_release_id`).
+The four OBD-II and six Heavy Duty tables, existing column order and identifiers are
+unchanged from version 1; values change only in reviewed families (see "Version 2 changes"). Standard keeps **all columns TEXT**, including IDs, rank and estimates;
 OEM Complete and Heavy Duty retain INTEGER/REAL storage for numeric fields.
-CSV/Parquet contracts and `ordering_metadata.json` remain unchanged.
+CSV and Parquet gain the same five appended columns (estimates are null only when their status is `unknown`); `ordering_metadata.json` is unchanged.
 
 | Table | Enforced key and references |
 | :--- | :--- |
@@ -280,10 +328,11 @@ pairs may repeat across makes, controllers and sources. Empty OEM codes,
 unknown controllers `''`, neutral SPN makes, optional page/link values and
 zero-cost HD procedures retain their existing meaning.
 
-Required IDs, references and numeric fields are NOT NULL. CHECKs reject
+Required IDs, references and numeric fields are NOT NULL, except the cost and labor estimates, which are nullable in version 2. CHECKs reject
 malformed DTCs, noninteger/negative ranks, invalid flags/difficulty values,
-nonfinite or negative estimates and reversed costs. OBD requires
-`0 < min < max` and labor 0.1–20 hours; HD allows `0 <= min <= max` and labor >= 0.
+nonfinite or negative estimates and reversed costs. For `estimated` rows OBD requires
+`min <= max` with `max > 0` and labor 0.1–20 hours; HD allows `0 <= min <= max` and labor >= 0.
+The curated-data validator still applies `0 < min < max` to unreviewed OBD families.
 Required names, descriptions and instructions are nonblank text. Optional
 source_page/search links may be NULL; existing empty strings are preserved.
 Standard checks numeric text without converting stored strings: integer
@@ -341,6 +390,14 @@ invalid writes intentionally change; read values and CSV/Parquet interfaces rema
 compatible. Byte reproducibility is verified within a pinned runtime, not across
 different SQLite or ZIP compression versions.
 
+### Version 2 changes
+
+- **Five appended columns.** `diagnostic_fixes` and both joined views gain `action_type`, `parts_cost_status`, `labor_status`, `cost_basis_id` and `procedure_rationale`, in that order after `step_by_step_instructions`. Existing columns keep their names and order. Unreviewed rows keep their values; rows in reviewed families (non-NULL `action_type`) may change title, rank, steps and estimates, and keep their IDs. A file with `PRAGMA user_version = 1` predates them.
+- **Nullable cost and labor.** `est_parts_cost_min_usd`, `est_parts_cost_max_usd`, `est_labor_hours`, `action_type` and `procedure_rationale` may be NULL; `parts_cost_status`, `labor_status` and `cost_basis_id` are NOT NULL. Standard stays all TEXT and stores an empty string in a nullable field as NULL.
+- **CHECKs.** `action_type` is NULL or one of the seven actions; `parts_cost_status` is `estimated`, `none_required` or `unknown`; `labor_status` is `estimated` or `unknown`; `cost_basis_id` equals the profile's basis (`obd-editorial-us-aftermarket-v1` for Standard and OEM Complete, `hd-editorial-us-independent-shop-v1` for Heavy Duty). `unknown` requires NULL costs; `none_required` requires `0` / `0`; `estimated` requires non-NULL costs with `min <= max` and, for OBD, `max > 0`. A NULL result of any of these checks fails.
+- **Labor bounds.** `unknown` requires NULL hours; `estimated` requires hours of 0.1–20 for OBD and >= 0 for HD.
+- **Cross-table rules.** Part-row counts per status (for example a `none_required` procedure has no `replacement_parts` rows) span tables, so the build validators enforce them rather than CHECKs.
+
 
 ## Stable identity companions (since edition 2026.10)
 
@@ -355,9 +412,11 @@ Standard TEXT), with the existing I01 authored-order meaning.
 `identity_map.csv` / `.parquet` provide entitled references, decimal-text numeric
 aliases, parent references, authored keys and content revision digests;
 `identity_events.csv` provides relevant lifecycle information. The core SQLite
-schema remains version 1. Public maps include only the authorized fixed samples.
+schema is version 2. Public maps include only the authorized fixed samples.
 Text, rank and component-name changes preserve intended identity. Retired or
 withdrawn allocations are never reused; merge/split migration requires review.
+
+Version 2 uses content canonicalization 2: new columns at their unreviewed default are left out of the content digest, so unreviewed rows keep their digest; NULL estimates hash as null.
 
 Historical integers require an exact artifact or verified source release. Two
 known September 2026 HD artifacts reused fault 571 for different entities; month

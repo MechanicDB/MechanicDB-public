@@ -83,6 +83,10 @@
   "src": "Sample rows",
   "t": "Beispielzeilen"
  },
+ "04ec6c403f4a12e3": {
+  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order (up to {1} in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; in reviewed families, diagnostic steps list no parts.",
+  "t": "Für Datenbanken normalisiert, für Notebooks vorverknüpft. Jeder Code enthält {0} Verfahren in redaktionell erstellter Prüfreihenfolge (bis zu {1} in überprüften Familien); die Ausführung hängt von Voraussetzungen und Diagnosebefunden ab. Reparaturverfahren sind Ersatzteilen aus dem freien Markt zugeordnet; in überprüften Familien führen Diagnoseschritte keine Teile auf."
+ },
  "05a977c661b24ce2": {
   "src": "est_parts_cost_min_usd and est_parts_cost_max_usd are the dataset's editorial aftermarket parts estimates in US dollars at build time; they are not quotes, exclude labor and vary by vehicle and region. Medians are computed over fixes, so a family with {0} codes weighs {1} times. Compare groups within this page, not against a shop invoice.",
   "t": "est_parts_cost_min_usd und est_parts_cost_max_usd sind die redaktionellen Schätzungen des Datensatzes für Ersatzteile aus dem freien Markt, in US-Dollar zum Build-Zeitpunkt; sie sind keine Angebote, enthalten keine Arbeitszeit und variieren nach Fahrzeug und Region. Die Mediane werden über die Reparaturen berechnet, daher zählt eine Familie mit {0} Codes {1}-mal. Vergleichen Sie Gruppen innerhalb dieser Seite, nicht mit einer Werkstattrechnung.",
@@ -120,18 +124,6 @@
   "t": "Fordern Sie eine Firmenrechnung, eine individuelle API-Integration für Diagnosegeräte oder eine Überprüfung der Beispieldaten an. Unser System gewährleistet eine ausfallfreie Zustellung.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "0a66c3b83fd8ae92": {
-  "src": "Procedures involving high-voltage hybrid/EV traction networks (&gt;{0}), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps.",
-  "t": "Verfahren an Hochvolt-Traktionsnetzen von Hybrid- und Elektrofahrzeugen (&gt;{0}), an Rückhaltesystemen (Airbags/pyrotechnische Gurtstraffer) sowie Motor- oder Getriebeüberholungen werden ausnahmslos als „Professional Required“ eingestuft – mit verpflichtender Freischaltung (Lockout) und Prüfung der Spannungsfreiheit.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "0a907fb25789793a": {
-  "src": "{0} ranked fixes with editorial cost and labour estimates",
-  "t": "{0} priorisierte Reparaturen mit redaktionellen Kosten- und Arbeitszeitschätzungen",
-  "by": "claude-sonnet-5",
-  "at": "2026-09-21"
  },
  "0b43eeeb33175edd": {
   "src": "The flat view joining faults and fixes, one read for notebooks",
@@ -545,12 +537,6 @@
   "src": "{0} {1} Fault Codes — {2} Fault Pairs | MechanicDB",
   "t": "{0} {1}-Fehlercodes — {2} Fehlerpaare | MechanicDB"
  },
- "2a2f04e0e58eb1a3": {
-  "src": "Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: {0} ranked repair procedures — each with a DIY difficulty rating, a parts-cost range and a labor estimate — attached to {1} verified OBD-II trouble codes ({2} SAE-standard plus {3} manufacturer-specific across {4} makes). Free code lists stop at the definition; MechanicDB starts there.",
-  "t": "Gebaut für OBD-Apps, Diagnosegeräte-Firmware, KI-Assistenten für Mechaniker und Werkstattsoftware: {0} priorisierte Reparaturverfahren – jeweils mit DIY-Schwierigkeitsgrad, Teilekostenspanne und Arbeitszeitschätzung – verknüpft mit {1} verifizierten OBD-II-Fehlercodes ({2} nach SAE-Standard plus {3} herstellerspezifische aus {4} Marken). Kostenlose Codelisten enden bei der Definition; MechanicDB beginnt dort.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "2a783b65f05fae03": {
   "src": "Repair cost estimates",
   "t": "Reparaturkostenschätzungen",
@@ -634,6 +620,12 @@
   "t": "<0>Aktualisierung.</0> MechanicDB wird redaktionell gepflegt; diese Seite und ihre Diagramme werden mit jedem neuen Build neu erzeugt, die Zahlen bewegen sich also. Zitieren Sie das Build-Datum.",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
+ },
+ "390327794ed046d3": {
+  "src": "{0} ranked fixes with editorial cost and labour estimates where known",
+  "t": "{0} priorisierte Reparaturen mit redaktionellen Kosten- und Arbeitszeitschätzungen, soweit bekannt",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
  },
  "3958c456f29ff950": {
   "src": "Repair coverage",
@@ -821,12 +813,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "4778f2e84fe2f9b2": {
-  "src": "{0} per code in authored consideration order, conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours",
-  "t": "{0} je Code in redaktionell erstellter, von Voraussetzungen und Befunden abhängiger Prüfreihenfolge, mit Schwierigkeitsstufe, Teilekostenspanne und Arbeitsstunden",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "489af480aa77f451": {
   "src": "🚗 Body &amp; SRS (B-Codes)",
   "t": "🚗 Karosserie &amp; SRS (B-Codes)",
@@ -874,18 +860,6 @@
   "t": "Lizenzierung &amp; Support — Issue eröffnen",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "4ee92c702e47fdd8": {
-  "src": "High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Hazardous steps are never rated DIY.",
-  "t": "Hochvolt-Verfahren beginnen mit Freischaltung und Prüfung der Spannungsfreiheit; Arbeiten am SRS erfordern das Abklemmen der Batterie und das Abwarten der Kondensatorentladung. Gefährliche Schritte werden nie als DIY eingestuft.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "4ef9ca84d68c94a6": {
-  "src": "This is the first procedure in the authored consideration order, not a measured cause likelihood. Execute it only when its prerequisites and diagnostic findings support it. Cost range, labor hours, the step-by-step procedure and the remaining {0} procedure(s) are in the licensed dataset. <1>Ordering context</1>.",
-  "t": "Dies ist das erste Verfahren in der redaktionell erstellten Prüfreihenfolge, keine gemessene Ursachenwahrscheinlichkeit. Führen Sie es nur aus, wenn seine Voraussetzungen und die Diagnosebefunde dafür sprechen. Kostenspanne, Arbeitsstunden, Schritt-für-Schritt-Verfahren und die verbleibenden {0} Verfahren sind im lizenzierten Datensatz enthalten. <1>Kontext der Reihenfolge</1>.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "514905041a0f8526": {
   "src": "MechanicDB Heavy Duty — {0} Fault &amp; Repair Database",
@@ -1099,11 +1073,9 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
- "64799947ea800195": {
-  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; diagnosis time before the repair is not included.",
-  "t": "est_labor_hours ist die redaktionelle Schätzung des Datensatzes für die reine Arbeitszeit in einer Werkstatt, vorhanden bei {0} der Reparaturen; die Diagnosezeit vor der Reparatur ist nicht enthalten.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
+ "65f5250fb1571027": {
+  "src": "Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: {0} ranked repair procedures — each with a DIY difficulty rating and a parts-cost range, plus a labor estimate where one exists — attached to {1} verified OBD-II trouble codes ({2} SAE-standard plus {3} manufacturer-specific across {4} makes). Free code lists stop at the definition; MechanicDB starts there.",
+  "t": "Gebaut für OBD-Apps, Diagnosegeräte-Firmware, KI-Assistenten für Mechaniker und Werkstattsoftware: {0} priorisierte Reparaturverfahren – jeweils mit DIY-Schwierigkeitsgrad und Teilekostenspanne, dazu eine Arbeitszeitschätzung, wo eine vorliegt – verknüpft mit {1} verifizierten OBD-II-Fehlercodes ({2} nach SAE-Standard plus {3} herstellerspezifische aus {4} Marken). Kostenlose Codelisten enden bei der Definition; MechanicDB beginnt dort."
  },
  "65fa5d9a2f27e703": {
   "src": "Part or supply",
@@ -1122,6 +1094,10 @@
   "t": "{0} {1} {2} SPN/FMI-Fehlerpaare aus {3} veröffentlichtem {4} Dokument, jeweils einer Fehlerfamilie und redaktionell erstellten Reparaturverfahren zugeordnet. Abdeckung nach System, FMI…",
   "by": "I01",
   "at": "2026-10-08"
+ },
+ "687b0d01794cde3c": {
+  "src": "One row per OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and a part name where one is mapped.",
+  "t": "Eine Zeile je Hersteller aus der kostenlosen Stichprobe. Der Datensatz ergänzt für jedes Paar die geordneten Verfahren, mit Kosten- und Arbeitszeitschätzungen, soweit bekannt, und mit einem Teilenamen, wo ein Teil zugeordnet ist."
  },
  "689aa69e0ab32a7f": {
   "src": "{0} fault pairs",
@@ -1158,12 +1134,6 @@
  "6cb7de50389af957": {
   "src": "<0>Catalogue, not incidence.</0> MechanicDB records what each code means and how it is repaired. No figure on this page measures how often a code appears on real vehicles; \"most common\" here always means most common within the catalogue, and each section says which denominator it uses.",
   "t": "<0>Katalog, nicht Häufigkeit.</0> MechanicDB erfasst, was jeder Code bedeutet und wie er repariert wird. Keine Zahl auf dieser Seite misst, wie oft ein Code an realen Fahrzeugen auftritt; „am häufigsten“ bedeutet hier immer am häufigsten innerhalb des Katalogs, und jeder Abschnitt nennt den Nenner, den er verwendet.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
- },
- "6d1f54ef62017c22": {
-  "src": "The median fix is estimated at <0>{1} h</0> of labor; {2} of fixes are {3} h or less and {4} are over {5} h, with a maximum of {6} h. By difficulty the medians are {7} h ({8}), {9} h ({10}) and {11} h ({12}).",
-  "t": "Im Median wird eine Reparatur auf <0>{1} h</0> Arbeitszeit geschätzt; {2} der Reparaturen dauern {3} h oder weniger und {4} über {5} h, maximal {6} h. Nach Schwierigkeit liegen die Mediane bei {7} h ({8}), {9} h ({10}) und {11} h ({12}).",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
@@ -1303,6 +1273,12 @@
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
+ "7e7c9bbdf473409a": {
+  "src": "Difficulty ratings &amp; HV/SRS safety",
+  "t": "Schwierigkeitsgrade &amp; Hochvolt-/SRS-Sicherheit",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
+ },
  "7ecb76f681fc1e54": {
   "src": "The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.",
   "t": "Die vorab verknüpfte Analyseansicht — Codes × Reparaturen in einer flachen Datei zum sofortigen Einlesen.",
@@ -1366,6 +1342,12 @@
   "t": "RecallDB Vehicle — NHTSA-Rückrufe für Fahrzeuge &amp; Ausrüstung, CSV + Parquet + SQLite",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "81d17027cd98e237": {
+  "src": "difficulty_level is an editorial tier assigned per fix (Easy DIY, Moderate DIY, Professional Required). It is not a safety classification: some DIY-rated procedures include an SRS step or a scan-tool relearn; follow the service manual's safety procedure whatever the rating. The {0} procedure is the first item of each code's authored consideration order, not a measured probability.",
+  "t": "difficulty_level ist eine redaktionelle Stufe, die je Reparatur vergeben wird (Easy DIY, Moderate DIY, Professional Required). Sie ist keine Sicherheitseinstufung: Einige als DIY eingestufte Verfahren enthalten einen Schritt am SRS oder einen Anlernvorgang mit dem Diagnosegerät; befolgen Sie unabhängig von der Einstufung das Sicherheitsverfahren aus dem Werkstatthandbuch. Das Verfahren {0} ist der erste Eintrag der redaktionell erstellten Prüfreihenfolge jedes Codes, keine gemessene Wahrscheinlichkeit.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
  },
  "81ddb0215ee4caf4": {
   "src": "Parts mappings",
@@ -1445,17 +1427,11 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
- "88383555e6b3037d": {
-  "src": "difficulty_level is assigned per fix by the editorial pipeline: Easy DIY (basic hand tools, no lifting or programming), Moderate DIY (specialty tools or partial disassembly), Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The {0} procedure is the first item of each code's authored consideration order, not a measured probability.",
-  "t": "difficulty_level wird jedem Reparaturverfahren durch den redaktionellen Prozess zugewiesen: einfache Eigenarbeit (grundlegendes Handwerkzeug, kein Anheben oder Programmieren), mittlere Eigenarbeit (Spezialwerkzeug oder teilweise Demontage), Fachbetrieb erforderlich (Programmierung, Hochspannung, SRS, Arbeiten im Getriebe- oder Motorinneren). Das Verfahren {0} ist der erste Eintrag der redaktionell erstellten Prüfreihenfolge jedes Codes, keine gemessene Wahrscheinlichkeit.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
- "8a30ea2d544eb2b1": {
-  "src": "DIY Safety &amp; High-Voltage Gate",
-  "t": "DIY-Sicherheits- &amp; Hochvolt-Sperre",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
+ "8963d535bfaf4cd2": {
+  "src": "The median fix is estimated at <0>{1} h</0> of labor across the {2} fixes that carry an estimate; {3} are {4} h or less and {5} are over {6} h, with a maximum of {7} h. By difficulty the medians are {8} h ({9}), {10} h ({11}) and {12} h ({13}).",
+  "t": "Im Median wird eine Reparatur auf <0>{1} h</0> Arbeitszeit geschätzt, bezogen auf die {2} Reparaturen mit einer Schätzung; {3} dauern {4} h oder weniger und {5} über {6} h, maximal {7} h. Nach Schwierigkeit liegen die Mediane bei {8} h ({9}), {10} h ({11}) und {12} h ({13}).",
+  "by": "I02",
+  "at": "2026-10-11"
  },
  "8ac7aa173f261d8b": {
   "src": "What you get",
@@ -1589,11 +1565,11 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "97ff41d6df66c5d7": {
-  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order; execution depends on prerequisites and diagnostic findings. Every procedure maps to purchasable aftermarket parts.",
-  "t": "Für Datenbanken normalisiert, für Notebooks vorverknüpft. Jeder Code enthält {0} Verfahren in redaktionell erstellter Prüfreihenfolge; die Ausführung hängt von Voraussetzungen und Diagnosebefunden ab. Jedes Verfahren ist käuflichen Zubehörteilen zugeordnet.",
-  "by": "I01",
-  "at": "2026-10-08"
+ "97fbf6d59db33ff6": {
+  "src": "{0} of the {1} fixes carry a parts-cost estimate or a recorded zero for procedures that need no parts ({2}). The median range is <3>{4} to {5}</3> in parts; among first-listed procedures it is {6} to {7}. {8} of those fixes top out under {9} and {10} ({11}) at {12} or more; the highest upper estimate is {13} ({14}).",
+  "t": "{0} der {1} Reparaturen enthalten eine Teilekostenschätzung oder eine erfasste Null für Verfahren, die keine Teile benötigen ({2}). Die mittlere Spanne liegt bei <3>{4} bis {5}</3> für Teile; bei zuerst aufgeführten Verfahren beträgt sie {6} bis {7}. Bei {8} dieser Reparaturen liegt der Höchstwert unter {9}, und {10} ({11}) erreichen {12} oder mehr; die höchste Obergrenze beträgt {13} ({14}).",
+  "by": "I02",
+  "at": "2026-10-11"
  },
  "98bb7ee7420c4efa": {
   "src": "Top OBD-II Diagnostic Code Categories &amp; Monographs",
@@ -1745,12 +1721,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "a4cc2abeee384339": {
-  "src": "The {0} fixes map to <1>{2}</1> replacement-part entries, {3} per fix on average ({4} with {5} with {6} with {7}), drawn from {8} distinct catalogue items. {9} is mapped to the most fixes ({10}), ahead of {11} ({12}) and {13} ({14}).",
-  "t": "Die {0} Reparaturen sind <1>{2}</1> Ersatzteileinträgen zugeordnet, im Schnitt {3} pro Reparatur ({4} mit {5} mit {6} mit {7}), aus {8} unterschiedlichen Katalogartikeln. {9} ist den meisten Reparaturen zugeordnet ({10}), vor {11} ({12}) und {13} ({14}).",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
- },
  "a5307986491d9a3f": {
   "src": "{0} SAE-standard ({1}) + {2} manufacturer-specific across {3} makes",
   "t": "{0} nach SAE-Standard ({1}) + {2} herstellerspezifische aus {3} Marken",
@@ -1894,6 +1864,10 @@
   "t": "Alles aus Standard",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ac8cdb0776a0edf5": {
+  "src": "Rows for this OEM from the free sample. The dataset adds the ordered procedures for every pair, with cost and labour estimates where known and a part name where one is mapped.",
+  "t": "Zeilen dieses Herstellers aus der kostenlosen Stichprobe. Der Datensatz ergänzt für jedes Paar die geordneten Verfahren, mit Kosten- und Arbeitszeitschätzungen, soweit bekannt, und mit einem Teilenamen, wo ein Teil zugeordnet ist."
  },
  "ac9796b43eb5ec08": {
   "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Descriptions are written by us and no SAE {0} text is reproduced.",
@@ -2083,6 +2057,12 @@
   "by": "I01",
   "at": "2026-10-08"
  },
+ "bc9c2919ccfdaee5": {
+  "src": "<0>{1}</0> is the largest of the {2} fault families with {3} codes ({4}), followed by {5} ({6}) and {7} ({8}). Every code carries {9} to {10} authored procedures ({11} codes with {12} codes with {13} codes with {14} codes with {15}); the most frequent first-listed procedure, {16}, appears first for {17} codes.",
+  "t": "<0>{1}</0> ist mit {3} Codes ({4}) die größte der {2} Fehlerfamilien, gefolgt von {5} ({6}) und {7} ({8}). Jeder Code enthält {9} bis {10} redaktionell erstellte Verfahren ({11} Codes mit {12} Codes mit {13} Codes mit {14} Codes mit {15}); das häufigste zuerst aufgeführte Verfahren, {16}, steht bei {17} Codes an erster Stelle.",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "bd0b3597b798424e": {
   "src": "Download the sample (ZIP)",
   "t": "Beispieldaten herunterladen (ZIP)",
@@ -2174,12 +2154,6 @@
  "c40b66d10021d8b1": {
   "src": "<0>{1}</0> SAE-standard codes — {2} generic ranges. Powertrain, chassis, body, and network, including hybrid/EV ({3}) and diesel aftertreatment.",
   "t": "<0>{1}</0> Codes nach SAE-Standard — {2} generische Bereiche. Antriebsstrang, Fahrwerk, Karosserie und Netzwerk, einschließlich Hybrid/Elektro ({3}) und Diesel-Abgasnachbehandlung.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "c42021d20aaba8df": {
-  "src": "Two instant downloads after one checkout",
-  "t": "Zwei sofortige Downloads nach einem Bezahlvorgang",
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
@@ -2297,6 +2271,10 @@
   "src": "{0} DTC database",
   "t": "{0}-DTC-Datenbank"
  },
+ "ccdc7abb71e46c41": {
+  "src": "This is the first procedure in the authored consideration order, not a measured cause likelihood. Execute it only when its prerequisites and diagnostic findings support it. Its cost and labor estimates (where known), the step-by-step procedure and the remaining {0} procedure(s) are in the licensed dataset. <1>Ordering context</1>.",
+  "t": "Dies ist das erste Verfahren in der redaktionell erstellten Prüfreihenfolge, keine gemessene Ursachenwahrscheinlichkeit. Führen Sie es nur aus, wenn seine Voraussetzungen und die Diagnosebefunde dafür sprechen. Seine Kosten- und Arbeitszeitschätzungen (soweit bekannt), das Schritt-für-Schritt-Verfahren und die verbleibenden {0} Verfahren sind im lizenzierten Datensatz enthalten. <1>Kontext der Reihenfolge</1>."
+ },
  "cde1df12deaf8b24": {
   "src": "{0} curated codes ({1} SAE + {2} OEM) — the most-searched DTCs",
   "t": "{0} kuratierte Codes ({1} SAE + {2} OEM) — die meistgesuchten DTCs",
@@ -2359,6 +2337,12 @@
   "src": "Coverage by OEM",
   "t": "Abdeckung nach OEM"
  },
+ "d2e042d68a59825d": {
+  "src": "The {0} fixes map to <1>{2}</1> replacement-part entries, {3} per fix on average ({4} with {5} with {6} with {7} with {8}), drawn from {9} distinct catalogue items. {10} is mapped to the most fixes ({11}), ahead of {12} ({13}) and {14} ({15}).",
+  "t": "Die {0} Reparaturen sind <1>{2}</1> Ersatzteileinträgen zugeordnet, im Schnitt {3} pro Reparatur ({4} mit {5} mit {6} mit {7} mit {8}), aus {9} unterschiedlichen Katalogartikeln. {10} ist den meisten Reparaturen zugeordnet ({11}), vor {12} ({13}) und {14} ({15}).",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "d2e2793f17ea847e": {
   "src": "Share of fixes",
   "t": "Anteil an Reparaturen",
@@ -2370,12 +2354,6 @@
   "t": "<0>MechanicDB</0> › OBD-II-DTC-Datenbank",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "d4ea404c7eb3c66c": {
-  "src": "Rows for this OEM from the free sample. The dataset adds the ordered procedures, costs, labour estimates and parts for every pair.",
-  "t": "Zeilen dieses Herstellers aus der kostenlosen Stichprobe. Der Datensatz ergänzt für jedes Paar die geordneten Verfahren, Kosten, Arbeitszeitschätzungen und Teile.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "d5180fa89b3bab33": {
   "src": "Speed &amp; idle control",
@@ -2493,6 +2471,10 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ddb207f96cea844a": {
+  "src": "{0} per code in authored consideration order (up to {1} in reviewed families, where diagnostic steps list no parts), conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours where estimated",
+  "t": "{0} je Code in redaktionell erstellter, von Voraussetzungen und Befunden abhängiger Prüfreihenfolge (bis zu {1} in überprüften Familien, in denen Diagnoseschritte keine Teile aufführen), mit Schwierigkeitsstufe, Teilekostenspanne und, soweit geschätzt, Arbeitsstunden"
+ },
  "dde328e66f02919b": {
   "src": "Sec {0} · Provenance &amp; support",
   "t": "Abschn. {0} · Herkunft &amp; Support",
@@ -2539,12 +2521,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "e1d08e7cbfa40917": {
-  "src": "<0>{1}</0> is the largest of the {2} fault families with {3} codes ({4}), followed by {5} ({6}) and {7} ({8}). Every code carries {9} to {10} authored procedures ({11} codes with {12} codes with {13} codes with {14}); the most frequent first-listed procedure, {15}, appears first for {16} codes.",
-  "t": "<0>{1}</0> ist mit {3} Codes ({4}) die größte der {2} Fehlerfamilien, gefolgt von {5} ({6}) und {7} ({8}). Jeder Code enthält {9} bis {10} redaktionell erstellte Verfahren ({11} Codes mit {12} Codes mit {13} Codes mit {14}); das häufigste zuerst aufgeführte Verfahren, {15}, steht bei {16} Codes an erster Stelle.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "e1e25124a9a8cf97": {
   "src": "Source document",
   "t": "Quelldokument",
@@ -2568,12 +2544,6 @@
   "t": "Top {0} von {1} Artikeln",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "e399a5e856c24d30": {
-  "src": "One row per OEM from the free sample. The dataset adds the ordered procedures, costs, labour estimates and parts for every pair.",
-  "t": "Eine Zeile je Hersteller aus der kostenlosen Stichprobe. Der Datensatz ergänzt für jedes Paar die geordneten Verfahren, Kosten, Arbeitszeitschätzungen und Teile.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "e3dc15d7726bbcfc": {
   "src": "Procedures {0} after the first-listed procedure",
@@ -2608,6 +2578,10 @@
   "t": "OBD-II-Fehler {0}: {1}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "e6405a1674aa359a": {
+  "src": "A difficulty rating does not replace the safety procedure. Work on high-voltage hybrid/EV traction networks (&gt;{0}) or supplemental restraint systems (airbags/pyrotechnic pretensioners) calls for the manufacturer's lockout and safety procedure, whatever the rating; follow the service manual.",
+  "t": "Ein Schwierigkeitsgrad ersetzt nicht das Sicherheitsverfahren. Arbeiten an Hochvolt-Traktionsnetzen von Hybrid- und Elektrofahrzeugen (&gt;{0}) oder an Rückhaltesystemen (Airbags/pyrotechnische Gurtstraffer) erfordern unabhängig von der Einstufung die Freischaltung (Lockout) und das Sicherheitsverfahren des Herstellers; befolgen Sie das Werkstatthandbuch."
  },
  "e689fda2d2efb61c": {
   "src": "Catalogue statistics · build {0}",
@@ -2689,6 +2663,12 @@
   "src": "The {0} failure mode identifiers with plain-language meanings",
   "t": "Die {0} Fehlerart-Kennungen mit ihrer Bedeutung in verständlicher Sprache"
  },
+ "f1ce147d986afd5f": {
+  "src": "A difficulty rating is not a safety classification: some DIY-rated procedures include a high-voltage or SRS step. Before any high-voltage step, follow the manufacturer's lockout and zero-volt verification; before any SRS step, disconnect the battery and wait out the capacitor discharge time the service manual gives.",
+  "t": "Ein Schwierigkeitsgrad ist keine Sicherheitseinstufung: Einige als DIY eingestufte Verfahren enthalten einen Schritt am Hochvoltsystem oder am SRS. Befolgen Sie vor jedem Schritt am Hochvoltsystem die Freischaltung und die Prüfung der Spannungsfreiheit nach Herstellervorgabe; klemmen Sie vor jedem Schritt am SRS die Batterie ab und warten Sie die im Werkstatthandbuch angegebene Entladezeit des Kondensators ab.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
+ },
  "f229a983e5a47b53": {
   "src": "Working on trucks, buses or off-highway diesels? The <0>{1} fault code database</0> covers SAE {2} SPN/FMI fault pairs from published OEM documents.",
   "t": "Sie arbeiten mit Lkw, Bussen oder Offroad-Dieselmotoren? Die <0>{1}-Fehlercode-Datenbank</0> enthält SAE-{2}-SPN/FMI-Fehlerpaare aus veröffentlichten Herstellerdokumenten."
@@ -2714,6 +2694,10 @@
   "t": "Steuergerätekreise",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f36288d2a871cde7": {
+  "src": "How do difficulty ratings relate to high-voltage and SRS safety?",
+  "t": "Wie hängen Schwierigkeitsgrade mit der Sicherheit bei Hochvolt- und SRS-Arbeiten zusammen?"
  },
  "f3baadf431ed28c4": {
   "src": "Labor hours",
@@ -2791,17 +2775,9 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "fa954454fbaccb99": {
-  "src": "What safety criteria determine whether a repair procedure is rated Easy DIY vs Professional Required?",
-  "t": "Nach welchen Sicherheitskriterien wird ein Reparaturverfahren als Easy DIY oder Professional Required eingestuft?",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "fba5220a88eab6d7": {
-  "src": "Every one of the {0} fixes carries a parts-cost range ({1} coverage). The median range is <2>{3} to {4}</2> in parts; among first-listed procedures it is {5} to {6}. {7} of fixes top out under {8} and {9} ({10}) at {11} or more; the highest upper estimate is {12} ({13}).",
-  "t": "Jedes der {0} Reparaturverfahren enthält eine Teilekostenspanne ({1} Abdeckung). Die mittlere Spanne liegt bei <2>{3} bis {4}</2> für Teile; bei zuerst aufgeführten Verfahren beträgt sie {5} bis {6}. Bei {7} Verfahren liegt der Höchstwert unter {8}, und {9} ({10}) erreichen {11} oder mehr; die höchste Obergrenze beträgt {12} ({13}).",
-  "by": "I01",
-  "at": "2026-10-08"
+ "fb27d598fefcc160": {
+  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; fixes without an estimate have labor_status unknown; see parts_cost_status and labor_status.",
+  "t": "est_labor_hours ist die redaktionelle Schätzung des Datensatzes für die reine Arbeitszeit in einer Werkstatt, vorhanden bei {0} der Reparaturen; Reparaturen ohne Schätzung haben labor_status unknown; siehe parts_cost_status und labor_status."
  },
  "fbc59ee65c7b3e57": {
   "src": "{0} fixes",

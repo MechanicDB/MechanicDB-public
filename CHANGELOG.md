@@ -1,3 +1,69 @@
+## Procedure actions, cost status and SQLite v2 — I02/I42 Phase A (2026-10-11)
+
+Five columns are appended to `diagnostic_fixes` and both joined views, after
+`step_by_step_instructions`: `action_type`, `parts_cost_status`, `labor_status`,
+`cost_basis_id` and `procedure_rationale`. Existing columns keep their names and order;
+unreviewed rows keep their values, while rows in the three reviewed families changed title,
+rank, steps or estimates (IDs kept). The three estimate columns may now be NULL: `parts_cost_status` is `estimated`,
+`none_required` (both values 0, no part rows) or `unknown` (NULL); `labor_status` is
+`estimated` or `unknown` (NULL hours). Unreviewed rows keep their estimates, with
+`action_type` and `procedure_rationale` empty.
+
+- `cost_metadata.json` ships next to `ordering_metadata.json` in every product, sample and
+  ZIP: currency, geography, the editorial basis of each `cost_basis_id`, what is not specified
+  (tax, shipping, core charges, shop-supplies fees, labor rate, programming or subscription
+  fees), and the action, status and labor-class vocabularies. DATA_DICTIONARY.md gains a
+  "Cost basis" section; the OBD-II `est_labor_hours` description now says "Editorial estimate"
+  instead of "Average".
+- SQLite schema version 2 (`PRAGMA user_version = 2`) for Standard, OEM Complete and Heavy
+  Duty: the five columns, nullable estimates, and CHECKs for the vocabularies, the profile's
+  basis and the status / NULL / zero rules.
+- Identity content canonicalization 2: new columns at their unreviewed default are left out of
+  the content digest, so unreviewed rows keep their digest; NULL estimates hash as null. IDs
+  are unchanged.
+- D10: Heavy Duty fixes at 0/0 with no part rows (60 curated procedures, 1,495 delivered rows)
+  are `none_required`; HD 0/0 rows that list a part stay `estimated`.
+- Heavy Duty order: in the source-address-conflict family, the conditional reconfiguration
+  step is delivered directly after the check that gates it, in every fault.
+- Three proof families exercise `none_required`, unknown parts cost, unknown labor, a split
+  and a retirement. No new cost or labor numbers: each is carried unchanged from the base row
+  it described, or is 0/0 or NULL.
+- Counts: re-synced from the rebuilt tables (claims.json). Standard fixes 32,767 -> 32,812 (parts
+  44,588 unchanged); OEM fixes 56,561 -> 56,729 (parts 75,055 unchanged); Heavy Duty fixes 16,998
+  -> 17,047 and parts 5,904 -> 5,915. Code counts unchanged (9,249 / 15,886; HD 4,212 faults).
+  Parquet reduction 92.5%.
+- Shopfront wording: "3–5 procedures per code" now adds "up to 8 in reviewed families" and
+  that diagnostic steps in those families list no parts; labor estimates are described as
+  present where one exists; the stats page counts fixes with no part rows in its
+  parts-per-fix shares and calls recorded zeros parts-cost values, not estimates.
+- Safety framing (homepage data sheet): the row described the procedures ("High-voltage
+  procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect
+  and capacitor discharge wait. Hazardous steps are never rated DIY."), and many procedures,
+  including some rated DIY, do not match that description. The row now gives advice instead: a
+  difficulty rating is not a safety classification; before any high-voltage step, follow the
+  manufacturer's lockout and zero-volt verification, and before any SRS step, disconnect the
+  battery and wait out the capacitor discharge time the service manual gives. The FAQ
+  answer (and its structured-data copy) no longer says high-voltage, SRS and overhaul
+  procedures are strictly classified 'Professional Required'; it says a difficulty rating does
+  not replace the manufacturer's lockout and safety procedure. The FAQ's structured-data
+  question now asks how difficulty ratings relate to high-voltage and SRS safety (it asked
+  which safety criteria decide between Easy DIY and Professional Required), and the FAQ
+  heading "DIY Safety & High-Voltage Gate" is now "Difficulty ratings & HV/SRS safety": no
+  such gate exists.
+- Stats page: the `difficulty_level` note no longer says Easy DIY means no lifting or
+  programming and Professional Required covers programming, high-voltage and SRS work; some
+  DIY-rated procedures include an SRS step or a scan-tool relearn. It now calls the field an
+  editorial tier, not a safety classification. Stats data and charts are unchanged.
+- Heavy Duty tier (homepage): "ranked fixes with editorial cost and labour estimates" now ends
+  "where known"; some Heavy Duty fixes have an unknown labor or parts-cost estimate.
+- J1939 pages: the sample-rows note now says the dataset adds a part name where one is mapped,
+  not parts wherever a procedure needs them (many costed Heavy Duty fixes map no part).
+- Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
+  version 2 and canonicalization 2. README.md says version 2 keeps version 1's keys,
+  constraints, indexes and triggers.
+- `llms.txt`: the sentence saying that procedures which need no parts are 0/0 with
+  `none_required` is now scoped to reviewed families, where it holds.
+
 ## RecallDB cross-link: edition 2026.10 count (2026-10-11)
 
 The homepage "You might also need" link said 128,936 official U.S. recalls (RecallDB edition 2026.09).

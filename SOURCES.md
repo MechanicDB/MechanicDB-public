@@ -110,7 +110,7 @@ Standard TEXT), with the existing I01 authored-order meaning.
 `identity_map.csv` / `.parquet` provide entitled references, decimal-text numeric
 aliases, parent references, authored keys and content revision digests;
 `identity_events.csv` provides relevant lifecycle information. The core SQLite
-schema remains version 1. Public maps include only the authorized fixed samples.
+schema is version 2. Public maps include only the authorized fixed samples.
 Text, rank and component-name changes preserve intended identity. Retired or
 withdrawn allocations are never reused; merge/split migration requires review.
 

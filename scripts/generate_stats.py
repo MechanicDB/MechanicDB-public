@@ -77,6 +77,7 @@ def compute(db_path):
         return con.execute(sql, a).fetchall()
 
     def med(vals):
+        vals = [v for v in vals if v is not None]
         return statistics.median(vals) if vals else 0
 
     s = {}
@@ -131,37 +132,47 @@ def compute(db_path):
     s["fixes_with_cost"] = q("select count(*) from diagnostic_fixes where est_parts_cost_min_usd is not null and est_parts_cost_max_usd is not null")[0][0]
     s["fixes_with_labor"] = q("select count(*) from diagnostic_fixes where est_labor_hours is not null")[0][0]
 
+    # Unknown estimates are NULL (parts_cost_status / labor_status = unknown): every cost
+    # statistic below is computed over the fixes that carry the figure, never over NULLs.
+    cost_rows = [r for r in rows if r[1] is not None]
+    labor_rows = [r for r in rows if r[2] is not None]
+
     def cost_summary(label, sub):
-        return dict(group=label, fixes=len(sub), median_min=med([r[0] for r in sub]), median_max=med([r[1] for r in sub]),
-                    mean_max=round(statistics.mean([r[1] for r in sub]), 1) if sub else 0, median_labor=med([r[2] for r in sub]))
+        maxes = [r[1] for r in sub if r[1] is not None]
+        return dict(group=label, fixes=len(sub), median_min=med([r[0] for r in sub if r[0] is not None]),
+                    median_max=med(maxes), mean_max=round(statistics.mean(maxes), 1) if maxes else 0,
+                    median_labor=med([r[2] for r in sub if r[2] is not None]))
     s["cost_groups"] = [cost_summary("All procedures", rows), cost_summary("First-listed procedures (rank 1)", [r for r in rows if r[3] == 1])]
     s["cost_groups"] += [cost_summary(d, [r for r in rows if r[4] == d]) for d in DIFFICULTY]
     bys = {}
     for sc, mn, mx, lh in q("select c.system_category, f.est_parts_cost_min_usd, f.est_parts_cost_max_usd, f.est_labor_hours from diagnostic_fixes f join dtc_codes c using(code_id)"):
         bys.setdefault(sc, []).append((mn, mx, lh))
-    s["cost_by_system"] = [dict(system=sc, fixes=len(bys.get(sc, [])), median_min=med([r[0] for r in bys.get(sc, [])]), median_max=med([r[1] for r in bys.get(sc, [])]),
-                                median_labor=med([r[2] for r in bys.get(sc, [])])) for sc in SYSTEMS]
+    s["cost_by_system"] = [dict(system=sc, fixes=len(bys.get(sc, [])), median_min=med([r[0] for r in bys.get(sc, []) if r[0] is not None]),
+                                median_max=med([r[1] for r in bys.get(sc, []) if r[1] is not None]),
+                                median_labor=med([r[2] for r in bys.get(sc, []) if r[2] is not None])) for sc in SYSTEMS]
     s["cost_buckets"] = []
     for label, lo, hi in COST_BUCKETS:
-        c = sum(1 for r in rows if r[1] >= lo and (hi is None or r[1] < hi))
-        s["cost_buckets"].append((label, c, pct(c, len(rows))))
-    s["cost_max"] = max(r[1] for r in rows)
-    s["cost_1000plus"] = sum(1 for r in rows if r[1] >= 1000)
-    s["costliest"] = [(t, v, c) for t, v, c in q("select fix_title, est_parts_cost_max_usd, count(*) from diagnostic_fixes group by 1,2 order by 2 desc, 1 limit 8")]
+        c = sum(1 for r in cost_rows if r[1] >= lo and (hi is None or r[1] < hi))
+        s["cost_buckets"].append((label, c, pct(c, len(cost_rows))))
+    s["cost_max"] = max((r[1] for r in cost_rows), default=0)
+    s["cost_1000plus"] = sum(1 for r in cost_rows if r[1] >= 1000)
+    s["costliest"] = [(t, v, c) for t, v, c in q("select fix_title, est_parts_cost_max_usd, count(*) from diagnostic_fixes where est_parts_cost_max_usd is not null group by 1,2 order by 2 desc, 1 limit 8")]
 
     # 7. labor hours
     s["labor_buckets"] = []
     for label, lo, hi in LABOR_BUCKETS:
-        c = sum(1 for r in rows if r[2] > lo and (hi is None or r[2] <= hi))
-        s["labor_buckets"].append((label, c, pct(c, len(rows))))
-    s["labor_median"] = med([r[2] for r in rows])
-    s["labor_max"] = max(r[2] for r in rows)
-    s["labor_by_difficulty"] = [(d, med([r[2] for r in rows if r[4] == d])) for d in DIFFICULTY]
+        c = sum(1 for r in labor_rows if r[2] > lo and (hi is None or r[2] <= hi))
+        s["labor_buckets"].append((label, c, pct(c, len(labor_rows))))
+    s["labor_median"] = med([r[2] for r in labor_rows])
+    s["labor_max"] = max((r[2] for r in labor_rows), default=0)
+    s["labor_by_difficulty"] = [(d, med([r[2] for r in labor_rows if r[4] == d])) for d in DIFFICULTY]
 
     # 8. parts
     ppf = dict(q("select n, count(*) from (select fix_id, count(*) n from replacement_parts group by 1) group by 1"))
-    s["parts_per_fix"] = [(k, ppf[k], pct(ppf[k], s["fixes"])) for k in sorted(ppf)]
     s["fixes_without_parts"] = q("select count(*) from diagnostic_fixes where fix_id not in (select fix_id from replacement_parts)")[0][0]
+    if s["fixes_without_parts"]:
+        ppf[0] = s["fixes_without_parts"]  # the 0-part bucket, so the shares cover every fix
+    s["parts_per_fix"] = [(k, ppf[k], pct(ppf[k], s["fixes"])) for k in sorted(ppf)]
     s["parts_mean_per_fix"] = round(s["parts"] / s["fixes"], 2)
     s["distinct_parts"] = q("select count(distinct part_name) from replacement_parts")[0][0]
     s["top_parts"] = [(p, c, pct(c, s["fixes"])) for p, c in q("select part_name, count(*) c from replacement_parts group by 1 order by c desc, 1 limit 12")]
@@ -286,20 +297,20 @@ def build_page(s, charts):
         figure(site, "difficulty-all-fixes", charts["difficulty-all-fixes"], "DIY difficulty of all repair procedures", f"{n(s['fixes'])} procedures")
         + figure(site, "difficulty-first-fix", charts["difficulty-first-fix"], "DIY difficulty of the first-listed procedure per code", f"{n(s['codes'])} first-listed procedures"),
         table(["System", "Fixes"] + DIFFICULTY, [(sc_, n(t)) + tuple(f"{n(d[k])} ({pct(d[k], t)}%)" for k in DIFFICULTY) for sc_, d, t in dbs], {1, 2, 3, 4}),
-        "difficulty_level is assigned per fix by the editorial pipeline: Easy DIY (basic hand tools, no lifting or programming), Moderate DIY (specialty tools or partial disassembly), "
-        "Professional Required (programming, high-voltage, SRS, internal transmission or engine work). The rank-1 procedure is the first item of each code's authored consideration order, not a measured probability."))
+        "difficulty_level is an editorial tier assigned per fix (Easy DIY, Moderate DIY, Professional Required). It is not a safety classification: "
+        "some DIY-rated procedures include an SRS step or a scan-tool relearn; follow the service manual's safety procedure whatever the rating. The rank-1 procedure is the first item of each code's authored consideration order, not a measured probability."))
 
     # 6. cost
     cg, cb = s["cost_groups"], s["cost_buckets"]
-    charts["parts-cost-ranges"] = svg_hbar(site, "Upper parts-cost estimate per fix", f"{n(s['fixes'])} fixes by est_parts_cost_max_usd",
+    charts["parts-cost-ranges"] = svg_hbar(site, "Upper parts-cost estimate per fix", f"{n(s['fixes_with_cost'])} fixes with a parts-cost value (estimate or recorded zero), by est_parts_cost_max_usd",
                                            [(lbl, c, f"{n(c)} ({p}%)") for lbl, c, p in cb], src_note, label_w=140)
     allc, r1 = cg[0], cg[1]
     sections.append(section(
         site, "repair-cost", "What the repairs are estimated to cost",
-        f"Every one of the {n(s['fixes'])} fixes carries a parts-cost range ({pct(s['fixes_with_cost'], s['fixes'])}% coverage). The median range is <strong>{usd(allc['median_min'])} to {usd(allc['median_max'])}</strong> in parts; "
+        f"{n(s['fixes_with_cost'])} of the {n(s['fixes'])} fixes carry a parts-cost estimate or a recorded zero for procedures that need no parts ({pct(s['fixes_with_cost'], s['fixes'])}%). The median range is <strong>{usd(allc['median_min'])} to {usd(allc['median_max'])}</strong> in parts; "
         f"among first-listed procedures it is {usd(r1['median_min'])} to {usd(r1['median_max'])}. "
-        f"{cb[0][2]}% of fixes top out under $50 and {pct(s['cost_1000plus'], s['fixes'])}% ({n(s['cost_1000plus'])}) at $1,000 or more; the highest upper estimate is {usd(s['cost_max'])} ({data(s['costliest'][0][0])}).",
-        figure(site, "parts-cost-ranges", charts["parts-cost-ranges"], "Upper parts-cost estimate per fix", f"{n(s['fixes'])} fixes"),
+        f"{cb[0][2]}% of those fixes top out under $50 and {pct(s['cost_1000plus'], s['fixes_with_cost'])}% ({n(s['cost_1000plus'])}) at $1,000 or more; the highest upper estimate is {usd(s['cost_max'])} ({data(s['costliest'][0][0])}).",
+        figure(site, "parts-cost-ranges", charts["parts-cost-ranges"], "Upper parts-cost estimate per fix", f"{n(s['fixes_with_cost'])} fixes"),
         table(["Group", "Fixes", "Median lower estimate", "Median upper estimate", "Mean upper estimate", "Median labor"],
               [(g["group"], n(g["fixes"]), usd(g["median_min"]), usd(g["median_max"]), usd(g["mean_max"]), hours(g["median_labor"])) for g in cg], {1, 2, 3, 4, 5})
         + "<h3>By vehicle system</h3>"
@@ -312,18 +323,18 @@ def build_page(s, charts):
 
     # 7. labor
     lb = s["labor_buckets"]
-    charts["labor-hours"] = svg_hbar(site, "Estimated labor hours per fix", f"{n(s['fixes'])} fixes by est_labor_hours",
+    charts["labor-hours"] = svg_hbar(site, "Estimated labor hours per fix", f"{n(s['fixes_with_labor'])} fixes with a labor estimate, by est_labor_hours",
                                      [(lbl, c, f"{n(c)} ({p}%)") for lbl, c, p in lb], src_note, label_w=130)
     lbd = s["labor_by_difficulty"]
     sections.append(section(
         site, "labor", "How long the repairs are estimated to take",
-        f"The median fix is estimated at <strong>{hours(s['labor_median'])}</strong> of labor; {lb[0][2]}% of fixes are {lb[0][0]} and {lb[-1][2]}% are {lb[-1][0]}, with a maximum of {hours(s['labor_max'])}. "
+        f"The median fix is estimated at <strong>{hours(s['labor_median'])}</strong> of labor across the {n(s['fixes_with_labor'])} fixes that carry an estimate; {lb[0][2]}% are {lb[0][0]} and {lb[-1][2]}% are {lb[-1][0]}, with a maximum of {hours(s['labor_max'])}. "
         f"By difficulty the medians are {hours(lbd[0][1])} ({data(lbd[0][0])}), {hours(lbd[1][1])} ({data(lbd[1][0])}) and {hours(lbd[2][1])} ({data(lbd[2][0])}).",
-        figure(site, "labor-hours", charts["labor-hours"], "Estimated labor hours per fix", f"{n(s['fixes'])} fixes"),
+        figure(site, "labor-hours", charts["labor-hours"], "Estimated labor hours per fix", f"{n(s['fixes_with_labor'])} fixes"),
         table(["Labor estimate", "Fixes", "Share"], [(lbl, n(c), f"{p}%") for lbl, c, p in lb], {1, 2})
         + "<h3>Median labor by difficulty</h3>"
         + table(["Difficulty", "Median labor"], [(d, hours(v)) for d, v in lbd], {1}),
-        f"est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {pct(s['fixes_with_labor'], s['fixes'])}% of fixes; diagnosis time before the repair is not included."))
+        f"est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {pct(s['fixes_with_labor'], s['fixes'])}% of fixes; fixes without an estimate have labor_status unknown; see parts_cost_status and labor_status."))
 
     # 8. parts
     tp = s["top_parts"]

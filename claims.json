@@ -2,21 +2,21 @@
   "snapshot": "2026.10",
   "standard": {
     "codes": 9249,
-    "fixes": 32767,
+    "fixes": 32812,
     "parts": 44588,
     "price_usd": 49
   },
   "oem": {
     "codes": 15886,
-    "fixes": 56561,
+    "fixes": 56729,
     "parts": 75055,
     "price_usd": 149
   },
   "heavyduty": {
     "faults": 4212,
     "spns": 884,
-    "fixes": 16998,
-    "parts": 5904,
+    "fixes": 17047,
+    "parts": 5915,
     "oems": 10,
     "sources": 16,
     "price_usd": 149,

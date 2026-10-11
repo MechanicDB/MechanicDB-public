@@ -37,7 +37,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "MechanicDB: banco de dados automotivo de diagnóstico e reparo OBD-II",
-  "description": "Conjunto de dados de diagnóstico automotivo que associa 15.886 códigos de falha OBD-II verificados de 32 marcas de veículos a 56.561 procedimentos de reparo elaborados pela equipe, com níveis de dificuldade para execução própria e estimativas de custos de mão de obra e peças. Uma categoria Heavy Duty separada acrescenta 4.212 pares de falha SPN/FMI SAE J1939 compilados de 16 documentos de códigos de falha publicados pelas fabricantes.",
+  "description": "Conjunto de dados de diagnóstico automotivo que associa 15.886 códigos de falha OBD-II verificados de 32 marcas de veículos a 56.729 procedimentos de reparo elaborados pela equipe, com níveis de dificuldade para execução própria e estimativas de custos de mão de obra e peças. Uma categoria Heavy Duty separada acrescenta 4.212 pares de falha SPN/FMI SAE J1939 compilados de 16 documentos de códigos de falha publicados pelas fabricantes.",
   "url": "https://mechanicdb.dataengineered.io/pt-br/",
   "license": "https://mechanicdb.dataengineered.io/license",
   "isAccessibleForFree": false,
@@ -106,7 +106,7 @@
     {
       "@type": "Dataset",
       "name": "MechanicDB OBD-II DTC Database",
-      "description": "15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 authored repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.",
+      "description": "15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,729 authored repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.",
       "url": "https://mechanicdb.dataengineered.io/obd2-dtc-database",
       "creator": {
         "@type": "Organization",
@@ -119,7 +119,7 @@
     {
       "@type": "Dataset",
       "name": "MechanicDB Heavy Duty — J1939 Fault & Repair Database",
-      "description": "4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents across 10 manufacturers, each mapped to an authored fault family with 16,998 authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
+      "description": "4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents across 10 manufacturers, each mapped to an authored fault family with 17,047 authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
       "url": "https://mechanicdb.dataengineered.io/j1939-fault-code-database",
       "creator": {
         "@type": "Organization",
@@ -149,10 +149,10 @@
     },
     {
       "@type": "Question",
-      "name": "Quais critérios de segurança determinam se um procedimento de reparo é classificado como Easy DIY ou Professional Required?",
+      "name": "Qual a relação entre as classificações de dificuldade e a segurança em alta tensão e no SRS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Procedimentos que envolvem redes de tração de alta tensão de híbridos/elétricos (>60V), sistemas de retenção suplementares (airbags/pré-tensionadores pirotécnicos) ou retíficas internas de motor/transmissão são estritamente classificados como 'Professional Required', com etapas obrigatórias de bloqueio e verificação de ausência de tensão."
+        "text": "Uma classificação de dificuldade não substitui o procedimento de segurança. Trabalhos em redes de tração de alta tensão de híbridos/elétricos (>60V) ou em sistemas de retenção suplementares (airbags/pré-tensionadores pirotécnicos) exigem o procedimento de bloqueio e de segurança do fabricante, seja qual for a classificação; siga o manual de serviço."
       }
     },
     {
@@ -160,7 +160,7 @@
       "name": "Posso integrar o MechanicDB em scanners automotivos comerciais ou em software de gestão de oficinas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. A amostra de 90 códigos está disponível sob ODbL v1.0. O conjunto de dados completo com 15.886 códigos e 56.561 reparos vem com uma licença comercial perpétua para integrá-lo às suas próprias ferramentas de diagnóstico, aplicativos e serviços, e é entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite. Você não pode revender nem redistribuir os dados brutos em si; consulte os termos completos da licença."
+        "text": "Sim. A amostra de 90 códigos está disponível sob ODbL v1.0. O conjunto de dados completo com 15.886 códigos e 56.729 reparos vem com uma licença comercial perpétua para integrá-lo às suas próprias ferramentas de diagnóstico, aplicativos e serviços, e é entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite. Você não pode revender nem redistribuir os dados brutos em si; consulte os termos completos da licença."
       }
     },
     {
@@ -612,7 +612,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "MechanicDB: conjunto de dados automotivo de diagnóstico e reparo OBD-II — Snapshot",
-  "description": "Conjuntos de dados de diagnóstico e reparo: 15.886 códigos de falha OBD-II verificados de 32 marcas de veículos associados a 56.561 procedimentos de reparo elaborados pela equipe, além de uma categoria Heavy Duty com 4.212 pares de falha SPN/FMI SAE J1939 e 16.998 reparos elaborados pela equipe.",
+  "description": "Conjuntos de dados de diagnóstico e reparo: 15.886 códigos de falha OBD-II verificados de 32 marcas de veículos associados a 56.729 procedimentos de reparo elaborados pela equipe, além de uma categoria Heavy Duty com 4.212 pares de falha SPN/FMI SAE J1939 e 17.047 reparos elaborados pela equipe.",
   "image": "https://mechanicdb.dataengineered.io/assets/kaggle-cover.png",
   "brand": {
     "@type": "Brand",
@@ -818,7 +818,7 @@
 <div class="wrap">
 <span class="stamp">Seç. 00 · Referência diagnóstica</span>
 <h1>Cada luz de injeção acesa, <em>decodificada e com custo estimado.</em></h1>
-<p class="lede">Feito para apps OBD, firmware de scanners, copilotos mecânicos com IA e software de oficina: 56.561 procedimentos de reparo classificados — cada um com classificação de dificuldade para quem faz por conta própria, faixa de custo de peças e estimativa de mão de obra — vinculados a 15.886 códigos de falha OBD-II verificados (9.249 padrão SAE mais 6.637 específicos de fabricante em 32 marcas). Listas de códigos gratuitas param na definição; o MechanicDB começa aí.</p>
+<p class="lede">Feito para apps OBD, firmware de scanners, copilotos mecânicos com IA e software de oficina: 56.729 procedimentos de reparo classificados — cada um com classificação de dificuldade para quem faz por conta própria e faixa de custo de peças, além de estimativa de mão de obra quando existe — vinculados a 15.886 códigos de falha OBD-II verificados (9.249 padrão SAE mais 6.637 específicos de fabricante em 32 marcas). Listas de códigos gratuitas param na definição; o MechanicDB começa aí.</p>
 <div class="cta-row">
 <!-- BEGIN:buyer-link --><a class="btn btn-ghost" href="/pt-br/obd2-dtc-database">Obtenha o banco de dados — CSV, Parquet, SQLite</a><!-- END:buyer-link -->
 <a class="btn btn-amber" href="#licensing">Licenciar o conjunto de dados completo</a>
@@ -878,7 +878,7 @@
 <div class="wrap">
 <span class="stamp">Seç. 01 · O que está incluído</span>
 <h2 class="sec-title">Quatro tabelas relacionais, uma cadeia de chaves de junção</h2>
-<p class="sec-lede">Normalizado para bancos de dados, pré-associado para notebooks. Cada código contém 3–5 procedimentos em uma ordem de consideração elaborada pela equipe; a execução depende dos pré-requisitos e dos achados do diagnóstico. Cada procedimento é associado a peças de reposição disponíveis para compra.</p>
+<p class="sec-lede">Normalizado para bancos de dados, pré-associado para notebooks. Cada código contém 3–5 procedimentos em uma ordem de consideração elaborada pela equipe (até 8 nas famílias revisadas); a execução depende dos pré-requisitos e dos achados do diagnóstico. Os procedimentos de reparo são associados a peças de reposição; nas famílias revisadas, as etapas de diagnóstico não listam peças.</p>
 <div class="schema-strip">
 <div class="table-card">
 <h3 translate="no">dtc_codes</h3>
@@ -888,9 +888,9 @@
 </div>
 <div class="table-card">
 <h3 translate="no">diagnostic_fixes</h3>
-<div class="rows">56.561 linhas</div>
+<div class="rows">56.729 linhas</div>
 <p>Procedimentos de reparo elaborados pela equipe com ordem de consideração, nível de dificuldade, faixa de custo de peças, horas de mão de obra e instruções passo a passo.</p>
-<ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> mín./máx. USD</li></ul>
+<ul><li><span translate="no">probability_rank</span> 1–7</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> mín./máx. USD</li></ul>
 </div>
 <div class="table-card">
 <h3 translate="no">replacement_parts</h3>
@@ -900,9 +900,9 @@
 </div>
 <div class="table-card">
 <h3 translate="no">dtc_fixes_joined</h3>
-<div class="rows">56.561 linhas</div>
+<div class="rows">56.729 linhas</div>
 <p>A visão analítica pré-unida — códigos × reparos em um único arquivo plano para ingestão imediata.</p>
-<ul><li>todas as 16 colunas</li><li>um único <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
+<ul><li>todas as 21 colunas</li><li>um único <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
 </div>
 </div>
 <p class="join-note">cadeia de junção: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
@@ -916,10 +916,10 @@
 <table>
 <tr><th scope="row">Cobertura</th><td><b>9.249</b> códigos padrão SAE — faixas genéricas P0, P2, P34–P39, C0, B0, U0, U3. Trem de força, chassi, carroceria e rede, incluindo híbridos/elétricos (P0Axx–P0Exx) e pós-tratamento diesel.</td></tr>
 <tr><th scope="row">Cobertura OEM</th><td><b>6.637</b> códigos específicos de fabricante em <b>32</b> marcas — faixas P1, P30–P33, C1/C2, B1/B2, U1/U2 controladas pelo fabricante. A cobertura é desigual e mais forte em marcas do mercado norte-americano — o detalhamento completo por marca está abaixo. <b>15.886</b> códigos no total.</td></tr>
-<tr><th scope="row">Inteligência de reparo</th><td><b>647</b> famílias de falhas elaboradas pela equipe → <b>56.561</b> procedimentos ordenados → <b>75.055</b> associações de peças. <code>probability_rank</code> é um nome de campo legado compatível para a ordem de consideração, não para probabilidade, sucesso, gravidade ou custo. Níveis de dificuldade: faça você mesmo fácil / faça você mesmo moderado / profissional necessário. <a href="/ordering_metadata.json">Contexto da ordem</a>.</td></tr>
-<tr><th scope="row">Formatos de entrega</th><td>CSV delimitado por barra vertical (UTF-8 BOM, compatível com Excel) · Apache Parquet, Snappy — <b>92,0%</b> menor, conforme medido · banco de dados SQLite com as quatro tabelas.</td></tr>
+<tr><th scope="row">Inteligência de reparo</th><td><b>647</b> famílias de falhas elaboradas pela equipe → <b>56.729</b> procedimentos ordenados → <b>75.055</b> associações de peças. <code>probability_rank</code> é um nome de campo legado compatível para a ordem de consideração, não para probabilidade, sucesso, gravidade ou custo. Níveis de dificuldade: faça você mesmo fácil / faça você mesmo moderado / profissional necessário. <a href="/ordering_metadata.json">Contexto da ordem</a>.</td></tr>
+<tr><th scope="row">Formatos de entrega</th><td>CSV delimitado por barra vertical (UTF-8 BOM, compatível com Excel) · Apache Parquet, Snappy — <b>92,5%</b> menor, conforme medido · banco de dados SQLite com as quatro tabelas.</td></tr>
 <tr><th scope="row">Controles de qualidade</th><td>Build determinístico validado por testes: integridade referencial, verificações de unicidade contra texto padronizado e uma barreira contra códigos inventados — cada código publicado remonta à fonte versionada.</td></tr>
-<tr><th scope="row">Critérios de segurança</th><td>Procedimentos de alta tensão começam com bloqueio e verificação de ausência de tensão; trabalhos no SRS exigem desconectar a bateria e aguardar a descarga do capacitor. Etapas perigosas nunca são classificadas como DIY.</td></tr>
+<tr><th scope="row">Critérios de segurança</th><td>Uma classificação de dificuldade não é uma classificação de segurança: alguns procedimentos classificados como DIY incluem uma etapa de alta tensão ou no SRS. Antes de qualquer etapa de alta tensão, siga o bloqueio e a verificação de ausência de tensão do fabricante; antes de qualquer etapa no SRS, desconecte a bateria e aguarde o tempo de descarga do capacitor indicado no manual de serviço.</td></tr>
 <tr><th scope="row">Procedência</th><td>Definições de códigos compiladas de fontes públicas SAE J2012-derived (licença MIT, atribuição preservada). Procedimentos, classificações de dificuldade e custos são conteúdo original redigido.</td></tr>
 </table>
 </div>
@@ -992,7 +992,7 @@
 <div class="price">$49</div>
 <div class="per">pagamento único · uso comercial</div>
 <ul>
-<li>Conjunto de dados somente SAE: 9.249 códigos, 32.767 reparos, 44.588 peças</li>
+<li>Conjunto de dados somente SAE: 9.249 códigos, 32.812 reparos, 44.588 peças</li>
 <li>Entrega em CSV + Parquet + SQLite</li>
 <li>Direitos de uso comercial — apps, dongles, copilotos, software de oficina</li>
 <li>Versões publicadas pelo pipeline determinístico</li>
@@ -1006,7 +1006,7 @@
 <ul>
 <li>Tudo do Standard</li>
 <li>6.637 códigos OEM em 32 marcas — distribuição desigual, mais forte em marcas do mercado norte-americano (<a href="#coverage">cobertura por marca</a>)</li>
-<li>Conjunto de dados completo mesclado: 15.886 códigos, 56.561 reparos, 75.055 peças</li>
+<li>Conjunto de dados completo mesclado: 15.886 códigos, 56.729 reparos, 75.055 peças</li>
 <li>Entrega em CSV + Parquet + SQLite</li>
 </ul>
 <a class="btn btn-ghost" href="https://buy.stripe.com/28EfZicVy0ECdM796w38404?client_reference_id=mechanicdb_pt-br_home">Comprar agora · Download imediato</a>
@@ -1018,7 +1018,7 @@
 <div class="per">pagamento único · uso comercial</div>
 <ul>
 <li><span translate="no">4,212</span> pares de falha SPN/FMI J1939 em <span translate="no">10</span> OEMs — transmissão, ABS, motores fora de estrada e estacionários, controladores de carroceria (<a href="/pt-br/j1939-fault-code-database">cobertura completa</a>)</li>
-<li><span translate="no">16,998</span> reparos classificados com estimativas editoriais de custo e mão de obra</li>
+<li><span translate="no">17,047</span> reparos classificados com estimativas editoriais de custo e mão de obra quando conhecidas</li>
 <li>URL de origem por linha para a tabela de falhas OEM publicada — sem texto da SAE, não é o Digital Annex do J1939</li>
 <li>Entrega em CSV + Parquet + SQLite</li>
 </ul>
@@ -1054,12 +1054,12 @@
 <p>Cada código segue o formato SAE J2012 de 5 caracteres, em que o caractere 1 designa o sistema (P=trem de força, C=chassi, B=carroceria, U=rede), o caractere 2 indica padrão SAE ('0') ou definido pelo fabricante ('1'), o caractere 3 designa o subsistema e os caracteres 4-5 representam o índice específico da falha.</p>
 </div>
 <div class="faq-item">
-<h3>Segurança DIY e barreira de alta tensão</h3>
-<p>Procedimentos que envolvem redes de tração de alta tensão de híbridos/elétricos (&gt;60V), sistemas de retenção suplementares (airbags/pré-tensionadores pirotécnicos) ou retíficas internas de motor/transmissão são estritamente classificados como 'Professional Required', com etapas obrigatórias de bloqueio e verificação de ausência de tensão.</p>
+<h3>Classificações de dificuldade e segurança em alta tensão e SRS</h3>
+<p>Uma classificação de dificuldade não substitui o procedimento de segurança. Trabalhos em redes de tração de alta tensão de híbridos/elétricos (&gt;60V) ou em sistemas de retenção suplementares (airbags/pré-tensionadores pirotécnicos) exigem o procedimento de bloqueio e de segurança do fabricante, seja qual for a classificação; siga o manual de serviço.</p>
 </div>
 <div class="faq-item">
 <h3>Integração comercial em scanners automotivos</h3>
-<p>Sim. A amostra de 90 códigos está disponível sob ODbL v1.0. O conjunto de dados completo com 15.886 códigos e 56.561 reparos vem com uma licença comercial perpétua para integrá-lo às suas próprias ferramentas de diagnóstico, aplicativos e serviços, e é entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite. Você não pode revender nem redistribuir os dados brutos em si; consulte os <a href="/license">termos completos da licença</a>.</p>
+<p>Sim. A amostra de 90 códigos está disponível sob ODbL v1.0. O conjunto de dados completo com 15.886 códigos e 56.729 reparos vem com uma licença comercial perpétua para integrá-lo às suas próprias ferramentas de diagnóstico, aplicativos e serviços, e é entregue como CSVs planos delimitados por barra vertical, tabelas Apache Parquet e um banco de dados relacional SQLite. Você não pode revender nem redistribuir os dados brutos em si; consulte os <a href="/license">termos completos da licença</a>.</p>
 </div>
 <div class="faq-item">
 <h3>Cobertura OEM por fabricante</h3>

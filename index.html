@@ -37,7 +37,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "MechanicDB Automotive OBD-II Diagnostic & Repair Database",
-  "description": "Automotive diagnostic dataset mapping 15,886 verified OBD-II trouble codes across 32 vehicle makes to 56,561 authored repair procedures with DIY difficulty ratings and labor/parts cost estimations. A separate Heavy Duty tier adds 4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents.",
+  "description": "Automotive diagnostic dataset mapping 15,886 verified OBD-II trouble codes across 32 vehicle makes to 56,729 authored repair procedures with DIY difficulty ratings and labor/parts cost estimations. A separate Heavy Duty tier adds 4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents.",
   "url": "https://mechanicdb.dataengineered.io/",
   "license": "https://mechanicdb.dataengineered.io/license",
   "isAccessibleForFree": false,
@@ -106,7 +106,7 @@
     {
       "@type": "Dataset",
       "name": "MechanicDB OBD-II DTC Database",
-      "description": "15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,561 authored repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.",
+      "description": "15,886 OBD-II trouble codes (9,249 SAE + 6,637 OEM) joined to 56,729 authored repair procedures. Download as CSV, Parquet or SQLite. Free 90-code sample.",
       "url": "https://mechanicdb.dataengineered.io/obd2-dtc-database",
       "creator": {
         "@type": "Organization",
@@ -119,7 +119,7 @@
     {
       "@type": "Dataset",
       "name": "MechanicDB Heavy Duty — J1939 Fault & Repair Database",
-      "description": "4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents across 10 manufacturers, each mapped to an authored fault family with 16,998 authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
+      "description": "4,212 SAE J1939 SPN/FMI fault pairs compiled from 16 published OEM fault-code documents across 10 manufacturers, each mapped to an authored fault family with 17,047 authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
       "url": "https://mechanicdb.dataengineered.io/j1939-fault-code-database",
       "creator": {
         "@type": "Organization",
@@ -147,10 +147,10 @@
     },
     {
       "@type": "Question",
-      "name": "What safety criteria determine whether a repair procedure is rated Easy DIY vs Professional Required?",
+      "name": "How do difficulty ratings relate to high-voltage and SRS safety?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Procedures involving high-voltage hybrid/EV traction networks (>60V), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps."
+        "text": "A difficulty rating does not replace the safety procedure. Work on high-voltage hybrid/EV traction networks (>60V) or supplemental restraint systems (airbags/pyrotechnic pretensioners) calls for the manufacturer's lockout and safety procedure, whatever the rating; follow the service manual."
       }
     },
     {
@@ -158,7 +158,7 @@
       "name": "Can I integrate MechanicDB into commercial scan tools or shop management software?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The 90-code sample is available under ODbL v1.0. The complete 15,886-code and 56,561-fix dataset comes with a perpetual commercial license to build it into your own scan tools, apps and services, delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database. You can't resell or redistribute the raw data itself; see the full license terms."
+        "text": "Yes. The 90-code sample is available under ODbL v1.0. The complete 15,886-code and 56,729-fix dataset comes with a perpetual commercial license to build it into your own scan tools, apps and services, delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database. You can't resell or redistribute the raw data itself; see the full license terms."
       }
     },
     {
@@ -568,7 +568,7 @@
   .form-status.success { background: rgba(76,175,109,0.15); border: 1px solid var(--easy); color: #86e8a7; display: block; }
   .form-status.error { background: rgba(214,84,84,0.15); border: 1px solid var(--pro); color: #ff9e9e; display: block; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "MechanicDB Automotive OBD-II Diagnostic & Repair Dataset — Snapshot", "description": "Diagnostic and repair datasets: 15,886 verified OBD-II trouble codes across 32 vehicle makes mapped to 56,561 authored repair procedures, plus a Heavy Duty tier of 4,212 SAE J1939 SPN/FMI fault pairs with 16,998 authored repairs.", "image": "https://mechanicdb.dataengineered.io/assets/kaggle-cover.png", "brand": {"@type": "Brand", "name": "MechanicDB"}, "category": "Software > Data & Databases", "offers": [{"@type": "Offer", "name": "Standard (SAE) — 9,249 codes", "price": "49.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"}, "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": "US"}, {"@type": "DefinedRegion", "addressCountry": "GB"}, {"@type": "DefinedRegion", "addressCountry": "CA"}, {"@type": "DefinedRegion", "addressCountry": "AU"}], "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": ["US", "GB", "CA", "AU"], "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}, "url": "https://mechanicdb.dataengineered.io/#licensing"}, {"@type": "Offer", "name": "OEM Complete — 15,886 codes", "price": "149.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"}, "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": "US"}, {"@type": "DefinedRegion", "addressCountry": "GB"}, {"@type": "DefinedRegion", "addressCountry": "CA"}, {"@type": "DefinedRegion", "addressCountry": "AU"}], "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": ["US", "GB", "CA", "AU"], "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}, "url": "https://mechanicdb.dataengineered.io/#licensing"}, {"@type": "Offer", "name": "Heavy Duty (J1939) — 4,212 fault pairs", "price": "149.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"}, "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": "US"}, {"@type": "DefinedRegion", "addressCountry": "GB"}, {"@type": "DefinedRegion", "addressCountry": "CA"}, {"@type": "DefinedRegion", "addressCountry": "AU"}], "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": ["US", "GB", "CA", "AU"], "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}, "url": "https://mechanicdb.dataengineered.io/j1939-fault-code-database"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "MechanicDB Automotive OBD-II Diagnostic & Repair Dataset — Snapshot", "description": "Diagnostic and repair datasets: 15,886 verified OBD-II trouble codes across 32 vehicle makes mapped to 56,729 authored repair procedures, plus a Heavy Duty tier of 4,212 SAE J1939 SPN/FMI fault pairs with 17,047 authored repairs.", "image": "https://mechanicdb.dataengineered.io/assets/kaggle-cover.png", "brand": {"@type": "Brand", "name": "MechanicDB"}, "category": "Software > Data & Databases", "offers": [{"@type": "Offer", "name": "Standard (SAE) — 9,249 codes", "price": "49.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"}, "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": "US"}, {"@type": "DefinedRegion", "addressCountry": "GB"}, {"@type": "DefinedRegion", "addressCountry": "CA"}, {"@type": "DefinedRegion", "addressCountry": "AU"}], "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": ["US", "GB", "CA", "AU"], "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}, "url": "https://mechanicdb.dataengineered.io/#licensing"}, {"@type": "Offer", "name": "OEM Complete — 15,886 codes", "price": "149.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"}, "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": "US"}, {"@type": "DefinedRegion", "addressCountry": "GB"}, {"@type": "DefinedRegion", "addressCountry": "CA"}, {"@type": "DefinedRegion", "addressCountry": "AU"}], "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": ["US", "GB", "CA", "AU"], "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}, "url": "https://mechanicdb.dataengineered.io/#licensing"}, {"@type": "Offer", "name": "Heavy Duty (J1939) — 4,212 fault pairs", "price": "149.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"}, "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": "US"}, {"@type": "DefinedRegion", "addressCountry": "GB"}, {"@type": "DefinedRegion", "addressCountry": "CA"}, {"@type": "DefinedRegion", "addressCountry": "AU"}], "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": ["US", "GB", "CA", "AU"], "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}, "url": "https://mechanicdb.dataengineered.io/j1939-fault-code-database"}]}</script>
 </head>
 <body>
 
@@ -589,7 +589,7 @@
   <div class="wrap">
     <span class="stamp">Sec 00 · Diagnostic Reference</span>
     <h1>Every check-engine light, <em>decoded and costed.</em></h1>
-    <p class="lede">Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: 56,561 ranked repair procedures — each with a DIY difficulty rating, a parts-cost range and a labor estimate — attached to 15,886 verified OBD-II trouble codes (9,249 SAE-standard plus 6,637 manufacturer-specific across 32 makes). Free code lists stop at the definition; MechanicDB starts there.</p>
+    <p class="lede">Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software: 56,729 ranked repair procedures — each with a DIY difficulty rating and a parts-cost range, plus a labor estimate where one exists — attached to 15,886 verified OBD-II trouble codes (9,249 SAE-standard plus 6,637 manufacturer-specific across 32 makes). Free code lists stop at the definition; MechanicDB starts there.</p>
     <div class="cta-row">
   <!-- BEGIN:buyer-link --><a href="/obd2-dtc-database" class="btn btn-ghost">Get the database &mdash; CSV, Parquet, SQLite</a><!-- END:buyer-link -->
       <a class="btn btn-amber" href="#licensing">License the full dataset</a>
@@ -653,7 +653,7 @@
   <div class="wrap">
     <span class="stamp">Sec 01 · What's inside</span>
     <h2 class="sec-title">Four relational tables, one join key chain</h2>
-    <p class="sec-lede">Normalized for databases, pre-joined for notebooks. Every code carries 3–5 procedures in authored consideration order; execution depends on prerequisites and diagnostic findings. Every procedure maps to purchasable aftermarket parts.</p>
+    <p class="sec-lede">Normalized for databases, pre-joined for notebooks. Every code carries 3–5 procedures in authored consideration order (up to 8 in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; in reviewed families, diagnostic steps list no parts.</p>
     <div class="schema-strip">
       <div class="table-card">
         <h3 translate="no">dtc_codes</h3>
@@ -663,9 +663,9 @@
       </div>
       <div class="table-card">
         <h3 translate="no">diagnostic_fixes</h3>
-        <div class="rows">56,561 rows</div>
+        <div class="rows">56,729 rows</div>
         <p>Authored repair procedures with consideration order, difficulty tier, parts-cost range, labor hours, and step-by-step instructions.</p>
-        <ul><li><span translate="no">probability_rank</span> 1–5</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
+        <ul><li><span translate="no">probability_rank</span> 1–7</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> min/max USD</li></ul>
       </div>
       <div class="table-card">
         <h3 translate="no">replacement_parts</h3>
@@ -675,9 +675,9 @@
       </div>
       <div class="table-card">
         <h3 translate="no">dtc_fixes_joined</h3>
-        <div class="rows">56,561 rows</div>
+        <div class="rows">56,729 rows</div>
         <p>The pre-joined analytical view — codes × fixes in one flat file for instant ingestion.</p>
-        <ul><li>all 16 columns</li><li>one <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
+        <ul><li>all 21 columns</li><li>one <span translate="no">read_csv</span> / <span translate="no">read_parquet</span></li></ul>
       </div>
     </div>
     <p class="join-note">join chain: <code>dtc_codes.code_id → diagnostic_fixes.code_id → replacement_parts.fix_id</code></p>
@@ -692,10 +692,10 @@
       <table>
         <tr><th scope="row">Coverage</th><td><b>9,249</b> SAE-standard codes — P0, P2, P34–P39, C0, B0, U0, U3 generic ranges. Powertrain, chassis, body, and network, including hybrid/EV (P0Axx–P0Exx) and diesel aftertreatment.</td></tr>
         <tr><th scope="row">OEM coverage</th><td><b>6,637</b> manufacturer-specific codes across <b>32</b> makes — P1, P30–P33, C1/C2, B1/B2, U1/U2 manufacturer-controlled ranges. Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <b>15,886</b> codes total.</td></tr>
-        <tr><th scope="row">Repair intelligence</th><td><b>647</b> authored fault families → <b>56,561</b> ordered procedures → <b>75,055</b> parts mappings. <code>probability_rank</code> is a supported legacy field name for consideration order, not probability, success, severity or cost. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required. <a href="/ordering_metadata.json">Ordering context</a>.</td></tr>
-        <tr><th scope="row">Delivery formats</th><td>Pipe-delimited CSV (UTF-8 BOM, Excel-safe) · Apache Parquet, Snappy — a measured <b>92.0%</b> smaller · SQLite database, all four tables.</td></tr>
+        <tr><th scope="row">Repair intelligence</th><td><b>647</b> authored fault families → <b>56,729</b> ordered procedures → <b>75,055</b> parts mappings. <code>probability_rank</code> is a supported legacy field name for consideration order, not probability, success, severity or cost. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required. <a href="/ordering_metadata.json">Ordering context</a>.</td></tr>
+        <tr><th scope="row">Delivery formats</th><td>Pipe-delimited CSV (UTF-8 BOM, Excel-safe) · Apache Parquet, Snappy — a measured <b>92.5%</b> smaller · SQLite database, all four tables.</td></tr>
         <tr><th scope="row">Quality gates</th><td>Deterministic, test-gated build: referential integrity, anti-template uniqueness checks, and a no-fabricated-codes gate — every published code traces to the committed source.</td></tr>
-        <tr><th scope="row">Safety framing</th><td>High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Hazardous steps are never rated DIY.</td></tr>
+        <tr><th scope="row">Safety framing</th><td>A difficulty rating is not a safety classification: some DIY-rated procedures include a high-voltage or SRS step. Before any high-voltage step, follow the manufacturer's lockout and zero-volt verification; before any SRS step, disconnect the battery and wait out the capacitor discharge time the service manual gives.</td></tr>
         <tr><th scope="row">Provenance</th><td>Code definitions compiled from public SAE J2012-derived sources (MIT-licensed, attribution preserved). Procedures, difficulty ratings, and costs are original authored content.</td></tr>
       </table>
     </div>
@@ -778,7 +778,7 @@
         <div class="price">$49</div>
         <div class="per">one-time · commercial use</div>
         <ul>
-          <li>SAE-only dataset: 9,249 codes, 32,767 fixes, 44,588 parts</li>
+          <li>SAE-only dataset: 9,249 codes, 32,812 fixes, 44,588 parts</li>
           <li>CSV + Parquet + SQLite delivery</li>
           <li>Commercial application rights — apps, dongles, co-pilots, shop software</li>
           <li>Versioned releases from the deterministic pipeline</li>
@@ -792,7 +792,7 @@
         <ul>
           <li>Everything in Standard</li>
           <li>6,637 OEM codes across 32 makes — unevenly distributed, strongest on US-market brands (<a href="#coverage">per-make coverage</a>)</li>
-          <li>Full merged dataset: 15,886 codes, 56,561 fixes, 75,055 parts</li>
+          <li>Full merged dataset: 15,886 codes, 56,729 fixes, 75,055 parts</li>
           <li>CSV + Parquet + SQLite delivery</li>
         </ul>
         <a class="btn btn-ghost" href="https://buy.stripe.com/28EfZicVy0ECdM796w38404?client_reference_id=mechanicdb_en_home">Buy now · Instant download</a>
@@ -804,7 +804,7 @@
   <div class="per">one-time · commercial use</div>
   <ul>
     <li><span translate="no">4,212</span> J1939 SPN/FMI fault pairs across <span translate="no">10</span> OEMs — transmission, ABS, off-highway and stationary engines, body controllers (<a href="/j1939-fault-code-database">full coverage</a>)</li>
-    <li><span translate="no">16,998</span> ranked fixes with editorial cost and labour estimates</li>
+    <li><span translate="no">17,047</span> ranked fixes with editorial cost and labour estimates where known</li>
     <li>Per-row source URL to the published OEM fault table — no SAE text, not the J1939 Digital Annex</li>
     <li>CSV + Parquet + SQLite delivery</li>
   </ul>
@@ -841,12 +841,12 @@
         <p>Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 specifies SAE standard ('0') vs manufacturer-defined ('1'), character 3 designates the subsystem, and characters 4-5 represent the specific fault index.</p>
       </div>
       <div class="faq-item">
-        <h3>DIY Safety &amp; High-Voltage Gate</h3>
-        <p>Procedures involving high-voltage hybrid/EV traction networks (&gt;60V), supplemental restraint systems (airbags/pyrotechnic pretensioners), or internal engine/transmission overhauls are strictly classified as 'Professional Required' with mandatory lockout and zero-volt verification steps.</p>
+        <h3>Difficulty ratings &amp; HV/SRS safety</h3>
+        <p>A difficulty rating does not replace the safety procedure. Work on high-voltage hybrid/EV traction networks (&gt;60V) or supplemental restraint systems (airbags/pyrotechnic pretensioners) calls for the manufacturer's lockout and safety procedure, whatever the rating; follow the service manual.</p>
       </div>
       <div class="faq-item">
         <h3>Commercial Scan Tool Integration</h3>
-        <p>Yes. The 90-code sample is available under ODbL v1.0. The complete 15,886-code and 56,561-fix dataset comes with a perpetual commercial license to build it into your own scan tools, apps and services, delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database. You can't resell or redistribute the raw data itself; see the <a href="/license">full license terms</a>.</p>
+        <p>Yes. The 90-code sample is available under ODbL v1.0. The complete 15,886-code and 56,729-fix dataset comes with a perpetual commercial license to build it into your own scan tools, apps and services, delivered as flat pipe-delimited CSVs, Apache Parquet tables, and a relational SQLite database. You can't resell or redistribute the raw data itself; see the <a href="/license">full license terms</a>.</p>
       </div>
       <div class="faq-item">
         <h3>OEM Manufacturer Coverage</h3>
