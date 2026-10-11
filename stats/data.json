@@ -11,7 +11,7 @@
   "oem_codes": 6637,
   "makes": 32,
   "families": 647,
-  "fixes": 56673,
+  "fixes": 56729,
   "parts": 75055,
   "distinct_code_strings": 10047
  },
@@ -407,7 +407,7 @@
     "share_pct": 2.4
    },
    {
-    "fixes": 6,
+    "fixes": 7,
     "codes": 56,
     "share_pct": 0.4
    }
@@ -472,7 +472,7 @@
    },
    {
     "level": "Moderate DIY",
-    "fixes": 22246,
+    "fixes": 22302,
     "share_pct": 39.3
    },
    {
@@ -501,9 +501,9 @@
   "by_system": [
    {
     "system": "Powertrain",
-    "fixes": 49073,
+    "fixes": 49129,
     "easy_diy": 13714,
-    "moderate_diy": 19471,
+    "moderate_diy": 19527,
     "professional_required": 15888
    },
    {
@@ -530,14 +530,14 @@
   ]
  },
  "parts_cost_usd": {
-  "fixes_with_range": 56673,
+  "fixes_with_range": 56729,
   "groups": [
    {
     "group": "All procedures",
-    "fixes": 56673,
+    "fixes": 56729,
     "median_min": 15.0,
     "median_max": 60.0,
-    "mean_max": 183.6,
+    "mean_max": 183.4,
     "median_labor": 0.8
    },
    {
@@ -558,10 +558,10 @@
    },
    {
     "group": "Moderate DIY",
-    "fixes": 22246,
+    "fixes": 22302,
     "median_min": 20.0,
     "median_max": 70.0,
-    "mean_max": 106.3,
+    "mean_max": 106.0,
     "median_labor": 0.8
    },
    {
@@ -576,7 +576,7 @@
   "by_system": [
    {
     "system": "Powertrain",
-    "fixes": 49073,
+    "fixes": 49129,
     "median_min": 15.0,
     "median_max": 60.0,
     "median_labor": 0.8
@@ -606,13 +606,13 @@
   "upper_estimate_buckets": [
    {
     "bucket": "under $50",
-    "fixes": 21506,
-    "share_pct": 37.9
+    "fixes": 21562,
+    "share_pct": 38.0
    },
    {
     "bucket": "$50 to $99",
     "fixes": 14428,
-    "share_pct": 25.5
+    "share_pct": 25.4
    },
    {
     "bucket": "$100 to $249",
@@ -627,7 +627,7 @@
    {
     "bucket": "$500 to $999",
     "fixes": 4279,
-    "share_pct": 7.6
+    "share_pct": 7.5
    },
    {
     "bucket": "$1,000 and above",
@@ -680,7 +680,7 @@
   ]
  },
  "labor_hours": {
-  "fixes_with_estimate": 56449,
+  "fixes_with_estimate": 56393,
   "median": 0.8,
   "max": 10.0,
   "buckets": [
@@ -691,8 +691,8 @@
    },
    {
     "bucket": "0.6 to 1.0 h",
-    "fixes": 18228,
-    "share_pct": 32.3
+    "fixes": 18172,
+    "share_pct": 32.2
    },
    {
     "bucket": "1.1 to 2.0 h",
@@ -729,8 +729,13 @@
   "mappings": 75055,
   "distinct_items": 1250,
   "mean_per_fix": 1.32,
-  "fixes_without_mapping": 112,
+  "fixes_without_mapping": 168,
   "per_fix": [
+   {
+    "parts": 0,
+    "fixes": 168,
+    "share_pct": 0.3
+   },
    {
     "parts": 1,
     "fixes": 38434,
@@ -766,7 +771,7 @@
    {
     "item": "Programming/subscription session",
     "fixes": 1502,
-    "share_pct": 2.7
+    "share_pct": 2.6
    },
    {
     "item": "OBD-II / manufacturer scan tool session (shop supply)",

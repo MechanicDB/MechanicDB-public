@@ -225,6 +225,12 @@
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
+ "13e0303472cd4c1b": {
+  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order (up to {1} in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; diagnostic steps list no parts.",
+  "t": "Normalisé pour les bases de données, préjoint pour les notebooks. Chaque code comporte {0} procédures dans un ordre d’examen rédigé (jusqu’à {1} dans les familles révisées) ; leur exécution dépend des prérequis et des constatations du diagnostic. Les procédures de réparation sont associées à des pièces de rechange ; les étapes de diagnostic ne mentionnent aucune pièce.",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "13ff097d8b36850e": {
   "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents across {3} manufacturers, each mapped to an authored fault family with {4} authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
   "t": "{0} paires de pannes SPN/FMI SAE {1} compilées à partir de {2} documents de codes de panne publiés par les équipementiers de {3} fabricants, chacune associée à une famille de pannes rédigée avec {4} procédures de réparation rédigées dans un ordre d’examen fondé sur le FMI, des niveaux de difficulté, des fourchettes de coût des pièces et des estimations de main-d’œuvre. Chaque ligne renvoie à son document source.",
@@ -300,6 +306,12 @@
   "t": "les {0} colonnes",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "17ffc2febe8a4fb7": {
+  "src": "{0} per code in authored consideration order (up to {1} in reviewed families; diagnostic steps list no parts), conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours",
+  "t": "{0} par code dans un ordre d’examen rédigé (jusqu’à {1} dans les familles révisées ; les étapes de diagnostic ne mentionnent aucune pièce), conditionnel aux prérequis et aux constatations, avec niveau de difficulté, fourchette du coût des pièces et heures de main-d’œuvre",
+  "by": "I02",
+  "at": "2026-10-11"
  },
  "1907a9f0778aea59": {
   "src": "Choose a trouble code",
@@ -759,6 +771,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "430dd6d971c6a405": {
+  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; diagnostic procedures carry their own estimate, or none when it is unknown; see parts_cost_status and labor_status.",
+  "t": "est_labor_hours est l'estimation éditoriale, dans le jeu de données, du temps de travail effectif en atelier, présente pour {0} des réparations ; les procédures de diagnostic ont leur propre estimation, ou aucune lorsqu'elle est inconnue ; voir parts_cost_status et labor_status.",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "4318a03335fecca8": {
   "src": "Heavy Duty ({0}) Commercial License ({1})",
   "t": "Licence commerciale Heavy Duty ({0}) ({1})",
@@ -818,12 +836,6 @@
  "45c1c97ce3bb74da": {
   "src": "Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours, steps",
   "t": "Procédures rédigées avec ordre d’examen, niveau de difficulté, coût des pièces min./max., heures de main-d’œuvre et étapes",
-  "by": "I01",
-  "at": "2026-10-08"
- },
- "4778f2e84fe2f9b2": {
-  "src": "{0} per code in authored consideration order, conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours",
-  "t": "{0} par code dans un ordre d’examen rédigé, conditionnel aux prérequis et aux constatations, avec niveau de difficulté, fourchette du coût des pièces et heures de main-d’œuvre",
   "by": "I01",
   "at": "2026-10-08"
  },
@@ -1099,12 +1111,6 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
- "64799947ea800195": {
-  "src": "est_labor_hours is the dataset's editorial estimate of hands-on time for a shop, present on {0} of fixes; diagnosis time before the repair is not included.",
-  "t": "est_labor_hours est l'estimation éditoriale, dans le jeu de données, du temps de travail effectif en atelier, présente pour {0} des réparations ; le temps de diagnostic avant la réparation n'est pas inclus.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
- },
  "65fa5d9a2f27e703": {
   "src": "Part or supply",
   "t": "Pièce ou fourniture",
@@ -1158,12 +1164,6 @@
  "6cb7de50389af957": {
   "src": "<0>Catalogue, not incidence.</0> MechanicDB records what each code means and how it is repaired. No figure on this page measures how often a code appears on real vehicles; \"most common\" here always means most common within the catalogue, and each section says which denominator it uses.",
   "t": "<0>Catalogue, pas incidence.</0> MechanicDB consigne ce que signifie chaque code et comment il se répare. Aucun chiffre de cette page ne mesure la fréquence d'apparition d'un code sur des véhicules réels ; ici, « le plus courant » signifie toujours le plus courant au sein du catalogue, et chaque section indique le dénominateur qu'elle utilise.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
- },
- "6d1f54ef62017c22": {
-  "src": "The median fix is estimated at <0>{1} h</0> of labor; {2} of fixes are {3} h or less and {4} are over {5} h, with a maximum of {6} h. By difficulty the medians are {7} h ({8}), {9} h ({10}) and {11} h ({12}).",
-  "t": "La réparation médiane est estimée à <0>{1} h</0> de main-d'œuvre ; {2} des réparations prennent {3} h ou moins et {4} plus de {5} h, avec un maximum de {6} h. Par difficulté, les médianes sont de {7} h ({8}), {9} h ({10}) et {11} h ({12}).",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
@@ -1451,6 +1451,12 @@
   "by": "I01",
   "at": "2026-10-08"
  },
+ "8963d535bfaf4cd2": {
+  "src": "The median fix is estimated at <0>{1} h</0> of labor across the {2} fixes that carry an estimate; {3} are {4} h or less and {5} are over {6} h, with a maximum of {7} h. By difficulty the medians are {8} h ({9}), {10} h ({11}) and {12} h ({13}).",
+  "t": "La réparation médiane est estimée à <0>{1} h</0> de main-d'œuvre sur les {2} réparations qui comportent une estimation ; {3} prennent {4} h ou moins et {5} plus de {6} h, avec un maximum de {7} h. Par difficulté, les médianes sont de {8} h ({9}), {10} h ({11}) et {12} h ({13}).",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "8a30ea2d544eb2b1": {
   "src": "DIY Safety &amp; High-Voltage Gate",
   "t": "Verrou de sécurité DIY et haute tension",
@@ -1589,11 +1595,11 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "97ff41d6df66c5d7": {
-  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order; execution depends on prerequisites and diagnostic findings. Every procedure maps to purchasable aftermarket parts.",
-  "t": "Normalisé pour les bases de données, préjoint pour les notebooks. Chaque code comporte {0} procédures dans un ordre d’examen rédigé ; leur exécution dépend des prérequis et des constatations du diagnostic. Chaque procédure est associée à des pièces de rechange disponibles à l’achat.",
-  "by": "I01",
-  "at": "2026-10-08"
+ "97fbf6d59db33ff6": {
+  "src": "{0} of the {1} fixes carry a parts-cost estimate or a recorded zero for procedures that need no parts ({2}). The median range is <3>{4} to {5}</3> in parts; among first-listed procedures it is {6} to {7}. {8} of those fixes top out under {9} and {10} ({11}) at {12} or more; the highest upper estimate is {13} ({14}).",
+  "t": "{0} des {1} réparations comportent une estimation du coût des pièces ou un zéro enregistré pour les procédures qui ne nécessitent aucune pièce ({2}). La fourchette médiane va de <3>{4} à {5}</3> pour les pièces ; parmi les premières procédures répertoriées, elle va de {6} à {7}. {8} de ces réparations ont un maximum inférieur à {9}, et {10} ({11}) atteignent {12} ou plus ; l’estimation maximale la plus élevée est {13} ({14}).",
+  "by": "I02",
+  "at": "2026-10-11"
  },
  "98bb7ee7420c4efa": {
   "src": "Top OBD-II Diagnostic Code Categories &amp; Monographs",
@@ -1744,12 +1750,6 @@
   "t": "Code {0} : {1}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "a4cc2abeee384339": {
-  "src": "The {0} fixes map to <1>{2}</1> replacement-part entries, {3} per fix on average ({4} with {5} with {6} with {7}), drawn from {8} distinct catalogue items. {9} is mapped to the most fixes ({10}), ahead of {11} ({12}) and {13} ({14}).",
-  "t": "Les {0} réparations renvoient à <1>{2}</1> entrées de pièces de rechange, soit {3} par réparation en moyenne ({4} avec {5} avec {6} avec {7}), tirées de {8} articles distincts du catalogue. {9} est associé au plus grand nombre de réparations ({10}), devant {11} ({12}) et {13} ({14}).",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
  },
  "a5307986491d9a3f": {
   "src": "{0} SAE-standard ({1}) + {2} manufacturer-specific across {3} makes",
@@ -2083,6 +2083,12 @@
   "by": "I01",
   "at": "2026-10-08"
  },
+ "bc9c2919ccfdaee5": {
+  "src": "<0>{1}</0> is the largest of the {2} fault families with {3} codes ({4}), followed by {5} ({6}) and {7} ({8}). Every code carries {9} to {10} authored procedures ({11} codes with {12} codes with {13} codes with {14} codes with {15}); the most frequent first-listed procedure, {16}, appears first for {17} codes.",
+  "t": "<0>{1}</0> est la plus grande des {2} familles de pannes, avec {3} codes ({4}), suivie de {5} ({6}) et {7} ({8}). Chaque code comporte de {9} à {10} procédures rédigées ({11} codes avec {12} codes avec {13} codes avec {14} codes avec {15}) ; la première procédure la plus fréquente, {16}, apparaît en premier pour {17} codes.",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "bd0b3597b798424e": {
   "src": "Download the sample (ZIP)",
   "t": "Télécharger l'échantillon (ZIP)",
@@ -2359,6 +2365,12 @@
   "src": "Coverage by OEM",
   "t": "Couverture par OEM"
  },
+ "d2e042d68a59825d": {
+  "src": "The {0} fixes map to <1>{2}</1> replacement-part entries, {3} per fix on average ({4} with {5} with {6} with {7} with {8}), drawn from {9} distinct catalogue items. {10} is mapped to the most fixes ({11}), ahead of {12} ({13}) and {14} ({15}).",
+  "t": "Les {0} réparations renvoient à <1>{2}</1> entrées de pièces de rechange, soit {3} par réparation en moyenne ({4} avec {5} avec {6} avec {7} avec {8}), tirées de {9} articles distincts du catalogue. {10} est associé au plus grand nombre de réparations ({11}), devant {12} ({13}) et {14} ({15}).",
+  "by": "I02",
+  "at": "2026-10-11"
+ },
  "d2e2793f17ea847e": {
   "src": "Share of fixes",
   "t": "Part des réparations",
@@ -2536,12 +2548,6 @@
  "e0d42339c2ec721e": {
   "src": "A fault family groups codes that share a failure mechanism and repair set; every code belongs to exactly one family. Rank {0} is the first item in the family's authored consideration order, so a family's first procedure appears first for every code in that family. Execution depends on prerequisites and findings; rank is not measured cause likelihood or outcome.",
   "t": "Une famille de pannes regroupe les codes qui partagent un mécanisme de panne et un ensemble de réparations ; chaque code appartient à une seule famille. Le rang {0} est le premier élément de l’ordre d’examen rédigé de la famille : la première procédure d’une famille apparaît donc en premier pour chaque code de cette famille. L’exécution dépend des prérequis et des constatations ; le rang ne mesure ni la probabilité de la cause ni le résultat.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
- "e1d08e7cbfa40917": {
-  "src": "<0>{1}</0> is the largest of the {2} fault families with {3} codes ({4}), followed by {5} ({6}) and {7} ({8}). Every code carries {9} to {10} authored procedures ({11} codes with {12} codes with {13} codes with {14}); the most frequent first-listed procedure, {15}, appears first for {16} codes.",
-  "t": "<0>{1}</0> est la plus grande des {2} familles de pannes, avec {3} codes ({4}), suivie de {5} ({6}) et {7} ({8}). Chaque code comporte de {9} à {10} procédures rédigées ({11} codes avec {12} codes avec {13} codes avec {14}) ; la première procédure la plus fréquente, {15}, apparaît en premier pour {16} codes.",
   "by": "I01",
   "at": "2026-10-08"
  },
@@ -2796,12 +2802,6 @@
   "t": "Quels critères de sécurité déterminent si une procédure de réparation est classée Easy DIY ou Professional Required ?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "fba5220a88eab6d7": {
-  "src": "Every one of the {0} fixes carries a parts-cost range ({1} coverage). The median range is <2>{3} to {4}</2> in parts; among first-listed procedures it is {5} to {6}. {7} of fixes top out under {8} and {9} ({10}) at {11} or more; the highest upper estimate is {12} ({13}).",
-  "t": "Chacune des {0} réparations comporte une fourchette de coût des pièces ({1} de couverture). La fourchette médiane va de <2>{3} à {4}</2> pour les pièces ; parmi les premières procédures répertoriées, elle va de {5} à {6}. {7} réparations ont un maximum inférieur à {8}, et {9} ({10}) atteignent {11} ou plus ; l’estimation maximale la plus élevée est {12} ({13}).",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "fbc59ee65c7b3e57": {
   "src": "{0} fixes",

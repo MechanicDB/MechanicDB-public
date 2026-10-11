@@ -169,8 +169,10 @@ def compute(db_path):
 
     # 8. parts
     ppf = dict(q("select n, count(*) from (select fix_id, count(*) n from replacement_parts group by 1) group by 1"))
-    s["parts_per_fix"] = [(k, ppf[k], pct(ppf[k], s["fixes"])) for k in sorted(ppf)]
     s["fixes_without_parts"] = q("select count(*) from diagnostic_fixes where fix_id not in (select fix_id from replacement_parts)")[0][0]
+    if s["fixes_without_parts"]:
+        ppf[0] = s["fixes_without_parts"]  # the 0-part bucket, so the shares cover every fix
+    s["parts_per_fix"] = [(k, ppf[k], pct(ppf[k], s["fixes"])) for k in sorted(ppf)]
     s["parts_mean_per_fix"] = round(s["parts"] / s["fixes"], 2)
     s["distinct_parts"] = q("select count(distinct part_name) from replacement_parts")[0][0]
     s["top_parts"] = [(p, c, pct(c, s["fixes"])) for p, c in q("select part_name, count(*) c from replacement_parts group by 1 order by c desc, 1 limit 12")]
@@ -300,7 +302,7 @@ def build_page(s, charts):
 
     # 6. cost
     cg, cb = s["cost_groups"], s["cost_buckets"]
-    charts["parts-cost-ranges"] = svg_hbar(site, "Upper parts-cost estimate per fix", f"{n(s['fixes_with_cost'])} fixes with a parts-cost estimate, by est_parts_cost_max_usd",
+    charts["parts-cost-ranges"] = svg_hbar(site, "Upper parts-cost estimate per fix", f"{n(s['fixes_with_cost'])} fixes with a parts-cost value (estimate or recorded zero), by est_parts_cost_max_usd",
                                            [(lbl, c, f"{n(c)} ({p}%)") for lbl, c, p in cb], src_note, label_w=140)
     allc, r1 = cg[0], cg[1]
     sections.append(section(
