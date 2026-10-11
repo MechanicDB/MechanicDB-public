@@ -1,3 +1,10 @@
+## RecallDB cross-link: edition 2026.10 count (2026-10-11)
+
+The homepage "You might also need" link said 128,936 official U.S. recalls (RecallDB edition 2026.09).
+RecallDB's 2026-10-11 build (edition 2026.10, run 38130039533) ships 129,279, so the link now says 129,279.
+The number is a placeholder, so no new segment; i18n check: 7,050 pages, 0 errors.
+Sitemap: the five home URLs dated 2026-10-11.
+
 ## Stable IDs and SQLite enforcement are live, not prepared (2026-10-10)
 
 The I04 identity companions and the I05 SQLite contracts shipped in the paid 2026.10 editions
