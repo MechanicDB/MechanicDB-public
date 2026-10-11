@@ -212,7 +212,7 @@ this tier — see 6.7/6.9 below.
 | `parts_cost_status` | String | `estimated`, `none_required` or `unknown`. | `estimated` |
 | `labor_status` | String | `estimated` or `unknown`. | `estimated` |
 | `cost_basis_id` | String | Key into `cost_metadata.json`: `hd-editorial-us-independent-shop-v1` for this tier. | `hd-editorial-us-independent-shop-v1` |
-| `procedure_rationale` | String, nullable | Why this step and why its cost status; NULL until reviewed. In this tier it never states an absolute position (first, last, before, after...): the delivered `probability_rank` is reordered per fault by FMI failure class (6.9), so it says at most "in the authored family order". | `A tool reading buys nothing, so no parts are listed.` |
+| `procedure_rationale` | String, nullable | Why this step and why its cost status; NULL until reviewed. In this tier it never states an absolute position (first, last, before, after...): the delivered `probability_rank` is reordered per fault by FMI failure class (6.9), so it says at most "in the authored family order", and it never assumes that another procedure has already run. | `A tool reading buys nothing, so no parts are listed.` |
 
 HD `estimated` rows keep `0 <= min <= max`. A 0/0 `estimated` HD row always lists a part (a zero editorial parts estimate although a part is listed); 0/0 HD rows without parts are `none_required`. Labor class follows `action_type` as in section 2.
 
