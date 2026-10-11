@@ -38,7 +38,16 @@ def test_unknown_values_do_not_drag_medians_or_extremes(tmp_path):
 def test_page_builds_and_counts_only_fixes_with_an_estimate(tmp_path):
     s = _stats(tmp_path)
     html = gs.build_page(s, {})
-    assert "5 fixes with a parts-cost estimate, by est_parts_cost_max_usd" in html
+    assert "5 fixes with a parts-cost value (estimate or recorded zero), by est_parts_cost_max_usd" in html
     assert "5 fixes with a labor estimate, by est_labor_hours" in html
     assert "5 of the 6 fixes carry a parts-cost estimate" in html
     assert "see parts_cost_status and labor_status" in html
+
+
+def test_parts_per_fix_includes_the_zero_part_bucket(tmp_path):
+    s = _stats(tmp_path)
+    # fixes 2 and 4 have no part rows; 1, 5 and 6 have one; 3 has two
+    assert s["fixes_without_parts"] == 2
+    assert [(k, c) for k, c, _ in s["parts_per_fix"]] == [(0, 2), (1, 3), (2, 1)]
+    assert sum(c for _, c, _ in s["parts_per_fix"]) == s["fixes"]
+    assert "% with 0" in gs.build_page(s, {})

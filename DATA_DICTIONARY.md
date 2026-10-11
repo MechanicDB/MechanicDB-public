@@ -106,7 +106,7 @@ from the OBD-II Standard/OEM Complete tiers above (on sale since 2026-09-24, see
 [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) page). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
 WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
 short descriptions, fault families, explanations, ranked fixes and part mappings — currently **4,212
-fault pairs, 870 distinct SPNs, 17,028 ranked fixes and 5,915 part mappings across 10 OEMs and 16
+fault pairs, 870 distinct SPNs, 17,047 ranked fixes and 5,915 part mappings across 10 OEMs and 16
 official-host sources**, measured at build time. It follows the same physical conventions as the
 tables above: pipe-delimited CSV, `utf-8-sig`, no embedded `\r`/`\n` (replaced with ` • `), Parquet
 Snappy, one SQLite.
@@ -212,7 +212,7 @@ this tier — see 6.7/6.9 below.
 | `parts_cost_status` | String | `estimated`, `none_required` or `unknown`. | `estimated` |
 | `labor_status` | String | `estimated` or `unknown`. | `estimated` |
 | `cost_basis_id` | String | Key into `cost_metadata.json`: `hd-editorial-us-independent-shop-v1` for this tier. | `hd-editorial-us-independent-shop-v1` |
-| `procedure_rationale` | String, nullable | Why this step, why its cost status and why its position; NULL until reviewed. | `Fits the part once the earlier steps point to it.` |
+| `procedure_rationale` | String, nullable | Why this step and why its cost status; NULL until reviewed. In this tier it never states an absolute position (first, last, before, after...): the delivered `probability_rank` is reordered per fault by FMI failure class (6.9), so it says at most "in the authored family order". | `A tool reading buys nothing, so no parts are listed.` |
 
 HD `estimated` rows keep `0 <= min <= max`. A 0/0 `estimated` HD row always lists a part (a zero editorial parts estimate although a part is listed); 0/0 HD rows without parts are `none_required`. Labor class follows `action_type` as in section 2.
 
@@ -301,7 +301,7 @@ from `action_type` with the `labor_kind_by_action` map in `cost_metadata.json`.
 
 ## 7. SQLite enforcement — schema version 2
 
-This contract applies to the snapshots this build writes (`PRAGMA user_version = 2`; version 1 shipped from edition 2026.10).
+This contract applies to the snapshots this build writes (`PRAGMA user_version = 2`; version 1 shipped in the first 2026.10 build; version 2 ships from this release, identified by `data_release_id`).
 The four OBD-II and six Heavy Duty tables, existing column order, identifiers and values are
 unchanged from version 1. Standard keeps **all columns TEXT**, including IDs, rank and estimates;
 OEM Complete and Heavy Duty retain INTEGER/REAL storage for numeric fields.
