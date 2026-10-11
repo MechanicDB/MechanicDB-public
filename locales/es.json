@@ -147,10 +147,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "0d1f1571660cb6cd": {
-  "src": "High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Whatever a procedure's difficulty rating, follow the service manual's safety procedure for any SRS or high-voltage step.",
-  "t": "Los procedimientos de alta tensión empiezan con bloqueo y verificación de ausencia de tensión; el trabajo en el SRS exige desconectar la batería y esperar la descarga del condensador. Sea cual sea la valoración de dificultad de un procedimiento, sigue el procedimiento de seguridad del manual de servicio en cualquier paso de SRS o de alta tensión."
- },
  "0d23ab8b6de00e13": {
   "src": "Repair intelligence",
   "t": "Información de reparación",
@@ -2666,6 +2662,12 @@
  "f1394f3d12c08535": {
   "src": "The {0} failure mode identifiers with plain-language meanings",
   "t": "Los {0} identificadores de modo de fallo con su significado en lenguaje sencillo"
+ },
+ "f1ce147d986afd5f": {
+  "src": "A difficulty rating is not a safety classification: some DIY-rated procedures include a high-voltage or SRS step. Before any high-voltage step, follow the manufacturer's lockout and zero-volt verification; before any SRS step, disconnect the battery and wait out the capacitor discharge time the service manual gives.",
+  "t": "Una valoración de dificultad no es una clasificación de seguridad: algunos procedimientos con valoración DIY incluyen un paso de alta tensión o en el SRS. Antes de cualquier paso de alta tensión, sigue el bloqueo y la verificación de ausencia de tensión del fabricante; antes de cualquier paso en el SRS, desconecta la batería y espera el tiempo de descarga del condensador que indique el manual de servicio.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
  },
  "f229a983e5a47b53": {
   "src": "Working on trucks, buses or off-highway diesels? The <0>{1} fault code database</0> covers SAE {2} SPN/FMI fault pairs from published OEM documents.",

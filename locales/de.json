@@ -147,10 +147,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "0d1f1571660cb6cd": {
-  "src": "High-voltage procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect and capacitor discharge wait. Whatever a procedure's difficulty rating, follow the service manual's safety procedure for any SRS or high-voltage step.",
-  "t": "Hochvolt-Verfahren beginnen mit Freischaltung und Prüfung der Spannungsfreiheit; Arbeiten am SRS erfordern das Abklemmen der Batterie und das Abwarten der Kondensatorentladung. Unabhängig vom Schwierigkeitsgrad eines Verfahrens befolgen Sie bei jedem Schritt am SRS oder am Hochvoltsystem das Sicherheitsverfahren aus dem Werkstatthandbuch."
- },
  "0d23ab8b6de00e13": {
   "src": "Repair intelligence",
   "t": "Reparaturwissen",
@@ -2666,6 +2662,12 @@
  "f1394f3d12c08535": {
   "src": "The {0} failure mode identifiers with plain-language meanings",
   "t": "Die {0} Fehlerart-Kennungen mit ihrer Bedeutung in verständlicher Sprache"
+ },
+ "f1ce147d986afd5f": {
+  "src": "A difficulty rating is not a safety classification: some DIY-rated procedures include a high-voltage or SRS step. Before any high-voltage step, follow the manufacturer's lockout and zero-volt verification; before any SRS step, disconnect the battery and wait out the capacitor discharge time the service manual gives.",
+  "t": "Ein Schwierigkeitsgrad ist keine Sicherheitseinstufung: Einige als DIY eingestufte Verfahren enthalten einen Schritt am Hochvoltsystem oder am SRS. Befolgen Sie vor jedem Schritt am Hochvoltsystem die Freischaltung und die Prüfung der Spannungsfreiheit nach Herstellervorgabe; klemmen Sie vor jedem Schritt am SRS die Batterie ab und warten Sie die im Werkstatthandbuch angegebene Entladezeit des Kondensators ab.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-11"
  },
  "f229a983e5a47b53": {
   "src": "Working on trucks, buses or off-highway diesels? The <0>{1} fault code database</0> covers SAE {2} SPN/FMI fault pairs from published OEM documents.",
