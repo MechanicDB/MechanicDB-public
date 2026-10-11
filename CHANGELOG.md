@@ -36,9 +36,13 @@ rank, steps or estimates (IDs kept). The three estimate columns may now be NULL:
   that diagnostic steps in those families list no parts; labor estimates are described as
   present where one exists; the stats page counts fixes with no part rows in its
   parts-per-fix shares and calls recorded zeros parts-cost values, not estimates.
-- Safety framing (homepage): "Hazardous steps are never rated DIY" is withdrawn, because some
-  DIY-rated procedures include an SRS step; the cell now says to follow the service manual's
-  safety procedure for any SRS or high-voltage step, whatever the difficulty rating. The FAQ
+- Safety framing (homepage data sheet): the row described the procedures ("High-voltage
+  procedures lead with lockout / zero-volt verification; SRS work requires battery disconnect
+  and capacitor discharge wait. Hazardous steps are never rated DIY."), and many procedures,
+  including some rated DIY, do not match that description. The row now gives advice instead: a
+  difficulty rating is not a safety classification; before any high-voltage step, follow the
+  manufacturer's lockout and zero-volt verification, and before any SRS step, disconnect the
+  battery and wait out the capacitor discharge time the service manual gives. The FAQ
   answer (and its structured-data copy) no longer says high-voltage, SRS and overhaul
   procedures are strictly classified 'Professional Required'; it says a difficulty rating does
   not replace the manufacturer's lockout and safety procedure. The FAQ's structured-data
@@ -57,6 +61,8 @@ rank, steps or estimates (IDs kept). The three estimate columns may now be NULL:
 - Docs: DATA_DICTIONARY.md and IDENTITY.md describe the columns, the cost basis, SQLite schema
   version 2 and canonicalization 2. README.md says version 2 keeps version 1's keys,
   constraints, indexes and triggers.
+- `llms.txt`: the sentence saying that procedures which need no parts are 0/0 with
+  `none_required` is now scoped to reviewed families, where it holds.
 
 ## RecallDB cross-link: edition 2026.10 count (2026-10-11)
 
