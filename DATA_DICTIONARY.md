@@ -50,9 +50,9 @@ Labor class follows `action_type` (`labor_kind_by_action` in `cost_metadata.json
 
 ---
 
-## 3. `replacement_parts` (Aftermarket Part Mappings)
+## 3. `replacement_parts` (Part Mappings)
 
-Maps diagnostic repair procedures to common aftermarket replacement parts and catalog search queries.
+Maps procedures to parts and supplies, with catalog search queries. A row can also name a tool, a scan or programming session, or a rental rather than a part.
 
 A procedure with `parts_cost_status = none_required` has no rows here.
 
@@ -60,8 +60,8 @@ A procedure with `parts_cost_status = none_required` has no rows here.
 | :--- | :--- | :--- | :--- |
 | `part_id` | Integer (PK) | Primary key unique identifier for the replacement part record. | `501` |
 | `fix_id` | Integer (FK) | Foreign key referencing `diagnostic_fixes.fix_id`. | `101` |
-| `part_name` | String | Descriptive name or title of the replacement sensor, component, or repair kit. | `Mass Airflow Sensor (MAF) Cleaner & Sensor Kit` |
-| `amazon_search_query` | String | Direct catalog search URL for acquiring the replacement part on Amazon or auto parts catalogs. | `https://www.amazon.com/s?k=EVAP+purge+solenoid+valve+automotive` |
+| `part_name` | String | Descriptive name of the part, kit or supply; it can also name a tool, a scan or programming session, or a rental. | `Mass Airflow Sensor (MAF) Cleaner & Sensor Kit` |
+| `amazon_search_query` | String | Direct catalog search URL for the named item on Amazon or auto parts catalogs. | `https://www.amazon.com/s?k=EVAP+purge+solenoid+valve+automotive` |
 
 ---
 
@@ -214,7 +214,7 @@ this tier — see 6.7/6.9 below.
 | `cost_basis_id` | String | Key into `cost_metadata.json`: `hd-editorial-us-independent-shop-v1` for this tier. | `hd-editorial-us-independent-shop-v1` |
 | `procedure_rationale` | String, nullable | Why this step and why its cost status; NULL until reviewed. In this tier it never states an absolute position (first, last, before, after...): the delivered `probability_rank` is reordered per fault by FMI failure class (6.9), so it says at most "in the authored family order", and it never assumes that another procedure has already run. | `A tool reading buys nothing, so no parts are listed.` |
 
-HD `estimated` rows keep `0 <= min <= max`. A 0/0 `estimated` HD row always lists a part (a zero editorial parts estimate although a part is listed); 0/0 HD rows without parts are `none_required`. Labor class follows `action_type` as in section 2.
+HD `estimated` rows keep `0 <= min <= max`. A 0/0 `estimated` HD row always has a `replacement_parts` row (a zero editorial parts estimate although an item is listed; the item can be a scan tool); 0/0 HD rows without parts are `none_required`. Labor class follows `action_type` as in section 2.
 
 ### 6.5 `replacement_parts`
 
@@ -278,7 +278,7 @@ in every ZIP and every free sample, scoped to its product (`obd2` or `heavyduty`
 | `hd-editorial-us-independent-shop-v1` | Heavy Duty |
 
 - **Editorial.** The values are set by the dataset's editors. No price observations, invoices or labor-guide data are recorded for them.
-- **Currency and geography.** US dollars, United States. OBD-II parts are aftermarket replacement parts; Heavy Duty is an independent heavy-duty or fleet shop, not dealer rates.
+- **Currency and geography.** US dollars, United States. OBD-II estimates assume aftermarket parts; where a procedure's `replacement_parts` rows name only a tool, a scan or programming session, or a rental, its parts estimate is not tied to a listed part. Heavy Duty is an independent heavy-duty or fleet shop, not dealer rates.
 - **Not specified.** Sales tax, shipping, core charges, shop-supplies fees, labor rate (labor is given in hours only) and programming or subscription fees. Heavy Duty does not specify parts quality either.
 - **Dates.** The OBD-II estimates were first authored in 2026-07 and the Heavy Duty estimates in 2026-09. No re-pricing is recorded.
 - **Statuses.** `estimated` means the cost columns hold an editorial estimate. `none_required` means the procedure needs no parts: both values are `0` and it has no `replacement_parts` rows. `unknown` means no estimate exists and both values are NULL (a part can be listed while its price is not). For labor, `estimated` means `est_labor_hours` holds an editorial estimate and `unknown` means it is NULL.

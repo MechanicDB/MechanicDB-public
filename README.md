@@ -43,14 +43,14 @@ The sample covers the most commonly searched codes (P0420, P0171, P0300, …). P
 | :--- | :--- | :--- |
 | `dtc_codes.csv` / `.parquet` | 90 | Code registry: DTC, system category, OEM flag/make, fault family, short description, detailed technical explanation |
 | `diagnostic_fixes.csv` / `.parquet` | 326 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours, step-by-step instructions |
-| `replacement_parts.csv` / `.parquet` | 449 | Aftermarket part names per fix with catalog search URLs |
+| `replacement_parts.csv` / `.parquet` | 449 | Part names per fix with catalog search URLs (a row can also name a tool, a scan or programming session, or a rental) |
 | `dtc_fixes_joined.csv` / `.parquet` | 326 | Pre-joined analytical view (codes × fixes) for one-file ingestion |
 
 Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pipe-delimited (`|`), UTF-8 with BOM; string fields are guaranteed free of embedded linebreaks.
 
 ## How the content is built (the honest part)
 
-- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 parts per procedure; in reviewed families, diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
+- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 part mappings per procedure; in reviewed families, diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
 - **Costs and labor are editorial estimates** for typical US aftermarket parts and independent-shop labor — not quotes, not scraped prices.
 - **OEM rows are per-marque, exactly as sourced.** Makes that share engineering platforms (GM's seven marques, Ford/Mercury/Lincoln, Honda/Acura, …) legitimately share many definitions; rows are kept per marque so `oem_make = 'Buick'` returns complete results. Disclosed in detail in [SOURCES.md](SOURCES.md).
 - **Make-level, not model/year-level.** OEM coverage is per manufacturer; the dataset does not claim model- or model-year-specific applicability.
