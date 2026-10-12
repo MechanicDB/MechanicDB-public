@@ -118,7 +118,7 @@ BODY = """
   <div class="tablewrap" style="overflow-x:auto">
   <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
     <tbody>
-      <tr><td style="padding:9px 0"><b>15,886</b> trouble codes</td><td style="opacity:.75">9,249 SAE-standard (P0, P2, P34&ndash;P39, C0, B0, U0, U3) + 6,637 manufacturer-specific across 32 makes</td></tr>
+      <tr><td style="padding:9px 0"><b>15,886</b> trouble codes</td><td style="opacity:.75">9,249 SAE-standard (P0, P2, P34, C0, B0, U0, U3) + 6,637 manufacturer-specific across 32 makes</td></tr>
       <tr><td style="padding:9px 0"><b>56,729</b> ordered procedures</td><td style="opacity:.75">3&ndash;5 per code in authored consideration order (up to 8 in reviewed families, where diagnostic steps list no parts), conditional on prerequisites and findings, with difficulty tier, parts-cost range and labor hours where estimated</td></tr>
       <tr><td style="padding:9px 0"><b>75,055</b> parts mappings</td><td style="opacity:.75">Part names per fix, with catalog search URLs; a row can also name a tool, a scan or programming session, or a rental</td></tr>
       <tr><td style="padding:9px 0"><b>647</b> fault families</td><td style="opacity:.75">Authored groupings that make the corpus navigable rather than a flat code list</td></tr>

@@ -74,8 +74,8 @@ A denormalized analytical table combining code definitions, ranked fixes, and co
 <!-- COVERAGE:START -->
 OEM (manufacturer-specific) codes number **6,637** across **32** makes, and are **not evenly distributed** — coverage is
 strongest on US-market brands. The SAE-universal spine (9,249 codes) applies to
-every vehicle regardless of make, so this table describes only the
-manufacturer-controlled ranges (`P1`, `P30`–`P33`, `C1`/`C2`, `B1`/`B2`, `U1`/`U2`).
+every vehicle regardless of make, so this table counts only the manufacturer-specific
+codes, which this release holds in the manufacturer-controlled `P1`, `P30`, `P31` ranges.
 
 | Make | OEM codes | Make | OEM codes |
 | :--- | ---: | :--- | ---: |

@@ -142,7 +142,7 @@
       "name": "How is each OBD-II diagnostic trouble code structured inside MechanicDB?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 specifies SAE standard ('0') vs manufacturer-defined ('1'), character 3 designates the subsystem, and characters 4-5 represent the specific fault index."
+        "text": "Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 marks an SAE or a manufacturer code, character 3 designates the subsystem, and characters 4-5 represent the specific fault index. In P codes, a second character of 0 or 2 marks an SAE code and 1 a manufacturer code; P3 is split, with P30–P33 for manufacturers and P34–P39 for SAE. In C and B codes, 0 is SAE and 1 and 2 are manufacturer; in U codes, 0 and 3 are SAE and 1 and 2 are manufacturer."
       }
     },
     {
@@ -690,8 +690,8 @@
     <h2 class="sec-title">Data sheet</h2>
     <div class="spec-sheet">
       <table>
-        <tr><th scope="row">Coverage</th><td><b>9,249</b> SAE-standard codes — P0, P2, P34–P39, C0, B0, U0, U3 generic ranges. Powertrain, chassis, body, and network, including hybrid/EV (P0Axx–P0Exx) and diesel aftertreatment.</td></tr>
-        <tr><th scope="row">OEM coverage</th><td><b>6,637</b> manufacturer-specific codes across <b>32</b> makes — P1, P30–P33, C1/C2, B1/B2, U1/U2 manufacturer-controlled ranges. Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <b>15,886</b> codes total.</td></tr>
+        <tr><th scope="row">Coverage</th><td><b>9,249</b> SAE-standard codes — P0, P2, P34, C0, B0, U0, U3 generic ranges. Powertrain, chassis, body, and network, including hybrid/EV (P0Axx–P0Exx) and diesel aftertreatment.</td></tr>
+        <tr><th scope="row">OEM coverage</th><td><b>6,637</b> manufacturer-specific codes across <b>32</b> makes — powertrain codes in the manufacturer-controlled P1 and P30–P31 ranges. OEM Complete holds no manufacturer-specific chassis, body or network codes (C1/C2, B1/B2, U1/U2). Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <b>15,886</b> codes total.</td></tr>
         <tr><th scope="row">Repair intelligence</th><td><b>647</b> authored fault families → <b>56,729</b> ordered procedures → <b>75,055</b> parts mappings. <code>probability_rank</code> is a supported legacy field name for consideration order, not probability, success, severity or cost. Difficulty tiers: Easy DIY / Moderate DIY / Professional Required. <a href="/ordering_metadata.json">Ordering context</a>.</td></tr>
         <tr><th scope="row">Delivery formats</th><td>Pipe-delimited CSV (UTF-8 BOM, Excel-safe) · Apache Parquet, Snappy — a measured <b>92.5%</b> smaller · SQLite database, all four tables.</td></tr>
         <tr><th scope="row">Quality gates</th><td>Deterministic, test-gated build: referential integrity, anti-template uniqueness checks, and a no-fabricated-codes gate — every published code traces to the committed source.</td></tr>
@@ -838,7 +838,7 @@
     <div class="faq-grid">
       <div class="faq-item">
         <h3>Code Anatomy &amp; Structure</h3>
-        <p>Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 specifies SAE standard ('0') vs manufacturer-defined ('1'), character 3 designates the subsystem, and characters 4-5 represent the specific fault index.</p>
+        <p>Every code follows the 5-character SAE J2012 format where character 1 designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character 2 marks an SAE or a manufacturer code, character 3 designates the subsystem, and characters 4-5 represent the specific fault index. In P codes, a second character of 0 or 2 marks an SAE code and 1 a manufacturer code; P3 is split, with P30–P33 for manufacturers and P34–P39 for SAE. In C and B codes, 0 is SAE and 1 and 2 are manufacturer; in U codes, 0 and 3 are SAE and 1 and 2 are manufacturer.</p>
       </div>
       <div class="faq-item">
         <h3>Difficulty ratings &amp; HV/SRS safety</h3>

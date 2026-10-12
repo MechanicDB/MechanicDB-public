@@ -260,7 +260,7 @@ def build_page(s, charts):
         + (", and none of them reuses an SAE-standard string." if s["oem_overlap_sae"] == 0 else f"; {n(s['oem_overlap_sae'])} also exist as SAE-standard codes."),
         figure(site, "codes-shared-across-makes", charts["codes-shared-across-makes"], "Code strings defined by the most makes", f"top 15 of {n(s['oem_strings'])} strings"),
         table(["Code", "Makes defining it", "Distinct meanings"], [(code, n(m), n(d)) for code, m, d in sc], {1, 2}),
-        "The P1xxx, P3xxx and higher ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. "
+        "The P1xxx and P30xx–P33xx ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. "
         "Distinct meanings counts distinct short descriptions in the catalogue; makes that publish the same wording count once."))
 
     # 4. families and first steps
