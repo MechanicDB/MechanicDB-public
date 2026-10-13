@@ -41,6 +41,5 @@ suspected leak) are still very welcome via the email above.
 
 MechanicDB repair steps are educational reference material, not a substitute
 for the vehicle manufacturer's service manual. High-voltage and SRS/airbag
-work calls for the manufacturer's lockout and de-energization procedures
-whatever the difficulty rating; if you cannot follow them, leave the work to a
-qualified technician.
+work calls for the manufacturer's safety procedure whatever the difficulty
+rating; if you cannot follow it, leave the work to a qualified technician.

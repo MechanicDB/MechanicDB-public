@@ -117,7 +117,7 @@ print(duckdb.query("""
 - **Full datasets (Standard, OEM Complete, Heavy Duty):** [commercial license](https://mechanicdb.dataengineered.io/license) — each paid archive ships its own copy, naming its product and its upstream sources — self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/); see [Pricing](#pricing).
 - **Documentation:** CC BY 4.0.
 
-⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag work calls for the manufacturer's lockout and de-energization procedures whatever the difficulty rating; if you cannot follow them, leave the work to a qualified technician.
+⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag work calls for the manufacturer's safety procedure whatever the difficulty rating; if you cannot follow it, leave the work to a qualified technician.
 
 Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTING.md) or write to mechanicdb@dataengineered.io.
 
