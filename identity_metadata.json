@@ -2,8 +2,8 @@
   "identity_contract": "mechanicdb:v1",
   "canonicalization": 2,
   "content_digest_algorithm": "sha256-128",
-  "data_release_id": "mechanicdb-data-v1-c744534a1f1dd3aa42fb7efa85e98990d0b2be95144adfdf24a0753824709ec6",
-  "registry_digest": "35c77d1223755d3594a8e800a91eb186aa17bc6de1db9b30b453cd4e94d21760",
+  "data_release_id": "mechanicdb-data-v1-cdd3d4b20d1cd287cbd17fc11be87c736ba8dc413e52ba1e8875d4bf77e82ad1",
+  "registry_digest": "09972a117a55eddeed73a1277b27f26e6f4c3c3b0a3d6797c4b403e5853dd15e",
   "domain": "obd",
   "profile": "sample",
   "map_formats": [
@@ -16,5 +16,5 @@
     "identity_map.csv": "072a38c8e90cf14bbf53978c0c4ec8737d5752d8a644ead53089df270c1ad5d1",
     "identity_map.parquet": "e527b63e6ad3e0e5a56ddbc373fe2e251d0edae36fbf9d83b86ead178e487afe"
   },
-  "artifact_id": "mechanicdb-artifact-v1-40a1a44e53482d94dd4dfa41a9667a751340f1a054a5255aa18ce25c8a6a15dd"
+  "artifact_id": "mechanicdb-artifact-v1-35af0f95edeb1fee153d17e6e4721966537cc2a2c3ce810c69532b8d4f525168"
 }
