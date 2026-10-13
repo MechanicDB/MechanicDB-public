@@ -217,12 +217,6 @@
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
- "13ff097d8b36850e": {
-  "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents across {3} manufacturers, each mapped to an authored fault family with {4} authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates. Every row links to its source document.",
-  "t": "{0} pares de falha SPN/FMI SAE {1} compilados de {2} documentos de códigos de falha publicados pelas fabricantes de {3} marcas, cada um associado a uma família de falhas elaborada pela equipe com {4} procedimentos de reparo elaborados pela equipe em uma ordem de consideração orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra. Cada linha contém um link para seu documento de origem.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "145d9d6c0d59eff6": {
   "src": "MechanicDB — OBD-II Diagnostic &amp; Repair Database",
   "t": "MechanicDB — Banco de dados de diagnóstico e reparo OBD-II",
@@ -351,12 +345,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "1c634a54ab8b8ef6": {
-  "src": "Every SPN/FMI pair with its fault family, explanation, authored procedure consideration order, difficulty, parts-cost range, labour estimate and source link, as pipe-delimited CSV, Apache Parquet and a SQLite database. Commercial use, instant download.",
-  "t": "Cada par SPN/FMI com sua família de falhas, explicação, ordem de consideração dos procedimentos elaborada pela equipe, dificuldade, faixa de custo de peças, estimativa de mão de obra e link da fonte, em CSV delimitado por barras verticais, Apache Parquet e banco de dados SQLite. Uso comercial, download imediato.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "1caea4560821e25d": {
   "src": "System: {0} ({1}-Codes)",
   "t": "Sistema: {0} (códigos {1})",
@@ -390,6 +378,12 @@
   "t": "Famílias de falhas do sistema {0} ({1})",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "205ceb9b52a33653": {
+  "src": "{0} SPN/FMI fault pairs published by {1} in {2} fault-code documents, as they appear in the MechanicDB Heavy Duty dataset. The dataset maps every pair to an authored fault family with FMI-informed procedure consideration order, difficulty ratings, parts-cost ranges and labour estimates where known; this page shows the coverage and the rows that are in the free sample.",
+  "t": "{0} pares de falha SPN/FMI publicados por {1} em {2} documentos de códigos de falha, conforme aparecem no conjunto de dados MechanicDB Heavy Duty. O conjunto de dados associa cada par a uma família de falhas elaborada pela equipe, com uma ordem de consideração de procedimentos orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra quando conhecidas; esta página mostra a cobertura e as linhas incluídas na amostra gratuita.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
  },
  "2086b21f8f492741": {
   "src": "Statistics",
@@ -917,6 +911,12 @@
   "src": "Description",
   "t": "Descrição"
  },
+ "567a58187e257741": {
+  "src": "No. MechanicDB Heavy Duty does not reproduce the SAE {0} Digital Annex, any {1} DBC file, or SPN/FMI text licensed from SAE. Every fault pair is compiled from a published OEM fault-code document — a service manual, maintenance guide or DTC list from an official manufacturer host — with our own wording and a per-row link to the document it came from.",
+  "t": "Não. O MechanicDB Heavy Duty não reproduz o Digital Annex da SAE {0}, nenhum arquivo DBC {1} nem texto SPN/FMI licenciado pela SAE. Cada par de falha é compilado a partir de um documento OEM de códigos de falha publicado — um manual de serviço, um guia de manutenção ou uma lista de DTC proveniente de um servidor oficial de fabricante — com redação própria e um link por linha para o documento de origem.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
+ },
  "56e96cdc42f75413": {
   "src": "MechanicDB Automotive OBD-II Diagnostic &amp; Repair Database",
   "t": "MechanicDB: banco de dados automotivo de diagnóstico e reparo OBD-II",
@@ -1024,12 +1024,6 @@
   "t": "<0>{1}</0> e {2} são definidos, cada um, por {3} das {4} marcas, com {5} e {6} significados distintos, respectivamente. {7} das {8} sequências de código específicas de fabricante ({9}) são definidas por mais de uma marca, e nenhuma delas reutiliza uma sequência padrão SAE.",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "60904d0a6a2536d2": {
-  "src": "{0} SPN/FMI fault pairs published by {1} in one fault-code document, as they appear in the MechanicDB Heavy Duty dataset. The dataset maps every pair to an authored fault family with FMI-informed procedure consideration order, difficulty ratings, parts-cost ranges and labour estimates; this page shows the coverage and the rows that are in the free sample.",
-  "t": "{0} pares de falha SPN/FMI publicados por {1} em um documento de códigos de falha, conforme aparecem no conjunto de dados MechanicDB Heavy Duty. O conjunto de dados associa cada par a uma família de falhas elaborada pela equipe, com uma ordem de consideração de procedimentos orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra; esta página mostra a cobertura e as linhas incluídas na amostra gratuita.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "618e242a70147565": {
   "src": "🧬 All {0} Fault Families",
@@ -1148,12 +1142,6 @@
   "t": "Códigos específicos de fabricante",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "6ea6e942f4935d61": {
-  "src": "{0} SPN/FMI fault pairs published by {1} in {2} fault-code documents, as they appear in the MechanicDB Heavy Duty dataset. The dataset maps every pair to an authored fault family with FMI-informed procedure consideration order, difficulty ratings, parts-cost ranges and labour estimates; this page shows the coverage and the rows that are in the free sample.",
-  "t": "{0} pares de falha SPN/FMI publicados por {1} em {2} documentos de códigos de falha, conforme aparecem no conjunto de dados MechanicDB Heavy Duty. O conjunto de dados associa cada par a uma família de falhas elaborada pela equipe, com uma ordem de consideração de procedimentos orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra; esta página mostra a cobertura e as linhas incluídas na amostra gratuita.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "70bdec98a469e9c2": {
   "src": "Free {0}-fault sample on GitHub (ODbL) →",
@@ -1365,12 +1353,6 @@
   "src": "{0} published fault-code documents across {1} manufacturers. Each row links to the document the pairs were taken from; open an OEM for its own breakdown.",
   "t": "{0} documentos de códigos de falha publicados por {1} fabricantes. Cada linha aponta para o documento de onde os pares foram tirados; abra um OEM para ver o detalhamento dele."
  },
- "836607136aefd49b": {
-  "src": "Authored procedures per fault in consideration order, with difficulty, parts-cost range, labour hours and steps",
-  "t": "Procedimentos elaborados pela equipe por falha em ordem de consideração, com dificuldade, faixa de custo de peças, horas de mão de obra e etapas",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "836d86671b720dce": {
   "src": "OBD-II fault codes in numbers: statistics from the MechanicDB catalogue",
   "t": "Códigos de falha OBD-II em números: estatísticas do catálogo MechanicDB",
@@ -1427,6 +1409,12 @@
   "by": "claude-sonnet-5",
   "at": "2026-09-21"
  },
+ "880ea6b57c3ff826": {
+  "src": "Every SPN/FMI pair with its fault family, explanation, authored procedure consideration order, difficulty, parts-cost range and source link, plus labour estimates where known, as pipe-delimited CSV, Apache Parquet and a SQLite database. Commercial use, instant download.",
+  "t": "Cada par SPN/FMI com sua família de falhas, explicação, ordem de consideração dos procedimentos elaborada pela equipe, dificuldade, faixa de custo de peças e link da fonte, além de estimativas de mão de obra quando conhecidas, em CSV delimitado por barras verticais, Apache Parquet e banco de dados SQLite. Uso comercial, download imediato.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
+ },
  "8963d535bfaf4cd2": {
   "src": "The median fix is estimated at <0>{1} h</0> of labor across the {2} fixes that carry an estimate; {3} are {4} h or less and {5} are over {6} h, with a maximum of {7} h. By difficulty the medians are {8} h ({9}), {10} h ({11}) and {12} h ({13}).",
   "t": "O reparo mediano é estimado em <0>{1} h</0> de mão de obra entre os {2} reparos que têm estimativa; {3} levam {4} h ou menos e {5} mais de {6} h, com máximo de {7} h. Por dificuldade, as medianas são {8} h ({9}), {10} h ({11}) e {12} h ({13}).",
@@ -1448,6 +1436,12 @@
  "8cedbc74482abcae": {
   "src": "Other OEMs",
   "t": "Outros OEMs"
+ },
+ "8d0a871c7fd56b4b": {
+  "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Every fault row in this tier links to the OEM document it was taken from; descriptions are written by us and no SAE {0} text is reproduced.",
+  "t": "As listas de falhas de motores rodoviários da Cummins, Detroit Diesel, PACCAR, Volvo/Mack e caminhões Caterpillar são material de portal exclusivo de concessionária e não estão incluídas. Cada linha de falha deste plano remete ao documento OEM de onde foi extraída; as descrições são redigidas por nós e nenhum texto da SAE {0} é reproduzido.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
  },
  "8e02db481d369c77": {
   "src": "automotive repair instructions",
@@ -1872,6 +1866,12 @@
  "ac9796b43eb5ec08": {
   "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Descriptions are written by us and no SAE {0} text is reproduced.",
   "t": "As listas de falhas dos motores rodoviários dos caminhões Cummins, Detroit Diesel, PACCAR, Volvo/Mack e Caterpillar são material de portais de concessionárias e não estão incluídas. As descrições são escritas por nós e nenhum texto da SAE {0} é reproduzido."
+ },
+ "acd2a023b6cd49d6": {
+  "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents across {3} manufacturers, each mapped to an authored fault family with {4} authored repair procedures in FMI-informed consideration order, difficulty ratings, parts-cost ranges and labour estimates where known. Every fault pair links to its source document.",
+  "t": "{0} pares de falha SPN/FMI SAE {1} compilados de {2} documentos de códigos de falha publicados pelas fabricantes de {3} marcas, cada um associado a uma família de falhas elaborada pela equipe com {4} procedimentos de reparo elaborados pela equipe em uma ordem de consideração orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra quando conhecidas. Cada par de falha contém um link para seu documento de origem.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
  },
  "ad2061c832f808bf": {
   "src": "Which parts and supplies the fixes call for",
@@ -2367,12 +2367,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "d7e5b862d81dc913": {
-  "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents, each mapped to an authored fault family with {3} procedures in FMI-informed authored consideration order, difficulty ratings, parts-cost ranges and labour estimates. Delivered as CSV, Parquet and SQLite, with a link to the source document on every row.",
-  "t": "{0} pares de falha SPN/FMI SAE {1} compilados de {2} documentos de códigos de falha publicados pelas fabricantes, cada um associado a uma família de falhas elaborada pela equipe com {3} procedimentos em uma ordem de consideração elaborada pela equipe e orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra. Entregue em CSV, Parquet e SQLite, com um link para o documento de origem em cada linha.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "d7f74d7da465b441": {
   "src": "License the dataset · from {0}",
   "t": "Licencie o conjunto de dados · a partir de {0}",
@@ -2384,6 +2378,12 @@
   "t": "ana@apexdiagnosticos.com.br",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "d8f0a70f86aac8f2": {
+  "src": "{0} SPN/FMI fault pairs published by {1} in one fault-code document, as they appear in the MechanicDB Heavy Duty dataset. The dataset maps every pair to an authored fault family with FMI-informed procedure consideration order, difficulty ratings, parts-cost ranges and labour estimates where known; this page shows the coverage and the rows that are in the free sample.",
+  "t": "{0} pares de falha SPN/FMI publicados por {1} em um documento de códigos de falha, conforme aparecem no conjunto de dados MechanicDB Heavy Duty. O conjunto de dados associa cada par a uma família de falhas elaborada pela equipe, com uma ordem de consideração de procedimentos orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra quando conhecidas; esta página mostra a cobertura e as linhas incluídas na amostra gratuita.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
  },
  "d91bfee7962478a6": {
   "src": "Repair procedures",
@@ -2533,12 +2533,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "e25c64043f80dd47": {
-  "src": "No. MechanicDB Heavy Duty does not reproduce the SAE {0} Digital Annex, any {1} DBC file, or SPN/FMI text licensed from SAE. Every fault pair is compiled from a published OEM fault-code document — a service manual, maintenance guide or DTC list hosted by the manufacturer itself — with our own wording and a per-row link to the document it came from.",
-  "t": "Não. O MechanicDB Heavy Duty não reproduz o Digital Annex da SAE {0}, nenhum arquivo DBC {1} nem texto SPN/FMI licenciado pela SAE. Cada par de falha é compilado a partir de um documento OEM de códigos de falha publicado — um manual de serviço, um guia de manutenção ou uma lista de DTC hospedada pelo próprio fabricante — com redação própria e um link por linha para o documento de origem.",
-  "by": "claude-sonnet-5",
-  "at": "2026-09-21"
- },
  "e26485a1e0e38b24": {
   "src": "top {0} of {1} items",
   "t": "os {0} primeiros de {1} itens",
@@ -2550,6 +2544,12 @@
   "t": "{0} procedimentos após o primeiro procedimento da lista",
   "by": "I01",
   "at": "2026-10-08"
+ },
+ "e427b6b39f2992a9": {
+  "src": "Authored procedures per fault in consideration order, with difficulty and steps, plus parts-cost range and labour hours where known",
+  "t": "Procedimentos elaborados pela equipe por falha em ordem de consideração, com dificuldade e etapas, além de faixa de custo de peças e horas de mão de obra quando conhecidas",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
  },
  "e42e37a97505b68c": {
   "src": "Diagnostic &amp; Technical Explanation",
@@ -2797,6 +2797,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "fd0dc22adff50e13": {
+  "src": "{0} SAE {1} SPN/FMI fault pairs compiled from {2} published OEM fault-code documents, each mapped to an authored fault family with {3} procedures in FMI-informed authored consideration order, difficulty ratings, parts-cost ranges and labour estimates where known. Delivered as CSV, Parquet and SQLite, with a link to the source document on every fault pair.",
+  "t": "{0} pares de falha SPN/FMI SAE {1} compilados de {2} documentos de códigos de falha publicados pelas fabricantes, cada um associado a uma família de falhas elaborada pela equipe com {3} procedimentos em uma ordem de consideração elaborada pela equipe e orientada pelo FMI, níveis de dificuldade, faixas de custo de peças e estimativas de mão de obra quando conhecidas. Entregue em CSV, Parquet e SQLite, com um link para o documento de origem em cada par de falha.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-13"
+ },
  "fd615fc0472d3c16": {
   "src": "FMI",
   "t": "FMI"
@@ -2830,12 +2836,6 @@
   "t": "Preciso da SAE {0}, mas a licença está acima do meu orçamento. O MechanicDB é uma alternativa?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
- },
- "ff781f5878afb52c": {
-  "src": "On-highway engine fault lists from Cummins, Detroit Diesel, PACCAR, Volvo/Mack and Caterpillar trucks are dealer-portal material and are not included. Every row in this tier links to the OEM document it was taken from; descriptions are written by us and no SAE {0} text is reproduced.",
-  "t": "As listas de falhas de motores rodoviários da Cummins, Detroit Diesel, PACCAR, Volvo/Mack e caminhões Caterpillar são material de portal exclusivo de concessionária e não estão incluídas. Cada linha deste plano remete ao documento OEM de onde foi extraída; as descrições são redigidas por nós e nenhum texto da SAE {0} é reproduzido.",
-  "by": "claude-sonnet-5",
-  "at": "2026-09-21"
  },
  "ffa104d4758ce5b6": {
   "src": "How much of the repair work is DIY",
