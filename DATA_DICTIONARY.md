@@ -290,7 +290,7 @@ in every ZIP and every free sample, scoped to its product (`obd2` or `heavyduty`
 | `inspect` | Visual or physical check without an instrument reading. | diagnostic |
 | `measure` | Instrumented test such as a meter, gauge, pressure, smoke or scope reading. | diagnostic |
 | `scan` | Scan-tool read or command: codes, freeze frame, live data or a bidirectional test. | diagnostic |
-| `repair` | Restore the existing component without a new part: clean, reseat, splice, adjust, flush or refill. | repair |
+| `repair` | Restore the existing component instead of replacing it: clean, reseat, splice, adjust, flush or refill. The procedure can still list consumables or repair kits as parts, with a parts cost. | repair |
 | `replace` | Fit a new or remanufactured part. | repair |
 | `program` | Software flash, coding, relearn or calibration. | programming |
 | `verify` | Confirm a completed repair: clear codes, drive cycle, readiness or re-test. | diagnostic |
