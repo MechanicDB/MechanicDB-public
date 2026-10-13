@@ -1,6 +1,6 @@
 <div align="center">
 
-![MechanicDB — OBD-II trouble codes mapped to ranked repair procedures with difficulty, cost, and labor estimates](assets/kaggle-cover.png)
+![MechanicDB — OBD-II trouble codes mapped to ranked repair procedures with difficulty, cost, and labor estimates where known](assets/kaggle-cover.png)
 
 # 🔧 MechanicDB — Automotive OBD-II Diagnostic & Repair Database
 
@@ -21,7 +21,7 @@
 
 ---
 
-**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to authored repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
+**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to authored repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates where known, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
 
 This repository holds the **free, open developer samples**: 90 curated OBD-II codes (75 SAE + 15 OEM) at the root and a 100-fault Heavy Duty (J1939) sample in [`samples/heavyduty/`](samples/heavyduty/), each in the same schema as its paid tier, so you can prototype joins, pipelines, and apps before licensing.
 
@@ -42,7 +42,7 @@ The sample covers the most commonly searched codes (P0420, P0171, P0300, …). P
 | Sample file | Rows | Description |
 | :--- | :--- | :--- |
 | `dtc_codes.csv` / `.parquet` | 90 | Code registry: DTC, system category, OEM flag/make, fault family, short description, detailed technical explanation |
-| `diagnostic_fixes.csv` / `.parquet` | 326 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours, step-by-step instructions |
+| `diagnostic_fixes.csv` / `.parquet` | 326 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours where estimated, step-by-step instructions |
 | `replacement_parts.csv` / `.parquet` | 449 | Part names per fix with catalog search URLs (a row can also name a tool, a scan or programming session, or a rental) |
 | `dtc_fixes_joined.csv` / `.parquet` | 326 | Pre-joined analytical view (codes × fixes) for one-file ingestion |
 

@@ -141,7 +141,7 @@ BODY = """
       <th style="padding:0 12px 8px 0">Table</th><th style="padding:0 12px 8px 0">Rows</th><th style="padding:0 0 8px">Holds</th></tr></thead>
     <tbody>
       <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15,886</td><td>Definition, system category, OEM flag and make, fault family, technical explanation</td></tr>
-      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,729</td><td>Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours, steps</td></tr>
+      <tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56,729</td><td>Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours where estimated, steps</td></tr>
       <tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75,055</td><td>Part names per fix, with catalog search URLs; a row can also name a tool, a scan or programming session, or a rental</td></tr>
       <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56,729</td><td>The flat analytical view &mdash; all 21 columns, one <code>read_csv</code> / <code>read_parquet</code></td></tr>
     </tbody>

@@ -1,6 +1,6 @@
 # MechanicDB — Automotive OBD-II Diagnostic & Repair Database
 
-> A structured dataset mapping 15,886 verified OBD-II Diagnostic Trouble Codes (9,249 SAE-standard + 6,637 manufacturer-specific across 32 makes) to 56,729 ranked repair procedures with DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, step-by-step instructions, and 75,055 replacement-parts mappings, organized into 647 hand-authored fault families.
+> A structured dataset mapping 15,886 verified OBD-II Diagnostic Trouble Codes (9,249 SAE-standard + 6,637 manufacturer-specific across 32 makes) to 56,729 ranked repair procedures with DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates where known, step-by-step instructions, and 75,055 replacement-parts mappings, organized into 647 hand-authored fault families.
 
 ## What it is
 - One row per trouble code (SAE rows unique by `dtc_code`; OEM rows unique by `(oem_make, dtc_code)`), joined to authored procedures and parts. The supported legacy field `probability_rank` gives procedure consideration order within a code (`1` = first), conditional on prerequisites and findings; it is not measured cause likelihood, repair success, severity, urgency or minimum cost. Machine-readable context: https://mechanicdb.dataengineered.io/ordering_metadata.json (order) and https://mechanicdb.dataengineered.io/cost_metadata.json (cost basis, `parts_cost_status` / `labor_status` vocabularies)

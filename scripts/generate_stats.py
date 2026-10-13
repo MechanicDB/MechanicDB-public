@@ -399,7 +399,7 @@ def build_page(s, charts):
   <p class="crumb"><a href="/">Home</a> / <span>Statistics</span></p>
   <p class="eyebrow">Catalogue statistics · build {esc(snap)}</p>
   <h1>OBD-II fault codes in numbers</h1>
-  <p class="lede">Aggregate statistics computed from the full MechanicDB dataset: {n(s['codes'])} diagnostic trouble codes ({n(s['sae_codes'])} SAE-standard, {n(s['oem_codes'])} manufacturer-specific across {n(s['makes'])} makes) mapped to {n(s['fixes'])} authored repair procedures with difficulty, parts-cost and labor estimates. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.</p>
+  <p class="lede">Aggregate statistics computed from the full MechanicDB dataset: {n(s['codes'])} diagnostic trouble codes ({n(s['sae_codes'])} SAE-standard, {n(s['oem_codes'])} manufacturer-specific across {n(s['makes'])} makes) mapped to {n(s['fixes'])} authored repair procedures with difficulty, parts-cost and labor estimates where known. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.</p>
   <ul class="tiles">{tile_html}</ul>
   <nav class="toc" aria-label="Contents"><strong>On this page</strong><ol>{contents}</ol></nav>
 
