@@ -1,3 +1,21 @@
+## EC-60 configurable-output family — I02 Phase B (2026-10-13)
+
+Heavy Duty faults 260 and 262 (SPN 2622 FMI 2/3, Bendix EC-60) moved from
+`hdb_hill_start_assist_circuit` to a new fault family, `hdb_ec60_configurable_output_circuit`.
+Its four procedures list no parts (`none_required`) and have unknown labor.
+
+- The old fixes and parts of those two faults (6 fixes, 2 parts) are retired with lifecycle
+  events. The events are listed in the paid Heavy Duty `identity_events.csv`; the free sample
+  does not carry them. Faults 260 and 262 and every other existing entity keep their IDs, and
+  the four new procedures add 8 fix IDs.
+- No new cost or labor numbers.
+- Counts: re-synced from the rebuilt tables (claims.json). Heavy Duty fixes 17,047 -> 17,049
+  (6 retired, 8 new) and parts 5,915 -> 5,913 (2 retired). Heavy Duty faults, SPNs, OEMs and
+  sources, and the OBD-II counts, are unchanged.
+- Heavy Duty pages now say labour estimates (and parts-cost ranges in the tables cell) where
+  known; two Bendix EC-60 pairs (SPN 2622 FMI 2/3) have no labour estimate. They now say every
+  fault row links its source document, which comes from an official manufacturer host.
+
 ## Procedure actions, cost status and SQLite v2 — I02/I42 Phase A (2026-10-11)
 
 Five columns are appended to `diagnostic_fixes` and both joined views, after
