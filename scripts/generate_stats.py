@@ -247,7 +247,7 @@ def build_page(s, charts):
         figure(site, "oem-codes-by-make", charts["oem-codes-by-make"], "Manufacturer-specific codes per make", f"top 15 of {n(s['makes'])} makes"),
         table(["Make", "Manufacturer-specific codes", "Share of OEM codes"], [(m, n(c), f"{p}%") for m, c, p in bm], {1, 2}),
         "Counts describe the catalogue's coverage of each make's published code list, not how often the codes occur on the road. "
-        "Sister brands that share a platform (for example the GM divisions, or Ford, Lincoln and Mercury) publish the same list and therefore show identical counts."))
+        "Some sister brands carry the same set of codes and therefore show identical counts (for example Buick, Cadillac, Chevrolet, GM, GMC and Saturn, or Ford, Lincoln and Mercury)."))
 
     # 3. shared code strings
     sc = s["shared_codes"]

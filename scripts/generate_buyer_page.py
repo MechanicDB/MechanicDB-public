@@ -159,7 +159,8 @@ BODY = """
 
   <p style="max-width:66ch;opacity:.85">
     From edition 2026.10, IDs are stable: code_id, fault_id, fix_id and part_id keep
-    their numbers when the dataset grows, so your joins and annotations survive updates.
+    their numbers when the dataset grows, so your joins and annotations survive updates;
+    an ID whose row is removed is retired, never reused.
     IDs are scoped by domain and table, and repairs are still listed in rank order.
     Numbers from earlier editions map through the <a href="/IDENTITY.md">identity and migration contract</a>.
   </p>

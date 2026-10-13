@@ -302,8 +302,8 @@ from `action_type` with the `labor_kind_by_action` map in `cost_metadata.json`.
 ## 7. SQLite enforcement — schema version 2
 
 This contract applies to the snapshots this build writes (`PRAGMA user_version = 2`; version 1 shipped in the first 2026.10 build; version 2 ships from this release, identified by `data_release_id`).
-The four OBD-II and six Heavy Duty tables, existing column order and identifiers are
-unchanged from version 1; values change only in reviewed families (see "Version 2 changes"). Standard keeps **all columns TEXT**, including IDs, rank and estimates;
+The four OBD-II and six Heavy Duty tables and their existing column order are
+unchanged from version 1, and existing IDs keep their numbers (an ID whose row is removed is retired, never reused); values change only in reviewed families (see "Version 2 changes"). Standard keeps **all columns TEXT**, including IDs, rank and estimates;
 OEM Complete and Heavy Duty retain INTEGER/REAL storage for numeric fields.
 CSV and Parquet gain the same five appended columns (estimates are null only when their status is `unknown`); `ordering_metadata.json` is unchanged.
 

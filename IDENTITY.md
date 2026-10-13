@@ -3,7 +3,7 @@
 Since edition 2026.10 the identity contract keeps the existing numeric code_id,
 fault_id, fix_id and part_id values across expansion and editorial changes; the
 paid editions and this sample ship its companion files. The sample's exact
-edition is identified by its `identity_metadata.json`, not the monthly badge.
+edition is identified by its `identity_metadata.json`, not by a month label.
 
 IDs are sparse and meaningful only within domain and entity type. Use qualified
 references such as `mechanicdb:v1:obd:fix:571` or
@@ -15,7 +15,7 @@ identify authored component suggestions under one fix, not universal SKUs or
 verified vehicle fitment.
 
 The core schema and SQLite version 2 add five procedure/cost columns and keep every existing
-column and ID. Numeric tables export in
+column; existing IDs keep their numbers, and an ID whose row is removed is retired, never reused. Numeric tables export in
 permanent-ID order; procedures display by probability_rank, with numeric CAST for
 Standard TEXT SQL. That rank retains the I01 authored consideration-order meaning
 and is never an identity or a measured probability.
