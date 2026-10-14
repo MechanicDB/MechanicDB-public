@@ -469,9 +469,9 @@
 <div class="tablewrap" style="overflow-x:auto">
 <table style="width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px">
 <tbody>
-<tr><td style="padding:9px 0"><b>15.886</b> códigos de falla</td><td style="opacity:.75">9.249 estándar SAE (P0, P2, P34–P39, C0, B0, U0, U3) + 6.637 específicos de fabricante en 32 marcas</td></tr>
+<tr><td style="padding:9px 0"><b>15.886</b> códigos de falla</td><td style="opacity:.75">9.249 estándar SAE (P0, P2, P34, C0, B0, U0, U3) + 6.637 específicos de fabricante en 32 marcas</td></tr>
 <tr><td style="padding:9px 0"><b>56.729</b> procedimientos ordenados</td><td style="opacity:.75">3–5 por código en un orden de consideración creado por el equipo (hasta 8 en las familias revisadas, donde los pasos de diagnóstico no incluyen piezas) y condicionado por los requisitos previos y los hallazgos, con nivel de dificultad, intervalo de coste de piezas y horas de mano de obra cuando están estimadas</td></tr>
-<tr><td style="padding:9px 0"><b>75.055</b> correspondencias de piezas</td><td style="opacity:.75">Nombres de piezas de recambio por reparación, con URL de búsqueda en catálogos</td></tr>
+<tr><td style="padding:9px 0"><b>75.055</b> correspondencias de piezas</td><td style="opacity:.75">Nombres de piezas por reparación, con URL de búsqueda en catálogos; una fila también puede indicar una herramienta, una sesión de escaneo o de programación, o un alquiler</td></tr>
 <tr><td style="padding:9px 0"><b>647</b> familias de fallas</td><td style="opacity:.75">Agrupaciones redactadas que hacen navegable el corpus, en lugar de una lista plana de códigos</td></tr>
 </tbody>
 </table>
@@ -488,8 +488,8 @@
 <th style="padding:0 12px 8px 0">Tabla</th><th style="padding:0 12px 8px 0">Filas</th><th style="padding:0 0 8px">Contenido</th></tr></thead>
 <tbody>
 <tr><td style="padding:9px 12px 9px 0"><code>dtc_codes</code></td><td style="padding:9px 12px 9px 0">15.886</td><td>Definición, categoría de sistema, indicador OEM y marca, familia de fallas, explicación técnica</td></tr>
-<tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56.729</td><td>Procedimientos creados por el equipo con orden de consideración, nivel de dificultad, coste mínimo/máximo de piezas, horas de mano de obra y pasos</td></tr>
-<tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75.055</td><td>Nombres de piezas de recambio por reparación, con URL de búsqueda en catálogos</td></tr>
+<tr><td style="padding:9px 12px 9px 0"><code>diagnostic_fixes</code></td><td style="padding:9px 12px 9px 0">56.729</td><td>Procedimientos creados por el equipo con orden de consideración, nivel de dificultad, coste mínimo/máximo de piezas, horas de mano de obra cuando están estimadas y pasos</td></tr>
+<tr><td style="padding:9px 12px 9px 0"><code>replacement_parts</code></td><td style="padding:9px 12px 9px 0">75.055</td><td>Nombres de piezas por reparación, con URL de búsqueda en catálogos; una fila también puede indicar una herramienta, una sesión de escaneo o de programación, o un alquiler</td></tr>
 <tr><td style="padding:9px 12px 9px 0"><code>dtc_fixes_joined</code></td><td style="padding:9px 12px 9px 0">56.729</td><td>La vista analítica plana: las 21 columnas, un solo <code>read_csv</code> / <code>read_parquet</code></td></tr>
 </tbody>
 </table>
@@ -501,7 +501,7 @@
 <code>probability_rank</code> es el nombre compatible heredado para el orden de consideración de procedimientos creado por el equipo dentro de un código (<code>1</code> = primero). No mide la probabilidad de la causa, el éxito de la reparación, la gravedad, la urgencia ni el coste mínimo. Siga los requisitos previos y los hallazgos de diagnóstico de cada procedimiento. Consulte los <a href="/ordering_metadata.json">metadatos de ordenación</a>.
   </p>
 <p style="max-width:66ch;opacity:.85">
-    Desde la edición 2026.10, los ID son estables: code_id, fault_id, fix_id y part_id conservan su número cuando el conjunto de datos crece, así que tus uniones (joins) y anotaciones sobreviven a las actualizaciones. Cada ID es propio de su dominio y su tabla, y las reparaciones siguen listadas por orden de rango. Los números de ediciones anteriores se asignan mediante el <a href="/IDENTITY.md">contrato de identidad y migración</a>.
+    Desde la edición 2026.10, los ID son estables: code_id, fault_id, fix_id y part_id conservan su número cuando el conjunto de datos crece, así que tus uniones (joins) y anotaciones sobreviven a las actualizaciones; un ID cuya fila se elimina queda retirado y nunca se reutiliza. Cada ID es propio de su dominio y su tabla, y las reparaciones siguen listadas por orden de rango. Los números de ediciones anteriores se asignan mediante el <a href="/IDENTITY.md">contrato de identidad y migración</a>.
   </p>
 <h2 style="margin-top:44px">Cobertura, explicada con honestidad</h2>
 <p style="max-width:66ch;opacity:.85">

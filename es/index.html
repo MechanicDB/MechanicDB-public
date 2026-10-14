@@ -37,7 +37,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "MechanicDB: base de datos automotriz de diagnóstico y reparación OBD-II",
-  "description": "Conjunto de datos de diagnóstico de automóviles que asigna 15.886 códigos de avería OBD-II verificados de 32 marcas de vehículos a 56.729 procedimientos de reparación creados por el equipo, con niveles de dificultad de bricolaje y estimaciones de costes de mano de obra y piezas. Un nivel Heavy Duty independiente añade 4.212 pares de falla SPN/FMI SAE J1939 recopilados de 16 documentos de códigos de falla publicados por los fabricantes.",
+  "description": "Conjunto de datos de diagnóstico de automóviles que asigna 15.886 códigos de avería OBD-II verificados de 32 marcas de vehículos a 56.729 procedimientos de reparación creados por el equipo, con niveles de dificultad de bricolaje y estimaciones de costes de mano de obra y piezas cuando se conocen. Un nivel Heavy Duty independiente añade 4.212 pares de falla SPN/FMI SAE J1939 recopilados de 16 documentos de códigos de falla publicados por los fabricantes.",
   "url": "https://mechanicdb.dataengineered.io/es/",
   "license": "https://mechanicdb.dataengineered.io/license",
   "isAccessibleForFree": false,
@@ -144,7 +144,7 @@
       "name": "¿Cómo se estructura cada código de diagnóstico OBD-II dentro de MechanicDB?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cada código sigue el formato SAE J2012 de 5 caracteres, en el que el carácter 1 designa el sistema (P=tren motriz, C=chasis, B=carrocería, U=red), el carácter 2 indica si es estándar SAE ('0') o definido por el fabricante ('1'), el carácter 3 designa el subsistema y los caracteres 4-5 representan el índice específico de la falla."
+        "text": "Cada código sigue el formato SAE J2012 de 5 caracteres, en el que el carácter 1 designa el sistema (P=tren motriz, C=chasis, B=carrocería, U=red), el carácter 2 indica si es un código SAE o de fabricante, el carácter 3 designa el subsistema y los caracteres 4-5 representan el índice específico de la falla. En los códigos P, un 0 o un 2 como segundo carácter indica un código SAE y un 1, un código de fabricante; P3 está dividido, con P30–P33 para los fabricantes y P34–P39 para SAE. En los códigos C y B, 0 es SAE y 1 y 2 son de fabricante; en los códigos U, 0 y 3 son SAE y 1 y 2 son de fabricante."
       }
     },
     {
@@ -152,7 +152,7 @@
       "name": "¿Qué relación tienen las valoraciones de dificultad con la seguridad en alta tensión y en el SRS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Una valoración de dificultad no sustituye al procedimiento de seguridad. El trabajo en redes de tracción de alta tensión de híbridos/eléctricos (>60V) o en sistemas de retención suplementarios (airbags/pretensores pirotécnicos) requiere el procedimiento de bloqueo y de seguridad del fabricante, sea cual sea la valoración; sigue el manual de servicio."
+        "text": "Una valoración de dificultad no sustituye al procedimiento de seguridad. El trabajo en redes de tracción de alta tensión de híbridos/eléctricos (>60V) o en sistemas de retención suplementarios (airbags/pretensores pirotécnicos) requiere el procedimiento de seguridad del fabricante, sea cual sea la valoración; sigue el manual de servicio."
       }
     },
     {
@@ -848,7 +848,7 @@
 <a class="dir-badge" href="/es/landing/body">🚗 Carrocería y SRS (códigos B)</a>
 <a class="dir-badge" href="/es/landing/network">📡 Red CAN (códigos U)</a>
 <!-- BEGIN:fam-badge -->
-<a class="dir-badge dir-badge-lead" href="/es/landing/families">🧬 Las 615 familias de fallas</a>
+<a class="dir-badge dir-badge-lead" href="/es/landing/families">🧬 Las 615 familias de fallas de códigos SAE</a>
 <!-- END:fam-badge -->
 </div>
 <!-- BEGIN:fam-browse -->
@@ -869,7 +869,7 @@
 <a href="/es/landing/family-invalid-data-powertrain-module"><span translate="no">Invalid Data Powertrain Module</span> <b>79</b></a>
 <a href="/es/landing/family-vehicle-comm-bus-lettered-fault"><span translate="no">Vehicle Comm Bus Lettered Fault</span> <b>76</b></a>
 </div>
-<p class="fam-more"><a href="/es/landing/families">Ver las 615 familias de fallas →</a></p>
+<p class="fam-more"><a href="/es/landing/families">Ver las 615 familias de fallas de códigos SAE →</a></p>
 </div>
 <!-- END:fam-browse -->
 </div>
@@ -878,7 +878,7 @@
 <div class="wrap">
 <span class="stamp">Sec. 01 · Qué incluye</span>
 <h2 class="sec-title">Cuatro tablas relacionales, una cadena de claves de unión</h2>
-<p class="sec-lede">Normalizado para bases de datos, precombinado para notebooks. Cada código incluye 3–5 procedimientos en un orden de consideración creado por el equipo (hasta 8 en las familias revisadas); la ejecución depende de los requisitos previos y de los hallazgos del diagnóstico. Los procedimientos de reparación se vinculan a piezas de recambio; en las familias revisadas, los pasos de diagnóstico no incluyen piezas.</p>
+<p class="sec-lede">Normalizado para bases de datos, precombinado para notebooks. Cada código incluye 3–5 procedimientos en un orden de consideración creado por el equipo (hasta 8 en las familias revisadas); la ejecución depende de los requisitos previos y de los hallazgos del diagnóstico. Los procedimientos se vinculan a piezas y suministros, y una vinculación también puede indicar una herramienta, una sesión de escaneo o de programación, o un alquiler; en las familias revisadas, los pasos de diagnóstico no incluyen piezas.</p>
 <div class="schema-strip">
 <div class="table-card">
 <h3 translate="no">dtc_codes</h3>
@@ -889,13 +889,13 @@
 <div class="table-card">
 <h3 translate="no">diagnostic_fixes</h3>
 <div class="rows">56.729 filas</div>
-<p>Procedimientos de reparación creados por el equipo con orden de consideración, nivel de dificultad, intervalo de coste de piezas, horas de mano de obra e instrucciones paso a paso.</p>
+<p>Procedimientos de reparación creados por el equipo con orden de consideración, nivel de dificultad, intervalo de coste de piezas, horas de mano de obra cuando están estimadas e instrucciones paso a paso.</p>
 <ul><li><span translate="no">probability_rank</span> 1–7</li><li translate="no">difficulty_level</li><li><span translate="no">est_parts_cost</span> mín./máx. USD</li></ul>
 </div>
 <div class="table-card">
 <h3 translate="no">replacement_parts</h3>
 <div class="rows">75.055 filas</div>
-<p>Nombres de piezas de recambio por reparación, con URL de búsqueda en catálogos derivadas del nombre de la pieza.</p>
+<p>Nombres de piezas por reparación, con URL de búsqueda en catálogos derivadas del nombre. Una fila también puede indicar una herramienta, una sesión de escaneo o de programación, o un alquiler.</p>
 <ul><li translate="no">part_name</li><li translate="no">amazon_search_query</li></ul>
 </div>
 <div class="table-card">
@@ -914,12 +914,12 @@
 <h2 class="sec-title">Ficha técnica</h2>
 <div class="spec-sheet">
 <table>
-<tr><th scope="row">Cobertura</th><td><b>9.249</b> códigos estándar SAE — rangos genéricos P0, P2, P34–P39, C0, B0, U0, U3. Tren motriz, chasis, carrocería y red, incluidos híbridos/eléctricos (P0Axx–P0Exx) y postratamiento diésel.</td></tr>
-<tr><th scope="row">Cobertura OEM</th><td><b>6.637</b> códigos específicos de fabricante en <b>32</b> marcas — rangos P1, P30–P33, C1/C2, B1/B2, U1/U2 controlados por el fabricante. La cobertura es desigual y más sólida en las marcas del mercado estadounidense; el desglose completo por marca está más abajo. <b>15.886</b> códigos en total.</td></tr>
+<tr><th scope="row">Cobertura</th><td><b>9.249</b> códigos estándar SAE — rangos genéricos P0, P2, P34, C0, B0, U0, U3. Tren motriz, chasis, carrocería y red, incluidos híbridos/eléctricos (P0Axx–P0Exx) y postratamiento diésel.</td></tr>
+<tr><th scope="row">Cobertura OEM</th><td><b>6.637</b> códigos específicos de fabricante en <b>32</b> marcas — códigos de tren motriz en los rangos P1 y P30–P31 controlados por el fabricante. OEM Complete no contiene códigos específicos de fabricante de chasis, carrocería ni red (C1/C2, B1/B2, U1/U2). La cobertura es desigual y más sólida en las marcas del mercado estadounidense; el desglose completo por marca está más abajo. <b>15.886</b> códigos en total.</td></tr>
 <tr><th scope="row">Información de reparación</th><td><b>647</b> familias de fallas creadas por el equipo → <b>56.729</b> procedimientos ordenados → <b>75.055</b> correspondencias de piezas. <code>probability_rank</code> es el nombre compatible de un campo heredado para el orden de consideración, no para probabilidad, éxito, gravedad ni coste. Niveles de dificultad: bricolaje fácil / bricolaje moderado / requiere profesional. <a href="/ordering_metadata.json">Contexto del orden</a>.</td></tr>
 <tr><th scope="row">Formatos de entrega</th><td>CSV delimitado por barras verticales (UTF-8 BOM, compatible con Excel) · Apache Parquet, Snappy: <b>92,5%</b> más pequeño según medición · base de datos SQLite con las cuatro tablas.</td></tr>
 <tr><th scope="row">Controles de calidad</th><td>Compilación determinista validada por pruebas: integridad referencial, comprobaciones de unicidad contra plantillas y un filtro que impide códigos inventados; cada código publicado se remonta a la fuente versionada.</td></tr>
-<tr><th scope="row">Marco de seguridad</th><td>Una valoración de dificultad no es una clasificación de seguridad: algunos procedimientos con valoración DIY incluyen un paso de alta tensión o en el SRS. Antes de cualquier paso de alta tensión, sigue el bloqueo y la verificación de ausencia de tensión del fabricante; antes de cualquier paso en el SRS, desconecta la batería y espera el tiempo de descarga del condensador que indique el manual de servicio.</td></tr>
+<tr><th scope="row">Marco de seguridad</th><td>Una valoración de dificultad no es una clasificación de seguridad: algunos procedimientos con valoración DIY incluyen un paso de alta tensión o en el SRS. Antes de tocar cualquier componente, conector o cable de alta tensión, sigue el bloqueo y la verificación de ausencia de tensión del fabricante; antes de tocar cualquier componente, conector o cableado del SRS, desconecta la batería y espera el tiempo de descarga del condensador que indique el manual de servicio. Si no puedes seguir estos procedimientos, deja el trabajo en manos de un técnico cualificado.</td></tr>
 <tr><th scope="row">Procedencia</th><td>Definiciones de códigos recopiladas de fuentes públicas SAE J2012-derived (con licencia MIT, atribución conservada). Los procedimientos, las valoraciones de dificultad y los costes son contenido original redactado.</td></tr>
 </table>
 </div>
@@ -1051,11 +1051,11 @@
 <div class="faq-grid">
 <div class="faq-item">
 <h3>Anatomía y estructura del código</h3>
-<p>Cada código sigue el formato SAE J2012 de 5 caracteres, en el que el carácter 1 designa el sistema (P=tren motriz, C=chasis, B=carrocería, U=red), el carácter 2 indica si es estándar SAE ('0') o definido por el fabricante ('1'), el carácter 3 designa el subsistema y los caracteres 4-5 representan el índice específico de la falla.</p>
+<p>Cada código sigue el formato SAE J2012 de 5 caracteres, en el que el carácter 1 designa el sistema (P=tren motriz, C=chasis, B=carrocería, U=red), el carácter 2 indica si es un código SAE o de fabricante, el carácter 3 designa el subsistema y los caracteres 4-5 representan el índice específico de la falla. En los códigos P, un 0 o un 2 como segundo carácter indica un código SAE y un 1, un código de fabricante; P3 está dividido, con P30–P33 para los fabricantes y P34–P39 para SAE. En los códigos C y B, 0 es SAE y 1 y 2 son de fabricante; en los códigos U, 0 y 3 son SAE y 1 y 2 son de fabricante.</p>
 </div>
 <div class="faq-item">
 <h3>Valoraciones de dificultad y seguridad en alta tensión y SRS</h3>
-<p>Una valoración de dificultad no sustituye al procedimiento de seguridad. El trabajo en redes de tracción de alta tensión de híbridos/eléctricos (&gt;60V) o en sistemas de retención suplementarios (airbags/pretensores pirotécnicos) requiere el procedimiento de bloqueo y de seguridad del fabricante, sea cual sea la valoración; sigue el manual de servicio.</p>
+<p>Una valoración de dificultad no sustituye al procedimiento de seguridad. El trabajo en redes de tracción de alta tensión de híbridos/eléctricos (&gt;60V) o en sistemas de retención suplementarios (airbags/pretensores pirotécnicos) requiere el procedimiento de seguridad del fabricante, sea cual sea la valoración; sigue el manual de servicio.</p>
 </div>
 <div class="faq-item">
 <h3>Integración comercial en herramientas de escaneo</h3>
@@ -1124,8 +1124,8 @@
 <h2 class="sec-title">De dónde proceden los datos</h2>
 <div class="prov-grid">
 <div>
-<p>Las correspondencias entre códigos y definiciones proceden de SAE J2012 / ISO 15031-6 y se han recopilado a partir de una compilación pública con licencia MIT, con la licencia de origen incluida junto a los datos. La capa de valor (explicaciones de familias de fallas, procedimientos clasificados, niveles de dificultad y rangos de costes) es contenido editorial original basado en la práctica diagnóstica estándar. Las cifras de costes y mano de obra son estimaciones para piezas de recambio típicas en EE. UU. y mano de obra de talleres independientes, no presupuestos.</p>
-<div class="safety"><b>Aviso de seguridad.</b> Los pasos de reparación son material de referencia educativo y no sustituyen el manual de servicio del fabricante. Los procedimientos de alta tensión y de SRS/airbag solo deben realizarlos técnicos cualificados.</div>
+<p>Las correspondencias entre códigos y definiciones proceden de SAE J2012 / ISO 15031-6 y se han recopilado a partir de una compilación pública con licencia MIT, con la licencia de origen incluida junto a los datos. La capa de valor (explicaciones de familias de fallas, procedimientos clasificados, niveles de dificultad y rangos de costes) es contenido editorial original basado en la práctica diagnóstica estándar. Los valores de costes y mano de obra son editoriales (piezas en dólares estadounidenses, mano de obra en horas), no presupuestos.</p>
+<div class="safety"><b>Aviso de seguridad.</b> Los pasos de reparación son material de referencia educativo y no sustituyen el manual de servicio del fabricante. Los trabajos de alta tensión y de SRS/airbag requieren el procedimiento de seguridad del fabricante, sea cual sea la valoración de dificultad; si no puedes seguirlo, deja el trabajo en manos de un técnico cualificado.</div>
 </div>
 <div>
 <h3>Enlaces</h3>
@@ -1183,42 +1183,42 @@
   /* Real rows from samples/dtc_fixes_joined.csv (v1.0). */
   var DATA = {
     "P0420": { desc: "Catalyst System Efficiency Below Threshold Bank 1", family: "catalyst_efficiency_below_threshold",
-      explain: "Sets when the ECM compares pre- and post-catalyst oxygen sensor switching activity and finds the catalyst no longer storing oxygen effectively.",
+      explain: "Code P0420 (Catalyst System Efficiency Below Threshold Bank 1) sets when the ECM compares pre- and post-catalyst oxygen sensor switching activity and finds the catalyst (or a specific catalyst brick on multi-brick systems) is no longer storing/releasing oxygen efficiently enough to meet emissions thresholds.",
       fixes: [["Inspect for exhaust leaks near the oxygen sensors","Easy DIY",10,60,0.8],
               ["Correct an underlying rich/lean fuel condition first","Moderate DIY",15,100,1.0],
               ["Replace the catalytic converter","Professional Required",250,1500,2.0]] },
     "P0171": { desc: "System Too Lean Bank 1", family: "fuel_trim_lean",
-      explain: "Sets when the ECM must add more fuel than the calibrated limit allows to correct a lean condition — leading causes are unmetered air and weak fuel delivery.",
+      explain: "Code P0171 (System Too Lean Bank 1) sets when the ECM must add more fuel than the calibrated limit allows to correct a lean condition on the indicated bank.",
       fixes: [["Smoke-test intake for vacuum/air leaks","Easy DIY",10,40,0.8],
               ["Replace fuel filter and test fuel pump output","Moderate DIY",30,150,1.0],
               ["Inspect and repair exhaust manifold gasket leak","Moderate DIY",40,180,1.5]] },
     "P0300": { desc: "Random/Multiple Cylinder Misfire Detected", family: "misfire_random_multiple",
-      explain: "Sets when the crankshaft-acceleration misfire monitor counts combustion faults across multiple cylinders beyond the calibrated threshold.",
+      explain: "Code P0300 (Random/Multiple Cylinder Misfire Detected) sets when the ECM's crankshaft-acceleration misfire monitor counts combustion events across multiple cylinders (or an undifferentiated pattern) beyond the calibrated threshold, including variants triggered by a low fuel level, a cold-start window, or a commanded fuel cutoff.",
       fixes: [["Replace spark plugs and inspect ignition coils as a set","Easy DIY",30,90,1.2],
               ["Smoke-test intake and vacuum lines for a shared leak","Moderate DIY",15,60,1.0],
               ["Verify fuel delivery and refuel if the tank is low","Easy DIY",5,20,0.2]] },
     "P0442": { desc: "EVAP System Leak Detected (small leak)", family: "evap_small_leak",
-      explain: "Sets when the EVAP leak-detection monitor cannot hold vacuum or pressure within its small-leak threshold — typically a 0.020 in. equivalent orifice.",
+      explain: "Code P0442 (EVAP System Leak Detected (small leak)) sets when the EVAP leak-detection monitor cannot hold vacuum or pressure in the fuel vapor system within its small-leak threshold (typically a 0.020 in. equivalent orifice), including the tighter very-small-leak threshold and the fuel-tank-side/fresh-air-side variants used on natural-vacuum leak detection systems, or when the general EVAP system monitor itself fails.",
       fixes: [["Inspect and reseat or replace fuel filler cap","Easy DIY",10,25,0.2],
               ["Smoke-test EVAP system and replace leaking hose","Moderate DIY",15,60,1.0],
               ["Replace EVAP purge solenoid valve","Moderate DIY",25,90,0.6]] },
-    "P0128": { desc: "Coolant Temperature Below Thermostat Regulating Temperature", family: "coolant_thermostat_performance",
-      explain: "Sets when engine coolant fails to reach or maintain its regulating temperature within the expected time.",
+    "P0128": { desc: "Coolant Thermostat (Coolant Temperature Below Thermostat Regulating Temperature)", family: "coolant_thermostat_performance",
+      explain: "Code P0128 (Coolant Thermostat (Coolant Temperature Below Thermostat Regulating Temperature)) sets when engine coolant fails to reach or maintain its regulating temperature within the expected time, or coolant flow/circulation is judged insufficient.",
       fixes: [["Check coolant level and inspect for external leaks","Easy DIY",10,40,0.5],
               ["Replace stuck-open thermostat","Moderate DIY",20,90,1.0],
               ["Replace failing water pump","Professional Required",120,450,2.0]] },
     "P0715": { desc: "Input/Turbine Shaft Speed Sensor A Circuit", family: "input_turbine_shaft_speed_sensor_circuit",
-      explain: "Sets when the TCM loses, or receives an implausible, input/turbine shaft speed signal used for shift scheduling and torque converter clutch control.",
+      explain: "Code P0715 (Input/Turbine Shaft Speed Sensor A Circuit) sets when the TCM loses, or receives an implausible, input/turbine shaft speed signal used for shift scheduling and torque converter clutch control.",
       fixes: [["Inspect sensor connector for fluid intrusion","Easy DIY",5,20,0.5],
               ["Replace input/turbine shaft speed sensor","Moderate DIY",30,110,0.9],
               ["Repair internal/external transmission wiring harness","Professional Required",40,200,2.0]] },
     "C0035": { desc: "Right Front Wheel Speed Sensor Supply", family: "wheel_speed_sensor_circuit",
-      explain: "Sets when the ABS module loses a valid electrical signal from a wheel speed sensor — the circuit reads open, shorted, or drops out intermittently.",
+      explain: "Code C0035 (Right Front Wheel Speed Sensor Supply) sets when the ABS module loses a valid electrical signal from a wheel speed sensor -- the circuit reads open, shorted low or high, drops out intermittently, fails to correlate with the other three wheels, or reports an incorrect component installed.",
       fixes: [["Inspect wheel speed sensor connector and harness routing","Easy DIY",5,25,0.4],
               ["Test wheel speed sensor resistance and signal","Moderate DIY",10,40,0.6],
               ["Replace wheel speed sensor","Moderate DIY",30,120,0.6]] },
     "U0100": { desc: "Lost Communication With ECM/PCM A", family: "lost_comm_powertrain_module",
-      explain: "Sets when the gateway or another control module stops receiving any messages from a powertrain-side module or smart sensor on the CAN/LIN network.",
+      explain: "U0100 sets when the gateway or another control module stops receiving any messages from a powertrain-side module or smart sensor -- the ECM/PCM, TCM, or one of the engine-bay LIN-networked sensors (MAP, MAF, EGR, turbo boost, fuel pressure, and similar) that report over a low-speed sub-bus feeding into the high-speed backbone.",
       fixes: [["Check the module's dedicated fuse and battery/ground connections","Easy DIY",8,25,0.4],
               ["Inspect and clean the engine-harness connector at the named module","Moderate DIY",12,40,0.6],
               ["Repair the LIN/CAN sub-bus wiring feeding the module","Moderate DIY",20,90,1.3]] }

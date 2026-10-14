@@ -83,10 +83,6 @@
   "src": "Sample rows",
   "t": "Lignes d'exemple"
  },
- "04ec6c403f4a12e3": {
-  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order (up to {1} in reviewed families); execution depends on prerequisites and diagnostic findings. Repair procedures map to aftermarket parts; in reviewed families, diagnostic steps list no parts.",
-  "t": "Normalisé pour les bases de données, préjoint pour les notebooks. Chaque code comporte {0} procédures dans un ordre d’examen rédigé (jusqu’à {1} dans les familles révisées) ; leur exécution dépend des prérequis et des constatations du diagnostic. Les procédures de réparation sont associées à des pièces de rechange ; dans les familles révisées, les étapes de diagnostic ne mentionnent aucune pièce."
- },
  "05a977c661b24ce2": {
   "src": "est_parts_cost_min_usd and est_parts_cost_max_usd are the dataset's editorial aftermarket parts estimates in US dollars at build time; they are not quotes, exclude labor and vary by vehicle and region. Medians are computed over fixes, so a family with {0} codes weighs {1} times. Compare groups within this page, not against a shop invoice.",
   "t": "est_parts_cost_min_usd et est_parts_cost_max_usd sont les estimations éditoriales du jeu de données pour des pièces de rechange du marché secondaire, en dollars américains au moment du build ; ce ne sont pas des devis, elles excluent la main-d'œuvre et varient selon le véhicule et la région. Les médianes sont calculées sur les réparations : une famille de {0} codes pèse donc {1} fois. Comparez les groupes au sein de cette page, pas avec une facture d'atelier.",
@@ -141,6 +137,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "0c173099e559691c": {
+  "src": "Part names per fix, with catalog search URLs; a row can also name a tool, a scan or programming session, or a rental",
+  "t": "Noms des pièces par réparation, avec URL de recherche catalogue ; une ligne peut aussi désigner un outil, une session de diagnostic ou de programmation, ou une location",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "0c709f9886c34419": {
   "src": "Specifications",
   "t": "Spécifications",
@@ -171,12 +173,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "0ecf6047f9aaf064": {
-  "src": "Automotive diagnostic dataset mapping {0} verified OBD-II trouble codes across {1} vehicle makes to {2} authored repair procedures with DIY difficulty ratings and labor/parts cost estimations. A separate Heavy Duty tier adds {3} SAE {4} SPN/FMI fault pairs compiled from {5} published OEM fault-code documents.",
-  "t": "Jeu de données de diagnostic automobile associant {0} codes défaut OBD-II vérifiés pour {1} marques de véhicules à {2} procédures de réparation rédigées, avec niveaux de difficulté de bricolage et estimations des coûts de main-d’œuvre et de pièces. Un niveau Heavy Duty distinct ajoute {3} paires de pannes SPN/FMI SAE {4} compilées à partir de {5} documents de codes de panne publiés par les équipementiers.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "0f09b22f72874343": {
   "src": "OEM Complete Commercial License ({0})",
   "t": "Licence commerciale OEM Complete ({0})",
@@ -192,6 +188,18 @@
   "t": "Codes de cette famille ({0})",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "10ec0c40185ce0ee": {
+  "src": "Part names per fix, with catalog search URLs derived from the name. A row can also name a tool, a scan or programming session, or a rental.",
+  "t": "Noms des pièces par réparation, avec des URL de recherche catalogue dérivées du nom. Une ligne peut aussi désigner un outil, une session de diagnostic ou de programmation, ou une location.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
+ "115239a361465573": {
+  "src": "A difficulty rating is not a safety classification: some DIY-rated procedures include a high-voltage or SRS step. Before touching any high-voltage component, connector or cable, follow the manufacturer's lockout and zero-volt verification; before touching any SRS component, connector or wiring, disconnect the battery and wait out the capacitor discharge time the service manual gives. If you cannot follow these procedures, leave the work to a qualified technician.",
+  "t": "Un niveau de difficulté n’est pas une classification de sécurité : certaines procédures classées DIY comportent une étape touchant à la haute tension ou au SRS. Avant de toucher tout composant, connecteur ou câble haute tension, appliquez la consignation et la vérification d’absence de tension prévues par le constructeur ; avant de toucher tout composant, connecteur ou câblage du SRS, débranchez la batterie et attendez le temps de décharge du condensateur indiqué par le manuel d’atelier. Si vous ne pouvez pas suivre ces procédures, confiez l’intervention à un technicien qualifié.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "120270535417f094": {
   "src": "{0} codes",
@@ -459,12 +467,6 @@
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
- "2635673694e42c91": {
-  "src": "Aftermarket part names per fix, with catalog search URLs",
-  "t": "Noms des pièces de rechange par réparation, avec URL de recherche catalogue",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "2649b509b730163f": {
   "src": "{0} {1} Fault Codes",
   "t": "Codes défaut {1} {0}"
@@ -485,11 +487,11 @@
   "src": "one-time · commercial use · <0>compare tiers</0> · <1>free {2}-fault sample</1>",
   "t": "paiement unique · usage commercial · <0>comparer les formules</0> · <1>échantillon gratuit de {2} défauts</1>"
  },
- "27657758a306b3cb": {
-  "src": "Aftermarket part names per fix, with catalog search URLs derived from the part name.",
-  "t": "Noms des pièces de rechange par réparation, avec des URL de recherche catalogue dérivées du nom de la pièce.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
+ "274048be40f0795c": {
+  "src": "From edition {0}, IDs are stable: code_id, fault_id, fix_id and part_id keep their numbers when the dataset grows, so your joins and annotations survive updates; an ID whose row is removed is retired, never reused. IDs are scoped by domain and table, and repairs are still listed in rank order. Numbers from earlier editions map through the <1>identity and migration contract</1>.",
+  "t": "À partir de l'édition {0}, les identifiants sont stables : code_id, fault_id, fix_id et part_id gardent leur numéro quand le jeu de données s'agrandit, de sorte que vos jointures et annotations survivent aux mises à jour ; un identifiant dont la ligne est supprimée est retiré, jamais réutilisé. Chaque identifiant est propre à son domaine et à sa table, et les réparations restent listées par ordre de rang. Les numéros des éditions antérieures se convertissent via le <1>contrat d'identité et de migration</1>.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "27c623f60644031c": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the first-listed…",
@@ -639,12 +641,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "39fd9c9a126e4a23": {
-  "src": "See all {0} fault families →",
-  "t": "Voir les {0} familles de défauts →",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "3a640fb55e74cbb7": {
   "src": "Code {0} (Catalyst Efficiency Below Threshold)",
   "t": "Code {0} (efficacité du catalyseur sous le seuil)",
@@ -715,18 +711,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "40c62976cef9eba6": {
-  "src": "Counts describe the catalogue's coverage of each make's published code list, not how often the codes occur on the road. Sister brands that share a platform (for example the GM divisions, or Ford, Lincoln and Mercury) publish the same list and therefore show identical counts.",
-  "t": "Les décomptes décrivent la couverture, par le catalogue, de la liste de codes publiée par chaque marque, et non la fréquence des codes sur la route. Les marques sœurs qui partagent une plateforme (par exemple les divisions de GM, ou Ford, Lincoln et Mercury) publient la même liste et affichent donc des décomptes identiques.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
- },
- "41108964bb9a0296": {
-  "src": "Authored repair procedures with consideration order, difficulty tier, parts-cost range, labor hours, and step-by-step instructions.",
-  "t": "Procédures de réparation rédigées avec ordre d’examen, niveau de difficulté, fourchette du coût des pièces, heures de main-d’œuvre et instructions détaillées.",
-  "by": "I01",
-  "at": "2026-10-08"
- },
  "412357b5c28b5c2b": {
   "src": "Free {0}-code OBD-II sample — dtc_codes (CSV)",
   "t": "Échantillon gratuit OBD-II de {0} codes — dtc_codes (CSV)",
@@ -736,12 +720,6 @@
  "423c3b9bb1708c87": {
   "src": "Sec {0} · What's inside",
   "t": "Sect. {0} · Contenu",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
- "42a9e096d493169d": {
-  "src": "<0>{1}</0> manufacturer-specific codes across <2>{3}</2> makes — {4} manufacturer-controlled ranges. Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <5>{6}</5> codes total.",
-  "t": "<0>{1}</0> codes propres aux constructeurs sur <2>{3}</2> marques — {4} plages contrôlées par les constructeurs. La couverture est inégale et plus forte sur les marques du marché américain — la répartition complète par marque figure ci-dessous. <5>{6}</5> codes au total.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
@@ -801,11 +779,11 @@
   "src": "Heavy Duty tier",
   "t": "Formule Heavy Duty"
  },
- "45c1c97ce3bb74da": {
-  "src": "Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours, steps",
-  "t": "Procédures rédigées avec ordre d’examen, niveau de difficulté, coût des pièces min./max., heures de main-d’œuvre et étapes",
-  "by": "I01",
-  "at": "2026-10-08"
+ "465c1e4d0f9d2702": {
+  "src": "Directory of the {0} MechanicDB fault families that cover the {1} SAE diagnostic trouble codes, grouped by vehicle system.",
+  "t": "Répertoire des {0} familles de défauts de MechanicDB qui couvrent les {1} codes défaut de diagnostic SAE, regroupées par système du véhicule.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "489af480aa77f451": {
   "src": "🚗 Body &amp; SRS (B-Codes)",
@@ -894,6 +872,12 @@
   "t": "Demande diagnostic et licences",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "53f5372aaa953b8e": {
+  "src": "The {0} and {1} ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. Distinct meanings counts distinct short descriptions in the catalogue; makes that publish the same wording count once.",
+  "t": "Les plages {0} et {1} sont réservées aux constructeurs, si bien qu'une même chaîne porte une définition différente selon la marque ; un lecteur de codes générique qui n'affiche que la chaîne ne peut pas les distinguer. Significations distinctes correspond au nombre de descriptions courtes distinctes du catalogue ; les marques qui publient la même formulation comptent une fois.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "55212182046d5005": {
   "src": "Assignment block",
@@ -1013,23 +997,11 @@
   "src": "License Heavy Duty · {0}",
   "t": "Acheter la licence Heavy Duty · {0}"
  },
- "5f358efbcb6312dd": {
-  "src": "Directory of all {0} MechanicDB OBD-II fault families covering {1} SAE diagnostic trouble codes, grouped by vehicle system.",
-  "t": "Répertoire des {0} familles de défauts OBD-II de MechanicDB couvrant {1} codes défaut de diagnostic SAE, regroupées par système du véhicule.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "608176310f57e7d3": {
   "src": "<0>{1}</0> and {2} are each defined by {3} of the {4} makes, with {5} and {6} distinct meanings respectively. {7} of the {8} manufacturer-specific code strings ({9}) are defined by more than one make, and none of them reuses an SAE-standard string.",
   "t": "<0>{1}</0> et {2} sont chacun définis par {3} des {4} marques, avec respectivement {5} et {6} significations distinctes. {7} des {8} chaînes de code propres aux constructeurs ({9}) sont définies par plus d'une marque, et aucune ne réutilise une chaîne de la norme SAE.",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "618e242a70147565": {
-  "src": "🧬 All {0} Fault Families",
-  "t": "🧬 Les {0} familles de défauts",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
  },
  "6190db10926e439e": {
   "src": "top {0} of {1} families",
@@ -1221,11 +1193,23 @@
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
  },
+ "79736e58a31df786": {
+  "src": "Aggregate statistics computed from the full MechanicDB dataset: {0} diagnostic trouble codes ({1} SAE-standard, {2} manufacturer-specific across {3} makes) mapped to {4} authored repair procedures with difficulty, parts-cost and labor estimates where known. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.",
+  "t": "Statistiques agrégées calculées à partir du jeu de données MechanicDB complet : {0} codes défaut de diagnostic ({1} standard SAE, {2} propres aux fabricants pour {3} marques) associés à {4} procédures de réparation rédigées, avec estimations de difficulté, de coût des pièces et de main-d’œuvre lorsqu’elles sont connues. Ces chiffres décrivent le catalogue, et non la fréquence à laquelle les codes apparaissent sur les véhicules en circulation. Les indicateurs du premier élément utilisent l’ordre d’examen rédigé des procédures, et non une probabilité mesurée de la cause. Chaque figure indique son dénominateur et peut être citée, reproduite et intégrée gratuitement avec un lien vers cette page.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "7a08cebfeb20b546": {
   "src": "{0} Families",
   "t": "Familles : {0}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7b18e7a8d8516b55": {
+  "src": "Code-to-definition mappings originate in SAE {0} / ISO {1} and are compiled from an MIT-licensed public compilation, with the upstream license committed alongside the data. The value layer — fault-family explanations, ranked procedures, difficulty tiers, and cost ranges — is original editorial content grounded in standard diagnostic practice. Cost and labor values are editorial (parts in US dollars, labor in hours), not quotes.",
+  "t": "Les correspondances code-définition proviennent de la SAE {0} / ISO {1} et sont compilées à partir d'une compilation publique sous licence MIT, la licence d'origine étant versionnée avec les données. La couche à valeur ajoutée — explications des familles de défauts, procédures classées, niveaux de difficulté et fourchettes de coût — est un contenu éditorial original fondé sur les pratiques de diagnostic courantes. Les valeurs de coût et de main-d'œuvre sont éditoriales (pièces en dollars américains, main-d'œuvre en heures), et non des devis.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "7b84171950d9a8d9": {
   "src": "Standard (SAE only) · {0}",
@@ -1369,12 +1353,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "8442802f124d709a": {
-  "src": "From edition {0}, IDs are stable: code_id, fault_id, fix_id and part_id keep their numbers when the dataset grows, so your joins and annotations survive updates. IDs are scoped by domain and table, and repairs are still listed in rank order. Numbers from earlier editions map through the <1>identity and migration contract</1>.",
-  "t": "À partir de l'édition {0}, les identifiants sont stables : code_id, fault_id, fix_id et part_id gardent leur numéro quand le jeu de données s'agrandit, de sorte que vos jointures et annotations survivent aux mises à jour. Chaque identifiant est propre à son domaine et à sa table, et les réparations restent listées par ordre de rang. Les numéros des éditions antérieures se convertissent via le <1>contrat d'identité et de migration</1>.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-10"
- },
  "84feb204606f3ec6": {
   "src": "OBD-II code {0}: {1}. What the {2} module detects, the first-listed procedure, and {3}",
   "t": "Code OBD-II {0} : {1}. Ce que détecte le module {2}, la première procédure répertoriée et {3}",
@@ -1384,12 +1362,6 @@
  "85576d4a56d5d2a9": {
   "src": "fleet telematics",
   "t": "télématique de flotte"
- },
- "8561030ad5a747df": {
-  "src": "<0>Safety notice.</0> Repair steps are educational reference material, not a substitute for the manufacturer's service manual. High-voltage and SRS/airbag procedures must only be performed by qualified technicians.",
-  "t": "<0>Avertissement de sécurité.</0> Les étapes de réparation sont un support de référence pédagogique et ne remplacent pas le manuel d'atelier du constructeur. Les procédures haute tension et SRS/airbag doivent être réalisées uniquement par des techniciens qualifiés.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
  },
  "85b6b768dbe587c2": {
   "src": "Full provenance (SOURCES.md)",
@@ -1473,17 +1445,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "9147d417a94a3110": {
-  "src": "The {0} and higher ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. Distinct meanings counts distinct short descriptions in the catalogue; makes that publish the same wording count once.",
-  "t": "Les plages {0} et au-delà sont réservées aux constructeurs, si bien qu'une même chaîne porte une définition différente selon la marque ; un lecteur de codes générique qui n'affiche que la chaîne ne peut pas les distinguer. Significations distinctes correspond au nombre de descriptions courtes distinctes du catalogue ; les marques qui publient la même formulation comptent une fois.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
+ "907ae52a6ad9f06d": {
+  "src": "Authored procedures with consideration order, difficulty tier, parts cost min/max, labor hours where estimated, steps",
+  "t": "Procédures rédigées avec ordre d’examen, niveau de difficulté, coût des pièces min./max., heures de main-d’œuvre lorsqu’elles sont estimées et étapes",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "915e01df01752ddc": {
   "src": "Data sheet",
   "t": "Fiche technique",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "918bc287bb8c80b4": {
+  "src": "Normalized for databases, pre-joined for notebooks. Every code carries {0} procedures in authored consideration order (up to {1} in reviewed families); execution depends on prerequisites and diagnostic findings. Procedures map to parts and supplies, and a mapping can also name a tool, a scan or programming session, or a rental; in reviewed families, diagnostic steps list no parts.",
+  "t": "Normalisé pour les bases de données, préjoint pour les notebooks. Chaque code comporte {0} procédures dans un ordre d’examen rédigé (jusqu’à {1} dans les familles révisées) ; leur exécution dépend des prérequis et des constatations du diagnostic. Les procédures sont associées à des pièces et fournitures, et une association peut aussi désigner un outil, une session de diagnostic ou de programmation, ou une location ; dans les familles révisées, les étapes de diagnostic ne mentionnent aucune pièce.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "9201ce45f2e48fcb": {
   "src": "Code strings that mean different things per make",
@@ -1609,12 +1587,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "9e8a30f6bca2b606": {
-  "src": "Every code follows the {0}-character SAE {1} format where character {2} designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character {3} specifies SAE standard ('{4}') vs manufacturer-defined ('{5}'), character {6} designates the subsystem, and characters {7} represent the specific fault index.",
-  "t": "Chaque code suit le format SAE {1} à {0} caractères, où le caractère {2} désigne le système (P=groupe motopropulseur, C=châssis, B=carrosserie, U=réseau), le caractère {3} indique norme SAE (« {4} ») ou défini par le constructeur (« {5} »), le caractère {6} désigne le sous-système et les caractères {7} représentent l'index du défaut spécifique.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "9eeda41d96871b64": {
   "src": "Per-row source URL to the published OEM fault table — no SAE text, not the {0} Digital Annex",
   "t": "URL source par ligne vers le tableau de défauts OEM publié — aucun texte SAE, ce n'est pas le Digital Annex {0}",
@@ -1639,6 +1611,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9fe39e872e9484f2": {
+  "src": "Automotive diagnostic dataset mapping {0} verified OBD-II trouble codes across {1} vehicle makes to {2} authored repair procedures with DIY difficulty ratings and labor/parts cost estimations where known. A separate Heavy Duty tier adds {3} SAE {4} SPN/FMI fault pairs compiled from {5} published OEM fault-code documents.",
+  "t": "Jeu de données de diagnostic automobile associant {0} codes défaut OBD-II vérifiés pour {1} marques de véhicules à {2} procédures de réparation rédigées, avec niveaux de difficulté de bricolage et estimations des coûts de main-d’œuvre et de pièces lorsqu’elles sont connues. Un niveau Heavy Duty distinct ajoute {3} paires de pannes SPN/FMI SAE {4} compilées à partir de {5} documents de codes de panne publiés par les équipementiers.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "a0e16748f9bc848d": {
   "src": "Delivery formats",
   "t": "Formats de livraison",
@@ -1662,6 +1640,12 @@
   "t": "L'échantillon de {0} codes est gratuit sous ODbL {1}. Le jeu de données complet est fourni sous licence commerciale — <2>{3}</2> pour les {4} codes SAE, <5>{6}</5> pour les codes SAE plus les {7} codes OEM. Les conditions complètes et la répartition par marque figurent sur la <8>page d'accueil</8>.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a233f28abc03a455": {
+  "src": "A difficulty rating does not replace the safety procedure. Work on high-voltage hybrid/EV traction networks (&gt;{0}) or supplemental restraint systems (airbags/pyrotechnic pretensioners) calls for the manufacturer's safety procedure, whatever the rating; follow the service manual.",
+  "t": "Un niveau de difficulté ne remplace pas la procédure de sécurité. Les interventions sur les réseaux de traction haute tension des véhicules hybrides et électriques (&gt;{0}) ou sur les systèmes de retenue supplémentaires (airbags/prétensionneurs pyrotechniques) exigent la procédure de sécurité du constructeur, quel que soit ce niveau ; suivez le manuel d'atelier.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "a26ee0ae24edd320": {
   "src": "check engine light diagnosis",
@@ -1745,6 +1729,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a624da44a7d719eb": {
+  "src": "Authored repair procedures with consideration order, difficulty tier, parts-cost range, labor hours where estimated, and step-by-step instructions.",
+  "t": "Procédures de réparation rédigées avec ordre d’examen, niveau de difficulté, fourchette du coût des pièces, heures de main-d’œuvre lorsqu’elles sont estimées et instructions détaillées.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
+ "a657b01c49773dca": {
+  "src": "See all {0} SAE-code fault families →",
+  "t": "Voir les {0} familles de défauts des codes SAE →",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "a6696bcae1b3601f": {
   "src": "{0} manufacturer-specific OEM codes across {1} makes ({2} tier)",
   "t": "{0} codes OEM propres aux constructeurs sur {1} marques (formule {2})",
@@ -1822,6 +1818,12 @@
   "t": "Licences",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "aa915c35bc7cc616": {
+  "src": "Every code follows the {0}-character SAE {1} format where character {2} designates the system (P=Powertrain, C=Chassis, B=Body, U=Network), character {3} marks an SAE or a manufacturer code, character {4} designates the subsystem, and characters {5} represent the specific fault index. In P codes, a second character of {6} or {7} marks an SAE code and {8} a manufacturer code; {9} is split, with {10} for manufacturers and {11} for SAE. In C and B codes, {12} is SAE and {13} and {14} are manufacturer; in U codes, {15} and {16} are SAE and {17} and {18} are manufacturer.",
+  "t": "Chaque code suit le format SAE {1} à {0} caractères, où le caractère {2} désigne le système (P=groupe motopropulseur, C=châssis, B=carrosserie, U=réseau), le caractère {3} indique un code SAE ou un code propre au constructeur, le caractère {4} désigne le sous-système et les caractères {5} représentent l'index du défaut spécifique. Dans les codes P, un {6} ou un {7} en deuxième position indique un code SAE et un {8} un code propre au constructeur ; {9} est partagé, avec {10} pour les constructeurs et {11} pour la SAE. Dans les codes C et B, {12} correspond à la SAE, {13} et {14} aux constructeurs ; dans les codes U, {15} et {16} correspondent à la SAE, {17} et {18} aux constructeurs.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "aaa0c8e0d67ff922": {
   "src": "Inquiry successfully delivered! A database engineer will respond within {0} hours.",
@@ -2275,6 +2277,12 @@
   "src": "This is the first procedure in the authored consideration order, not a measured cause likelihood. Execute it only when its prerequisites and diagnostic findings support it. Its cost and labor estimates (where known), the step-by-step procedure and the remaining {0} procedure(s) are in the licensed dataset. <1>Ordering context</1>.",
   "t": "Il s’agit de la première procédure dans l’ordre d’examen rédigé, et non d’une probabilité mesurée de la cause. Ne l’exécutez que si ses prérequis et les constatations du diagnostic le justifient. Ses estimations de coût et de main-d’œuvre (lorsqu’elles sont connues), la procédure détaillée et les {0} procédure(s) restantes figurent dans le jeu de données sous licence. <1>Contexte de l’ordre</1>."
  },
+ "cd5a8d8aac5676c7": {
+  "src": "<0>{1}</0> manufacturer-specific codes across <2>{3}</2> makes — powertrain codes in the manufacturer-controlled {4} and {5} ranges. OEM Complete holds no manufacturer-specific chassis, body or network codes ({6}). Coverage is uneven and strongest on US-market brands — the full per-make breakdown is below. <7>{8}</7> codes total.",
+  "t": "<0>{1}</0> codes propres aux constructeurs sur <2>{3}</2> marques — des codes du groupe motopropulseur, dans les plages {4} et {5} contrôlées par les constructeurs. OEM Complete ne contient aucun code propre aux constructeurs pour le châssis, la carrosserie ou le réseau ({6}). La couverture est inégale et plus forte sur les marques du marché américain — la répartition complète par marque figure ci-dessous. <7>{8}</7> codes au total.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "cde1df12deaf8b24": {
   "src": "{0} curated codes ({1} SAE + {2} OEM) — the most-searched DTCs",
   "t": "{0} codes sélectionnés ({1} SAE + {2} OEM) — les DTC les plus recherchés",
@@ -2361,6 +2369,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d63e1d964815485a": {
+  "src": "🧬 All {0} SAE-code Fault Families",
+  "t": "🧬 Les {0} familles de défauts des codes SAE",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "d790b402d79ac1a7": {
   "src": "Frequently Asked Questions",
   "t": "Questions fréquentes",
@@ -2403,6 +2417,12 @@
   "by": "I01",
   "at": "2026-10-08"
  },
+ "d9e728d4cd3a5ed8": {
+  "src": "Counts describe the catalogue's coverage of each make's published code list, not how often the codes occur on the road. Some sister brands carry the same set of codes and therefore show identical counts (for example Buick, Cadillac, Chevrolet, GM, GMC and Saturn, or Ford, Lincoln and Mercury).",
+  "t": "Les décomptes décrivent la couverture, par le catalogue, de la liste de codes publiée par chaque marque, et non la fréquence des codes sur la route. Certaines marques sœurs ont le même ensemble de codes et affichent donc des décomptes identiques (par exemple Buick, Cadillac, Chevrolet, GM, GMC et Saturn, ou Ford, Lincoln et Mercury).",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "d9eba7340ba66dc1": {
   "src": "Heavy Duty ({0}) — {1} fault pairs",
   "t": "Heavy Duty ({0}) — {1} paires de défauts"
@@ -2429,12 +2449,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "db76c114fa277c70": {
-  "src": "Code-to-definition mappings originate in SAE {0} / ISO {1} and are compiled from an MIT-licensed public compilation, with the upstream license committed alongside the data. The value layer — fault-family explanations, ranked procedures, difficulty tiers, and cost ranges — is original editorial content grounded in standard diagnostic practice. Cost and labor figures are estimates for typical US aftermarket parts and independent-shop labor, not quotes.",
-  "t": "Les correspondances code-définition proviennent de la SAE {0} / ISO {1} et sont compilées à partir d'une compilation publique sous licence MIT, la licence d'origine étant versionnée avec les données. La couche à valeur ajoutée — explications des familles de défauts, procédures classées, niveaux de difficulté et fourchettes de coût — est un contenu éditorial original fondé sur les pratiques de diagnostic courantes. Les chiffres de coût et de main-d'œuvre sont des estimations pour des pièces de rechange américaines typiques et la main-d'œuvre d'un garage indépendant, et non des devis.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "db8d1696c9919192": {
   "src": "Coverage, stated honestly",
   "t": "La couverture, en toute transparence",
@@ -2452,12 +2466,6 @@
   "t": "Codes défaut par système du véhicule",
   "by": "claude-opus-5-5",
   "at": "2026-10-03"
- },
- "dcb24c195b0defe9": {
-  "src": "Aggregate statistics computed from the full MechanicDB dataset: {0} diagnostic trouble codes ({1} SAE-standard, {2} manufacturer-specific across {3} makes) mapped to {4} authored repair procedures with difficulty, parts-cost and labor estimates. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.",
-  "t": "Statistiques agrégées calculées à partir du jeu de données MechanicDB complet : {0} codes défaut de diagnostic ({1} standard SAE, {2} propres aux fabricants pour {3} marques) associés à {4} procédures de réparation rédigées, avec estimations de difficulté, de coût des pièces et de main-d’œuvre. Ces chiffres décrivent le catalogue, et non la fréquence à laquelle les codes apparaissent sur les véhicules en circulation. Les indicateurs du premier élément utilisent l’ordre d’examen rédigé des procédures, et non une probabilité mesurée de la cause. Chaque figure indique son dénominateur et peut être citée, reproduite et intégrée gratuitement avec un lien vers cette page.",
-  "by": "I01",
-  "at": "2026-10-08"
  },
  "dcfdfb9d408ce756": {
   "src": "Makes defining it",
@@ -2579,10 +2587,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "e6405a1674aa359a": {
-  "src": "A difficulty rating does not replace the safety procedure. Work on high-voltage hybrid/EV traction networks (&gt;{0}) or supplemental restraint systems (airbags/pyrotechnic pretensioners) calls for the manufacturer's lockout and safety procedure, whatever the rating; follow the service manual.",
-  "t": "Un niveau de difficulté ne remplace pas la procédure de sécurité. Les interventions sur les réseaux de traction haute tension des véhicules hybrides et électriques (&gt;{0}) ou sur les systèmes de retenue supplémentaires (airbags/prétensionneurs pyrotechniques) exigent la consignation et la procédure de sécurité du constructeur, quel que soit ce niveau ; suivez le manuel d'atelier."
- },
  "e689fda2d2efb61c": {
   "src": "Catalogue statistics · build {0}",
   "t": "Statistiques du catalogue · build {0}",
@@ -2663,21 +2667,9 @@
   "src": "The {0} failure mode identifiers with plain-language meanings",
   "t": "Les {0} identifiants de mode de défaillance avec leur signification en langage clair"
  },
- "f1ce147d986afd5f": {
-  "src": "A difficulty rating is not a safety classification: some DIY-rated procedures include a high-voltage or SRS step. Before any high-voltage step, follow the manufacturer's lockout and zero-volt verification; before any SRS step, disconnect the battery and wait out the capacitor discharge time the service manual gives.",
-  "t": "Un niveau de difficulté n’est pas une classification de sécurité : certaines procédures classées DIY comportent une étape touchant à la haute tension ou au SRS. Avant toute étape haute tension, appliquez la consignation et la vérification d’absence de tension prévues par le constructeur ; avant toute étape sur le SRS, débranchez la batterie et attendez le temps de décharge du condensateur indiqué par le manuel d’atelier.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-11"
- },
  "f229a983e5a47b53": {
   "src": "Working on trucks, buses or off-highway diesels? The <0>{1} fault code database</0> covers SAE {2} SPN/FMI fault pairs from published OEM documents.",
   "t": "Vous travaillez sur des camions, des bus ou des moteurs diesel hors route ? La <0>base de données des codes défaut {1}</0> couvre les paires de défauts SPN/FMI SAE {2} issues de documents publiés par les constructeurs."
- },
- "f2313a3d353ae580": {
-  "src": "<0>Estimates are estimates.</0> Parts costs (USD) and labor hours are the dataset's editorial values at build time, useful for comparison between fixes, not quotes. Difficulty is an editorial tier. Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.",
-  "t": "<0>Les estimations restent des estimations.</0> Les coûts des pièces (USD) et les heures de main-d'œuvre sont les valeurs éditoriales du jeu de données au moment du build, utiles pour comparer les réparations entre elles, pas des devis. La difficulté est un niveau éditorial. Les étapes de réparation sont un matériel de référence pédagogique, pas un conseil professionnel de réparation ; les interventions haute tension et SRS/airbag exigent des techniciens qualifiés.",
-  "by": "claude-opus-5-5",
-  "at": "2026-10-03"
  },
  "f26e9a51227dbc09": {
   "src": "The failure mode identifier is the second half of every {0} fault. These are the plain-language meanings used across the dataset, with the number of fault pairs that carry each one.",
@@ -2791,6 +2783,12 @@
   "by": "claude",
   "at": "2026-09-27"
  },
+ "fc665a2e284f1166": {
+  "src": "<0>Estimates are estimates.</0> Parts costs (USD) and labor hours are the dataset's editorial values at build time, useful for comparison between fixes, not quotes. Difficulty is an editorial tier. Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work calls for the manufacturer's safety procedure whatever the difficulty rating, or a qualified technician.",
+  "t": "<0>Les estimations restent des estimations.</0> Les coûts des pièces (USD) et les heures de main-d'œuvre sont les valeurs éditoriales du jeu de données au moment du build, utiles pour comparer les réparations entre elles, pas des devis. La difficulté est un niveau éditorial. Les étapes de réparation sont un matériel de référence pédagogique, pas un conseil professionnel de réparation ; les interventions haute tension et SRS/airbag exigent la procédure de sécurité du constructeur, quel que soit le niveau de difficulté, ou un technicien qualifié.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
+ },
  "fc8542bd983657a5": {
   "src": "OBD-II DTC Database Download — CSV, Parquet, SQLite",
   "t": "Télécharger la base de données DTC OBD-II — CSV, Parquet, SQLite",
@@ -2836,6 +2834,12 @@
   "t": "J'ai besoin de la SAE {0}, mais la licence dépasse mon budget. MechanicDB est-il une alternative ?",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ff498d05f4138f14": {
+  "src": "<0>Safety notice.</0> Repair steps are educational reference material, not a substitute for the manufacturer's service manual. High-voltage and SRS/airbag work calls for the manufacturer's safety procedure whatever the difficulty rating; if you cannot follow it, leave the work to a qualified technician.",
+  "t": "<0>Avertissement de sécurité.</0> Les étapes de réparation sont un support de référence pédagogique et ne remplacent pas le manuel d'atelier du constructeur. Les interventions haute tension et SRS/airbag exigent la procédure de sécurité du constructeur, quel que soit le niveau de difficulté ; si vous ne pouvez pas la suivre, confiez l’intervention à un technicien qualifié.",
+  "by": "claude-claims-followup",
+  "at": "2026-10-14"
  },
  "ffa104d4758ce5b6": {
   "src": "How much of the repair work is DIY",
