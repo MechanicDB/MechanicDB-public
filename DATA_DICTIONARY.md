@@ -106,12 +106,12 @@ from the OBD-II Standard/OEM Complete tiers above (on sale since 2026-09-24, see
 [J1939 fault code database](https://mechanicdb.dataengineered.io/j1939-fault-code-database) page). It maps SAE J1939 SPN+FMI fault pairs drawn from published OEM fault tables (Eaton,
 WABCO, Bendix, John Deere, Navistar, Cummins, Caterpillar, PSI, Perkins, Yanmar) to authored
 short descriptions, fault families, explanations, ranked fixes and part mappings — currently **4,212
-fault pairs, 870 distinct SPNs, 17,047 ranked fixes and 5,915 part mappings across 10 OEMs and 16
+fault pairs, 870 distinct SPNs, 17,049 ranked fixes and 5,913 part mappings across 10 OEMs and 16
 official-host sources**, measured at build time. It follows the same physical conventions as the
 tables above: pipe-delimited CSV, `utf-8-sig`, no embedded `\r`/`\n` (replaced with ` • `), Parquet
 Snappy, one SQLite.
 
-**This is not the SAE J1939 Digital Annex and contains no SAE text.** Every row carries its own
+**This is not the SAE J1939 Digital Annex and contains no SAE text.** Every `j1939_faults` row (and so every `j1939_fixes_joined` row) carries its own
 `source_url` to the OEM's published fault table; the parameter/failure-mode facts (SPN, FMI, OEM code)
 are reported, but `short_description`, `spn_name`, `fmi_name` and the explanation text are our own
 words, never a copy of the source document. The on-highway engine fault lists of Cummins, Detroit,
@@ -392,7 +392,7 @@ different SQLite or ZIP compression versions.
 
 ### Version 2 changes
 
-- **Five appended columns.** `diagnostic_fixes` and both joined views gain `action_type`, `parts_cost_status`, `labor_status`, `cost_basis_id` and `procedure_rationale`, in that order after `step_by_step_instructions`. Existing columns keep their names and order. Unreviewed rows keep their values; rows in reviewed families (non-NULL `action_type`) may change title, rank, steps and estimates, and keep their IDs. A file with `PRAGMA user_version = 1` predates them.
+- **Five appended columns.** `diagnostic_fixes` and both joined views gain `action_type`, `parts_cost_status`, `labor_status`, `cost_basis_id` and `procedure_rationale`, in that order after `step_by_step_instructions`. Existing columns keep their names and order. Unreviewed rows keep their values unless they are removed; rows in reviewed families (non-NULL `action_type`) may change title, rank, steps and estimates; a row that stays keeps its ID, and a removed row's ID is retired, never reused. A file with `PRAGMA user_version = 1` predates them.
 - **Nullable cost and labor.** `est_parts_cost_min_usd`, `est_parts_cost_max_usd`, `est_labor_hours`, `action_type` and `procedure_rationale` may be NULL; `parts_cost_status`, `labor_status` and `cost_basis_id` are NOT NULL. Standard stays all TEXT and stores an empty string in a nullable field as NULL.
 - **CHECKs.** `action_type` is NULL or one of the seven actions; `parts_cost_status` is `estimated`, `none_required` or `unknown`; `labor_status` is `estimated` or `unknown`; `cost_basis_id` equals the profile's basis (`obd-editorial-us-aftermarket-v1` for Standard and OEM Complete, `hd-editorial-us-independent-shop-v1` for Heavy Duty). `unknown` requires NULL costs; `none_required` requires `0` / `0`; `estimated` requires non-NULL costs with `min <= max` and, for OBD, `max > 0`. A NULL result of any of these checks fails.
 - **Labor bounds.** `unknown` requires NULL hours; `estimated` requires hours of 0.1–20 for OBD and >= 0 for HD.

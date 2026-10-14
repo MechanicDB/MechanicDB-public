@@ -59,7 +59,7 @@ Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pi
 ## Provenance
 
 - **Code definitions** originate in SAE J2012 / ISO 15031-6 and are compiled from a public, MIT-licensed compilation (attribution in [LICENSE-upstream.txt](LICENSE-upstream.txt); full lineage and transformations in [SOURCES.md](SOURCES.md)).
-- **Heavy Duty (J1939) facts** — SPN/FMI pairs, OEM fault codes, controllers — are taken from fault-code documents the manufacturers publish; every row links its document (`source_url`) and [SOURCES.md](SOURCES.md#heavy-duty-sample-j1939) lists them. Descriptions, explanations and fixes are our own words; nothing comes from the SAE J1939 Digital Annex.
+- **Heavy Duty (J1939) facts** — SPN/FMI pairs, OEM fault codes, controllers — are taken from fault-code documents the manufacturers publish; every fault row links its document (`source_url`) and [SOURCES.md](SOURCES.md#heavy-duty-sample-j1939) lists them. Descriptions, explanations and fixes are our own words; nothing comes from the SAE J1939 Digital Annex.
 - **Repair procedures, difficulty ratings, cost ranges, and explanations** are original authored content grounded in standard diagnostic practice.
 - Every release is produced by a **deterministic, test-gated build pipeline**: referential integrity, anti-template uniqueness, and no-fabricated-codes gates; rebuilds are byte-identical.
 
