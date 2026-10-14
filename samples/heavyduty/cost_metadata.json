@@ -32,7 +32,7 @@
     "inspect": "Visual or physical check without an instrument reading.",
     "measure": "Instrumented test such as a meter, gauge, pressure, smoke or scope reading.",
     "scan": "Scan-tool read or command: codes, freeze frame, live data or a bidirectional test.",
-    "repair": "Restore the existing component without a new part: clean, reseat, splice, adjust, flush or refill.",
+    "repair": "Restore the existing component instead of replacing it: clean, reseat, splice, adjust, flush or refill. The procedure can still list consumables or repair kits as parts, with a parts cost.",
     "replace": "Fit a new or remanufactured part.",
     "program": "Software flash, coding, relearn or calibration.",
     "verify": "Confirm a completed repair: clear codes, drive cycle, readiness or re-test."
