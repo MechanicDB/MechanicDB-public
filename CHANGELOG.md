@@ -1,8 +1,8 @@
-## Buyer claims follow-up — I02 (2026-10-18)
+## Product claims follow-up — I02 (2026-10-18)
 
 The pages, docs and metadata now describe part mappings, OEM code ranges, the cost basis, safety,
 the `repair` action, labor hours and identifiers the way the shipped data has them. No table
-value, count or ID changes.
+value, count or row ID changes.
 
 - Part mappings: `replacement_parts` maps procedures to parts and supplies, and a row can also name
   a tool, a scan or programming session, or a rental. DATA_DICTIONARY.md section 3 is now "Part
@@ -21,19 +21,20 @@ value, count or ID changes.
   DATA_DICTIONARY.md add that OBD-II parts estimates assume aftermarket parts. DATA_DICTIONARY.md
   and `cost_metadata.json`: where a procedure's `replacement_parts` rows name only a tool, a scan or
   programming session, or a rental, its parts estimate is not tied to a listed part. SOURCES.md:
-  Heavy Duty values are editorial, for US independent heavy-duty shops.
+  Heavy Duty cost and labor values are editorial, not quotes.
 - `repair` action: it restores the existing component instead of replacing it, and the procedure
   can still list consumables or repair kits as parts, with a parts cost (DATA_DICTIONARY.md and both
   `cost_metadata.json` copies).
 - Labor hours: the homepage, the OBD-II buyer page, the stats page, README.md and llms.txt give
   labor estimates "where known" or labor hours "where estimated".
-- Safety: README.md, SECURITY.md, the homepage safety notice, the stats page, llms.txt, the starter
-  notebook and the license say that high-voltage and SRS/airbag work calls for the manufacturer's
-  safety procedure, whatever the difficulty rating, or a qualified technician. The homepage FAQ
-  answer says a difficulty rating does not replace the manufacturer's safety procedure. The data
-  sheet's advice applies before touching any high-voltage component, connector or cable, and before
-  touching any SRS component, connector or wiring; if you cannot follow these procedures, leave the
-  work to a qualified technician.
+- Safety: README.md, SECURITY.md, the homepage safety notice, the stats page, llms.txt and the
+  license say that high-voltage and SRS/airbag work calls for the manufacturer's safety procedure,
+  whatever the difficulty rating, or a qualified technician. The starter notebook says it in short
+  form: such work calls for the manufacturer's safety procedure, or a qualified technician. The
+  homepage FAQ answer now calls for the manufacturer's safety procedure, whatever the rating. The
+  data sheet's advice applies before touching any high-voltage component, connector or cable, and
+  before touching any SRS component, connector or wiring; if you cannot follow these procedures,
+  leave the work to a qualified technician.
 - Identifiers: IDENTITY.md, DATA_DICTIONARY.md and the OBD-II buyer page say that existing IDs keep
   their numbers and that an ID whose row is removed is retired, never reused. llms.txt defines
   reviewed families: the fault families whose procedures carry an `action_type`.
@@ -42,8 +43,8 @@ value, count or ID changes.
   repair-cost context per code (the dataset has no severity field).
 - Fault families: the family directory describes its 615 families as the ones that cover the 9,249
   SAE codes, and the homepage links call them SAE-code fault families; the dataset has 647 in all.
-- Stats page: the sister-brands note names the brands that carry the same set of codes (Buick,
-  Cadillac, Chevrolet, GM, GMC and Saturn; Ford, Lincoln and Mercury).
+- Stats page: the sister-brands note gives examples of brands that carry the same set of codes (for
+  example Buick, Cadillac, Chevrolet, GM, GMC and Saturn; Ford, Lincoln and Mercury).
 - Homepage demo: each sample explanation is the first sentence of that code's shipped explanation.
 - German pages say "geordnete Reparaturen" for the authored procedure order.
 - License (/license and the copy in every paid download): terms version 2026-10-18. Cost and labor
@@ -52,8 +53,8 @@ value, count or ID changes.
   above.
 - `cost_metadata.json` (root, `samples/heavyduty/` and every paid download) carries the new
   `repair` definition and, for OBD-II, the parts-scope sentence above. `identity_metadata.json`
-  (root and `samples/heavyduty/`) carries the new `data_release_id` that follows from that text. No
-  sample table changes.
+  (root and `samples/heavyduty/`) carries the new data release ID (`data_release_id`) that follows
+  from that text. No sample table changes.
 - Translated into es, de, fr and pt-br (20 segments per language, 0 rejected; check: 7,050 pages, 0
   errors). Sitemap: new lastmod for /, /obd2-dtc-database, /stats/ and /landing/families in every
   language, and for /license.
