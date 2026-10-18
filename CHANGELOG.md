@@ -1,4 +1,4 @@
-## Product claims follow-up — I02 (2026-10-18)
+## Product claims follow-up — I02 (2026-10-19)
 
 The pages, docs and metadata now describe part mappings, OEM code ranges, the cost basis, safety,
 the `repair` action, labor hours and identifiers the way the shipped data has them. No table
@@ -38,19 +38,19 @@ value, count or row ID changes.
 - Identifiers: IDENTITY.md, DATA_DICTIONARY.md and the OBD-II buyer page say that existing IDs keep
   their numbers and that an ID whose row is removed is retired, never reused. llms.txt defines
   reviewed families: the fault families whose procedures carry an `action_type`.
-- README.md: a Changelog badge replaces the month badge, and IDENTITY.md says the edition is
-  identified by `identity_metadata.json`, not by a month label. The used-vehicle use case names
-  repair-cost context per code (the dataset has no severity field).
+- README.md: a Changelog badge replaces the month badge, and IDENTITY.md says the sample's exact
+  edition is identified by its `identity_metadata.json`, not by a month label. The used-vehicle
+  use case names repair-cost context per code (the dataset has no severity field).
 - Fault families: the family directory describes its 615 families as the ones that cover the 9,249
   SAE codes, and the homepage links call them SAE-code fault families; the dataset has 647 in all.
 - Stats page: the sister-brands note gives examples of brands that carry the same set of codes (for
   example Buick, Cadillac, Chevrolet, GM, GMC and Saturn; Ford, Lincoln and Mercury).
 - Homepage demo: each sample explanation is the first sentence of that code's shipped explanation.
 - German pages say "geordnete Reparaturen" for the authored procedure order.
-- License (/license and the copy in every paid download): terms version 2026-10-18. Cost and labor
+- License (/license and the copy in every paid download): terms version 2026-10-19. Cost and labor
   values are editorial (parts in US dollars, labor in hours) and are not quotes;
-  `cost_metadata.json` in each archive states their basis. The safety section uses the wording
-  above.
+  `cost_metadata.json` in each archive states their basis. The safety section uses the
+  "whatever the difficulty rating" wording above.
 - `cost_metadata.json` (root, `samples/heavyduty/` and every paid download) carries the new
   `repair` definition and, for OBD-II, the parts-scope sentence above. `identity_metadata.json`
   (root and `samples/heavyduty/`) carries the new data release ID (`data_release_id`) that follows
