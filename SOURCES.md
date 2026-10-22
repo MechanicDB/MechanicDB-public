@@ -39,9 +39,9 @@ sections below cover the OBD-II sample; the Heavy Duty section covers the other.
 
 `detailed_technical_explanation`, fault families, ranked fixes, difficulty
 ratings, cost/labor estimates, step-by-step instructions, and part mappings
-are original content authored for MechanicDB. Cost and labor figures are
-editorial estimates for typical aftermarket parts and independent-shop labor
-in the US market; they are not quotes.
+are original content authored for MechanicDB. Parts costs are editorial
+values in US dollars, assuming aftermarket parts, and labor is given in
+hours; they are not quotes.
 
 `probability_rank` is the supported legacy name for authored procedure consideration
 order, not measured cause likelihood. See the applicable `ordering_metadata.json` sidecar;
@@ -59,8 +59,8 @@ the Heavy Duty sample's class-kind mapping is generated from the validated FMI p
 - **Authored content:** `short_description`, `spn_name`, `fmi_name`, `detailed_technical_explanation`,
   fault families, ranked fixes and part mappings are written in DataEngineered's own words. A
   `spn_name` may match the manufacturer's own plain name for the parameter (for example `Engine
-  Coolant Temperature`); no sentences from OEM documents are included. Cost and labor figures are
-  editorial estimates for US independent heavy-duty shops; they are not quotes and do not come from
+  Coolant Temperature`); no sentences from OEM documents are included. Cost and labor values are
+  editorial, for US independent heavy-duty shops; they are not quotes and do not come from
   the OEM documents.
 - **Not SAE material:** nothing is taken from the SAE J1939 Digital Annex, J1939 DBC files, or
   third-party SPN/FMI tables derived from them. The 32 FMI names are our own paraphrase, not SAE

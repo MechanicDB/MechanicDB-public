@@ -1,3 +1,64 @@
+## Product claims follow-up — I02 (2026-10-19)
+
+The pages, docs and metadata now describe part mappings, OEM code ranges, the cost basis, safety,
+the `repair` action, labor hours and identifiers the way the shipped data has them. No table
+value, count or row ID changes.
+
+- Part mappings: `replacement_parts` maps procedures to parts and supplies, and a row can also name
+  a tool, a scan or programming session, or a rental. DATA_DICTIONARY.md section 3 is now "Part
+  Mappings"; the homepage, the OBD-II buyer page, README.md, the Kaggle metadata and the starter
+  notebook say the same. DATA_DICTIONARY.md: a 0/0 `estimated` Heavy Duty row always has a
+  `replacement_parts` row, and the item it lists can be a scan tool.
+- OEM coverage: the homepage data sheet and DATA_DICTIONARY.md name the manufacturer-controlled
+  ranges this release holds codes in, P1 and P30–P31; OEM Complete has no C1/C2, B1/B2 or U1/U2
+  codes. The SAE ranges on the homepage and the OBD-II buyer page list P34, the SAE P3 range that
+  has codes. The FAQ answer on the code format explains character 2 per system: in P codes 0 or 2
+  is SAE and 1 is manufacturer, with P3 split (P30–P33 manufacturer, P34–P39 SAE); in C and B codes
+  0 is SAE and 1 and 2 are manufacturer; in U codes 0 and 3 are SAE and 1 and 2 are manufacturer.
+  The stats page names P1xxx and P30xx–P33xx as the manufacturer ranges.
+- Cost basis: README.md, SOURCES.md and the homepage say cost and labor values are editorial,
+  parts in US dollars and labor in hours, and not quotes. README.md, SOURCES.md and
+  DATA_DICTIONARY.md add that OBD-II parts estimates assume aftermarket parts. DATA_DICTIONARY.md
+  and `cost_metadata.json`: where a procedure's `replacement_parts` rows name only a tool, a scan or
+  programming session, or a rental, its parts estimate is not tied to a listed part. SOURCES.md:
+  Heavy Duty cost and labor values are editorial, not quotes.
+- `repair` action: it restores the existing component instead of replacing it, and the procedure
+  can still list consumables or repair kits as parts, with a parts cost (DATA_DICTIONARY.md and both
+  `cost_metadata.json` copies).
+- Labor hours: the homepage, the OBD-II buyer page, the stats page, README.md and llms.txt give
+  labor estimates "where known" or labor hours "where estimated".
+- Safety: README.md, SECURITY.md, the homepage safety notice, the stats page, llms.txt and the
+  license say that high-voltage and SRS/airbag work calls for the manufacturer's safety procedure,
+  whatever the difficulty rating, or a qualified technician. The starter notebook says it in short
+  form: such work calls for the manufacturer's safety procedure, or a qualified technician. The
+  homepage FAQ answer now calls for the manufacturer's safety procedure, whatever the rating. The
+  data sheet's advice applies before touching any high-voltage component, connector or cable, and
+  before touching any SRS component, connector or wiring; if you cannot follow these procedures,
+  leave the work to a qualified technician.
+- Identifiers: IDENTITY.md, DATA_DICTIONARY.md and the OBD-II buyer page say that existing IDs keep
+  their numbers and that an ID whose row is removed is retired, never reused. llms.txt defines
+  reviewed families: the fault families whose procedures carry an `action_type`.
+- README.md: a Changelog badge replaces the month badge, and IDENTITY.md says the sample's exact
+  edition is identified by its `identity_metadata.json`, not by a month label. The used-vehicle
+  use case names repair-cost context per code (the dataset has no severity field).
+- Fault families: the family directory describes its 615 families as the ones that cover the 9,249
+  SAE codes, and the homepage links call them SAE-code fault families; the dataset has 647 in all.
+- Stats page: the sister-brands note gives examples of brands that carry the same set of codes (for
+  example Buick, Cadillac, Chevrolet, GM, GMC and Saturn; Ford, Lincoln and Mercury).
+- Homepage demo: each sample explanation is the first sentence of that code's shipped explanation.
+- German pages say "geordnete Reparaturen" for the authored procedure order.
+- License (/license and the copy in every paid download): terms version 2026-10-19. Cost and labor
+  values are editorial (parts in US dollars, labor in hours) and are not quotes;
+  `cost_metadata.json` in each archive states their basis. The safety section uses the
+  "whatever the difficulty rating" wording above.
+- `cost_metadata.json` (root, `samples/heavyduty/` and every paid download) carries the new
+  `repair` definition and, for OBD-II, the parts-scope sentence above. `identity_metadata.json`
+  (root and `samples/heavyduty/`) carries the new data release ID (`data_release_id`) that follows
+  from that text. No sample table changes.
+- Translated into es, de, fr and pt-br (20 segments per language, 0 rejected; check: 7,050 pages, 0
+  errors). Sitemap: new lastmod for /, /obd2-dtc-database, /stats/ and /landing/families in every
+  language, and for /license.
+
 ## EC-60 configurable-output family — I02 Phase B (2026-10-13)
 
 Heavy Duty faults 260 and 262 (SPN 2622 FMI 2/3, Bendix EC-60) moved from

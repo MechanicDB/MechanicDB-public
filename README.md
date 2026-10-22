@@ -1,6 +1,6 @@
 <div align="center">
 
-![MechanicDB — OBD-II trouble codes mapped to ranked repair procedures with difficulty, cost, and labor estimates](assets/kaggle-cover.png)
+![MechanicDB — OBD-II trouble codes mapped to ranked repair procedures with difficulty, cost, and labor estimates where known](assets/kaggle-cover.png)
 
 # 🔧 MechanicDB — Automotive OBD-II Diagnostic & Repair Database
 
@@ -10,7 +10,7 @@
 [![Sample: 90 DTC codes](https://img.shields.io/badge/Free%20Sample-90%20DTC%20codes-00F2FE.svg)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)
 [![Kaggle](https://img.shields.io/badge/Kaggle-MechanicDB-20BEFF.svg)](https://www.kaggle.com/datasets/dataengineered/mechanicdb-automotive-obd2-repair-database)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/mechanicdb-obd2-repair-sample)
-[![Snapshot: 2026.09](https://img.shields.io/badge/Snapshot-2026.09-blue.svg)](CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/Changelog-editions-blue.svg)](CHANGELOG.md)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-mechanicdb-F59E0B.svg)](https://mechanicdb.dataengineered.io/)
 
 **[→ Get the full dataset at mechanicdb](https://mechanicdb.dataengineered.io/)** · **[⬇ Download the free 90-code sample (ZIP)](https://github.com/MechanicDB/MechanicDB-public/releases/download/sample-latest/mechanicdb-sample-latest.zip)**
@@ -21,7 +21,7 @@
 
 ---
 
-**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to authored repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
+**Built for OBD apps, scan-tool firmware, AI mechanic co-pilots and shop software.** Free DTC lists stop at the code definition; MechanicDB turns each one into an **actionable repair plan**: every Diagnostic Trouble Code (DTC) is mapped to authored repair procedures with **DIY difficulty ratings, aftermarket parts-cost ranges (USD), labor-hour estimates where known, and step-by-step instructions** — covering both the universal SAE-standard codes every OBD-II vehicle emits and the manufacturer-specific codes of **32 makes** — unevenly distributed and strongest on US-market brands; the full per-make breakdown is in [DATA_DICTIONARY.md](DATA_DICTIONARY.md#5-oem-coverage-by-make).
 
 This repository holds the **free, open developer samples**: 90 curated OBD-II codes (75 SAE + 15 OEM) at the root and a 100-fault Heavy Duty (J1939) sample in [`samples/heavyduty/`](samples/heavyduty/), each in the same schema as its paid tier, so you can prototype joins, pipelines, and apps before licensing.
 
@@ -42,16 +42,16 @@ The sample covers the most commonly searched codes (P0420, P0171, P0300, …). P
 | Sample file | Rows | Description |
 | :--- | :--- | :--- |
 | `dtc_codes.csv` / `.parquet` | 90 | Code registry: DTC, system category, OEM flag/make, fault family, short description, detailed technical explanation |
-| `diagnostic_fixes.csv` / `.parquet` | 326 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours, step-by-step instructions |
-| `replacement_parts.csv` / `.parquet` | 449 | Aftermarket part names per fix with catalog search URLs |
+| `diagnostic_fixes.csv` / `.parquet` | 326 | Ranked repair procedures with difficulty, parts-cost range (USD), labor hours where estimated, step-by-step instructions |
+| `replacement_parts.csv` / `.parquet` | 449 | Part names per fix with catalog search URLs (a row can also name a tool, a scan or programming session, or a rental) |
 | `dtc_fixes_joined.csv` / `.parquet` | 326 | Pre-joined analytical view (codes × fixes) for one-file ingestion |
 
 Full column documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md). CSVs are pipe-delimited (`|`), UTF-8 with BOM; string fields are guaranteed free of embedded linebreaks.
 
 ## How the content is built (the honest part)
 
-- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 parts per procedure; in reviewed families, diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
-- **Costs and labor are editorial estimates** for typical US aftermarket parts and independent-shop labor — not quotes, not scraped prices.
+- **Fault-family architecture.** Codes that share a diagnosis and repair path are grouped into one of **647 hand-authored fault families**; each family carries 3–5 procedures in authored consideration order (up to 8 in reviewed families), with up to 3 part mappings per procedure; in reviewed families, diagnostic steps list no parts. `probability_rank` is the supported legacy field name for that order: `1` is first, execution depends on prerequisites and findings, and it is not measured cause likelihood, repair success, severity, urgency or minimum cost. See [`ordering_metadata.json`](ordering_metadata.json). Rendered explanations are unique per code — an anti-template test gate enforces it.
+- **Costs and labor are editorial values** — parts in US dollars assuming aftermarket parts, labor in hours — not quotes, not scraped prices.
 - **OEM rows are per-marque, exactly as sourced.** Makes that share engineering platforms (GM's seven marques, Ford/Mercury/Lincoln, Honda/Acura, …) legitimately share many definitions; rows are kept per marque so `oem_make = 'Buick'` returns complete results. Disclosed in detail in [SOURCES.md](SOURCES.md).
 - **Make-level, not model/year-level.** OEM coverage is per manufacturer; the dataset does not claim model- or model-year-specific applicability.
 - **No fabricated codes, ever.** Every published code traces to a committed source snapshot; a test gate fails the build otherwise.
@@ -88,7 +88,7 @@ All three paid tiers (Standard, OEM Complete, Heavy Duty) and the Fault & Recall
 - OBD-II scanner apps and hardware dongles (code → explanation → ranked fixes in one join)
 - AI mechanic co-pilots and RAG corpora over automotive diagnostics
 - Repair-estimate and shop-management software (difficulty, parts-cost, and labor-hour matrices)
-- Used-vehicle valuation and inspection tooling (severity and repair-cost context per code)
+- Used-vehicle valuation and inspection tooling (repair-cost context per code)
 
 ## Quickstart
 
@@ -117,7 +117,7 @@ print(duckdb.query("""
 - **Full datasets (Standard, OEM Complete, Heavy Duty):** [commercial license](https://mechanicdb.dataengineered.io/license) — each paid archive ships its own copy, naming its product and its upstream sources — self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/); see [Pricing](#pricing).
 - **Documentation:** CC BY 4.0.
 
-⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag procedures must only be performed by qualified technicians following the manufacturer's lockout and de-energization procedures.
+⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag work calls for the manufacturer's safety procedure whatever the difficulty rating; if you cannot follow it, leave the work to a qualified technician.
 
 Spotted a wrong fix, cost, or code definition? See [CONTRIBUTING.md](CONTRIBUTING.md) or write to mechanicdb@dataengineered.io.
 

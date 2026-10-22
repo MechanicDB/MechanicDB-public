@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mechanicdb.dataengineered.io/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/es/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/"/>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/de/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/"/>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/fr/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/"/>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/pt-br/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/"/>
@@ -47342,7 +47342,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/landing/families</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/families"/>
@@ -47354,7 +47354,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/es/landing/families</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/families"/>
@@ -47366,7 +47366,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/de/landing/families</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/families"/>
@@ -47378,7 +47378,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/fr/landing/families</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/families"/>
@@ -47390,7 +47390,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/pt-br/landing/families</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/landing/families"/>
@@ -84422,13 +84422,13 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/license</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/obd2-dtc-database</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -84440,7 +84440,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/es/obd2-dtc-database</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -84452,7 +84452,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/de/obd2-dtc-database</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -84464,7 +84464,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/fr/obd2-dtc-database</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -84476,7 +84476,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/pt-br/obd2-dtc-database</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/obd2-dtc-database"/>
@@ -84488,7 +84488,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/stats/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/stats/"/>
@@ -84500,7 +84500,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/es/stats/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/stats/"/>
@@ -84512,7 +84512,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/de/stats/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/stats/"/>
@@ -84524,7 +84524,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/fr/stats/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/stats/"/>
@@ -84536,7 +84536,7 @@
   </url>
   <url>
     <loc>https://mechanicdb.dataengineered.io/pt-br/stats/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mechanicdb.dataengineered.io/stats/"/>

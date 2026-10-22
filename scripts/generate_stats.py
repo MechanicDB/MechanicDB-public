@@ -247,7 +247,7 @@ def build_page(s, charts):
         figure(site, "oem-codes-by-make", charts["oem-codes-by-make"], "Manufacturer-specific codes per make", f"top 15 of {n(s['makes'])} makes"),
         table(["Make", "Manufacturer-specific codes", "Share of OEM codes"], [(m, n(c), f"{p}%") for m, c, p in bm], {1, 2}),
         "Counts describe the catalogue's coverage of each make's published code list, not how often the codes occur on the road. "
-        "Sister brands that share a platform (for example the GM divisions, or Ford, Lincoln and Mercury) publish the same list and therefore show identical counts."))
+        "Some sister brands carry the same set of codes and therefore show identical counts (for example Buick, Cadillac, Chevrolet, GM, GMC and Saturn, or Ford, Lincoln and Mercury)."))
 
     # 3. shared code strings
     sc = s["shared_codes"]
@@ -260,7 +260,7 @@ def build_page(s, charts):
         + (", and none of them reuses an SAE-standard string." if s["oem_overlap_sae"] == 0 else f"; {n(s['oem_overlap_sae'])} also exist as SAE-standard codes."),
         figure(site, "codes-shared-across-makes", charts["codes-shared-across-makes"], "Code strings defined by the most makes", f"top 15 of {n(s['oem_strings'])} strings"),
         table(["Code", "Makes defining it", "Distinct meanings"], [(code, n(m), n(d)) for code, m, d in sc], {1, 2}),
-        "The P1xxx, P3xxx and higher ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. "
+        "The P1xxx and P30xx–P33xx ranges are reserved for manufacturers, so the same string carries a different definition per make; a generic code reader that shows only the string cannot tell them apart. "
         "Distinct meanings counts distinct short descriptions in the catalogue; makes that publish the same wording count once."))
 
     # 4. families and first steps
@@ -399,7 +399,7 @@ def build_page(s, charts):
   <p class="crumb"><a href="/">Home</a> / <span>Statistics</span></p>
   <p class="eyebrow">Catalogue statistics · build {esc(snap)}</p>
   <h1>OBD-II fault codes in numbers</h1>
-  <p class="lede">Aggregate statistics computed from the full MechanicDB dataset: {n(s['codes'])} diagnostic trouble codes ({n(s['sae_codes'])} SAE-standard, {n(s['oem_codes'])} manufacturer-specific across {n(s['makes'])} makes) mapped to {n(s['fixes'])} authored repair procedures with difficulty, parts-cost and labor estimates. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.</p>
+  <p class="lede">Aggregate statistics computed from the full MechanicDB dataset: {n(s['codes'])} diagnostic trouble codes ({n(s['sae_codes'])} SAE-standard, {n(s['oem_codes'])} manufacturer-specific across {n(s['makes'])} makes) mapped to {n(s['fixes'])} authored repair procedures with difficulty, parts-cost and labor estimates where known. These figures describe the catalogue, not how often codes are set on the road. First-listed metrics use authored procedure consideration order, not measured cause likelihood. Every figure states its denominator and is free to cite, quote and embed with a link to this page.</p>
   <ul class="tiles">{tile_html}</ul>
   <nav class="toc" aria-label="Contents"><strong>On this page</strong><ol>{contents}</ol></nav>
 
@@ -410,7 +410,7 @@ def build_page(s, charts):
     <ul class="method">
       <li><strong>Source.</strong> The full MechanicDB build of {snap}: {n(s['codes'])} code definitions, {n(s['fixes'])} authored procedures and {n(s['parts'])} part mappings in {n(s['families'])} hand-authored fault families. Code definitions originate in SAE J2012 / ISO 15031-6 via an MIT-licensed upstream compilation; the repair content is original editorial material from a deterministic, test-gated pipeline. Procedure order is conditional on prerequisites and findings and is not measured likelihood, success, severity, urgency or minimum cost; see <a href="/ordering_metadata.json">ordering metadata</a>, <a href="/SOURCES.md">Sources</a> and the <a href="/DATA_DICTIONARY.md">data dictionary</a>.</li>
       <li><strong>Catalogue, not incidence.</strong> MechanicDB records what each code means and how it is repaired. No figure on this page measures how often a code appears on real vehicles; "most common" here always means most common within the catalogue, and each section says which denominator it uses.</li>
-      <li><strong>Estimates are estimates.</strong> Parts costs (USD) and labor hours are the dataset's editorial values at build time, useful for comparison between fixes, not quotes. Difficulty is an editorial tier. Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work requires qualified technicians.</li>
+      <li><strong>Estimates are estimates.</strong> Parts costs (USD) and labor hours are the dataset's editorial values at build time, useful for comparison between fixes, not quotes. Difficulty is an editorial tier. Repair steps are educational reference material, not professional repair advice; high-voltage and SRS/airbag work calls for the manufacturer's safety procedure whatever the difficulty rating, or a qualified technician.</li>
       <li><strong>Refresh.</strong> MechanicDB is curated; this page and its charts are regenerated with each new build, so figures move. Cite the build date.</li>
       <li><strong>Reuse.</strong> The figures and charts on this page are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: use them in forum posts, articles, slides and videos with a link to <span translate="no">{site.page_url}</span>. The machine-readable version is <a href="/stats/data.json">data.json</a>. The row-level dataset is a separate <a href="/#licensing">commercial product</a>; a free 90-code sample is in the <a href="https://github.com/MechanicDB/MechanicDB-public">public repository</a>.</li>
       <li><strong>Suggested citation.</strong> <span translate="no">MechanicDB ({snap[:4]}). <em>OBD-II fault codes in numbers</em>, build {snap}. DataEngineered. {site.page_url}</span></li>
