@@ -1229,12 +1229,6 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
- "7db5ed61a999bff1": {
-  "src": "<0>RecallDB</0> — {1} official U.S. recalls across CPSC, NHTSA, FDA, FSIS and USCG, {2} one-time: the vehicle recall that sits next to a fault code. · <3>ApplianceDB</3> — {4} home-appliance error codes mapped to ranked repairs, {5}: the same code → ranked-repair shape for appliances.",
-  "t": "<0>RecallDB</0> — {1} retiradas oficiales de EE. UU. de CPSC, NHTSA, FDA, FSIS y USCG, {2} pago único: la retirada del vehículo junto al código de falla. · <3>ApplianceDB</3> — {4} códigos de error de electrodomésticos asociados a reparaciones clasificadas, {5}: la misma estructura código → reparaciones clasificadas, para electrodomésticos.",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "7dcdd2969ba9eb62": {
   "src": "OEM code",
   "t": "Código OEM"
@@ -1574,6 +1568,12 @@
  "9a49b39f87552249": {
   "src": "Fault pairs by system",
   "t": "Pares de fallo por sistema"
+ },
+ "9b9d6aca1dcc73de": {
+  "src": "<0>RecallDB</0> — {1} official U.S. recalls across CPSC, NHTSA, FDA, FSIS and USCG, {2} one-time: the vehicle recall that sits next to a fault code. · <3>ApplianceDB</3> — {4} home-appliance error codes, {5} of them mapped to ranked repairs, {6}: the same code → ranked-repair shape for appliances.",
+  "t": "<0>RecallDB</0> — {1} retiradas oficiales de EE. UU. de CPSC, NHTSA, FDA, FSIS y USCG, {2} pago único: la retirada del vehículo junto al código de falla. · <3>ApplianceDB</3> — {4} códigos de error de electrodomésticos, {5} de ellos asociados a reparaciones clasificadas, {6}: la misma estructura código → reparaciones clasificadas, para electrodomésticos.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-24"
  },
  "9d9d6636e46bc629": {
   "src": "Median lower estimate",

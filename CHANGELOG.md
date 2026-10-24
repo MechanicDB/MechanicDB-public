@@ -1,3 +1,16 @@
+## ApplianceDB cross-link: 247 of its 438 codes have ranked repairs (2026-10-24)
+
+The homepage "You might also need" link said "438 home-appliance error codes mapped to ranked
+repairs", which reads as if every code had one. ApplianceDB-public's `error_codes.csv` and
+`repair_procedures.csv` give a ranked repair procedure for 247 of the 438 codes; 191 have none.
+The link now says "438 home-appliance error codes, 247 of them mapped to ranked repairs". The
+RecallDB half of the line is unchanged.
+The line is one segment, so it was translated again in es/de/fr/pt-br from the previous wording
+(claude-opus-5-5; the repair order stays "geordnet", "clasificadas", "classées", "classificados"),
+and the replaced entry was retired by hand, so each catalog keeps 500 entries. The French entry now
+uses typographic apostrophes. i18n check: 7,050 pages, 0 errors.
+Sitemap: the five home URLs dated 2026-10-24.
+
 ## Product claims follow-up — I02 (2026-10-19)
 
 The pages, docs and metadata now describe part mappings, OEM code ranges, the cost basis, safety,
