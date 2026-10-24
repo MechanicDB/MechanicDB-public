@@ -6,7 +6,7 @@ repairs", which reads as if every code had one. ApplianceDB-public's `error_code
 The link now says "438 home-appliance error codes, 247 of them mapped to ranked repairs". The
 RecallDB half of the line is unchanged.
 The line is one segment, so it was translated again in es/de/fr/pt-br from the previous wording
-(claude-opus-5-5; the repair order stays "geordnet", "clasificadas", "classées", "classificados"),
+(the repair order stays "geordnet", "clasificadas", "classées", "classificados"),
 and the replaced entry was retired by hand, so each catalog keeps 500 entries. The French entry now
 uses typographic apostrophes. i18n check: 7,050 pages, 0 errors.
 Sitemap: the five home URLs dated 2026-10-24.
