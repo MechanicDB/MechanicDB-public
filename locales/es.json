@@ -1269,12 +1269,6 @@
   "by": "I01",
   "at": "2026-10-08"
  },
- "7f6a9be944a91c42": {
-  "src": "Research, education, benchmarking",
-  "t": "Investigación, educación, benchmarking",
-  "by": "claude-opus-5",
-  "at": "2026-09-17"
- },
  "7f8b1626ca20dc5e": {
   "src": "Free {0}-fault Heavy Duty sample — {1} (CSV)",
   "t": "Muestra gratuita Heavy Duty de {0} fallos — {1} (CSV)",
@@ -1432,6 +1426,12 @@
   "t": "Sec. {0} · Licencias",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "8f3daeedb23c0a87": {
+  "src": "Commercial use allowed, with attribution and share-alike",
+  "t": "Uso comercial permitido, con atribución y compartir igual",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-30"
  },
  "90182e1b2efbc656": {
   "src": "Professional labor-hour estimates ({0})",

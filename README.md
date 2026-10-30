@@ -113,8 +113,8 @@ print(duckdb.query("""
 
 ## License
 
-- **Sample datasets (this repo — the OBD-II sample at the root and the Heavy Duty sample in [`samples/heavyduty/`](samples/heavyduty/)):** [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/) — free for research, education, and benchmarking with attribution and share-alike (see [LICENSE](LICENSE); sources in [SOURCES.md](SOURCES.md)).
-- **Full datasets (Standard, OEM Complete, Heavy Duty):** [commercial license](https://mechanicdb.dataengineered.io/license) — each paid archive ships its own copy, naming its product and its upstream sources — self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/); see [Pricing](#pricing).
+- **Sample datasets (this repo — the OBD-II sample at the root and the Heavy Duty sample in [`samples/heavyduty/`](samples/heavyduty/)):** [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/). Commercial use is allowed, with attribution and share-alike: credit MechanicDB, and if you publicly use an adapted version of the data (including through a product built on it), offer that adapted database under ODbL v1.0 as well. See [LICENSE](LICENSE); sources in [SOURCES.md](SOURCES.md).
+- **Full datasets (Standard, OEM Complete, Heavy Duty):** [commercial license](https://mechanicdb.dataengineered.io/license) — each paid archive ships its own copy, naming its product and its upstream sources — self-serve at [mechanicdb](https://mechanicdb.dataengineered.io/); see [Pricing](#pricing). The full datasets, and any use of MechanicDB data without ODbL's share-alike terms, need this license.
 - **Documentation:** CC BY 4.0.
 
 ⚠️ **Safety:** repair steps are educational reference material, not a substitute for the vehicle manufacturer's service manual. High-voltage (hybrid/EV) and SRS/airbag work calls for the manufacturer's safety procedure whatever the difficulty rating; if you cannot follow it, leave the work to a qualified technician.

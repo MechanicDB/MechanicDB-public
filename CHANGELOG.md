@@ -1,3 +1,19 @@
+## Free samples: commercial use under ODbL said plainly (2026-10-30)
+
+README.md said the samples were "free for research, education, and benchmarking with attribution
+and share-alike", and the homepage's free-sample card listed "Research, education, benchmarking".
+Both read as a non-commercial restriction, which ODbL v1.0 does not have; a prospective customer
+asked about it. No license terms change: `LICENSE` is untouched and both samples stay ODbL v1.0.
+
+- README.md, License section: the samples line says commercial use is allowed with attribution and
+  share-alike (credit MechanicDB; offer any publicly used adapted database under ODbL v1.0). The
+  full-datasets line adds that the full datasets, and any use of the data without ODbL's
+  share-alike terms, need the commercial license.
+- Homepage free-sample card: the bullet is now "Commercial use allowed, with attribution and
+  share-alike". The line is one new segment, translated in es/de/fr/pt-br; the retired entry was
+  pruned, so each catalog keeps 500 entries. i18n check: 7,050 pages, 0 errors.
+- Sitemap: the five home URLs dated 2026-10-30.
+
 ## ApplianceDB cross-link: 247 of its 438 codes have ranked repairs (2026-10-24)
 
 The homepage "You might also need" link said "438 home-appliance error codes mapped to ranked
