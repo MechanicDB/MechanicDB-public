@@ -1,3 +1,18 @@
+## Website: more repository files no longer served (2026-11-07)
+
+- The site still served files that belong to this repository: the starter notebook
+  (`/notebooks/`), the tests (`/tests/`), `assets/README.md`, the Kaggle cover's HTML source
+  (`/assets/kaggle-cover`; the `kaggle-cover.png` it renders stays, as the share image),
+  `claims.json` and `dataset-metadata.json` (build and Kaggle inputs no page links), `CHANGELOG.md`,
+  `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` and the i18n tool's marker file in each
+  language folder (`/es/_i18n-generated.txt` and its `de`, `fr`, `pt-br` copies). They now answer
+  the site's normal 404 page and stay available here on GitHub. The list also refuses `/kaggle/`
+  and `/examples/` should this repository add them.
+- Files the site links stay served: the free sample files (repository root and
+  `samples/heavyduty/`), `DATA_DICTIONARY.md`, `SOURCES.md`, `IDENTITY.md`, `LICENSE`,
+  `LICENSE-upstream.txt`, `/stats/` and its `data.json`, `llms.txt` and the sitemap. No page or data
+  changes (2026-11-07).
+
 ## Free samples: commercial use under ODbL said plainly (2026-10-30)
 
 README.md said the samples were "free for research, education, and benchmarking with attribution
